@@ -1,0 +1,33 @@
+{
+  "title": "Team Management",
+  "lede": "Manage team members, roles, and permissions across your iMash organization.",
+  "sections": [
+    {
+      "id": "user-management",
+      "title": "User Management",
+      "content": "<p>Add, remove, and manage team members with appropriate access levels.</p><h3>User Features:</h3><ul><li><strong>User Invitations:</strong> Send email invitations to new team members</li><li><strong>Role Assignment:</strong> Assign specific roles and permissions</li><li><strong>Access Control:</strong> Control access to features and data</li><li><strong>Activity Monitoring:</strong> Track user login and activity</li></ul>"
+    },
+    {
+      "id": "roles-permissions",
+      "title": "Roles & Permissions",
+      "content": "<p>Define custom roles with specific permissions for different team functions.</p><ul><li><strong>Predefined Roles:</strong> Admin, Manager, Agent, Viewer</li><li><strong>Custom Roles:</strong> Create roles tailored to your organization</li><li><strong>Permission Levels:</strong> Read, write, delete, admin permissions</li><li><strong>Feature Access:</strong> Control access to specific platform features</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/team-management-light.png",
+      "alt": "Team Management Interface",
+      "caption": "User management and role assignment tools",
+      "theme": "light"
+    },
+    {
+      "src": "images/team-management-dark.png",
+      "alt": "Team Management Interface",
+      "caption": "User management and role assignment tools",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "Team Management - User Roles & Permissions | iMash Docs",
+  "metaDescription": "Manage team members, assign roles, and control permissions. Configure access levels and team collaboration.",
+  "metaKeywords": "team management, user roles, permissions, access control, team collaboration, user administration"
+}

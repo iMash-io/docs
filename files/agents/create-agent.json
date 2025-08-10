@@ -1,0 +1,28 @@
+{
+  "title": "Create Agent",
+  "lede": "Learn how to create and configure your first AI voice agent with custom behaviors and voice settings.",
+  "sections": [
+    {
+      "id": "agent-basics",
+      "title": "Agent Configuration",
+      "content": "<p>Create AI agents that can handle phone conversations with customizable behavior and voice settings.</p><h3>Basic Settings:</h3><ul><li><strong>Name:</strong> Descriptive agent identifier</li><li><strong>Voice Provider:</strong> Choose from OpenAI, ElevenLabs, etc.</li><li><strong>System Prompt:</strong> Define agent personality and behavior</li><li><strong>First Message:</strong> Opening greeting for calls</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/agent-creation-light.png",
+      "alt": "Agent Creation Form",
+      "caption": "The agent creation interface with configuration options",
+      "theme": "light"
+    },
+    {
+      "src": "images/agent-creation-dark.png",
+      "alt": "Agent Creation Form",
+      "caption": "The agent creation interface with configuration options",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "Create AI Agent - Build Voice Assistants | iMash Docs",
+  "metaDescription": "Step-by-step guide to creating AI voice agents. Configure behavior, set up prompts, and deploy conversational AI assistants.",
+  "metaKeywords": "create agent, AI assistant, voice agent, conversational AI, agent configuration, virtual assistant setup"
+}

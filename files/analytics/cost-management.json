@@ -1,0 +1,33 @@
+{
+  "title": "Cost Management",
+  "lede": "Monitor and optimize your spending on voice services, API calls, and platform usage.",
+  "sections": [
+    {
+      "id": "cost-tracking",
+      "title": "Cost Tracking",
+      "content": "<p>Track spending across all iMash services and usage categories.</p><h3>Cost Categories:</h3><ul><li><strong>Voice Calls:</strong> Inbound and outbound calling costs</li><li><strong>AI Processing:</strong> Language model and voice synthesis costs</li><li><strong>Phone Numbers:</strong> Monthly phone number rental fees</li><li><strong>Storage:</strong> Call recording and data storage costs</li></ul>"
+    },
+    {
+      "id": "cost-optimization",
+      "title": "Cost Optimization",
+      "content": "<p>Identify opportunities to reduce costs and improve efficiency.</p><ul><li><strong>Usage Patterns:</strong> Analyze peak usage times</li><li><strong>Cost Alerts:</strong> Set spending thresholds and notifications</li><li><strong>Budget Management:</strong> Set monthly spending limits</li><li><strong>Provider Comparison:</strong> Compare costs across different providers</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cost-management-light.png",
+      "alt": "Cost Management Dashboard",
+      "caption": "Cost tracking and budget management interface",
+      "theme": "light"
+    },
+    {
+      "src": "images/cost-management-dark.png",
+      "alt": "Cost Management Dashboard",
+      "caption": "Cost tracking and budget management interface",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "Cost Management - Monitor Usage & Billing | iMash Docs",
+  "metaDescription": "Track usage costs and manage billing. Monitor call minutes, API usage, and optimize spending.",
+  "metaKeywords": "cost management, billing, usage tracking, cost optimization, expense monitoring, budget control"
+}

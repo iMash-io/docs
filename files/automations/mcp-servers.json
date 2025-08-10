@@ -1,0 +1,33 @@
+{
+  "title": "MCP Servers",
+  "lede": "Connect and manage Model Context Protocol (MCP) servers to extend AI agent capabilities.",
+  "sections": [
+    {
+      "id": "mcp-overview",
+      "title": "MCP Server Overview",
+      "content": "<p>MCP servers provide additional tools and resources that your AI agents can use during conversations.</p><h3>MCP Features:</h3><ul><li><strong>Tool Extensions:</strong> Add new capabilities to your agents</li><li><strong>Data Sources:</strong> Connect to external databases and APIs</li><li><strong>Custom Functions:</strong> Implement specialized business logic</li><li><strong>Protocol Compliance:</strong> Standardized communication interface</li></ul>"
+    },
+    {
+      "id": "server-management",
+      "title": "Server Management",
+      "content": "<p>Install, configure, and manage MCP servers for your organization.</p><ul><li><strong>Server Installation:</strong> Install from marketplace or custom servers</li><li><strong>Configuration:</strong> Set up server parameters and authentication</li><li><strong>Health Monitoring:</strong> Monitor server status and performance</li><li><strong>Version Management:</strong> Update and rollback server versions</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/mcp-servers-light.png",
+      "alt": "MCP Servers Management",
+      "caption": "MCP server installation and configuration interface",
+      "theme": "light"
+    },
+    {
+      "src": "images/mcp-servers-dark.png",
+      "alt": "MCP Servers Management",
+      "caption": "MCP server installation and configuration interface",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "MCP Servers - Model Context Protocol | iMash Docs",
+  "metaDescription": "Configure Model Context Protocol servers for advanced AI capabilities. Extend agent context and knowledge.",
+  "metaKeywords": "MCP servers, model context protocol, AI extensions, context management, knowledge base, advanced AI"
+}

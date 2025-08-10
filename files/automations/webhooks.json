@@ -1,0 +1,33 @@
+{
+  "title": "Webhooks",
+  "lede": "Configure real-time event notifications to external systems and applications.",
+  "sections": [
+    {
+      "id": "webhook-setup",
+      "title": "Webhook Configuration",
+      "content": "<p>Set up webhooks to receive real-time notifications about events in your iMash account.</p><h3>Event Types:</h3><ul><li><strong>Call Events:</strong> Call started, ended, transferred</li><li><strong>Campaign Events:</strong> Campaign started, paused, completed</li><li><strong>CRM Events:</strong> New leads, contact updates</li><li><strong>Agent Events:</strong> Agent status changes</li></ul>"
+    },
+    {
+      "id": "webhook-management",
+      "title": "Webhook Management",
+      "content": "<p>Manage and monitor your webhook endpoints.</p><ul><li><strong>Endpoint Configuration:</strong> URL, headers, authentication</li><li><strong>Event Filtering:</strong> Subscribe to specific events only</li><li><strong>Retry Logic:</strong> Automatic retry on failed deliveries</li><li><strong>Delivery Logs:</strong> Track webhook delivery status</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/webhooks-light.png",
+      "alt": "Webhooks Configuration",
+      "caption": "Webhook setup and management interface",
+      "theme": "light"
+    },
+    {
+      "src": "images/webhooks-dark.png",
+      "alt": "Webhooks Configuration",
+      "caption": "Webhook setup and management interface",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "Webhooks - Real-time Event Notifications | iMash Docs",
+  "metaDescription": "Configure webhooks for real-time notifications. Receive events for calls, messages, and agent interactions.",
+  "metaKeywords": "webhooks, event notifications, real-time updates, API callbacks, event streaming, integration hooks"
+}

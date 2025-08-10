@@ -1,0 +1,33 @@
+{
+  "title": "Billing",
+  "lede": "Manage your subscription, payment methods, and billing information.",
+  "sections": [
+    {
+      "id": "subscription-management",
+      "title": "Subscription Management",
+      "content": "<p>View and manage your iMash subscription and plan details.</p><h3>Subscription Features:</h3><ul><li><strong>Plan Details:</strong> Current plan limits and features</li><li><strong>Usage Tracking:</strong> Monitor monthly usage against limits</li><li><strong>Plan Upgrades:</strong> Upgrade or downgrade subscription plans</li><li><strong>Billing History:</strong> View past invoices and payments</li></ul>"
+    },
+    {
+      "id": "payment-methods",
+      "title": "Payment Methods",
+      "content": "<p>Manage credit cards and payment methods for your account.</p><ul><li><strong>Payment Cards:</strong> Add, remove, and update credit cards</li><li><strong>Billing Address:</strong> Manage billing address information</li><li><strong>Auto-billing:</strong> Configure automatic payment settings</li><li><strong>Payment History:</strong> Track all payment transactions</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/billing-light.png",
+      "alt": "Billing Management Interface",
+      "caption": "Subscription and payment management tools",
+      "theme": "light"
+    },
+    {
+      "src": "images/billing-dark.png",
+      "alt": "Billing Management Interface",
+      "caption": "Subscription and payment management tools",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "Billing Settings - Payment & Subscription | iMash Docs",
+  "metaDescription": "Manage billing, payment methods, and subscription plans. View invoices and update payment information.",
+  "metaKeywords": "billing, payment methods, subscription, invoices, payment settings, credit management, pricing plans"
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Integrations",
+  "lede": "Connect iMash with your existing business tools and software platforms.",
+  "sections": [
+    {
+      "id": "available-integrations",
+      "title": "Available Integrations",
+      "content": "<p>Connect with popular business tools and platforms.</p><h3>Integration Categories:</h3><ul><li><strong>CRM Systems:</strong> Salesforce, HubSpot, Pipedrive</li><li><strong>Communication:</strong> Slack, Microsoft Teams, Discord</li><li><strong>Marketing:</strong> Mailchimp, Constant Contact, ActiveCampaign</li><li><strong>Analytics:</strong> Google Analytics, Mixpanel, Segment</li></ul>"
+    },
+    {
+      "id": "integration-setup",
+      "title": "Integration Setup",
+      "content": "<p>Set up and configure integrations with your business tools.</p><ul><li><strong>OAuth Authentication:</strong> Secure connection setup</li><li><strong>Field Mapping:</strong> Map data between systems</li><li><strong>Sync Configuration:</strong> Real-time or scheduled data sync</li><li><strong>Integration Monitoring:</strong> Track sync status and errors</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/integrations-light.png",
+      "alt": "Integrations Marketplace",
+      "caption": "Available integrations and connection setup",
+      "theme": "light"
+    },
+    {
+      "src": "images/integrations-dark.png",
+      "alt": "Integrations Marketplace",
+      "caption": "Available integrations and connection setup",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "Integrations - Connect Third-party Services | iMash Docs",
+  "metaDescription": "Integrate with CRMs, helpdesks, and business tools. Connect Salesforce, HubSpot, Zendesk, and more.",
+  "metaKeywords": "integrations, third-party services, CRM integration, Salesforce, HubSpot, Zendesk, API connections"
+}

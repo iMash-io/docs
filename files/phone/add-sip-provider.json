@@ -1,0 +1,28 @@
+{
+  "title": "Add SIP Provider",
+  "lede": "Configure SIP providers to enable telephony functionality for your AI agents.",
+  "sections": [
+    {
+      "id": "provider-setup",
+      "title": "SIP Provider Configuration",
+      "content": "<p>Connect your preferred SIP provider to enable phone functionality.</p><h3>Supported Providers:</h3><ul><li><strong>Telnyx:</strong> Global communications platform</li><li><strong>Twilio:</strong> Cloud communications platform</li><li><strong>Custom SIP:</strong> Connect your own SIP infrastructure</li></ul><h3>Configuration Steps:</h3><ol><li>Navigate to Phone System → SIP Providers</li><li>Click 'Add Provider'</li><li>Enter SIP credentials and settings</li><li>Test connection and save</li></ol>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/sip-provider-light.png",
+      "alt": "SIP Provider Configuration",
+      "caption": "SIP provider setup interface",
+      "theme": "light"
+    },
+    {
+      "src": "images/sip-provider-dark.png",
+      "alt": "SIP Provider Configuration",
+      "caption": "SIP provider setup interface",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "Add SIP Provider - Configure Telephony | iMash Docs",
+  "metaDescription": "Connect SIP providers and configure telephony settings. Integrate with Twilio, Telnyx, and other VoIP providers.",
+  "metaKeywords": "SIP provider, telephony, VoIP, Twilio, Telnyx, phone integration, SIP configuration, voice provider"
+}

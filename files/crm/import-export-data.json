@@ -1,0 +1,33 @@
+{
+  "title": "Import/Export Data",
+  "lede": "Import and export contact, lead, and account data in various formats.",
+  "sections": [
+    {
+      "id": "data-import",
+      "title": "Data Import",
+      "content": "<p>Import data from external sources and CRM systems.</p><h3>Import Features:</h3><ul><li><strong>CSV Import:</strong> Upload spreadsheet data</li><li><strong>Field Mapping:</strong> Map columns to CRM fields</li><li><strong>Validation:</strong> Data quality checks before import</li><li><strong>Duplicate Handling:</strong> Skip or merge duplicate records</li></ul>"
+    },
+    {
+      "id": "data-export",
+      "title": "Data Export",
+      "content": "<p>Export your CRM data for backup or integration purposes.</p><ul><li><strong>Format Options:</strong> CSV, Excel, JSON export formats</li><li><strong>Selective Export:</strong> Choose specific fields and records</li><li><strong>Filtered Export:</strong> Export based on search criteria</li><li><strong>Scheduled Exports:</strong> Automatic recurring exports</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/import-export-light.png",
+      "alt": "Import Export Interface",
+      "caption": "Data import and export tools",
+      "theme": "light"
+    },
+    {
+      "src": "images/import-export-dark.png",
+      "alt": "Import Export Interface",
+      "caption": "Data import and export tools",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "Import/Export Data - Bulk Data Operations | iMash Docs",
+  "metaDescription": "Import and export CRM data in bulk. Support for CSV, Excel, and API-based data synchronization.",
+  "metaKeywords": "data import, data export, CSV import, bulk operations, data migration, CRM sync, data transfer"
+}

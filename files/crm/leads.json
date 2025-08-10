@@ -1,0 +1,33 @@
+{
+  "title": "Leads",
+  "lede": "Track and nurture potential customers through your sales pipeline.",
+  "sections": [
+    {
+      "id": "lead-management",
+      "title": "Lead Management",
+      "content": "<p>Capture, qualify, and nurture leads through your sales process.</p><h3>Lead Features:</h3><ul><li><strong>Lead Capture:</strong> Multiple lead source integration</li><li><strong>Lead Scoring:</strong> Automatic qualification scoring</li><li><strong>Pipeline Stages:</strong> Customizable sales stages</li><li><strong>Follow-up Scheduling:</strong> Automated reminder system</li></ul>"
+    },
+    {
+      "id": "lead-conversion",
+      "title": "Lead Conversion",
+      "content": "<p>Convert qualified leads to customers efficiently.</p><ul><li><strong>Qualification Process:</strong> Multi-stage lead qualification</li><li><strong>Convert to Contact:</strong> Seamless conversion workflow</li><li><strong>Campaign Integration:</strong> Target leads with specific campaigns</li><li><strong>Performance Tracking:</strong> Monitor conversion rates</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/leads-light.png",
+      "alt": "Leads Management Interface",
+      "caption": "Lead pipeline and management tools",
+      "theme": "light"
+    },
+    {
+      "src": "images/leads-dark.png",
+      "alt": "Leads Management Interface",
+      "caption": "Lead pipeline and management tools",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "Leads Management - Track Sales Pipeline | iMash Docs",
+  "metaDescription": "Manage leads through your sales pipeline. Track lead status, qualify prospects, and convert to customers.",
+  "metaKeywords": "leads, sales pipeline, lead management, lead tracking, prospect management, lead conversion"
+}

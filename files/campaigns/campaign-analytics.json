@@ -1,0 +1,33 @@
+{
+  "title": "Campaign Analytics",
+  "lede": "Track and analyze campaign performance with detailed metrics and insights.",
+  "sections": [
+    {
+      "id": "performance-metrics",
+      "title": "Performance Tracking",
+      "content": "<p>Monitor key performance indicators for your calling campaigns.</p><h3>Key Metrics:</h3><ul><li><strong>Call Volume:</strong> Total calls made and answered</li><li><strong>Success Rate:</strong> Percentage of successful conversations</li><li><strong>Conversion Rate:</strong> Leads converted to customers</li><li><strong>Average Call Duration:</strong> Time spent per conversation</li></ul>"
+    },
+    {
+      "id": "reporting",
+      "title": "Analytics Reports",
+      "content": "<p>Generate detailed reports for campaign analysis.</p><ul><li><strong>Real-time Dashboards:</strong> Live campaign monitoring</li><li><strong>Historical Reports:</strong> Performance over time</li><li><strong>Comparative Analysis:</strong> Campaign vs campaign performance</li><li><strong>Custom Exports:</strong> Data export for external analysis</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/campaign-analytics-light.png",
+      "alt": "Campaign Analytics Dashboard",
+      "caption": "Campaign performance metrics and charts",
+      "theme": "light"
+    },
+    {
+      "src": "images/campaign-analytics-dark.png",
+      "alt": "Campaign Analytics Dashboard",
+      "caption": "Campaign performance metrics and charts",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "Campaign Analytics - Track Performance Metrics | iMash Docs",
+  "metaDescription": "Analyze campaign performance with detailed metrics. Track conversion rates, call outcomes, and ROI.",
+  "metaKeywords": "campaign analytics, performance metrics, conversion tracking, ROI analysis, campaign reports, success metrics"
+}

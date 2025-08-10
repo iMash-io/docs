@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>iMash Docs</title>
+  <meta name="description" content="Build, test, deploy, and monitor AI agents with iMash. API guides and reference." />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script defer src="/script.js"></script>
+</head>
+<body>
+  <div class="bg-accent"></div>
+  <header class="topbar" id="navbar">
+    <div class="topbar-inner">
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      
+      <a class="brand" data-route="/" href="/">
+        <img src="https://imash.io/wp-content/uploads/2025/02/brnading.svg" alt="iMash" class="brand-icon brand-icon-large" />
+      </a>
+
+      <div class="search-wrap">
+        <button id="search-btn" class="search-btn" type="button" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+          <span>Search...</span>
+          <kbd>⌘</kbd><kbd>K</kbd>
+        </button>
+      </div>
+
+      <nav class="top-links">
+        <a href="https://imash.io" target="_blank" rel="noreferrer">Homepage</a>
+        <a href="mailto:support@imash.io" target="_blank" rel="noreferrer">Support</a>
+        <a href="https://dashboard.imash.io" class="btn-primary" target="_blank" rel="noreferrer">Dashboard</a>
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
+          <svg class="sun" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor"><circle cx="8" cy="8" r="3"></circle><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.3 3.3l1.4 1.4M11.3 11.3l1.4 1.4M3.3 12.7l1.4-1.4M11.3 4.7l1.4-1.4"></path></svg>
+          <svg class="moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3A7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+      </nav>
+    </div>
+    <div class="top-tabs" id="top-tabs">
+      <a class="top-tab active" data-top-tab="/">Documentation</a>
+      <a class="top-tab" data-top-tab="/api-reference">API Reference</a>
+      <a class="top-tab" data-top-tab="/videos">Video Tutorials</a>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Menu -->
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="mobile-menu-content">
+      <div class="mobile-menu-header">
+        <a class="brand" data-route="/" href="/">
+          <img src="https://imash.io/wp-content/uploads/2025/02/brnading.svg" alt="iMash" class="brand-icon brand-icon-large" />
+        </a>
+        <button id="mobile-menu-close" class="mobile-menu-close" aria-label="Close menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <nav class="mobile-nav">
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">Get Started</div>
+          <ul>
+            <li><a data-href="/get-started/quick-start" class="nav-link">Quickstart</a></li>
+            <li><a data-href="/get-started/dashboard-overview" class="nav-link">Dashboard Overview</a></li>
+            <li><a data-href="/get-started/api-keys" class="nav-link">API Keys</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">Agents</div>
+          <ul>
+            <li><a data-href="/agents/create-agent" class="nav-link">Create Agent</a></li>
+            <li><a data-href="/agents/agent-settings" class="nav-link">Agent Settings</a></li>
+            <li><a data-href="/agents/voice-configuration" class="nav-link">Voice Configuration</a></li>
+            <li><a data-href="/agents/test-your-agent" class="nav-link">Test Your Agent</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">Phone System</div>
+          <ul>
+            <li><a data-href="/phone-system/add-sip-provider" class="nav-link">Add SIP Provider</a></li>
+            <li><a data-href="/phone-system/add-phone-number" class="nav-link">Add Phone Number</a></li>
+            <li><a data-href="/phone-system/call-routing" class="nav-link">Call Routing</a></li>
+            <li><a data-href="/phone-system/call-logs" class="nav-link">Call Logs</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">Campaigns</div>
+          <ul>
+            <li><a data-href="/campaigns/create-campaign" class="nav-link">Create Campaign</a></li>
+            <li><a data-href="/campaigns/dial-lists" class="nav-link">Dial Lists</a></li>
+            <li><a data-href="/campaigns/campaign-analytics" class="nav-link">Campaign Analytics</a></li>
+            <li><a data-href="/campaigns/do-not-call-list" class="nav-link">Do Not Call List</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">CRM</div>
+          <ul>
+            <li><a data-href="/crm/contacts" class="nav-link">Contacts</a></li>
+            <li><a data-href="/crm/leads" class="nav-link">Leads</a></li>
+            <li><a data-href="/crm/accounts" class="nav-link">Accounts</a></li>
+            <li><a data-href="/crm/import-export-data" class="nav-link">Import/Export Data</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">Automations</div>
+          <ul>
+            <li><a data-href="/automations/smart-flows" class="nav-link">Smart Flows</a></li>
+            <li><a data-href="/automations/custom-tools" class="nav-link">Custom Tools</a></li>
+            <li><a data-href="/automations/webhooks" class="nav-link">Webhooks</a></li>
+            <li><a data-href="/automations/integrations" class="nav-link">Integrations</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">Analytics</div>
+          <ul>
+            <li><a data-href="/analytics/analytics-dashboard" class="nav-link">Analytics Dashboard</a></li>
+            <li><a data-href="/analytics/reports" class="nav-link">Reports</a></li>
+            <li><a data-href="/analytics/cost-management" class="nav-link">Cost Management</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">Settings</div>
+          <ul>
+            <li><a data-href="/settings/team-management" class="nav-link">Team Management</a></li>
+            <li><a data-href="/settings/billing" class="nav-link">Billing</a></li>
+            <li><a data-href="/settings/security" class="nav-link">Security</a></li>
+            <li><a data-href="/settings/white-label" class="nav-link">White Label</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-inner">
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">Get Started</div>
+          <ul>
+            <li><a data-href="/get-started/quick-start" class="nav-link">Quickstart</a></li>
+            <li><a data-href="/get-started/dashboard-overview" class="nav-link">Dashboard Overview</a></li>
+            <li><a data-href="/get-started/api-keys" class="nav-link">API Keys</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">Agents</div>
+          <ul>
+            <li><a data-href="/agents/create-agent" class="nav-link">Create Agent</a></li>
+            <li><a data-href="/agents/agent-settings" class="nav-link">Agent Settings</a></li>
+            <li><a data-href="/agents/voice-configuration" class="nav-link">Voice Configuration</a></li>
+            <li><a data-href="/agents/test-your-agent" class="nav-link">Test Your Agent</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">Phone System</div>
+          <ul>
+            <li><a data-href="/phone-system/add-sip-provider" class="nav-link">Add SIP Provider</a></li>
+            <li><a data-href="/phone-system/add-phone-number" class="nav-link">Add Phone Number</a></li>
+            <li><a data-href="/phone-system/call-routing" class="nav-link">Call Routing</a></li>
+            <li><a data-href="/phone-system/call-logs" class="nav-link">Call Logs</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">Campaigns</div>
+          <ul>
+            <li><a data-href="/campaigns/create-campaign" class="nav-link">Create Campaign</a></li>
+            <li><a data-href="/campaigns/dial-lists" class="nav-link">Dial Lists</a></li>
+            <li><a data-href="/campaigns/campaign-analytics" class="nav-link">Campaign Analytics</a></li>
+            <li><a data-href="/campaigns/do-not-call-list" class="nav-link">Do Not Call List</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">CRM</div>
+          <ul>
+            <li><a data-href="/crm/contacts" class="nav-link">Contacts</a></li>
+            <li><a data-href="/crm/leads" class="nav-link">Leads</a></li>
+            <li><a data-href="/crm/accounts" class="nav-link">Accounts</a></li>
+            <li><a data-href="/crm/import-export-data" class="nav-link">Import/Export Data</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">Automations</div>
+          <ul>
+            <li><a data-href="/automations/smart-flows" class="nav-link">Smart Flows</a></li>
+            <li><a data-href="/automations/custom-tools" class="nav-link">Custom Tools</a></li>
+            <li><a data-href="/automations/webhooks" class="nav-link">Webhooks</a></li>
+            <li><a data-href="/automations/integrations" class="nav-link">Integrations</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">Analytics</div>
+          <ul>
+            <li><a data-href="/analytics/analytics-dashboard" class="nav-link">Analytics Dashboard</a></li>
+            <li><a data-href="/analytics/reports" class="nav-link">Reports</a></li>
+            <li><a data-href="/analytics/cost-management" class="nav-link">Cost Management</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">Settings</div>
+          <ul>
+            <li><a data-href="/settings/team-management" class="nav-link">Team Management</a></li>
+            <li><a data-href="/settings/billing" class="nav-link">Billing</a></li>
+            <li><a data-href="/settings/security" class="nav-link">Security</a></li>
+            <li><a data-href="/settings/white-label" class="nav-link">White Label</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="content" id="content-area">
+      <!-- Introduction -->
+      <section class="page active" id="page-introduction" data-route="/" data-alt="/general/introduction">
+        <h1>Introduction</h1>
+        <p class="lede">Build, test, deploy, and monitor AI agents.</p>
+
+        <div class="hero">
+          <img src="hero-image.svg" alt="iMash AI Agent Platform" />
+        </div>
+
+        <h2>Here's what iMash offers</h2>
+        <div class="card-grid">
+          <a class="card" data-href="/build/overview">
+            <div class="card-icon bg-sky"></div>
+            <div class="card-title">How iMash Works</div>
+            <div class="card-desc">Agent platform with voice and automation.</div>
+          </a>
+          <a class="card" data-href="/get-started/quick-start">
+            <div class="card-icon bg-teal"></div>
+            <div class="card-title">Quickstart</div>
+            <div class="card-desc">Create your first agent in minutes.</div>
+          </a>
+        </div>
+
+        <h2 id="build">Build</h2>
+        <div class="card-grid">
+          <a class="card" data-href="/agents/create-agent">
+            <div class="card-icon bg-blue"></div>
+            <div class="card-title">Create Agent</div>
+            <div class="card-desc">Define behavior, voice and integrations.</div>
+          </a>
+          <a class="card" data-href="/build/overview">
+            <div class="card-icon bg-blue"></div>
+            <div class="card-title">Flows</div>
+            <div class="card-desc">Create structured conversations.</div>
+          </a>
+        </div>
+
+        <h2 id="test">Test</h2>
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-icon bg-green"></div>
+            <div class="card-title">Playground</div>
+            <div class="card-desc">Test your agents quickly.</div>
+          </div>
+          <div class="card">
+            <div class="card-icon bg-green"></div>
+            <div class="card-title">Simulation</div>
+            <div class="card-desc">Automate regression tests.</div>
+          </div>
+        </div>
+
+        <h2 id="deploy">Deploy</h2>
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-icon bg-orange"></div>
+            <div class="card-title">Phone Calls</div>
+            <div class="card-desc">Make and receive calls.</div>
+          </div>
+          <div class="card">
+            <div class="card-icon bg-orange"></div>
+            <div class="card-title">Custom Telephony</div>
+            <div class="card-desc">Integrate SIP providers.</div>
+          </div>
+        </div>
+
+        <h2 id="monitor">Monitor</h2>
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-icon bg-lime"></div>
+            <div class="card-title">Webhook</div>
+            <div class="card-desc">Receive events in real-time.</div>
+          </div>
+          <div class="card">
+            <div class="card-icon bg-lime"></div>
+            <div class="card-title">Analytics</div>
+            <div class="card-desc">Understand agent performance.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- API Reference (redesigned) -->
+      <section class="page" id="page-api-reference" data-route="/api-reference">
+        <div class="apiref-container">
+          <!-- Left Sidebar -->
+          <aside class="apiref-sidebar">
+            <!-- Dynamically populated from configs -->
+          </aside>
+
+          <!-- Main Content Area -->
+          <div class="apiref-main">
+            <div class="apiref-header">
+              <div class="eyebrow">API REFERENCE</div>
+              <h1 id="api-title">CRM Leads</h1>
+              <div class="endpoint">
+                <div class="endpoint-meta">
+                  <span class="meta-label">Endpoint</span>
+                  <code id="api-endpoint"><span class="origin"></span>/api/v2/<span id="endpoint-resource">crm_leads</span></code>
+                  <button class="copy-btn" data-copy-target="#api-endpoint">Copy</button>
+                </div>
+                <div class="supported" id="supported-operations">
+                  <!-- Dynamically populated based on configurations -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Operations Tabs -->
+            <div class="operations-container">
+              <div class="operation-tabs">
+                <button class="op-tab" data-op="insert">ADD</button>
+                <button class="op-tab active" data-op="select">LIST</button>
+                <button class="op-tab" data-op="update">UPDATE</button>
+                <button class="op-tab" data-op="delete">DELETE</button>
+              </div>
+
+              <!-- Operation Content -->
+              <div class="operation-content">
+                <!-- Request Builder -->
+                <div class="request-builder">
+                  <h3>Request Builder</h3>
+                  
+                  <div class="builder-controls">
+                    <div class="control-item full-width">
+                      <label>Your API Key <span class="required">*</span></label>
+                      <input type="password" id="api-key-input" placeholder="Paste your secret API key" />
+                    </div>
+
+                    <!-- SELECT/LIST specific controls -->
+                    <div class="control-group" id="select-controls">
+                      <div class="control-item">
+                        <label>Record ID</label>
+                        <input id="record-id-input" placeholder="Optional for LIST" />
+                      </div>
+                      <div class="control-item">
+                        <label>Limit</label>
+                        <input id="limit-input" type="number" value="10" min="1" max="100" />
+                      </div>
+                      <div class="control-item">
+                        <label>Page</label>
+                        <input id="page-input" type="number" value="1" min="1" />
+                      </div>
+                      <div class="control-item">
+                        <label>Order By</label>
+                        <select id="order-input">
+                          <option value="created_at desc">Newest First</option>
+                          <option value="created_at asc">Oldest First</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- UPDATE/DELETE specific controls -->
+                    <div class="control-group" id="update-delete-controls" style="display: none;">
+                      <div class="control-item full-width">
+                        <label>Record ID <span class="required">*</span></label>
+                        <input id="update-record-id" placeholder="Required for UPDATE/DELETE" />
+                      </div>
+                    </div>
+
+                    <!-- INSERT/UPDATE body -->
+                    <div class="control-item full-width" id="body-controls" style="display: none;">
+                      <label>Request Body (JSON)</label>
+                      <div class="json-editor">
+                        <textarea id="body-json" rows="10" placeholder='{"field": "value"}'></textarea>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="action-buttons">
+                    <button id="try-btn" class="btn-primary">▶ Execute Request</button>
+                  </div>
+                </div>
+
+                <!-- Response Panel -->
+                <div class="response-panel">
+                  <div class="response-header">
+                    <span class="status-label">Response</span>
+                    <span id="resp-status" class="status-chip">—</span>
+                    <button class="copy-btn" data-copy-target="#response-body">Copy</button>
+                  </div>
+                  <pre class="response-code"><code id="response-body">Click "Execute Request" to see the response</code></pre>
+                </div>
+
+                <!-- Schema Documentation -->
+                <div class="schema-docs" id="schema-docs">
+                  <h3>Schema & Fields</h3>
+                  <div id="schema-content">
+                    <!-- Dynamically populated -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Sidebar - Code Examples -->
+          <aside class="apiref-code">
+            <h3>Code Examples</h3>
+            <div class="code-tabs">
+              <div class="code-tab-buttons">
+                <button data-lang="curl" class="active">cURL</button>
+                <button data-lang="js">JavaScript</button>
+                <button data-lang="py">Python</button>
+                <button data-lang="php">PHP</button>
+                <button data-lang="rb">Ruby</button>
+                <button data-lang="go">Go</button>
+              </div>
+              <pre class="code active" data-lang="curl"><code id="code-curl"></code></pre>
+              <pre class="code" data-lang="js"><code id="code-js"></code></pre>
+              <pre class="code" data-lang="py"><code id="code-py"></code></pre>
+              <pre class="code" data-lang="php"><code id="code-php"></code></pre>
+              <pre class="code" data-lang="rb"><code id="code-rb"></code></pre>
+              <pre class="code" data-lang="go"><code id="code-go"></code></pre>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Dynamic content will be loaded here -->
+      <section class="page" id="dynamic-content" style="display: none;">
+        <!-- Dynamic content will be loaded here -->
+      </section>
+
+      <!-- Build placeholder pages -->
+      <section class="page" id="page-build-overview" data-route="/build/overview">
+        <h1>Build Overview</h1>
+        <p class="lede">Design agents, configure flows, and connect tools.</p>
+      </section>
+      <section class="page" id="page-build-agents" data-route="/build/agents">
+        <h1>Create Agent</h1>
+        <p class="lede">Define goals, voice, and integrations. Save to start testing immediately.</p>
+      </section>
+
+      <!-- API -->
+      <section class="page" id="page-api" data-route="/api">
+        <h1>API Reference</h1>
+        <p class="lede">All requests require the x-api-key header.</p>
+
+        <div class="endpoint">
+          <div class="endpoint-meta">
+            <span class="meta-label">Base</span>
+            <code id="base-code"><span class="origin"></span>/api/v2/<resource></code>
+            <button class="copy-btn" data-copy-target="#base-code">Copy</button>
+          </div>
+          <div class="supported">
+            <span class="chip green">ADD</span>
+            <span class="chip blue">LIST</span>
+            <span class="chip orange">UPDATE</span>
+            <span class="chip red">DELETE</span>
+          </div>
+        </div>
+
+        <h2>List Contacts</h2>
+        <pre class="code"><code>curl -X GET "<span class="origin"></span>/api/v2/contacts?limit=10&order_by=created_at desc" \
+  -H "x-api-key: YOUR_SECRET_API_KEY"</code></pre>
+
+        <h2>Create Contact</h2>
+        <pre class="code"><code>curl -X POST "<span class="origin"></span>/api/v2/contacts" \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: YOUR_SECRET_API_KEY" \
+  -d '{"name":"Ada Lovelace","phone":"+15551234567"}'</code></pre>
+      </section>
+
+      <!-- Video Tutorials -->
+      <section class="page" id="page-videos" data-route="/videos">
+        <h1>Video Tutorials</h1>
+        <p class="lede">Learn how to use iMash with step-by-step video guides.</p>
+
+        <h2>Getting Started</h2>
+        <div class="card-grid">
+          <div class="card">
+            <div style="background: #f0f0f0; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; border-radius: 0.5rem; margin-bottom: 1rem;">
+              <span style="color: #888;">🎬 Video Placeholder</span>
+            </div>
+            <div class="card-title">Introduction to iMash</div>
+            <div class="card-desc">5 min • Learn the basics of the platform</div>
+          </div>
+          <div class="card">
+            <div style="background: #f0f0f0; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; border-radius: 0.5rem; margin-bottom: 1rem;">
+              <span style="color: #888;">🎬 Video Placeholder</span>
+            </div>
+            <div class="card-title">Your First API Call</div>
+            <div class="card-desc">3 min • Quick start with the API</div>
+          </div>
+        </div>
+
+        <h2>Building Agents</h2>
+        <div class="card-grid">
+          <div class="card">
+            <div style="background: #f0f0f0; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; border-radius: 0.5rem; margin-bottom: 1rem;">
+              <span style="color: #888;">🎬 Video Placeholder</span>
+            </div>
+            <div class="card-title">Creating Smart Flows</div>
+            <div class="card-desc">8 min • Build conversational flows</div>
+          </div>
+          <div class="card">
+            <div style="background: #f0f0f0; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; border-radius: 0.5rem; margin-bottom: 1rem;">
+              <span style="color: #888;">🎬 Video Placeholder</span>
+            </div>
+            <div class="card-title">Voice Configuration</div>
+            <div class="card-desc">6 min • Set up voice agents</div>
+          </div>
+        </div>
+
+        <h2>API Deep Dive</h2>
+        <div class="card-grid">
+          <div class="card">
+            <div style="background: #f0f0f0; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; border-radius: 0.5rem; margin-bottom: 1rem;">
+              <span style="color: #888;">🎬 Video Placeholder</span>
+            </div>
+            <div class="card-title">CRUD Operations</div>
+            <div class="card-desc">10 min • Master all operations</div>
+          </div>
+          <div class="card">
+            <div style="background: #f0f0f0; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; border-radius: 0.5rem; margin-bottom: 1rem;">
+              <span style="color: #888;">🎬 Video Placeholder</span>
+            </div>
+            <div class="card-title">Webhooks & Events</div>
+            <div class="card-desc">7 min • Real-time integrations</div>
+          </div>
+        </div>
+
+        <h2>Advanced Topics</h2>
+        <div class="card-grid">
+          <div class="card">
+            <div style="background: #f0f0f0; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; border-radius: 0.5rem; margin-bottom: 1rem;">
+              <span style="color: #888;">🎬 Video Placeholder</span>
+            </div>
+            <div class="card-title">Campaign Management</div>
+            <div class="card-desc">12 min • Automate outreach</div>
+          </div>
+          <div class="card">
+            <div style="background: #f0f0f0; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; border-radius: 0.5rem; margin-bottom: 1rem;">
+              <span style="color: #888;">🎬 Video Placeholder</span>
+            </div>
+            <div class="card-title">Analytics & Reporting</div>
+            <div class="card-desc">9 min • Track performance</div>
+          </div>
+        </div>
+
+        <div style="margin-top: 3rem; padding: 2rem; background: rgba(59, 130, 246, 0.1); border-radius: 0.75rem;">
+          <h3 style="margin-top: 0;">📺 Coming Soon</h3>
+          <p>We're creating more video tutorials to help you get the most out of iMash. Subscribe to our YouTube channel to get notified when new videos are available!</p>
+          <a href="https://youtube.com/@imash" target="_blank" class="btn-primary" style="display: inline-block; margin-top: 1rem;">Subscribe on YouTube →</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Right TOC -->
+    <aside class="toc" id="toc">
+      <div class="toc-inner">
+        <div class="toc-title">On this page</div>
+        <ul id="toc-list"></ul>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div class="socials">
+        <a href="https://x.com/iMash_io" target="_blank" aria-label="X">X</a>
+        <a href="https://www.linkedin.com/company/106848193/" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+        <a href="https://discord.com/invite/8PSWxKyWxM" target="_blank" aria-label="Discord">Discord</a>
+      </div>
+      <div class="powered">Powered by iMash</div>
+    </div>
+  </footer>
+
+</body>
+</html>

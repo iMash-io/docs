@@ -1,0 +1,33 @@
+{
+  "title": "Do Not Call List",
+  "lede": "Manage compliance with do-not-call regulations and customer preferences.",
+  "sections": [
+    {
+      "id": "dnc-management",
+      "title": "DNC List Management",
+      "content": "<p>Maintain compliance with do-not-call regulations and respect customer preferences.</p><h3>Features:</h3><ul><li><strong>Import Lists:</strong> Upload official DNC registry files</li><li><strong>Manual Additions:</strong> Add individual numbers manually</li><li><strong>Auto-exclusion:</strong> Automatically filter from campaigns</li><li><strong>Suppression Lists:</strong> Custom suppression categories</li></ul>"
+    },
+    {
+      "id": "compliance",
+      "title": "Compliance Tools",
+      "content": "<p>Stay compliant with federal and state regulations.</p><ul><li><strong>Registry Updates:</strong> Regular updates from official sources</li><li><strong>Opt-out Processing:</strong> Handle customer opt-out requests</li><li><strong>Time Restrictions:</strong> Honor calling time preferences</li><li><strong>Audit Trail:</strong> Track all DNC activities</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/dnc-list-light.png",
+      "alt": "Do Not Call List Management",
+      "caption": "DNC list management interface",
+      "theme": "light"
+    },
+    {
+      "src": "images/dnc-list-dark.png",
+      "alt": "Do Not Call List Management",
+      "caption": "DNC list management interface",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "Do Not Call List - Compliance Management | iMash Docs",
+  "metaDescription": "Manage DNC lists for compliance. Import suppression lists and ensure regulatory compliance for calling campaigns.",
+  "metaKeywords": "do not call, DNC list, compliance, suppression list, regulatory compliance, TCPA, call regulations"
+}

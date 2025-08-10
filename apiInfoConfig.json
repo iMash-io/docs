@@ -1,0 +1,826 @@
+{
+  "assistants": {
+    "title": "Agents",
+    "tableName": "assistants",
+    "excludeColumns": ["status", "created_at", "ambientSoundVolume", "user", "sttModelName", "ttsModelName", "totalCalls", "updated_at", "deleted", "user_id", "avatarUrl", "application_id", "customTools", "prebuiltTools", "multimodel", "custom_vars_enabled", "smart_flow_id", "backup_system_prompt", "ambientSounds", "endCallMessage", "llmProvider", "sttProvider", "ttsProvider", "llmModel", "sttModel", "ttsModel"],
+    "supportedOperations": ["SELECT", "INSERT", "UPDATE", "DELETE"],
+    "columns": {
+      "name": { "description": "A user-defined name for this assistant instance.", "required": true },
+      "totalCalls": { "description": "Counter for the total number of calls handled by this assistant.", "required": false },
+      "user": { "description": "The user ID associated with this assistant (typically auto-set).", "required": false },
+      "voice": { "description": "Identifier for the selected Text-to-Speech (TTS) voice.", "required": true },
+      "llmProvider": { "description": "Identifier for the selected Large Language Model (LLM) provider.", "required": true },
+      "sttProvider": { "description": "Identifier for the selected Speech-to-Text (STT) provider.", "required": true },
+      "ttsProvider": { "description": "Identifier for the selected Text-to-Speech (TTS) provider.", "required": true },
+      "llmModel": { "description": "Identifier for the specific LLM model to be used.", "required": true },
+      "sttModel": { "description": "Identifier for the specific STT model to be used.", "required": true },
+      "ttsModel": { "description": "Identifier for the specific TTS model to be used.", "required": true },
+      "maxTokens": { "description": "Maximum number of tokens the LLM can generate in a single response.", "required": false },
+      "detectEmotion": { "description": "Enable or disable emotion detection capabilities.", "options": [true, false], "required": false },
+      "llmTemperature": { "description": "Controls LLM response randomness (0=deterministic, 1=creative).", "required": false },
+      "knowledgeBase": { "description": "JSON configuration for any associated knowledge bases.", "required": false },
+      "initialMessage": { "description": "The first message the assistant speaks when a call starts.", "required": true },
+      "systemPrompt": { "description": "Core instructions defining the assistant's role, personality, and goals.", "required": true },
+      "whoSpeaksFirst": { "description": "Determines who initiates the conversation (e.g., user or assistant).", "required": true },
+      "language": { "description": "Primary language for STT and TTS.", "options": ["en-US", "en-GB", "es-ES", "es-MX", "fr-FR", "de-DE", "ja-JP", "pt-BR", "it-IT", "multi"], "required": true },
+      "transcriptionModel": { "description": "Specific model used for transcription (STT).", "required": true },
+      "ambientSounds": { "description": "Identifier for background ambient sound to play during the call.", "required": false },
+      "ambientSoundVolume": { "description": "Volume level for the ambient sound (0 to 2).", "required": false },
+      "responseDelay": { "description": "Artificial delay (in seconds) before the assistant responds.", "required": false },
+      "interruptionThreshold": { "description": "Sensitivity to user interruptions (0=insensitive, 1=very sensitive).", "required": false },
+      "silenceTimeout": { "description": "Duration of silence (in seconds) before triggering idle behavior or ending the call.", "required": false },
+      "maximumDuration": { "description": "Maximum allowed duration of the call in seconds.", "required": false },
+      "backchannel": { "description": "Enable verbal cues ('uh-huh') during user speech.", "options": [true, false], "required": false },
+      "backchannelFrequency": { "description": "How often backchannel cues are used (0 to 1).", "required": false },
+      "backchannelWords": { "description": "JSON array of words/phrases to use for backchanneling.", "required": false },
+      "speechNormalization": { "description": "Normalize numbers, dates, etc., into spoken form before TTS.", "options": [true, false], "required": false },
+      "voicemail": { "description": "Enable answering machine detection.", "options": [true, false], "required": false },
+      "voicemailMode": { "description": "Action to take upon detecting voicemail.", "options": ["hangup", "leave_message"], "required": false },
+      "voicemailMessage": { "description": "Message to leave if voicemailMode is 'leave_message'.", "required": false },
+      "endCallMessage": { "description": "Optional message spoken by the assistant just before ending the call.", "required": false },
+      "idleMessages": { "description": "JSON array of messages to speak when the user is idle.", "required": false },
+      "maxIdleMessages": { "description": "Maximum number of idle messages to play before potentially ending the call.", "required": false },
+      "idleTimeout": { "description": "Duration of user silence (in seconds) before triggering an idle message.", "required": false },
+      "hipaaCompliance": { "description": "Enable features relevant to HIPAA compliance.", "options": [true, false], "required": false },
+      "audioRecording": { "description": "Enable audio recording of the call.", "options": [true, false], "required": false },
+      "videoRecording": { "description": "Enable video recording (if applicable).", "options": [true, false], "required": false },
+      "serverURL": { "description": "Webhook URL for sending call events and data.", "required": false },
+      "serverMessages": { "description": "JSON configuration for messages sent to the server URL.", "required": false },
+      "analysisPrompt": { "description": "Prompt used for post-call analysis tasks.", "required": false },
+      "successEvaluationPrompt": { "description": "Prompt used for evaluating call success criteria.", "required": false },
+      "successEvaluationRubric": { "description": "Rubric or scale used for success evaluation.", "required": false },
+      "structuredDataPrompt": { "description": "Prompt for extracting structured data during the call.", "required": false },
+      "dataSchema": { "description": "JSON schema defining the expected structured data.", "required": false },
+      "llmProviderName": { "description": "Name of the LLM provider.", "options": ["openai", "anthropic", "google", "groq"], "required": true },
+      "llmModelName": { "description": "Name of the specific LLM model.", "required": true },
+      "sttProviderName": { "description": "Name of the STT provider.", "options": ["deepgram"], "required": false },
+      "sttModelName": { "description": "Name of the specific STT model.", "required": false },
+      "ttsProviderName": { "description": "Name of the TTS provider.", "options": ["11labs", "openai", "deepgram"], "required": true },
+      "ttsModelName": { "description": "Name of the specific TTS model.", "required": false },
+      "backgroundDenoising": { "description": "Enable background noise reduction.", "options": [true, false], "required": false },
+      "punctuationBoundaries": { "description": "JSON array defining punctuation characters that signify sentence ends.", "required": false },
+      "voiceCustomSettings": { "description": "JSON object for provider-specific voice settings (e.g., stability, style).", "required": false },
+      "minChars": { "description": "Minimum number of characters required before processing user speech.", "required": false },
+      "idleMessagesEnabled": { "description": "Globally enable or disable the idle message system.", "options": [true, false], "required": false }
+    },
+    "demoRecord": {
+      "name": "Multi Language",
+      "voice": 15,
+      "llmProvider": 1,
+      "sttProvider": 1,
+      "ttsProvider": 2,
+      "llmModel": 1,
+      "sttModel": 1,
+      "ttsModel": 1,
+      "maxTokens": 250,
+      "detectEmotion": true,
+      "llmTemperature": 0.7,
+      "knowledgeBase": [],
+      "initialMessage": "Hello, this is iMash, Hit me up with any Language i'll do my best to response in kind.",
+      "systemPrompt": "You are iMash, You are showing your skills as a Multi Language Voice AI Agent for imash.io\n\nResponse back to the user in whatever language you detect they are speaking in. \n\nMake sure your responses are short funny and too the point. ",
+      "whoSpeaksFirst": 3,
+      "language": "multi",
+      "transcriptionModel": "nova-3",
+      "responseDelay": 0,
+      "interruptionThreshold": 0,
+      "silenceTimeout": 30,
+      "maximumDuration": 343,
+      "backchannel": false,
+      "backchannelFrequency": 0.8,
+      "backchannelWords": [],
+      "speechNormalization": false,
+      "voicemail": false,
+      "voicemailMode": "hangup",
+      "voicemailMessage": "Message content, use {{}} to add varaible",
+      "idleMessages": [
+        "Hey, are you still there?",
+        "Hello there?"
+      ],
+      "maxIdleMessages": 2,
+      "idleTimeout": 7.5,
+      "hipaaCompliance": false,
+      "audioRecording": true,
+      "videoRecording": false,
+      "serverURL": null,
+      "serverMessages": [
+        "summary",
+        "transcript",
+        "tool-calls",
+        "ai-stages-for-leads-incoming",
+        "ai-stages-for-leads-outgoing",
+        "ai-stages-for-contacts-incoming",
+        "ai-stages-for-contacts-outgoing",
+        "ai-auto-create-lead-incoming",
+        "ai-auto-create-lead-outgoing",
+        "ai-update-existing-lead-information-outgoing",
+        "ai-update-existing-lead-information-incoming",
+        "ai-update-existing-contact-information-outgoing",
+        "ai-update-existing-contact-information-incoming"
+      ],
+      "analysisPrompt": null,
+      "successEvaluationPrompt": null,
+      "successEvaluationRubric": "A Scale of 1 to 10.",
+      "structuredDataPrompt": null,
+      "dataSchema": [],
+      "llmProviderName": "openai",
+      "llmModelName": "gpt-4o",
+      "sttProviderName": "deepgram",
+      "ttsProviderName": "11labs",
+      "backgroundDenoising": false,
+      "punctuationBoundaries": [],
+      "voiceCustomSettings": {
+        "stability": 0.5,
+        "useSpeakerBoost": true,
+        "streamingLatency": 4,
+        "styleExaggeration": 0.1,
+        "clarityAndSimilarity": 0.5
+      },
+      "minChars": 0,
+      "idleMessagesEnabled": true
+    }
+  },
+  "phoneNumbers": {
+    "title": "Numbers & Extentions",
+    "tableName": "phoneNumbers",
+    "excludeColumns": ["created_at", "updated_at", "phone_number_uuid", "deleted", "user_id", "provider_id", "telnyx_number_info", "telnyx_order_info", "telnyx_delete_info", "outCalls", "inCalls", "inbound_tunk_id", "outbound_trunk_id", "assistant_id"],
+    "supportedOperations": ["SELECT", "INSERT", "UPDATE", "DELETE"],
+    "contexts": {
+      "pbxExtensions": {
+        "exampleFilters": { "extension": true }
+      },
+      "default": {
+        "exampleFilters": { "extension": false }
+      }
+    },
+    "columns": {
+      "name": { "description": "The internal name or identifier for the phone provider (e.g., 'telnyx', 'twilio').", "required": true },
+      "title": { "description": "A user-friendly display title for the phone provider.", "required": false },
+      "settings": { "description": "A JSON object containing provider-specific configuration settings (e.g., API keys, credentials).", "required": false },
+      "phoneNumber": { "description": "The phone number in E.164 format (e.g., +15551234567).", "required": true },
+      "inboundAssistantId": { "description": "The unique identifier (UUID) of the assistant assigned to handle incoming calls to this number.", "required": false },
+      "outboundAssistantId": { "description": "The unique identifier (UUID) of the assistant assigned for outgoing calls from this number (if applicable).", "required": false },
+      "fallBackDestination": { "description": "The destination (e.g., another phone number, SIP URI) to route calls if the assigned assistant is unavailable.", "required": false },
+      "label": { "description": "A user-defined label or name for easy identification of this phone number.", "required": false },
+      "extension": { "description": "Indicates if this number represents an internal extension (true) or an external phone number (false).", "options": [true, false], "required": false }
+    },
+    "demoRecord": {
+      "phoneNumber": "+15619790317",
+      "inboundAssistantId": "e2304d7a-d254-4f2e-8f69-bf03a8584dad",
+      "outboundAssistantId": "e2304d7a-d254-4f2e-8f69-bf03a8584dad",
+      "fallBackDestination": "",
+      "label": "System Demo Number",
+      "extension": false
+    }
+  },
+  "phoneProviders": {
+    "title": "SIP Phone Providers",
+    "tableName": "phoneProviders",
+    "excludeColumns": ["id", "created_at", "updated_at", "deleted", "user_id", "api_key", "api_secret", "outboundTrunkId", "inboundTrunkId", "dispatchRuleId", "system", "telnyx_connection_id"],
+    "supportedOperations": ["SELECT", "INSERT", "UPDATE", "DELETE"],
+    "contexts": {
+      "default": {
+        "exampleFilters": { "system": false }
+      }
+    },
+    "columns": {
+      "name": { "description": "An internal identifier or short name for the provider (e.g., 'telnyx', 'twilio', 'custom').", "required": true },
+      "title": { "description": "A user-friendly display name for the provider shown in the UI.", "required": false },
+      "settings": { "description": "A JSON object containing provider-specific configuration details (like SIP gateways, authentication methods, tech prefixes, etc.).", "required": true },
+      "label": { "description": "A user-defined label for easier identification, potentially distinct from the title.", "required": false }
+    },
+    "demoRecord":
+    {
+      "name": "custom",
+      "title": "Custom",
+      "settings": {
+        "label": "IssabelPBX",
+        "carrierName": "IssabelPBX",
+        "sipGateways": [
+          {
+            "id": "9c1b940b-8586-4140-82c0-d242c89c06ce",
+            "port": 5060,
+            "inbound": false,
+            "netmask": 32,
+            "outbound": true,
+            "protocol": 0,
+            "networkAddress": "143.198.139.1",
+            "sendOptionsPing": true
+          },
+          {
+            "id": "b5f75a9a-9550-4123-afae-e6dcabbdc743",
+            "port": 5060,
+            "inbound": true,
+            "netmask": 32,
+            "outbound": false,
+            "protocol": 0,
+            "networkAddress": "143.198.139.1"
+          }
+        ],
+        "useTechPrefix": false,
+        "authentication": {
+          "authPassword": "ababab",
+          "authUsername": "imash"
+        },
+        "useAuthentication": true,
+        "requireSipRegister": {},
+        "requireAuthIncoming": false,
+        "requireAuthOutgoing": true,
+        "useRequireSipRegister": false,
+        "useSipDiversionHeader": false
+      },
+      "userID": "cac9b406-5521-4e2f-8d74-9cc254f26668",
+      "label": "IssabelPBX"
+    }
+  },
+  "callLogs": {
+    "title": "Call Logs",
+    "tableName": "callLogs",
+    "excludeColumns": [
+      "id", "user_id", "call_sid", "recording_url", "sip_room", "uuid", "metadata", "affiliate_id", "recordedFile", "messageLogs", "created_at"
+    ],
+    "supportedOperations": ["SELECT"],
+    "exampleLimit": 5,
+    "columns": {
+        "type": { "description": "Type of call (e.g., 'inbound', 'outbound', 'internal').", "required": false },
+        "cost": { "description": "Total calculated cost for the call.", "required": false },
+        "endedReason": { "description": "Reason why the call ended (e.g., 'hangup', 'error', 'completed').", "required": false },
+        "direction": { "description": "Direction of the call ('inbound' or 'outbound').", "options": ["inbound", "outbound"], "required": false },
+        "phone_id": { "description": "Internal identifier for the phone number associated with the call.", "required": false },
+        "assistant_id": { "description": "Unique identifier (UUID) of the assistant that handled the call.", "required": false },
+        "duration": { "description": "Duration of the call in seconds.", "required": false },
+        "tts_characters": { "description": "Number of characters synthesized by Text-to-Speech during the call.", "required": false },
+        "llm_tokens_input": { "description": "Number of input tokens processed by the Large Language Model.", "required": false },
+        "cost_breakdown": { "description": "JSON object detailing the cost components of the call (e.g., LLM, TTS, STT, telephony).", "required": false },
+        "used_providers": { "description": "JSON object listing the providers used during the call (e.g., LLM, TTS, STT).", "required": false },
+        "self_cost": { "description": "Cost incurred directly by the user's own provider accounts (if applicable).", "required": false },
+        "imash_cost": { "description": "Cost incurred through the iMash platform for the call.", "required": false },
+        "to": { "description": "The destination phone number or identifier for the call.", "required": false },
+        "from": { "description": "The originating phone number or identifier for the call.", "required": false },
+        "llm_tokens_output": { "description": "Number of output tokens generated by the Large Language Model.", "required": false },
+        "transcript": { "description": "Full text transcript of the call conversation.", "required": false },
+        "analysisResult": { "description": "Result of any post-call analysis performed (e.g., sentiment, summary).", "required": false },
+        "successEvalResult": { "description": "Result of the call success evaluation based on defined criteria.", "required": false },
+        "structuredDataResult": { "description": "JSON object containing structured data extracted during the call.", "required": false },
+        "toolCalls": { "description": "JSON array logging any tool/function calls made by the assistant during the call.", "required": false },
+        "statusUpdates": { "description": "JSON array logging status changes during the call lifecycle.", "required": false },
+        "campaigns_id": { "description": "Unique identifier (UUID) of the campaign associated with the call, if any.", "required": false },
+        "crm_account_ids": { "description": "JSON array of associated CRM account IDs.", "required": false },
+        "crm_contact_ids": { "description": "JSON array of associated CRM contact IDs.", "required": false },
+        "crm_lead_ids": { "description": "JSON array of associated CRM lead IDs.", "required": false },
+        "lifecycle_stage": { "description": "The CRM lifecycle stage assigned to the related entity after the call.", "required": false },
+        "previous_lifecycle_stage": { "description": "The CRM lifecycle stage of the related entity before the call.", "required": false },
+        "first_update_at": { "description": "Timestamp of the first status update received for the call.", "required": false },
+        "campaigns_contact": { "description": "Unique identifier (UUID) of the specific campaign contact record associated with the call.", "required": false },
+        "webhook_tokens_input": { "description": "Number of input tokens processed by webhook calls.", "required": false },
+        "webhook_tokens_output": { "description": "Number of output tokens generated by webhook calls.", "required": false },
+        "custom_vars": { "description": "JSON object containing custom variables passed to or generated during the call.", "required": false },
+        "contactinfoResult": { "description": "JSON object containing contact information gathered during the call.", "required": false },
+        "call_started_time": { "description": "Timestamp when the call actually started (connected).", "required": false }
+    },
+    "demoRecord": {
+      "type": "Phone",
+      "cost": 0.1000374,
+      "endedReason": "User Hang up",
+      "direction": "outbound",
+      "phone_id": 1016,
+      "assistant_id": "e2304d7a-d254-4f2e-8f69-bf03a8584dad",
+      "duration": 54052,
+      "tts_characters": 485,
+      "llm_tokens_input": 2985,
+      "cost_breakdown": {
+        "llm": {
+          "model": "GPT 4o",
+          "input_cost": 0.02985,
+          "total_cost": 0.030032,
+          "credentials": false,
+          "input_price": 10,
+          "output_cost": 0.000182,
+          "input_tokens": 2985,
+          "output_price": 2,
+          "output_tokens": 91
+        },
+        "stt": {
+          "cost": 0.00630606666666667,
+          "model": "deepgram",
+          "price": 0.007,
+          "seconds": 54.052,
+          "credentials": false
+        },
+        "tts": {
+          "cost": 0.01455,
+          "model": "11labs",
+          "price": 0.03,
+          "Characters": 485,
+          "credentials": false
+        },
+        "imash": {
+          "cost": 0.0450433333333333,
+          "price": 0.05,
+          "seconds": 54.052
+        },
+        "webhooks": {
+          "input_cost": 0.002776,
+          "total_cost": 0.004106,
+          "input_price": 2,
+          "output_cost": 0.00133,
+          "input_tokens": 1388,
+          "output_price": 10,
+          "output_tokens": 133
+        }
+      },
+      "used_providers": {
+        "llm": {
+          "model": "GPT 4o",
+          "credentials": false,
+          "input_price": 10,
+          "output_price": 2
+        },
+        "stt": {
+          "model": "deepgram",
+          "price": 0.007,
+          "credentials": false
+        },
+        "tts": {
+          "model": "11labs",
+          "price": 0.03,
+          "credentials": false
+        },
+        "imash": {
+          "price": 0.05
+        },
+        "webhooks": {
+          "input_price": 2,
+          "output_price": 10
+        }
+      },
+      "self_cost": 0,
+      "imash_cost": 0.1000374,
+      "to": 19543973888,
+      "from": 15619790317,
+      "llm_tokens_output": 91,
+      "transcript": "Assistant: Hello ISRAEL thank you for contacting iMash Customer Service. I’m Jax, here to assist you. How can I help you today\nUser: Tell me about your prices.\nAssistant: Our prices start from 3 cents per minute and can go up to 30 cents, depending on the volume and configuration.\nUser: And how do I set up AI agents?\nAssistant: To set up the AI agents, you would create a flow in the AI Agents page and follow the detailed instructions on the Flow page or our video documents available at docs.imash.io\nUser: Alright. Goodbye.\nAssistant: End call 2.",
+      "analysisResult": "The customer inquired about pricing, which ranges from 3 to 30 cents per minute based on volume and configuration, and received guidance on setting up AI agents via the AI Agents page and documentation at docs.imash.io. The call concluded after these inquiries.",
+      "successEvalResult": "",
+      "structuredDataResult": "",
+      "toolCalls": [],
+      "statusUpdates": {
+        "endCallReason": "User Hang up",
+        "callDuration": 54.05226278305054
+      },
+      "campaigns_id": null,
+      "crm_account_ids": [
+        58615
+      ],
+      "crm_contact_ids": [],
+      "crm_lead_ids": [
+        963
+      ],
+      "lifecycle_stage": "Contacted",
+      "previous_lifecycle_stage": "Contacted",
+      "first_update_at": "2025-04-11T23:08:26.37463+00:00",
+      "campaigns_contact": null,
+      "webhook_tokens_input": 1388,
+      "webhook_tokens_output": 133,
+      "custom_vars": {
+        "first_name": "Izzy"
+      },
+      "contactinfoResult": {
+        "city": null,
+        "email": null,
+        "country": null,
+        "last_name": null,
+        "first_name": "Izzy",
+        "postal_code": null,
+        "state_province": null,
+        "street_address": null,
+        "apartment_suite": null
+      },
+      "call_started_time": "2025-04-11T23:07:32.110882+00:00"
+    }
+  },
+  "customTools": {
+    "title": "Custom Tools",
+    "tableName": "customTools",
+    "excludeColumns": ["id", "created_at", "user_id", "type"],
+    "supportedOperations": ["SELECT", "INSERT", "UPDATE", "DELETE"],
+    "columns": {
+      "name": { "description": "The unique name identifying the custom tool.", "required": true },
+      "description": { "description": "A brief explanation of what the custom tool does.", "required": false },
+      "url": { "description": "The endpoint URL where the custom tool's logic is hosted (required for webhook tools).", "required": false },
+      "parameters": { "description": "JSON schema defining the input parameters the tool expects.", "required": false },
+      "speakDuringExecution": { "description": "Whether the assistant should provide verbal feedback while the tool is running.", "options": [true, false], "required": false },
+      "speakAfterExecution": { "description": "Whether the assistant should announce the result or completion of the tool execution.", "options": [true, false], "required": false },
+      "prompt1": { "description": "Primary prompt used by the LLM to understand when and how to use this tool.", "required": false },
+      "prompt2": { "description": "Secondary or supplementary prompt for the tool.", "required": false },
+      "method": { "description": "The HTTP method to use when calling the tool's URL (required for webhook tools).", "options": ["GET", "POST", "PUT", "DELETE", "PATCH"], "required": false }
+    },
+    "demoRecord": {
+      "name": "custom_tool_#1",
+      "description": "Hello",
+      "url": "https://www.your_url.com",
+      "parameters": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"appointment_available_ts\": {\n      \"type\": \"string\",\n      \"description\": \"The timestamp of the appointment that is available for booking.\"\n    }\n  },\n  \"required\": [\n    \"appointment_available_ts\"\n  ]\n}",
+      "speakDuringExecution": false,
+      "speakAfterExecution": false,
+      "prompt1": null,
+      "prompt2": null,
+      "method": "POST"
+    }
+  },
+  "doNotCall": {
+    "title": "Do Not Call List",
+    "tableName": "do_not_call",
+    "excludeColumns": ["id", "created_at", "updated_at", "user_id", "deleted"],
+    "supportedOperations": ["SELECT", "INSERT", "DELETE"],
+    "columns": {
+      "number": { "description": "The phone number added to the Do Not Call list, typically in E.164 format.", "required": true },
+      "call_log_id": { "description": "The unique identifier (UUID) of the call log entry that triggered the addition to the DNC list, if applicable.", "required": false }
+    },
+    "demoRecord": {
+      "number": "19848877444",
+      "call_log_id": null
+    }
+  },
+  "campaigns": {
+    "title": "Campaigns",
+    "tableName": "campaigns",
+    "excludeColumns": ["id", "created_at", "updated_at", "user_id", "is_campaign_active", "deleted", "stages", "filter_criteria"],
+    "supportedOperations": ["SELECT", "INSERT", "UPDATE", "DELETE"],
+    "columns": {
+      "name": { "description": "The user-defined name for the campaign.", "required": true },
+      "description": { "description": "A brief description of the campaign's purpose or goal.", "required": false },
+      "status": { "description": "The current status of the campaign.", "options": ["draft", "active", "paused", "completed", "archived"], "required": true },
+      "max_retries": { "description": "Maximum number of times to retry calling a contact within the campaign.", "required": false },
+      "retry_delay_minutes": { "description": "Delay in minutes before retrying a contact.", "required": false },
+      "working_hours_start": { "description": "Start time for the campaign's operational window (e.g., '09:00:00').", "required": false },
+      "working_hours_end": { "description": "End time for the campaign's operational window (e.g., '17:00:00').", "required": false },
+      "working_days": { "description": "Comma-separated list of days the campaign is active (e.g., 'Mon,Tue,Wed,Thu,Fri').", "required": false },
+      "total_contacts": { "description": "Total number of contacts associated with the campaign (read-only).", "required": false },
+      "completed_contacts": { "description": "Number of contacts that have completed processing in the campaign (read-only).", "required": false },
+      "successful_calls": { "description": "Number of calls marked as successful within the campaign (read-only).", "required": false },
+      "phone_number_id": { "description": "JSON array containing the internal IDs of the phone numbers used for this campaign.", "required": false },
+      "phone_number": { "description": "JSON array containing the actual phone numbers (strings) used for this campaign.", "required": false },
+      "assistant_name": { "description": "JSON array containing the names of the assistants assigned to this campaign.", "required": false },
+      "assistant_id": { "description": "JSON array containing the unique identifiers (UUIDs) of the assistants assigned to this campaign.", "required": false },
+      "max_retries_stage": { "description": "JSON object defining max retries per campaign stage.", "required": false },
+      "allow_ai_change_stages": { "description": "Allow the AI assistant to dynamically change a contact's stage during a call.", "options": [true, false], "required": false },
+      "max_concurrent_calls": { "description": "Maximum number of simultaneous calls allowed for this campaign.", "required": false },
+      "respect_global_dnc": { "description": "Whether the campaign should respect the global Do Not Call list.", "options": [true, false], "required": false },
+      "respect_user_dnc": { "description": "Whether the campaign should respect the user-specific Do Not Call list.", "options": [true, false], "required": false },
+      "timezone": { "description": "The primary timezone for the campaign's scheduling (e.g., 'America/New_York').", "required": false },
+      "enable_stages": { "description": "Enable or disable the use of stages within this campaign.", "options": [true, false], "required": false },
+      "unified_stages": { "description": "JSON object defining the unified stages used across the campaign.", "required": false },
+      "calls_per_hour": { "description": "Target number of calls to attempt per hour.", "required": false },
+      "active_calls": { "description": "Current number of active calls for this campaign (read-only).", "required": false }
+    },
+    "demoRecord": {
+      "name": "Demo Campaign #1",
+      "description": "",
+      "status": "draft",
+      "max_retries": 3,
+      "retry_delay_minutes": 60,
+      "working_hours_start": "09:00:00",
+      "working_hours_end": "17:00:00",
+      "working_days": "mon,tue,wed,thu,fri",
+      "total_contacts": 0,
+      "completed_contacts": 0,
+      "successful_calls": 0,
+      "phone_number_id": null,
+      "phone_number": null,
+      "assistant_name": null,
+      "assistant_id": null,
+      "max_retries_stage": [],
+      "allow_ai_change_stages": true,
+      "max_concurrent_calls": 3,
+      "respect_global_dnc": false,
+      "respect_user_dnc": false,
+      "timezone": null,
+      "enable_stages": true,
+      "unified_stages": null,
+      "calls_per_hour": "10",
+      "active_calls": 0
+    }
+  },
+  "crm_accounts": {
+    "title": "CRM Accounts",
+    "tableName": "crm_accounts",
+    "excludeColumns": ["id", "user_id", "created_at", "updated_at", "deleted", "notes", "tags_text", "status"],
+    "supportedOperations": ["SELECT", "INSERT", "UPDATE", "DELETE"],
+    "columns": {
+      "name": { "description": "The official name of the company or organization.", "required": true },
+      "website": { "description": "The primary website URL for the account.", "required": false },
+      "industry": { "description": "The industry sector the account operates in.", "required": false },
+      "address": { "description": "Legacy field for the full address (prefer structured address fields).", "required": false },
+      "logo_url": { "description": "URL pointing to the account's logo image.", "required": false },
+      "lifecycle_stage": { "description": "Current stage in the customer lifecycle (e.g., 'Lead', 'Opportunity', 'Customer').", "required": false },
+      "street_address": { "description": "The street name and number.", "required": false },
+      "apartment_suite": { "description": "Apartment, suite, or unit number.", "required": false },
+      "city": { "description": "The city where the account is located.", "required": false },
+      "state_province": { "description": "The state or province.", "required": false },
+      "postal_code": { "description": "The postal or ZIP code.", "required": false },
+      "country": { "description": "The country.", "required": false },
+      "tags": { "description": "JSON array of tags associated with the account.", "required": false },
+      "email": { "description": "Primary email address for the account.", "required": false },
+      "account_id": { "description": "Optional secondary identifier for the account.", "required": false },
+      "company_size": { "description": "Estimated size of the company (e.g., number of employees).", "required": false },
+      "total_revenue": { "description": "Estimated annual revenue of the company.", "required": false },
+      "primary_contact": { "description": "Identifier (ID) of the main contact person associated with this account.", "required": false },
+      "year_founded": { "description": "The year the company was founded.", "required": false },
+      "tax_registration": { "description": "Tax identification or registration number.", "required": false },
+      "lead_source": { "description": "How this account was acquired (e.g., 'Web', 'Referral').", "required": false },
+      "social_media": { "description": "JSON object or text containing links to social media profiles.", "required": false },
+      "company_info_schema": { "description": "JSON object for storing additional, structured company information.", "required": false }
+    },
+    "contexts": {
+      "default": {}
+    },
+    "demoRecord": {
+      "name": "OpenAI (Demo)",
+      "website": "https://www.openai.com/",
+      "industry": null,
+      "address": null,
+      "logo_url": null,
+      "lifecycle_stage": null,
+      "street_address": null,
+      "apartment_suite": null,
+      "city": null,
+      "state_province": null,
+      "postal_code": null,
+      "country": null,
+      "tags": null,
+      "email": null,
+      "account_id": 58613,
+      "company_size": null,
+      "total_revenue": null,
+      "primary_contact": null,
+      "year_founded": null,
+      "tax_registration": null,
+      "lead_source": null,
+      "social_media": null,
+      "company_info_schema": {
+        "Anything": "",
+        "Yes Custom": ""
+      }
+    }
+  },
+  "crm_contacts": {
+    "title": "CRM Contacts",
+    "tableName": "crm_contacts",
+    "excludeColumns": ["id", "user_id", "created_at", "updated_at", "deleted", "tags_text", "avatar_url", "notes", "active_campaigns", "converted_contact_id", "status"],
+    "supportedOperations": ["SELECT", "INSERT", "UPDATE", "DELETE"],
+    "contexts": {
+      "default": {}
+    },
+    "columns": {
+      "first_name": { "description": "The contact's first name.", "required": false },
+      "last_name": { "description": "The contact's last name.", "required": false },
+      "email": { "description": "The contact's primary email address.", "required": false },
+      "account_id": { "description": "Identifier (ID) of the crm_account this contact is associated with.", "required": false },
+      "lifecycle_stage": { "description": "Current stage in the customer lifecycle for this contact.", "required": false },
+      "tags": { "description": "JSON array of tags associated with the contact.", "required": false },
+      "street_address": { "description": "The street name and number for the contact's address.", "required": false },
+      "apartment_suite": { "description": "Apartment, suite, or unit number for the contact's address.", "required": false },
+      "city": { "description": "The city for the contact's address.", "required": false },
+      "state_province": { "description": "The state or province for the contact's address.", "required": false },
+      "postal_code": { "description": "The postal or ZIP code for the contact's address.", "required": false },
+      "country": { "description": "The country for the contact's address.", "required": false },
+      "timezone": { "description": "The contact's preferred timezone (e.g., 'America/Los_Angeles').", "required": false },
+      "custom_vars": { "description": "JSON object for storing additional, structured custom information about the contact.", "required": false },
+      "primary": { "description": "Indicates if this is the primary contact for the associated account.", "options": [true, false], "required": false },
+      "active_campaigns": { "description": "JSON array listing campaigns this contact is currently active in (read-only).", "required": false }
+    },
+    "demoRecord": {
+      "first_name": "OpenAI (Demo)",
+      "last_name": "[Main]",
+      "email": null,
+      "account_id": 58613,
+      "lifecycle_stage": null,
+      "tags": null,
+      "street_address": null,
+      "apartment_suite": null,
+      "city": null,
+      "state_province": null,
+      "postal_code": null,
+      "country": null,
+      "timezone": "UTC",
+      "custom_vars": null,
+      "primary": true
+    }
+  },
+  "crm_leads": {
+    "title": "CRM Leads",
+    "tableName": "crm_leads",
+    "excludeColumns": ["id", "user_id", "created_at", "updated_at", "deleted", "tags_text", "avatar_url", "notes", "Nothing", "active_campaigns", "converted_contact_id", "status"],
+    "supportedOperations": ["SELECT", "INSERT", "UPDATE", "DELETE"],
+    "contexts": {
+      "default": {}
+    },
+    "columns": {
+      "first_name": { "description": "The lead's first name.", "required": true },
+      "last_name": { "description": "The lead's last name.", "required": true },
+      "source": { "description": "The source from which the lead was obtained (e.g., 'Website', 'Trade Show', 'Referral').", "required": false },
+      "status": { "description": "The current status of the lead (e.g., 'New', 'Contacted', 'Qualified', 'Unqualified').", "required": false },
+      "account_id": { "description": "Identifier (ID) of the crm_account this lead might be associated with.", "required": false },
+      "converted_contact_id": { "description": "Identifier (ID) of the crm_contact record if this lead has been converted.", "required": false },
+      "lifecycle_stage": { "description": "Current stage in the sales or marketing lifecycle for this lead.", "required": false },
+      "tags": { "description": "JSON array of tags associated with the lead.", "required": false },
+      "street_address": { "description": "The street name and number for the lead's address.", "required": false },
+      "apartment_suite": { "description": "Apartment, suite, or unit number for the lead's address.", "required": false },
+      "city": { "description": "The city for the lead's address.", "required": false },
+      "state_province": { "description": "The state or province for the lead's address.", "required": false },
+      "postal_code": { "description": "The postal or ZIP code for the lead's address.", "required": false },
+      "country": { "description": "The country for the lead's address.", "required": false },
+      "timezone": { "description": "The lead's estimated timezone (e.g., 'America/Denver').", "required": false },
+      "custom_vars": { "description": "JSON object for storing additional, structured custom information about the lead.", "required": false },
+      "email": { "description": "The lead's email address.", "required": false },
+      "active_campaigns": { "description": "JSON array listing campaigns this lead is currently active in (read-only).", "required": false }
+    },
+    "demoRecord": {
+      "first_name": "Alexander (Demo)",
+      "last_name": "Garcia",
+      "source": null,
+      "account_id": 58612,
+      "lifecycle_stage": "New",
+      "tags": null,
+      "street_address": "1111 Palm Drive",
+      "apartment_suite": null,
+      "city": "Los Angeles",
+      "state_province": "CA",
+      "postal_code": "90001",
+      "country": "USA",
+      "timezone": "UTC",
+      "custom_vars": null,
+      "email": "alex.garcia.demo@example.com"
+    }
+  },
+  "crm_settings": {
+    "title": "Stage Settings",
+    "tableName": "crm_settings",
+    "excludeColumns": ["id", "created_at", "updated_at", "user_id", "tenant_id", "key"],
+    "supportedOperations": ["SELECT", "UPDATE"],
+    "contexts": {
+      "default": {}
+    },
+    "columns": {
+      "company_info": { "description": "JSON object containing general company information used within the CRM.", "required": false },
+      "auto_add_incoming_calls_as_leads": { "description": "Automatically create a new lead record for unrecognized incoming calls.", "options": [true, false], "required": false },
+      "auto_set_lead_details_from_transcript_incoming": { "description": "Attempt to automatically populate lead details from the call transcript for incoming calls.", "options": [true, false], "required": false },
+      "auto_add_outgoing_calls_as_leads": { "description": "Automatically create a new lead record for unrecognized outgoing calls.", "options": [true, false], "required": false },
+      "auto_set_lead_details_from_transcript_outgoing": { "description": "Attempt to automatically populate lead details from the call transcript for outgoing calls.", "options": [true, false], "required": false },
+      "auto_update_lead_stage_incoming": { "description": "Allow AI to automatically update the lifecycle stage of leads based on incoming call interactions.", "options": [true, false], "required": false },
+      "auto_update_lead_stage_outgoing": { "description": "Allow AI to automatically update the lifecycle stage of leads based on outgoing call interactions.", "options": [true, false], "required": false },
+      "auto_update_contact_stage_incoming": { "description": "Allow AI to automatically update the lifecycle stage of contacts based on incoming call interactions.", "options": [true, false], "required": false },
+      "auto_update_contact_stage_outgoing": { "description": "Allow AI to automatically update the lifecycle stage of contacts based on outgoing call interactions.", "options": [true, false], "required": false },
+      "unified_stages": { "description": "JSON object defining the unified lifecycle stages used across leads and contacts.", "required": false }
+    },
+    "demoRecord": {}
+  },
+  "calendar_events": {
+    "title": "Calendar Events",
+    "tableName": "calendar_events",
+    "excludeColumns": ["id", "created_at", "updated_at", "user_id", "deleted"],
+    "supportedOperations": ["SELECT", "INSERT", "UPDATE", "DELETE"],
+    "contexts": {
+      "default": {}
+    },
+    "columns": {
+      "title": { "description": "The title or name of the calendar event.", "required": true },
+      "description": { "description": "A detailed description of the event.", "required": false },
+      "start_date": { "description": "The start date and time of the event (ISO 8601 format with timezone).", "required": true },
+      "end_date": { "description": "The end date and time of the event (ISO 8601 format with timezone).", "required": true },
+      "color": { "description": "A color code (e.g., hex like '#FF5733') associated with the event for display purposes.", "required": true },
+      "category_id": { "description": "The unique identifier (UUID) of the calendar category this event belongs to.", "required": false },
+      "created_by": { "description": "The unique identifier (UUID) of the user who created the event.", "required": false },
+      "is_deleted": { "description": "Indicates if the event has been soft-deleted.", "options": [true, false], "required": false }
+    },
+    "demoRecord": {
+      "title": "Appointment with Tom from IBM",
+      "description": "Discuss potential collaboration with iMash's custom voice AI solutions",
+      "start_date": "2025-04-08T20:00:00+00:00",
+      "end_date": "2025-04-08T20:30:00+00:00",
+      "color": "#fa541c",
+      "category_id": "df994600-3254-4ec3-919c-966609db22ff",
+      "created_by": "1ad08441-e9c7-4e3a-8d29-054a5261b757",
+      "is_deleted": false
+    }
+  },
+  "calendar_categories": {
+    "title": "Calendar Categories",
+    "tableName": "calendar_categories",
+    "excludeColumns": ["id", "created_at", "updated_at", "user_id", "deleted", "is_deleted", "ant_tag_name"],
+    "supportedOperations": ["SELECT", "INSERT", "UPDATE", "DELETE"],
+    "contexts": {
+      "default": {}
+    },
+    "columns": {
+      "title": { "description": "The name of the calendar category.", "required": true },
+      "color": { "description": "A color code (e.g., hex like '#8A2BE2') associated with the category for display purposes.", "required": false }
+    },
+    "demoRecord": {
+      "title": "Meeting",
+      "color": "#13c2c2"
+    }
+  },
+  "calendar_event_participants": {
+    "title": "Calendar Event Participants",
+    "tableName": "calendar_event_participants",
+    "excludeColumns": ["id", "created_at", "updated_at", "user_id"],
+    "supportedOperations": ["SELECT", "INSERT", "UPDATE", "DELETE"],
+    "contexts": {
+      "default": {}
+    },
+    "columns": {
+      "event_id": { "description": "The unique identifier (UUID) of the calendar_event this participant is associated with.", "required": true },
+      "contact_id": { "description": "The identifier (ID) of the crm_contact participating in the event.", "required": false },
+      "lead_id": { "description": "The identifier (ID) of the crm_lead participating in the event.", "required": false },
+      "call_uuid": { "description": "The unique identifier (UUID) of the call log associated with this event participation, if applicable.", "required": false }
+    },
+    "demoRecord": {
+      "event_id": "70330d39-21fe-4b79-96be-d53aa83d2ac3",
+      "contact_id": null,
+      "lead_id": 963,
+      "call_uuid": "5be35121-afb2-4e2c-bd70-fc3e5c39f092"
+    }
+  },
+  "internalUsers": {
+    "title": "Account Settings",
+    "tableName": "internalUsers",
+    "excludeColumns": ["id", "user_id", "created_at", "updated_at", "deleted", "password_hash", "stripe_customer_id", "dispatch_id", "sip_connection_id", "paid_user", "webhook_price_output", "webhook_price_input", "authID", "imash_phone_numbers"],
+    "supportedOperations": ["SELECT", "INSERT", "UPDATE", "DELETE"],
+    "columns": {
+      "llmApis": { "description": "JSON object storing API keys and configurations for Large Language Model providers.", "required": false },
+      "ttsApis": { "description": "JSON object storing API keys and configurations for Text-to-Speech providers.", "required": false },
+      "sttApis": { "description": "JSON object storing API keys and configurations for Speech-to-Text providers.", "required": false },
+      "phoneApis": { "description": "JSON object storing API keys and configurations for telephony providers.", "required": false },
+      "cloudApis": { "description": "JSON object storing API keys and configurations for cloud service providers.", "required": false },
+      "firstName": { "description": "The user's first name.", "required": false },
+      "lastName": { "description": "The user's last name.", "required": false },
+      "companyName": { "description": "The name of the company the user belongs to.", "required": false },
+      "address": { "description": "Legacy field for the user's full address (prefer structured address fields).", "required": false },
+      "avatarUrl": { "description": "URL for the user's profile picture or avatar.", "required": false },
+      "Price_Per_Minute": { "description": "Custom per-minute pricing set for this user (if applicable).", "required": false },
+      "address_line1": { "description": "The first line of the user's street address.", "required": false },
+      "city": { "description": "The city part of the user's address.", "required": false },
+      "state": { "description": "The state or province part of the user's address.", "required": false },
+      "zip": { "description": "The postal or ZIP code part of the user's address.", "required": false },
+      "country": { "description": "The country part of the user's address.", "required": false },
+      "phone_Number": { "description": "The user's primary phone number.", "required": false },
+      "email": { "description": "The user's primary email address (often used for login).", "required": false },
+      "name": { "description": "The user's full name or display name.", "required": false },
+      "avatar_url": { "description": "URL for the user's profile picture or avatar (alternative field).", "required": false },
+      "billing_address": { "description": "The first line of the user's billing address.", "required": false },
+      "billing_city": { "description": "The city part of the user's billing address.", "required": false },
+      "billing_state": { "description": "The state or province part of the user's billing address.", "required": false },
+      "billing_zip": { "description": "The postal or ZIP code part of the user's billing address.", "required": false },
+      "billing_country": { "description": "The country part of the user's billing address.", "required": false },
+      "balance": { "description": "The user's current account balance. (read-only)", "required": false },
+      "max_concurrent_calls": { "description": "The maximum number of simultaneous calls allowed for this user. (read-only)", "required": false },
+      "current_concurrent_calls": { "description": "The current number of active calls for this user (read-only).", "required": false },
+      "phone": { "description": "The user's phone number (alternative field).", "required": false },
+      "imash_phone_numbers": { "description": "Pricing related to iMash phone numbers for this user.", "required": false }
+    },
+    "demoRecord": {
+      "llmApis": {
+        "anthropic": {
+          "apiKey": "\"xxx\""
+        }
+      },
+      "ttsApis": {
+        "rime-ai": {
+          "apiKey": "\"xxx\""
+        }
+      },
+      "sttApis": {
+        "deepgram": {
+          "apiKey": "\"xxx\"",
+          "apiUrl": "\"zzz\""
+        }
+      },
+      "phoneApis": {},
+      "cloudApis": {},
+      "firstName": "",
+      "lastName": "",
+      "companyName": "",
+      "address": "",
+      "avatarUrl": "",
+      "Price_Per_Minute": 0.05,
+      "address_line1": null,
+      "city": null,
+      "state": null,
+      "zip": null,
+      "country": null,
+      "phone_Number": null,
+      "email": "showcase@imash.io",
+      "name": null,
+      "avatar_url": null,
+      "billing_address": null,
+      "billing_city": null,
+      "billing_state": null,
+      "billing_zip": null,
+      "billing_country": null,
+      "balance": 3.2562235,
+      "max_concurrent_calls": 10,
+      "current_concurrent_calls": 0,
+      "phone": null
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Analytics Dashboard",
+  "lede": "Monitor performance metrics and gain insights into your AI calling operations.",
+  "sections": [
+    {
+      "id": "dashboard-overview",
+      "title": "Dashboard Overview",
+      "content": "<p>Get a comprehensive view of your calling performance with real-time analytics.</p><h3>Key Metrics:</h3><ul><li><strong>Call Volume:</strong> Total calls made and received</li><li><strong>Success Rates:</strong> Conversion and completion percentages</li><li><strong>Agent Performance:</strong> Individual agent statistics</li><li><strong>Cost Analysis:</strong> Spending breakdown by service</li></ul>"
+    },
+    {
+      "id": "custom-dashboards",
+      "title": "Custom Dashboards",
+      "content": "<p>Create personalized dashboards with the metrics that matter most to you.</p><ul><li><strong>Widget Library:</strong> Choose from various chart types</li><li><strong>Time Ranges:</strong> Customize date ranges for analysis</li><li><strong>Filters:</strong> Drill down into specific data segments</li><li><strong>Export Options:</strong> Share dashboards and data</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/analytics-dashboard-light.png",
+      "alt": "Analytics Dashboard",
+      "caption": "Main analytics dashboard with key performance metrics",
+      "theme": "light"
+    },
+    {
+      "src": "images/analytics-dashboard-dark.png",
+      "alt": "Analytics Dashboard",
+      "caption": "Main analytics dashboard with key performance metrics",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "Analytics Dashboard - Performance Overview | iMash Docs",
+  "metaDescription": "Monitor AI agent performance with comprehensive analytics. Track KPIs, conversion rates, and system metrics.",
+  "metaKeywords": "analytics dashboard, performance metrics, KPI tracking, data visualization, business intelligence, reporting"
+}

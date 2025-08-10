@@ -1,0 +1,33 @@
+{
+  "title": "Contacts",
+  "lede": "Manage your customer contacts with comprehensive profiles and interaction history.",
+  "sections": [
+    {
+      "id": "contact-management",
+      "title": "Contact Management",
+      "content": "<p>Store and organize customer contact information in a centralized database.</p><h3>Contact Features:</h3><ul><li><strong>Contact Profiles:</strong> Complete customer information and history</li><li><strong>Phone Numbers:</strong> Multiple phone number support</li><li><strong>Tags & Categories:</strong> Organize contacts with custom tags</li><li><strong>Interaction History:</strong> Complete call and message history</li></ul>"
+    },
+    {
+      "id": "contact-operations",
+      "title": "Contact Operations",
+      "content": "<p>Perform bulk operations and manage contact lifecycle.</p><ul><li><strong>Bulk Import:</strong> CSV file import capabilities</li><li><strong>Duplicate Detection:</strong> Automatic duplicate identification</li><li><strong>Contact Segmentation:</strong> Group contacts for targeted campaigns</li><li><strong>Data Export:</strong> Export contact data for external use</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/contacts-light.png",
+      "alt": "Contacts Management Interface",
+      "caption": "Contact list and profile management",
+      "theme": "light"
+    },
+    {
+      "src": "images/contacts-dark.png",
+      "alt": "Contacts Management Interface",
+      "caption": "Contact list and profile management",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "Contacts Management - CRM Features | iMash Docs",
+  "metaDescription": "Manage customer contacts in the built-in CRM. Track interactions, notes, and communication history.",
+  "metaKeywords": "contacts, CRM, customer management, contact database, customer records, interaction tracking"
+}

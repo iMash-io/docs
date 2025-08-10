@@ -1,0 +1,33 @@
+{
+  "title": "Create Campaign",
+  "lede": "Set up automated calling campaigns with AI agents to reach your target audience.",
+  "sections": [
+    {
+      "id": "campaign-basics",
+      "title": "Campaign Configuration",
+      "content": "<p>Create outbound calling campaigns with customizable settings and targeting.</p><h3>Campaign Settings:</h3><ul><li><strong>Name & Description:</strong> Identify your campaign</li><li><strong>Agent Selection:</strong> Choose which AI agent handles calls</li><li><strong>Target Audience:</strong> Select contacts, leads, or custom lists</li><li><strong>Schedule:</strong> Set calling times and frequency</li></ul>"
+    },
+    {
+      "id": "dial-strategy",
+      "title": "Dialing Strategy",
+      "content": "<p>Configure how your campaign makes calls.</p><ul><li><strong>Dial Rate:</strong> Calls per hour or concurrent calls</li><li><strong>Retry Logic:</strong> Handle busy signals and no-answers</li><li><strong>Time Zones:</strong> Respect caller local time zones</li><li><strong>Compliance:</strong> Honor do-not-call lists</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/campaign-creation-light.png",
+      "alt": "Campaign Creation Interface",
+      "caption": "Campaign setup and configuration form",
+      "theme": "light"
+    },
+    {
+      "src": "images/campaign-creation-dark.png",
+      "alt": "Campaign Creation Interface",
+      "caption": "Campaign setup and configuration form",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "Create Campaign - Automated Outreach Campaigns | iMash Docs",
+  "metaDescription": "Set up automated calling campaigns with AI agents. Configure dial lists, scheduling, and campaign objectives.",
+  "metaKeywords": "create campaign, outbound calling, automated campaigns, dial lists, campaign management, outreach automation"
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Accounts",
+  "lede": "Manage company accounts and organizations with multiple contacts and relationships.",
+  "sections": [
+    {
+      "id": "account-management",
+      "title": "Account Management",
+      "content": "<p>Organize contacts under company accounts for better relationship management.</p><h3>Account Features:</h3><ul><li><strong>Company Profiles:</strong> Detailed organization information</li><li><strong>Contact Relationships:</strong> Link multiple contacts to accounts</li><li><strong>Account Hierarchy:</strong> Parent-child account relationships</li><li><strong>Account Activities:</strong> Track all account interactions</li></ul>"
+    },
+    {
+      "id": "account-operations",
+      "title": "Account Operations",
+      "content": "<p>Manage account lifecycle and relationships efficiently.</p><ul><li><strong>Account Creation:</strong> Manual and automatic account creation</li><li><strong>Contact Assignment:</strong> Assign contacts to accounts</li><li><strong>Account Campaigns:</strong> Target entire organizations</li><li><strong>Reporting:</strong> Account-level performance metrics</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/accounts-light.png",
+      "alt": "Accounts Management Interface",
+      "caption": "Account overview and contact relationships",
+      "theme": "light"
+    },
+    {
+      "src": "images/accounts-dark.png",
+      "alt": "Accounts Management Interface",
+      "caption": "Account overview and contact relationships",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "Accounts Management - Company Records | iMash Docs",
+  "metaDescription": "Manage company accounts and organizations. Track multiple contacts per account and business relationships.",
+  "metaKeywords": "accounts, companies, organizations, B2B CRM, account management, business relationships"
+}

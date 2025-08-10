@@ -1,0 +1,33 @@
+{
+  "title": "Call Logs",
+  "metaTitle": "Call Logs - Monitor AI Agent Call History | iMash Docs",
+  "metaDescription": "Access detailed call logs, monitor AI agent performance, analyze call patterns, and review conversation transcripts. Track success rates and quality metrics.",
+  "metaKeywords": "call logs, call history, AI agent calls, call analytics, call transcripts, call recordings, performance metrics, conversation details",
+  "lede": "Monitor and analyze call history, performance metrics, and conversation details.",
+  "sections": [
+    {
+      "id": "log-overview",
+      "title": "Call Log Management",
+      "content": "<p>View detailed records of all calls handled by your AI agents.</p><h3>Available Data:</h3><ul><li><strong>Call Duration:</strong> Start time, end time, and total duration</li><li><strong>Caller Information:</strong> Phone number, location, caller ID</li><li><strong>Agent Performance:</strong> Response times, success rates</li><li><strong>Conversation Details:</strong> Full transcripts and recordings</li></ul>"
+    },
+    {
+      "id": "analytics",
+      "title": "Call Analytics",
+      "content": "<p>Analyze call patterns and agent performance with built-in analytics.</p><ul><li><strong>Success Rates:</strong> Track conversion and completion rates</li><li><strong>Call Patterns:</strong> Identify peak hours and trends</li><li><strong>Quality Metrics:</strong> Monitor conversation quality scores</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/call-logs-light.png",
+      "alt": "Call Logs Dashboard",
+      "caption": "Call history and analytics interface",
+      "theme": "light"
+    },
+    {
+      "src": "images/call-logs-dark.png",
+      "alt": "Call Logs Dashboard",
+      "caption": "Call history and analytics interface",
+      "theme": "dark"
+    }
+  ]
+}

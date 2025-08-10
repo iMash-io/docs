@@ -1,0 +1,33 @@
+{
+  "title": "White Label",
+  "lede": "Customize the platform branding and appearance to match your company's identity.",
+  "sections": [
+    {
+      "id": "branding-customization",
+      "title": "Branding Customization",
+      "content": "<p>Customize the platform appearance with your company's branding elements.</p><h3>Branding Options:</h3><ul><li><strong>Company Logo:</strong> Upload your logo for dashboard and emails</li><li><strong>Color Scheme:</strong> Customize primary and secondary colors</li><li><strong>Custom Domain:</strong> Use your own domain for the platform</li><li><strong>Favicon:</strong> Set custom browser tab icon</li></ul>"
+    },
+    {
+      "id": "white-label-features",
+      "title": "White Label Features",
+      "content": "<p>Advanced white-labeling options for reseller and enterprise accounts.</p><ul><li><strong>Custom Footer:</strong> Add your company information to emails</li><li><strong>Brand Removal:</strong> Remove iMash branding from interface</li><li><strong>Custom URLs:</strong> Use branded URLs for customer-facing pages</li><li><strong>Email Templates:</strong> Customize email templates with your branding</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/white-label-light.png",
+      "alt": "White Label Configuration",
+      "caption": "Branding customization and white-label settings",
+      "theme": "light"
+    },
+    {
+      "src": "images/white-label-dark.png",
+      "alt": "White Label Configuration",
+      "caption": "Branding customization and white-label settings",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "White Label - Custom Branding Options | iMash Docs",
+  "metaDescription": "Configure white-label settings for custom branding. Add your logo, colors, and domain for branded experience.",
+  "metaKeywords": "white label, custom branding, private label, branded platform, custom domain, logo customization"
+}

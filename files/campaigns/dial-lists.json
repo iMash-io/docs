@@ -1,0 +1,33 @@
+{
+  "title": "Dial Lists",
+  "lede": "Manage and organize contact lists for your calling campaigns.",
+  "sections": [
+    {
+      "id": "list-management",
+      "title": "Managing Dial Lists",
+      "content": "<p>Create and manage targeted contact lists for your campaigns.</p><h3>List Types:</h3><ul><li><strong>Contact Lists:</strong> Import existing contacts</li><li><strong>Lead Lists:</strong> Target potential customers</li><li><strong>Custom Lists:</strong> Upload CSV files with phone numbers</li><li><strong>Dynamic Lists:</strong> Auto-updating based on criteria</li></ul>"
+    },
+    {
+      "id": "list-optimization",
+      "title": "List Optimization",
+      "content": "<p>Optimize your dial lists for better campaign performance.</p><ul><li><strong>Deduplication:</strong> Remove duplicate entries</li><li><strong>Phone Validation:</strong> Verify number formats</li><li><strong>Time Zone Detection:</strong> Optimize calling times</li><li><strong>DNC Filtering:</strong> Exclude do-not-call numbers</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/dial-lists-light.png",
+      "alt": "Dial Lists Management",
+      "caption": "Contact list management interface",
+      "theme": "light"
+    },
+    {
+      "src": "images/dial-lists-dark.png",
+      "alt": "Dial Lists Management",
+      "caption": "Contact list management interface",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "Dial Lists - Manage Campaign Contacts | iMash Docs",
+  "metaDescription": "Create and manage dial lists for campaigns. Import contacts, set priorities, and configure calling sequences.",
+  "metaKeywords": "dial lists, contact lists, campaign contacts, call queues, priority calling, contact management"
+}

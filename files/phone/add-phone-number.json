@@ -1,0 +1,22 @@
+{
+  "title": "Add Phone Number",
+  "lede": "Purchase and configure phone numbers for inbound and outbound calling.",
+  "sections": [
+    {
+      "id": "number-acquisition",
+      "title": "Acquiring Phone Numbers",
+      "content": "<p>Get phone numbers to enable calling functionality for your agents.</p><h3>Number Types:</h3><ul><li><strong>Local Numbers:</strong> Area-code specific numbers</li><li><strong>Toll-Free:</strong> 800, 888, 877, etc.</li><li><strong>International:</strong> Numbers from various countries</li></ul><h3>Setup Process:</h3><ol><li>Browse available numbers</li><li>Select desired area code or type</li><li>Purchase and assign to agents</li><li>Configure routing rules</li></ol>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/phone-numbers-light.png",
+      "alt": "Phone Number Management",
+      "caption": "Phone number selection and configuration interface",
+      "theme": "light"
+    }
+  ],
+  "metaTitle": "Add Phone Number - Set Up Inbound/Outbound Calling | iMash Docs",
+  "metaDescription": "Purchase and configure phone numbers for your AI agents. Set up local, toll-free, and international numbers.",
+  "metaKeywords": "phone number, DID, toll-free, local number, international calling, phone provisioning, number purchase"
+}

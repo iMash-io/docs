@@ -1,0 +1,33 @@
+{
+  "title": "Security",
+  "lede": "Configure security settings, authentication methods, and access controls for your account.",
+  "sections": [
+    {
+      "id": "authentication",
+      "title": "Authentication Settings",
+      "content": "<p>Configure authentication methods and password policies for your organization.</p><h3>Authentication Options:</h3><ul><li><strong>Two-Factor Authentication:</strong> Enable 2FA for enhanced security</li><li><strong>Single Sign-On (SSO):</strong> Integrate with SAML/OAuth providers</li><li><strong>Password Policies:</strong> Set password complexity requirements</li><li><strong>Session Management:</strong> Control session timeouts and limits</li></ul>"
+    },
+    {
+      "id": "access-control",
+      "title": "Access Control",
+      "content": "<p>Manage access controls and security policies.</p><ul><li><strong>IP Restrictions:</strong> Whitelist specific IP addresses or ranges</li><li><strong>API Security:</strong> Manage API key permissions and rotation</li><li><strong>Audit Logs:</strong> Track all user actions and security events</li><li><strong>Data Encryption:</strong> Configure data encryption settings</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/security-light.png",
+      "alt": "Security Settings Interface",
+      "caption": "Security configuration and access control settings",
+      "theme": "light"
+    },
+    {
+      "src": "images/security-dark.png",
+      "alt": "Security Settings Interface",
+      "caption": "Security configuration and access control settings",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "Security Settings - Account Protection | iMash Docs",
+  "metaDescription": "Configure security settings including 2FA, API permissions, and audit logs. Protect your account and data.",
+  "metaKeywords": "security settings, two-factor authentication, 2FA, API security, audit logs, account protection, data security"
+}

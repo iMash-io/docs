@@ -1,0 +1,33 @@
+{
+  "title": "Test Your Agent",
+  "lede": "Learn how to test your AI agent through the dashboard interface and API calls.",
+  "sections": [
+    {
+      "id": "dashboard-testing",
+      "title": "Dashboard Testing",
+      "content": "<p>Test your agent directly from the iMash dashboard with built-in testing tools.</p><h3>Testing Options:</h3><ul><li><strong>Quick Test:</strong> Immediate conversation simulation</li><li><strong>Phone Call Test:</strong> Make real test calls to any number</li><li><strong>Flow Testing:</strong> Test specific conversation paths</li><li><strong>Voice Preview:</strong> Listen to agent voice samples</li></ul>"
+    },
+    {
+      "id": "api-testing",
+      "title": "API Testing",
+      "content": "<p>Test your agent programmatically through API endpoints.</p><h3>Test Endpoints:</h3><ul><li><strong>Start Call:</strong> Initiate test calls via API</li><li><strong>Conversation:</strong> Send text messages to test responses</li><li><strong>Webhooks:</strong> Test event notifications</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/agent-testing-light.png",
+      "alt": "Agent Testing Interface",
+      "caption": "The agent testing dashboard with various testing options",
+      "theme": "light"
+    },
+    {
+      "src": "images/agent-testing-dark.png",
+      "alt": "Agent Testing Interface",
+      "caption": "The agent testing dashboard with various testing options",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "Test Your Agent - Validate AI Performance | iMash Docs",
+  "metaDescription": "Test your AI agents with phone calls and simulations. Debug conversations and validate agent behavior before deployment.",
+  "metaKeywords": "test agent, debugging, simulation, agent testing, call testing, conversation validation, QA testing"
+}

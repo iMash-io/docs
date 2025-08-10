@@ -1,0 +1,28 @@
+{
+  "title": "Agent Settings",
+  "lede": "Configure advanced agent settings including custom tools, webhooks, and conversation flows.",
+  "sections": [
+    {
+      "id": "advanced-settings",
+      "title": "Advanced Configuration",
+      "content": "<p>Fine-tune your agent's behavior with advanced settings and integrations.</p><h3>Available Options:</h3><ul><li><strong>Custom Tools:</strong> Connect external APIs and services</li><li><strong>Webhooks:</strong> Real-time event notifications</li><li><strong>Conversation Flows:</strong> Structured dialog paths</li><li><strong>Transfer Settings:</strong> Human handoff configuration</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/agent-settings-light.png",
+      "alt": "Agent Settings Interface",
+      "caption": "Advanced agent configuration options",
+      "theme": "light"
+    },
+    {
+      "src": "images/agent-settings-dark.png",
+      "alt": "Agent Settings Interface",
+      "caption": "Advanced agent configuration options",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "Agent Settings - Configure AI Behavior & Tools | iMash Docs",
+  "metaDescription": "Configure advanced agent settings including custom tools, webhooks, integrations, and behavior parameters for your AI assistants.",
+  "metaKeywords": "agent settings, configuration, custom tools, webhooks, agent behavior, AI parameters, advanced settings"
+}

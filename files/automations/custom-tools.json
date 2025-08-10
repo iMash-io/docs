@@ -1,0 +1,33 @@
+{
+  "title": "Custom Tools",
+  "lede": "Create custom tools and integrations to extend your AI agent capabilities.",
+  "sections": [
+    {
+      "id": "tool-development",
+      "title": "Tool Development",
+      "content": "<p>Build custom tools that your AI agents can use during conversations.</p><h3>Tool Types:</h3><ul><li><strong>API Integrations:</strong> Connect to external REST APIs</li><li><strong>Database Tools:</strong> Query and update databases</li><li><strong>Calculation Tools:</strong> Perform complex calculations</li><li><strong>Business Logic:</strong> Custom business rule processing</li></ul>"
+    },
+    {
+      "id": "tool-management",
+      "title": "Tool Management",
+      "content": "<p>Manage and deploy your custom tools across agents.</p><ul><li><strong>Code Editor:</strong> Built-in development environment</li><li><strong>Testing Framework:</strong> Test tools before deployment</li><li><strong>Version Control:</strong> Manage tool versions and updates</li><li><strong>Library Management:</strong> Reusable tool components</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/custom-tools-light.png",
+      "alt": "Custom Tools Interface",
+      "caption": "Custom tool development and management",
+      "theme": "light"
+    },
+    {
+      "src": "images/custom-tools-dark.png",
+      "alt": "Custom Tools Interface",
+      "caption": "Custom tool development and management",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "Custom Tools - Extend Agent Capabilities | iMash Docs",
+  "metaDescription": "Create custom tools and functions for AI agents. Integrate external APIs and add custom business logic.",
+  "metaKeywords": "custom tools, API integration, custom functions, agent extensions, business logic, tool development"
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Voice Configuration",
+  "lede": "Configure voice settings, providers, and speech parameters for your AI agents.",
+  "sections": [
+    {
+      "id": "voice-providers",
+      "title": "Voice Providers",
+      "content": "<p>Choose from multiple voice providers to find the perfect voice for your agent.</p><h3>Supported Providers:</h3><ul><li><strong>OpenAI:</strong> Natural-sounding voices with multiple models</li><li><strong>ElevenLabs:</strong> High-quality cloned and synthetic voices</li><li><strong>Azure:</strong> Microsoft's neural voice technology</li><li><strong>Google:</strong> WaveNet and Neural2 voices</li></ul>"
+    },
+    {
+      "id": "speech-settings",
+      "title": "Speech Parameters",
+      "content": "<p>Fine-tune how your agent speaks with these parameters:</p><ul><li><strong>Speed:</strong> Control speaking pace</li><li><strong>Pitch:</strong> Adjust voice tone</li><li><strong>Stability:</strong> Balance consistency vs. expressiveness</li><li><strong>Similarity:</strong> Voice similarity enhancement</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/voice-config-light.png",
+      "alt": "Voice Configuration Panel",
+      "caption": "Voice provider and parameter settings",
+      "theme": "light"
+    },
+    {
+      "src": "images/voice-config-dark.png",
+      "alt": "Voice Configuration Panel",
+      "caption": "Voice provider and parameter settings",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "Voice Configuration - Set Up AI Voice Settings | iMash Docs",
+  "metaDescription": "Configure voice providers, models, and speech settings for your AI agents. Support for OpenAI, ElevenLabs, and more.",
+  "metaKeywords": "voice configuration, TTS, text-to-speech, voice models, OpenAI voices, ElevenLabs, speech synthesis"
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Reports",
+  "lede": "Generate detailed reports on call performance, agent productivity, and business metrics.",
+  "sections": [
+    {
+      "id": "report-types",
+      "title": "Report Types",
+      "content": "<p>Generate comprehensive reports for different aspects of your business.</p><h3>Available Reports:</h3><ul><li><strong>Call Performance:</strong> Detailed call statistics and outcomes</li><li><strong>Agent Productivity:</strong> Individual agent performance metrics</li><li><strong>Campaign Analysis:</strong> Campaign success rates and ROI</li><li><strong>Cost Reports:</strong> Detailed spending breakdowns</li></ul>"
+    },
+    {
+      "id": "report-features",
+      "title": "Report Features",
+      "content": "<p>Customize and schedule reports to meet your business needs.</p><ul><li><strong>Custom Date Ranges:</strong> Specify exact time periods</li><li><strong>Multiple Formats:</strong> PDF, Excel, CSV export options</li><li><strong>Scheduled Reports:</strong> Automatic delivery to email</li><li><strong>Data Filtering:</strong> Focus on specific metrics or segments</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/reports-light.png",
+      "alt": "Reports Interface",
+      "caption": "Report generation and customization tools",
+      "theme": "light"
+    },
+    {
+      "src": "images/reports-dark.png",
+      "alt": "Reports Interface",
+      "caption": "Report generation and customization tools",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "Reports - Generate Custom Analytics | iMash Docs",
+  "metaDescription": "Generate detailed reports on agent performance, call outcomes, and business metrics. Export and schedule reports.",
+  "metaKeywords": "reports, custom analytics, report generation, data export, scheduled reports, business reporting"
+}

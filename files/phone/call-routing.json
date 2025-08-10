@@ -1,0 +1,22 @@
+{
+  "title": "Call Routing",
+  "lede": "Configure intelligent call routing rules to direct calls to the appropriate agents and destinations.",
+  "sections": [
+    {
+      "id": "routing-rules",
+      "title": "Routing Configuration",
+      "content": "<p>Set up sophisticated call routing based on various criteria.</p><h3>Routing Options:</h3><ul><li><strong>Agent Assignment:</strong> Route to specific AI agents</li><li><strong>Time-based:</strong> Route based on business hours</li><li><strong>Geographic:</strong> Route based on caller location</li><li><strong>Skill-based:</strong> Route to agents with specific capabilities</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/call-routing-light.png",
+      "alt": "Call Routing Interface",
+      "caption": "Call routing rule configuration",
+      "theme": "light"
+    }
+  ],
+  "metaTitle": "Call Routing - Configure Call Flow Rules | iMash Docs",
+  "metaDescription": "Set up intelligent call routing rules. Configure IVR, call forwarding, and agent assignment based on conditions.",
+  "metaKeywords": "call routing, IVR, call flow, routing rules, call forwarding, intelligent routing, call distribution"
+}

@@ -1,0 +1,33 @@
+{
+  "title": "API Keys",
+  "lede": "Learn how to generate, manage, and secure your API keys for programmatic access to iMash.",
+  "sections": [
+    {
+      "id": "generating-keys",
+      "title": "Generating API Keys",
+      "content": "<p>API keys provide secure access to the iMash platform programmatically.</p><h3>Steps to Generate:</h3><ol><li>Navigate to Settings → API Keys</li><li>Click 'Generate New Key'</li><li>Set permissions and expiration</li><li>Copy and save securely</li></ol>"
+    },
+    {
+      "id": "security",
+      "title": "Security Best Practices",
+      "content": "<p>Keep your API keys secure by following these guidelines:</p><ul><li>Never expose keys in client-side code</li><li>Use environment variables</li><li>Rotate keys regularly</li><li>Set appropriate permissions</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/api-key-generation-light.png",
+      "alt": "API Key Generation Interface",
+      "caption": "The API key generation form",
+      "theme": "light"
+    },
+    {
+      "src": "images/api-key-generation-dark.png",
+      "alt": "API Key Generation Interface",
+      "caption": "The API key generation form",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "API Keys Management - Authentication & Security | iMash Docs",
+  "metaDescription": "Generate and manage API keys for secure access to iMash platform. Learn about authentication, permissions, and best practices.",
+  "metaKeywords": "API keys, authentication, security, access tokens, API authentication, credentials management, secure access"
+}

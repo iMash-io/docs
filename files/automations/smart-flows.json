@@ -1,0 +1,33 @@
+{
+  "title": "Flows",
+  "lede": "Create intelligent automation workflows that respond to events and trigger actions.",
+  "sections": [
+    {
+      "id": "flow-builder",
+      "title": "Flow Builder",
+      "content": "<p>Design automated workflows with visual drag-and-drop interface.</p><h3>Flow Components:</h3><ul><li><strong>Triggers:</strong> Events that start workflows (calls, form submissions, etc.)</li><li><strong>Conditions:</strong> Logic gates to control flow path</li><li><strong>Actions:</strong> Tasks performed when conditions are met</li><li><strong>Integrations:</strong> Connect to external services and APIs</li></ul>"
+    },
+    {
+      "id": "flow-management",
+      "title": "Flow Management",
+      "content": "<p>Manage and monitor your automation workflows.</p><ul><li><strong>Flow Templates:</strong> Pre-built workflows for common scenarios</li><li><strong>Version Control:</strong> Track changes and rollback capabilities</li><li><strong>Performance Monitoring:</strong> Monitor execution times and success rates</li><li><strong>Error Handling:</strong> Configure retry logic and fallback actions</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/smart-flows-light.png",
+      "alt": "Smart Flows Builder",
+      "caption": "Visual workflow builder interface",
+      "theme": "light"
+    },
+    {
+      "src": "images/smart-flows-dark.png",
+      "alt": "Smart Flows Builder",
+      "caption": "Visual workflow builder interface",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "Smart Flows - Visual Workflow Builder | iMash Docs",
+  "metaDescription": "Build complex conversation flows with visual workflow builder. Create branching logic and conditional responses.",
+  "metaKeywords": "smart flows, workflow builder, conversation flows, visual builder, branching logic, automation workflows"
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Dashboard Overview",
+  "lede": "Learn how to navigate the iMash dashboard and understand key features and metrics.",
+  "sections": [
+    {
+      "id": "overview",
+      "title": "Dashboard Components",
+      "content": "<p>The iMash dashboard provides a comprehensive overview of your AI voice platform activities.</p><h3>Key Sections:</h3><ul><li><strong>Agent Performance:</strong> View metrics for all your AI agents</li><li><strong>Call Statistics:</strong> Monitor call volume and success rates</li><li><strong>Recent Activity:</strong> Track latest calls and agent interactions</li><li><strong>Quick Actions:</strong> Access frequently used features</li></ul>"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/dashboard-main-light.png",
+      "alt": "Main Dashboard View",
+      "caption": "The main dashboard showing key metrics and recent activity",
+      "theme": "light"
+    },
+    {
+      "src": "images/dashboard-main-dark.png",
+      "alt": "Main Dashboard View",
+      "caption": "The main dashboard showing key metrics and recent activity",
+      "theme": "dark"
+    }
+  ],
+  "metaTitle": "Dashboard Overview - Navigate iMash Platform Features",
+  "metaDescription": "Explore the iMash dashboard interface. Learn about agents, phone system, campaigns, CRM, analytics, and settings navigation.",
+  "metaKeywords": "dashboard, platform overview, navigation, user interface, control panel, iMash features, admin panel"
+}
