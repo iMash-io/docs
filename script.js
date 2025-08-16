@@ -71,37 +71,37 @@ document.addEventListener('DOMContentLoaded', async () => {
 // Load configurations dynamically
 async function loadConfigurations() {
   try {
-    // Fetch configurations from API endpoints
+    // Try to fetch configurations from API endpoints (works when deployed)
     const [apiInfoResponse, systemTableResponse] = await Promise.all([
-      fetch('/api/config/apiInfoConfig'),
-      fetch('/api/config/systemTableConfig')
+      fetch('./apiInfoConfig.json').catch(() => fetch('/api/config/apiInfoConfig')),
+      fetch('./systemTableConfig.json').catch(() => fetch('/api/config/systemTableConfig'))
     ]);
     
     if (apiInfoResponse.ok) {
       apiInfoConfig = await apiInfoResponse.json();
-      console.log('Loaded apiInfoConfig from API');
+      console.log('Loaded apiInfoConfig');
     } else {
-      console.error('Failed to load apiInfoConfig from API');
+      console.error('Failed to load apiInfoConfig');
       // Initialize with empty object to prevent errors
       apiInfoConfig = {};
     }
     
     if (systemTableResponse.ok) {
       systemTableConfig = await systemTableResponse.json();
-      console.log('Loaded systemTableConfig from API');
+      console.log('Loaded systemTableConfig');
     } else {
-      console.error('Failed to load systemTableConfig from API');
+      console.error('Failed to load systemTableConfig');
       // Initialize with empty object to prevent errors
       systemTableConfig = {};
     }
     
-    // If both configs are empty, show error message
+    // If both configs are empty, show appropriate message
     if (Object.keys(apiInfoConfig).length === 0 && Object.keys(systemTableConfig).length === 0) {
-      console.error('Failed to load API configurations. Please ensure the server is running properly.');
-      // Show error in UI
+      console.log('API configurations not available - this is normal when running locally');
+      // Show info message in UI
       const sidebar = document.querySelector('.apiref-sidebar');
       if (sidebar) {
-        sidebar.innerHTML = '<div style="padding: 1rem; color: #ff6b6b;">Failed to load API configurations. Please refresh the page or contact support.</div>';
+        sidebar.innerHTML = '<div style="padding: 1rem; color: #888;">API configurations are only available when deployed. Local documentation browsing is still available.</div>';
       }
     }
     
@@ -111,10 +111,10 @@ async function loadConfigurations() {
     apiInfoConfig = {};
     systemTableConfig = {};
     
-    // Show error in UI
+    // Show info message in UI for local usage
     const sidebar = document.querySelector('.apiref-sidebar');
     if (sidebar) {
-      sidebar.innerHTML = '<div style="padding: 1rem; color: #ff6b6b;">Error loading API configurations: ' + error.message + '</div>';
+      sidebar.innerHTML = '<div style="padding: 1rem; color: #888;">Running in local mode. API reference requires server deployment.</div>';
     }
   }
 }
@@ -164,7 +164,12 @@ function navigateTo(route, forceShow = false) {
   if (!forceShow && route === currentPage) return;
   
   currentPage = route;
-  window.history.pushState({ route }, '', route);
+  
+  // Only use pushState when not running in file:// protocol (local mode)
+  if (window.location.protocol !== 'file:') {
+    window.history.pushState({ route }, '', route);
+  }
+  
   showPage(route);
 }
 
@@ -791,7 +796,10 @@ function selectApiResource(resourceKey) {
   // Update URL to include the API resource
   const newUrl = `/api-reference/${apiConfig.tableName}`;
   if (window.location.pathname !== newUrl) {
-    window.history.pushState({ route: newUrl, apiResource: resourceKey }, '', newUrl);
+    // Only use pushState when not running in file:// protocol (local mode)
+    if (window.location.protocol !== 'file:') {
+      window.history.pushState({ route: newUrl, apiResource: resourceKey }, '', newUrl);
+    }
     currentPage = newUrl;
   }
   
@@ -1805,38 +1813,59 @@ async function loadDynamicContent(route) {
   const dynamicSection = document.getElementById('dynamic-content');
   if (!dynamicSection) return;
   
+  // Determine base path for files - works for both local and deployed
+  const getBasePath = () => {
+    const currentPath = window.location.pathname;
+    const currentHost = window.location.host;
+    
+    // Check if we're using Live Server (serves from repo root with /APP/docs/ in path)
+    if (currentPath.includes('/APP/docs/')) {
+      return 'APP/docs/files';
+    }
+    // Check if we're using local server (Python, Node, etc.) from docs directory
+    else if (currentHost.includes('127.0.0.1') || currentHost.includes('localhost')) {
+      return '/files';
+    }
+    // Deployed version (docs.imash.io)
+    else {
+      return './files';
+    }
+  };
+  
+  const basePath = getBasePath();
+  
   // Map routes to JSON content files
   const contentMap = {
-    '/get-started/quick-start': '/files/get-started/quick-start.json',
-    '/get-started/dashboard-overview': '/files/get-started/dashboard-overview.json',
-    '/get-started/api-keys': '/files/get-started/api-keys.json',
-    '/agents/create-agent': '/files/agents/create-agent.json',
-    '/agents/agent-settings': '/files/agents/agent-settings.json',
-    '/agents/voice-configuration': '/files/agents/voice-configuration.json',
-    '/agents/test-your-agent': '/files/agents/test-your-agent.json',
-    '/phone/add-sip-provider': '/files/phone/add-sip-provider.json',
-    '/phone/add-phone-number': '/files/phone/add-phone-number.json',
-    '/phone/call-routing': '/files/phone/call-routing.json',
-    '/phone/call-logs': '/files/phone/call-logs.json',
-    '/campaigns/create-campaign': '/files/campaigns/create-campaign.json',
-    '/campaigns/dial-lists': '/files/campaigns/dial-lists.json',
-    '/campaigns/campaign-analytics': '/files/campaigns/campaign-analytics.json',
-    '/campaigns/do-not-call-list': '/files/campaigns/do-not-call-list.json',
-    '/crm/contacts': '/files/crm/contacts.json',
-    '/crm/leads': '/files/crm/leads.json',
-    '/crm/accounts': '/files/crm/accounts.json',
-    '/crm/import-export-data': '/files/crm/import-export-data.json',
-    '/automations/smart-flows': '/files/automations/smart-flows.json',
-    '/automations/custom-tools': '/files/automations/custom-tools.json',
-    '/automations/webhooks': '/files/automations/webhooks.json',
-    '/automations/integrations': '/files/automations/integrations.json',
-    '/analytics/analytics-dashboard': '/files/analytics/analytics-dashboard.json',
-    '/analytics/reports': '/files/analytics/reports.json',
-    '/analytics/cost-management': '/files/analytics/cost-management.json',
-    '/settings/team-management': '/files/settings/team-management.json',
-    '/settings/billing': '/files/settings/billing.json',
-    '/settings/security': '/files/settings/security.json',
-    '/settings/white-label': '/files/settings/white-label.json'
+    '/get-started/quick-start': `${basePath}/get-started/quick-start.json`,
+    '/get-started/dashboard-overview': `${basePath}/get-started/dashboard-overview.json`,
+    '/get-started/api-keys': `${basePath}/get-started/api-keys.json`,
+    '/agents/create-agent': `${basePath}/agents/create-agent.json`,
+    '/agents/agent-settings': `${basePath}/agents/agent-settings.json`,
+    '/agents/voice-configuration': `${basePath}/agents/voice-configuration.json`,
+    '/agents/test-your-agent': `${basePath}/agents/test-your-agent.json`,
+    '/phone/add-sip-provider': `${basePath}/phone/add-sip-provider.json`,
+    '/phone/add-phone-number': `${basePath}/phone/add-phone-number.json`,
+    '/phone/call-routing': `${basePath}/phone/call-routing.json`,
+    '/phone/call-logs': `${basePath}/phone/call-logs.json`,
+    '/campaigns/create-campaign': `${basePath}/campaigns/create-campaign.json`,
+    '/campaigns/dial-lists': `${basePath}/campaigns/dial-lists.json`,
+    '/campaigns/campaign-analytics': `${basePath}/campaigns/campaign-analytics.json`,
+    '/campaigns/do-not-call-list': `${basePath}/campaigns/do-not-call-list.json`,
+    '/crm/contacts': `${basePath}/crm/contacts.json`,
+    '/crm/leads': `${basePath}/crm/leads.json`,
+    '/crm/accounts': `${basePath}/crm/accounts.json`,
+    '/crm/import-export-data': `${basePath}/crm/import-export-data.json`,
+    '/automations/smart-flows': `${basePath}/automations/smart-flows.json`,
+    '/automations/custom-tools': `${basePath}/automations/custom-tools.json`,
+    '/automations/webhooks': `${basePath}/automations/webhooks.json`,
+    '/automations/integrations': `${basePath}/automations/integrations.json`,
+    '/analytics/analytics-dashboard': `${basePath}/analytics/analytics-dashboard.json`,
+    '/analytics/reports': `${basePath}/analytics/reports.json`,
+    '/analytics/cost-management': `${basePath}/analytics/cost-management.json`,
+    '/settings/team-management': `${basePath}/settings/team-management.json`,
+    '/settings/billing': `${basePath}/settings/billing.json`,
+    '/settings/security': `${basePath}/settings/security.json`,
+    '/settings/white-label': `${basePath}/settings/white-label.json`
   };
   
   const jsonPath = contentMap[route];
@@ -1938,13 +1967,14 @@ function renderQuickstartContent(content) {
 
   if (content.steps) {
     content.steps.forEach(step => {
-      html += `<h2 id="${step.id}">${step.title}</h2>`;
-      html += `<div class="content">${step.content}</div>`;
+      html += `<h2 id="${step.id}">${step.title}</h2>${step.content}`;
       
       if (step.images) {
         step.images.forEach(image => {
+          // Fix image path to be absolute from docs root
+          const imageSrc = image.src.startsWith('/') ? image.src : `/${image.src}`;
           html += `<div class="image-container ${image.theme || ''}" data-theme="${image.theme || 'both'}">`;
-          html += `<img src="${image.src}" alt="${image.alt}" />`;
+          html += `<img src="${imageSrc}" alt="${image.alt}" />`;
           if (image.caption) {
             html += `<div class="image-caption">${image.caption}</div>`;
           }
@@ -2033,7 +2063,7 @@ let apiResourceMeta = null;
 // Load meta configuration
 async function loadMetaConfig() {
   try {
-    const module = await import('/metaConfig.js');
+    const module = await import('./metaConfig.js');
     metaConfig = module.metaConfig;
     apiResourceMeta = module.apiResourceMeta;
     return true;
