@@ -1,6 +1,7 @@
 {
-  "title": "Building Your First AI Agent",
+  "title": "Quickstart Guide - Get Started in 10 Minutes",
   "lede": "This guide provides step-by-step instructions on how to create, configure, and connect an AI agent in Imash, including integration with phone numbers, call handling, and system features.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
       "id": "create-agent",
@@ -19,13 +20,26 @@
           "caption": "The main builder where you can configure your agent",
           "theme": "dark"
         }
-    ]
+      ]
     },
     {
       "id": "test-agent",
       "title": "Testing the Agent",
       "content": "<ol><li>Open the <strong>Test Window</strong> → click <strong>Test Agent</strong> → <strong>Connect</strong>.</li><li>Verify audio interaction (both agent and user voices).</li></ol>",
-      "images": []
+      "images": [
+        {
+          "src": "images/quick-start/test-agent-light.png",
+          "alt": "Test Agent",
+          "caption": "The test agent interface",
+          "theme": "light"
+        },
+        {
+          "src": "images/quick-start/test-agent-dark.png",
+          "alt": "Test Agent",
+          "caption": "The test agent interface",
+          "theme": "dark"
+        }
+      ]
     },
     {
       "id": "agent-features",
@@ -43,7 +57,20 @@
       "id": "live-calls",
       "title": "Making Live Calls",
       "content": "<ol><li>Open <strong>Live Calls Panel</strong>.</li><li>Click the <strong>Telephone Icon</strong> (top-right).</li><li>Select <strong>AI Agent Call</strong> mode.</li><li>Choose:<ul><li>The Number to call from.</li><li>The Agent to handle the call.</li><li>The Target Number to dial.</li></ul></li><li>Join or monitor the call live if needed. Observe real-time interactions and intervene manually when required.</li></ol>",
-      "images": []
+      "images": [
+        {
+          "src": "images/quick-start/live-call-light.png",
+          "alt": "Live Calls",
+          "caption": "The live calls interface",
+          "theme": "light"
+        },
+        {
+          "src": "images/quick-start/live-call-dark.png",
+          "alt": "Live Calls",
+          "caption": "The live calls interface",
+          "theme": "dark"
+        }
+      ]
     },
     {
       "id": "additional-features",
@@ -78,40 +105,11 @@
       }
     ]
   },
-  "troubleshooting": {
-    "title": "Common Issues & Troubleshooting",
-    "sections": [
-      {
-        "title": "API Key Not Working",
-        "points": [
-          "Ensure you're using the correct header: <code>x-api-key</code>",
-          "Check that your API key hasn't expired",
-          "Verify the key has the necessary permissions"
-        ]
-      },
-      {
-        "title": "Agent Not Responding",
-        "points": [
-          "Check that your agent is active (not paused)",
-          "Verify your voice provider credentials are configured",
-          "Ensure you have sufficient credits in your account"
-        ]
-      },
-      {
-        "title": "Calls Not Connecting",
-        "points": [
-          "Verify phone numbers are in E.164 format (+1234567890)",
-          "Check that your SIP provider is properly configured",
-          "Ensure your account has calling credits"
-        ]
-      }
-    ]
-  },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a> for detailed documentation</li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a> for step-by-step guides</li></ul>"
   },
-  "metaTitle": "Quickstart Guide - Get Started with iMash in 5 Minutes",
+  "metaTitle": "Quickstart Guide - Get Started with iMash in 10 Minutes",
   "metaDescription": "Create your first AI voice agent, generate API keys, and make your first API call. Step-by-step guide to get started with iMash platform.",
   "metaKeywords": "quickstart, getting started, iMash tutorial, AI agent setup, API key generation, first API call, voice agent creation"
 }

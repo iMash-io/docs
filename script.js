@@ -579,6 +579,8 @@ function updateTOC() {
   const quickstartPatterns = [
     'What You\'ll Learn',
     'Step 1:', 'Step 2:', 'Step 3:', 'Step 4:', 'Step 5:', 'Step 6:',
+    'Creating a New Agent', 'Testing the Agent', 'Configuring Agent Features',
+    'Connecting a Phone Number', 'Making Live Calls', 'Additional Features in Imash',
     'What\'s Next', 'Whats Next',
     'Common Issues & Troubleshooting', 'Troubleshooting',
     'Need Help?', 'Support'
@@ -1652,6 +1654,13 @@ function setupEventListeners() {
     theme = theme === 'dark' ? 'light' : 'dark';
     document.documentElement.classList.toggle('dark', theme === 'dark');
     localStorage.setItem('theme', theme);
+    
+    // Re-render current page to update theme-specific images
+    const activePage = document.querySelector('.page.active');
+    if (activePage && activePage.id === 'dynamic-content') {
+      // If we're on a dynamic content page, reload it
+      loadDynamicContent(currentPage);
+    }
   });
   
   // Navigation links
@@ -1970,13 +1979,24 @@ function renderQuickstartContent(content) {
       html += `<h2 id="${step.id}">${step.title}</h2>${step.content}`;
       
       if (step.images) {
+        // Get current theme
+        const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+        
         step.images.forEach(image => {
-          // Fix image path to be absolute from docs root
-          const imageSrc = image.src.startsWith('/') ? image.src : `/${image.src}`;
-          html += `<div class="image-container ${image.theme || ''}" data-theme="${image.theme || 'both'}">`;
-          html += `<img src="${imageSrc}" alt="${image.alt}" />`;
+          // Skip images that don't match current theme
+          if (image.theme && image.theme !== currentTheme && image.theme !== 'both') {
+            return;
+          }
+          
+          // Handle absolute paths - support http/https URLs and relative paths
+          let imageSrc = image.src;
+          if (!/^https?:\/\//.test(imageSrc) && !imageSrc.startsWith('/')) {
+            imageSrc = `/${imageSrc}`;
+          }
+          html += `<div class="image-container ${image.theme || ''}" data-theme="${image.theme || 'both'}" style="text-align: center; margin: 1.5rem 0;">`;
+          html += `<img src="${imageSrc}" alt="${image.alt}" style="width: 90%; max-width: 1200px; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />`;
           if (image.caption) {
-            html += `<div class="image-caption">${image.caption}</div>`;
+            html += `<div class="image-caption" style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary); font-style: italic;">${image.caption}</div>`;
           }
           html += '</div>';
         });
