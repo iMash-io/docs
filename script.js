@@ -1938,7 +1938,8 @@ function renderQuickstartContent(content) {
 
   if (content.steps) {
     content.steps.forEach(step => {
-      html += `<h2 id="${step.id}">${step.title}</h2>${step.content}`;
+      html += `<h2 id="${step.id}">${step.title}</h2>`;
+      html += `<div class="content">${step.content}</div>`;
       
       if (step.images) {
         step.images.forEach(image => {

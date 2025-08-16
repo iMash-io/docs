@@ -1,121 +1,55 @@
 {
-  "title": "Quickstart Guide",
-  "lede": "Get up and running with iMash in just 5 minutes. This guide will walk you through creating your account, setting up your first AI agent, and making your first API call.",
-  "timeToComplete": "5 minutes",
-  "whatYouWillLearn": [
-    "Created your iMash account",
-    "Set up your first AI voice agent",
-    "Generated your API key",
-    "Made your first API call",
-    "Tested your agent with a phone call"
-  ],
+  "title": "Building Your First AI Agent",
+  "lede": "This guide provides step-by-step instructions on how to create, configure, and connect an AI agent in Imash, including integration with phone numbers, call handling, and system features.",
   "steps": [
     {
-      "id": "step1",
-      "title": "Step 1: Create Your iMash Account",
-      "content": "<p>First, you'll need to create an account to access the iMash platform.</p><ol class=\"steps\"><li>Visit <a href=\"https://dashboard.imash.io\" target=\"_blank\">dashboard.imash.io</a></li><li>Click on <strong>\"Sign Up\"</strong> in the top right corner</li><li>Enter your email address and create a secure password</li><li>Verify your email address by clicking the link sent to your inbox</li><li>Complete your profile information</li></ol>",
+      "id": "create-agent",
+      "title": "Creating a New Agent",
+      "content": "<ol><li>Navigate to <strong>Call Center → AI Agents</strong>.</li><li>Click <strong>Create New Agent</strong>.</li><li>Assign a meaningful Agent Name (e.g., ‘Ben’).</li><li>Select a Model:<ul><li><strong>Real-time model</strong> (recommended): fastest and most natural sounding.</li><li><strong>LLM + STT/TTS integration</strong>: fully customisable but may involve additional costs.</li></ul>Pricing varies depending on model choice. </li><li>Select a Voice Provider:<ul><li>Native voices (recommended when using real time models, they are provided with the model and do not add extra costs).</li><li>Alternative providers may incur extra costs.</li></ul></li><li>Configure:<ul><li><strong>Opening Message</strong>: greeting shown to users.</li><li><strong>Manual Prompt / Instructions</strong>: define style, behaviour, fallback responses.</li><li><strong>Conversation Starter</strong>: choose whether the agent or the user begins speaking.</li><li><strong>Temperature</strong>:<ul><li>Lower values = consistent, predictable responses.</li><li>Higher values = more creative and random. (Recommended starting value: 0.7).</li></ul></li></ul></li></ol>",
       "images": [
         {
-          "src": "images/signup-light.png",
-          "alt": "iMash Sign Up Page",
-          "caption": "The iMash sign-up page",
+          "src": "images/quick-start/agent-builder-light.png",
+          "alt": "Agent Builder",
+          "caption": "The main builder where you can configure your agent",
           "theme": "light"
         },
         {
-          "src": "images/signup-dark.png",
-          "alt": "iMash Sign Up Page",
-          "caption": "The iMash sign-up page",
+          "src": "images/quick-start/agent-builder-dark.png",
+          "alt": "Agent Builder",
+          "caption": "The main builder where you can configure your agent",
           "theme": "dark"
         }
-      ]
+    ]
     },
     {
-      "id": "step2",
-      "title": "Step 2: Navigate to the Dashboard",
-      "content": "<p>Once logged in, you'll be directed to your dashboard where you can manage all aspects of your AI agents.</p><h3>Dashboard Key Areas:</h3><ul><li><strong>Agents:</strong> Create and manage your AI voice agents</li><li><strong>Phone System:</strong> Configure phone numbers and SIP providers</li><li><strong>Campaigns:</strong> Set up automated calling campaigns</li><li><strong>CRM:</strong> Manage contacts, leads, and accounts</li><li><strong>Analytics:</strong> View call logs and performance metrics</li><li><strong>Settings:</strong> Configure API keys and account settings</li></ul>",
-      "images": [
-        {
-          "src": "images/dashboard-overview-light.png",
-          "alt": "iMash Dashboard Overview",
-          "caption": "The main dashboard showing your agent overview and key metrics",
-          "theme": "light"
-        },
-        {
-          "src": "images/dashboard-overview-dark.png",
-          "alt": "iMash Dashboard Overview",
-          "caption": "The main dashboard showing your agent overview and key metrics",
-          "theme": "dark"
-        }
-      ]
+      "id": "test-agent",
+      "title": "Testing the Agent",
+      "content": "<ol><li>Open the <strong>Test Window</strong> → click <strong>Test Agent</strong> → <strong>Connect</strong>.</li><li>Verify audio interaction (both agent and user voices).</li></ol>",
+      "images": []
     },
     {
-      "id": "step3",
-      "title": "Step 3: Create Your First AI Agent",
-      "content": "<p>Let's create your first AI voice agent that can handle phone conversations.</p><ol class=\"steps\"><li>Click on <strong>\"Agents\"</strong> in the left sidebar</li><li>Click the <strong>\"+ Create Agent\"</strong> button</li><li>Fill in the agent details:<ul><li><strong>Agent Name:</strong> Give your agent a descriptive name (e.g., \"Customer Support Agent\")</li><li><strong>Description:</strong> Add a brief description of what this agent will do</li><li><strong>Voice Provider:</strong> Select your preferred voice provider (OpenAI, ElevenLabs, etc.)</li><li><strong>Voice Model:</strong> Choose a voice that matches your brand</li></ul></li><li>Configure the agent's behavior:<ul><li><strong>System Prompt:</strong> Define how your agent should behave and respond</li><li><strong>First Message:</strong> Set what the agent says when answering a call</li><li><strong>End Call Phrases:</strong> Define phrases that will end the conversation</li></ul></li><li>Click <strong>\"Save Agent\"</strong></li></ol><h3>Example Agent Configuration:</h3><pre class=\"code\"><code>{\n  \"name\": \"Customer Support Agent\",\n  \"voice_provider\": \"openai\",\n  \"voice_model\": \"nova\",\n  \"system_prompt\": \"You are a helpful customer support agent for iMash. Be friendly, professional, and assist customers with their questions about our AI voice platform.\",\n  \"first_message\": \"Hello! Thank you for calling iMash support. How can I help you today?\",\n  \"end_call_phrases\": [\"goodbye\", \"bye\", \"have a great day\", \"talk to you later\"]\n}</code></pre>",
-      "images": [
-        {
-          "src": "images/create-agent-light.png",
-          "alt": "Create Agent Form",
-          "caption": "The agent creation form with configuration options",
-          "theme": "light"
-        },
-        {
-          "src": "images/create-agent-dark.png",
-          "alt": "Create Agent Form",
-          "caption": "The agent creation form with configuration options",
-          "theme": "dark"
-        }
-      ]
+      "id": "agent-features",
+      "title": "Configuring Agent Features",
+      "content": "<ul><li><strong>Knowledge Base</strong>: Upload files to extend agent knowledge.</li><li><strong>Tools</strong>: Add functions (e.g., End Call Tool). Agents can trigger tools autonomously.</li><li><strong>Settings</strong>: Define thresholds, such as automatic follow-up messages after user inactivity (e.g., 8 seconds).</li><li><strong>Privacy</strong>: Choose whether to retain or discard call recordings.</li><li><strong>Advanced</strong>: Configure post-call actions, such as summarisation and structured data collection (e.g., user’s name and age). <br><strong>At the end of a call:</strong> Access <strong>Call Logs</strong> to review conversations. In the <strong>Analysis Tab</strong>, view call summaries and structured data collected by the agent for deeper insights.</li><li><strong>Observer Agent</strong>: Provides live cues and monitoring during conversations.</li><li><strong>Embedding Agents</strong>: Agents can be embedded into websites for direct interaction.</li><li><strong>MCP Automation</strong>: Configure automations via the Automation Tab. Automations can be linked to agents using an MCP server.</li></ul>",
+      "images": []
     },
     {
-      "id": "step4",
-      "title": "Step 4: Generate Your API Key",
-      "content": "<p>To interact with iMash programmatically, you'll need an API key.</p><ol class=\"steps\"><li>Navigate to <strong>\"Settings\"</strong> in the left sidebar</li><li>Click on <strong>\"API Keys\"</strong></li><li>Click <strong>\"+ Generate New Key\"</strong></li><li>Give your API key a name (e.g., \"Development Key\")</li><li>Select the appropriate permissions for this key</li><li>Click <strong>\"Generate\"</strong></li><li><strong>Important:</strong> Copy and save your API key immediately - you won't be able to see it again!</li></ol><div style=\"background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0;\"><strong style=\"color: #dc2626;\">⚠️ Security Note:</strong><p style=\"margin: 0.5rem 0 0 0;\">Keep your API key secure and never expose it in client-side code or public repositories. Treat it like a password.</p></div>",
-      "images": [
-        {
-          "src": "images/api-keys-light.png",
-          "alt": "API Keys Management",
-          "caption": "The API Keys management page",
-          "theme": "light"
-        },
-        {
-          "src": "images/api-keys-dark.png",
-          "alt": "API Keys Management",
-          "caption": "The API Keys management page",
-          "theme": "dark"
-        }
-      ]
+      "id": "connect-phone",
+      "title": "Connecting a Phone Number",
+      "content": "<ol><li>Navigate to <strong>Phone Numbers → Buy New Number</strong>.</li><li>Select country and area code.</li><li>Choose and purchase available numbers.</li><li>Alternatively, import a SIP provider number by adding provider details in the SIP Providers section.</li></ol>",
+      "images": []
     },
     {
-      "id": "step5",
-      "title": "Step 5: Make Your First API Call",
-      "content": "<p>Now let's test your API key by making a simple request to list your agents.</p><div class=\"endpoint\"><div class=\"endpoint-meta\"><span class=\"meta-label\">Endpoint</span><code id=\"endpoint-code\">https://dashboard.imash.io/api/v2/agents</code><button class=\"copy-btn\" data-copy-target=\"#endpoint-code\">Copy</button></div></div><h3>Try it with different tools:</h3>",
-      "codeExamples": {
-        "curl": "# List all your agents\ncurl -X GET \"https://dashboard.imash.io/api/v2/agents\" \\\n  -H \"x-api-key: YOUR_SECRET_API_KEY\"\n\n# Expected Response:\n{\n  \"data\": [\n    {\n      \"id\": \"agent_abc123\",\n      \"name\": \"Customer Support Agent\",\n      \"voice_provider\": \"openai\",\n      \"voice_model\": \"nova\",\n      \"created_at\": \"2025-01-09T12:00:00Z\"\n    }\n  ],\n  \"total\": 1,\n  \"page\": 1,\n  \"limit\": 10\n}",
-        "javascript": "// List all your agents\nconst response = await fetch('https://dashboard.imash.io/api/v2/agents', {\n  method: 'GET',\n  headers: {\n    'x-api-key': 'YOUR_SECRET_API_KEY',\n    'Content-Type': 'application/json'\n  }\n});\n\nconst agents = await response.json();\nconsole.log('Your agents:', agents);\n\n// Create a new contact\nconst newContact = await fetch('https://dashboard.imash.io/api/v2/crm_contacts', {\n  method: 'POST',\n  headers: {\n    'x-api-key': 'YOUR_SECRET_API_KEY',\n    'Content-Type': 'application/json'\n  },\n  body: JSON.stringify({\n    name: 'John Doe',\n    phone: '+15551234567',\n    email: 'john@example.com'\n  })\n});\n\nconst contact = await newContact.json();\nconsole.log('Created contact:', contact);",
-        "python": "import requests\nimport json\n\n# Your API key\napi_key = 'YOUR_SECRET_API_KEY'\nbase_url = 'https://dashboard.imash.io/api/v2'\n\n# List all your agents\nresponse = requests.get(\n    f'{base_url}/agents',\n    headers={'x-api-key': api_key}\n)\nagents = response.json()\nprint('Your agents:', agents)\n\n# Create a new contact\ncontact_data = {\n    'name': 'John Doe',\n    'phone': '+15551234567',\n    'email': 'john@example.com'\n}\n\nresponse = requests.post(\n    f'{base_url}/crm_contacts',\n    headers={\n        'x-api-key': api_key,\n        'Content-Type': 'application/json'\n    },\n    data=json.dumps(contact_data)\n)\ncontact = response.json()\nprint('Created contact:', contact)",
-        "php": "<?php\n$apiKey = 'YOUR_SECRET_API_KEY';\n$baseUrl = 'https://dashboard.imash.io/api/v2';\n\n// List all your agents\n$ch = curl_init($baseUrl . '/agents');\ncurl_setopt($ch, CURLOPT_RETURNTRANSFER, true);\ncurl_setopt($ch, CURLOPT_HTTPHEADER, [\n    'x-api-key: ' . $apiKey\n]);\n\n$response = curl_exec($ch);\n$agents = json_decode($response, true);\ncurl_close($ch);\n\necho 'Your agents: ';\nprint_r($agents);\n\n// Create a new contact\n$contactData = [\n    'name' => 'John Doe',\n    'phone' => '+15551234567',\n    'email' => 'john@example.com'\n];\n\n$ch = curl_init($baseUrl . '/crm_contacts');\ncurl_setopt($ch, CURLOPT_RETURNTRANSFER, true);\ncurl_setopt($ch, CURLOPT_POST, true);\ncurl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($contactData));\ncurl_setopt($ch, CURLOPT_HTTPHEADER, [\n    'x-api-key: ' . $apiKey,\n    'Content-Type: application/json'\n]);\n\n$response = curl_exec($ch);\n$contact = json_decode($response, true);\ncurl_close($ch);\n\necho 'Created contact: ';\nprint_r($contact);\n?>"
-      }
+      "id": "live-calls",
+      "title": "Making Live Calls",
+      "content": "<ol><li>Open <strong>Live Calls Panel</strong>.</li><li>Click the <strong>Telephone Icon</strong> (top-right).</li><li>Select <strong>AI Agent Call</strong> mode.</li><li>Choose:<ul><li>The Number to call from.</li><li>The Agent to handle the call.</li><li>The Target Number to dial.</li></ul></li><li>Join or monitor the call live if needed. Observe real-time interactions and intervene manually when required.</li></ol>",
+      "images": []
     },
     {
-      "id": "step6",
-      "title": "Step 6: Test Your Agent with a Phone Call",
-      "content": "<p>Now let's test your agent by making an actual phone call.</p><h3>Option 1: Test in the Dashboard</h3><ol class=\"steps\"><li>Go to your agent in the <strong>\"Agents\"</strong> section</li><li>Click on your agent to view details</li><li>Click the <strong>\"Test Agent\"</strong> button</li><li>Enter a phone number to call</li><li>Click <strong>\"Start Call\"</strong></li></ol>",
-      "images": [
-        {
-          "src": "images/test-agent-light.png",
-          "alt": "Test Agent Interface",
-          "caption": "The agent testing interface",
-          "theme": "light"
-        },
-        {
-          "src": "images/test-agent-dark.png",
-          "alt": "Test Agent Interface",
-          "caption": "The agent testing interface",
-          "theme": "dark"
-        }
-      ],
-      "apiCall": "curl -X POST \"https://dashboard.imash.io/api/v2/calls/outbound\" \\\n  -H \"x-api-key: YOUR_SECRET_API_KEY\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"agent_id\": \"agent_abc123\",\n    \"to_phone\": \"+15551234567\",\n    \"from_phone\": \"+15559876543\",\n    \"metadata\": {\n      \"campaign\": \"test\",\n      \"source\": \"api\"\n    }\n  }'"
+      "id": "additional-features",
+      "title": "Additional Features in Imash",
+      "content": "<ul><li><strong>Overview Page</strong>: live analytics dashboard.</li><li><strong>Automation Tab</strong>: create workflows and servers.</li><li><strong>Call Center</strong>: manage agents, logs, phone numbers, and SIP providers.</li><li><strong>Campaigns</strong>: create and manage outbound campaigns.</li><li><strong>CRM</strong>: manage accounts, contacts, and leads with lifecycle tracking.</li><li><strong>Calendar</strong>: schedule meetings and assign calls to agents.</li><li><strong>API Keys</strong>: generate keys to use Imash as infrastructure (without UI).</li><li><strong>Credentials</strong>: connect directly with external voice and LLM providers.</li><li><strong>Account Settings</strong>: manage user profile.</li><li><strong>Billing</strong>: manage payment methods and account balance.</li><li><strong>Demo Data</strong>: install prebuilt agents, leads, and records to explore features quickly.</li></ul>",
+      "images": []
     }
   ],
   "nextSteps": {

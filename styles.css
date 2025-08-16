@@ -56,6 +56,12 @@ body {
   min-height: 100vh;
 }
 
+/* Add padding for nested lists in documentation content */
+.content ul,
+.content ol {
+  padding-left: 2em;
+}
+
 /* Background accent */
 .bg-accent {
   position: fixed;
@@ -1733,4 +1739,5 @@ code {
     display: block !important;
     page-break-after: always;
   }
+
 }
