@@ -73,8 +73,8 @@ async function loadConfigurations() {
   try {
     // Try to fetch configurations from API endpoints (works when deployed)
     const [apiInfoResponse, systemTableResponse] = await Promise.all([
-      fetch('./apiInfoConfig.json').catch(() => fetch('/api/config/apiInfoConfig')),
-      fetch('./systemTableConfig.json').catch(() => fetch('/api/config/systemTableConfig'))
+      fetch('/apiInfoConfig.json').catch(() => fetch('/api/config/apiInfoConfig')),
+      fetch('/systemTableConfig.json').catch(() => fetch('/api/config/systemTableConfig'))
     ]);
     
     if (apiInfoResponse.ok) {
@@ -1837,7 +1837,7 @@ async function loadDynamicContent(route) {
     }
     // Deployed version (docs.imash.io)
     else {
-      return './files';
+      return '/files';
     }
   };
   
@@ -2083,7 +2083,7 @@ let apiResourceMeta = null;
 // Load meta configuration
 async function loadMetaConfig() {
   try {
-    const module = await import('./metaConfig.js');
+    const module = await import('/metaConfig.js');
     metaConfig = module.metaConfig;
     apiResourceMeta = module.apiResourceMeta;
     return true;
