@@ -1,7 +1,8 @@
 {
-  "title": "Guide - How To Configure MCP Servers in iMash",
+  "title": "How To Configure MCP Servers in iMash",
   "lede": "This guide explains how to create and connect an MCP (Modular Control Point) server in Imash, allowing your AI agents to access external tools, flows, and functions for expanded functionality.",
   "timeToComplete": "10 minutes",
+  "videoUrl": "https://youtu.be/0VZbWIhMBck",
   "steps": [
     {
       "id": "access-automation",

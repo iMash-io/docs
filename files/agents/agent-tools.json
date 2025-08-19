@@ -1,12 +1,13 @@
 {
-  "title": "Guide - How To Add Tools to Your Agent in iMash",
+  "title": "How To Add Tools to Your Agent in iMash",
   "lede": "This guide explains how to add predefined and custom tools to your AI agent in Imash, enabling it to perform actions such as ending calls, booking calendar appointments, or interacting with external services.",
   "timeToComplete": "7 minutes",
+  "videoUrl": "https://youtu.be/Gmo7CE-XORY",
   "steps": [
     {
       "id": "create-agent",
       "title": "Create or Select an Agent",
-      "content": "<ol><li>Navigate to <strong>Call Center → AI Agents</strong>.</li><li>Create a new agent or open an existing one.</li><li>For this example, select the <strong>OpenAI Real-Time model</strong> with the <strong>Armando</strong> voice.</li></ol>",
+      "content": "<ol><li>Navigate to <strong>Call Center → AI Agents</strong>.</li></ol>",
       "images": []
     },
     {

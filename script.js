@@ -1981,6 +1981,33 @@ function renderQuickstartContent(content) {
     html += `<div class="time-to-complete">⏱️ Time to complete: ${content.timeToComplete}</div>`;
   }
   
+  // Add embedded YouTube video if available
+  if (content.videoUrl) {
+    // Convert YouTube URL to embed format
+    let embedUrl = content.videoUrl;
+    
+    // Handle different YouTube URL formats
+    if (embedUrl.includes('youtu.be/')) {
+      const videoId = embedUrl.split('youtu.be/')[1].split('?')[0];
+      embedUrl = `https://www.youtube.com/embed/${videoId}`;
+    } else if (embedUrl.includes('youtube.com/watch?v=')) {
+      const videoId = embedUrl.split('v=')[1].split('&')[0];
+      embedUrl = `https://www.youtube.com/embed/${videoId}`;
+    }
+    
+    html += `
+      <div class="video-container">
+        <iframe 
+          src="${embedUrl}" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    `;
+  }
+  
   // Add what you will learn section if available
   if (content.whatYouWillLearn && content.whatYouWillLearn.length > 0) {
     html += '<div class="what-you-will-learn">';
