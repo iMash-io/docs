@@ -1,0 +1,71 @@
+{
+  "title": "Guide - How To Configure MCP Servers in iMash",
+  "lede": "This guide explains how to create and connect an MCP (Modular Control Point) server in Imash, allowing your AI agents to access external tools, flows, and functions for expanded functionality.",
+  "timeToComplete": "10 minutes",
+  "steps": [
+    {
+      "id": "access-automation",
+      "title": "Access the Automation Tab",
+      "content": "<ol><li>Navigate to the <strong>Automation</strong> tab (located above the Call Center).</li><li>Here you will find <strong>Flows</strong>, which allow you to build complex operations out of smaller building blocks.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "create-flow",
+      "title": "Create a Flow",
+      "content": "<ol><li>Click <strong>Create New Flow</strong>.</li><li>Build your flow by chaining actions. For example:<ul><li>Take a city name as input.</li><li>Send it via an <strong>HTTP request</strong> to retrieve weather data.</li><li>Extract the relevant JSON fields (e.g., temperature).</li><li>Return the processed result.</li></ul></li><li>Once complete, <strong>Publish</strong> the flow so it can be used in MCP servers.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "create-mcp",
+      "title": "Create an MCP Server",
+      "content": "<ol><li>In the <strong>Automation</strong> tab, go to <strong>MCP Servers</strong> and click <strong>Create New MCP</strong>.</li><li>Give it a meaningful name (e.g., “My MCP”).</li><li>Add tools to the MCP:<ul><li><strong>Piece</strong>: Predefined operation or function.</li><li><strong>Flow</strong>: Any published flow you have created.</li></ul></li><li>Select your published flow (e.g., <em>Check Weather</em>) and add it to the MCP.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "attach-mcp-agent",
+      "title": "Attach MCP to an Agent",
+      "content": "<ol><li>Go to <strong>AI Agents</strong> and select your agent.</li><li>In the MCP configuration section, add the MCP you created.</li><li>The agent now has access to all flows and tools within the MCP.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "test-mcp",
+      "title": "Test the MCP Integration",
+      "content": "<ol><li>Open the <strong>Test Window</strong> and connect to your agent.</li><li>Ask a question that triggers the MCP tool (e.g., “What’s the weather in Paris today?”).</li><li>The agent should process the request via the MCP and return the correct result.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "view-history",
+      "title": "View MCP Usage History",
+      "content": "<ol><li>Return to the <strong>Automation → MCP</strong> section.</li><li>Open the <strong>History</strong> tab of your MCP server.</li><li>Here you can view:<ul><li>Each invocation of the MCP.</li><li>Which tool or flow was used.</li><li>Inputs provided (e.g., “Paris”).</li><li>Outputs and responses generated.</li></ul></li></ol>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Now that you’ve connected your MCP to an agent, you can extend its capabilities further:",
+    "cards": [
+      {
+        "href": "/automations/create-flows",
+        "title": "Create Advanced Flows",
+        "description": "Build more complex workflows with branching logic and multiple inputs."
+      },
+      {
+        "href": "/agents/agent-settings",
+        "title": "Advanced Agent Settings",
+        "description": "Fine-tune your agent with prompts, tools, and additional instructions."
+      },
+      {
+        "href": "/embedding/website",
+        "title": "Embed Agents on Your Website",
+        "description": "Integrate your AI agents into your website for direct user interaction."
+      }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a> for detailed documentation</li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a> for step-by-step guides</li></ul>"
+  },
+  "metaTitle": "Configure MCP Servers in iMash",
+  "metaDescription": "Learn how to create and configure MCP servers in Imash. Step-by-step guide to build flows, add tools, connect MCPs to agents, and test integrations.",
+  "metaKeywords": "MCP, flows, automation, imash tutorial, ai agent setup, MCP server, connect tools, imash automation"
+}

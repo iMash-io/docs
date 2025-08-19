@@ -1,0 +1,59 @@
+{
+  "title": "Guide - How To Add Tools to Your Agent in iMash",
+  "lede": "This guide explains how to add predefined and custom tools to your AI agent in Imash, enabling it to perform actions such as ending calls, booking calendar appointments, or interacting with external services.",
+  "timeToComplete": "7 minutes",
+  "steps": [
+    {
+      "id": "create-agent",
+      "title": "Create or Select an Agent",
+      "content": "<ol><li>Navigate to <strong>Call Center → AI Agents</strong>.</li><li>Create a new agent or open an existing one.</li><li>For this example, select the <strong>OpenAI Real-Time model</strong> with the <strong>Armando</strong> voice.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "add-predefined-tools",
+      "title": "Add Predefined Tools",
+      "content": "<ol><li>Go to the <strong>Tools</strong> section in the agent configuration.</li><li>Click <strong>Add Tools</strong>.</li><li>Select from predefined tools available, such as:<ul><li><strong>End Call Tool</strong>: Detects when the conversation is over and ends the call automatically.</li><li><strong>Calendar Tool</strong>: Allows the agent to book appointments directly into the calendar.</li></ul></li></ol>",
+      "images": []
+    },
+    {
+      "id": "test-tools",
+      "title": "Test Predefined Tools",
+      "content": "<ol><li>Go to your <strong>Leads</strong> list and initiate a test call.</li><li>Choose the agent configured with the tools.</li><li>During the call, try commands such as:<ul><li>“Book a demo for tomorrow at 1 PM.”</li><li>“End the call.”</li></ul></li><li>Verify that the agent successfully books appointments and ends calls.</li><li>Check the <strong>CRM Calendar</strong> to confirm that appointments are created with correct details.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "add-custom-tools",
+      "title": "Add Custom Tools",
+      "content": "<ol><li>Go back to the agent configuration screen.</li><li>Click <strong>Add Tool</strong> and select <strong>Custom Tool</strong>.</li><li>Provide a clear and descriptive explanation of the tool’s purpose (so the AI understands when to use it).</li><li>Enter the tool’s endpoint (e.g., a URL returning JSON or another service endpoint).</li><li>Save the configuration.</li><li>The agent can now call this endpoint live during conversations to fetch or send information.</li></ol>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Now that your agent can use tools, you can expand its capabilities even further:",
+    "cards": [
+      {
+        "href": "/agents/mcp-servers",
+        "title": "Connect MCP Servers",
+        "description": "Bundle multiple tools and flows together for advanced functionality."
+      },
+      {
+        "href": "/automations/create-flows",
+        "title": "Build Custom Flows",
+        "description": "Design automated workflows your agent can trigger through tools."
+      },
+      {
+        "href": "/embedding/website",
+        "title": "Embed Your Agent",
+        "description": "Integrate your AI agent directly into your website."
+      }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a> for detailed documentation</li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a> for step-by-step guides</li></ul>"
+  },
+  "metaTitle": "Add Tools to Agents in iMash",
+  "metaDescription": "Learn how to add predefined and custom tools to your AI agent in Imash. Step-by-step guide to enable features like ending calls, booking appointments, and connecting external services.",
+  "metaKeywords": "tools, imash tutorial, ai agent setup, custom tools, calendar integration, end call tool"
+}

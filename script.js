@@ -431,6 +431,9 @@ function updateSidebarForTab(route) {
             <li><a data-href="/agents/agent-settings" class="nav-link ${route === '/agents/agent-settings' ? 'active' : ''}">Agent Settings</a></li>
             <li><a data-href="/agents/voice-configuration" class="nav-link ${route === '/agents/voice-configuration' ? 'active' : ''}">Voice Configuration</a></li>
             <li><a data-href="/agents/test-agent" class="nav-link ${route === '/agents/test-agent' || route === '/agents/test-your-agent' ? 'active' : ''}">Test Your Agent</a></li>
+            <li><a data-href="/agents/agent-tools" class="nav-link ${route === '/agents/agent-tools' ? 'active' : ''}">Agent Tools</a></li>
+            <li><a data-href="/agents/agent-knowledge-base" class="nav-link ${route === '/agents/agent-knowledge-base' ? 'active' : ''}">Agent Knowledge Base</a></li>
+            <li><a data-href="/agents/agent-mcp" class="nav-link ${route === '/agents/agent-mcp' ? 'active' : ''}">Agent MCP</a></li>
           </ul>
         </div>
 
@@ -575,24 +578,26 @@ function updateTOC() {
   // Only look for H2 headings that are main sections
   const headings = activePage.querySelectorAll('h2');
   
-  // Check if this is a quickstart/guide page with specific patterns
-  const quickstartPatterns = [
+  // Check if this is a quickstart/guide page by looking for common guide elements
+  const commonGuidePatterns = [
     'What You\'ll Learn',
-    'Step 1:', 'Step 2:', 'Step 3:', 'Step 4:', 'Step 5:', 'Step 6:',
-    'Creating a New Agent', 'Testing the Agent', 'Configuring Agent Features',
-    'Connecting a Phone Number', 'Making Live Calls', 'Additional Features in Imash',
+    'Step 1:', 'Step 2:', 'Step 3:', 'Step 4:', 'Step 5:', 'Step 6:', 'Step 7:', 'Step 8:', 'Step 9:', 'Step 10:',
     'What\'s Next', 'Whats Next',
     'Common Issues & Troubleshooting', 'Troubleshooting',
     'Need Help?', 'Support'
   ];
   
-  // Check if any quickstart patterns exist in the page
-  const isQuickstartPage = Array.from(headings).some(heading => {
-    const text = heading.textContent;
-    return quickstartPatterns.some(pattern => 
-      text.startsWith(pattern) || text === pattern
-    );
-  });
+  // Check if this appears to be a guide/quickstart page
+  const hasGuideElements = activePage.querySelector('.guide-content') || 
+                          activePage.querySelector('.quickstart-content') ||
+                          Array.from(headings).some(heading => 
+                            commonGuidePatterns.some(pattern => 
+                              heading.textContent.startsWith(pattern) || heading.textContent === pattern
+                            )
+                          );
+  
+  // For guide pages, be more inclusive - include all H2 headings that aren't navigation elements
+  const isQuickstartPage = hasGuideElements;
   
   headings.forEach(heading => {
     // Skip TOC heading itself
@@ -602,14 +607,23 @@ function updateTOC() {
       return;
     }
     
-    // For quickstart pages, filter headings
+    // For quickstart/guide pages, include all H2 headings except navigation elements
     if (isQuickstartPage) {
       const headingText = heading.textContent;
-      const shouldInclude = quickstartPatterns.some(pattern => 
-        headingText.startsWith(pattern) || headingText === pattern
+      
+      // Exclude obvious navigation or structural elements
+      const excludePatterns = [
+        'Table of Contents', 'TOC', 'On This Page', 'Contents',
+        'Navigation', 'Menu', 'Sidebar'
+      ];
+      
+      const shouldExclude = excludePatterns.some(pattern => 
+        headingText.includes(pattern) || headingText === pattern
       );
       
-      if (!shouldInclude) return;
+      if (shouldExclude) return;
+      
+      // For guide pages, include all other H2 headings (this will capture all step titles)
     }
     // For other pages (like introduction), include all H2 headings
     
@@ -1535,6 +1549,9 @@ function updateMobileMenuContent() {
           <li><a data-href="/agents/agent-settings" class="nav-link">Agent Settings</a></li>
           <li><a data-href="/agents/voice-configuration" class="nav-link">Voice Configuration</a></li>
           <li><a data-href="/agents/test-agent" class="nav-link">Test Your Agent</a></li>
+          <li><a data-href="/agents/agent-tools" class="nav-link">Agent Tools</a></li>
+          <li><a data-href="/agents/agent-knowledge-base" class="nav-link">Agent Knowledge Base</a></li>
+          <li><a data-href="/agents/agent-mcp" class="nav-link">Agent MCP</a></li>
         </ul>
       </div>
       
@@ -1852,6 +1869,9 @@ async function loadDynamicContent(route) {
     '/agents/agent-settings': `${basePath}/agents/agent-settings.json`,
     '/agents/voice-configuration': `${basePath}/agents/voice-configuration.json`,
     '/agents/test-your-agent': `${basePath}/agents/test-your-agent.json`,
+    '/agents/agent-tools': `${basePath}/agents/agent-tools.json`,
+    '/agents/agent-knowledge-base': `${basePath}/agents/agent-knowledge-base.json`,
+    '/agents/agent-mcp': `${basePath}/agents/agent-mcp.json`,
     '/phone/add-sip-provider': `${basePath}/phone/add-sip-provider.json`,
     '/phone/add-phone-number': `${basePath}/phone/add-phone-number.json`,
     '/phone/call-routing': `${basePath}/phone/call-routing.json`,

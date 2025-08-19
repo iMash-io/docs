@@ -23,6 +23,7 @@ export const metaConfig = {
     metaDescription: 'Generate and manage API keys for secure access to iMash platform. Learn about authentication, permissions, and best practices.',
     metaKeywords: 'API keys, authentication, security, access tokens, API authentication, credentials management, secure access'
   },
+
   
   // Agents
   '/agents/create-agent': {
@@ -45,11 +46,31 @@ export const metaConfig = {
     metaDescription: 'Test your AI agents with phone calls and simulations. Debug conversations and validate agent behavior before deployment.',
     metaKeywords: 'test agent, debugging, simulation, agent testing, call testing, conversation validation, QA testing'
   },
+
+
   // Also handle the incorrect route used in sidebar
   '/agents/test-agent': {
     metaTitle: 'Test Your Agent - Validate AI Performance | iMash Docs',
     metaDescription: 'Test your AI agents with phone calls and simulations. Debug conversations and validate agent behavior before deployment.',
     metaKeywords: 'test agent, debugging, simulation, agent testing, call testing, conversation validation, QA testing'
+  },
+  
+  '/agents/agent-tools': {
+    metaTitle: 'Agent Tools - Add Custom & Predefined Tools | iMash Docs',
+    metaDescription: 'Learn how to add predefined and custom tools to your AI agents. Configure end call tools, calendar booking, and custom API integrations.',
+    metaKeywords: 'agent tools, custom tools, end call tool, calendar integration, API tools, tool configuration, agent capabilities'
+  },
+  
+  '/agents/agent-knowledge-base': {
+    metaTitle: 'Agent Knowledge Base - Upload Files & Documents | iMash Docs',
+    metaDescription: 'Upload files and documents to create a knowledge base for your AI agents. Support for PDFs, text files, and more.',
+    metaKeywords: 'knowledge base, file upload, documents, PDF, agent knowledge, AI training, document processing'
+  },
+  
+  '/agents/agent-mcp': {
+    metaTitle: 'Agent MCP - Model Context Protocol Integration | iMash Docs',
+    metaDescription: 'Configure MCP (Model Context Protocol) integration for advanced AI agent capabilities and external tool connections.',
+    metaKeywords: 'MCP, Model Context Protocol, agent integration, AI tools, external tools, protocol configuration'
   },
   
   // Phone System (both phone/ and phone-system/ paths)

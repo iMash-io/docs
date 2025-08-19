@@ -1,0 +1,65 @@
+{
+  "title": "Guide - How To Configure a Knowledge Base for Your Agent in iMash",
+  "lede": "This guide explains how to connect a Knowledge Base to your AI agent in Imash, allowing it to provide accurate answers from external documents such as FAQs or support files.",
+  "timeToComplete": "5 minutes",
+  "steps": [
+    {
+      "id": "access-agent",
+      "title": "Access the Agent Builder",
+      "content": "<ol><li>Navigate to <strong>Call Center → AI Agents</strong>.</li><li>Create a new agent or open an existing one.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "upload-file",
+      "title": "Upload a Knowledge Base File",
+      "content": "<ol><li>Locate the <strong>Knowledge Base</strong> section in the Agent Configuration Panel.</li><li>Click <strong>Upload File</strong> and select the document you want to add (e.g., PDF, TXT).</li><li>Wait for the system to process and embed the file. If the file was uploaded before, the system will notify you.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "verify-knowledge",
+      "title": "Verify Knowledge Base Integration",
+      "content": "<ol><li>Open the <strong>Test Window</strong> and connect to your agent.</li><li>Ask questions related to the uploaded document (e.g., business hours or support email).</li><li>The agent should respond with the correct information from the Knowledge Base.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "improve-accuracy",
+      "title": "Improving Knowledge Base Accuracy",
+      "content": "<ul><li>If the agent struggles to answer from the file, update the <strong>Instruction Prompt</strong> to guide its behaviour.</li><li>Example instruction: <em>“When asked a question, answer from the FAQ in your knowledge base.”</em></li></ul>",
+      "images": []
+    },
+    {
+      "id": "best-practices",
+      "title": "Best Practices",
+      "content": "<ul><li>Use clear and structured documents (e.g., FAQs, policy manuals, contact details).</li><li>Keep files updated to ensure agents provide current information.</li><li>For multiple topics, upload separate files per category for easier management.</li></ul>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Now that your agent can answer from a Knowledge Base, you can extend its functionality:",
+    "cards": [
+      {
+        "href": "/agents/agent-features",
+        "title": "Configure Agent Features",
+        "description": "Learn how to add tools, privacy settings, and advanced behaviours."
+      },
+      {
+        "href": "/automations/smart-flows",
+        "title": "Build Smart Automations",
+        "description": "Connect your agent to workflows and external systems using MCP servers."
+      },
+      {
+        "href": "/embedding/website",
+        "title": "Embed Your Agent",
+        "description": "Integrate your AI agent into your website for direct user interaction."
+      }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a> for detailed documentation</li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a> for step-by-step guides</li></ul>"
+  },
+  "metaTitle": "Configure a Knowledge Base in iMash",
+  "metaDescription": "Learn how to connect a knowledge base to your AI agent in Imash. Step-by-step guide to upload documents, test responses, and improve accuracy.",
+  "metaKeywords": "knowledge base, imash tutorial, ai agent setup, faq integration, upload documents"
+}
