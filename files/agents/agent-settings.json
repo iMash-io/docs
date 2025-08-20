@@ -1,28 +1,77 @@
 {
-  "title": "Agent Settings",
-  "lede": "Configure advanced agent settings including custom tools, webhooks, and conversation flows.",
-  "sections": [
+  "title": "Basic Settings for Voice AI Agents in iMash",
+  "lede": "This guide covers the basic settings available for AI agents in Imash, including conversation length, idle messages, voicemail options, and features that improve natural conversation flow.",
+  "timeToComplete": "8 minutes",
+  "steps": [
     {
-      "id": "advanced-settings",
-      "title": "Advanced Configuration",
-      "content": "<p>Fine-tune your agent's behavior with advanced settings and integrations.</p><h3>Available Options:</h3><ul><li><strong>Custom Tools:</strong> Connect external APIs and services</li><li><strong>Webhooks:</strong> Real-time event notifications</li><li><strong>Conversation Flows:</strong> Structured dialog paths</li><li><strong>Transfer Settings:</strong> Human handoff configuration</li></ul>"
-    }
-  ],
-  "images": [
-    {
-      "src": "images/agent-settings-light.png",
-      "alt": "Agent Settings Interface",
-      "caption": "Advanced agent configuration options",
-      "theme": "light"
+      "id": "access-settings",
+      "title": "Access the Settings Tab",
+      "content": "<ol><li>Open the <strong>AI Agent Builder</strong> for a new or existing agent.</li><li>Navigate to the <strong>Settings</strong> tab to configure advanced options.</li></ol>",
+      "images": []
     },
     {
-      "src": "images/agent-settings-dark.png",
-      "alt": "Agent Settings Interface",
-      "caption": "Advanced agent configuration options",
-      "theme": "dark"
+      "id": "conversation-limits",
+      "title": "Configure Conversation Limits",
+      "content": "<ul><li><strong>Conversation Length</strong>: Set the maximum length of the call in seconds. The agent will automatically end the call when this limit is reached.</li><li><strong>Response Delay</strong>: Define how long the agent should wait before responding, to avoid interrupting users who pause mid-sentence.</li><li><strong>Interrupt Threshold</strong>: Set the minimum number of words the user must say to interrupt the agent while it is speaking.</li></ul>",
+      "images": []
+    },
+    {
+      "id": "silence-timeout",
+      "title": "Silence Timeout",
+      "content": "<p>Configure how long the system should wait before automatically ending a call due to user inactivity. Default: <strong>30 seconds</strong>.</p>",
+      "images": []
+    },
+    {
+      "id": "idle-messages",
+      "title": "Idle Messages",
+      "content": "<ol><li>Enable <strong>Idle Messages</strong> to send follow-ups if the user does not respond.</li><li>Set the wait time (e.g., 8 seconds).</li><li>Configure up to three idle messages, such as: <em>“Are you still there?”</em> or personalized ones like <em>“Hey Bob, are you still online?”</em>.</li><li>Custom variables from the conversation (e.g., user’s name) can be included in idle messages.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "voicemail",
+      "title": "Voicemail Settings",
+      "content": "<ul><li><strong>Hang Up on Voicemail</strong>: End the call if voicemail is detected.</li><li><strong>Leave a Message</strong>: Configure a custom voicemail message. Dynamic parameters from the conversation can be inserted.</li></ul>",
+      "images": []
+    },
+    {
+      "id": "backchannel",
+      "title": "Enable Backchannel",
+      "content": "<p>Backchannel adds natural filler words (e.g., “Gotcha”, “Uh-huh”) during conversations to make the agent sound less robotic. This feature is in beta but can significantly improve natural flow.</p>",
+      "images": []
+    },
+    {
+      "id": "preemptive-generation",
+      "title": "Preemptive Generation",
+      "content": "<p>When using a <strong>STT + TTS + LLM setup</strong> instead of a real-time model, enable this setting to allow the LLM to generate responses concurrently while the user is speaking. This can improve responsiveness and create a faster back-and-forth flow.</p>",
+      "images": []
     }
   ],
-  "metaTitle": "Agent Settings - Configure AI Behavior & Tools | iMash Docs",
-  "metaDescription": "Configure advanced agent settings including custom tools, webhooks, integrations, and behavior parameters for your AI assistants.",
-  "metaKeywords": "agent settings, configuration, custom tools, webhooks, agent behavior, AI parameters, advanced settings"
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Now that you’ve configured the basic settings, you can enhance the conversation experience even further:",
+    "cards": [
+      {
+        "href": "/agents/tools",
+        "title": "Add Tools to Your Agent",
+        "description": "Enable your agent to perform tasks like booking meetings or ending calls automatically."
+      },
+      {
+        "href": "/agents/mcp-servers",
+        "title": "Connect MCP Servers",
+        "description": "Combine multiple tools and flows into a single server for expanded capabilities."
+      },
+      {
+        "href": "/agents/knowledge-base",
+        "title": "Add a Knowledge Base",
+        "description": "Upload FAQs and support documents so your agent can answer with accurate information."
+      }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a> for detailed documentation</li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a> for step-by-step guides</li></ul>"
+  },
+  "metaTitle": "Basic Settings for AI Agents in iMash",
+  "metaDescription": "Learn how to configure basic AI agent settings in Imash, including conversation length, idle messages, voicemail handling, and backchannel for natural conversation flow.",
+  "metaKeywords": "basic settings, imash tutorial, ai agent setup, voicemail, idle messages, backchannel, conversation length"
 }
