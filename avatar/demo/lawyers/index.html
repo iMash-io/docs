@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jurispect — Live Lawyer & Legal Sessions</title>
+  <script src="https://unpkg.com/livekit-client@2.15.5/dist/livekit-client.umd.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-wrapper">
+    <div class="bg-orbs">
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+      <div class="orb orb3"></div>
+    </div>
+    <div class="stars"></div>
+  </div>
+
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="brand-icon">⚖️</div>
+        <div class="brand-text">
+          <h1>Jurispect</h1>
+          <p>Premium Lawyer & Legal Sessions</p>
+        </div>
+      </div>
+      <div class="status-badge" id="statusBadge">
+        <span class="status-dot"></span>
+        <span id="statusText">Offline</span>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <div class="video-section">
+        <div class="session-header">
+          <div class="live-indicator" id="liveIndicator" style="display: none;">Live Session</div>
+          <div class="session-timer" id="sessionTimer"></div>
+        </div>
+
+        <div class="video-container">
+          <div class="video-panel advisor">
+            <div class="video-label"><span>👁️</span><span>Advisor</span></div>
+            <div class="video-placeholder" id="advisorPlaceholder">
+              <div class="video-placeholder-icon">⚖️</div>
+              <span>Waiting for lawyer...</span>
+            </div>
+            <div id="advisorVideo"></div>
+          </div>
+          
+          <div class="video-panel user">
+            <div class="video-label"><span>🌟</span><span>You</span></div>
+            <video id="localVideo" autoplay muted playsinline></video>
+            <div class="video-placeholder" id="userPlaceholder" style="display: none;">
+              <div class="video-placeholder-icon">👤</div>
+              <span>Camera off</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Session Options -->
+        <div class="session-options">
+          <div class="session-type-selector">
+            <div class="session-type active" data-type="consultation">
+              <div class="session-type-icon">💼</div>
+              <div class="session-type-name">Consultation</div>
+              <div class="session-type-desc">Initial advice</div>
+            </div>
+            <div class="session-type" data-type="case-review">
+              <div class="session-type-icon">📁</div>
+              <div class="session-type-name">Case Review</div>
+              <div class="session-type-desc">Document analysis</div>
+            </div>
+            <div class="session-type" data-type="strategy">
+              <div class="session-type-icon">📈</div>
+              <div class="session-type-name">Strategy Session</div>
+              <div class="session-type-desc">Legal planning</div>
+            </div>
+            <div class="session-type" data-type="mediation">
+              <div class="session-type-icon">🤝</div>
+              <div class="session-type-name">Mediation</div>
+              <div class="session-type-desc">Dispute resolution</div>
+            </div>
+          </div>
+          <div class="session-stats">
+            <div class="stat-item">
+              <span class="stat-icon">👥</span>
+              <span class="stat-value">1,247</span>
+              <span class="stat-label">online now</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-icon">⚡</span>
+              <span class="stat-value">98%</span>
+              <span class="stat-label">satisfaction</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-icon">🌍</span>
+              <span class="stat-value">47</span>
+              <span class="stat-label">countries</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="controls-section">
+          <div class="connection-info">
+            <span class="connection-label">Session ID:</span>
+            <span class="room-id" id="roomId">Not connected</span>
+          </div>
+          <div class="control-buttons">
+            <button class="btn btn-primary" id="joinBtn"><span>✨</span><span>Join Session</span></button>
+            <button class="btn btn-danger" id="leaveBtn" disabled><span>Leave</span></button>
+            <button class="btn btn-ghost btn-icon" id="micBtn" disabled title="Toggle Microphone">🎤</button>
+            <button class="btn btn-ghost btn-icon" id="camBtn" disabled title="Toggle Camera">📹</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="advisor-panel">
+        <div class="advisor-header">
+          <div class="advisor-avatar"></div>
+          <div class="advisor-info">
+            <h2>Ethan Hayes</h2>
+            <div class="specialties">Corporate • Real Estate • Litigation</div>
+            <div class="rating"><span class="stars">★★★★★</span><span class="rating-count">(1,423 cases)</span></div>
+          </div>
+        </div>
+
+        <div class="advisor-badges">
+          <span class="badge premium">Top Rated</span>
+          <span class="badge">Verified</span>
+          <span class="badge">15+ Years</span>
+        </div>
+
+        <div class="advisor-section">
+          <div class="section-title">About Ethan</div>
+          <div class="advisor-bio">
+            With over 15 years of experience, Ethan combines sharp legal acumen with a client-focused approach. He specializes in providing clarity on complex legal matters, helping you navigate business contracts, property disputes, and litigation with confidence and strategic advantage.
+          </div>
+        </div>
+
+        <div class="advisor-section">
+          <div class="section-title">Session Focus Areas</div>
+          <div class="focus-items">
+            <div class="focus-item">Corporate Law & Business Formation</div>
+            <div class="focus-item">Real Estate Transactions</div>
+            <div class="focus-item">Contract Negotiation & Drafting</div>
+            <div class="focus-item">Civil Litigation & Dispute Resolution</div>
+            <div class="focus-item">Intellectual Property Protection</div>
+          </div>
+        </div>
+
+        <div class="advisor-section">
+          <div class="section-title">Recent Reviews</div>
+          <div class="reviews">
+            <div class="review"><div class="review-header"><span class="review-author">Corp Solutions Inc.</span><span class="review-rating">★★★★★</span></div><div class="review-text">"Ethan's advice was invaluable. He identified key risks in our contract and provided clear, actionable solutions."</div></div>
+            <div class="review"><div class="review-header"><span class="review-author">Jane D.</span><span class="review-rating">★★★★★</span></div><div class="review-text">"The video quality was excellent, and Ethan's explanation of the legal process was easy to understand. Highly recommended."</div></div>
+            <div class="review"><div class="review-header"><span class="review-author">Realty Group</span><span class="review-rating">★★★★★</span></div><div class="review-text">"A perfect blend of legal expertise and practical business sense. The connection was instant and productive."</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">Investor Demo • Powered by iMash.io • © 2025 Jurispect</div>
+  </div>
+
+  <!-- Bottom-right tiny internal toggles -->
+  <div class="fab-cluster">
+    <button id="providerToggle" class="fab provider" aria-label="toggle provider"></button>
+    <button id="voiceToggle" class="fab voice" aria-label="choose voice"><span class="abbr"></span></button>
+  </div>
+
+  <!-- Voice mini-menu (appears above the voice puck) -->
+  <div id="voiceMenu" class="mini-menu hidden" role="menu" aria-hidden="true">
+    <div class="mini-menu-header" id="voiceMenuHeader">Voices</div>
+    <div class="mini-menu-body" id="voiceMenuBody"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
