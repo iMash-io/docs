@@ -73,7 +73,7 @@ async function loadConfigurations() {
   try {
     // Try to fetch configurations from API endpoints (works when deployed)
     const [apiInfoResponse, systemTableResponse] = await Promise.all([
-      fetch('/apiInfoConfig.json').catch(() => fetch('/api/config/apiInfoConfig')),
+      fetch('https://docs.imash.io/api/config/apiInfoConfig'),
       fetch('https://docs.imash.io/api/config/systemTableConfig')
     ]);
     
