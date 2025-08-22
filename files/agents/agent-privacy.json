@@ -1,5 +1,5 @@
 {
-  "title": "Privacy Settings for AI Agents in iMash",
+  "title": "Privacy Settings for Voice AI Agents in iMash",
   "lede": "This guide explains the privacy settings available in iMash AI agents, including options for storing or discarding data, saving audio recordings, and configuring external storage via AWS S3.",
   "timeToComplete": "5 minutes",
   "videoUrl": "https://youtu.be/5tPDfE9WJlI",
