@@ -4,12 +4,10 @@ const LK_API_KEY = "APIHu68vyMSdaSv";
 const LK_API_SECRET = "PkfcYSQMJRe7s57ufn0OaFEwBAZzeqpSTMdCpowUfdCD";
 
 // Voice inventories (must match what agent.py understands)
-const OPENAI_VOICES = ["coral","sage","shimmer"];
+const OPENAI_VOICES = ["ash","echo"];
 const GEMINI_VOICES = [
-  "Kore","Leda","Aoede",
-  "Callirrhoe","Autonoe",
-  "Despina","Erinome","Laomedeia",
-  "Pulcherrima"
+  "Zephyr","Puck","Charon","Fenrir","Orus","Enceladus","Iapetus",
+  "Umbriel","Algieba","Algenib","Rasalgethi","Achernar","Alnilam","Gacrux"
 ];
 
 // UI Elements
@@ -42,7 +40,7 @@ let localStream = null; // Keep track of local stream
 
 // --- provider & voice state (persisted) ---
 let provider = (localStorage.getItem('provider') || 'gemini'); // 'gemini' | 'openai'
-let voiceGemini = localStorage.getItem('voiceGemini') || 'Kore';
+let voiceGemini = localStorage.getItem('voiceGemini') || 'Charon';
 let voiceOpenAI = localStorage.getItem('voiceOpenAI') || 'shimmer';
 let selectedSessionType = 'consultation';
 
@@ -57,7 +55,7 @@ document.querySelectorAll('.session-type').forEach(type => {
 
 function generateRoomName() {
   const randomId = Math.floor(10000000 + Math.random() * 90000000);
-  return `psychic-demo-room-${randomId}`;
+  return `lawyers-demo-room-${randomId}`;
 }
 
 function providerVoices() {
@@ -295,7 +293,7 @@ async function connectToRoom() {
   const roomName = `${base}::${provider === 'openai' ? 'oai' : 'gem'}:${v}`;
 
   // Update room ID display
-  roomId.textContent = base.replace('psychic-demo-room-', '');
+  roomId.textContent = base.replace('lawyers-demo-room-', '');
 
   setStatus('connecting', 'Connecting...');
   enableControls(false);
