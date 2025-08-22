@@ -73,6 +73,12 @@ export const metaConfig = {
     metaKeywords: 'MCP, Model Context Protocol, agent integration, AI tools, external tools, protocol configuration'
   },
   
+  '/agents/agent-privacy': {
+    metaTitle: 'Agent Privacy - Data Storage & Recording Settings | iMash Docs',
+    metaDescription: 'Configure privacy settings for AI agents including data storage, audio recording options, and AWS S3 external storage integration.',
+    metaKeywords: 'agent privacy, data storage, audio recording, privacy settings, AWS S3, external storage, data protection'
+  },
+  
   // Phone System (both phone/ and phone-system/ paths)
   '/phone/add-sip-provider': {
     metaTitle: 'Add SIP Provider - Configure Telephony | iMash Docs',

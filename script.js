@@ -434,6 +434,7 @@ function updateSidebarForTab(route) {
             <li><a data-href="/agents/agent-tools" class="nav-link ${route === '/agents/agent-tools' ? 'active' : ''}">Agent Tools</a></li>
             <li><a data-href="/agents/agent-knowledge-base" class="nav-link ${route === '/agents/agent-knowledge-base' ? 'active' : ''}">Agent Knowledge Base</a></li>
             <li><a data-href="/agents/agent-mcp" class="nav-link ${route === '/agents/agent-mcp' ? 'active' : ''}">Agent MCP</a></li>
+            <li><a data-href="/agents/agent-privacy" class="nav-link ${route === '/agents/agent-privacy' ? 'active' : ''}">Agent Privacy</a></li>
           </ul>
         </div>
 
@@ -1552,6 +1553,7 @@ function updateMobileMenuContent() {
           <li><a data-href="/agents/agent-tools" class="nav-link">Agent Tools</a></li>
           <li><a data-href="/agents/agent-knowledge-base" class="nav-link">Agent Knowledge Base</a></li>
           <li><a data-href="/agents/agent-mcp" class="nav-link">Agent MCP</a></li>
+          <li><a data-href="/agents/agent-privacy" class="nav-link">Agent Privacy</a></li>
         </ul>
       </div>
       
@@ -1868,10 +1870,12 @@ async function loadDynamicContent(route) {
     '/agents/create-agent': `${basePath}/agents/create-agent.json`,
     '/agents/agent-settings': `${basePath}/agents/agent-settings.json`,
     '/agents/voice-configuration': `${basePath}/agents/voice-configuration.json`,
+    '/agents/test-agent': `${basePath}/agents/test-your-agent.json`,
     '/agents/test-your-agent': `${basePath}/agents/test-your-agent.json`,
     '/agents/agent-tools': `${basePath}/agents/agent-tools.json`,
     '/agents/agent-knowledge-base': `${basePath}/agents/agent-knowledge-base.json`,
     '/agents/agent-mcp': `${basePath}/agents/agent-mcp.json`,
+    '/agents/agent-privacy': `${basePath}/agents/agent-privacy.json`,
     '/phone/add-sip-provider': `${basePath}/phone/add-sip-provider.json`,
     '/phone/add-phone-number': `${basePath}/phone/add-phone-number.json`,
     '/phone/call-routing': `${basePath}/phone/call-routing.json`,

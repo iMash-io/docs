@@ -1,33 +1,48 @@
 {
-  "title": "Test Your Agent",
-  "lede": "Learn how to test your AI agent through the dashboard interface and API calls.",
-  "sections": [
+  "title": "How To Test Your AI Agent in iMash",
+  "lede": "This guide explains how to test your AI agent in Imash, either directly through the Agent Builder or by making a demo phone call to ensure everything is working correctly.",
+  "timeToComplete": "3 minutes",
+  "videoUrl": "https://youtu.be/_Baz0eFGyLI",
+  "steps": [
     {
-      "id": "dashboard-testing",
-      "title": "Dashboard Testing",
-      "content": "<p>Test your agent directly from the iMash dashboard with built-in testing tools.</p><h3>Testing Options:</h3><ul><li><strong>Quick Test:</strong> Immediate conversation simulation</li><li><strong>Phone Call Test:</strong> Make real test calls to any number</li><li><strong>Flow Testing:</strong> Test specific conversation paths</li><li><strong>Voice Preview:</strong> Listen to agent voice samples</li></ul>"
+      "id": "test-in-builder",
+      "title": "Test in Agent Builder",
+      "content": "<ol><li>Open the <strong>AI Agent Builder</strong> for a new or existing agent.</li><li>Locate the <strong>Test Agent Window</strong>.</li><li>Click <strong>Connect</strong> to start a test conversation with your agent.</li><li>If the <strong>Test Agent Window</strong> is hidden, click on <strong>Test Agent</strong> first to reveal it.</li><li>Begin speaking with the agent to confirm that configuration and conversation flow are working properly.</li></ol>",
+      "images": []
     },
     {
-      "id": "api-testing",
-      "title": "API Testing",
-      "content": "<p>Test your agent programmatically through API endpoints.</p><h3>Test Endpoints:</h3><ul><li><strong>Start Call:</strong> Initiate test calls via API</li><li><strong>Conversation:</strong> Send text messages to test responses</li><li><strong>Webhooks:</strong> Test event notifications</li></ul>"
+      "id": "test-with-phone",
+      "title": "Test with a Phone Call",
+      "content": "<ol><li>From any window locate the <strong>Phone button</strong> at the top right.</li><li>Select which telephone number to call from.</li><li>Select the agent you want to test.</li><li>Call yourself.</li><li>Start the call and have a live conversation with the agent to verify it functions correctly in a real phone call scenario.</li></ol>",
+      "images": []
     }
   ],
-  "images": [
-    {
-      "src": "images/agent-testing-light.png",
-      "alt": "Agent Testing Interface",
-      "caption": "The agent testing dashboard with various testing options",
-      "theme": "light"
-    },
-    {
-      "src": "images/agent-testing-dark.png",
-      "alt": "Agent Testing Interface",
-      "caption": "The agent testing dashboard with various testing options",
-      "theme": "dark"
-    }
-  ],
-  "metaTitle": "Test Your Agent - Validate AI Performance | iMash Docs",
-  "metaDescription": "Test your AI agents with phone calls and simulations. Debug conversations and validate agent behavior before deployment.",
-  "metaKeywords": "test agent, debugging, simulation, agent testing, call testing, conversation validation, QA testing"
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "After testing your agent, you can expand its capabilities:",
+    "cards": [
+      {
+        "href": "/agents/tools",
+        "title": "Add Tools to Your Agent",
+        "description": "Enhance your agent with predefined or custom tools for added functionality."
+      },
+      {
+        "href": "/agents/knowledge-base",
+        "title": "Configure a Knowledge Base",
+        "description": "Upload documents and FAQs to give your agent context-specific knowledge."
+      },
+      {
+        "href": "/agents/mcp-servers",
+        "title": "Use MCP Servers",
+        "description": "Bundle flows and tools into an MCP server and connect them to your agent."
+      }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a> for detailed documentation</li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a> for step-by-step guides</li></ul>"
+  },
+  "metaTitle": "Test Your AI Agent in iMash",
+  "metaDescription": "Learn how to test your AI agent in iMash using the Agent Builder test window or by making a demo phone call. Step-by-step instructions to confirm setup and functionality.",
+  "metaKeywords": "test agent, imash tutorial, ai agent setup, demo call, agent builder"
 }
