@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Auraline — Live Psychic & Wellness Sessions</title>
+  <script src="https://unpkg.com/livekit-client@2.15.5/dist/livekit-client.umd.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-wrapper">
+    <div class="bg-orbs">
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+      <div class="orb orb3"></div>
+    </div>
+    <div class="stars"></div>
+  </div>
+
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="brand-icon">🔮</div>
+        <div class="brand-text">
+          <h1>Auraline</h1>
+          <p>Premium Psychic & Wellness Sessions</p>
+        </div>
+      </div>
+      <div class="status-badge" id="statusBadge">
+        <span class="status-dot"></span>
+        <span id="statusText">Offline</span>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <div class="video-section">
+        <div class="session-header">
+          <div class="live-indicator" id="liveIndicator" style="display: none;">Live Session</div>
+          <div class="session-timer" id="sessionTimer"></div>
+        </div>
+
+        <div class="video-container">
+          <div class="video-panel advisor">
+            <div class="video-label"><span>👁️</span><span>Advisor</span></div>
+            <div class="video-placeholder" id="advisorPlaceholder">
+              <div class="video-placeholder-icon">🔮</div>
+              <span>Waiting for advisor...</span>
+            </div>
+            <div id="advisorVideo"></div>
+          </div>
+          
+          <div class="video-panel user">
+            <div class="video-label"><span>🌟</span><span>You</span></div>
+            <video id="localVideo" autoplay muted playsinline></video>
+            <div class="video-placeholder" id="userPlaceholder" style="display: none;">
+              <div class="video-placeholder-icon">👤</div>
+              <span>Camera off</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Session Options -->
+        <div class="session-options">
+          <div class="session-type-selector">
+            <div class="session-type active" data-type="psychic">
+              <div class="session-type-icon">🔮</div>
+              <div class="session-type-name">Psychic Reading</div>
+              <div class="session-type-desc">Intuitive guidance</div>
+            </div>
+            <div class="session-type" data-type="tarot">
+              <div class="session-type-icon">🃏</div>
+              <div class="session-type-name">Tarot Cards</div>
+              <div class="session-type-desc">Card divination</div>
+            </div>
+            <div class="session-type" data-type="energy">
+              <div class="session-type-icon">✨</div>
+              <div class="session-type-name">Energy Healing</div>
+              <div class="session-type-desc">Chakra balance</div>
+            </div>
+            <div class="session-type" data-type="meditation">
+              <div class="session-type-icon">🧘</div>
+              <div class="session-type-name">Meditation</div>
+              <div class="session-type-desc">Guided peace</div>
+            </div>
+          </div>
+          <div class="session-stats">
+            <div class="stat-item">
+              <span class="stat-icon">👥</span>
+              <span class="stat-value">1,247</span>
+              <span class="stat-label">online now</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-icon">⚡</span>
+              <span class="stat-value">98%</span>
+              <span class="stat-label">satisfaction</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-icon">🌍</span>
+              <span class="stat-value">47</span>
+              <span class="stat-label">countries</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="controls-section">
+          <div class="connection-info">
+            <span class="connection-label">Session ID:</span>
+            <span class="room-id" id="roomId">Not connected</span>
+          </div>
+          <div class="control-buttons">
+            <button class="btn btn-primary" id="joinBtn"><span>✨</span><span>Join Session</span></button>
+            <button class="btn btn-danger" id="leaveBtn" disabled><span>Leave</span></button>
+            <button class="btn btn-ghost btn-icon" id="micBtn" disabled title="Toggle Microphone">🎤</button>
+            <button class="btn btn-ghost btn-icon" id="camBtn" disabled title="Toggle Camera">📹</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="advisor-panel">
+        <div class="advisor-header">
+          <div class="advisor-avatar"></div>
+          <div class="advisor-info">
+            <h2>Luna Hart</h2>
+            <div class="specialties">Psychic • Energy Healer • Life Coach</div>
+            <div class="rating"><span class="stars">★★★★★</span><span class="rating-count">(2,847 sessions)</span></div>
+          </div>
+        </div>
+
+        <div class="advisor-badges">
+          <span class="badge premium">Top Rated</span>
+          <span class="badge">Verified</span>
+          <span class="badge">15+ Years</span>
+        </div>
+
+        <div class="advisor-section">
+          <div class="section-title">About Luna</div>
+          <div class="advisor-bio">
+            With over 15 years of experience, Luna combines intuitive psychic abilities with practical life coaching techniques. She specializes in providing clarity during life's pivotal moments, helping you navigate relationships, career transitions, and spiritual growth with confidence and wisdom.
+          </div>
+        </div>
+
+        <div class="advisor-section">
+          <div class="section-title">Session Focus Areas</div>
+          <div class="focus-items">
+            <div class="focus-item">Love & Relationship Guidance</div>
+            <div class="focus-item">Career Path & Life Purpose</div>
+            <div class="focus-item">Energy Healing & Chakra Balancing</div>
+            <div class="focus-item">Mindfulness & Meditation Techniques</div>
+            <div class="focus-item">Spiritual Development & Awakening</div>
+          </div>
+        </div>
+
+        <div class="advisor-section">
+          <div class="section-title">Recent Reviews</div>
+          <div class="reviews">
+            <div class="review"><div class="review-header"><span class="review-author">Sarah M.</span><span class="review-rating">★★★★★</span></div><div class="review-text">"Luna's intuition is incredible. She picked up on things I hadn't even mentioned and gave me practical steps to move forward."</div></div>
+            <div class="review"><div class="review-header"><span class="review-author">Michael R.</span><span class="review-rating">★★★★★</span></div><div class="review-text">"The video quality was crystal clear, and Luna's energy came through beautifully. Life-changing session."</div></div>
+            <div class="review"><div class="review-header"><span class="review-author">Emma K.</span><span class="review-rating">★★★★★</span></div><div class="review-text">"Perfect blend of spiritual insight and practical advice. The connection was instant and powerful."</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">Investor Demo • Powered by iMash.io • © 2025 Auraline</div>
+  </div>
+
+  <!-- Bottom-right tiny internal toggles -->
+  <div class="fab-cluster">
+    <button id="providerToggle" class="fab provider" aria-label="toggle provider"></button>
+    <button id="voiceToggle" class="fab voice" aria-label="choose voice"><span class="abbr"></span></button>
+  </div>
+
+  <!-- Voice mini-menu (appears above the voice puck) -->
+  <div id="voiceMenu" class="mini-menu hidden" role="menu" aria-hidden="true">
+    <div class="mini-menu-header" id="voiceMenuHeader">Voices</div>
+    <div class="mini-menu-body" id="voiceMenuBody"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
