@@ -175,35 +175,61 @@ function updateTimer() {
   sessionTimer.textContent = `Session Time: ${m}:${s}`;
 }
 
-// --- Token fetching ---
+// --- Token fetching (INSECURE - FOR DEMO PURPOSES ONLY) ---
 async function fetchToken(roomName, participantName) {
-  // IMPORTANT: Token generation cannot be done securely on the client-side without exposing your API secret.
-  // This function is a placeholder. For this demo to work, you must generate a token
-  // manually from your LiveKit project dashboard (or use a server-side endpoint).
-  
-  const TOKEN = ""; // <-- PASTE A VALID, SHORT-LIVED LIVEKIT TOKEN HERE FOR TESTING
+  // WARNING: This method of generating a token is INSECURE and should ONLY be used for demos.
+  // It exposes your LiveKit API Secret in the client-side code.
+  // In a real application, this token should always be generated on a server.
 
-  if (!TOKEN) {
-    const message = "LiveKit token is missing. Please generate a token from your LiveKit project dashboard and paste it into the TOKEN constant in script.js";
-    alert(message);
-    throw new Error(message);
+  // Helper to encode a string/object to a Base64URL string.
+  function encode(d) {
+    const data = new TextEncoder().encode(JSON.stringify(d));
+    return btoa(String.fromCharCode(...new Uint8Array(data)))
+      .replace(/=/g, '')
+      .replace(/\+/g, '-')
+      .replace(/\//g, '_');
   }
+
+  const header = { alg: 'HS256', typ: 'JWT' };
+  const payload = {
+    exp: Math.floor(Date.now() / 1000) + (10 * 60), // Token is valid for 10 minutes
+    nbf: Math.floor(Date.now() / 1000) - 60, // Not before 60 seconds ago
+    iss: LK_API_KEY,
+    sub: participantName,
+    name: participantName,
+    video: {
+      room: roomName,
+      roomJoin: true,
+      canPublish: true,
+      canSubscribe: true,
+      canPublishData: true,
+    },
+  };
+
+  const encodedHeader = encode(header);
+  const encodedPayload = encode(payload);
   
-  // In a real application, you would fetch this from a server endpoint:
-  /*
-  const response = await fetch('https://your-token-server.com/token', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ roomName, participantName }),
-  });
-  if (!response.ok) {
-    throw new Error('Failed to fetch token');
-  }
-  const data = await response.json();
-  return data.token;
-  */
-  
-  return TOKEN;
+  const key = await crypto.subtle.importKey(
+    'raw',
+    new TextEncoder().encode(LK_API_SECRET),
+    { name: 'HMAC', hash: 'SHA-256' },
+    false,
+    ['sign']
+  );
+
+  const signature = await crypto.subtle.sign(
+    'HMAC',
+    key,
+    new TextEncoder().encode(`${encodedHeader}.${encodedPayload}`)
+  );
+
+  // Helper to encode an ArrayBuffer to a Base64URL string.
+  const encodedSignature = btoa(String.fromCharCode(...new Uint8Array(signature)))
+    .replace(/=/g, '')
+    .replace(/\+/g, '-')
+    .replace(/\//g, '_');
+
+  return `${encodedHeader}.${encodedPayload}.${encodedSignature}`;
 }
 
 // --- Local preview with better cleanup ---
