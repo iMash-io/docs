@@ -1867,7 +1867,7 @@ async function loadDynamicContent(route) {
     '/get-started/quick-start': `${basePath}/get-started/quick-start.json`,
     '/get-started/dashboard-overview': `${basePath}/get-started/dashboard-overview.json`,
     '/get-started/api-keys': `${basePath}/get-started/api-keys.json`,
-    '/agents/create-agent': `${basePath}/agents/create-agent.json`,
+    '/agents/create-agent': `${basePath}/get-started/quick-start.json`,
     '/agents/agent-settings': `${basePath}/agents/agent-settings.json`,
     '/agents/voice-configuration': `${basePath}/agents/voice-configuration.json`,
     '/agents/test-agent': `${basePath}/agents/test-your-agent.json`,
