@@ -1,33 +1,54 @@
 {
-  "title": "Voice Configuration",
-  "lede": "Configure voice settings, providers, and speech parameters for your AI agents.",
-  "sections": [
+  "title": "Configure Voice Providers for Voice AI Agents in iMash",
+  "lede": "This guide explains how to configure and choose different voice providers for your Voice AI Agent in iMash, including built-in voices with real-time models and premium third-party providers such as 11 Labs.",
+  "timeToComplete": "5 minutes",
+  "videoUrl": "https://youtu.be/C3Rkclp_KKQ",
+  "steps": [
     {
-      "id": "voice-providers",
-      "title": "Voice Providers",
-      "content": "<p>Choose from multiple voice providers to find the perfect voice for your agent.</p><h3>Supported Providers:</h3><ul><li><strong>OpenAI:</strong> Natural-sounding voices with multiple models</li><li><strong>ElevenLabs:</strong> High-quality cloned and synthetic voices</li><li><strong>Azure:</strong> Microsoft's neural voice technology</li><li><strong>Google:</strong> WaveNet and Neural2 voices</li></ul>"
+      "id": "choose-model",
+      "title": "Choose a Model Type",
+      "content": "<ol><li>Go to any of your agents in the <strong>AI Agents</strong> tab.</li><li>Select a model type. There are two options:<ul><li><strong>Real-Time Models</strong>: Come with built-in voices that are included free of charge.</li><li><strong>LLM Models</strong>: Require you to choose an external voice provider (e.g., 11 Labs, Google, Cortesia, OpenAI).</li></ul></li></ol>",
+      "images": []
     },
     {
-      "id": "speech-settings",
-      "title": "Speech Parameters",
-      "content": "<p>Fine-tune how your agent speaks with these parameters:</p><ul><li><strong>Speed:</strong> Control speaking pace</li><li><strong>Pitch:</strong> Adjust voice tone</li><li><strong>Stability:</strong> Balance consistency vs. expressiveness</li><li><strong>Similarity:</strong> Voice similarity enhancement</li></ul>"
-    }
-  ],
-  "images": [
-    {
-      "src": "images/voice-config-light.png",
-      "alt": "Voice Configuration Panel",
-      "caption": "Voice provider and parameter settings",
-      "theme": "light"
+      "id": "select-voice",
+      "title": "Select a Voice Provider",
+      "content": "<ol><li>Preview available voices from different providers using the demo play buttons.</li><li>Evaluate quality, style, and cost. <br>For example:<ul><li><strong>Google Real-Time</strong>: Native voices included with the model.</li><li><strong>11 Labs</strong>: High-quality, natural voices but more expensive.</li><li><strong>Cortesia / OpenAI</strong>: Additional alternatives.</li></ul></li><li>Click the checkmark next to your preferred voice to apply it.</li></ol>",
+      "images": []
     },
     {
-      "src": "images/voice-config-dark.png",
-      "alt": "Voice Configuration Panel",
-      "caption": "Voice provider and parameter settings",
-      "theme": "dark"
+      "id": "configure-parameters",
+      "title": "Configure Voice Parameters",
+      "content": "<ul><li>Some providers (e.g., 11 Labs) allow extra parameters:</li><ul><li><strong>Gender</strong>: male or female.</li><li><strong>Accent</strong>: regional voice variations.</li><li><strong>Age</strong>: adjust perceived speaker age.</li></ul><li>Set these options according to your desired voice profile.</li></ul>",
+      "images": []
     }
   ],
-  "metaTitle": "Voice Configuration - Set Up AI Voice Settings | iMash Docs",
-  "metaDescription": "Configure voice providers, models, and speech settings for your AI agents. Support for OpenAI, ElevenLabs, and more.",
-  "metaKeywords": "voice configuration, TTS, text-to-speech, voice models, OpenAI voices, ElevenLabs, speech synthesis"
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "After configuring voice settings, continue improving your agent:",
+    "cards": [
+      {
+        "href": "/agents/basic-settings",
+        "title": "Review Basic Settings",
+        "description": "Adjust conversation limits, idle messages, and voicemail handling."
+      },
+      {
+        "href": "/agents/tools",
+        "title": "Add Tools to Your Agent",
+        "description": "Enhance your agent with features like calendars, custom APIs, and call-ending automation."
+      },
+      {
+        "href": "/agents/knowledge-base",
+        "title": "Add a Knowledge Base",
+        "description": "Upload FAQs and support files to give your agent accurate information."
+      }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a> for detailed documentation</li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a> for step-by-step guides</li></ul>"
+  },
+  "metaTitle": "Configure Voice Providers for Voice AI Agents in iMash",
+  "metaDescription": "Learn how to configure and choose voices for your Voice AI Agent in iMash, including built-in real-time voices and premium providers like 11 Labs.",
+  "metaKeywords": "voice configuration, imash tutorial, voice ai agent, 11 labs, google voices, cortesia, openai voices"
 }
