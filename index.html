@@ -496,82 +496,8 @@
         <h1>Video Tutorials</h1>
         <p class="lede">Learn how to use iMash with step-by-step video guides.</p>
 
-        <h2>Getting Started</h2>
-        <div class="card-grid">
-          <div class="card">
-            <div style="background: #f0f0f0; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; border-radius: 0.5rem; margin-bottom: 1rem;">
-              <span style="color: #888;">🎬 Video Placeholder</span>
-            </div>
-            <div class="card-title">Introduction to iMash</div>
-            <div class="card-desc">5 min • Learn the basics of the platform</div>
-          </div>
-          <div class="card">
-            <div style="background: #f0f0f0; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; border-radius: 0.5rem; margin-bottom: 1rem;">
-              <span style="color: #888;">🎬 Video Placeholder</span>
-            </div>
-            <div class="card-title">Your First API Call</div>
-            <div class="card-desc">3 min • Quick start with the API</div>
-          </div>
-        </div>
-
-        <h2>Building Agents</h2>
-        <div class="card-grid">
-          <div class="card">
-            <div style="background: #f0f0f0; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; border-radius: 0.5rem; margin-bottom: 1rem;">
-              <span style="color: #888;">🎬 Video Placeholder</span>
-            </div>
-            <div class="card-title">Creating Smart Flows</div>
-            <div class="card-desc">8 min • Build conversational flows</div>
-          </div>
-          <div class="card">
-            <div style="background: #f0f0f0; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; border-radius: 0.5rem; margin-bottom: 1rem;">
-              <span style="color: #888;">🎬 Video Placeholder</span>
-            </div>
-            <div class="card-title">Voice Configuration</div>
-            <div class="card-desc">6 min • Set up voice agents</div>
-          </div>
-        </div>
-
-        <h2>API Deep Dive</h2>
-        <div class="card-grid">
-          <div class="card">
-            <div style="background: #f0f0f0; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; border-radius: 0.5rem; margin-bottom: 1rem;">
-              <span style="color: #888;">🎬 Video Placeholder</span>
-            </div>
-            <div class="card-title">CRUD Operations</div>
-            <div class="card-desc">10 min • Master all operations</div>
-          </div>
-          <div class="card">
-            <div style="background: #f0f0f0; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; border-radius: 0.5rem; margin-bottom: 1rem;">
-              <span style="color: #888;">🎬 Video Placeholder</span>
-            </div>
-            <div class="card-title">Webhooks & Events</div>
-            <div class="card-desc">7 min • Real-time integrations</div>
-          </div>
-        </div>
-
-        <h2>Advanced Topics</h2>
-        <div class="card-grid">
-          <div class="card">
-            <div style="background: #f0f0f0; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; border-radius: 0.5rem; margin-bottom: 1rem;">
-              <span style="color: #888;">🎬 Video Placeholder</span>
-            </div>
-            <div class="card-title">Campaign Management</div>
-            <div class="card-desc">12 min • Automate outreach</div>
-          </div>
-          <div class="card">
-            <div style="background: #f0f0f0; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; border-radius: 0.5rem; margin-bottom: 1rem;">
-              <span style="color: #888;">🎬 Video Placeholder</span>
-            </div>
-            <div class="card-title">Analytics & Reporting</div>
-            <div class="card-desc">9 min • Track performance</div>
-          </div>
-        </div>
-
-        <div style="margin-top: 3rem; padding: 2rem; background: rgba(59, 130, 246, 0.1); border-radius: 0.75rem;">
-          <h3 style="margin-top: 0;">📺 Coming Soon</h3>
-          <p>We're creating more video tutorials to help you get the most out of iMash. Subscribe to our YouTube channel to get notified when new videos are available!</p>
-          <a href="https://youtube.com/@imash" target="_blank" class="btn-primary" style="display: inline-block; margin-top: 1rem;">Subscribe on YouTube →</a>
+        <div id="videos-content">
+          <!-- Videos will be dynamically loaded here -->
         </div>
       </section>
     </main>
@@ -595,6 +521,21 @@
       <div class="powered">Powered by iMash</div>
     </div>
   </footer>
+
+  <!-- Video Popup Modal -->
+  <div id="video-modal" class="video-modal">
+    <div class="video-modal-content">
+      <div class="video-modal-header">
+        <h3 id="video-modal-title">Video Title</h3>
+        <button class="video-modal-close" id="video-modal-close">&times;</button>
+      </div>
+      <div class="video-modal-body">
+        <div class="video-modal-container">
+          <iframe id="video-modal-iframe" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>

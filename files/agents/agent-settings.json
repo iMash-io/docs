@@ -3,6 +3,7 @@
   "lede": "This guide covers the basic settings available for AI agents in Imash, including conversation length, idle messages, voicemail options, and features that improve natural conversation flow.",
   "timeToComplete": "8 minutes",
   "videoUrl": "https://youtu.be/7C-N_RWwPFI", 
+  "videoLength": "5", 
   "steps": [
     {
       "id": "access-settings",

@@ -375,26 +375,15 @@ function updateSidebarForTab(route) {
       }
     }, 100);
   } else if (route === '/videos') {
-    // Videos tab - show video sidebar, hide TOC
+    // Videos tab - show video sidebar, hide TOC, load videos
     if (sidebar) {
       if (!isMobile) {
         sidebar.style.display = 'block';
       }
       // On mobile, sidebar is hidden by CSS - don't override
       
-      sidebar.innerHTML = `
-      <div class="sidebar-inner">
-        <div class="sidebar-group">
-          <div class="sidebar-group-title">Video Tutorials</div>
-          <ul>
-            <li><a href="#" class="nav-link">Getting Started</a></li>
-            <li><a href="#" class="nav-link">Building Agents</a></li>
-            <li><a href="#" class="nav-link">API Deep Dive</a></li>
-            <li><a href="#" class="nav-link">Advanced Topics</a></li>
-          </ul>
-        </div>
-      </div>
-    `;
+      // Load video categories dynamically
+      loadVideoSidebar();
     }
     if (toc) {
       if (!isMobile) {
@@ -402,6 +391,9 @@ function updateSidebarForTab(route) {
       }
       // On mobile, let CSS handle it - don't override
     }
+    
+    // Load video content
+    loadVideoContent();
   } else {
     // Documentation tab - show regular sidebar and TOC
     if (sidebar) {
@@ -1825,6 +1817,23 @@ function setupEventListeners() {
       updateSidebarForTab(currentPage);
     }, 250);
   });
+
+  // Video modal event listeners
+  document.getElementById('video-modal-close')?.addEventListener('click', closeVideoModal);
+  
+  // Close modal when clicking outside content
+  document.getElementById('video-modal')?.addEventListener('click', (e) => {
+    if (e.target.id === 'video-modal') {
+      closeVideoModal();
+    }
+  });
+  
+  // Close modal with Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeVideoModal();
+    }
+  });
 }
 
 // Update origin placeholders
@@ -2204,6 +2213,247 @@ function updateMetaForRoute(route) {
       updatePageMeta(meta);
     }
   }
+}
+
+// Video Page Functions
+async function loadVideoContent() {
+  const videosContainer = document.getElementById('videos-content');
+  if (!videosContainer) return;
+
+  // Get all guides with video URLs
+  const videoGuides = await getVideoGuides();
+  
+  if (videoGuides.length === 0) {
+    videosContainer.innerHTML = '<p>No video tutorials available yet.</p>';
+    return;
+  }
+
+  // Group videos by category
+  const categories = {
+    'Getting Started': [],
+    'Agent Configuration': [],
+    'Advanced Features': []
+  };
+
+  videoGuides.forEach(guide => {
+    if (guide.route.startsWith('/get-started/')) {
+      categories['Getting Started'].push(guide);
+    } else if (guide.route.startsWith('/agents/')) {
+      categories['Agent Configuration'].push(guide);
+    } else {
+      categories['Advanced Features'].push(guide);
+    }
+  });
+
+  // Render video cards by category
+  let html = '';
+  Object.entries(categories).forEach(([category, videos]) => {
+    if (videos.length > 0) {
+      html += `<h2>${category}</h2>`;
+      html += '<div class="card-grid">';
+      videos.forEach(video => {
+        html += createVideoCard(video);
+      });
+      html += '</div>';
+    }
+  });
+
+  videosContainer.innerHTML = html;
+
+  // Add click handlers for video cards
+  videosContainer.querySelectorAll('.video-card').forEach(card => {
+    card.addEventListener('click', (e) => {
+      e.preventDefault();
+      const videoUrl = card.getAttribute('data-video-url');
+      const title = card.getAttribute('data-title');
+      openVideoModal(videoUrl, title);
+    });
+  });
+}
+
+async function getVideoGuides() {
+  const videoGuides = [];
+  
+  // Define all guides that might have videos
+  const guideRoutes = [
+    '/get-started/quick-start',
+    '/agents/test-agent',
+    '/agents/agent-privacy',
+    '/agents/agent-tools',
+    '/agents/agent-knowledge-base',
+    '/agents/agent-mcp',
+    '/agents/voice-configuration',
+    '/agents/agent-settings'
+  ];
+
+  // Load each guide and check for video URL
+  for (const route of guideRoutes) {
+    try {
+      const basePath = getBasePath();
+      const contentMap = {
+        '/get-started/quick-start': `${basePath}/get-started/quick-start.json`,
+        '/agents/test-agent': `${basePath}/agents/test-your-agent.json`,
+        '/agents/agent-privacy': `${basePath}/agents/agent-privacy.json`,
+        '/agents/agent-tools': `${basePath}/agents/agent-tools.json`,
+        '/agents/agent-knowledge-base': `${basePath}/agents/agent-knowledge-base.json`,
+        '/agents/agent-mcp': `${basePath}/agents/agent-mcp.json`,
+        '/agents/voice-configuration': `${basePath}/agents/voice-configuration.json`,
+        '/agents/agent-settings': `${basePath}/agents/agent-settings.json`
+      };
+
+      const jsonPath = contentMap[route];
+      if (jsonPath) {
+        const response = await fetch(jsonPath);
+        if (response.ok) {
+          const content = await response.json();
+          if (content.videoUrl) {
+            videoGuides.push({
+              route,
+              title: content.title,
+              lede: content.lede,
+              videoUrl: content.videoUrl,
+              timeToComplete: content.timeToComplete,
+              videoLength: content.videoLength
+            });
+          }
+        }
+      }
+    } catch (error) {
+      console.log(`Could not load ${route}:`, error);
+    }
+  }
+
+  return videoGuides;
+}
+
+function createVideoCard(video) {
+  const videoId = extractVideoId(video.videoUrl);
+  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+  
+  // Limit description to 100 characters and add ellipsis if longer
+  const description = video.lede && video.lede.length > 100 
+    ? video.lede.substring(0, 100) + '...' 
+    : video.lede;
+  
+  return `
+    <div class="video-card" data-video-url="${video.videoUrl}" data-title="${video.title}">
+      <div class="video-card-thumbnail">
+        <img src="${thumbnailUrl}" alt="${video.title}" onerror="this.src='https://img.youtube.com/vi/${videoId}/hqdefault.jpg'">
+        <div class="video-card-play-button">▶</div>
+      </div>
+      <div class="video-card-content">
+        <div class="video-card-title">${video.title}</div>
+        <div class="video-card-description">${description}</div>
+        <div class="video-card-meta">
+          ${video.videoLength ? `<span class="video-card-duration">${video.videoLength} min</span>` : ''}
+          <span>Watch Tutorial</span>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function extractVideoId(url) {
+  if (url.includes('youtu.be/')) {
+    return url.split('youtu.be/')[1].split('?')[0];
+  } else if (url.includes('youtube.com/watch?v=')) {
+    return url.split('v=')[1].split('&')[0];
+  }
+  return '';
+}
+
+function getBasePath() {
+  const currentPath = window.location.pathname;
+  const currentHost = window.location.host;
+  
+  if (currentPath.includes('/APP/docs/')) {
+    return 'APP/docs/files';
+  } else if (currentHost.includes('127.0.0.1') || currentHost.includes('localhost')) {
+    return '/files';
+  } else {
+    return '/files';
+  }
+}
+
+async function loadVideoSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  if (!sidebar) return;
+
+  const videoGuides = await getVideoGuides();
+  
+  // Group by category for sidebar
+  const categories = {
+    'Getting Started': videoGuides.filter(v => v.route.startsWith('/get-started/')),
+    'Agent Setup': videoGuides.filter(v => v.route.startsWith('/agents/'))
+  };
+
+  let sidebarHtml = '<div class="sidebar-inner">';
+  
+  Object.entries(categories).forEach(([category, videos]) => {
+    if (videos.length > 0) {
+      sidebarHtml += `
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">${category}</div>
+          <ul>`;
+      
+      videos.forEach(video => {
+        sidebarHtml += `<li><a href="#" class="nav-link video-sidebar-link" data-video-url="${video.videoUrl}" data-title="${video.title}">${video.title.replace('Guide - ', '').replace('How To ', '')}</a></li>`;
+      });
+      
+      sidebarHtml += '</ul></div>';
+    }
+  });
+  
+  sidebarHtml += '</div>';
+  sidebar.innerHTML = sidebarHtml;
+
+  // Add click handlers for sidebar video links
+  sidebar.querySelectorAll('.video-sidebar-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const videoUrl = link.getAttribute('data-video-url');
+      const title = link.getAttribute('data-title');
+      openVideoModal(videoUrl, title);
+    });
+  });
+}
+
+function openVideoModal(videoUrl, title) {
+  const modal = document.getElementById('video-modal');
+  const iframe = document.getElementById('video-modal-iframe');
+  const titleElement = document.getElementById('video-modal-title');
+  
+  if (!modal || !iframe || !titleElement) return;
+
+  // Convert to embed URL
+  let embedUrl = videoUrl;
+  if (embedUrl.includes('youtu.be/')) {
+    const videoId = embedUrl.split('youtu.be/')[1].split('?')[0];
+    embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+  } else if (embedUrl.includes('youtube.com/watch?v=')) {
+    const videoId = embedUrl.split('v=')[1].split('&')[0];
+    embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+  }
+
+  titleElement.textContent = title;
+  iframe.src = embedUrl;
+  modal.classList.add('active');
+  
+  // Prevent body scrolling
+  document.body.style.overflow = 'hidden';
+}
+
+function closeVideoModal() {
+  const modal = document.getElementById('video-modal');
+  const iframe = document.getElementById('video-modal-iframe');
+  
+  if (!modal || !iframe) return;
+  
+  modal.classList.remove('active');
+  iframe.src = '';
+  
+  // Restore body scrolling
+  document.body.style.overflow = '';
 }
 
 // Make it globally available

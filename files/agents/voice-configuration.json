@@ -3,6 +3,7 @@
   "lede": "This guide explains how to configure and choose different voice providers for your Voice AI Agent in iMash, including built-in voices with real-time models and premium third-party providers such as 11 Labs.",
   "timeToComplete": "5 minutes",
   "videoUrl": "https://youtu.be/C3Rkclp_KKQ",
+  "videoLength": "2",
   "steps": [
     {
       "id": "choose-model",
