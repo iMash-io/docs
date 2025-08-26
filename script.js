@@ -427,6 +427,7 @@ function updateSidebarForTab(route) {
             <li><a data-href="/agents/agent-knowledge-base" class="nav-link ${route === '/agents/agent-knowledge-base' ? 'active' : ''}">Agent Knowledge Base</a></li>
             <li><a data-href="/agents/agent-mcp" class="nav-link ${route === '/agents/agent-mcp' ? 'active' : ''}">Agent MCP</a></li>
             <li><a data-href="/agents/agent-privacy" class="nav-link ${route === '/agents/agent-privacy' ? 'active' : ''}">Agent Privacy</a></li>
+            <li><a data-href="/agents/costum-variables" class="nav-link ${route === '/agents/costum-variables' ? 'active' : ''}">Custom Variables</a></li>
           </ul>
         </div>
 
@@ -1546,6 +1547,7 @@ function updateMobileMenuContent() {
           <li><a data-href="/agents/agent-knowledge-base" class="nav-link">Agent Knowledge Base</a></li>
           <li><a data-href="/agents/agent-mcp" class="nav-link">Agent MCP</a></li>
           <li><a data-href="/agents/agent-privacy" class="nav-link">Agent Privacy</a></li>
+          <li><a data-href="/agents/costum-variables" class="nav-link">Custom Variables</a></li>
         </ul>
       </div>
       
@@ -1885,6 +1887,7 @@ async function loadDynamicContent(route) {
     '/agents/agent-knowledge-base': `${basePath}/agents/agent-knowledge-base.json`,
     '/agents/agent-mcp': `${basePath}/agents/agent-mcp.json`,
     '/agents/agent-privacy': `${basePath}/agents/agent-privacy.json`,
+    '/agents/costum-variables': `${basePath}/agents/costum-variables.json`,
     '/phone/add-sip-provider': `${basePath}/phone/add-sip-provider.json`,
     '/phone/add-phone-number': `${basePath}/phone/add-phone-number.json`,
     '/phone/call-routing': `${basePath}/phone/call-routing.json`,
@@ -2283,7 +2286,8 @@ async function getVideoGuides() {
     '/agents/agent-knowledge-base',
     '/agents/agent-mcp',
     '/agents/voice-configuration',
-    '/agents/agent-settings'
+    '/agents/agent-settings',
+    '/agents/costum-variables'
   ];
 
   // Load each guide and check for video URL
@@ -2298,7 +2302,8 @@ async function getVideoGuides() {
         '/agents/agent-knowledge-base': `${basePath}/agents/agent-knowledge-base.json`,
         '/agents/agent-mcp': `${basePath}/agents/agent-mcp.json`,
         '/agents/voice-configuration': `${basePath}/agents/voice-configuration.json`,
-        '/agents/agent-settings': `${basePath}/agents/agent-settings.json`
+        '/agents/agent-settings': `${basePath}/agents/agent-settings.json`,
+        '/agents/costum-variables': `${basePath}/agents/costum-variables.json`
       };
 
       const jsonPath = contentMap[route];
