@@ -8,7 +8,7 @@
     {
       "id": "use-parameters",
       "title": "Use Parameters in Settings and Prompts",
-      "content": "<ol><li>Open any of your <strong>AI Agents</strong>.</li><li>Go to a text field such as <em>max idle message</em> or a prompt field.</li><li>Type an opening parenthesis <strong>(</strong> to see available parameter fields in a pop-up menu.</li><li>Choose a field to dynamically insert values (e.g., name, email, family name).</li></ol>",
+      "content": "<ol><li>Open any of your <strong>AI Agents</strong>.</li><li>Go to a text field such as <em>system prompt</em>.</li><li>Type an opening parenthesis <strong>{</strong> to see available parameter fields in a pop-up menu.</li><li>Choose a field to dynamically insert values (e.g., name, email, family name).</li></ol>",
       "images": []
     },
     {
@@ -20,7 +20,7 @@
     {
       "id": "api-custom-vars",
       "title": "Send Custom Variables via API",
-      "content": "<ol><li>Open the <strong>API Info</strong> window in your dashboard.</li><li>In the POST request, include <strong>customVars</strong> with key–value pairs (variable name and value).</li><li>Example: send custom data when initiating calls from an external CRM.</li><li>The agent will then receive and use this context dynamically during the call.</li></ol>",
+      "content": "<ol><li>Open the <strong>API Info</strong> window in your dashboard.</li><li>In the POST request, under metadata, include <strong>customVars</strong> with key–value pairs (variable name and value).</li><li>Example: send custom data when initiating calls from an external CRM.</li><li>The agent will then receive and use this context dynamically during the call.</li></ol>",
       "images": []
     }
   ],
