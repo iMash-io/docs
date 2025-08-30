@@ -428,6 +428,10 @@ function updateSidebarForTab(route) {
             <li><a data-href="/agents/agent-mcp" class="nav-link ${route === '/agents/agent-mcp' ? 'active' : ''}">Agent MCP</a></li>
             <li><a data-href="/agents/agent-privacy" class="nav-link ${route === '/agents/agent-privacy' ? 'active' : ''}">Agent Privacy</a></li>
             <li><a data-href="/agents/costum-variables" class="nav-link ${route === '/agents/costum-variables' ? 'active' : ''}">Custom Variables</a></li>
+              <li><a data-href="/agents/embed-agent" class="nav-link ${route === '/agents/embed-agent' ? 'active' : ''}">Embed Agent</a></li>
+                <li><a data-href="/agents/llm-settings" class="nav-link ${route === '/agents/llm-settings' ? 'active' : ''}">LLM Settings</a></li>
+                  <li><a data-href="/agents/observer-agent" class="nav-link ${route === '/agents/observer-agent' ? 'active' : ''}">Observer Agent</a></li>
+                    <li><a data-href="/agents/advanced-settings" class="nav-link ${route === '/agents/advanced-settings' ? 'active' : ''}">Advanced Settings</a></li>
           </ul>
         </div>
 
@@ -1548,6 +1552,10 @@ function updateMobileMenuContent() {
           <li><a data-href="/agents/agent-mcp" class="nav-link">Agent MCP</a></li>
           <li><a data-href="/agents/agent-privacy" class="nav-link">Agent Privacy</a></li>
           <li><a data-href="/agents/costum-variables" class="nav-link">Custom Variables</a></li>
+            <li><a data-href="/agents/embed-agent" class="nav-link">Embed Agent</a></li>
+              <li><a data-href="/agents/llm-settings" class="nav-link">LLM Settings</a></li>
+                <li><a data-href="/agents/observer-agent" class="nav-link">Observer Agent</a></li>
+                  <li><a data-href="/agents/advanced-settings" class="nav-link">Advanced Settings</a></li>
         </ul>
       </div>
       
@@ -1888,6 +1896,10 @@ async function loadDynamicContent(route) {
     '/agents/agent-mcp': `${basePath}/agents/agent-mcp.json`,
     '/agents/agent-privacy': `${basePath}/agents/agent-privacy.json`,
     '/agents/costum-variables': `${basePath}/agents/costum-variables.json`,
+    '/agents/embed-agent': `${basePath}/agents/embed-agent.json`,
+    '/agents/llm-settings': `${basePath}/agents/llm-settings.json`,
+    '/agents/observer-agent': `${basePath}/agents/observer-agent.json`,
+    '/agents/advanced-settings': `${basePath}/agents/advanced-settings.json`,
     '/phone/add-sip-provider': `${basePath}/phone/add-sip-provider.json`,
     '/phone/add-phone-number': `${basePath}/phone/add-phone-number.json`,
     '/phone/call-routing': `${basePath}/phone/call-routing.json`,

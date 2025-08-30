@@ -1,0 +1,61 @@
+{
+  "title": "Configure LLM and Real-Time Models for Voice AI Agents in iMash",
+  "lede": "This guide explains the difference between real-time and LLM models in iMash, how they handle speech and text, and how to configure the correct settings for your Voice AI Agent.",
+  "timeToComplete": "6 minutes",
+  "videoUrl": "https://youtu.be/bDy0w1hEz7I",
+  "videoLength": "2",
+  "steps": [
+    {
+      "id": "choose-model-type",
+      "title": "Choose a Model Type",
+      "content": "<p>When creating or editing an agent, you can select from two model types:</p><ul><li><strong>Real-Time Models</strong>: Handle audio input and output directly (speech-to-speech). No additional configuration is required.</li><li><strong>LLM Models</strong>: Process text input and output (speech-to-text-to-speech). These require an additional <em>Transcriber</em> tab to manage speech recognition and set the voice output through the voice configuration.</li></ul>",
+      "images": []
+    },
+    {
+      "id": "configure-llm",
+      "title": "Configure LLM Settings",
+      "content": "<ol><li>If you choose an <strong>LLM Model</strong>, a new <strong>Transcriber</strong> tab will appear.</li><li>In the Transcriber tab, configure:<ul><li><strong>Input Language</strong>: Select the language the model should recognise for transcription.</li><li><strong>Specialised Model Options</strong>: Choose models optimised for specific vocabularies or domains.</li></ul></li><li>The agent flow will be: Speech → Text → LLM Response → Voice Output.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "use-real-time-models",
+      "title": "Use Real-Time Models",
+      "content": "<ol><li>If you select a <strong>Real-Time Model</strong>, transcription and voice synthesis are handled automatically by the model.</li><li>The conversation flows directly from speech input to speech output, with no additional configuration tabs, but you can always choose a different voice for the model.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "experiment-settings",
+      "title": "Experiment with Settings",
+      "content": "<p>Test different model and transcriber configurations to determine which works best for your use case. Adjust the recognised language or choose specialised models for higher accuracy with industry-specific terms.</p>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "After configuring your models, continue enhancing your Voice AI Agent:",
+    "cards": [
+      {
+        "href": "/agents/voice-configuration",
+        "title": "Configure Voice Providers",
+        "description": "Select voices from providers like Google, 11 Labs, or OpenAI."
+      },
+      {
+        "href": "/agents/basic-settings",
+        "title": "Adjust Basic Settings",
+        "description": "Fine-tune response delays, idle messages, and conversation length."
+      },
+      {
+        "href": "/agents/knowledge-base",
+        "title": "Add a Knowledge Base",
+        "description": "Upload FAQs or documents so your agent can answer with accurate information."
+      }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a> for detailed documentation</li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a> for step-by-step guides</li></ul>"
+  },
+  "metaTitle": "Configure LLM and Real-Time Models for Voice AI Agents | iMash",
+  "metaDescription": "Learn the difference between LLM and real-time models in iMash. Step-by-step guide to configure transcriber settings, language options, and specialised models for your Voice AI Agent.",
+  "metaKeywords": "LLM settings, real-time models, imash tutorial, voice ai agent, transcriber, speech-to-text, text-to-speech"
+}

@@ -1,0 +1,67 @@
+{
+  "title": "Embed a Voice AI Agent into Your Website with iMash",
+  "lede": "This guide explains how to build a Voice AI Agent in iMash and embed it into your website as a widget or popup, with options for text, voice, and avatar-based interactions.",
+  "timeToComplete": "8 minutes",
+  "videoUrl": "https://youtu.be/3JS-ncMsZ7s",
+  "videoLength": "4",
+  "steps": [
+    {
+      "id": "create-agent",
+      "title": "Create a New Agent",
+      "content": "<ol><li>Navigate to <strong>AI Agents</strong> and click <strong>Create New Agent</strong>.</li><li>Replace the default prompt with a specialised prompt tailored to your product.</li><li>Optionally connect a <strong>Knowledge Base</strong> of FAQs for more accurate responses.</li><li>Select a model (e.g., Gemini) and choose a suitable voice provider.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "enable-widget",
+      "title": "Enable Website Widget",
+      "content": "<ol><li>In the agent configuration, enable the <strong>Website Widget</strong>.</li><li>Select the <strong>interaction type</strong>:<ul><li><strong>Text and Voice</strong> only</li><li><strong>Avatar</strong> (Avatar-only or side-by-side)</li></ul></li></ol>",
+      "images": []
+    },
+    {
+      "id": "design-settings",
+      "title": "Configure Widget Design",
+      "content": "<ul><li><strong>Theme</strong>: Choose light or dark mode.</li><li><strong>Display Mode</strong>:<ul><li><em>Widget</em>: Small window docked to a screen corner.</li><li><em>Popup</em>: Full modal in the centre of the screen.</li></ul></li><li><strong>Placement</strong>: Select bottom-right or copy the embed code for manual placement in your HTML.</li><li><strong>Behaviour</strong>: Choose whether the agent starts speaking automatically or waits until the widget is opened.</li></ul>",
+      "images": []
+    },
+    {
+      "id": "preview-widget",
+      "title": "Preview Widget",
+      "content": "<ol><li>After making changes, click <strong>Update Widget Preview</strong> to refresh the demo.</li><li>Test both widget and popup modes to see how they look.</li><li>Switch between voice-only and avatar options to preview different interaction styles.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "embed-agent",
+      "title": "Embed Agent into Website",
+      "content": "<ol><li>Copy the <strong>embed code</strong> provided in the widget settings.</li><li>Paste it into your website’s HTML where you want the agent to appear (e.g., landing page).</li><li>Reload your website to see the agent live.</li><li>Test by asking product questions and verifying the responses.</li></ol>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Once your Voice AI Agent is embedded, continue refining it:",
+    "cards": [
+      {
+        "href": "/agents/knowledge-base",
+        "title": "Add a Knowledge Base",
+        "description": "Upload FAQs and documents to give your agent more context."
+      },
+      {
+        "href": "/agents/tools",
+        "title": "Add Tools",
+        "description": "Enable scheduling, custom API calls, or call-ending features."
+      },
+      {
+        "href": "/agents/privacy-settings",
+        "title": "Configure Privacy",
+        "description": "Decide how to handle recordings, transcripts, and external storage."
+      }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a> for detailed documentation</li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a> for step-by-step guides</li></ul>"
+  },
+  "metaTitle": "Embed a Voice AI Agent into Your Website | iMash",
+  "metaDescription": "Learn how to build and embed a Voice AI Agent in iMash into your website. Configure widget design, preview modes, avatar options, and integrate it into your HTML.",
+  "metaKeywords": "embed voice ai agent, imash tutorial, website widget, popup agent, avatar agent, website integration"
+}
