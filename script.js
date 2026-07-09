@@ -537,16 +537,30 @@ function showPage(route) {
   if (page) {
     console.log('Adding active class to page:', page);
     page.classList.add('active');
-    
+
+    // Server-rendered content is matched directly by [data-route] here (it never
+    // enters the dynamic-content branch), so apply white-label branding to it now:
+    // normalize relative image srcs, swap iMash->brand text/email, and swap the
+    // screenshot logo variants.
+    if (page.id === 'dynamic-content') {
+      page.querySelectorAll('img').forEach(img => {
+        const raw = img.getAttribute('src') || '';
+        if (raw && !/^https?:\/\//.test(raw) && !raw.startsWith('/')) img.setAttribute('src', '/' + raw);
+      });
+      applyBrandText(page);
+      applyBrandEmail(page);
+      applyBrandImages(page);
+    }
+
     // Update navigation
     updateNavigation(route);
-    
+
     // Update sidebar based on tab
     updateSidebarForTab(route);
-    
+
     // Update TOC
     updateTOC();
-    
+
     // Scroll to top
     window.scrollTo(0, 0);
   } else {
