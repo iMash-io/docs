@@ -2020,7 +2020,9 @@ html.dark .image-container[data-theme="light"] { display: none; }
    doesn't let a screenshot overflow the content column. */
 .image-container { text-align: center; margin: 1.5rem 0; }
 .image-container img {
-  max-width: 100%;
+  /* Cap at 90% of the column but NEVER upscale past the image's natural size —
+     so a zoomed 320px screenshot stays 320px instead of stretching to fill. */
+  max-width: min(90%, 1200px);
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);

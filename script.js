@@ -2326,7 +2326,7 @@ function renderQuickstartContent(content) {
             imageSrc = `/${imageSrc}`;
           }
           html += `<div class="image-container ${image.theme || ''}" data-theme="${image.theme || 'both'}" style="text-align: center; margin: 1.5rem 0;">`;
-          html += `<img src="${imageSrc}" alt="${image.alt}" style="width: 90%; max-width: 1200px; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />`;
+          html += `<img src="${imageSrc}" alt="${image.alt}" style="max-width: min(90%, 1200px); height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />`;
           if (image.caption) {
             html += `<div class="image-caption" style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary); font-style: italic;">${image.caption}</div>`;
           }
