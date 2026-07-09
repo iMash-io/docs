@@ -2014,3 +2014,22 @@ code {
    duplicate. Default (no .dark on <html>) = light. */
 html:not(.dark) .image-container[data-theme="dark"] { display: none; }
 html.dark .image-container[data-theme="light"] { display: none; }
+
+/* Content screenshots. The client renderer sets an inline width/max-width, but
+   server-rendered images have none — constrain them here so a hard refresh
+   doesn't let a screenshot overflow the content column. */
+.image-container { text-align: center; margin: 1.5rem 0; }
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* White-label header logo: image logos (e.g. a square PNG) must fit the header
+   by HEIGHT, not the 200px width used for the wide iMash wordmark. */
+html[data-brand-logo="image"] .brand-icon-large {
+  width: auto;
+  height: 34px;
+  max-width: 200px;
+}

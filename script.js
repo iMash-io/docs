@@ -111,6 +111,7 @@ function applyBrandChrome() {
       if (DOCS_BRAND.noInvertLogo) img.style.filter = 'none';
     });
   }
+  if (DOCS_BRAND.noInvertLogo) document.documentElement.setAttribute('data-brand-logo', 'image');
   if (DOCS_BRAND.hideSocials) document.querySelectorAll('.socials').forEach(el => { el.style.display = 'none'; });
   applyBrandText(document.getElementById('footer'));
   applyBrandText(document.getElementById('page-introduction'));
