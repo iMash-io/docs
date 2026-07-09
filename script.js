@@ -91,8 +91,16 @@ function tr(s) {
 // touches the DISPLAY brand ("iMash" / "iMash.io"), never lowercase "imash.io"
 // inside URLs, emails or storage paths.
 // ---------------------------------------------------------------------------
-const DOCS_BRAND = (typeof window !== 'undefined' && window.__DOCS_BRAND__) ||
-  { id: 'imash', name: 'iMash', textReplace: false, hideSocials: false };
+const DOCS_BRAND = (function () {
+  // Read from the server-injected JSON block (CSP-safe; the docs CSP blocks
+  // inline <script> execution, so we can't rely on an inline window global).
+  try {
+    const el = document.getElementById('docs-brand');
+    if (el && el.textContent.trim()) return JSON.parse(el.textContent);
+  } catch (e) { /* fall through */ }
+  if (typeof window !== 'undefined' && window.__DOCS_BRAND__) return window.__DOCS_BRAND__; // local dev
+  return { id: 'imash', name: 'iMash', textReplace: false, hideSocials: false };
+})();
 function applyBrandText(root) {
   if (!DOCS_BRAND.textReplace || !root) return;
   const name = DOCS_BRAND.name;
@@ -116,6 +124,21 @@ function applyBrandImages(root) {
     const orig = src;
     img.addEventListener('error', function onerr() { img.removeEventListener('error', onerr); img.src = orig; }, { once: true });
     img.src = src.replace(/\.png$/i, '.sophia.png');
+  });
+}
+
+// Swap the support email (visible text + mailto: hrefs) for the brand's own.
+function applyBrandEmail(root) {
+  const em = DOCS_BRAND.supportEmail;
+  if (!root || !em || em === 'support@imash.io') return;
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  const nodes = [];
+  while (walker.nextNode()) {
+    if (walker.currentNode.nodeValue.indexOf('support@imash.io') !== -1) nodes.push(walker.currentNode);
+  }
+  nodes.forEach(n => { n.nodeValue = n.nodeValue.split('support@imash.io').join(em); });
+  root.querySelectorAll('a[href*="support@imash.io"]').forEach(a => {
+    a.setAttribute('href', (a.getAttribute('href') || '').split('support@imash.io').join(em));
   });
 }
 
@@ -480,6 +503,7 @@ function showPage(route) {
         if (raw && !/^https?:\/\//.test(raw) && !raw.startsWith('/')) img.setAttribute('src', '/' + raw);
       });
       applyBrandText(page);
+      applyBrandEmail(page);
       applyBrandImages(page);
       page.style.display = 'block';
       page.classList.add('active');
@@ -2201,6 +2225,7 @@ async function loadDynamicContent(route) {
         dynamicSection.setAttribute('data-route', route);
         // Re-apply white-label branding to freshly rendered content
         applyBrandText(dynamicSection);
+        applyBrandEmail(dynamicSection);
         applyBrandImages(dynamicSection);
 
         // Re-attach event listeners for any new navigation links
