@@ -1,0 +1,47 @@
+{
+  "title": "Ajustes de transferencia de llamadas",
+  "lede": "Call Transfer (Transferencia de llamadas) es un ajuste a nivel de tenant que permite a los operadores mover una llamada en vivo del web dialer (marcador web) a un compañero o a un número saliente. Está desactivado por defecto. Esta guía cubre cómo activarlo y elegir quién puede transferir.",
+  "timeToComplete": "4 minutos",
+  "steps": [
+    {
+      "id": "open-call-transfer",
+      "title": "Abre la pestaña Call Transfer (Transferencia de llamadas)",
+      "content": "<ol><li>Ve a <strong>Call Center &rarr; Contact Center</strong>.</li><li>Haz clic en la pestaña <strong>Call Transfer</strong> (Transferencia de llamadas) (disponible para la cuenta principal o un admin del Contact Center).</li></ol>",
+      "images": [
+        { "src": "images/contact-center/cc-call-transfer-light.png", "alt": "Ajustes de Call Transfer", "caption": "Call Transfer: activa las transferencias y elige quién puede usarlas.", "theme": "light" },
+        { "src": "images/contact-center/cc-call-transfer-dark.png", "alt": "Ajustes de Call Transfer", "caption": "Call Transfer: activa las transferencias y elige quién puede usarlas.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "enable-transfer",
+      "title": "Permite a los operadores transferir llamadas en vivo",
+      "content": "<p>Activa <strong>Allow operators to transfer live calls</strong> (Permitir a los operadores transferir llamadas en vivo). Esto permite a los usuarios mover una llamada del web dialer a un compañero o a un número saliente (incluido en el Human Dialer, marcador humano). Está desactivado por defecto.</p>"
+    },
+    {
+      "id": "who-can-transfer",
+      "title": "Elige quién puede transferir",
+      "content": "<p>En <strong>Who can transfer</strong> (Quién puede transferir), elige una opción:</p><ul><li><strong>All sub-accounts</strong> (Todas las subcuentas).</li><li><strong>Only specific sub-accounts</strong> (Solo subcuentas específicas) — luego selecciona los usuarios autorizados a transferir.</li></ul>"
+    },
+    {
+      "id": "internal-recording",
+      "title": "Opcionalmente graba las llamadas internas",
+      "content": "<p>Las llamadas de compañero a compañero (\"Call a teammate\" / Llamar a un compañero) siempre se registran con su resultado. En la casilla <strong>Internal teammate calls</strong> (Llamadas internas entre compañeros) también puedes activar <strong>Record internal calls</strong> (Grabar llamadas internas) y <strong>Transcribe internal calls (multi-party)</strong> (Transcribir llamadas internas [multipartitas]) para capturarlas con un agente grabador que se une cuando el compañero contesta. Haz clic en <strong>Save</strong> (Guardar).</p>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Completa la configuración de tu Contact Center.",
+    "cards": [
+      { "href": "/contact-center/overview", "title": "Visión general del Contact Center", "description": "El Live Monitor y los controles de supervisor." },
+      { "href": "/contact-center/groups", "title": "Grupos de permisos", "description": "Crea equipos y dirige llamadas hacia ellos." },
+      { "href": "/contact-center/agent-guide", "title": "La experiencia del agente", "description": "Cómo los agentes transfieren y manejan llamadas." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
+  },
+  "metaTitle": "Ajustes de transferencia de llamadas | iMash Docs",
+  "metaDescription": "Activa la transferencia de llamadas a nivel de tenant en el Contact Center de iMash: permite a los operadores transferir llamadas en vivo a compañeros o números salientes, define quién puede hacerlo y graba las llamadas internas.",
+  "metaKeywords": "transferencia de llamadas, transferencia de operador, compañero, saliente, grabación de llamadas internas, contact center, web dialer"
+}

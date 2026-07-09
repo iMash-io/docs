@@ -8,8 +8,18 @@
       "title": "Open Smart Agents",
       "content": "<ol><li>In the left navigation, go to <strong>Intelligence Center → Smart Agents</strong>.</li><li>You will see the list of your existing agents.</li><li>Click <strong>Create</strong> (the new-agent button) to start a fresh agent.</li></ol>",
       "images": [
-        { "src": "images/agents/assistants-list-light.png", "alt": "Smart Agents list", "caption": "The Smart Agents list - create a new agent from here.", "theme": "light" },
-        { "src": "images/agents/assistants-list-dark.png", "alt": "Smart Agents list", "caption": "The Smart Agents list - create a new agent from here.", "theme": "dark" }
+        {
+          "src": "images/agents/assistants-list-light.png",
+          "alt": "Smart Agents list",
+          "caption": "The Smart Agents list - create a new agent from here.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/assistants-list-dark.png",
+          "alt": "Smart Agents list",
+          "caption": "The Smart Agents list - create a new agent from here.",
+          "theme": "dark"
+        }
       ]
     },
     {
@@ -17,36 +27,97 @@
       "title": "Name It and Write the Prompt",
       "content": "<ol><li>Give the agent a clear <strong>name</strong> so you can find it later.</li><li>In the prompt column on the left, describe the agent's role, personality, and rules - what it should do and how it should speak.</li><li>Set the <strong>first message</strong> the agent says when a call connects.</li></ol>",
       "images": [
-        { "src": "images/agents/assistant-editor-light.png", "alt": "Agent editor", "caption": "The editor: prompt on the left, feature panels in the middle.", "theme": "light" },
-        { "src": "images/agents/assistant-editor-dark.png", "alt": "Agent editor", "caption": "The editor: prompt on the left, feature panels in the middle.", "theme": "dark" }
+        {
+          "src": "images/agents/assistant-editor-light.png",
+          "alt": "Agent editor",
+          "caption": "The editor: prompt on the left, feature panels in the middle.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/assistant-editor-dark.png",
+          "alt": "Agent editor",
+          "caption": "The editor: prompt on the left, feature panels in the middle.",
+          "theme": "dark"
+        }
       ]
     },
     {
       "id": "model-and-voice",
       "title": "Pick the Brain and Voice",
       "content": "<ol><li>Open the <strong>Brains (LLM)</strong> panel and choose the model that powers replies (a realtime speech-to-speech model, or a text model paired with a transcriber).</li><li>Open the <strong>Voice (TTS)</strong> panel and pick the voice your agent speaks with.</li></ol>",
-      "images": []
+      "images": [
+        {
+          "src": "images/agents/voice-config-light.png",
+          "alt": "Voice and model",
+          "caption": "Pick the voice (TTS) and brain (LLM) for your agent",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/voice-config-dark.png",
+          "alt": "Voice and model",
+          "caption": "Pick the voice (TTS) and brain (LLM) for your agent",
+          "theme": "dark"
+        }
+      ]
     },
     {
       "id": "enhance",
       "title": "Add Capabilities (Optional)",
       "content": "<ul><li><strong>Knowledge Base</strong>: upload FAQs and documents to answer from.</li><li><strong>Tools / MCP</strong>: let the agent end calls, book appointments, or call your APIs.</li><li><strong>Settings</strong>: adjust timeouts, idle messages, voicemail, and privacy.</li></ul>",
-      "images": []
+      "images": [
+        {
+          "src": "images/agents/tools-mcp-light.png",
+          "alt": "Add tools",
+          "caption": "Add tools, MCP servers and a knowledge base",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/tools-mcp-dark.png",
+          "alt": "Add tools",
+          "caption": "Add tools, MCP servers and a knowledge base",
+          "theme": "dark"
+        }
+      ]
     },
     {
       "id": "test",
       "title": "Test and Save",
       "content": "<ol><li>Click <strong>Test Agent</strong> and connect to talk to it live in the browser.</li><li>Refine the prompt, voice, and settings until it behaves the way you want.</li><li>Your changes save to the agent so it's ready to attach to a phone number or website.</li></ol>",
-      "images": []
+      "images": [
+        {
+          "src": "images/agents/test-agent-light.png",
+          "alt": "Test the agent",
+          "caption": "Click Test Agent to try it live before going live",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/test-agent-dark.png",
+          "alt": "Test the agent",
+          "caption": "Click Test Agent to try it live before going live",
+          "theme": "dark"
+        }
+      ]
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
     "description": "Now flesh out and launch your new agent:",
     "cards": [
-      { "href": "/agents/voice-configuration", "title": "Configure the Voice", "description": "Pick a TTS provider and preview voices." },
-      { "href": "/agents/agent-tools", "title": "Add Tools", "description": "Let the agent take actions during a call." },
-      { "href": "/agents/test-agent", "title": "Test Your Agent", "description": "Try it in the browser or over a real phone call." }
+      {
+        "href": "/agents/voice-configuration",
+        "title": "Configure the Voice",
+        "description": "Pick a TTS provider and preview voices."
+      },
+      {
+        "href": "/agents/agent-tools",
+        "title": "Add Tools",
+        "description": "Let the agent take actions during a call."
+      },
+      {
+        "href": "/agents/test-agent",
+        "title": "Test Your Agent",
+        "description": "Try it in the browser or over a real phone call."
+      }
     ]
   },
   "support": {

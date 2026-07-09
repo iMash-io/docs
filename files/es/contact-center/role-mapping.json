@@ -1,0 +1,47 @@
+{
+  "title": "Asignación de roles",
+  "lede": "La asignación de roles (Role Mapping) vincula cada rol de Contact Center con un rol de acceso (Access role) y un perfil de vista (View profile), para que los miembros obtengan automáticamente los permisos correctos al definirse su rol. Esta pestaña está disponible para usuarios con User Management (Gestión de usuarios).",
+  "timeToComplete": "5 minutos",
+  "steps": [
+    {
+      "id": "open-role-mapping",
+      "title": "Abre la pestaña Role Mapping (Asignación de roles)",
+      "content": "<ol><li>Ve a <strong>Call Center &rarr; Contact Center &rarr; Groups</strong> (Grupos) y selecciona un grupo.</li><li>Abre la pestaña <strong>Role Mapping</strong> (Asignación de roles). Aparece solo para la cuenta principal o una subcuenta con la gestión de usuarios habilitada.</li></ol>",
+      "images": [
+        { "src": "images/contact-center/cc-group-role-mapping-light.png", "alt": "Pestaña Role Mapping", "caption": "Role Mapping: listas permitidas más la asignación de rol a acceso.", "theme": "light" },
+        { "src": "images/contact-center/cc-group-role-mapping-dark.png", "alt": "Pestaña Role Mapping", "caption": "Role Mapping: listas permitidas más la asignación de rol a acceso.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "allowed-lists",
+      "title": "Elige los roles de acceso y perfiles de vista permitidos",
+      "content": "<p>En la tarjeta <strong>Allowed access roles &amp; view profiles</strong> (Roles de acceso y perfiles de vista permitidos), elige qué <strong>Access roles</strong> (Roles de acceso) y qué <strong>View profiles</strong> (Perfiles de vista) pueden usarse en la asignación de abajo. Estas listas limitan los menús desplegables del siguiente paso — no limitan lo que puedes asignar en otras partes de User Management.</p>"
+    },
+    {
+      "id": "map-roles",
+      "title": "Asigna cada rol de Contact Center",
+      "content": "<p>En la tarjeta <strong>Contact Center role &rarr; Access role &amp; View profile</strong> (Rol de Contact Center → Rol de acceso y perfil de vista), para cada rol — <strong>Agent</strong>, <strong>Monitor / QA</strong>, <strong>Supervisor</strong>, <strong>Admin</strong> — elige el <strong>Access role</strong> (Rol de acceso) y el <strong>View profile</strong> (Perfil de vista) que debe recibir un miembro con ese rol.</p><p>Deja una celda vacía para dejar ese valor sin cambios para los miembros de ese rol.</p>"
+    },
+    {
+      "id": "save-apply",
+      "title": "Guarda para aplicar la asignación",
+      "content": "<p>Haz clic en <strong>Save</strong> (Guardar). La asignación se aplica a cada miembro según su rol de Contact Center actual (definido en la pestaña <strong>Members Roles</strong>). La cuenta principal nunca se reasigna. Las asignaciones vacías nunca borran los valores existentes de un miembro.</p>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Define los roles de los miembros y dirige llamadas al grupo.",
+    "cards": [
+      { "href": "/contact-center/members-roles", "title": "Miembros y roles", "description": "Define el rol de Contact Center que impulsa la asignación." },
+      { "href": "/contact-center/inbound-sip-routing", "title": "Enrutamiento SIP entrante", "description": "Dirige un número de teléfono a este grupo." },
+      { "href": "/contact-center/overview", "title": "Visión general del Contact Center", "description": "Repasa todo el espacio de trabajo." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
+  },
+  "metaTitle": "Asignación de roles | iMash Docs",
+  "metaDescription": "Asigna cada rol de Contact Center a un rol de acceso y un perfil de vista en iMash para que los miembros del grupo obtengan los permisos correctos automáticamente al guardar.",
+  "metaKeywords": "asignación de roles, rol de acceso, perfil de vista, contact center, grupo de permisos, gestión de usuarios"
+}

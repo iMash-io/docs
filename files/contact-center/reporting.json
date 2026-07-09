@@ -1,0 +1,47 @@
+{
+  "title": "Contact Center Reporting",
+  "lede": "The Reporting tab summarizes call activity across your human agents, AI agents, and campaigns. Filter by date, drill into six report categories, and export any view to CSV.",
+  "timeToComplete": "6 minutes",
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open the Reporting tab",
+      "content": "<ol><li>Go to <strong>Call Center &rarr; Contact Center</strong>.</li><li>Click the <strong>Reporting</strong> tab (available to Monitor/QA and above).</li></ol>",
+      "images": [
+        { "src": "images/contact-center/cc-reporting-light.png", "alt": "Reporting tab", "caption": "Reporting: category tabs, date presets, filters, and KPIs.", "theme": "light" },
+        { "src": "images/contact-center/cc-reporting-dark.png", "alt": "Reporting tab", "caption": "Reporting: category tabs, date presets, filters, and KPIs.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "categories",
+      "title": "Pick a report category",
+      "content": "<p>Use the pill tabs to switch between the six categories:</p><ul><li><strong>General</strong> — overall call volume, connect and answer rates, average talk time.</li><li><strong>Human Agents</strong> — handled calls, AHT, occupancy, and supervision activity.</li><li><strong>AI Agents</strong> — per-assistant calls, containment, escalations, and cost.</li><li><strong>Smart Campaigns</strong> — AI dialer campaigns.</li><li><strong>Human Campaigns</strong> — predictive-dialer calls by dial list.</li><li><strong>Queue</strong> — skill-group queue waits and outcomes.</li></ul>"
+    },
+    {
+      "id": "date-filters",
+      "title": "Set the date range and filters",
+      "content": "<ol><li>Choose a date preset: <strong>Today</strong>, <strong>This week</strong>, <strong>This month</strong>, <strong>Last 7 days</strong>, <strong>Last 30 days</strong>, or <strong>Custom</strong>.</li><li>Open the <strong>Filters</strong> bar to narrow by direction, assistant, campaign, owner, human agent, call type, phone number, contact/lead, or call UUID.</li><li>Click <strong>Refresh</strong> to reload, or <strong>Clear filters</strong> to reset.</li></ol>"
+    },
+    {
+      "id": "export",
+      "title": "Export to CSV",
+      "content": "<p>Click <strong>Export</strong> (the download icon) to download the current tab as a CSV. The columns match whichever category you're viewing — for example, per-agent handling metrics for Human Agents, or per-assistant containment for AI Agents.</p>"
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Watch calls live and understand what agents do.",
+    "cards": [
+      { "href": "/contact-center/overview", "title": "Contact Center Overview", "description": "The Live Monitor and supervisor controls." },
+      { "href": "/contact-center/agent-guide", "title": "The Agent Experience", "description": "How agents handle calls and set dispositions." },
+      { "href": "/contact-center/groups", "title": "Permission Groups", "description": "Manage the teams these reports break down by." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Contact Center Reporting | iMash Docs",
+  "metaDescription": "Use iMash Contact Center Reporting: six categories (General, Human Agents, AI Agents, Smart/Human Campaigns, Queue), KPIs, date presets, filters, and CSV export.",
+  "metaKeywords": "contact center reporting, kpis, connect rate, aht, csv export, human agents, ai agents, queue report"
+}

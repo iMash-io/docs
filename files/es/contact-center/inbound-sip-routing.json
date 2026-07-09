@@ -1,0 +1,47 @@
+{
+  "title": "Enrutamiento SIP entrante",
+  "lede": "Dirige uno o más de tus números de teléfono hacia un grupo para que las llamadas entrantes a esos números suenen en los miembros en línea del grupo. Así es como un equipo empieza a recibir llamadas entrantes en vivo.",
+  "timeToComplete": "4 minutos",
+  "steps": [
+    {
+      "id": "open-inbound",
+      "title": "Abre la pestaña Inbound SIP Routing (Enrutamiento SIP entrante)",
+      "content": "<ol><li>Ve a <strong>Call Center &rarr; Contact Center &rarr; Groups</strong> (Grupos) y selecciona un grupo.</li><li>Abre la pestaña <strong>Inbound SIP Routing</strong> (Enrutamiento SIP entrante).</li></ol>",
+      "images": [
+        { "src": "images/contact-center/cc-group-inbound-sip-routing-light.png", "alt": "Pestaña Inbound SIP Routing", "caption": "Inbound SIP Routing: actívalo y elige los números que suenan en este grupo.", "theme": "light" },
+        { "src": "images/contact-center/cc-group-inbound-sip-routing-dark.png", "alt": "Pestaña Inbound SIP Routing", "caption": "Inbound SIP Routing: actívalo y elige los números que suenan en este grupo.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "enable",
+      "title": "Activa el enrutamiento entrante",
+      "content": "<p>Cambia el interruptor de la tarjeta <strong>Inbound SIP calls to this group</strong> (Llamadas SIP entrantes a este grupo) a <strong>on</strong> (activado). Cuando está activado, las llamadas a los números que elijas suenan en todos los miembros en línea a la vez (el primero en contestar se la queda). Cuando está desactivado, este grupo ignora esos números y tu IA responde como de costumbre.</p>"
+    },
+    {
+      "id": "pick-numbers",
+      "title": "Elige los números de teléfono",
+      "content": "<ol><li>En <strong>Associated inbound numbers</strong> (Números entrantes asociados), selecciona uno o más de los números de teléfono de tu cuenta.</li><li>Las llamadas entrantes a cualquiera de estos números sonarán en los miembros en línea de este grupo.</li></ol><p>Si la lista está vacía, aún no tienes ningún número de teléfono — agrega uno primero (ver abajo).</p>"
+    },
+    {
+      "id": "save",
+      "title": "Guarda",
+      "content": "<p>Haz clic en <strong>Save</strong> (Guardar). Prueba llamando a uno de los números asignados — los web dialers de los miembros en línea deberían sonar. Si nadie contesta dentro de la ventana de timbrado, la llamada sigue el respaldo (fallback) que configuraste en la pestaña <strong>Ring strategy</strong> (Estrategia de timbrado).</p>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Controla cómo suena el grupo y qué pasa cuando nadie contesta.",
+    "cards": [
+      { "href": "/contact-center/ring-strategy", "title": "Estrategia de timbrado", "description": "Suena a todos a la vez o uno por uno, luego pasa a la IA." },
+      { "href": "/phone/add-phone-number", "title": "Agregar un número de teléfono", "description": "Consigue un número para dirigir a este grupo." },
+      { "href": "/contact-center/queue-settings", "title": "Ajustes de cola", "description": "Retén a las personas cuando no hay agente libre." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
+  },
+  "metaTitle": "Enrutamiento SIP entrante | iMash Docs",
+  "metaDescription": "Dirige un número de teléfono o DID a un grupo del Contact Center en iMash para que las llamadas entrantes suenen en los miembros en línea del grupo, con un respaldo de IA cuando nadie contesta.",
+  "metaKeywords": "enrutamiento sip entrante, número de teléfono, did, grupo de timbrado, contact center, grupo de permisos, llamadas entrantes"
+}

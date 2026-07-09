@@ -1,0 +1,56 @@
+{
+  "title": "Contact Center Overview",
+  "lede": "The Contact Center is where your human agents take and make phone calls. This guide walks you through the four tabs, the Live Monitor, and how supervisors can listen in on live calls.",
+  "timeToComplete": "6 minutes",
+  "steps": [
+    {
+      "id": "open-contact-center",
+      "title": "Open the Contact Center",
+      "content": "<ol><li>In the left navigation, open <strong>Call Center</strong>.</li><li>Click <strong>Contact Center</strong>.</li><li>You land on a workspace with up to four tabs across the top: <strong>Live Monitor</strong>, <strong>Reporting</strong>, <strong>Groups</strong>, and <strong>Call Transfer</strong>.</li></ol><p>Which tabs you see depends on your Contact Center role. Agents see only Live Monitor (as a queue view), Monitor/QA also see Reporting, and Admins see all four including Groups and Call Transfer.</p>"
+    },
+    {
+      "id": "live-monitor",
+      "title": "Watch live calls in Live Monitor",
+      "content": "<p>The <strong>Live Monitor</strong> tab is your real-time wallboard:</p><ul><li>Stat tiles at the top show <strong>Ringing / queued</strong>, <strong>On calls</strong>, <strong>Agents online</strong>, <strong>On break</strong>, <strong>Busy</strong>, and <strong>On queue</strong> counts.</li><li><strong>Live Calls</strong> lists every active call with its parties, direction, and a running clock. <strong>On Queue</strong> lists callers waiting for an agent.</li><li>The <strong>Human Agents</strong> roster on the right shows every agent with a colored status dot: green = <strong>online</strong>, amber = <strong>break</strong>, blue = <strong>busy</strong>, grey = <strong>offline</strong>.</li></ul>",
+      "images": [
+        { "src": "images/contact-center/cc-live-monitor-light.png", "alt": "Live Monitor tab", "caption": "Live Monitor: wallboard tiles, live calls, and the Human Agents roster.", "theme": "light" },
+        { "src": "images/contact-center/cc-live-monitor-dark.png", "alt": "Live Monitor tab", "caption": "Live Monitor: wallboard tiles, live calls, and the Human Agents roster.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "supervisor-controls",
+      "title": "Monitor, Whisper, or Barge a call",
+      "content": "<p>Supervisors and admins can join any live call from its card:</p><ul><li><strong>Monitor</strong> — silently listen; nobody on the call hears you.</li><li><strong>Whisper</strong> — talk privately to your agent (the customer never hears you).</li><li><strong>Barge</strong> — join the conversation as a full three-way participant.</li></ul><p>You can also <strong>Mute AI agent</strong> or <strong>Terminate</strong> the call. Monitor/QA users get listen-only Monitor; agents get no supervisor controls.</p>"
+    },
+    {
+      "id": "agent-status",
+      "title": "Understand agent statuses",
+      "content": "<p>Each agent sets their own availability from the web dialer:</p><ul><li><strong>Online</strong> — ready to receive queued and inbound calls.</li><li><strong>On break</strong> — signed in but not receiving calls.</li><li><strong>Offline</strong> — signed out of the queue.</li></ul><p>Supervisors can force an agent Ready, Not Ready (break), or log them out from the roster's action buttons.</p>"
+    },
+    {
+      "id": "reporting-tab",
+      "title": "Review performance in Reporting",
+      "content": "<p>The <strong>Reporting</strong> tab summarizes call activity across six categories — <strong>General</strong>, <strong>Human Agents</strong>, <strong>AI Agents</strong>, <strong>Smart Campaigns</strong>, <strong>Human Campaigns</strong>, and <strong>Queue</strong> — with KPIs like total calls, connect rate, average handle time, and cost. Pick a date preset and export any tab to CSV.</p>",
+      "images": [
+        { "src": "images/contact-center/cc-reporting-light.png", "alt": "Reporting tab", "caption": "Reporting: KPI cards, category tabs, date presets, and CSV export.", "theme": "light" },
+        { "src": "images/contact-center/cc-reporting-dark.png", "alt": "Reporting tab", "caption": "Reporting: KPI cards, category tabs, date presets, and CSV export.", "theme": "dark" }
+      ]
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Set up your teams and understand what agents see day to day.",
+    "cards": [
+      { "href": "/contact-center/groups", "title": "Create a Permission Group", "description": "Build a team or skill group of human agents." },
+      { "href": "/contact-center/agent-guide", "title": "The Agent Experience", "description": "See how agents take calls with the web dialer." },
+      { "href": "/contact-center/reporting", "title": "Reporting", "description": "Dive into KPIs and CSV exports." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Contact Center Overview | iMash Docs",
+  "metaDescription": "Learn the iMash Contact Center: the Live Monitor, Reporting, Groups, and Call Transfer tabs, agent statuses, and supervisor Monitor/Whisper/Barge controls.",
+  "metaKeywords": "contact center, live monitor, supervisor, whisper, barge, agent status, call center, human agents"
+}

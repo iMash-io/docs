@@ -1,0 +1,106 @@
+{
+  "title": "Guía del agente humano — Atender llamadas en el Contact Center",
+  "lede": "Todo lo que un nuevo agente necesita para empezar a tomar llamadas: iniciar sesión, abrir tu web dialer (marcador web), ponerte En línea, contestar las llamadas que te suenan, revisar el registro de quien llama y anotar lo que pasó. Sigue los pasos en orden — no hace falta experiencia.",
+  "timeToComplete": "10 minutos",
+  "steps": [
+    {
+      "id": "first-login",
+      "title": "Paso 1 — Inicia sesión y encuentra tu base de operaciones",
+      "content": "<p>Tu supervisor creó tu acceso y te lo envió por correo. Este es tu primer punto de partida en cada turno.</p><ol><li>Abre en tu navegador web el enlace del sitio que te envió tu supervisor (Chrome funciona muy bien).</li><li>Escribe tu <strong>email</strong> (correo) y tu <strong>password</strong> (contraseña) y haz clic en <strong>Log in</strong> (Iniciar sesión).</li><li>Llegas al <strong>Contact Center</strong> — esta es tu base de operaciones. En el lado izquierdo verás un menú corto: <strong>Contact Center</strong>, <strong>Do Not Call</strong> (No llamar) y, dentro de CRM: <strong>Accounts</strong> (Cuentas), <strong>Contacts</strong> (Contactos) y <strong>Leads</strong> (Prospectos), además de <strong>Account Settings</strong> (Configuración de la cuenta) y <strong>Logout</strong> (Cerrar sesión) al final.</li><li>La parte central de la pantalla muestra <strong>On Queue</strong> (En cola) — esta es la lista de personas que están esperando ser atendidas. Cuando dice \"No customers on queue\" (No hay clientes en cola), significa que aún no hay nadie esperando. Eso es normal.</li></ol><p>No necesitas ninguno de los otros menús. Contestar llamadas se hace justo aquí.</p>",
+      "images": [
+        { "src": "images/contact-center/agent-contact-center-light.png", "alt": "Inicio del Contact Center del agente con el menú izquierdo y la lista On Queue", "caption": "Tu base de operaciones: el menú izquierdo y la lista On Queue (En cola) de personas esperando.", "theme": "light" },
+        { "src": "images/contact-center/agent-contact-center-dark.png", "alt": "Inicio del Contact Center del agente con el menú izquierdo y la lista On Queue", "caption": "Tu base de operaciones: el menú izquierdo y la lista On Queue (En cola) de personas esperando.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "open-dialer",
+      "title": "Paso 2 — Abre tu web dialer (marcador web)",
+      "content": "<p>El <strong>web dialer</strong> (marcador web) es el pequeño teléfono que usas para contestar y hacer llamadas. Te acompaña sin importar en qué página estés.</p><ol><li>Mira en la parte <strong>superior derecha</strong> de la pantalla el <strong>ícono de teléfono</strong>. Haz clic en él.</li><li>Se abre un panel deslizándose. Arriba hay un cuadro de búsqueda y un teclado numérico (el <strong>dialpad</strong>, teclado de marcado).</li><li>Debajo hay cuatro botones que usarás: <strong>Call</strong> (Llamar — marcar un número), <strong>Text</strong> (Enviar SMS), <strong>AI Agent</strong> (iniciar una llamada de voz con un asistente de IA) y <strong>Teammate</strong> (hacer sonar el marcador de un compañero).</li><li>Para contestar llamadas entrantes, en su mayoría dejas este panel abierto y esperas — las llamadas llegarán a ti.</li></ol><p>Consejo: mantén el marcador abierto durante todo tu turno para no perderte ninguna llamada.</p>",
+      "images": [
+        { "src": "images/contact-center/agent-dialer-light.png", "alt": "Panel del web dialer con teclado y los botones Call, Text, AI Agent, Teammate", "caption": "El web dialer: teclado de marcado más los botones Call, Text, AI Agent y Teammate.", "theme": "light" },
+        { "src": "images/contact-center/agent-dialer-dark.png", "alt": "Panel del web dialer con teclado y los botones Call, Text, AI Agent, Teammate", "caption": "El web dialer: teclado de marcado más los botones Call, Text, AI Agent y Teammate.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "go-online",
+      "title": "Paso 3 — Ponte En línea para que las llamadas te lleguen",
+      "content": "<p>Las llamadas solo te suenan cuando estás <strong>Online</strong> (En línea). Piénsalo como marcar tarjeta al entrar.</p><ol><li>En el web dialer, busca <strong>My status</strong> (Mi estado) cerca de la parte superior.</li><li>Haz clic en el cuadro de estado y elige <strong>Online</strong> (En línea). Las otras opciones son <strong>On Break</strong> (En descanso — estás ausente unos minutos) y <strong>Offline</strong> (Desconectado — terminaste, ninguna llamada te sonará).</li><li>Una vez que estás <strong>Online</strong>, el sistema te suena para dos tipos de llamadas: llamadas entrantes a los números de tu equipo y llamadas que el asistente de IA transfiere a tu equipo.</li></ol><p>Bueno saberlo:</p><ul><li>Varios agentes pueden estar En línea al mismo tiempo. Cuando entra una llamada del equipo, a todos en el equipo les suena y <strong>la primera persona que contesta se queda con la llamada</strong> — a los demás les deja de sonar.</li><li>Aparecerás brevemente como <strong>Busy</strong> (Ocupado) mientras estás en una llamada. Eso es automático — no lo configuras tú. Cuando cuelgas, vuelves a Online (En línea).</li><li>Cambia siempre a <strong>On Break</strong> (En descanso) antes de alejarte, y a <strong>Offline</strong> (Desconectado) cuando termine tu turno, para que las llamadas no suenen en un escritorio vacío.</li></ul>",
+      "images": [
+        { "src": "images/contact-center/agent-dialer-light.png", "alt": "Web dialer mostrando el control My status en Online", "caption": "Pon My status (Mi estado) en Online para empezar a recibir llamadas (On Break y Offline las detienen).", "theme": "light" },
+        { "src": "images/contact-center/agent-dialer-dark.png", "alt": "Web dialer mostrando el control My status en Online", "caption": "Pon My status (Mi estado) en Online para empezar a recibir llamadas (On Break y Offline las detienen).", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "dialer-settings",
+      "title": "Paso 4 — Configura dos opciones útiles del marcador",
+      "content": "<p>Dos pequeños ajustes te facilitan el día. Los encuentras detrás del pequeño ícono de <strong>settings</strong> (configuración, el engranaje) junto a <strong>My status</strong> (Mi estado) — esto abre <strong>Web dialer settings</strong> (Configuración del web dialer).</p><ol><li><strong>Auto-answer</strong> (Respuesta automática) — cuando está activado, las llamadas del equipo <strong>se conectan automáticamente sin que hagas clic en Accept (Aceptar)</strong>. Escucharás un tono corto y ya estás hablando con la persona. Actívalo si tu supervisor quiere que las llamadas se tomen al instante.</li><li><strong>Auto-open lead/contact</strong> (Abrir automáticamente prospecto/contacto) — cuando está activado, el registro de quien llama <strong>se abre solo</strong> cada vez que la llamada coincide con un prospecto o contacto, para que su nombre y datos estén en pantalla en el momento en que te conectas.</li></ol><p>¿No estás seguro? Pregúntale a tu supervisor cuáles quiere que tengas activados. Puedes cambiarlos en cualquier momento — los interruptores recuerdan tu elección.</p>",
+      "images": [
+        { "src": "images/contact-center/agent-dialer-settings-light.png", "alt": "Configuración del web dialer con los interruptores Auto-answer y Auto-open lead/contact", "caption": "Web dialer settings: Auto-answer conecta las llamadas por ti; Auto-open abre el registro de quien llama.", "theme": "light" },
+        { "src": "images/contact-center/agent-dialer-settings-dark.png", "alt": "Configuración del web dialer con los interruptores Auto-answer y Auto-open lead/contact", "caption": "Web dialer settings: Auto-answer conecta las llamadas por ti; Auto-open abre el registro de quien llama.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "answer-call",
+      "title": "Paso 5 — Contesta una llamada cuando suene",
+      "content": "<p>Cuando te llega una llamada, aparece una tarjeta deslizándose en la parte superior del web dialer que muestra quién llama.</p><ol><li>Lee la tarjeta — muestra el número de quien llama (y su nombre si lo conocemos) y de dónde vino la llamada (un número entrante o una transferencia de IA).</li><li>Haz clic en el botón verde <strong>Accept</strong> (Aceptar) para tomar la llamada, o en <strong>Decline</strong> (Rechazar) si no puedes tomarla.</li><li>Si activaste <strong>Auto-answer</strong> (Respuesta automática, Paso 4), la llamada se conecta sola — escucharás un tono corto en lugar de un timbre y puedes empezar a hablar de inmediato.</li><li>Recuerda: si es una llamada del equipo, quien haga clic en <strong>Accept</strong> primero se la queda. Si alguien más la toma antes que tú, tu timbre simplemente se detiene — eso es normal.</li></ol><p>Una vez conectado, di tu saludo y empieza a ayudar a la persona.</p>",
+      "images": [
+        { "src": "images/contact-center/agent-dialer-light.png", "alt": "Tarjeta de llamada entrante en el web dialer con botones Accept y Decline", "caption": "Una tarjeta de llamada entrante — haz clic en el botón verde Accept para tomarla (o se conecta sola).", "theme": "light" },
+        { "src": "images/contact-center/agent-dialer-dark.png", "alt": "Tarjeta de llamada entrante en el web dialer con botones Accept y Decline", "caption": "Una tarjeta de llamada entrante — haz clic en el botón verde Accept para tomarla (o se conecta sola).", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "caller-record",
+      "title": "Paso 6 — Revisa el registro de quien llama mientras hablas",
+      "content": "<p>Cuando la llamada se conecta, el registro de quien llama se abre como un panel <strong>Lead Details</strong> (Detalles del prospecto) (si <strong>Auto-open</strong> está activado aparece solo; si no, haz clic en el botón <strong>Lead / Contact info</strong> (Info de prospecto/contacto) en la barra de llamada para abrirlo). Esta es la persona con la que estás hablando.</p><p>De un vistazo, fíjate en:</p><ul><li>El <strong>name</strong> (nombre), <strong>phone</strong> (teléfono) y <strong>emails</strong> (correos) de la persona en la parte superior.</li><li>Las pestañas del registro: <strong>Lead Information</strong> (Información del prospecto — los datos principales), <strong>Additional Information</strong> (Información adicional — notas y campos extra) y <strong>Call Logs</strong> (Registros de llamadas — llamadas anteriores con esta persona).</li><li>Todo lo que ya esté escrito ahí — te dice qué pasó la última vez para que no tengas que pedirle a la persona que se repita.</li></ul><p>Puedes mantener esto abierto durante toda la llamada y escribir en él mientras hablas.</p>",
+      "images": [
+        { "src": "images/contact-center/agent-lead-detail-light.png", "alt": "Panel Lead Details mostrando nombre, teléfono, correos y pestañas", "caption": "El panel Lead Details: nombre, teléfono, correos y pestañas (Lead Information, Additional Information, Call Logs).", "theme": "light" },
+        { "src": "images/contact-center/agent-lead-detail-dark.png", "alt": "Panel Lead Details mostrando nombre, teléfono, correos y pestañas", "caption": "El panel Lead Details: nombre, teléfono, correos y pestañas (Lead Information, Additional Information, Call Logs).", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "lifecycle-stage",
+      "title": "Paso 7 — Actualiza la etapa del Lifecycle (Ciclo de vida)",
+      "content": "<p>La barra <strong>Lifecycle</strong> (Ciclo de vida) registra qué tan avanzado está un cliente. Actualízala después de cada llamada para que tu equipo pueda ver el progreso.</p><ol><li>Busca la barra <strong>Lifecycle</strong> (Ciclo de vida) en la parte inferior del panel Lead Details.</li><li>Las etapas van de izquierda a derecha: <strong>New</strong> (Nuevo) → <strong>Contacted</strong> (Contactado) → <strong>Interested</strong> (Interesado) → <strong>Qualified</strong> (Calificado) → <strong>Negotiation</strong> (Negociación) → <strong>Won</strong> (Ganado).</li><li>Haz clic en la etapa que mejor represente dónde está el cliente ahora. Por ejemplo, después de una primera conversación muévelo de <strong>New</strong> a <strong>Contacted</strong>; si está listo para comprar, muévelo hacia <strong>Negotiation</strong> o <strong>Won</strong>.</li></ol><p>Ante la duda, simplemente muévelo un paso adelante de donde estaba. Tu supervisor puede explicarte qué significa cada etapa para tu negocio.</p>",
+      "images": [
+        { "src": "images/contact-center/agent-lead-stage-light.png", "alt": "Barra de etapa Lifecycle: New, Contacted, Interested, Qualified, Negotiation, Won", "caption": "La barra Lifecycle — haz clic en la etapa que corresponde a dónde está el cliente ahora.", "theme": "light" },
+        { "src": "images/contact-center/agent-lead-stage-dark.png", "alt": "Barra de etapa Lifecycle: New, Contacted, Interested, Qualified, Negotiation, Won", "caption": "La barra Lifecycle — haz clic en la etapa que corresponde a dónde está el cliente ahora.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "notes-outcome",
+      "title": "Paso 8 — Escribe notas y registra lo que pasó",
+      "content": "<p>Deja siempre una nota corta para que la siguiente persona sepa la historia. Hay dos lugares que importan.</p><ol><li>Abre la pestaña <strong>Additional Information</strong> (Información adicional) en el registro de quien llama y escribe con tus propias palabras lo que pasó — por ejemplo, \"Quiere una cotización para dos ventanas, volverá a llamar el viernes.\"</li><li><strong>No</strong> necesitas anotar la llamada en sí — el sistema guarda cada llamada por ti. Abre la pestaña <strong>Call Logs</strong> (Registros de llamadas) en el registro para ver la llamada que acabas de terminar, cuándo ocurrió y cuánto duró.</li></ol><p>Mantén las notas cortas y claras. Una buena nota responde: ¿qué querían y qué sigue después?</p>",
+      "images": [
+        { "src": "images/contact-center/agent-lead-additional-light.png", "alt": "Pestaña Additional Information donde se escriben las notas", "caption": "Escribe lo que pasó en la pestaña Additional Information (Información adicional).", "theme": "light" },
+        { "src": "images/contact-center/agent-lead-additional-dark.png", "alt": "Pestaña Additional Information donde se escriben las notas", "caption": "Escribe lo que pasó en la pestaña Additional Information (Información adicional).", "theme": "dark" },
+        { "src": "images/contact-center/agent-lead-calllogs-light.png", "alt": "Pestaña Call Logs mostrando la llamada guardada", "caption": "La llamada en sí se guarda automáticamente en la pestaña Call Logs (Registros de llamadas).", "theme": "light" },
+        { "src": "images/contact-center/agent-lead-calllogs-dark.png", "alt": "Pestaña Call Logs mostrando la llamada guardada", "caption": "La llamada en sí se guarda automáticamente en la pestaña Call Logs (Registros de llamadas).", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "transfer-call",
+      "title": "Paso 9 — Pasa la llamada a alguien más (transferir)",
+      "content": "<p>A veces la persona que llama necesita otro equipo o un compañero específico. Tienes varias opciones fáciles en el web dialer mientras estás en la llamada.</p><ul><li><strong>Teammate</strong> (Compañero) — hace sonar el marcador de un compañero para que se una o tome la llamada.</li><li><strong>AI Agent</strong> (Agente de IA) — trae un asistente de IA a la llamada para ayudar.</li><li><strong>Transfer to a group (skill)</strong> (Transferir a un grupo / habilidad) — envía a la persona al equipo correcto (un permission group, grupo de permisos). Todos los miembros en línea de ese equipo suenan y el primero en contestar se la queda. Si nadie está libre, la persona puede esperar en la cola de ese equipo.</li></ul><p>Dos cosas útiles que recordar:</p><ol><li>Puedes usar <strong>Leave</strong> (Salir) de la llamada después de iniciar una transferencia — haz clic en <strong>Leave</strong> para desconectar solo tu propia línea. La llamada continúa para todos los demás, y la IA puede quedarse para mantener a la persona hasta que un compañero conteste.</li><li>Agrega siempre una nota rápida (Paso 8) sobre por qué transferiste, para que la siguiente persona esté lista.</li></ol>",
+      "images": [
+        { "src": "images/contact-center/agent-dialer-light.png", "alt": "Web dialer con opciones de transferencia: AI Agent y Teammate", "caption": "Usa AI Agent o Teammate para transferir, o envía a la persona a la cola de un equipo (skill).", "theme": "light" },
+        { "src": "images/contact-center/agent-dialer-dark.png", "alt": "Web dialer con opciones de transferencia: AI Agent y Teammate", "caption": "Usa AI Agent o Teammate para transferir, o envía a la persona a la cola de un equipo (skill).", "theme": "dark" }
+      ]
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Obtén el panorama completo y aprende de dónde vienen los ajustes de tu equipo.",
+    "cards": [
+      { "href": "/contact-center/overview", "title": "Visión general del Contact Center", "description": "Ve cómo encaja todo el Contact Center en conjunto." },
+      { "href": "/contact-center/members-roles", "title": "Miembros y roles", "description": "Entiende los roles de agente, supervisor y admin." },
+      { "href": "/crm/leads", "title": "Trabajar con prospectos", "description": "Aprende más sobre los registros de prospectos que actualizas en cada llamada." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
+  },
+  "metaTitle": "Guía del agente humano — Atender llamadas en el Contact Center | iMash Docs",
+  "metaDescription": "Una guía paso a paso para nuevos agentes de call center: iniciar sesión, abrir el web dialer, ponerse En línea, aceptar llamadas, leer el registro de quien llama, actualizar la etapa del Lifecycle, agregar notas y transferir llamadas.",
+  "metaKeywords": "agente contact center, atender llamadas, web dialer, ponerse en línea, aceptar llamada, respuesta automática, abrir prospecto automático, etapa lifecycle, transferir llamada, transferencia a compañero, cola, guía del agente humano"
+}

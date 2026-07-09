@@ -1,0 +1,47 @@
+{
+  "title": "Wait & Hold Experience",
+  "lede": "Control the audio a caller hears while waiting for a human — during the ring, while queued, and when an agent presses Hold. Upload music and add spoken periodic messages.",
+  "timeToComplete": "6 minutes",
+  "steps": [
+    {
+      "id": "open-waithold",
+      "title": "Open the Wait & Hold experience tab",
+      "content": "<ol><li>Go to <strong>Call Center &rarr; Contact Center &rarr; Groups</strong> and select a group.</li><li>Open the <strong>Wait &amp; Hold experience</strong> tab.</li></ol>",
+      "images": [
+        { "src": "images/contact-center/cc-group-wait-hold-light.png", "alt": "Wait & Hold experience tab", "caption": "Wait & Hold: wait music, periodic messages, and hold music.", "theme": "light" },
+        { "src": "images/contact-center/cc-group-wait-hold-dark.png", "alt": "Wait & Hold experience tab", "caption": "Wait & Hold: wait music, periodic messages, and hold music.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "wait-audio-mode",
+      "title": "Decide what plays during the ring",
+      "content": "<p>Use <strong>Play wait audio during the initial group ring</strong> to choose what the caller hears while the group is being rung:</p><ul><li><strong>Off</strong> — normal phone ringing (default).</li><li><strong>Only when a member is online.</strong></li><li><strong>Always</strong> — even if nobody is online.</li></ul><p>Turning it on answers the call early so your wait music and messages play instead of ringing — note the call connects (and bills) from that moment.</p>"
+    },
+    {
+      "id": "wait-music",
+      "title": "Add wait music and periodic messages",
+      "content": "<ol><li>Switch on <strong>Wait music</strong> and <strong>Upload wait music</strong> (or paste an audio URL). Use a short loop; the limit is 10 MB.</li><li>Switch on <strong>Periodic messages</strong> to speak short lines on a loop while the caller waits. Add several — they play in order, each after its interval.</li><li>Set each message's interval as a single number (for example 30) or a range like 15-45 for a random wait. Tokens like {first_name} are filled in for the call.</li></ol>"
+    },
+    {
+      "id": "hold-music",
+      "title": "Set hold music",
+      "content": "<p>Switch on <strong>Hold music</strong> and upload a track (or paste a URL). This plays to the caller when an agent presses <strong>Hold</strong> during a live call. Click <strong>Save</strong> when finished.</p>"
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Decide what happens when the wait runs long.",
+    "cards": [
+      { "href": "/contact-center/queue-settings", "title": "Queue Settings", "description": "Max wait time and on-timeout behavior." },
+      { "href": "/contact-center/ring-strategy", "title": "Ring Strategy", "description": "How the group is rung before it queues." },
+      { "href": "/contact-center/overview", "title": "Contact Center Overview", "description": "See the full workspace." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Wait & Hold Experience | iMash Docs",
+  "metaDescription": "Set the hold music, wait music, and spoken periodic messages a caller hears while queued or on hold for a Contact Center group in iMash.",
+  "metaKeywords": "hold music, wait music, periodic messages, greeting, queue audio, contact center, permission group"
+}

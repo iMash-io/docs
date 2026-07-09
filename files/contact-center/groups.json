@@ -1,0 +1,51 @@
+{
+  "title": "Create a Permission Group (Team)",
+  "lede": "A Permission Group is a team or skill of human agents. Create one, add members, then use its inner tabs to point phone numbers at it and control how it rings. This guide covers creating a group and adding people.",
+  "timeToComplete": "5 minutes",
+  "steps": [
+    {
+      "id": "open-groups",
+      "title": "Open the Groups tab",
+      "content": "<ol><li>Go to <strong>Call Center &rarr; Contact Center</strong>.</li><li>Click the <strong>Groups</strong> tab (visible to Contact Center admins and the main account).</li><li>The left column lists your existing <strong>Permission Groups</strong>; the right panel shows the selected group's members and settings.</li></ol>",
+      "images": [
+        { "src": "images/contact-center/cc-groups-overview-light.png", "alt": "Groups tab overview", "caption": "The Groups tab: group list on the left, member and settings panel on the right.", "theme": "light" },
+        { "src": "images/contact-center/cc-groups-overview-dark.png", "alt": "Groups tab overview", "caption": "The Groups tab: group list on the left, member and settings panel on the right.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "new-group",
+      "title": "Create a new group",
+      "content": "<ol><li>Click <strong>New Group</strong> in the top-right.</li><li>Enter a <strong>Name</strong> (for example, <em>Sales Team</em> or <em>Spanish Support</em>).</li><li>Optionally add a <strong>Description</strong> of what the team represents.</li><li>Click <strong>Create</strong>. The new group is selected automatically.</li></ol>"
+    },
+    {
+      "id": "add-members",
+      "title": "Add members to the group",
+      "content": "<ol><li>With the group selected, open its <strong>Members</strong> tab.</li><li>Click <strong>Add Members</strong>.</li><li>Search users by name or email and pick one or more — both main and sub-accounts can be added.</li><li>Click <strong>Add</strong>. Members appear in the table, each tagged <strong>Main</strong> or <strong>Sub</strong>.</li></ol><p>To remove someone, click the delete icon on their row and confirm.</p>",
+      "images": [
+        { "src": "images/contact-center/cc-group-members-light.png", "alt": "Group members tab", "caption": "The Members tab with Add Members and the member list.", "theme": "light" },
+        { "src": "images/contact-center/cc-group-members-dark.png", "alt": "Group members tab", "caption": "The Members tab with Add Members and the member list.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "next-tabs",
+      "title": "Configure the group's inner tabs",
+      "content": "<p>Once the group has members, its inner tabs let you finish setup: <strong>Members Roles</strong>, <strong>Role Mapping</strong>, <strong>Inbound SIP Routing</strong>, <strong>Ring strategy</strong>, <strong>Wait &amp; Hold experience</strong>, and <strong>Queue Settings</strong>. Each has its own Save button — start with Members Roles and Inbound SIP Routing.</p>"
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Assign roles and route calls to your new group.",
+    "cards": [
+      { "href": "/contact-center/members-roles", "title": "Members & Roles", "description": "Set each member's Contact Center role." },
+      { "href": "/contact-center/inbound-sip-routing", "title": "Inbound SIP Routing", "description": "Point a phone number at this group." },
+      { "href": "/contact-center/ring-strategy", "title": "Ring Strategy", "description": "Choose how members are rung." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Create a Permission Group | iMash Docs",
+  "metaDescription": "Create a Contact Center Permission Group in iMash, add members, and open its inner tabs to route calls and control ringing for your team.",
+  "metaKeywords": "permission group, team, skill group, add members, contact center, new group, agents"
+}

@@ -1,0 +1,47 @@
+{
+  "title": "Roles de miembros",
+  "lede": "Dale a cada miembro del grupo un rol de Contact Center que controle qué puede ver y hacer. Esta guía explica los cuatro roles, cómo se decide el rol efectivo y la opción de mantener el web dialer (marcador web) siempre abierto.",
+  "timeToComplete": "5 minutos",
+  "steps": [
+    {
+      "id": "open-members-roles",
+      "title": "Abre la pestaña Members Roles (Roles de miembros)",
+      "content": "<ol><li>Ve a <strong>Call Center &rarr; Contact Center &rarr; Groups</strong> (Grupos).</li><li>Selecciona un grupo y luego abre su pestaña <strong>Members Roles</strong> (Roles de miembros).</li><li>Cada miembro aparece con un menú desplegable de <strong>Contact Center role</strong> (Rol de Contact Center).</li></ol>",
+      "images": [
+        { "src": "images/contact-center/cc-group-members-roles-light.png", "alt": "Pestaña Members Roles", "caption": "Members Roles: elige un rol de Contact Center por miembro.", "theme": "light" },
+        { "src": "images/contact-center/cc-group-members-roles-dark.png", "alt": "Pestaña Members Roles", "caption": "Members Roles: elige un rol de Contact Center por miembro.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "pick-role",
+      "title": "Comprende los cuatro roles",
+      "content": "<ul><li><strong>Agent</strong> (Agente) — un representante regular que hace y recibe llamadas y atiende clientes. Solo ve su propia cola.</li><li><strong>Monitor / QA</strong> — puede escuchar llamadas y revisar reportes y grabaciones, pero no puede gestionar agentes ni cambiar ajustes.</li><li><strong>Supervisor</strong> — gestiona agentes: escuchar, susurrar, intervenir, forzar el estado y revisar el desempeño.</li><li><strong>Admin</strong> — acceso completo al Contact Center, incluyendo los ajustes de Groups y Call Transfer.</li></ul><p>Elige un rol en el menú desplegable de cada miembro.</p>"
+    },
+    {
+      "id": "effective-role",
+      "title": "Cómo se decide el rol efectivo",
+      "content": "<p>Una persona puede pertenecer a varios grupos. Su <strong>rol efectivo</strong> es el rol <strong>más alto</strong> entre todos sus grupos. Por ejemplo, un Agent en un grupo que es Supervisor en otro se trata como Supervisor en todas partes.</p><p>La <strong>cuenta principal del tenant siempre es Admin</strong> y no se puede degradar aquí.</p>"
+    },
+    {
+      "id": "keep-dialer-open",
+      "title": "Mantén el web dialer siempre abierto",
+      "content": "<p>En <strong>Keep the web dialer always open for</strong> (Mantener el web dialer siempre abierto para), marca los roles que deberían tener el web dialer abierto y fijado automáticamente. Los miembros con un rol efectivo marcado no pueden cerrar el marcador, así que nunca pierden una llamada en cola.</p><p>Deja todas las casillas sin marcar para el comportamiento normal (el marcador se abre solo cuando hacen clic en el botón de teléfono). Esto no se aplica en teléfonos ni tablets pequeñas. Haz clic en <strong>Save</strong> (Guardar) cuando termines.</p>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Asigna roles a niveles de acceso y dirige llamadas al grupo.",
+    "cards": [
+      { "href": "/contact-center/role-mapping", "title": "Asignación de roles", "description": "Asigna cada rol a un rol de acceso y un perfil de vista." },
+      { "href": "/contact-center/ring-strategy", "title": "Estrategia de timbrado", "description": "Elige cómo suenan los miembros en línea." },
+      { "href": "/contact-center/agent-guide", "title": "La experiencia del agente", "description": "Mira lo que hacen los agentes con estos roles." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
+  },
+  "metaTitle": "Roles de miembros | iMash Docs",
+  "metaDescription": "Asigna roles de Contact Center — Agent, Monitor/QA, Supervisor, Admin — a los miembros del grupo en iMash, comprende el rol efectivo y fija el web dialer abierto.",
+  "metaKeywords": "roles de contact center, agente, supervisor, monitor, admin, rol efectivo, web dialer, grupo de permisos"
+}

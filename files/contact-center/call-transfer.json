@@ -1,0 +1,47 @@
+{
+  "title": "Call Transfer Settings",
+  "lede": "Call Transfer is a tenant-wide setting that lets operators move a live web-dialer call to a teammate or an outbound number. It is off by default. This guide covers enabling it and choosing who can transfer.",
+  "timeToComplete": "4 minutes",
+  "steps": [
+    {
+      "id": "open-call-transfer",
+      "title": "Open the Call Transfer tab",
+      "content": "<ol><li>Go to <strong>Call Center &rarr; Contact Center</strong>.</li><li>Click the <strong>Call Transfer</strong> tab (available to the main account or a Contact Center admin).</li></ol>",
+      "images": [
+        { "src": "images/contact-center/cc-call-transfer-light.png", "alt": "Call Transfer settings", "caption": "Call Transfer: enable transfers and choose who can use them.", "theme": "light" },
+        { "src": "images/contact-center/cc-call-transfer-dark.png", "alt": "Call Transfer settings", "caption": "Call Transfer: enable transfers and choose who can use them.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "enable-transfer",
+      "title": "Allow operators to transfer live calls",
+      "content": "<p>Turn on <strong>Allow operators to transfer live calls</strong>. This lets users move a call from the web dialer to a teammate or an outbound number (including in the Human Dialer). It is off by default.</p>"
+    },
+    {
+      "id": "who-can-transfer",
+      "title": "Choose who can transfer",
+      "content": "<p>Under <strong>Who can transfer</strong>, pick one:</p><ul><li><strong>All sub-accounts.</strong></li><li><strong>Only specific sub-accounts</strong> — then select the users allowed to transfer.</li></ul>"
+    },
+    {
+      "id": "internal-recording",
+      "title": "Optionally record internal calls",
+      "content": "<p>Teammate-to-teammate calls (\"Call a teammate\") are always logged with their outcome. In the <strong>Internal teammate calls</strong> box you can also switch on <strong>Record internal calls</strong> and <strong>Transcribe internal calls (multi-party)</strong> to capture them with a recorder agent that joins when the teammate answers. Click <strong>Save</strong>.</p>"
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Round out your Contact Center setup.",
+    "cards": [
+      { "href": "/contact-center/overview", "title": "Contact Center Overview", "description": "The Live Monitor and supervisor controls." },
+      { "href": "/contact-center/groups", "title": "Permission Groups", "description": "Create teams and route calls to them." },
+      { "href": "/contact-center/agent-guide", "title": "The Agent Experience", "description": "How agents transfer and handle calls." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Call Transfer Settings | iMash Docs",
+  "metaDescription": "Enable tenant-wide call transfer in the iMash Contact Center: let operators transfer live calls to teammates or outbound numbers, scope who can, and record internal calls.",
+  "metaKeywords": "call transfer, operator transfer, teammate, outbound, internal call recording, contact center, web dialer"
+}

@@ -11,15 +11,15 @@
       "content": "<ol><li>Ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes).</li><li>Haz clic en <strong>Create New Agent</strong> (Crear nuevo agente).</li><li>Asigna un nombre de agente significativo (por ejemplo, ‘Ben’).</li><li>Selecciona un modelo:<ul><li><strong>Real-time model</strong> (modelo en tiempo real) (recomendado): el más rápido y con el sonido más natural.</li><li><strong>LLM + STT/TTS integration</strong> (integración LLM + STT/TTS): totalmente personalizable, pero puede implicar costos adicionales.</li></ul>El precio varía según el modelo que elijas. </li><li>Selecciona un proveedor de voz:<ul><li>Voces nativas (recomendadas al usar modelos en tiempo real; se incluyen con el modelo y no agregan costos adicionales).</li><li>Los proveedores alternativos pueden generar costos adicionales.</li></ul></li><li>Configura:<ul><li><strong>Opening Message</strong> (Mensaje de apertura): el saludo que se muestra a los usuarios.</li><li><strong>Manual Prompt / Instructions</strong> (Instrucciones manuales): define el estilo, el comportamiento y las respuestas de reserva.</li><li><strong>Conversation Starter</strong> (Inicio de conversación): elige si habla primero el agente o el usuario.</li><li><strong>Temperature</strong> (Temperatura):<ul><li>Valores más bajos = respuestas consistentes y predecibles.</li><li>Valores más altos = respuestas más creativas y aleatorias. (Valor inicial recomendado: 0.7).</li></ul></li></ul></li></ol>",
       "images": [
         {
-          "src": "images/quick-start/agent-builder-light.png",
-          "alt": "Constructor de agentes",
-          "caption": "El constructor principal donde puedes configurar tu agente",
+          "src": "images/agents/create-agent-modal-light.png",
+          "alt": "Constructor de nuevo agente",
+          "caption": "Un agente completamente nuevo se abre en el constructor, listo para configurar",
           "theme": "light"
         },
         {
-          "src": "images/quick-start/agent-builder-dark.png",
-          "alt": "Constructor de agentes",
-          "caption": "El constructor principal donde puedes configurar tu agente",
+          "src": "images/agents/create-agent-modal-dark.png",
+          "alt": "Constructor de nuevo agente",
+          "caption": "Un agente completamente nuevo se abre en el constructor, listo para configurar",
           "theme": "dark"
         }
       ]
@@ -30,15 +30,15 @@
       "content": "<ol><li>Abre la <strong>Test Window</strong> (Ventana de prueba) → haz clic en <strong>Test Agent</strong> (Probar agente) → <strong>Connect</strong> (Conectar).</li><li>Verifica la interacción de audio (tanto la voz del agente como la del usuario).</li></ol>",
       "images": [
         {
-          "src": "images/quick-start/test-agent-light.png",
-          "alt": "Probar agente",
-          "caption": "La interfaz de prueba del agente",
+          "src": "images/agents/test-agent-light.png",
+          "alt": "Prueba tu agente",
+          "caption": "Prueba el agente en vivo en tu navegador antes de publicarlo",
           "theme": "light"
         },
         {
-          "src": "images/quick-start/test-agent-dark.png",
-          "alt": "Probar agente",
-          "caption": "La interfaz de prueba del agente",
+          "src": "images/agents/test-agent-dark.png",
+          "alt": "Prueba tu agente",
+          "caption": "Prueba el agente en vivo en tu navegador antes de publicarlo",
           "theme": "dark"
         }
       ]
@@ -47,13 +47,39 @@
       "id": "agent-features",
       "title": "Configurar las funciones del agente",
       "content": "<ul><li><strong>Knowledge Base</strong> (Base de conocimiento): sube archivos para ampliar el conocimiento del agente.</li><li><strong>Tools</strong> (Herramientas): agrega funciones (por ejemplo, la herramienta End Call, para finalizar la llamada). Los agentes pueden activar herramientas de forma autónoma.</li><li><strong>Settings</strong> (Configuración): define umbrales, como los mensajes de seguimiento automáticos tras la inactividad del usuario (por ejemplo, 8 segundos).</li><li><strong>Privacy</strong> (Privacidad): elige si conservar o descartar las grabaciones de las llamadas.</li><li><strong>Advanced</strong> (Avanzado): configura acciones posteriores a la llamada, como el resumen y la recopilación de datos estructurados (por ejemplo, el nombre y la edad del usuario). <br><strong>Al finalizar una llamada:</strong> accede a <strong>Call Logs</strong> (Registros de llamadas) para revisar las conversaciones. En la <strong>Analysis Tab</strong> (pestaña Análisis), consulta los resúmenes de llamadas y los datos estructurados recopilados por el agente para obtener información más profunda.</li><li><strong>Observer Agent</strong> (Agente observador): ofrece indicaciones y monitoreo en vivo durante las conversaciones.</li><li><strong>Embedding Agents</strong> (Incrustar agentes): los agentes pueden incrustarse en sitios web para la interacción directa.</li><li><strong>MCP Automation</strong> (Automatización MCP): configura automatizaciones a través de la Automation Tab (pestaña Automatización). Las automatizaciones pueden vincularse a los agentes mediante un servidor MCP.</li></ul>",
-      "images": []
+      "images": [
+        {
+          "src": "images/agents/assistant-editor-light.png",
+          "alt": "Paneles de funciones del agente",
+          "caption": "Activa la Base de conocimiento, la Voz, el LLM, las herramientas y más",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/assistant-editor-dark.png",
+          "alt": "Paneles de funciones del agente",
+          "caption": "Activa la Base de conocimiento, la Voz, el LLM, las herramientas y más",
+          "theme": "dark"
+        }
+      ]
     },
     {
       "id": "connect-phone",
       "title": "Conectar un número de teléfono",
       "content": "<ol><li>Ve a <strong>Phone Numbers → Buy New Number</strong> (Números de teléfono → Comprar nuevo número).</li><li>Selecciona el país y el código de área.</li><li>Elige y compra los números disponibles.</li><li>Alternativamente, importa un número de un proveedor SIP agregando los datos del proveedor en la sección SIP Providers (Proveedores SIP).</li></ol>",
-      "images": []
+      "images": [
+        {
+          "src": "images/phone/phone-numbers-light.png",
+          "alt": "Números de teléfono",
+          "caption": "Conecta un número de teléfono para que tu agente pueda recibir llamadas",
+          "theme": "light"
+        },
+        {
+          "src": "images/phone/phone-numbers-dark.png",
+          "alt": "Números de teléfono",
+          "caption": "Conecta un número de teléfono para que tu agente pueda recibir llamadas",
+          "theme": "dark"
+        }
+      ]
     },
     {
       "id": "live-calls",
@@ -61,15 +87,15 @@
       "content": "<ol><li>Abre el <strong>Live Calls Panel</strong> (Panel de llamadas en vivo).</li><li>Haz clic en el <strong>Telephone Icon</strong> (ícono de teléfono) (arriba a la derecha).</li><li>Selecciona el modo <strong>AI Agent Call</strong> (Llamada con agente de IA).</li><li>Elige:<ul><li>El número desde el cual llamar.</li><li>El agente que gestionará la llamada.</li><li>El número de destino que se marcará.</li></ul></li><li>Únete o monitorea la llamada en vivo si es necesario. Observa las interacciones en tiempo real e interviene manualmente cuando se requiera.</li></ol>",
       "images": [
         {
-          "src": "images/quick-start/live-call-light.png",
+          "src": "images/contact-center/cc-live-monitor-light.png",
           "alt": "Llamadas en vivo",
-          "caption": "La interfaz de llamadas en vivo",
+          "caption": "Observa las llamadas en vivo en el Contact Center (Centro de contacto)",
           "theme": "light"
         },
         {
-          "src": "images/quick-start/live-call-dark.png",
+          "src": "images/contact-center/cc-live-monitor-dark.png",
           "alt": "Llamadas en vivo",
-          "caption": "La interfaz de llamadas en vivo",
+          "caption": "Observa las llamadas en vivo en el Contact Center (Centro de contacto)",
           "theme": "dark"
         }
       ]
@@ -78,7 +104,20 @@
       "id": "additional-features",
       "title": "Funciones adicionales en iMash",
       "content": "<ul><li><strong>Overview Page</strong> (Página de resumen): panel de análisis en vivo.</li><li><strong>Automation Tab</strong> (Pestaña de automatización): crea flujos de trabajo y servidores.</li><li><strong>Call Center</strong> (Centro de llamadas): gestiona agentes, registros, números de teléfono y proveedores SIP.</li><li><strong>Campaigns</strong> (Campañas): crea y gestiona campañas salientes.</li><li><strong>CRM</strong>: gestiona cuentas, contactos y prospectos con seguimiento del ciclo de vida.</li><li><strong>Calendar</strong> (Calendario): programa reuniones y asigna llamadas a los agentes.</li><li><strong>API Keys</strong> (Claves de API): genera claves para usar iMash como infraestructura (sin la interfaz).</li><li><strong>Credentials</strong> (Credenciales): conéctate directamente con proveedores externos de voz y LLM.</li><li><strong>Account Settings</strong> (Configuración de la cuenta): gestiona el perfil del usuario.</li><li><strong>Billing</strong> (Facturación): gestiona los métodos de pago y el saldo de la cuenta.</li><li><strong>Demo Data</strong> (Datos de demostración): instala agentes, prospectos y registros predefinidos para explorar las funciones rápidamente.</li></ul>",
-      "images": []
+      "images": [
+        {
+          "src": "images/agents/tools-mcp-light.png",
+          "alt": "Herramientas y MCP",
+          "caption": "Dale a tu agente herramientas e integraciones para tener más potencia",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/tools-mcp-dark.png",
+          "alt": "Herramientas y MCP",
+          "caption": "Dale a tu agente herramientas e integraciones para tener más potencia",
+          "theme": "dark"
+        }
+      ]
     }
   ],
   "nextSteps": {

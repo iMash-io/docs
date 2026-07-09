@@ -1,0 +1,51 @@
+{
+  "title": "Crear un grupo de permisos (equipo)",
+  "lede": "Un grupo de permisos es un equipo o habilidad de agentes humanos. Crea uno, agrega miembros y luego usa sus pestañas internas para dirigir números de teléfono hacia él y controlar cómo suena. Esta guía cubre cómo crear un grupo y agregar personas.",
+  "timeToComplete": "5 minutos",
+  "steps": [
+    {
+      "id": "open-groups",
+      "title": "Abre la pestaña Groups (Grupos)",
+      "content": "<ol><li>Ve a <strong>Call Center &rarr; Contact Center</strong>.</li><li>Haz clic en la pestaña <strong>Groups</strong> (Grupos) (visible para los admins del Contact Center y la cuenta principal).</li><li>La columna izquierda lista tus <strong>Permission Groups</strong> (Grupos de permisos) existentes; el panel derecho muestra los miembros y ajustes del grupo seleccionado.</li></ol>",
+      "images": [
+        { "src": "images/contact-center/cc-groups-overview-light.png", "alt": "Vista general de la pestaña Groups", "caption": "La pestaña Groups: lista de grupos a la izquierda, panel de miembros y ajustes a la derecha.", "theme": "light" },
+        { "src": "images/contact-center/cc-groups-overview-dark.png", "alt": "Vista general de la pestaña Groups", "caption": "La pestaña Groups: lista de grupos a la izquierda, panel de miembros y ajustes a la derecha.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "new-group",
+      "title": "Crea un nuevo grupo",
+      "content": "<ol><li>Haz clic en <strong>New Group</strong> (Nuevo grupo) en la parte superior derecha.</li><li>Ingresa un <strong>Name</strong> (Nombre) (por ejemplo, <em>Sales Team</em> / Equipo de ventas o <em>Spanish Support</em> / Soporte en español).</li><li>Opcionalmente agrega una <strong>Description</strong> (Descripción) de lo que representa el equipo.</li><li>Haz clic en <strong>Create</strong> (Crear). El nuevo grupo se selecciona automáticamente.</li></ol>"
+    },
+    {
+      "id": "add-members",
+      "title": "Agrega miembros al grupo",
+      "content": "<ol><li>Con el grupo seleccionado, abre su pestaña <strong>Members</strong> (Miembros).</li><li>Haz clic en <strong>Add Members</strong> (Agregar miembros).</li><li>Busca usuarios por nombre o correo y elige uno o más — se pueden agregar tanto cuentas principales como subcuentas.</li><li>Haz clic en <strong>Add</strong> (Agregar). Los miembros aparecen en la tabla, cada uno etiquetado como <strong>Main</strong> (Principal) o <strong>Sub</strong> (Subcuenta).</li></ol><p>Para quitar a alguien, haz clic en el ícono de eliminar en su fila y confirma.</p>",
+      "images": [
+        { "src": "images/contact-center/cc-group-members-light.png", "alt": "Pestaña de miembros del grupo", "caption": "La pestaña Members con Add Members y la lista de miembros.", "theme": "light" },
+        { "src": "images/contact-center/cc-group-members-dark.png", "alt": "Pestaña de miembros del grupo", "caption": "La pestaña Members con Add Members y la lista de miembros.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "next-tabs",
+      "title": "Configura las pestañas internas del grupo",
+      "content": "<p>Una vez que el grupo tiene miembros, sus pestañas internas te permiten terminar la configuración: <strong>Members Roles</strong> (Roles de miembros), <strong>Role Mapping</strong> (Asignación de roles), <strong>Inbound SIP Routing</strong> (Enrutamiento SIP entrante), <strong>Ring strategy</strong> (Estrategia de timbrado), <strong>Wait &amp; Hold experience</strong> (Experiencia de espera y retención) y <strong>Queue Settings</strong> (Ajustes de cola). Cada una tiene su propio botón de guardar — empieza con Members Roles e Inbound SIP Routing.</p>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Asigna roles y dirige llamadas a tu nuevo grupo.",
+    "cards": [
+      { "href": "/contact-center/members-roles", "title": "Miembros y roles", "description": "Define el rol de Contact Center de cada miembro." },
+      { "href": "/contact-center/inbound-sip-routing", "title": "Enrutamiento SIP entrante", "description": "Dirige un número de teléfono a este grupo." },
+      { "href": "/contact-center/ring-strategy", "title": "Estrategia de timbrado", "description": "Elige cómo suenan los miembros." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
+  },
+  "metaTitle": "Crear un grupo de permisos | iMash Docs",
+  "metaDescription": "Crea un grupo de permisos del Contact Center en iMash, agrega miembros y abre sus pestañas internas para dirigir llamadas y controlar el timbrado de tu equipo.",
+  "metaKeywords": "grupo de permisos, equipo, grupo de habilidad, agregar miembros, contact center, nuevo grupo, agentes"
+}

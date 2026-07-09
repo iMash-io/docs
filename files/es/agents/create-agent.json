@@ -8,8 +8,18 @@
       "title": "Abre Smart Agents",
       "content": "<ol><li>En la navegación izquierda, ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes).</li><li>Verás la lista de tus agentes existentes.</li><li>Haz clic en <strong>Create</strong> (Crear, el botón de nuevo agente) para empezar un agente nuevo.</li></ol>",
       "images": [
-        { "src": "images/agents/assistants-list-light.png", "alt": "Lista de Smart Agents", "caption": "La lista de Smart Agents: crea un nuevo agente desde aquí.", "theme": "light" },
-        { "src": "images/agents/assistants-list-dark.png", "alt": "Lista de Smart Agents", "caption": "La lista de Smart Agents: crea un nuevo agente desde aquí.", "theme": "dark" }
+        {
+          "src": "images/agents/assistants-list-light.png",
+          "alt": "Lista de Smart Agents",
+          "caption": "La lista de Smart Agents: crea un nuevo agente desde aquí.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/assistants-list-dark.png",
+          "alt": "Lista de Smart Agents",
+          "caption": "La lista de Smart Agents: crea un nuevo agente desde aquí.",
+          "theme": "dark"
+        }
       ]
     },
     {
@@ -17,36 +27,97 @@
       "title": "Ponle nombre y escribe el prompt",
       "content": "<ol><li>Dale al agente un <strong>nombre</strong> claro para que puedas encontrarlo más tarde.</li><li>En la columna de prompt a la izquierda, describe el rol, la personalidad y las reglas del agente: qué debe hacer y cómo debe hablar.</li><li>Define el <strong>first message</strong> (primer mensaje) que dice el agente cuando se conecta una llamada.</li></ol>",
       "images": [
-        { "src": "images/agents/assistant-editor-light.png", "alt": "Editor de agentes", "caption": "El editor: el prompt a la izquierda, los paneles de funciones en el centro.", "theme": "light" },
-        { "src": "images/agents/assistant-editor-dark.png", "alt": "Editor de agentes", "caption": "El editor: el prompt a la izquierda, los paneles de funciones en el centro.", "theme": "dark" }
+        {
+          "src": "images/agents/assistant-editor-light.png",
+          "alt": "Editor del agente",
+          "caption": "El editor: el prompt a la izquierda, los paneles de funciones en el centro.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/assistant-editor-dark.png",
+          "alt": "Editor del agente",
+          "caption": "El editor: el prompt a la izquierda, los paneles de funciones en el centro.",
+          "theme": "dark"
+        }
       ]
     },
     {
       "id": "model-and-voice",
       "title": "Elige el cerebro y la voz",
       "content": "<ol><li>Abre el panel <strong>Brains (LLM)</strong> (Cerebros) y elige el modelo que genera las respuestas (un modelo de voz a voz en tiempo real, o un modelo de texto combinado con un transcriptor).</li><li>Abre el panel <strong>Voice (TTS)</strong> (Voz) y elige la voz con la que habla tu agente.</li></ol>",
-      "images": []
+      "images": [
+        {
+          "src": "images/agents/voice-config-light.png",
+          "alt": "Voz y modelo",
+          "caption": "Elige la voz (TTS) y el cerebro (LLM) de tu agente",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/voice-config-dark.png",
+          "alt": "Voz y modelo",
+          "caption": "Elige la voz (TTS) y el cerebro (LLM) de tu agente",
+          "theme": "dark"
+        }
+      ]
     },
     {
       "id": "enhance",
       "title": "Agrega capacidades (opcional)",
       "content": "<ul><li><strong>Knowledge Base</strong> (Base de conocimiento): sube preguntas frecuentes y documentos para responder a partir de ellos.</li><li><strong>Tools / MCP</strong> (Herramientas / MCP): permite que el agente finalice llamadas, agende citas o llame a tus API.</li><li><strong>Settings</strong> (Configuración): ajusta los tiempos de espera, los mensajes de inactividad, el buzón de voz y la privacidad.</li></ul>",
-      "images": []
+      "images": [
+        {
+          "src": "images/agents/tools-mcp-light.png",
+          "alt": "Agrega herramientas",
+          "caption": "Agrega herramientas, servidores MCP y una base de conocimiento",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/tools-mcp-dark.png",
+          "alt": "Agrega herramientas",
+          "caption": "Agrega herramientas, servidores MCP y una base de conocimiento",
+          "theme": "dark"
+        }
+      ]
     },
     {
       "id": "test",
       "title": "Prueba y guarda",
       "content": "<ol><li>Haz clic en <strong>Test Agent</strong> (Probar agente) y conéctate para hablar con él en vivo en el navegador.</li><li>Refina el prompt, la voz y la configuración hasta que se comporte como quieres.</li><li>Tus cambios se guardan en el agente para que quede listo para vincularlo a un número de teléfono o a un sitio web.</li></ol>",
-      "images": []
+      "images": [
+        {
+          "src": "images/agents/test-agent-light.png",
+          "alt": "Prueba el agente",
+          "caption": "Haz clic en Test Agent (Probar agente) para probarlo en vivo antes de publicarlo",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/test-agent-dark.png",
+          "alt": "Prueba el agente",
+          "caption": "Haz clic en Test Agent (Probar agente) para probarlo en vivo antes de publicarlo",
+          "theme": "dark"
+        }
+      ]
     }
   ],
   "nextSteps": {
     "title": "¿Qué sigue?",
     "description": "Ahora desarrolla y lanza tu nuevo agente:",
     "cards": [
-      { "href": "/agents/voice-configuration", "title": "Configura la voz", "description": "Elige un proveedor de TTS y previsualiza voces." },
-      { "href": "/agents/agent-tools", "title": "Agrega herramientas", "description": "Permite que el agente realice acciones durante una llamada." },
-      { "href": "/agents/test-agent", "title": "Prueba tu agente", "description": "Pruébalo en el navegador o con una llamada telefónica real." }
+      {
+        "href": "/agents/voice-configuration",
+        "title": "Configura la voz",
+        "description": "Elige un proveedor de TTS y previsualiza voces."
+      },
+      {
+        "href": "/agents/agent-tools",
+        "title": "Agrega herramientas",
+        "description": "Permite que el agente realice acciones durante una llamada."
+      },
+      {
+        "href": "/agents/test-agent",
+        "title": "Prueba tu agente",
+        "description": "Pruébalo en el navegador o con una llamada telefónica real."
+      }
     ]
   },
   "support": {

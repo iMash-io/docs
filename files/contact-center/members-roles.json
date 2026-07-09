@@ -1,0 +1,47 @@
+{
+  "title": "Members Roles",
+  "lede": "Give each group member a Contact Center role that controls what they can see and do. This guide explains the four roles, how the effective role is decided, and the option to keep the web dialer always open.",
+  "timeToComplete": "5 minutes",
+  "steps": [
+    {
+      "id": "open-members-roles",
+      "title": "Open the Members Roles tab",
+      "content": "<ol><li>Go to <strong>Call Center &rarr; Contact Center &rarr; Groups</strong>.</li><li>Select a group, then open its <strong>Members Roles</strong> tab.</li><li>Each member appears with a <strong>Contact Center role</strong> dropdown.</li></ol>",
+      "images": [
+        { "src": "images/contact-center/cc-group-members-roles-light.png", "alt": "Members Roles tab", "caption": "Members Roles: pick a Contact Center role per member.", "theme": "light" },
+        { "src": "images/contact-center/cc-group-members-roles-dark.png", "alt": "Members Roles tab", "caption": "Members Roles: pick a Contact Center role per member.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "pick-role",
+      "title": "Understand the four roles",
+      "content": "<ul><li><strong>Agent</strong> — a regular rep who makes and receives calls and handles customers. Sees only their own queue.</li><li><strong>Monitor / QA</strong> — can listen to calls and review reporting and recordings, but cannot manage agents or change settings.</li><li><strong>Supervisor</strong> — manages agents: listen, whisper, barge, force status, and review performance.</li><li><strong>Admin</strong> — full Contact Center access including the Groups and Call Transfer settings.</li></ul><p>Pick a role from each member's dropdown.</p>"
+    },
+    {
+      "id": "effective-role",
+      "title": "How the effective role is decided",
+      "content": "<p>A person can belong to several groups. Their <strong>effective role</strong> is the <strong>highest</strong> role across all their groups. For example, an Agent in one group who is a Supervisor in another is treated as a Supervisor everywhere.</p><p>The tenant <strong>main account is always Admin</strong> and cannot be downgraded here.</p>"
+    },
+    {
+      "id": "keep-dialer-open",
+      "title": "Keep the web dialer always open",
+      "content": "<p>Under <strong>Keep the web dialer always open for</strong>, check the roles that should have the web dialer auto-opened and pinned. Members with a checked effective role can't close the dialer, so they never miss a queued call.</p><p>Leave all boxes unchecked for the normal behavior (the dialer opens only when they click the phone button). This isn't enforced on phones or small tablets. Click <strong>Save</strong> when done.</p>"
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Map roles to access levels and route calls to the group.",
+    "cards": [
+      { "href": "/contact-center/role-mapping", "title": "Role Mapping", "description": "Map each role to an Access role and View profile." },
+      { "href": "/contact-center/ring-strategy", "title": "Ring Strategy", "description": "Choose how online members are rung." },
+      { "href": "/contact-center/agent-guide", "title": "The Agent Experience", "description": "See what agents do with these roles." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Members Roles | iMash Docs",
+  "metaDescription": "Assign Contact Center roles — Agent, Monitor/QA, Supervisor, Admin — to group members in iMash, understand effective role, and pin the web dialer open.",
+  "metaKeywords": "contact center roles, agent, supervisor, monitor, admin, effective role, web dialer, permission group"
+}

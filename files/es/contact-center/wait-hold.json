@@ -1,0 +1,47 @@
+{
+  "title": "Experiencia de espera y retención",
+  "lede": "Controla el audio que escucha una persona mientras espera a un humano — durante el timbrado, mientras está en cola y cuando un agente presiona Hold (Retener). Sube música y agrega mensajes hablados periódicos.",
+  "timeToComplete": "6 minutos",
+  "steps": [
+    {
+      "id": "open-waithold",
+      "title": "Abre la pestaña Wait & Hold experience (Experiencia de espera y retención)",
+      "content": "<ol><li>Ve a <strong>Call Center &rarr; Contact Center &rarr; Groups</strong> (Grupos) y selecciona un grupo.</li><li>Abre la pestaña <strong>Wait &amp; Hold experience</strong> (Experiencia de espera y retención).</li></ol>",
+      "images": [
+        { "src": "images/contact-center/cc-group-wait-hold-light.png", "alt": "Pestaña Wait & Hold experience", "caption": "Wait & Hold: música de espera, mensajes periódicos y música de retención.", "theme": "light" },
+        { "src": "images/contact-center/cc-group-wait-hold-dark.png", "alt": "Pestaña Wait & Hold experience", "caption": "Wait & Hold: música de espera, mensajes periódicos y música de retención.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "wait-audio-mode",
+      "title": "Decide qué suena durante el timbrado",
+      "content": "<p>Usa <strong>Play wait audio during the initial group ring</strong> (Reproducir audio de espera durante el timbrado inicial del grupo) para elegir qué escucha la persona mientras el grupo está sonando:</p><ul><li><strong>Off</strong> (Desactivado) — timbre telefónico normal (predeterminado).</li><li><strong>Only when a member is online</strong> (Solo cuando hay un miembro en línea).</li><li><strong>Always</strong> (Siempre) — incluso si no hay nadie en línea.</li></ul><p>Activarlo contesta la llamada anticipadamente para que suene tu música y mensajes de espera en lugar del timbre — ten en cuenta que la llamada se conecta (y se factura) desde ese momento.</p>"
+    },
+    {
+      "id": "wait-music",
+      "title": "Agrega música de espera y mensajes periódicos",
+      "content": "<ol><li>Activa <strong>Wait music</strong> (Música de espera) y usa <strong>Upload wait music</strong> (Subir música de espera) (o pega una URL de audio). Usa un bucle corto; el límite es 10 MB.</li><li>Activa <strong>Periodic messages</strong> (Mensajes periódicos) para decir líneas cortas en bucle mientras la persona espera. Agrega varios — se reproducen en orden, cada uno tras su intervalo.</li><li>Define el intervalo de cada mensaje como un solo número (por ejemplo 30) o un rango como 15-45 para una espera aleatoria. Tokens como {first_name} se completan para la llamada.</li></ol>"
+    },
+    {
+      "id": "hold-music",
+      "title": "Configura la música de retención",
+      "content": "<p>Activa <strong>Hold music</strong> (Música de retención) y sube una pista (o pega una URL). Esto se reproduce a la persona cuando un agente presiona <strong>Hold</strong> (Retener) durante una llamada en vivo. Haz clic en <strong>Save</strong> (Guardar) cuando termines.</p>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Decide qué pasa cuando la espera se alarga.",
+    "cards": [
+      { "href": "/contact-center/queue-settings", "title": "Ajustes de cola", "description": "Tiempo máximo de espera y comportamiento al agotarse el tiempo." },
+      { "href": "/contact-center/ring-strategy", "title": "Estrategia de timbrado", "description": "Cómo suena el grupo antes de pasar a la cola." },
+      { "href": "/contact-center/overview", "title": "Visión general del Contact Center", "description": "Ve todo el espacio de trabajo." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
+  },
+  "metaTitle": "Experiencia de espera y retención | iMash Docs",
+  "metaDescription": "Configura la música de retención, la música de espera y los mensajes hablados periódicos que escucha una persona mientras está en cola o en espera para un grupo del Contact Center en iMash.",
+  "metaKeywords": "música de retención, música de espera, mensajes periódicos, saludo, audio de cola, contact center, grupo de permisos"
+}

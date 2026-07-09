@@ -1,0 +1,47 @@
+{
+  "title": "Estrategia de timbrado",
+  "lede": "Controla cómo suenan los miembros en línea de un grupo, cuánto tiempo suena el grupo antes de pasar a la IA, y algunos comportamientos de manejo de llamadas como forzar la respuesta automática. Estos ajustes aplican por igual a las llamadas entrantes, las transferencias de IA y las colas.",
+  "timeToComplete": "6 minutos",
+  "steps": [
+    {
+      "id": "open-ring",
+      "title": "Abre la pestaña Ring strategy (Estrategia de timbrado)",
+      "content": "<ol><li>Ve a <strong>Call Center &rarr; Contact Center &rarr; Groups</strong> (Grupos) y selecciona un grupo.</li><li>Abre la pestaña <strong>Ring strategy</strong> (Estrategia de timbrado).</li></ol>",
+      "images": [
+        { "src": "images/contact-center/cc-group-ring-strategy-light.png", "alt": "Pestaña Ring strategy", "caption": "Ring strategy: cómo suenan los miembros, el respaldo de IA y el manejo de llamadas.", "theme": "light" },
+        { "src": "images/contact-center/cc-group-ring-strategy-dark.png", "alt": "Pestaña Ring strategy", "caption": "Ring strategy: cómo suenan los miembros, el respaldo de IA y el manejo de llamadas.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "when-ringing",
+      "title": "Elige cómo suena el grupo",
+      "content": "<p>En <strong>When ringing the group</strong> (Al hacer sonar el grupo), elige una estrategia:</p><ul><li><strong>Ring all at once</strong> (Sonar a todos a la vez) — suenan todos los miembros en línea; el primero en contestar se la queda (predeterminado).</li><li><strong>Round-robin</strong> (Turno rotativo) — un miembro a la vez, rotando entre los miembros.</li><li><strong>Linear</strong> (Lineal) — uno a la vez, empezando siempre desde el inicio de la lista de miembros.</li><li><strong>Longest idle</strong> (Mayor tiempo inactivo) — suena a quien haya esperado más tiempo desde su última llamada.</li></ul><p>Para las estrategias de uno a la vez, define <strong>Ring each member for (seconds)</strong> (Sonar cada miembro por [segundos]) antes de que la llamada avance.</p>"
+    },
+    {
+      "id": "ring-seconds",
+      "title": "Define cuánto tiempo antes de dirigir a la IA",
+      "content": "<p>Define <strong>Ring the group for (seconds) before routing to AI</strong> (Sonar el grupo por [segundos] antes de dirigir a la IA). Este es el tiempo total que suena el grupo. Si ningún miembro contesta dentro de ese tiempo, la llamada sigue la opción <strong>When no one answers</strong> (Cuando nadie contesta): dirigir al agente de IA asignado al número, dirigir a un agente de IA distinto, o colgar.</p>"
+    },
+    {
+      "id": "call-handling",
+      "title": "Configura los comportamientos de manejo de llamadas",
+      "content": "<p>En la tarjeta <strong>Call handling</strong> (Manejo de llamadas), activa:</p><ul><li><strong>Force auto-answer</strong> (Forzar respuesta automática) — cada miembro en línea conecta automáticamente las llamadas del grupo sin hacer clic en Accept (Aceptar); el primero en ganar se la queda.</li><li><strong>Force auto-open lead/contact</strong> (Forzar abrir prospecto/contacto automáticamente) — la pantalla de cada miembro abre el registro de prospecto/contacto de quien llama mientras la llamada suena.</li><li><strong>Disable auto-leave when the caller hangs up</strong> (Desactivar la salida automática cuando quien llama cuelga) — mantiene al miembro en la línea después de que quien llama cuelga (solo casos especiales).</li><li><strong>Hold callers in a queue when no agent is free</strong> (Retener a las personas en una cola cuando no hay agente libre) — activado por defecto; consulta Queue Settings (Ajustes de cola).</li></ul><p>Haz clic en <strong>Save</strong> (Guardar) cuando termines.</p>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Define qué escuchan las personas y qué pasa si esperan.",
+    "cards": [
+      { "href": "/contact-center/wait-hold", "title": "Experiencia de espera y retención", "description": "Configura la música y los mensajes que escuchan las personas." },
+      { "href": "/contact-center/queue-settings", "title": "Ajustes de cola", "description": "Espera máxima y comportamiento al agotarse el tiempo." },
+      { "href": "/agents/create-agent", "title": "Crear un agente de IA", "description": "Construye la IA que responde como respaldo." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
+  },
+  "metaTitle": "Estrategia de timbrado | iMash Docs",
+  "metaDescription": "Configura cómo suena un grupo del Contact Center en iMash — sonar a todos a la vez o secuencialmente, segundos antes del respaldo de IA, forzar respuesta automática y abrir prospecto/contacto automáticamente.",
+  "metaKeywords": "estrategia de timbrado, round robin, sonar a todos, forzar respuesta automática, abrir contacto automático, respaldo de ia, contact center"
+}

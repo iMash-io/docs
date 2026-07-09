@@ -1,0 +1,47 @@
+{
+  "title": "Reportes del Contact Center",
+  "lede": "La pestaña Reporting (Reportes) resume la actividad de llamadas de tus agentes humanos, agentes de IA y campañas. Filtra por fecha, profundiza en seis categorías de reportes y exporta cualquier vista a CSV.",
+  "timeToComplete": "6 minutos",
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Abre la pestaña Reporting (Reportes)",
+      "content": "<ol><li>Ve a <strong>Call Center &rarr; Contact Center</strong>.</li><li>Haz clic en la pestaña <strong>Reporting</strong> (Reportes) (disponible para Monitor/QA y superiores).</li></ol>",
+      "images": [
+        { "src": "images/contact-center/cc-reporting-light.png", "alt": "Pestaña Reporting", "caption": "Reporting: pestañas de categorías, preajustes de fechas, filtros y KPIs.", "theme": "light" },
+        { "src": "images/contact-center/cc-reporting-dark.png", "alt": "Pestaña Reporting", "caption": "Reporting: pestañas de categorías, preajustes de fechas, filtros y KPIs.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "categories",
+      "title": "Elige una categoría de reporte",
+      "content": "<p>Usa las pestañas tipo píldora para cambiar entre las seis categorías:</p><ul><li><strong>General</strong> — volumen total de llamadas, tasas de conexión y respuesta, tiempo promedio de conversación.</li><li><strong>Human Agents</strong> (Agentes humanos) — llamadas atendidas, AHT, ocupación y actividad de supervisión.</li><li><strong>AI Agents</strong> (Agentes de IA) — llamadas por asistente, contención, escalaciones y costo.</li><li><strong>Smart Campaigns</strong> (Campañas inteligentes) — campañas de marcador con IA.</li><li><strong>Human Campaigns</strong> (Campañas humanas) — llamadas de marcador predictivo por lista de marcado.</li><li><strong>Queue</strong> (Cola) — esperas y resultados de las colas de grupos de habilidad.</li></ul>"
+    },
+    {
+      "id": "date-filters",
+      "title": "Define el rango de fechas y los filtros",
+      "content": "<ol><li>Elige un preajuste de fecha: <strong>Today</strong> (Hoy), <strong>This week</strong> (Esta semana), <strong>This month</strong> (Este mes), <strong>Last 7 days</strong> (Últimos 7 días), <strong>Last 30 days</strong> (Últimos 30 días) o <strong>Custom</strong> (Personalizado).</li><li>Abre la barra <strong>Filters</strong> (Filtros) para acotar por dirección, asistente, campaña, propietario, agente humano, tipo de llamada, número de teléfono, contacto/prospecto o UUID de llamada.</li><li>Haz clic en <strong>Refresh</strong> (Actualizar) para recargar, o en <strong>Clear filters</strong> (Limpiar filtros) para restablecer.</li></ol>"
+    },
+    {
+      "id": "export",
+      "title": "Exporta a CSV",
+      "content": "<p>Haz clic en <strong>Export</strong> (Exportar, el ícono de descarga) para descargar la pestaña actual como CSV. Las columnas coinciden con la categoría que estés viendo — por ejemplo, métricas de manejo por agente para Human Agents, o contención por asistente para AI Agents.</p>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Observa las llamadas en vivo y comprende lo que hacen los agentes.",
+    "cards": [
+      { "href": "/contact-center/overview", "title": "Visión general del Contact Center", "description": "El Live Monitor y los controles de supervisor." },
+      { "href": "/contact-center/agent-guide", "title": "La experiencia del agente", "description": "Cómo los agentes manejan las llamadas y definen las disposiciones." },
+      { "href": "/contact-center/groups", "title": "Grupos de permisos", "description": "Gestiona los equipos por los que se desglosan estos reportes." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
+  },
+  "metaTitle": "Reportes del Contact Center | iMash Docs",
+  "metaDescription": "Usa los Reportes del Contact Center de iMash: seis categorías (General, Agentes humanos, Agentes de IA, Campañas inteligentes/humanas, Cola), KPIs, preajustes de fechas, filtros y exportación a CSV.",
+  "metaKeywords": "reportes contact center, kpis, tasa de conexión, aht, exportar csv, agentes humanos, agentes de ia, reporte de cola"
+}

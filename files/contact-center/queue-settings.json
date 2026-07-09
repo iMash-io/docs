@@ -1,0 +1,47 @@
+{
+  "title": "Queue Settings",
+  "lede": "When an agent transfers a call to this group as a queue, the customer is held while the group's online members are rung until one answers. Set the maximum wait, what happens on timeout, and the on-hold audio.",
+  "timeToComplete": "5 minutes",
+  "steps": [
+    {
+      "id": "open-queue",
+      "title": "Open the Queue Settings tab",
+      "content": "<ol><li>Go to <strong>Call Center &rarr; Contact Center &rarr; Groups</strong> and select a group.</li><li>Open the <strong>Queue Settings</strong> tab.</li></ol>",
+      "images": [
+        { "src": "images/contact-center/cc-group-queue-settings-light.png", "alt": "Queue Settings tab", "caption": "Queue Settings: max wait, timeout action, and queue hold audio.", "theme": "light" },
+        { "src": "images/contact-center/cc-group-queue-settings-dark.png", "alt": "Queue Settings tab", "caption": "Queue Settings: max wait, timeout action, and queue hold audio.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "max-wait",
+      "title": "Set the maximum wait",
+      "content": "<p>In <strong>Max wait in queue (seconds)</strong>, enter how long a queued customer waits before the timeout action fires. Enter <strong>0</strong> to use the system default (30 minutes).</p>"
+    },
+    {
+      "id": "on-timeout",
+      "title": "Choose the on-timeout action",
+      "content": "<p>Under <strong>When the max wait is reached</strong>, choose what happens if nobody answers in time:</p><ul><li><strong>Hang up the call.</strong></li><li><strong>Transfer to an AI assistant</strong> — then pick the assistant that takes the call.</li></ul><p>This is the safety net so a waiting customer is never stranded.</p>"
+    },
+    {
+      "id": "queue-audio",
+      "title": "Set the queue hold audio",
+      "content": "<p>Toggle <strong>Play hold music while queued</strong> to play your configured hold or wait music while the caller is in this queue. Optionally add <strong>Queue periodic messages</strong> — spoken lines that loop while the caller is held. You can use tokens like {first_name} and {callers_queue_position}, which updates live with the caller's place in line. Click <strong>Save</strong>.</p>"
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Round out how the group rings and sounds.",
+    "cards": [
+      { "href": "/contact-center/wait-hold", "title": "Wait & Hold Experience", "description": "Music and messages while callers wait." },
+      { "href": "/contact-center/ring-strategy", "title": "Ring Strategy", "description": "How members are rung before queuing." },
+      { "href": "/agents/create-agent", "title": "Create an AI Agent", "description": "Build the assistant for the timeout fallback." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Queue Settings | iMash Docs",
+  "metaDescription": "Configure Contact Center queue settings in iMash: max wait time, on-timeout action (hang up or hand to AI), queue size, and on-hold audio.",
+  "metaKeywords": "queue settings, max wait, timeout, voicemail, ai fallback, hold music, contact center, permission group"
+}

@@ -1,0 +1,47 @@
+{
+  "title": "Ajustes de cola",
+  "lede": "Cuando un agente transfiere una llamada a este grupo como cola, el cliente queda retenido mientras suenan los miembros en línea del grupo hasta que uno contesta. Define la espera máxima, qué pasa al agotarse el tiempo y el audio de retención.",
+  "timeToComplete": "5 minutos",
+  "steps": [
+    {
+      "id": "open-queue",
+      "title": "Abre la pestaña Queue Settings (Ajustes de cola)",
+      "content": "<ol><li>Ve a <strong>Call Center &rarr; Contact Center &rarr; Groups</strong> (Grupos) y selecciona un grupo.</li><li>Abre la pestaña <strong>Queue Settings</strong> (Ajustes de cola).</li></ol>",
+      "images": [
+        { "src": "images/contact-center/cc-group-queue-settings-light.png", "alt": "Pestaña Queue Settings", "caption": "Queue Settings: espera máxima, acción al agotarse el tiempo y audio de retención de la cola.", "theme": "light" },
+        { "src": "images/contact-center/cc-group-queue-settings-dark.png", "alt": "Pestaña Queue Settings", "caption": "Queue Settings: espera máxima, acción al agotarse el tiempo y audio de retención de la cola.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "max-wait",
+      "title": "Define la espera máxima",
+      "content": "<p>En <strong>Max wait in queue (seconds)</strong> (Espera máxima en cola [segundos]), ingresa cuánto espera un cliente en cola antes de que se dispare la acción por tiempo agotado. Ingresa <strong>0</strong> para usar el valor predeterminado del sistema (30 minutos).</p>"
+    },
+    {
+      "id": "on-timeout",
+      "title": "Elige la acción al agotarse el tiempo",
+      "content": "<p>En <strong>When the max wait is reached</strong> (Cuando se alcanza la espera máxima), elige qué pasa si nadie contesta a tiempo:</p><ul><li><strong>Hang up the call</strong> (Colgar la llamada).</li><li><strong>Transfer to an AI assistant</strong> (Transferir a un asistente de IA) — luego elige el asistente que toma la llamada.</li></ul><p>Esta es la red de seguridad para que un cliente en espera nunca quede abandonado.</p>"
+    },
+    {
+      "id": "queue-audio",
+      "title": "Configura el audio de retención de la cola",
+      "content": "<p>Activa <strong>Play hold music while queued</strong> (Reproducir música de retención mientras está en cola) para reproducir la música de retención o de espera configurada mientras la persona está en esta cola. Opcionalmente agrega <strong>Queue periodic messages</strong> (Mensajes periódicos de cola) — líneas habladas que se repiten en bucle mientras la persona está retenida. Puedes usar tokens como {first_name} y {callers_queue_position}, que se actualiza en vivo con el lugar de la persona en la fila. Haz clic en <strong>Save</strong> (Guardar).</p>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Completa cómo suena y se escucha el grupo.",
+    "cards": [
+      { "href": "/contact-center/wait-hold", "title": "Experiencia de espera y retención", "description": "Música y mensajes mientras las personas esperan." },
+      { "href": "/contact-center/ring-strategy", "title": "Estrategia de timbrado", "description": "Cómo suenan los miembros antes de pasar a la cola." },
+      { "href": "/agents/create-agent", "title": "Crear un agente de IA", "description": "Construye el asistente para el respaldo por tiempo agotado." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
+  },
+  "metaTitle": "Ajustes de cola | iMash Docs",
+  "metaDescription": "Configura los ajustes de cola del Contact Center en iMash: tiempo máximo de espera, acción al agotarse el tiempo (colgar o pasar a la IA), tamaño de la cola y audio de retención.",
+  "metaKeywords": "ajustes de cola, espera máxima, tiempo agotado, buzón de voz, respaldo de ia, música de retención, contact center, grupo de permisos"
+}

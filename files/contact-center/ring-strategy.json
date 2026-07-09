@@ -1,0 +1,47 @@
+{
+  "title": "Ring Strategy",
+  "lede": "Control how a group's online members are rung, how long the group rings before falling back to AI, and a few call-handling behaviors like force auto-answer. These settings apply to inbound calls, AI transfers, and queues alike.",
+  "timeToComplete": "6 minutes",
+  "steps": [
+    {
+      "id": "open-ring",
+      "title": "Open the Ring strategy tab",
+      "content": "<ol><li>Go to <strong>Call Center &rarr; Contact Center &rarr; Groups</strong> and select a group.</li><li>Open the <strong>Ring strategy</strong> tab.</li></ol>",
+      "images": [
+        { "src": "images/contact-center/cc-group-ring-strategy-light.png", "alt": "Ring strategy tab", "caption": "Ring strategy: how members are rung, the AI fallback, and call handling.", "theme": "light" },
+        { "src": "images/contact-center/cc-group-ring-strategy-dark.png", "alt": "Ring strategy tab", "caption": "Ring strategy: how members are rung, the AI fallback, and call handling.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "when-ringing",
+      "title": "Choose how the group is rung",
+      "content": "<p>Under <strong>When ringing the group</strong>, pick a strategy:</p><ul><li><strong>Ring all at once</strong> — every online member rings; first to answer wins (default).</li><li><strong>Round-robin</strong> — one member at a time, rotating between members.</li><li><strong>Linear</strong> — one at a time, always starting from the top of the member list.</li><li><strong>Longest idle</strong> — ring whoever has waited longest since their last call.</li></ul><p>For the one-at-a-time strategies, set <strong>Ring each member for (seconds)</strong> before the call advances.</p>"
+    },
+    {
+      "id": "ring-seconds",
+      "title": "Set how long before routing to AI",
+      "content": "<p>Set <strong>Ring the group for (seconds) before routing to AI</strong>. This is the total time the group is rung. If no member answers within it, the call follows the <strong>When no one answers</strong> option: route to the number's assigned AI agent, route to a different AI agent, or hang up.</p>"
+    },
+    {
+      "id": "call-handling",
+      "title": "Set call-handling behaviors",
+      "content": "<p>In the <strong>Call handling</strong> card, toggle:</p><ul><li><strong>Force auto-answer</strong> — every online member auto-connects group calls without clicking Accept; the first to win takes it.</li><li><strong>Force auto-open lead/contact</strong> — each member's screen opens the caller's lead/contact record as the call rings.</li><li><strong>Disable auto-leave when the caller hangs up</strong> — keep the member on the line after the caller hangs up (special cases only).</li><li><strong>Hold callers in a queue when no agent is free</strong> — on by default; see Queue Settings.</li></ul><p>Click <strong>Save</strong> when finished.</p>"
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Shape what callers hear and what happens if they wait.",
+    "cards": [
+      { "href": "/contact-center/wait-hold", "title": "Wait & Hold Experience", "description": "Set the music and messages callers hear." },
+      { "href": "/contact-center/queue-settings", "title": "Queue Settings", "description": "Max wait and on-timeout behavior." },
+      { "href": "/agents/create-agent", "title": "Create an AI Agent", "description": "Build the AI that answers on fallback." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Ring Strategy | iMash Docs",
+  "metaDescription": "Configure how a Contact Center group rings in iMash — ring all at once or sequentially, seconds before AI fallback, force auto-answer, and auto-open lead/contact.",
+  "metaKeywords": "ring strategy, round robin, ring all, force auto-answer, auto-open contact, ai fallback, contact center"
+}

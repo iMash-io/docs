@@ -11,15 +11,15 @@
       "content": "<ol><li>Navigate to <strong>Intelligence Center → Smart Agents</strong>.</li><li>Click <strong>Create New Agent</strong>.</li><li>Assign a meaningful Agent Name (e.g., ‘Ben’).</li><li>Select a Model:<ul><li><strong>Real-time model</strong> (recommended): fastest and most natural sounding.</li><li><strong>LLM + STT/TTS integration</strong>: fully customisable but may involve additional costs.</li></ul>Pricing varies depending on model choice. </li><li>Select a Voice Provider:<ul><li>Native voices (recommended when using real time models, they are provided with the model and do not add extra costs).</li><li>Alternative providers may incur extra costs.</li></ul></li><li>Configure:<ul><li><strong>Opening Message</strong>: greeting shown to users.</li><li><strong>Manual Prompt / Instructions</strong>: define style, behaviour, fallback responses.</li><li><strong>Conversation Starter</strong>: choose whether the agent or the user begins speaking.</li><li><strong>Temperature</strong>:<ul><li>Lower values = consistent, predictable responses.</li><li>Higher values = more creative and random. (Recommended starting value: 0.7).</li></ul></li></ul></li></ol>",
       "images": [
         {
-          "src": "images/quick-start/agent-builder-light.png",
-          "alt": "Agent Builder",
-          "caption": "The main builder where you can configure your agent",
+          "src": "images/agents/create-agent-modal-light.png",
+          "alt": "New agent builder",
+          "caption": "A brand-new agent opens in the builder, ready to configure",
           "theme": "light"
         },
         {
-          "src": "images/quick-start/agent-builder-dark.png",
-          "alt": "Agent Builder",
-          "caption": "The main builder where you can configure your agent",
+          "src": "images/agents/create-agent-modal-dark.png",
+          "alt": "New agent builder",
+          "caption": "A brand-new agent opens in the builder, ready to configure",
           "theme": "dark"
         }
       ]
@@ -30,15 +30,15 @@
       "content": "<ol><li>Open the <strong>Test Window</strong> → click <strong>Test Agent</strong> → <strong>Connect</strong>.</li><li>Verify audio interaction (both agent and user voices).</li></ol>",
       "images": [
         {
-          "src": "images/quick-start/test-agent-light.png",
-          "alt": "Test Agent",
-          "caption": "The test agent interface",
+          "src": "images/agents/test-agent-light.png",
+          "alt": "Test your agent",
+          "caption": "Test the agent live in your browser before going live",
           "theme": "light"
         },
         {
-          "src": "images/quick-start/test-agent-dark.png",
-          "alt": "Test Agent",
-          "caption": "The test agent interface",
+          "src": "images/agents/test-agent-dark.png",
+          "alt": "Test your agent",
+          "caption": "Test the agent live in your browser before going live",
           "theme": "dark"
         }
       ]
@@ -47,13 +47,39 @@
       "id": "agent-features",
       "title": "Configuring Agent Features",
       "content": "<ul><li><strong>Knowledge Base</strong>: Upload files to extend agent knowledge.</li><li><strong>Tools</strong>: Add functions (e.g., End Call Tool). Agents can trigger tools autonomously.</li><li><strong>Settings</strong>: Define thresholds, such as automatic follow-up messages after user inactivity (e.g., 8 seconds).</li><li><strong>Privacy</strong>: Choose whether to retain or discard call recordings.</li><li><strong>Advanced</strong>: Configure post-call actions, such as summarisation and structured data collection (e.g., user’s name and age). <br><strong>At the end of a call:</strong> Access <strong>Call Logs</strong> to review conversations. In the <strong>Analysis Tab</strong>, view call summaries and structured data collected by the agent for deeper insights.</li><li><strong>Observer Agent</strong>: Provides live cues and monitoring during conversations.</li><li><strong>Embedding Agents</strong>: Agents can be embedded into websites for direct interaction.</li><li><strong>MCP Automation</strong>: Configure automations via the Automation Tab. Automations can be linked to agents using an MCP server.</li></ul>",
-      "images": []
+      "images": [
+        {
+          "src": "images/agents/assistant-editor-light.png",
+          "alt": "Agent feature panels",
+          "caption": "Toggle Knowledge Base, Voice, LLM, tools and more",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/assistant-editor-dark.png",
+          "alt": "Agent feature panels",
+          "caption": "Toggle Knowledge Base, Voice, LLM, tools and more",
+          "theme": "dark"
+        }
+      ]
     },
     {
       "id": "connect-phone",
       "title": "Connecting a Phone Number",
       "content": "<ol><li>Navigate to <strong>Phone Numbers → Buy New Number</strong>.</li><li>Select country and area code.</li><li>Choose and purchase available numbers.</li><li>Alternatively, import a SIP provider number by adding provider details in the SIP Providers section.</li></ol>",
-      "images": []
+      "images": [
+        {
+          "src": "images/phone/phone-numbers-light.png",
+          "alt": "Phone numbers",
+          "caption": "Connect a phone number so your agent can take calls",
+          "theme": "light"
+        },
+        {
+          "src": "images/phone/phone-numbers-dark.png",
+          "alt": "Phone numbers",
+          "caption": "Connect a phone number so your agent can take calls",
+          "theme": "dark"
+        }
+      ]
     },
     {
       "id": "live-calls",
@@ -61,15 +87,15 @@
       "content": "<ol><li>Open <strong>Live Calls Panel</strong>.</li><li>Click the <strong>Telephone Icon</strong> (top-right).</li><li>Select <strong>AI Agent Call</strong> mode.</li><li>Choose:<ul><li>The Number to call from.</li><li>The Agent to handle the call.</li><li>The Target Number to dial.</li></ul></li><li>Join or monitor the call live if needed. Observe real-time interactions and intervene manually when required.</li></ol>",
       "images": [
         {
-          "src": "images/quick-start/live-call-light.png",
-          "alt": "Live Calls",
-          "caption": "The live calls interface",
+          "src": "images/contact-center/cc-live-monitor-light.png",
+          "alt": "Live calls",
+          "caption": "Watch calls happen live in the Contact Center",
           "theme": "light"
         },
         {
-          "src": "images/quick-start/live-call-dark.png",
-          "alt": "Live Calls",
-          "caption": "The live calls interface",
+          "src": "images/contact-center/cc-live-monitor-dark.png",
+          "alt": "Live calls",
+          "caption": "Watch calls happen live in the Contact Center",
           "theme": "dark"
         }
       ]
@@ -78,7 +104,20 @@
       "id": "additional-features",
       "title": "Additional Features in Imash",
       "content": "<ul><li><strong>Overview Page</strong>: live analytics dashboard.</li><li><strong>Automation Tab</strong>: create workflows and servers.</li><li><strong>Call Center</strong>: manage agents, logs, phone numbers, and SIP providers.</li><li><strong>Campaigns</strong>: create and manage outbound campaigns.</li><li><strong>CRM</strong>: manage accounts, contacts, and leads with lifecycle tracking.</li><li><strong>Calendar</strong>: schedule meetings and assign calls to agents.</li><li><strong>API Keys</strong>: generate keys to use Imash as infrastructure (without UI).</li><li><strong>Credentials</strong>: connect directly with external voice and LLM providers.</li><li><strong>Account Settings</strong>: manage user profile.</li><li><strong>Billing</strong>: manage payment methods and account balance.</li><li><strong>Demo Data</strong>: install prebuilt agents, leads, and records to explore features quickly.</li></ul>",
-      "images": []
+      "images": [
+        {
+          "src": "images/agents/tools-mcp-light.png",
+          "alt": "Tools and MCP",
+          "caption": "Give your agent tools and integrations for more power",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/tools-mcp-dark.png",
+          "alt": "Tools and MCP",
+          "caption": "Give your agent tools and integrations for more power",
+          "theme": "dark"
+        }
+      ]
     }
   ],
   "nextSteps": {

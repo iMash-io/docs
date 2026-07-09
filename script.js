@@ -34,6 +34,12 @@ const I18N = {
     'Get Started': 'Primeros Pasos', 'Agents': 'Agentes', 'Phone System': 'Sistema Telefónico',
     'Campaigns': 'Campañas', 'CRM': 'CRM', 'Automations': 'Automatizaciones',
     'Analytics': 'Analíticas', 'Settings': 'Configuración', 'Video Categories': 'Categorías de Video',
+    // Contact Center section
+    'Contact Center': 'Centro de Contacto', 'Human Agent Guide': 'Guía del Agente',
+    'Permission Groups': 'Grupos de Permisos', 'Members & Roles': 'Miembros y Roles',
+    'Role Mapping': 'Asignación de Roles', 'Inbound SIP Routing': 'Enrutamiento SIP Entrante',
+    'Ring Strategy': 'Estrategia de Timbrado', 'Wait & Hold Experience': 'Experiencia de Espera',
+    'Queue Settings': 'Ajustes de Cola', 'Call Transfer': 'Transferencia de Llamadas', 'Overview': 'Resumen',
     // sidebar links
     'Quickstart': 'Inicio Rápido', 'Dashboard Overview': 'Vista del Panel', 'API Keys': 'Claves API',
     'Create Agent': 'Crear Agente', 'Agent Settings': 'Ajustes del Agente', 'Voice Configuration': 'Configuración de Voz',
@@ -410,6 +416,7 @@ function showPage(route) {
                 route.startsWith('/phone-system/') ||
                 route.startsWith('/phone/') ||
                 route.startsWith('/campaigns/') ||
+                route.startsWith('/contact-center/') ||
                 route.startsWith('/crm/') ||
                 route.startsWith('/automations/') ||
                 route.startsWith('/analytics/') ||
@@ -568,6 +575,23 @@ function updateSidebarForTab(route) {
             <li><a data-href="/phone/add-phone-number" class="nav-link ${route === '/phone/add-phone-number' || route === '/phone-system/add-phone-number' ? 'active' : ''}">${tr('Add Phone Number')}</a></li>
             <li><a data-href="/phone/call-routing" class="nav-link ${route === '/phone/call-routing' || route === '/phone-system/call-routing' ? 'active' : ''}">${tr('Call Routing')}</a></li>
             <li><a data-href="/phone/call-logs" class="nav-link ${route === '/phone/call-logs' || route === '/phone-system/call-logs' ? 'active' : ''}">${tr('Call Logs')}</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">${tr('Contact Center')}</div>
+          <ul>
+            <li><a data-href="/contact-center/overview" class="nav-link ${route === '/contact-center/overview' ? 'active' : ''}">${tr('Overview')}</a></li>
+            <li><a data-href="/contact-center/agent-guide" class="nav-link ${route === '/contact-center/agent-guide' ? 'active' : ''}">${tr('Human Agent Guide')}</a></li>
+            <li><a data-href="/contact-center/groups" class="nav-link ${route === '/contact-center/groups' ? 'active' : ''}">${tr('Permission Groups')}</a></li>
+            <li><a data-href="/contact-center/members-roles" class="nav-link ${route === '/contact-center/members-roles' ? 'active' : ''}">${tr('Members & Roles')}</a></li>
+            <li><a data-href="/contact-center/role-mapping" class="nav-link ${route === '/contact-center/role-mapping' ? 'active' : ''}">${tr('Role Mapping')}</a></li>
+            <li><a data-href="/contact-center/inbound-sip-routing" class="nav-link ${route === '/contact-center/inbound-sip-routing' ? 'active' : ''}">${tr('Inbound SIP Routing')}</a></li>
+            <li><a data-href="/contact-center/ring-strategy" class="nav-link ${route === '/contact-center/ring-strategy' ? 'active' : ''}">${tr('Ring Strategy')}</a></li>
+            <li><a data-href="/contact-center/wait-hold" class="nav-link ${route === '/contact-center/wait-hold' ? 'active' : ''}">${tr('Wait & Hold Experience')}</a></li>
+            <li><a data-href="/contact-center/queue-settings" class="nav-link ${route === '/contact-center/queue-settings' ? 'active' : ''}">${tr('Queue Settings')}</a></li>
+            <li><a data-href="/contact-center/reporting" class="nav-link ${route === '/contact-center/reporting' ? 'active' : ''}">${tr('Reporting')}</a></li>
+            <li><a data-href="/contact-center/call-transfer" class="nav-link ${route === '/contact-center/call-transfer' ? 'active' : ''}">${tr('Call Transfer')}</a></li>
           </ul>
         </div>
 
@@ -2023,7 +2047,7 @@ async function loadDynamicContent(route) {
     '/get-started/quick-start': `${basePath}/get-started/quick-start.json`,
     '/get-started/dashboard-overview': `${basePath}/get-started/dashboard-overview.json`,
     '/get-started/api-keys': `${basePath}/get-started/api-keys.json`,
-    '/agents/create-agent': `${basePath}/get-started/quick-start.json`,
+    '/agents/create-agent': `${basePath}/agents/create-agent.json`,
     '/agents/agent-settings': `${basePath}/agents/agent-settings.json`,
     '/agents/voice-configuration': `${basePath}/agents/voice-configuration.json`,
     '/agents/test-agent': `${basePath}/agents/test-your-agent.json`,
@@ -2064,7 +2088,19 @@ async function loadDynamicContent(route) {
     '/analytics/dashboard': `${basePath}/analytics/analytics-dashboard.json`,
     '/analytics/costs': `${basePath}/analytics/cost-management.json`,
     '/campaigns/do-not-call': `${basePath}/campaigns/do-not-call-list.json`,
-    '/crm/import-export': `${basePath}/crm/import-export-data.json`
+    '/crm/import-export': `${basePath}/crm/import-export-data.json`,
+    // Contact Center (human agents) section
+    '/contact-center/overview': `${basePath}/contact-center/overview.json`,
+    '/contact-center/agent-guide': `${basePath}/contact-center/agent-guide.json`,
+    '/contact-center/groups': `${basePath}/contact-center/groups.json`,
+    '/contact-center/members-roles': `${basePath}/contact-center/members-roles.json`,
+    '/contact-center/role-mapping': `${basePath}/contact-center/role-mapping.json`,
+    '/contact-center/inbound-sip-routing': `${basePath}/contact-center/inbound-sip-routing.json`,
+    '/contact-center/ring-strategy': `${basePath}/contact-center/ring-strategy.json`,
+    '/contact-center/wait-hold': `${basePath}/contact-center/wait-hold.json`,
+    '/contact-center/queue-settings': `${basePath}/contact-center/queue-settings.json`,
+    '/contact-center/reporting': `${basePath}/contact-center/reporting.json`,
+    '/contact-center/call-transfer': `${basePath}/contact-center/call-transfer.json`
   };
 
   const jsonPath = contentMap[route];
