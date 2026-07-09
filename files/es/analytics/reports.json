@@ -1,0 +1,56 @@
+{
+  "title": "Reportes",
+  "lede": "Compara el rendimiento de tus campañas de llamadas lado a lado: el progreso en vivo y las tasas de conexión en Campaign Stats, y las llamadas, resultados y costos por campaña en Campaign Reports.",
+  "timeToComplete": "5 minutos",
+  "steps": [
+    {
+      "id": "open-reports",
+      "title": "Abre Campaign Reports",
+      "content": "<ol><li>En el menú izquierdo, dentro de <strong>Campaigns</strong> (Campañas), abre <strong>Campaign Reports</strong> (Reportes de campaña).</li><li>Cada fila es una campaña, de modo que puedes comparar campañas entre sí en una sola tabla.</li></ol>",
+      "images": [
+        { "src": "images/campaigns/campaign-reports-light.png", "alt": "Reportes de campaña", "caption": "Campaign Reports lista las llamadas, resultados y costos por campaña", "theme": "light" },
+        { "src": "images/campaigns/campaign-reports-dark.png", "alt": "Reportes de campaña", "caption": "Campaign Reports lista las llamadas, resultados y costos por campaña", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "read-report-columns",
+      "title": "Comprende las columnas del reporte",
+      "content": "<p>Para cada campaña, el reporte muestra:</p><ul><li><strong>Status</strong> (Estado) &mdash; si la campaña está en ejecución, en pausa o finalizada.</li><li><strong>Calls/Events</strong> (Llamadas/Eventos) &mdash; cuántas llamadas se realizaron.</li><li><strong>Minutes/Units</strong> (Minutos/Unidades) &mdash; tiempo total de conversación consumido.</li><li><strong>Sell Rate</strong> (Tarifa de venta) y <strong>Bill Amount</strong> (Monto facturado) &mdash; la tarifa por minuto facturada y el total facturado.</li></ul><p>Las cuentas principales también ven <strong>Cost Rate</strong> (Tarifa de costo), <strong>Total Cost</strong> (Costo total) y <strong>Profit</strong> (Ganancia) para comparar lo que costó una campaña frente a lo que se facturó.</p>"
+    },
+    {
+      "id": "filter-export",
+      "title": "Filtra y exporta",
+      "content": "<ol><li>Usa el <strong>rango de fechas</strong> en la parte superior para definir el período del reporte (por defecto son los últimos 30 días, por rapidez).</li><li>Filtra por una <strong>campaña</strong> o <strong>cuenta</strong> específica para acotar la lista.</li><li>Haz clic en <strong>Download</strong> (Descargar) para exportar el reporte como un CSV para tus propias hojas de cálculo o registros.</li></ol>"
+    },
+    {
+      "id": "open-stats",
+      "title": "Abre Campaign Stats para monitoreo en vivo",
+      "content": "<ol><li>En el menú izquierdo, dentro de <strong>Campaigns</strong> (Campañas), abre <strong>Campaign Stats</strong> (Estadísticas de campaña).</li><li>Esta es una vista de monitoreo en vivo: muestra tus campañas lado a lado con su estado actual, progreso, tasa de conexión y costo a medida que se ejecutan.</li></ol>",
+      "images": [
+        { "src": "images/campaigns/campaign-stats-light.png", "alt": "Estadísticas de campaña", "caption": "Campaign Stats ofrece una vista de monitoreo en vivo, lado a lado, entre campañas", "theme": "light" },
+        { "src": "images/campaigns/campaign-stats-dark.png", "alt": "Estadísticas de campaña", "caption": "Campaign Stats ofrece una vista de monitoreo en vivo, lado a lado, entre campañas", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "act",
+      "title": "Actúa según lo que observes",
+      "content": "<ul><li>¿<strong>Tasa de conexión</strong> baja? Ajusta tus horarios de llamada y zona horaria para contactar a las personas cuando estén disponibles.</li><li>¿El costo sube más rápido que los resultados? Pausa la campaña y refina la lista de marcación o el agente de IA.</li><li>¿Quieres el detalle llamada por llamada? Abre la pestaña <strong>Overview</strong> (Resumen) de una campaña, o revisa las llamadas individuales en <strong>Call Center &rarr; Call Logs</strong> (Centro de llamadas &rarr; Registros de llamadas).</li></ul>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Convierte los datos en una operación de mejor rendimiento.",
+    "cards": [
+      { "href": "/campaigns/campaign-analytics", "title": "Leer las Analíticas de Campaña", "description": "Cómo interpretar el progreso y las tasas de conexión." },
+      { "href": "/analytics/analytics-dashboard", "title": "Panel de Analíticas", "description": "Los KPIs de llamadas de toda tu cuenta y sus filtros." },
+      { "href": "/analytics/cost-management", "title": "Gestión de Costos", "description": "Consulta tu saldo, los precios y el gasto." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Reportes - Reportes y Estadísticas de Campaña | iMash Docs",
+  "metaDescription": "Compara campañas de iMash con Campaign Reports (llamadas, resultados, costos, ganancias, exportación a CSV) y Campaign Stats (progreso en vivo y tasas de conexión).",
+  "metaKeywords": "reportes de campaña, estadísticas de campaña, tasa de conexión, resultados de llamadas, costo de campaña, monto facturado, exportación csv, reportes imash"
+}

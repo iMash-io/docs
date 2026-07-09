@@ -1,0 +1,67 @@
+{
+  "title": "Configuración del agente: tiempos de espera, mensajes de inactividad y buzón de voz",
+  "lede": "Ajusta con precisión cómo se comporta tu Smart Agent (Agente inteligente) en una llamada: duración máxima, manejo de silencios e inactividad, detección de buzón de voz (AMD), backchannel, interrupciones y detección de turnos.",
+  "timeToComplete": "8 minutos",
+  "videoUrl": "https://youtu.be/7C-N_RWwPFI",
+  "videoLength": "5",
+  "steps": [
+    {
+      "id": "open-editor",
+      "title": "Abre el editor de agentes",
+      "content": "<ol><li>En la navegación izquierda, ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes).</li><li>Haz clic en un agente existente para abrirlo en el editor (puedes alternar entre la vista de formulario y la vista de nodos).</li><li>La columna central contiene los paneles de funciones (Knowledge Base, Voice, Brains y más), cada uno con su propio interruptor de activación/desactivación. Debajo de ellos encontrarás <strong>Sub Agents / Tasks / Handoffs</strong>, <strong>Tools / MCP</strong> y <strong>Settings</strong>.</li></ol>",
+      "images": [
+        { "src": "images/agents/assistant-editor-light.png", "alt": "Editor de Smart Agent", "caption": "El editor de Smart Agent: el prompt a la izquierda, los paneles de funciones en el centro y Test Agent en la parte superior.", "theme": "light" },
+        { "src": "images/agents/assistant-editor-dark.png", "alt": "Editor de Smart Agent", "caption": "El editor de Smart Agent: el prompt a la izquierda, los paneles de funciones en el centro y Test Agent en la parte superior.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "open-settings",
+      "title": "Abre el panel de configuración (Settings)",
+      "content": "<ol><li>Haz clic en <strong>Settings</strong> (Configuración) en el editor.</li><li>Usa la barra izquierda para moverte entre las secciones: <strong>General</strong>, <strong>Idle Messages</strong>, <strong>Voicemail</strong>, <strong>Speech</strong>, <strong>Voice Activity Detection</strong>, <strong>Audio Quality</strong>, <strong>Background Audio</strong>, <strong>Interruptions</strong>, <strong>User Turn Limits</strong>, <strong>Turn Detection</strong> y <strong>Privacy &amp; Recording</strong>.</li></ol>",
+      "images": [
+        { "src": "images/agents/agent-settings-panel-light.png", "alt": "Panel de configuración del agente", "caption": "El panel de configuración con su barra de secciones a la izquierda.", "theme": "light" },
+        { "src": "images/agents/agent-settings-panel-dark.png", "alt": "Panel de configuración del agente", "caption": "El panel de configuración con su barra de secciones a la izquierda.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "general-timeouts",
+      "title": "Define la duración de la llamada y el silencio (General)",
+      "content": "<ul><li><strong>Maximum Duration</strong> (Duración máxima): el tiempo máximo que puede durar una llamada, en segundos. El agente finaliza la llamada al alcanzar este límite.</li><li><strong>Silence Timeout</strong> (Tiempo de espera por silencio): cuánto tiempo esperar durante el silencio antes de que el agente finalice la llamada.</li></ul>",
+      "images": []
+    },
+    {
+      "id": "idle-messages",
+      "title": "Configura los mensajes de inactividad",
+      "content": "<ol><li>Abre la sección <strong>Idle Messages</strong> (Mensajes de inactividad) y actívala.</li><li>Establece el <strong>Idle Timeout</strong> (segundos de silencio antes de que el agente hable) y <strong>Max Idle Messages</strong> (Máximo de mensajes de inactividad).</li><li>Agrega frases como <em>\"¿Sigues ahí?\"</em>. Escribe <code>{</code> para insertar una variable, como el nombre de la persona que llama.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "voicemail-amd",
+      "title": "Detección de buzón de voz (AMD)",
+      "content": "<ul><li>En <strong>Voicemail</strong> (Buzón de voz), activa <strong>Voicemail Detection (AMD)</strong> y elige <strong>Hang up if reach voicemail</strong> (Colgar si se llega al buzón de voz) o <strong>Leave a message if reach voicemail</strong> (Dejar un mensaje si se llega al buzón de voz).</li><li>Un mensaje de buzón de voz puede incluir variables dinámicas de la conversación.</li><li>Los tiempos de detección avanzados (No-Speech Timeout, Detection Timeout, umbrales de voz/silencio) están disponibles si necesitas ajustar la precisión.</li></ul>",
+      "images": []
+    },
+    {
+      "id": "speech-and-turns",
+      "title": "Voz, interrupciones y detección de turnos",
+      "content": "<ul><li><strong>Speech</strong> (Voz): activa <strong>Enable Backchannel (Beta)</strong> para muletillas naturales como \"ajá\", y <strong>Preemptive Generation</strong> (Generación anticipada) para que un agente basado en texto (STT + LLM + TTS) empiece a pensar mientras la persona sigue hablando.</li><li><strong>Interruptions</strong> (Interrupciones): permite o bloquea las interrupciones y define el mínimo de palabras que las activan.</li><li><strong>Turn Detection</strong> (Detección de turnos): un detector basado en audio decide cuándo la persona ha terminado de hablar. Estos ajustes se ignoran en los modelos en tiempo real (voz a voz), que manejan los turnos por sí mismos.</li></ul>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Con el comportamiento afinado, amplía lo que tu agente puede hacer:",
+    "cards": [
+      { "href": "/agents/voice-configuration", "title": "Configura la voz", "description": "Elige un proveedor de TTS y previsualiza voces para tu agente." },
+      { "href": "/agents/agent-tools", "title": "Agrega herramientas", "description": "Permite que el agente finalice llamadas, agende citas y llame a tus API." },
+      { "href": "/agents/agent-privacy", "title": "Privacidad y grabación", "description": "Controla el almacenamiento de datos y la grabación de audio de las llamadas." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Configuración del agente: tiempos de espera, inactividad y buzón de voz | iMash Docs",
+  "metaDescription": "Configura los ajustes de tu Smart Agent de iMash: duración máxima de la llamada, tiempos de espera por silencio e inactividad, detección de buzón de voz (AMD), backchannel, interrupciones y detección de turnos.",
+  "metaKeywords": "configuración del agente, imash, smart agent, detección de buzón de voz, mensajes de inactividad, backchannel, detección de turnos, duración de la conversación"
+}

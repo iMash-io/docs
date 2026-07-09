@@ -1,33 +1,59 @@
 {
-  "title": "Custom Tools",
-  "lede": "Create custom tools and integrations to extend your AI agent capabilities.",
-  "sections": [
+  "title": "Create a Custom Tool",
+  "lede": "Custom Tools are reusable HTTP actions your AI agent can call in the middle of a conversation - to look something up, book a job, or send data to your own system.",
+  "timeToComplete": "7 minutes",
+  "steps": [
     {
-      "id": "tool-development",
-      "title": "Tool Development",
-      "content": "<p>Build custom tools that your AI agents can use during conversations.</p><h3>Tool Types:</h3><ul><li><strong>API Integrations:</strong> Connect to external REST APIs</li><li><strong>Database Tools:</strong> Query and update databases</li><li><strong>Calculation Tools:</strong> Perform complex calculations</li><li><strong>Business Logic:</strong> Custom business rule processing</li></ul>"
+      "id": "open-custom-tools",
+      "title": "Open Custom Tools",
+      "content": "<ol><li>In the left menu, go to <strong>Call Center → Custom Tools</strong>.</li><li>You'll see the list of tools you've already built.</li><li>Click <strong>Create</strong> (the <strong>+</strong> button) to open the <strong>Create Custom Tool</strong> drawer.</li></ol>",
+      "images": [
+        { "src": "images/automations/custom-tools-light.png", "alt": "Custom Tools list", "caption": "The Custom Tools library, where your agent's HTTP tools live.", "theme": "light" },
+        { "src": "images/automations/custom-tools-dark.png", "alt": "Custom Tools list", "caption": "The Custom Tools library, where your agent's HTTP tools live.", "theme": "dark" }
+      ]
     },
     {
-      "id": "tool-management",
-      "title": "Tool Management",
-      "content": "<p>Manage and deploy your custom tools across agents.</p><ul><li><strong>Code Editor:</strong> Built-in development environment</li><li><strong>Testing Framework:</strong> Test tools before deployment</li><li><strong>Version Control:</strong> Manage tool versions and updates</li><li><strong>Library Management:</strong> Reusable tool components</li></ul>"
-    }
-  ],
-  "images": [
-    {
-      "src": "images/custom-tools-light.png",
-      "alt": "Custom Tools Interface",
-      "caption": "Custom tool development and management",
-      "theme": "light"
+      "id": "name-describe",
+      "title": "Name and Describe It",
+      "content": "<ol><li>Under <strong>Basic Information</strong>, give the tool a clear <strong>Name</strong> (for example <code>lookupAddress</code> or <code>getUserInfo</code>).</li><li>Write a plain-English <strong>Description</strong> of what it does and when it should run.</li><li>The AI reads this description to decide when to call the tool - so be specific.</li></ol>",
+      "images": []
     },
     {
-      "src": "images/custom-tools-dark.png",
-      "alt": "Custom Tools Interface",
-      "caption": "Custom tool development and management",
-      "theme": "dark"
+      "id": "configure-endpoint",
+      "title": "Configure the Endpoint",
+      "content": "<ol><li>Under <strong>API Configuration</strong>, choose the <strong>Request Method</strong> (<code>GET</code> or <code>POST</code>).</li><li>Enter <strong>Your URL</strong> - the endpoint on your server that the agent will call.</li><li>Define the <strong>parameters</strong> as a JSON schema. Use the Visual Builder for a simple form, or switch to JSON Code for advanced editing.</li><li>Click <strong>Test</strong> to fire a sample request and confirm your endpoint responds correctly.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "voice-settings",
+      "title": "Optional: Voice Settings",
+      "content": "<ol><li>Turn on <strong>Speaks for Execution</strong> to have the agent say a short line (for example <em>\"One moment while I check that\"</em>) while the tool runs.</li><li>Turn on <strong>Speak After Execution</strong> to have it say something once the tool returns.</li><li>Click <strong>Create Tool</strong> to save.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "attach-agent",
+      "title": "Attach It to an Agent",
+      "content": "<ol><li>Open a Smart Agent from <strong>Intelligence Center → Smart Agents</strong>.</li><li>Open the <strong>Tools / MCP</strong> panel and add your new tool under <strong>Custom</strong>.</li><li>Test the agent and ask something that should trigger the tool to confirm it fires.</li></ol>",
+      "images": [
+        { "src": "images/agents/tools-mcp-light.png", "alt": "Tools and MCP panel", "caption": "Attach your custom tool to an agent in the Tools / MCP panel.", "theme": "light" },
+        { "src": "images/agents/tools-mcp-dark.png", "alt": "Tools and MCP panel", "caption": "Attach your custom tool to an agent in the Tools / MCP panel.", "theme": "dark" }
+      ]
     }
   ],
-  "metaTitle": "Custom Tools - Extend Agent Capabilities | iMash Docs",
-  "metaDescription": "Create custom tools and functions for AI agents. Integrate external APIs and add custom business logic.",
-  "metaKeywords": "custom tools, API integration, custom functions, agent extensions, business logic, tool development"
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Put your tool to work on an agent:",
+    "cards": [
+      { "href": "/agents/agent-tools", "title": "Add Tools to Your Agent", "description": "Attach predefined and custom tools to a Smart Agent." },
+      { "href": "/automations/mcp-servers", "title": "Connect an MCP Server", "description": "Give your agent a bundle of external tools at once." },
+      { "href": "/agents/advanced-settings", "title": "Advanced Agent Settings", "description": "Fine-tune how and when your agent uses its tools." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Create a Custom Tool | iMash Docs",
+  "metaDescription": "Build a reusable HTTP Custom Tool your iMash AI agent can call during a call: name it, set the endpoint and parameters, test it, and attach it to an agent.",
+  "metaKeywords": "custom tools, http tool, function calling, agent tools, api endpoint, json schema, imash"
 }

@@ -1,33 +1,52 @@
 {
   "title": "Billing",
-  "lede": "Manage your subscription, payment methods, and billing information.",
-  "sections": [
+  "lede": "iMash runs on a prepaid balance. This guide shows you how to check your balance, add a payment method, top up funds, and review your usage and transactions.",
+  "timeToComplete": "6 minutes",
+  "steps": [
     {
-      "id": "subscription-management",
-      "title": "Subscription Management",
-      "content": "<p>View and manage your iMash subscription and plan details.</p><h3>Subscription Features:</h3><ul><li><strong>Plan Details:</strong> Current plan limits and features</li><li><strong>Usage Tracking:</strong> Monitor monthly usage against limits</li><li><strong>Plan Upgrades:</strong> Upgrade or downgrade subscription plans</li><li><strong>Billing History:</strong> View past invoices and payments</li></ul>"
+      "id": "open-billing",
+      "title": "Open the Billing page",
+      "content": "<ol><li>In the left navigation, open the <strong>Account</strong> group and click <strong>Billing</strong> (or go to <code>/billing</code>).</li><li>The top of the page shows your <strong>Prepaid Balance</strong> — the credit that calls, messages, and other usage are drawn from.</li><li>Keep the balance topped up so your agents and campaigns never pause. (<em>Pay as you go</em> is shown as Coming Soon; today everything runs on prepaid balance.)</li></ol>",
+      "images": [
+        { "src": "images/analytics/billing-light.png", "alt": "Billing page with balance", "caption": "The Billing page shows your prepaid balance, payment methods, and add-funds panel", "theme": "light" },
+        { "src": "images/analytics/billing-dark.png", "alt": "Billing page with balance", "caption": "The Billing page shows your prepaid balance, payment methods, and add-funds panel", "theme": "dark" }
+      ]
     },
     {
-      "id": "payment-methods",
-      "title": "Payment Methods",
-      "content": "<p>Manage credit cards and payment methods for your account.</p><ul><li><strong>Payment Cards:</strong> Add, remove, and update credit cards</li><li><strong>Billing Address:</strong> Manage billing address information</li><li><strong>Auto-billing:</strong> Configure automatic payment settings</li><li><strong>Payment History:</strong> Track all payment transactions</li></ul>"
-    }
-  ],
-  "images": [
-    {
-      "src": "images/billing-light.png",
-      "alt": "Billing Management Interface",
-      "caption": "Subscription and payment management tools",
-      "theme": "light"
+      "id": "add-payment-method",
+      "title": "Add a payment method",
+      "content": "<ol><li>Open the <strong>Add Payment Method</strong> panel.</li><li>Enter a <strong>credit/debit card</strong>, or connect a <strong>US bank account (ACH)</strong>.</li><li>Save it. You can add more than one method and remove any you no longer use.</li></ol><p>Your card details are stored securely by our payment processor (Stripe) — iMash never sees your full card number.</p>"
     },
     {
-      "src": "images/billing-dark.png",
-      "alt": "Billing Management Interface",
-      "caption": "Subscription and payment management tools",
-      "theme": "dark"
+      "id": "add-funds",
+      "title": "Add funds to your balance",
+      "content": "<ol><li>In the <strong>Add Funds</strong> area, type the dollar amount you want to add.</li><li>Choose which saved <strong>payment method</strong> to charge.</li><li>Click to confirm. Your balance updates once the payment is confirmed.</li></ol><p><strong>Good to know:</strong> card top-ups carry a small <strong>3% processing fee</strong> — you're charged the full amount you entered and the balance is credited 3% less. <strong>Bank (ACH)</strong> top-ups have no processing fee.</p>"
+    },
+    {
+      "id": "usage-ledger",
+      "title": "Review usage and transactions",
+      "content": "<ul><li>Open the <strong>Ledger</strong> tab to see every credit and debit — money you added, usage drawn down, and any transfers or adjustments.</li><li>Filter by <strong>service type</strong> and expand a row to see the balance before and after, so you can trace exactly where spend went.</li><li>Use the <strong>transactions</strong> history to review your past card and bank payments.</li></ul>"
+    },
+    {
+      "id": "team-billing",
+      "title": "Billing for team members and affiliates",
+      "content": "<ul><li>Team members you invite don't get billing access by default. You can grant it, set a per-member per-minute price, or transfer balance to a member from <strong>Team</strong> (User Management).</li><li>If you're an <strong>affiliate</strong>, an extra <strong>Withdrawals</strong> tab appears here so you can cash out your commission balance.</li></ul>"
     }
   ],
-  "metaTitle": "Billing Settings - Payment & Subscription | iMash Docs",
-  "metaDescription": "Manage billing, payment methods, and subscription plans. View invoices and update payment information.",
-  "metaKeywords": "billing, payment methods, subscription, invoices, payment settings, credit management, pricing plans"
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Keep an eye on spend and manage your team.",
+    "cards": [
+      { "href": "/analytics/cost-management", "title": "Cost Management", "description": "Break down usage and cost by service." },
+      { "href": "/settings/team-management", "title": "Team Management", "description": "Grant billing access or transfer balance to staff." },
+      { "href": "/agents/create-agent", "title": "Create an Agent", "description": "Put your balance to work with an AI voice agent." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Billing - Prepaid Balance & Payment Methods | iMash Docs",
+  "metaDescription": "Check your prepaid balance, add a card or bank account, top up funds, and review usage and transactions on the iMash Billing page.",
+  "metaKeywords": "billing, prepaid balance, add funds, payment methods, ACH, credit card, usage ledger, transactions"
 }

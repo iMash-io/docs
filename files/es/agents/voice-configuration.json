@@ -1,0 +1,55 @@
+{
+  "title": "Configura la voz (TTS) de tu agente",
+  "lede": "Elige la voz con la que habla tu Smart Agent (Agente inteligente). Selecciona un proveedor de texto a voz (TTS), escucha las voces, filtra por género, acento y edad, y define una voz de respaldo.",
+  "timeToComplete": "5 minutos",
+  "videoUrl": "https://youtu.be/C3Rkclp_KKQ",
+  "videoLength": "2",
+  "steps": [
+    {
+      "id": "open-voice-panel",
+      "title": "Abre el panel Voice (TTS)",
+      "content": "<ol><li>Ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes) y abre tu agente.</li><li>En la columna central, haz clic en el panel <strong>Voice (TTS)</strong> (Voz). Asegúrate de que su interruptor esté activado.</li></ol>",
+      "images": [
+        { "src": "images/agents/assistant-editor-light.png", "alt": "Paneles de funciones del editor de agentes", "caption": "El panel Voice (TTS) está en la columna central del editor.", "theme": "light" },
+        { "src": "images/agents/assistant-editor-dark.png", "alt": "Paneles de funciones del editor de agentes", "caption": "El panel Voice (TTS) está en la columna central del editor.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "pick-provider",
+      "title": "Elige un proveedor de voz",
+      "content": "<ol><li>Usa las pestañas de proveedores en la parte superior del panel para elegir uno. Los proveedores disponibles incluyen <strong>iMash TTS</strong>, <strong>Cartesia</strong>, <strong>ElevenLabs</strong>, <strong>Rime</strong>, <strong>Playht</strong>, <strong>Deepgram</strong>, <strong>OpenAI</strong>, <strong>Azure</strong>, <strong>Resemble</strong>, <strong>MiniMax</strong> y <strong>Google</strong>.</li><li>Ten en cuenta que los modelos realtime (voz a voz) traen sus propias voces integradas; al usar uno, eliges del conjunto de voces de ese modelo.</li></ol>",
+      "images": [
+        { "src": "images/agents/voice-config-light.png", "alt": "Panel de configuración de voz", "caption": "El panel Voice: pestañas de proveedores, filtros, una lista de voces con búsqueda y vista previa.", "theme": "light" },
+        { "src": "images/agents/voice-config-dark.png", "alt": "Panel de configuración de voz", "caption": "El panel Voice: pestañas de proveedores, filtros, una lista de voces con búsqueda y vista previa.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "filter-preview",
+      "title": "Filtra, escucha y selecciona una voz",
+      "content": "<ol><li>Reduce la lista con los filtros de <strong>Gender</strong> (Género), <strong>Accent</strong> (Acento) y <strong>Age</strong> (Edad).</li><li>Haz clic en el botón de reproducción junto a una voz para escuchar una muestra.</li><li>Cuando encuentres la que quieres, marca su casilla en la última columna para convertirla en la voz del agente.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "advanced-and-backup",
+      "title": "Ajusta la voz y define un respaldo",
+      "content": "<ul><li>Algunos proveedores ofrecen controles adicionales en <strong>Advanced Settings</strong> (Ajustes avanzados); por ejemplo, ElevenLabs ofrece Stability (Estabilidad), Clarity (Claridad), Style Exaggeration (Exageración de estilo) y Speed (Velocidad); Cartesia ofrece Emotion (Emoción), Speed (Velocidad) y Volume (Volumen).</li><li>También puedes configurar una voz/proveedor de <strong>Backup</strong> (Respaldo) que toma el relevo automáticamente si el proveedor principal no está disponible.</li></ul>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Después de elegir una voz, sigue ajustando tu agente:",
+    "cards": [
+      { "href": "/agents/llm-settings", "title": "Elige el cerebro (LLM)", "description": "Comprende los modelos realtime frente a los de texto y elige el LLM que impulsa las respuestas." },
+      { "href": "/agents/agent-settings", "title": "Ajustes del agente", "description": "Ajusta tiempos de espera, mensajes de inactividad y gestión del buzón de voz." },
+      { "href": "/agents/test-agent", "title": "Prueba tu agente", "description": "Escucha la voz en vivo en el navegador o por una llamada telefónica." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o alguna pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">referencia de la API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Configura la voz (TTS) de tu agente | iMash Docs",
+  "metaDescription": "Elige la voz de tu Smart Agent de iMash: selecciona un proveedor de TTS (iMash TTS, Cartesia, ElevenLabs, OpenAI, Google y más), filtra por género, acento y edad, escucha y define un respaldo.",
+  "metaKeywords": "configuración de voz, TTS, imash, smart agent, elevenlabs, cartesia, voces de google, voces de openai, imash tts, voz de respaldo"
+}

@@ -1,33 +1,47 @@
 {
   "title": "Call Logs",
-  "metaTitle": "Call Logs - Monitor AI Agent Call History | iMash Docs",
-  "metaDescription": "Access detailed call logs, monitor AI agent performance, analyze call patterns, and review conversation transcripts. Track success rates and quality metrics.",
-  "metaKeywords": "call logs, call history, AI agent calls, call analytics, call transcripts, call recordings, performance metrics, conversation details",
-  "lede": "Monitor and analyze call history, performance metrics, and conversation details.",
-  "sections": [
+  "lede": "Every call your AI agents make or receive is recorded here. Use Call Logs to see who called, which agent handled it, how long it lasted, how it ended, and what it cost.",
+  "timeToComplete": "3 minutes",
+  "steps": [
     {
-      "id": "log-overview",
-      "title": "Call Log Management",
-      "content": "<p>View detailed records of all calls handled by your AI agents.</p><h3>Available Data:</h3><ul><li><strong>Call Duration:</strong> Start time, end time, and total duration</li><li><strong>Caller Information:</strong> Phone number, location, caller ID</li><li><strong>Agent Performance:</strong> Response times, success rates</li><li><strong>Conversation Details:</strong> Full transcripts and recordings</li></ul>"
+      "id": "open-call-logs",
+      "title": "Open Call Logs",
+      "content": "<ol><li>In the left menu, go to <strong>Call Center → Call Logs</strong>.</li><li>The table lists calls newest-first. A small arrow next to each date shows direction — up/green for <strong>outbound</strong>, down/red for <strong>inbound</strong>.</li></ol>",
+      "images": [
+        { "src": "images/phone/call-logs-light.png", "alt": "Call Logs table", "caption": "Call Center → Call Logs shows every inbound and outbound call.", "theme": "light" },
+        { "src": "images/phone/call-logs-dark.png", "alt": "Call Logs table", "caption": "Call Center → Call Logs shows every inbound and outbound call.", "theme": "dark" }
+      ]
     },
     {
-      "id": "analytics",
-      "title": "Call Analytics",
-      "content": "<p>Analyze call patterns and agent performance with built-in analytics.</p><ul><li><strong>Success Rates:</strong> Track conversion and completion rates</li><li><strong>Call Patterns:</strong> Identify peak hours and trends</li><li><strong>Quality Metrics:</strong> Monitor conversation quality scores</li></ul>"
+      "id": "read-columns",
+      "title": "Read the columns",
+      "content": "<p>Each row summarizes one call:</p><ul><li><strong>Date &amp; Direction</strong> — when the call happened and whether it was inbound or outbound.</li><li><strong>From / To</strong> — the two phone numbers on the call.</li><li><strong>Duration</strong> — how long the call lasted.</li><li><strong>AI Agent</strong> — which agent handled it.</li><li><strong>Campaign</strong> — the campaign the call belonged to, if any.</li><li><strong>Related Entities</strong> — the matched Contact or Lead in your CRM.</li><li><strong>Ended Reason</strong> — why the call ended (customer hung up, agent ended, silence timeout, etc.).</li><li><strong>Cost</strong> — the billed amount for that call.</li></ul>"
+    },
+    {
+      "id": "open-detail",
+      "title": "Open a call for full detail",
+      "content": "<ol><li>Click a row to open the call's details.</li><li>Review the full <strong>transcript</strong>, per-leg breakdown, and any recording captured for that call.</li><li>Use this to check how an agent handled a specific conversation or to troubleshoot a call that ended early.</li></ol>"
+    },
+    {
+      "id": "filter",
+      "title": "Filter and find calls",
+      "content": "<ol><li>Sort by any column header (date, duration, cost, and more).</li><li>Narrow the list by <strong>agent</strong>, <strong>campaign</strong>, direction, or date range to find the calls you care about.</li><li>Open a linked <strong>Contact</strong> or <strong>Lead</strong> straight from the row to see that person's full history.</li></ol>"
     }
   ],
-  "images": [
-    {
-      "src": "images/call-logs-light.png",
-      "alt": "Call Logs Dashboard",
-      "caption": "Call history and analytics interface",
-      "theme": "light"
-    },
-    {
-      "src": "images/call-logs-dark.png",
-      "alt": "Call Logs Dashboard",
-      "caption": "Call history and analytics interface",
-      "theme": "dark"
-    }
-  ]
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Turn what you learn from the logs into better calls.",
+    "cards": [
+      { "href": "/phone/call-routing", "title": "Adjust Call Routing", "description": "Send calls to a different or better-tuned agent." },
+      { "href": "/agents/create-agent", "title": "Improve Your Agent", "description": "Refine the agent based on real transcripts." },
+      { "href": "/phone/add-phone-number", "title": "Add a Phone Number", "description": "Add more numbers to handle call volume." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Call Logs - Review AI Agent Call History | iMash Docs",
+  "metaDescription": "Review every inbound and outbound call: caller, agent, campaign, contact or lead, duration, ended reason, cost, transcript, and recording.",
+  "metaKeywords": "call logs, call history, transcripts, recordings, ended reason, call cost, inbound, outbound, agent, campaign, contact, lead"
 }

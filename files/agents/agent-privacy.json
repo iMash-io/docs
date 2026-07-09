@@ -1,61 +1,49 @@
 {
-  "title": "Privacy Settings for Voice AI Agents in iMash",
-  "lede": "This guide explains the privacy settings available in iMash AI agents, including options for storing or discarding data, saving audio recordings, and configuring external storage via AWS S3.",
-  "timeToComplete": "5 minutes",
+  "title": "Privacy & Recording Settings",
+  "lede": "Control what your Smart Agent keeps: turn call transcript and recording storage on or off, and choose whether to save the call audio.",
+  "timeToComplete": "4 minutes",
   "videoUrl": "https://youtu.be/5tPDfE9WJlI",
   "videoLength": "1",
   "steps": [
     {
-      "id": "access-privacy",
-      "title": "Access the Privacy Tab",
-      "content": "<ol><li>Open the <strong>AI Agent Builder</strong> for an existing agent.</li><li>Navigate to the <strong>Privacy</strong> tab to manage data storage preferences.</li></ol>",
-      "images": []
+      "id": "open-privacy",
+      "title": "Open Privacy & Recording",
+      "content": "<ol><li>Go to <strong>Intelligence Center → Smart Agents</strong> and open your agent.</li><li>Click <strong>Settings</strong>, then select the <strong>Privacy &amp; Recording</strong> section in the left rail.</li></ol>",
+      "images": [
+        { "src": "images/agents/agent-settings-panel-light.png", "alt": "Settings panel", "caption": "Privacy & Recording is a section inside the agent Settings panel.", "theme": "light" },
+        { "src": "images/agents/agent-settings-panel-dark.png", "alt": "Settings panel", "caption": "Privacy & Recording is a section inside the agent Settings panel.", "theme": "dark" }
+      ]
     },
     {
-      "id": "toggle-data-storage",
-      "title": "Enable or Disable Data Storage",
-      "content": "<ul><li><strong>Disable Storage</strong>: The system will not save recordings, transcriptions, or related data.</li><li><strong>Enable Storage</strong>: Data will be stored for future review and analysis.</li></ul>",
-      "images": []
+      "id": "data-storage",
+      "title": "Choose Whether to Store Sensitive Data",
+      "content": "<ul><li><strong>Disable Sensitive Data Storage</strong>: when on, iMash will not store or log the call transcript or recording for this agent.</li><li>Leave it off if you want transcripts saved for later review and analysis.</li></ul>",
+      "images": [
+        { "src": "images/agents/assistant-editor-light.png", "alt": "Agent editor", "caption": "Privacy choices apply to every call this agent handles.", "theme": "light" },
+        { "src": "images/agents/assistant-editor-dark.png", "alt": "Agent editor", "caption": "Privacy choices apply to every call this agent handles.", "theme": "dark" }
+      ]
     },
     {
-      "id": "audio-recordings",
-      "title": "Configure Audio Recording Storage",
-      "content": "<p>If storage is enabled, you can choose whether or not to save the <strong>audio recordings</strong> of conversations in addition to text transcriptions.</p>",
-      "images": []
-    },
-    {
-      "id": "external-storage",
-      "title": "Configure External Storage (AWS S3)",
-      "content": "<ol><li>Go to the <strong>Credentials</strong> section of your account.</li><li>Add your <strong>AWS S3 bucket credentials</strong>.</li><li>When configured, conversation data will be written to your bucket. Access and control remain with you.</li><li>Support for additional storage providers beyond AWS will be added in the future.</li></ol>",
+      "id": "audio-recording",
+      "title": "Turn Audio Recording On or Off",
+      "content": "<ul><li>Use the <strong>Audio Recording</strong> toggle to record (or not record) the conversation audio.</li><li>This option is only available while sensitive-data storage is enabled - if you disable storage, recording is turned off too.</li></ul>",
       "images": []
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Now that your privacy settings are configured, you can manage how your agent handles sensitive data:",
+    "description": "With privacy set, continue configuring your agent:",
     "cards": [
-      {
-        "href": "/agents/basic-settings",
-        "title": "Review Basic Settings",
-        "description": "Fine-tune conversation timeouts, idle messages, and voicemail behaviour."
-      },
-      {
-        "href": "/agents/tools",
-        "title": "Add Tools to Your Agent",
-        "description": "Enable additional features like ending calls or booking appointments."
-      },
-      {
-        "href": "/agents/knowledge-base",
-        "title": "Add a Knowledge Base",
-        "description": "Upload FAQs and support files to give your agent contextual knowledge."
-      }
+      { "href": "/agents/agent-settings", "title": "Agent Settings", "description": "Adjust timeouts, idle messages, and voicemail handling." },
+      { "href": "/agents/advanced-settings", "title": "Post-Call Processing", "description": "Extract structured data and send call results to your systems." },
+      { "href": "/phone/call-logs", "title": "Review Call Logs", "description": "See stored transcripts, recordings, and call summaries." }
     ]
   },
   "support": {
     "title": "Need Help?",
-    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a> for detailed documentation</li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a> for step-by-step guides</li></ul>"
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Privacy Settings for AI Agents in iMash",
-  "metaDescription": "Learn how to configure privacy settings in iMash AI agents, including enabling or disabling data storage, saving audio recordings, and connecting AWS S3 for external storage.",
-  "metaKeywords": "privacy settings, imash tutorial, ai agent setup, audio recording, data storage, AWS S3, external storage"
+  "metaTitle": "Privacy & Recording Settings | iMash Docs",
+  "metaDescription": "Control your iMash Smart Agent's data privacy: turn transcript and recording storage on or off with Disable Sensitive Data Storage, and toggle audio recording.",
+  "metaKeywords": "privacy settings, imash, smart agent, data storage, audio recording, transcript, sensitive data"
 }

@@ -1,0 +1,52 @@
+{
+  "title": "Contactos",
+  "lede": "Los contactos son las personas con las que haces negocios, normalmente clientes convertidos a partir de leads. Esta guía te muestra cómo agregarlos, editarlos, filtrarlos y etiquetarlos.",
+  "timeToComplete": "5 minutos",
+  "steps": [
+    {
+      "id": "open-contacts",
+      "title": "Abre la lista de Contactos",
+      "content": "<ol><li>En la navegación de la izquierda, abre <strong>CRM</strong> y haz clic en <strong>Contacts</strong> (Contactos) (o ve a <code>/crm/contacts</code>).</li><li>La tabla muestra de cada contacto su <strong>Name</strong> (Nombre), <strong>Email</strong> (Correo), <strong>Phone</strong> (Teléfono), <strong>Stage</strong> (Etapa) y <strong>Account</strong> (Cuenta, es decir su empresa).</li><li>Haz clic en un nombre o avatar para abrir el perfil completo con el historial de llamadas y mensajes.</li></ol><p>Un contacto es una persona real dentro de tu cartera de negocio. Las empresas a las que pertenecen se guardan como <strong>Accounts</strong> (Cuentas).</p>",
+      "images": [
+        { "src": "images/crm/contacts-light.png", "alt": "Lista de contactos", "caption": "La lista de Contactos con búsqueda, filtros y etiquetas", "theme": "light" },
+        { "src": "images/crm/contacts-dark.png", "alt": "Lista de contactos", "caption": "La lista de Contactos con búsqueda, filtros y etiquetas", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "add-contact",
+      "title": "Agrega un nuevo contacto",
+      "content": "<ol><li>Haz clic en <strong>Create</strong> (Crear) (New Contact / Nuevo contacto) en la parte superior de la lista.</li><li>Ingresa el <strong>First Name</strong> (Nombre) y el <strong>Last Name</strong> (Apellido) (ambos obligatorios).</li><li>Agrega direcciones en el campo <strong>Emails</strong> (Correos): la primera se convierte en el correo principal.</li><li>Haz clic en <strong>Add Phone Number</strong> (Agregar número de teléfono) para añadir un número y elige una etiqueta (Mobile / Móvil, Work / Trabajo, Home / Casa, etc.).</li><li>Opcionalmente elige una <strong>Account</strong> (Cuenta), define una <strong>Stage</strong> (Etapa) y completa la dirección postal.</li><li>Haz clic en <strong>Save</strong> (Guardar).</li></ol>"
+    },
+    {
+      "id": "edit-contact",
+      "title": "Edita un contacto",
+      "content": "<ol><li>Haz clic en el nombre de un contacto para abrir su perfil.</li><li>Actualiza cualquier campo: agrega más correos o números de teléfono, cambia la <strong>Stage</strong> (Etapa) o vincula una <strong>Account</strong> (Cuenta) distinta.</li><li>Recuerda: el correo principal siempre es el primero de la lista <strong>Emails</strong> (Correos), así que colócalo primero si necesitas cambiar cuál es el principal.</li><li>Guarda tus cambios.</li></ol>"
+    },
+    {
+      "id": "search-filter-tag",
+      "title": "Busca, filtra y etiqueta",
+      "content": "<ul><li>Usa el <strong>cuadro de búsqueda</strong> y alterna entre buscar por <strong>Name</strong> (Nombre), <strong>Email</strong> (Correo) o <strong>Phone</strong> (Teléfono).</li><li>Agrega filtros por <strong>Stage</strong> (Etapa), <strong>Tags</strong> (Etiquetas), <strong>Address</strong> (Dirección), <strong>City</strong> (Ciudad) o <strong>Owner</strong> (Propietario).</li><li>Agrega <strong>tags</strong> (etiquetas) a un contacto para agrupar personas (por ejemplo <em>VIP</em> o <em>renovación</em>) y luego filtra la lista por esa etiqueta.</li></ul>"
+    },
+    {
+      "id": "bulk-actions",
+      "title": "Acciones masivas y limpieza",
+      "content": "<ol><li>Marca las casillas para seleccionar contactos (o selecciona todos los que coincidan con tus filtros).</li><li>Usa la barra de acciones masivas para <strong>Delete</strong> (Eliminar), <strong>Assign to an Account</strong> (Asignar a una cuenta) o <strong>Change Owner</strong> (Cambiar propietario).</li><li>Ejecuta <strong>Find Duplicates</strong> (Buscar duplicados) por teléfono o correo para eliminar registros repetidos y mantener tu lista ordenada.</li></ol>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Completa tu CRM y empieza a contactar a tus contactos.",
+    "cards": [
+      { "href": "/crm/leads", "title": "Leads", "description": "Da seguimiento a los clientes potenciales antes de que se conviertan." },
+      { "href": "/crm/accounts", "title": "Cuentas", "description": "Organiza los contactos bajo su empresa." },
+      { "href": "/campaigns/create-campaign", "title": "Crear una campaña", "description": "Llama o envía mensajes a tus contactos automáticamente." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Revisa nuestra <a data-href=\"/api-reference\">referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Contactos - CRM | iMash Docs",
+  "metaDescription": "Agrega, edita, filtra y etiqueta contactos de clientes en el CRM de iMash. Guarda varios correos y números de teléfono, vincula cuentas y limpia duplicados.",
+  "metaKeywords": "contactos, contactos CRM, registros de clientes, gestión de contactos, varios correos, números de teléfono, etiquetas de contacto"
+}

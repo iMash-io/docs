@@ -1,0 +1,55 @@
+{
+  "title": "Configura el Observer Agent",
+  "lede": "Ejecuta una segunda IA en segundo plano que observa cada llamada en vivo, marca los momentos importantes como eventos y puede activar herramientas de forma silenciosa, sin ralentizar la conversación principal.",
+  "timeToComplete": "7 minutos",
+  "videoUrl": "https://youtu.be/-cgpNKzS6FY",
+  "videoLength": "3",
+  "steps": [
+    {
+      "id": "enable",
+      "title": "Activa el Observer Agent",
+      "content": "<ol><li>Ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes) y abre tu agente.</li><li>Abre el panel <strong>Observer Agent</strong> (Agente observador) y actívalo (está desactivado de forma predeterminada).</li><li>El panel tiene dos áreas: <strong>Configuration</strong> (Configuración) y <strong>Events</strong> (Eventos).</li></ol>",
+      "images": [
+        { "src": "images/agents/observer-light.png", "alt": "Panel del Observer Agent", "caption": "El panel del Observer Agent con Configuration y Events.", "theme": "light" },
+        { "src": "images/agents/observer-dark.png", "alt": "Panel del Observer Agent", "caption": "El panel del Observer Agent con Configuration y Events.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "configure",
+      "title": "Configura el modelo y las herramientas",
+      "content": "<ol><li>En <strong>Configuration</strong>, elige un <strong>LLM Model</strong> (Modelo LLM) para impulsar al observador. Como se ejecuta en segundo plano, puedes usar un modelo más lento y minucioso sin afectar la latencia de la llamada.</li><li>De forma opcional, elige un <strong>MCP Server</strong> (Servidor MCP) para que el observador pueda activar herramientas en segundo plano cuando se cumplan ciertas condiciones, sin hacer esperar al agente principal.</li></ol>",
+      "images": [
+        { "src": "images/agents/assistant-editor-light.png", "alt": "Editor de agentes", "caption": "El observador se ejecuta junto al agente principal durante cada llamada.", "theme": "light" },
+        { "src": "images/agents/assistant-editor-dark.png", "alt": "Editor de agentes", "caption": "El observador se ejecuta junto al agente principal durante cada llamada.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "events",
+      "title": "Configura los eventos",
+      "content": "<ul><li>Abre <strong>Events</strong> para ver los eventos predeterminados, entre ellos <em>Call Quality Issues</em> (Problemas de calidad de llamada), <em>Customer Frustration Detected</em> (Frustración del cliente detectada), <em>Escalation Request</em> (Solicitud de escalamiento), <em>Payment Information Discussed</em> (Información de pago comentada), <em>High-Value Opportunity</em> (Oportunidad de alto valor) y más.</li><li>Haz clic en <strong>Add Custom Event</strong> (Agregar evento personalizado) para crear el tuyo con un nombre, una descripción y un color. Puedes desactivar los eventos que no necesites o usar <strong>Reset to Defaults</strong> (Restablecer los valores predeterminados).</li></ul>",
+      "images": []
+    },
+    {
+      "id": "monitor",
+      "title": "Obsérvalo en las llamadas en vivo",
+      "content": "<ol><li>Abre la pantalla <strong>Live Calls</strong> (Llamadas en vivo) mientras una llamada está activa.</li><li>Cuando el observador detecta un evento (por ejemplo, la persona que llama dice \"no te escucho\"), la llamada se etiqueta y se mueve a la columna correspondiente.</li><li>Filtra por evento para concentrarte en las conversaciones que requieren atención.</li></ol>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Combina el monitoreo en segundo plano con más automatización:",
+    "cards": [
+      { "href": "/agents/agent-mcp", "title": "Conecta un servidor MCP", "description": "Dale al observador herramientas en segundo plano para activar." },
+      { "href": "/agents/advanced-settings", "title": "Procesamiento posterior a la llamada", "description": "Resume y califica las llamadas después de que terminan." },
+      { "href": "/phone/call-logs", "title": "Revisa los registros de llamadas", "description": "Consulta las etiquetas de eventos y los resúmenes de llamadas pasadas." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o alguna pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">referencia de la API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Configura el Observer Agent | iMash Docs",
+  "metaDescription": "Ejecuta una IA en segundo plano que monitorea las llamadas en vivo de iMash, marca eventos como frustración del cliente y solicitudes de escalamiento, y activa herramientas de forma silenciosa. Actívalo, configúralo y monitoréalo.",
+  "metaKeywords": "observer agent, imash, smart agent, llamadas en vivo, monitoreo de llamadas, eventos, frustración del cliente, escalamiento"
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Administra la lista de marcación de una campaña",
+  "lede": "La lista de marcación es la cola de prospectos y contactos que una campaña va a llamar. Aprende a agregar personas, revisar su estado de intentos y depurar la lista.",
+  "timeToComplete": "6 minutos",
+  "steps": [
+    {
+      "id": "open-campaign",
+      "title": "Abre la campaña",
+      "content": "<ol><li>Ve a <strong>Campaigns</strong> (Campañas) en el menú de la izquierda.</li><li>Haz clic en el nombre de una campaña para abrirla.</li><li>Dentro, usa las pestañas de la parte superior: <strong>Overview</strong> (Resumen), <strong>Settings</strong> (Configuración), <strong>Dial List</strong> (Lista de marcación), <strong>Add Leads</strong> (Agregar prospectos), <strong>Add Contacts</strong> (Agregar contactos) y <strong>Stages</strong> (Etapas).</li></ol>",
+      "images": [
+        { "src": "images/campaigns/campaign-detail-light.png", "alt": "Pestañas del detalle de la campaña", "caption": "Las pestañas dentro de una campaña, incluidas Dial List, Add Leads y Add Contacts", "theme": "light" },
+        { "src": "images/campaigns/campaign-detail-dark.png", "alt": "Pestañas del detalle de la campaña", "caption": "Las pestañas dentro de una campaña, incluidas Dial List, Add Leads y Add Contacts", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "add-people",
+      "title": "Agrega prospectos y contactos",
+      "content": "<ol><li>Abre la pestaña <strong>Add Leads</strong> (Agregar prospectos) o <strong>Add Contacts</strong> (Agregar contactos).</li><li>Busca en tu CRM por nombre, teléfono u otros campos.</li><li>Selecciona las personas que quieres y agrégalas &mdash; se añaden a la cola de la lista de marcación de esta campaña.</li></ol><p>Consejo: mantén ordenadas tus listas del CRM para que sea fácil traer la audiencia correcta. Los nuevos prospectos están en CRM &rarr; Leads.</p>"
+    },
+    {
+      "id": "review",
+      "title": "Revisa la lista de marcación",
+      "content": "<p>Abre la pestaña <strong>Dial List</strong> (Lista de marcación) para ver a todos los que están en cola. En cada fila puedes ver:</p><ul><li>El contacto o prospecto y su número de teléfono.</li><li>Los intentos realizados y los intentos restantes.</li><li>La etapa actual del ciclo de vida o el último resultado.</li></ul><p>Usa la búsqueda y los filtros para acotar la lista por etapa o estado.</p>"
+    },
+    {
+      "id": "cleanup",
+      "title": "Elimina o depura entradas",
+      "content": "<ul><li>Selecciona filas y usa la acción masiva <strong>Delete</strong> (Eliminar) para quitar a personas que ya no quieres llamar.</li><li>La pestaña <strong>Overview</strong> (Resumen) muestra el progreso en vivo: contactos, intentos realizados, intentos restantes y conteos finalizados.</li></ul><p>Los números en tu lista Do Not Call (No llamar) se omiten automáticamente &mdash; nunca tienes que quitarlos a mano.</p>"
+    },
+    {
+      "id": "completed",
+      "title": "Qué pasa cuando termina",
+      "content": "<p>Cuando se hayan intentado por completo todos los contactos, la campaña pasa a <strong>Completed</strong> (Completada) y su lista de marcación se convierte en un archivo de solo lectura (verás un banner de \"Archive view\", vista de archivo). Las campañas completadas no se pueden editar &mdash; para volver a llamar a la misma audiencia, crea una campaña nueva y agrégalos a su lista de marcación.</p>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Conecta el resto de tu campaña y mantén un ojo en los resultados.",
+    "cards": [
+      { "href": "/campaigns/create-campaign", "title": "Crea una campaña", "description": "Adjunta un agente de IA, números de teléfono y el ritmo de marcación." },
+      { "href": "/crm/leads", "title": "Administra prospectos", "description": "Arma y organiza la audiencia que vas a llamar." },
+      { "href": "/campaigns/campaign-analytics", "title": "Analítica de campañas", "description": "Consulta la tasa de conexión, el progreso y el costo." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Administra la lista de marcación de una campaña | Documentación de iMash",
+  "metaDescription": "Cómo armar y administrar la lista de marcación de una campaña en iMash: agrega prospectos y contactos, revisa intentos y etapas, depura entradas y entiende el archivado.",
+  "metaKeywords": "lista de marcación, contactos de campaña, agregar prospectos, agregar contactos, cola de llamadas, audiencia de campaña, campañas imash"
+}

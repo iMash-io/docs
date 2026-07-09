@@ -1,0 +1,47 @@
+{
+  "title": "Administra la lista de No llamar",
+  "lede": "Agrega números que nunca debes marcar. Cualquier número en esta lista es omitido automáticamente por tus campañas, para que te mantengas en cumplimiento sin trabajo extra.",
+  "timeToComplete": "5 minutos",
+  "steps": [
+    {
+      "id": "open-dnc",
+      "title": "Abre la lista de No llamar",
+      "content": "<ol><li>En el menú de la izquierda, bajo <strong>Call Center</strong>, abre <strong>Do Not Call</strong> (No llamar).</li><li>Verás cada número bloqueado, cuándo se agregó y cualquier contacto, prospecto o registro de llamada que coincida.</li></ol>",
+      "images": [
+        { "src": "images/campaigns/do-not-call-light.png", "alt": "Lista de No llamar", "caption": "La lista Do Not Call con búsqueda, importación y acciones por fila", "theme": "light" },
+        { "src": "images/campaigns/do-not-call-dark.png", "alt": "Lista de No llamar", "caption": "La lista Do Not Call con búsqueda, importación y acciones por fila", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "import",
+      "title": "Agrega números (impórtalos o escríbelos)",
+      "content": "<ol><li>Haz clic en <strong>Import Numbers</strong> (Importar números) en la parte superior derecha.</li><li>Elige <strong>Upload File</strong> (Subir archivo) para arrastrar un .txt o .csv (un número por línea, o separados por coma o punto y coma), luego haz clic en <strong>Import Numbers</strong>.</li><li>O elige <strong>Manual Input</strong> (Entrada manual), pega o escribe los números y haz clic en <strong>Add Numbers</strong> (Agregar números).</li></ol><p>Los números duplicados se manejan automáticamente, así que es seguro reimportar una lista.</p>"
+    },
+    {
+      "id": "search-remove",
+      "title": "Busca y elimina números",
+      "content": "<ul><li>Usa el cuadro <strong>Search phone numbers</strong> (Buscar números de teléfono) para encontrar un número específico.</li><li>Haz clic en el ícono rojo <strong>Remove</strong> (Eliminar) de una fila para borrar un solo número.</li><li>Marca varias filas y usa <strong>Delete Selected</strong> (Eliminar seleccionados) para quitarlos de forma masiva.</li></ul>"
+    },
+    {
+      "id": "how-it-works",
+      "title": "Cómo protege tus campañas",
+      "content": "<p>Cada campaña revisa automáticamente esta lista antes de marcar &mdash; los números que coinciden se omiten, así no tienes que depurar tus listas de marcación a mano. También puedes marcar un contacto o prospecto como <strong>Do Not Call</strong> (No llamar) desde su registro, y usar el botón <strong>API Info</strong> (Información de API) para agregar números de forma programática.</p>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Sigue marcando de forma segura y efectiva.",
+    "cards": [
+      { "href": "/campaigns/create-campaign", "title": "Crea una campaña", "description": "Inicia una campaña de llamadas automatizada." },
+      { "href": "/campaigns/dial-lists", "title": "Administra la lista de marcación", "description": "Controla exactamente a quién se llama." },
+      { "href": "/crm/contacts", "title": "Administra contactos", "description": "Marca registros como No llamar desde el origen." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Administra la lista de No llamar | Documentación de iMash",
+  "metaDescription": "Agrega números a la lista de No llamar de iMash por importación o entrada manual. Los números bloqueados se omiten automáticamente en tus campañas para mantener la marcación en cumplimiento.",
+  "metaKeywords": "no llamar, lista dnc, lista de supresión, bloquear números, cumplimiento de llamadas, tcpa, campañas imash"
+}

@@ -1,33 +1,52 @@
 {
   "title": "Security",
-  "lede": "Configure security settings, authentication methods, and access controls for your account.",
-  "sections": [
+  "lede": "Simple, practical steps to keep your iMash account safe — strong passwords, controlling who's signed in, and limiting what each team member can reach.",
+  "timeToComplete": "6 minutes",
+  "steps": [
     {
-      "id": "authentication",
-      "title": "Authentication Settings",
-      "content": "<p>Configure authentication methods and password policies for your organization.</p><h3>Authentication Options:</h3><ul><li><strong>Two-Factor Authentication:</strong> Enable 2FA for enhanced security</li><li><strong>Single Sign-On (SSO):</strong> Integrate with SAML/OAuth providers</li><li><strong>Password Policies:</strong> Set password complexity requirements</li><li><strong>Session Management:</strong> Control session timeouts and limits</li></ul>"
+      "id": "password",
+      "title": "Use a strong password and reset it safely",
+      "content": "<ol><li>Use a long, unique password for iMash that you don't reuse anywhere else.</li><li>If you ever forget it, use <strong>Forgot password</strong> on the sign-in screen to get a secure reset link by email.</li><li>Change a team member's password at any time from <strong>Team</strong> (User Management) by editing their user.</li></ol><p>Never share one login between multiple people — give each person their own team member account instead so you can track and control access.</p>",
+      "images": [
+        { "src": "images/settings/user-management-light.png", "alt": "Team and access management", "caption": "Account security starts with per-person team accounts and controlled access", "theme": "light" },
+        { "src": "images/settings/user-management-dark.png", "alt": "Team and access management", "caption": "Account security starts with per-person team accounts and controlled access", "theme": "dark" }
+      ]
     },
     {
-      "id": "access-control",
-      "title": "Access Control",
-      "content": "<p>Manage access controls and security policies.</p><ul><li><strong>IP Restrictions:</strong> Whitelist specific IP addresses or ranges</li><li><strong>API Security:</strong> Manage API key permissions and rotation</li><li><strong>Audit Logs:</strong> Track all user actions and security events</li><li><strong>Data Encryption:</strong> Configure data encryption settings</li></ul>"
-    }
-  ],
-  "images": [
-    {
-      "src": "images/security-light.png",
-      "alt": "Security Settings Interface",
-      "caption": "Security configuration and access control settings",
-      "theme": "light"
+      "id": "session-control",
+      "title": "One active session holds control",
+      "content": "<ul><li>iMash allows only <strong>one active session at a time</strong> per account. If you (or someone using your login) sign in somewhere new, the older window is covered by a <strong>Take control</strong> lock screen.</li><li>Click <strong>Take control</strong> in the window you want to use — the other one stays locked until it takes control back.</li><li>If you see this lock unexpectedly, someone else may be using your login. Change your password right away.</li></ul>"
     },
     {
-      "src": "images/security-dark.png",
-      "alt": "Security Settings Interface",
-      "caption": "Security configuration and access control settings",
-      "theme": "dark"
+      "id": "least-access",
+      "title": "Give each person only the access they need",
+      "content": "<ul><li>Assign every team member a <strong>Role</strong> that grants just the read/create/edit/delete rights their job requires.</li><li>Keep <strong>Billing</strong>, <strong>Credentials</strong> (API keys), and <strong>User Management</strong> turned off for members who don't need them — these control money and access.</li><li>Use <strong>Permission Groups</strong> so a member only sees the records that belong to their team, not the whole account.</li></ul><p>Manage all of this on the <strong>Team</strong> page.</p>"
+    },
+    {
+      "id": "deactivate",
+      "title": "Deactivate access the moment it's no longer needed",
+      "content": "<ol><li>When someone leaves or changes roles, open <strong>Team</strong> and use <strong>Disable</strong> on their row to block sign-in instantly.</li><li>Re-enable later if they return — no need to delete and recreate the account.</li><li>Rotate <strong>API Keys</strong> if a key may have been exposed, and only enable Credentials access for people who manage integrations.</li></ol>"
+    },
+    {
+      "id": "data-isolation",
+      "title": "Your data stays isolated",
+      "content": "<ul><li>iMash keeps each account's data separated at the database level, so your records are never visible to other customers.</li><li>Within your account, roles, groups, and per-page toggles decide exactly what each member can open.</li><li>When the owner uses <strong>Impersonate</strong> to help a member, it's a temporary, time-limited view — the member's own login is never exposed.</li></ul>"
     }
   ],
-  "metaTitle": "Security Settings - Account Protection | iMash Docs",
-  "metaDescription": "Configure security settings including 2FA, API permissions, and audit logs. Protect your account and data.",
-  "metaKeywords": "security settings, two-factor authentication, 2FA, API security, audit logs, account protection, data security"
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Lock down access and keep your account healthy.",
+    "cards": [
+      { "href": "/settings/team-management", "title": "Team Management", "description": "Roles, groups, and per-member access toggles." },
+      { "href": "/settings/billing", "title": "Billing", "description": "Protect payments by limiting billing access." },
+      { "href": "/settings/white-label", "title": "White Label", "description": "Brand the platform under your own domain." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Security - Keep Your Account Safe | iMash Docs",
+  "metaDescription": "Secure your iMash account with strong passwords, single-session control, least-privilege roles, and instant deactivation of team access.",
+  "metaKeywords": "security, account security, password reset, session control, access control, permissions, data isolation, deactivate user"
 }

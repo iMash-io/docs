@@ -1,33 +1,47 @@
 {
   "title": "Accounts",
-  "lede": "Manage company accounts and organizations with multiple contacts and relationships.",
-  "sections": [
+  "lede": "Accounts are the companies and organizations you work with. Group the contacts and leads that belong to a business under one account so you can see everything in one place.",
+  "timeToComplete": "5 minutes",
+  "steps": [
     {
-      "id": "account-management",
-      "title": "Account Management",
-      "content": "<p>Organize contacts under company accounts for better relationship management.</p><h3>Account Features:</h3><ul><li><strong>Company Profiles:</strong> Detailed organization information</li><li><strong>Contact Relationships:</strong> Link multiple contacts to accounts</li><li><strong>Account Hierarchy:</strong> Parent-child account relationships</li><li><strong>Account Activities:</strong> Track all account interactions</li></ul>"
+      "id": "open-accounts",
+      "title": "Open the Accounts list",
+      "content": "<ol><li>In the left navigation, open <strong>CRM</strong> and click <strong>Accounts</strong> (or go to <code>/crm/accounts</code>).</li><li>Each row is a company, showing its <strong>Name</strong>, <strong>Stage</strong>, and details.</li><li>Click a company name to open its profile and see the contacts and leads linked to it.</li></ol><p>Use accounts when you sell to businesses: one account (the company) can have many contacts (the people who work there).</p>",
+      "images": [
+        { "src": "images/crm/accounts-light.png", "alt": "Accounts list", "caption": "The Accounts list of companies with search and filters", "theme": "light" },
+        { "src": "images/crm/accounts-dark.png", "alt": "Accounts list", "caption": "The Accounts list of companies with search and filters", "theme": "dark" }
+      ]
     },
     {
-      "id": "account-operations",
-      "title": "Account Operations",
-      "content": "<p>Manage account lifecycle and relationships efficiently.</p><ul><li><strong>Account Creation:</strong> Manual and automatic account creation</li><li><strong>Contact Assignment:</strong> Assign contacts to accounts</li><li><strong>Account Campaigns:</strong> Target entire organizations</li><li><strong>Reporting:</strong> Account-level performance metrics</li></ul>"
-    }
-  ],
-  "images": [
-    {
-      "src": "images/accounts-light.png",
-      "alt": "Accounts Management Interface",
-      "caption": "Account overview and contact relationships",
-      "theme": "light"
+      "id": "add-account",
+      "title": "Add a new account",
+      "content": "<ol><li>Click <strong>Create</strong> (New Account) at the top of the list.</li><li>Enter the company <strong>Name</strong>.</li><li>Fill in optional details such as the address, <strong>Stage</strong>, and any custom fields.</li><li>Click <strong>Save</strong>.</li></ol>"
     },
     {
-      "src": "images/accounts-dark.png",
-      "alt": "Accounts Management Interface",
-      "caption": "Account overview and contact relationships",
-      "theme": "dark"
+      "id": "link-contacts",
+      "title": "Link contacts and leads to an account",
+      "content": "<ul><li>When you create or edit a <strong>Contact</strong> or <strong>Lead</strong>, pick the company in the <strong>Account</strong> field.</li><li>From the Leads or Contacts list, select records and use <strong>Assign to an Account</strong> to link many at once.</li><li>Open an account to see all of its people together, and jump to that company's leads by clicking through from the account.</li></ul>"
+    },
+    {
+      "id": "search-filter",
+      "title": "Search, filter, and tag",
+      "content": "<ul><li>Use the <strong>search box</strong> to find a company by name, email, or phone.</li><li>Add filters for <strong>Stage</strong>, <strong>Tags</strong>, <strong>Address</strong>, <strong>City</strong>, or <strong>Owner</strong>.</li><li>Add <strong>tags</strong> to group companies (for example by territory or industry), then filter by them.</li></ul>"
     }
   ],
-  "metaTitle": "Accounts Management - Company Records | iMash Docs",
-  "metaDescription": "Manage company accounts and organizations. Track multiple contacts per account and business relationships.",
-  "metaKeywords": "accounts, companies, organizations, B2B CRM, account management, business relationships"
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Fill your accounts with people and reach out.",
+    "cards": [
+      { "href": "/crm/contacts", "title": "Contacts", "description": "Add the people who work at each company." },
+      { "href": "/crm/leads", "title": "Leads", "description": "Track prospects tied to an account." },
+      { "href": "/campaigns/create-campaign", "title": "Create a Campaign", "description": "Target an account's contacts with calls or messages." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Accounts - CRM | iMash Docs",
+  "metaDescription": "Create company accounts in the iMash CRM and link contacts and leads to them. Search, filter, tag, and manage B2B relationships in one place.",
+  "metaKeywords": "accounts, companies, organizations, B2B CRM, account management, link contacts, business relationships"
 }

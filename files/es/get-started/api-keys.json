@@ -1,0 +1,78 @@
+{
+  "title": "Claves de API: accede a iMash de forma programática",
+  "lede": "Las claves de API permiten que tu propio software se comunique con iMash a través de la API REST &mdash; iniciar llamadas, leer registros de llamadas, sincronizar registros del CRM y más &mdash; sin iniciar sesión en el panel. Esta guía cubre cómo generar, almacenar y revocar claves.",
+  "timeToComplete": "5 minutos",
+  "steps": [
+    {
+      "id": "what-are-keys",
+      "title": "Para qué sirven las claves de API",
+      "content": "<p>Una clave de API es un token secreto que identifica tu cuenta cuando llamas a la API REST de iMash. En lugar de un nombre de usuario y una contraseña, tu código envía la clave con cada solicitud.</p><ul><li>Úsalas para automatizar iMash desde tu propio backend, scripts o herramientas de terceros.</li><li>Cada clave actúa en nombre de tu cuenta, así que trátala como una contraseña.</li><li>Una clave se muestra completa <strong>solo una vez</strong>, en el momento en que la creas. Después de eso, iMash almacena únicamente una versión cifrada (hash) y puede mostrarte el prefijo.</li></ul>",
+      "images": [
+        {
+          "src": "images/get-started/api-keys-light.png",
+          "alt": "Página de claves de API",
+          "caption": "La página API Keys enumera tus claves con su nombre, prefijo, fecha de creación y hora de último uso.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/api-keys-dark.png",
+          "alt": "Página de claves de API",
+          "caption": "La página API Keys enumera tus claves con su nombre, prefijo, fecha de creación y hora de último uso.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "open-page",
+      "title": "Abrir la página de claves de API",
+      "content": "<ol><li>En la navegación de la izquierda, abre <strong>Account</strong> (Cuenta).</li><li>Haz clic en <strong>API Keys</strong> (Claves de API).</li><li>Verás una tabla con tus claves existentes, cada una mostrando su <strong>Name</strong> (Nombre), <strong>Key Prefix</strong> (Prefijo de la clave), <strong>Created At</strong> (Fecha de creación) y <strong>Last Used</strong> (Último uso).</li></ol>",
+      "images": []
+    },
+    {
+      "id": "generate",
+      "title": "Generar una nueva clave",
+      "content": "<ol><li>Haz clic en <strong>Generate New API Key</strong> (Generar nueva clave de API) en la parte superior derecha.</li><li>Ingresa un <strong>nombre</strong> claro y descriptivo (por ejemplo, \"Zapier integration\" o \"Nightly CRM sync\") para poder distinguir tus claves más adelante.</li><li>Haz clic en <strong>Generate</strong> (Generar).</li><li>iMash muestra la clave secreta completa. Usa el ícono de ojo para revelarla y el botón <strong>Copy</strong> (Copiar) para copiarla.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "store-securely",
+      "title": "Cópiala y guárdala de forma segura",
+      "content": "<p>La clave completa se muestra una sola vez y no se puede recuperar de nuevo. Si la pierdes, deberás generar una nueva.</p><ul><li>Pégala directamente en el almacén de secretos de tu integración o en una variable de entorno &mdash; nunca en documentos compartidos ni en chats.</li><li><strong>No</strong> incrustes la clave en código de front-end, aplicaciones móviles ni en nada que un usuario pueda ver.</li><li>Dale a cada integración su propia clave para que puedas revocar una sin afectar a las demás.</li></ul>",
+      "images": []
+    },
+    {
+      "id": "revoke",
+      "title": "Revocar una clave que ya no necesitas",
+      "content": "<ol><li>Encuentra la clave en la tabla de la página <strong>API Keys</strong> (Claves de API).</li><li>Haz clic en el ícono de <strong>eliminar</strong> (papelera) en su fila.</li><li>Confirma. La clave deja de funcionar de inmediato &mdash; cualquier integración que aún la use perderá el acceso, así que actualízala primero.</li></ol><p>Revisa la columna <strong>Last Used</strong> (Último uso) para detectar las claves que ya no están activas antes de eliminarlas.</p>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Con una clave en mano, conecta iMash con tus otros sistemas.",
+    "cards": [
+      {
+        "href": "/api-reference",
+        "title": "Referencia de API",
+        "description": "Consulta cada endpoint, parámetro y solicitud de ejemplo de la API REST de iMash."
+      },
+      {
+        "href": "/get-started/dashboard-overview",
+        "title": "Resumen del panel",
+        "description": "Comprende los mismos datos de llamadas y CRM que puedes extraer a través de la API."
+      },
+      {
+        "href": "/automations/smart-flows",
+        "title": "Crear automatizaciones",
+        "description": "Activa flujos de trabajo y conecta herramientas externas sin escribir código."
+      }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
+  },
+  "metaTitle": "Claves de API | Documentación de iMash",
+  "metaDescription": "Genera, nombra, almacena y revoca claves de API de iMash para el acceso programático a la API REST desde Account → API Keys. Las claves se muestran completas solo una vez.",
+  "metaKeywords": "claves de API de iMash, API REST, acceso programático, generar clave de API, revocar clave de API, autenticación de API, integraciones"
+}

@@ -1,79 +1,67 @@
 {
-  "title": "Basic Settings for Voice AI Agents in iMash",
-  "lede": "This guide covers the basic settings available for AI agents in Imash, including conversation length, idle messages, voicemail options, and features that improve natural conversation flow.",
+  "title": "Agent Settings: Timeouts, Idle Messages & Voicemail",
+  "lede": "Fine-tune how your Smart Agent behaves on a call: maximum call length, silence and idle handling, voicemail (AMD) detection, backchannel, interruptions, and turn detection.",
   "timeToComplete": "8 minutes",
-  "videoUrl": "https://youtu.be/7C-N_RWwPFI", 
-  "videoLength": "5", 
+  "videoUrl": "https://youtu.be/7C-N_RWwPFI",
+  "videoLength": "5",
   "steps": [
     {
-      "id": "access-settings",
-      "title": "Access the Settings Tab",
-      "content": "<ol><li>Open the <strong>AI Agent Builder</strong> for a new or existing agent.</li><li>Navigate to the <strong>Settings</strong> tab to configure advanced options.</li></ol>",
-      "images": []
+      "id": "open-editor",
+      "title": "Open the Agent Editor",
+      "content": "<ol><li>In the left navigation, go to <strong>Intelligence Center → Smart Agents</strong>.</li><li>Click an existing agent to open it in the editor (you can switch between Form view and Node view).</li><li>The middle column holds the feature panels (Knowledge Base, Voice, Brains, and more), each with its own on/off toggle. Below them you will find <strong>Sub Agents / Tasks / Handoffs</strong>, <strong>Tools / MCP</strong>, and <strong>Settings</strong>.</li></ol>",
+      "images": [
+        { "src": "images/agents/assistant-editor-light.png", "alt": "Smart Agent editor", "caption": "The Smart Agent editor: prompt on the left, feature panels in the middle, Test Agent at the top.", "theme": "light" },
+        { "src": "images/agents/assistant-editor-dark.png", "alt": "Smart Agent editor", "caption": "The Smart Agent editor: prompt on the left, feature panels in the middle, Test Agent at the top.", "theme": "dark" }
+      ]
     },
     {
-      "id": "conversation-limits",
-      "title": "Configure Conversation Limits",
-      "content": "<ul><li><strong>Conversation Length</strong>: Set the maximum length of the call in seconds. The agent will automatically end the call when this limit is reached.</li><li><strong>Response Delay</strong>: Define how long the agent should wait before responding, to avoid interrupting users who pause mid-sentence.</li><li><strong>Interrupt Threshold</strong>: Set the minimum number of words the user must say to interrupt the agent while it is speaking.</li></ul>",
-      "images": []
+      "id": "open-settings",
+      "title": "Open the Settings Panel",
+      "content": "<ol><li>Click <strong>Settings</strong> in the editor.</li><li>Use the left rail to move between sections: <strong>General</strong>, <strong>Idle Messages</strong>, <strong>Voicemail</strong>, <strong>Speech</strong>, <strong>Voice Activity Detection</strong>, <strong>Audio Quality</strong>, <strong>Background Audio</strong>, <strong>Interruptions</strong>, <strong>User Turn Limits</strong>, <strong>Turn Detection</strong>, and <strong>Privacy &amp; Recording</strong>.</li></ol>",
+      "images": [
+        { "src": "images/agents/agent-settings-panel-light.png", "alt": "Agent settings panel", "caption": "The Settings panel with its section rail on the left.", "theme": "light" },
+        { "src": "images/agents/agent-settings-panel-dark.png", "alt": "Agent settings panel", "caption": "The Settings panel with its section rail on the left.", "theme": "dark" }
+      ]
     },
     {
-      "id": "silence-timeout",
-      "title": "Silence Timeout",
-      "content": "<p>Configure how long the system should wait before automatically ending a call due to user inactivity. Default: <strong>30 seconds</strong>.</p>",
+      "id": "general-timeouts",
+      "title": "Set Call Length and Silence (General)",
+      "content": "<ul><li><strong>Maximum Duration</strong>: the longest a call can run, in seconds. The agent ends the call when this limit is reached.</li><li><strong>Silence Timeout</strong>: how long to wait during silence before the agent ends the call.</li></ul>",
       "images": []
     },
     {
       "id": "idle-messages",
-      "title": "Idle Messages",
-      "content": "<ol><li>Enable <strong>Idle Messages</strong> to send follow-ups if the user does not respond.</li><li>Set the wait time (e.g., 8 seconds).</li><li>Configure up to three idle messages, such as: <em>“Are you still there?”</em> or personalized ones like <em>“Hey Bob, are you still online?”</em>.</li><li>Custom variables from the conversation (e.g., user’s name) can be included in idle messages.</li></ol>",
+      "title": "Configure Idle Messages",
+      "content": "<ol><li>Open the <strong>Idle Messages</strong> section and turn it on.</li><li>Set the <strong>Idle Timeout</strong> (seconds of quiet before the agent speaks up) and <strong>Max Idle Messages</strong>.</li><li>Add prompts such as <em>\"Are you still there?\"</em>. Type <code>{</code> to insert a variable like the caller's name.</li></ol>",
       "images": []
     },
     {
-      "id": "voicemail",
-      "title": "Voicemail Settings",
-      "content": "<ul><li><strong>Hang Up on Voicemail</strong>: End the call if voicemail is detected.</li><li><strong>Leave a Message</strong>: Configure a custom voicemail message. Dynamic parameters from the conversation can be inserted.</li></ul>",
+      "id": "voicemail-amd",
+      "title": "Voicemail Detection (AMD)",
+      "content": "<ul><li>Under <strong>Voicemail</strong>, turn on <strong>Voicemail Detection (AMD)</strong> and choose <strong>Hang up if reach voicemail</strong> or <strong>Leave a message if reach voicemail</strong>.</li><li>A voicemail message can include dynamic variables from the conversation.</li><li>Advanced detection timings (No-Speech Timeout, Detection Timeout, speech/silence thresholds) are available if you need to tune accuracy.</li></ul>",
       "images": []
     },
     {
-      "id": "backchannel",
-      "title": "Enable Backchannel",
-      "content": "<p>Backchannel adds natural filler words (e.g., “Gotcha”, “Uh-huh”) during conversations to make the agent sound less robotic. This feature is in beta but can significantly improve natural flow.</p>",
-      "images": []
-    },
-    {
-      "id": "preemptive-generation",
-      "title": "Preemptive Generation",
-      "content": "<p>When using a <strong>STT + TTS + LLM setup</strong> instead of a real-time model, enable this setting to allow the LLM to generate responses concurrently while the user is speaking. This can improve responsiveness and create a faster back-and-forth flow.</p>",
+      "id": "speech-and-turns",
+      "title": "Speech, Interruptions & Turn Detection",
+      "content": "<ul><li><strong>Speech</strong>: enable <strong>Enable Backchannel (Beta)</strong> for natural fillers like \"uh-huh\", and <strong>Preemptive Generation</strong> so a text-based (STT + LLM + TTS) agent starts thinking while the caller is still speaking.</li><li><strong>Interruptions</strong>: allow or block interruptions and set the minimum words that trigger one.</li><li><strong>Turn Detection</strong>: an audio-based detector decides when the caller has finished talking. These settings are ignored for realtime (speech-to-speech) models, which handle turns themselves.</li></ul>",
       "images": []
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Now that you’ve configured the basic settings, you can enhance the conversation experience even further:",
+    "description": "With behavior dialed in, expand what your agent can do:",
     "cards": [
-      {
-        "href": "/agents/tools",
-        "title": "Add Tools to Your Agent",
-        "description": "Enable your agent to perform tasks like booking meetings or ending calls automatically."
-      },
-      {
-        "href": "/agents/mcp-servers",
-        "title": "Connect MCP Servers",
-        "description": "Combine multiple tools and flows into a single server for expanded capabilities."
-      },
-      {
-        "href": "/agents/knowledge-base",
-        "title": "Add a Knowledge Base",
-        "description": "Upload FAQs and support documents so your agent can answer with accurate information."
-      }
+      { "href": "/agents/voice-configuration", "title": "Configure the Voice", "description": "Pick a TTS provider and preview voices for your agent." },
+      { "href": "/agents/agent-tools", "title": "Add Tools", "description": "Let the agent end calls, book appointments, and call your APIs." },
+      { "href": "/agents/agent-privacy", "title": "Privacy & Recording", "description": "Control data storage and audio recording for calls." }
     ]
   },
   "support": {
     "title": "Need Help?",
-    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a> for detailed documentation</li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a> for step-by-step guides</li></ul>"
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Basic Settings for AI Agents in iMash",
-  "metaDescription": "Learn how to configure basic AI agent settings in Imash, including conversation length, idle messages, voicemail handling, and backchannel for natural conversation flow.",
-  "metaKeywords": "basic settings, imash tutorial, ai agent setup, voicemail, idle messages, backchannel, conversation length"
+  "metaTitle": "Agent Settings: Timeouts, Idle & Voicemail | iMash Docs",
+  "metaDescription": "Configure iMash Smart Agent settings: maximum call duration, silence and idle timeouts, voicemail (AMD) detection, backchannel, interruptions, and turn detection.",
+  "metaKeywords": "agent settings, imash, smart agent, voicemail detection, idle messages, backchannel, turn detection, conversation length"
 }

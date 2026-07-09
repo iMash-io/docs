@@ -1,0 +1,55 @@
+{
+  "title": "Elige el cerebro (LLM) de tu agente",
+  "lede": "Elige el modelo que impulsa las respuestas de tu Smart Agent (Agente inteligente). Conoce la diferencia entre los modelos realtime (voz a voz) y los modelos de texto (LLM + transcriptor), y cómo configurar cada uno.",
+  "timeToComplete": "6 minutos",
+  "videoUrl": "https://youtu.be/bDy0w1hEz7I",
+  "videoLength": "2",
+  "steps": [
+    {
+      "id": "open-brains",
+      "title": "Abre el panel Brains (LLM)",
+      "content": "<ol><li>Ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes) y abre tu agente.</li><li>En la columna central, haz clic en el panel <strong>Brains (LLM)</strong> (Cerebro). La etiqueta muestra el proveedor y el modelo actuales.</li></ol>",
+      "images": [
+        { "src": "images/agents/llm-settings-light.png", "alt": "Selector de modelo LLM", "caption": "El panel Brains (LLM): elige el modelo que impulsa las respuestas.", "theme": "light" },
+        { "src": "images/agents/llm-settings-dark.png", "alt": "Selector de modelo LLM", "caption": "El panel Brains (LLM): elige el modelo que impulsa las respuestas.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "model-types",
+      "title": "Comprende los dos tipos de modelo",
+      "content": "<ul><li><strong>Modelos realtime</strong> (agrupados en <em>Realtime Agent</em>): un solo modelo procesa el audio de entrada y el audio de salida (voz a voz). La detección de turnos y la transcripción vienen integradas.</li><li><strong>Modelos de texto (LLM)</strong>: el flujo es Voz → Texto → LLM → Voz. Estos se combinan con un <strong>Transcriber (STT)</strong> (Transcriptor) aparte para el reconocimiento de voz y una <strong>Voice (TTS)</strong> (Voz) para la respuesta.</li></ul>",
+      "images": [
+        { "src": "images/agents/assistant-editor-light.png", "alt": "Paneles del editor de agentes", "caption": "Los modelos de texto usan paneles separados de Transcriber (STT) y Voice (TTS).", "theme": "light" },
+        { "src": "images/agents/assistant-editor-dark.png", "alt": "Paneles del editor de agentes", "caption": "Los modelos de texto usan paneles separados de Transcriber (STT) y Voice (TTS).", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "configure-transcriber",
+      "title": "Configura el transcriptor (modelos de texto)",
+      "content": "<ol><li>Cuando elijas un LLM de texto, abre el panel <strong>Transcriber (STT)</strong>.</li><li>Elige el proveedor de transcripción y define el idioma de entrada para un reconocimiento preciso.</li><li>También puedes definir un transcriptor de respaldo que toma el relevo si el principal no está disponible.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "advanced",
+      "title": "Parámetros avanzados del LLM (opcional)",
+      "content": "<ul><li>Abre <strong>Advanced LLM Parameters</strong> (Parámetros avanzados del LLM) para ajustar el comportamiento: <strong>Max Tool Steps</strong>, <strong>Parallel Tool Calls</strong>, <strong>Top-P</strong>, <strong>Max Output Tokens</strong> y penalizaciones.</li><li>Nota: con un modelo realtime, algunos ajustes avanzados de interrupción se ignoran, ya que el modelo gestiona los turnos por sí mismo.</li></ul>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Ajusta la voz y el comportamiento al modelo que elegiste:",
+    "cards": [
+      { "href": "/agents/voice-configuration", "title": "Configura la voz", "description": "Elige una voz TTS para modelos de texto o la voz integrada del modelo." },
+      { "href": "/agents/agent-settings", "title": "Ajustes del agente", "description": "Ajusta interrupciones, detección de turnos y tiempos de espera." },
+      { "href": "/agents/test-agent", "title": "Prueba tu agente", "description": "Compara modelos en vivo para encontrar el mejor." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o alguna pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">referencia de la API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Elige el cerebro (LLM) de tu agente | iMash Docs",
+  "metaDescription": "Elige el modelo de tu Smart Agent de iMash. Conoce los modelos realtime (voz a voz) frente a los de texto (LLM + transcriptor), configura el transcriptor y ajusta los parámetros avanzados del LLM.",
+  "metaKeywords": "ajustes de llm, imash, smart agent, modelo realtime, transcriptor, stt, voz a voz, selección de modelo"
+}

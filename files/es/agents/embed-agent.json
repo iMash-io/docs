@@ -1,0 +1,55 @@
+{
+  "title": "Incrusta tu agente en tu sitio web",
+  "lede": "Convierte un Smart Agent (Agente inteligente) en un widget o popup para sitios web con texto, voz y un avatar opcional, y luego pega un solo fragmento de código para ponerlo en marcha.",
+  "timeToComplete": "8 minutos",
+  "videoUrl": "https://youtu.be/3JS-ncMsZ7s",
+  "videoLength": "4",
+  "steps": [
+    {
+      "id": "prepare-agent",
+      "title": "Prepara el agente",
+      "content": "<ol><li>Ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes) y abre (o crea) el agente que quieres en tu sitio.</li><li>Escribe un prompt adaptado a tu producto y, opcionalmente, adjunta una <strong>Knowledge Base</strong> (Base de conocimiento) para que responda con precisión.</li><li>Elige el cerebro (LLM) y una voz si quieres respuestas por voz.</li></ol>",
+      "images": [
+        { "src": "images/agents/assistant-editor-light.png", "alt": "Editor de agentes", "caption": "Configura primero el agente y luego publícalo como un widget para sitios web.", "theme": "light" },
+        { "src": "images/agents/assistant-editor-dark.png", "alt": "Editor de agentes", "caption": "Configura primero el agente y luego publícalo como un widget para sitios web.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "enable-widget",
+      "title": "Activa el widget del sitio web",
+      "content": "<ol><li>Abre el panel <strong>Website Widget</strong> (Widget del sitio web) y activa <strong>Enable Website Widget</strong> (Activar widget del sitio web).</li><li>En <strong>Capabilities</strong> (Capacidades), elige cómo interactúan los visitantes: <strong>Text</strong> (Texto), <strong>Voice</strong> (Voz) y, opcionalmente, un <strong>Avatar</strong> (el avatar requiere voz).</li></ol>",
+      "images": [
+        { "src": "images/agents/website-widget-light.png", "alt": "Configuración del widget del sitio web", "caption": "El panel Website Widget: capacidades, avatar, tema, diseño y código de incrustación.", "theme": "light" },
+        { "src": "images/agents/website-widget-dark.png", "alt": "Configuración del widget del sitio web", "caption": "El panel Website Widget: capacidades, avatar, tema, diseño y código de incrustación.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "design",
+      "title": "Dale estilo al widget",
+      "content": "<ul><li><strong>Avatar</strong>: elige un modo de visualización (<em>Avatar Only</em> [Solo avatar] o <em>Side by Side</em> [Lado a lado]) y elige o sube una imagen de avatar.</li><li><strong>Theme &amp; Header</strong> (Tema y encabezado): configura colores Light (Claro), Dark (Oscuro), Auto o Custom (Personalizados) y un título de encabezado.</li><li><strong>Layout &amp; Position</strong> (Diseño y posición): elige <em>Widget</em> (anclado a una esquina) o <em>Popup</em>, y define su posición o tamaño en pantalla.</li><li><strong>Behavior</strong> (Comportamiento): decide si se abre automáticamente y si el agente empieza a hablar al abrirse.</li></ul>",
+      "images": []
+    },
+    {
+      "id": "embed",
+      "title": "Previsualiza e incrusta",
+      "content": "<ol><li>Abre la sección <strong>Embed Code &amp; Preview</strong> (Código de incrustación y vista previa) para ver una vista previa en vivo.</li><li>Copia el fragmento <code>&lt;script&gt;</code> generado.</li><li>Pégalo en el HTML de tu sitio donde quieras que aparezca el agente, luego recarga la página y pruébalo.</li></ol>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Mejora la experiencia en el sitio:",
+    "cards": [
+      { "href": "/agents/agent-knowledge-base", "title": "Agrega una base de conocimiento", "description": "Ayuda al widget a responder con precisión las preguntas sobre el producto." },
+      { "href": "/agents/agent-tools", "title": "Agrega herramientas", "description": "Permite que el widget agende reuniones o llame a tus API." },
+      { "href": "/agents/agent-privacy", "title": "Privacidad y grabación", "description": "Decide qué datos de la conversación se almacenan." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Incrusta tu agente en tu sitio web | iMash Docs",
+  "metaDescription": "Publica un Smart Agent de iMash como un widget o popup para sitios web con texto, voz y avatar. Configura las capacidades, el tema y el diseño, y luego pega el código de incrustación para ponerlo en marcha.",
+  "metaKeywords": "incrustar agente, widget de sitio web, imash, smart agent, popup, avatar, widget de voz, código de incrustación"
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Facturación",
+  "lede": "iMash funciona con un saldo prepago. Esta guía te muestra cómo revisar tu saldo, agregar un método de pago, recargar fondos y consultar tu uso y transacciones.",
+  "timeToComplete": "6 minutos",
+  "steps": [
+    {
+      "id": "open-billing",
+      "title": "Abre la página de Facturación",
+      "content": "<ol><li>En la navegación izquierda, abre el grupo <strong>Account</strong> (Cuenta) y haz clic en <strong>Billing</strong> (Facturación) (o ve a <code>/billing</code>).</li><li>La parte superior de la página muestra tu <strong>Prepaid Balance</strong> (Saldo prepago) — el crédito del que se descuentan las llamadas, los mensajes y demás uso.</li><li>Mantén el saldo recargado para que tus agentes y campañas nunca se detengan. (<em>Pay as you go</em> (Pago por uso) aparece como Próximamente; hoy todo funciona con saldo prepago.)</li></ol>",
+      "images": [
+        { "src": "images/analytics/billing-light.png", "alt": "Página de facturación con el saldo", "caption": "La página de Facturación muestra tu saldo prepago, tus métodos de pago y el panel para agregar fondos", "theme": "light" },
+        { "src": "images/analytics/billing-dark.png", "alt": "Página de facturación con el saldo", "caption": "La página de Facturación muestra tu saldo prepago, tus métodos de pago y el panel para agregar fondos", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "add-payment-method",
+      "title": "Agrega un método de pago",
+      "content": "<ol><li>Abre el panel <strong>Add Payment Method</strong> (Agregar método de pago).</li><li>Ingresa una <strong>credit/debit card</strong> (tarjeta de crédito/débito), o conecta una <strong>US bank account (ACH)</strong> (cuenta bancaria de EE. UU. por ACH).</li><li>Guárdalo. Puedes agregar más de un método y eliminar los que ya no uses.</li></ol><p>Los datos de tu tarjeta se almacenan de forma segura con nuestro procesador de pagos (Stripe) — iMash nunca ve el número completo de tu tarjeta.</p>"
+    },
+    {
+      "id": "add-funds",
+      "title": "Agrega fondos a tu saldo",
+      "content": "<ol><li>En el área <strong>Add Funds</strong> (Agregar fondos), escribe el monto en dólares que quieres agregar.</li><li>Elige qué <strong>payment method</strong> (método de pago) guardado quieres cobrar.</li><li>Haz clic para confirmar. Tu saldo se actualiza una vez que el pago se confirma.</li></ol><p><strong>Bueno saberlo:</strong> las recargas con tarjeta tienen una pequeña <strong>comisión de procesamiento del 3%</strong> — se te cobra el monto completo que ingresaste y el saldo se acredita con un 3% menos. Las recargas por <strong>banco (ACH)</strong> no tienen comisión de procesamiento.</p>"
+    },
+    {
+      "id": "usage-ledger",
+      "title": "Revisa el uso y las transacciones",
+      "content": "<ul><li>Abre la pestaña <strong>Ledger</strong> (Libro mayor) para ver cada crédito y débito — el dinero que agregaste, el uso descontado y cualquier transferencia o ajuste.</li><li>Filtra por <strong>service type</strong> (tipo de servicio) y expande una fila para ver el saldo antes y después, de modo que puedas rastrear exactamente a dónde fue el gasto.</li><li>Usa el historial de <strong>transactions</strong> (transacciones) para revisar tus pagos anteriores con tarjeta y banco.</li></ul>"
+    },
+    {
+      "id": "team-billing",
+      "title": "Facturación para miembros del equipo y afiliados",
+      "content": "<ul><li>Los miembros del equipo que invitas no obtienen acceso a la facturación de forma predeterminada. Puedes otorgarlo, establecer un precio por minuto por miembro o transferir saldo a un miembro desde <strong>Team</strong> (Equipo, o Gestión de usuarios).</li><li>Si eres un <strong>affiliate</strong> (afiliado), aquí aparece una pestaña adicional de <strong>Withdrawals</strong> (Retiros) para que puedas cobrar el saldo de tus comisiones.</li></ul>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Mantén el gasto bajo control y administra tu equipo.",
+    "cards": [
+      { "href": "/analytics/cost-management", "title": "Gestión de costos", "description": "Desglosa el uso y el costo por servicio." },
+      { "href": "/settings/team-management", "title": "Gestión del equipo", "description": "Otorga acceso a facturación o transfiere saldo al personal." },
+      { "href": "/agents/create-agent", "title": "Crea un agente", "description": "Pon tu saldo a trabajar con un agente de voz con IA." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Facturación - Saldo prepago y métodos de pago | Documentación de iMash",
+  "metaDescription": "Revisa tu saldo prepago, agrega una tarjeta o cuenta bancaria, recarga fondos y consulta el uso y las transacciones en la página de Facturación de iMash.",
+  "metaKeywords": "facturación, saldo prepago, agregar fondos, métodos de pago, ACH, tarjeta de crédito, libro mayor de uso, transacciones"
+}

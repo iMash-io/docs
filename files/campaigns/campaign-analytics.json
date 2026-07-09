@@ -1,33 +1,51 @@
 {
-  "title": "Campaign Analytics",
-  "lede": "Track and analyze campaign performance with detailed metrics and insights.",
-  "sections": [
+  "title": "Read Campaign Analytics",
+  "lede": "See how your campaigns are performing: live progress and connect rates in Campaign Stats, and per-campaign cost and outcome breakdowns in Campaign Reports.",
+  "timeToComplete": "5 minutes",
+  "steps": [
     {
-      "id": "performance-metrics",
-      "title": "Performance Tracking",
-      "content": "<p>Monitor key performance indicators for your calling campaigns.</p><h3>Key Metrics:</h3><ul><li><strong>Call Volume:</strong> Total calls made and answered</li><li><strong>Success Rate:</strong> Percentage of successful conversations</li><li><strong>Conversion Rate:</strong> Leads converted to customers</li><li><strong>Average Call Duration:</strong> Time spent per conversation</li></ul>"
+      "id": "open-stats",
+      "title": "Open Campaign Stats",
+      "content": "<ol><li>In the left menu, under <strong>Campaigns</strong>, open <strong>Campaign Stats</strong>.</li><li>This monitoring view shows your campaigns side by side with their live status and key metrics.</li></ol>",
+      "images": [
+        { "src": "images/campaigns/campaign-stats-light.png", "alt": "Campaign Stats", "caption": "Campaign Stats gives a live monitoring view across campaigns", "theme": "light" },
+        { "src": "images/campaigns/campaign-stats-dark.png", "alt": "Campaign Stats", "caption": "Campaign Stats gives a live monitoring view across campaigns", "theme": "dark" }
+      ]
     },
     {
-      "id": "reporting",
-      "title": "Analytics Reports",
-      "content": "<p>Generate detailed reports for campaign analysis.</p><ul><li><strong>Real-time Dashboards:</strong> Live campaign monitoring</li><li><strong>Historical Reports:</strong> Performance over time</li><li><strong>Comparative Analysis:</strong> Campaign vs campaign performance</li><li><strong>Custom Exports:</strong> Data export for external analysis</li></ul>"
-    }
-  ],
-  "images": [
-    {
-      "src": "images/campaign-analytics-light.png",
-      "alt": "Campaign Analytics Dashboard",
-      "caption": "Campaign performance metrics and charts",
-      "theme": "light"
+      "id": "read-metrics",
+      "title": "Understand the key numbers",
+      "content": "<p>Across the analytics views you'll see:</p><ul><li><strong>Progress</strong> &mdash; attempts made out of total possible attempts.</li><li><strong>Connect rate</strong> &mdash; the share of calls that reached a person.</li><li><strong>Contacts / remaining</strong> &mdash; how many people are left to dial.</li><li><strong>Total cost</strong> &mdash; what the campaign has spent so far.</li></ul><p>You'll also see these on each campaign's <strong>Overview</strong> tab and in the Progress column of the main Campaigns list.</p>"
     },
     {
-      "src": "images/campaign-analytics-dark.png",
-      "alt": "Campaign Analytics Dashboard",
-      "caption": "Campaign performance metrics and charts",
-      "theme": "dark"
+      "id": "open-reports",
+      "title": "Open Campaign Reports",
+      "content": "<ol><li>In the left menu, under <strong>Campaigns</strong>, open <strong>Campaign Reports</strong>.</li><li>This view breaks down performance per campaign &mdash; calls, outcomes, and cost &mdash; so you can compare campaigns against each other.</li></ol>",
+      "images": [
+        { "src": "images/campaigns/campaign-reports-light.png", "alt": "Campaign Reports", "caption": "Campaign Reports breaks down calls, outcomes, and cost per campaign", "theme": "light" },
+        { "src": "images/campaigns/campaign-reports-dark.png", "alt": "Campaign Reports", "caption": "Campaign Reports breaks down calls, outcomes, and cost per campaign", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "act",
+      "title": "Act on what you see",
+      "content": "<ul><li>Low connect rate? Adjust your calling hours and time zone so you reach people when they're available.</li><li>Costs climbing faster than results? Pause the campaign and refine the dial list or the AI agent.</li><li>Want per-call detail? Open a campaign and use its <strong>Overview</strong> tab, or review individual calls in Call Center &rarr; Call Logs.</li></ul>"
     }
   ],
-  "metaTitle": "Campaign Analytics - Track Performance Metrics | iMash Docs",
-  "metaDescription": "Analyze campaign performance with detailed metrics. Track conversion rates, call outcomes, and ROI.",
-  "metaKeywords": "campaign analytics, performance metrics, conversion tracking, ROI analysis, campaign reports, success metrics"
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Turn insights into a better-performing campaign.",
+    "cards": [
+      { "href": "/campaigns/create-campaign", "title": "Create a Campaign", "description": "Set pacing, hours, and the AI agent." },
+      { "href": "/campaigns/dial-lists", "title": "Manage the Dial List", "description": "Refine who gets called." },
+      { "href": "/campaigns/do-not-call-list", "title": "Do Not Call List", "description": "Keep your campaigns compliant." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Read Campaign Analytics | iMash Docs",
+  "metaDescription": "Understand your iMash campaign performance: live progress and connect rate in Campaign Stats, and per-campaign cost and outcome breakdowns in Campaign Reports.",
+  "metaKeywords": "campaign analytics, campaign stats, campaign reports, connect rate, campaign cost, call outcomes, imash campaigns"
 }

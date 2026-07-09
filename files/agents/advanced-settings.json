@@ -1,67 +1,61 @@
 {
-  "title": "Advanced Settings for Voice AI Agents in iMash",
-  "lede": "This guide explains the advanced settings available for Voice AI Agents in iMash, including extracting structured data, managing contact lifecycle states, and integrating with external automations through webhooks.",
+  "title": "Post-Call Processing & Webhooks",
+  "lede": "Turn every call into structured output: generate a summary, score success, extract custom JSON data, and POST it all to your systems - configured in the Webhooks Post Processing panel.",
   "timeToComplete": "10 minutes",
   "videoUrl": "https://youtu.be/l7_wH8Bpsp0",
   "videoLength": "3",
   "steps": [
     {
+      "id": "open-webhooks",
+      "title": "Open Webhooks Post Processing",
+      "content": "<ol><li>Go to <strong>Intelligence Center → Smart Agents</strong> and open your agent.</li><li>Open the <strong>Webhooks Post Processing</strong> panel. Its sections are <strong>Server URL &amp; Events</strong>, <strong>Summary</strong>, <strong>Success Evaluation</strong>, and <strong>Structured Data</strong>.</li></ol>",
+      "images": [
+        { "src": "images/agents/webhooks-post-light.png", "alt": "Webhooks post processing panel", "caption": "The Webhooks Post Processing panel: server URL, summary, success evaluation, and structured data.", "theme": "light" },
+        { "src": "images/agents/webhooks-post-dark.png", "alt": "Webhooks post processing panel", "caption": "The Webhooks Post Processing panel: server URL, summary, success evaluation, and structured data.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "server-url",
+      "title": "Set the Server URL and Events",
+      "content": "<ol><li>In <strong>Server URL &amp; Events</strong>, enter the URL that should receive the call data via HTTP POST.</li><li>Tick the events to send - for example summary, transcript, status updates, tool calls, structured data, and success evaluation.</li></ol>",
+      "images": [
+        { "src": "images/agents/assistant-editor-light.png", "alt": "Agent editor", "caption": "Post-call results are sent automatically when the call ends.", "theme": "light" },
+        { "src": "images/agents/assistant-editor-dark.png", "alt": "Agent editor", "caption": "Post-call results are sent automatically when the call ends.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "summary-eval",
+      "title": "Summary and Success Evaluation",
+      "content": "<ul><li><strong>Summary</strong>: write a prompt describing how to summarize each call.</li><li><strong>Success Evaluation</strong>: write a prompt and pick a rubric - such as a 1-10 scale, a checklist, or a simple pass/fail - so each call is scored consistently.</li></ul>",
+      "images": []
+    },
+    {
       "id": "structured-data",
       "title": "Extract Structured Data",
-      "content": "<ol><li>In your agent’s <strong>Advanced Settings</strong>, configure structured data extraction.</li><li>Define what kind of data you want to capture (e.g., name, success evaluation, conversation summary).</li><li>You can add a custom prompt to specify the type of structured data or directly provide a JSON schema definition.</li><li>The extracted data will be available at the end of the conversation for analysis and integration.</li></ol>",
+      "content": "<ol><li>In <strong>Structured Data</strong>, add a prompt and build a <strong>Data Schema</strong> of the properties you want captured (for example name, order number, or intent).</li><li>iMash extracts those fields from the transcript and includes them in the POST to your Server URL.</li></ol>",
       "images": []
     },
     {
-      "id": "send-to-url",
-      "title": "Send Data to an Endpoint",
-      "content": "<ol><li>Enter a target <strong>URL</strong> in the advanced settings.</li><li>Any configured structured data (e.g., summaries, evaluations) will automatically be sent to this endpoint.</li><li>Use this to connect iMash with external systems like CRMs, Google Sheets, or APIs.</li></ol>",
-      "images": []
-    },
-    {
-      "id": "manage-lifecycle",
-      "title": "Manage Contact Lifecycle States",
-      "content": "<ol><li>Enable the option to let agents update a contact’s <strong>Lifecycle State</strong>.</li><li>Lifecycle states represent where a contact is in the sales or engagement process (e.g., Just Contacted, Ready for Sale, Converted).</li><li>Customise lifecycle labels as needed, and allow agents to move contacts between states automatically after calls.</li></ol>",
-      "images": []
-    },
-    {
-      "id": "automation-webhook",
-      "title": "Connect to Automations via Webhook",
-      "content": "<ol><li>Go to the <strong>Automation</strong> screen in iMash.</li><li>Create a new automation with the trigger <strong>Catch Webhook</strong>.</li><li>Copy the live webhook URL provided.</li><li>Paste this URL into the <strong>Advanced Settings</strong> of your agent.</li><li>This enables you to send data directly into an automation workflow, such as emailing results, saving to Google Sheets, or triggering external APIs.</li></ol>",
-      "images": []
-    },
-    {
-      "id": "internal-actions",
-      "title": "Perform Internal Actions",
-      "content": "<ul><li>Advanced Settings can also trigger actions inside iMash itself, such as storing summaries or success evaluations.</li><li>You can access your system tables, review variables, and even create new records through automations.</li><li>This allows deep integration of conversation outcomes into your iMash account without external tools.</li></ul>",
+      "id": "connect-automation",
+      "title": "Send It to an Automation",
+      "content": "<ol><li>In <strong>Intelligence Center → Automation</strong>, create a flow that starts with a <strong>Catch Webhook</strong> trigger and copy its URL.</li><li>Paste that URL as the Server URL above.</li><li>Now call results can flow straight into an automation - emailing a summary, updating a sheet, or calling another API.</li></ol>",
       "images": []
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Now that you’ve enabled advanced settings, you can fully integrate your Voice AI Agent with external and internal systems:",
+    "description": "Do more with your call data:",
     "cards": [
-      {
-        "href": "/agents/privacy-settings",
-        "title": "Review Privacy Settings",
-        "description": "Control how data is stored and whether recordings are saved or discarded."
-      },
-      {
-        "href": "/agents/tools",
-        "title": "Add Tools",
-        "description": "Enhance your agent with predefined or custom tools for additional functionality."
-      },
-      {
-        "href": "/automations/smart-flows",
-        "title": "Create Smart Flows",
-        "description": "Build complex workflows to automate data handling and trigger external services."
-      }
+      { "href": "/automations/webhooks", "title": "Build a Webhook Flow", "description": "Catch the POST and route it anywhere with automations." },
+      { "href": "/agents/observer-agent", "title": "Observer Agent", "description": "Tag important moments live, during the call." },
+      { "href": "/agents/agent-privacy", "title": "Privacy & Recording", "description": "Control what transcript and audio is stored." }
     ]
   },
   "support": {
     "title": "Need Help?",
-    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a> for detailed documentation</li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a> for step-by-step guides</li></ul>"
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Advanced Settings for Voice AI Agents in iMash",
-  "metaDescription": "Learn how to configure advanced settings for Voice AI Agents in iMash, including structured data extraction, lifecycle state management, and automation via webhooks.",
-  "metaKeywords": "advanced settings, imash tutorial, voice ai agent, structured data, lifecycle state, automation, webhook integration"
+  "metaTitle": "Post-Call Processing & Webhooks | iMash Docs",
+  "metaDescription": "Configure iMash Webhooks Post Processing: summarize calls, score success, extract structured JSON data, and POST everything to your server or an automation.",
+  "metaKeywords": "webhooks, post processing, imash, smart agent, structured data, success evaluation, call summary, automation"
 }

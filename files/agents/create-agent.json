@@ -1,28 +1,59 @@
 {
-  "title": "Create a Voice Agent",
-  "lede": "Learn how to create and configure your first AI voice agent with custom behaviors and voice settings.",
-  "sections": [
+  "title": "Create Your First Agent",
+  "lede": "Build a Smart Agent from scratch: name it, write its prompt and greeting, pick a model and voice, then test it - all from one editor.",
+  "timeToComplete": "6 minutes",
+  "steps": [
     {
-      "id": "agent-basics",
-      "title": "Agent Configuration",
-      "content": "<p>Create AI agents that can handle phone conversations with customizable behavior and voice settings.</p><h3>Basic Settings:</h3><ul><li><strong>Name:</strong> Descriptive agent identifier</li><li><strong>Voice Provider:</strong> Choose from OpenAI, ElevenLabs, etc.</li><li><strong>System Prompt:</strong> Define agent personality and behavior</li><li><strong>First Message:</strong> Opening greeting for calls</li></ul>"
-    }
-  ],
-  "images": [
-    {
-      "src": "images/agent-creation-light.png",
-      "alt": "Agent Creation Form",
-      "caption": "The agent creation interface with configuration options",
-      "theme": "light"
+      "id": "open-list",
+      "title": "Open Smart Agents",
+      "content": "<ol><li>In the left navigation, go to <strong>Intelligence Center → Smart Agents</strong>.</li><li>You will see the list of your existing agents.</li><li>Click <strong>Create</strong> (the new-agent button) to start a fresh agent.</li></ol>",
+      "images": [
+        { "src": "images/agents/assistants-list-light.png", "alt": "Smart Agents list", "caption": "The Smart Agents list - create a new agent from here.", "theme": "light" },
+        { "src": "images/agents/assistants-list-dark.png", "alt": "Smart Agents list", "caption": "The Smart Agents list - create a new agent from here.", "theme": "dark" }
+      ]
     },
     {
-      "src": "images/agent-creation-dark.png",
-      "alt": "Agent Creation Form",
-      "caption": "The agent creation interface with configuration options",
-      "theme": "dark"
+      "id": "name-and-prompt",
+      "title": "Name It and Write the Prompt",
+      "content": "<ol><li>Give the agent a clear <strong>name</strong> so you can find it later.</li><li>In the prompt column on the left, describe the agent's role, personality, and rules - what it should do and how it should speak.</li><li>Set the <strong>first message</strong> the agent says when a call connects.</li></ol>",
+      "images": [
+        { "src": "images/agents/assistant-editor-light.png", "alt": "Agent editor", "caption": "The editor: prompt on the left, feature panels in the middle.", "theme": "light" },
+        { "src": "images/agents/assistant-editor-dark.png", "alt": "Agent editor", "caption": "The editor: prompt on the left, feature panels in the middle.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "model-and-voice",
+      "title": "Pick the Brain and Voice",
+      "content": "<ol><li>Open the <strong>Brains (LLM)</strong> panel and choose the model that powers replies (a realtime speech-to-speech model, or a text model paired with a transcriber).</li><li>Open the <strong>Voice (TTS)</strong> panel and pick the voice your agent speaks with.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "enhance",
+      "title": "Add Capabilities (Optional)",
+      "content": "<ul><li><strong>Knowledge Base</strong>: upload FAQs and documents to answer from.</li><li><strong>Tools / MCP</strong>: let the agent end calls, book appointments, or call your APIs.</li><li><strong>Settings</strong>: adjust timeouts, idle messages, voicemail, and privacy.</li></ul>",
+      "images": []
+    },
+    {
+      "id": "test",
+      "title": "Test and Save",
+      "content": "<ol><li>Click <strong>Test Agent</strong> and connect to talk to it live in the browser.</li><li>Refine the prompt, voice, and settings until it behaves the way you want.</li><li>Your changes save to the agent so it's ready to attach to a phone number or website.</li></ol>",
+      "images": []
     }
   ],
-  "metaTitle": "Create AI Agent - Build Voice Assistants | iMash Docs",
-  "metaDescription": "Step-by-step guide to creating AI voice agents. Configure behavior, set up prompts, and deploy conversational AI assistants.",
-  "metaKeywords": "create agent, AI assistant, voice agent, conversational AI, agent configuration, virtual assistant setup"
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Now flesh out and launch your new agent:",
+    "cards": [
+      { "href": "/agents/voice-configuration", "title": "Configure the Voice", "description": "Pick a TTS provider and preview voices." },
+      { "href": "/agents/agent-tools", "title": "Add Tools", "description": "Let the agent take actions during a call." },
+      { "href": "/agents/test-agent", "title": "Test Your Agent", "description": "Try it in the browser or over a real phone call." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Create Your First Agent | iMash Docs",
+  "metaDescription": "Step-by-step guide to creating an iMash Smart Agent: name it, write the prompt and greeting, choose a model and voice, add tools and a knowledge base, then test it.",
+  "metaKeywords": "create agent, imash, smart agent, voice agent, ai assistant, agent setup, system prompt, first message"
 }

@@ -1,0 +1,51 @@
+{
+  "title": "Consulta la analítica de campañas",
+  "lede": "Observa el rendimiento de tus campañas: progreso en vivo y tasas de conexión en Campaign Stats, y desgloses de costo y resultados por campaña en Campaign Reports.",
+  "timeToComplete": "5 minutos",
+  "steps": [
+    {
+      "id": "open-stats",
+      "title": "Abre Campaign Stats",
+      "content": "<ol><li>En el menú de la izquierda, bajo <strong>Campaigns</strong> (Campañas), abre <strong>Campaign Stats</strong> (Estadísticas de campañas).</li><li>Esta vista de monitoreo muestra tus campañas una junto a otra con su estado en vivo y sus métricas clave.</li></ol>",
+      "images": [
+        { "src": "images/campaigns/campaign-stats-light.png", "alt": "Estadísticas de campañas", "caption": "Campaign Stats ofrece una vista de monitoreo en vivo de todas las campañas", "theme": "light" },
+        { "src": "images/campaigns/campaign-stats-dark.png", "alt": "Estadísticas de campañas", "caption": "Campaign Stats ofrece una vista de monitoreo en vivo de todas las campañas", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "read-metrics",
+      "title": "Entiende los números clave",
+      "content": "<p>A lo largo de las vistas de analítica verás:</p><ul><li><strong>Progress</strong> (Progreso) &mdash; intentos realizados sobre el total de intentos posibles.</li><li><strong>Connect rate</strong> (Tasa de conexión) &mdash; la proporción de llamadas que alcanzaron a una persona.</li><li><strong>Contacts / remaining</strong> (Contactos / restantes) &mdash; cuántas personas quedan por marcar.</li><li><strong>Total cost</strong> (Costo total) &mdash; lo que la campaña ha gastado hasta ahora.</li></ul><p>También verás estos datos en la pestaña <strong>Overview</strong> (Resumen) de cada campaña y en la columna Progress de la lista principal de Campaigns.</p>"
+    },
+    {
+      "id": "open-reports",
+      "title": "Abre Campaign Reports",
+      "content": "<ol><li>En el menú de la izquierda, bajo <strong>Campaigns</strong> (Campañas), abre <strong>Campaign Reports</strong> (Reportes de campañas).</li><li>Esta vista desglosa el rendimiento por campaña &mdash; llamadas, resultados y costo &mdash; para que puedas comparar campañas entre sí.</li></ol>",
+      "images": [
+        { "src": "images/campaigns/campaign-reports-light.png", "alt": "Reportes de campañas", "caption": "Campaign Reports desglosa llamadas, resultados y costo por campaña", "theme": "light" },
+        { "src": "images/campaigns/campaign-reports-dark.png", "alt": "Reportes de campañas", "caption": "Campaign Reports desglosa llamadas, resultados y costo por campaña", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "act",
+      "title": "Actúa según lo que ves",
+      "content": "<ul><li>¿Tasa de conexión baja? Ajusta tus horarios de llamada y la zona horaria para alcanzar a las personas cuando están disponibles.</li><li>¿Los costos suben más rápido que los resultados? Pausa la campaña y refina la lista de marcación o el agente de IA.</li><li>¿Quieres detalle por llamada? Abre una campaña y usa su pestaña <strong>Overview</strong> (Resumen), o revisa llamadas individuales en Call Center &rarr; Call Logs.</li></ul>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Convierte los hallazgos en una campaña de mejor rendimiento.",
+    "cards": [
+      { "href": "/campaigns/create-campaign", "title": "Crea una campaña", "description": "Define el ritmo, los horarios y el agente de IA." },
+      { "href": "/campaigns/dial-lists", "title": "Administra la lista de marcación", "description": "Refina a quién se llama." },
+      { "href": "/campaigns/do-not-call-list", "title": "Lista de No llamar", "description": "Mantén tus campañas en cumplimiento." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Consulta la analítica de campañas | Documentación de iMash",
+  "metaDescription": "Entiende el rendimiento de tu campaña en iMash: progreso en vivo y tasa de conexión en Campaign Stats, y desgloses de costo y resultados por campaña en Campaign Reports.",
+  "metaKeywords": "analítica de campañas, estadísticas de campañas, reportes de campañas, tasa de conexión, costo de campaña, resultados de llamadas, campañas imash"
+}

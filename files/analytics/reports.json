@@ -1,33 +1,56 @@
 {
   "title": "Reports",
-  "lede": "Generate detailed reports on call performance, agent productivity, and business metrics.",
-  "sections": [
+  "lede": "Compare how your calling campaigns perform side by side: live progress and connect rates in Campaign Stats, and per-campaign calls, outcomes, and cost in Campaign Reports.",
+  "timeToComplete": "5 minutes",
+  "steps": [
     {
-      "id": "report-types",
-      "title": "Report Types",
-      "content": "<p>Generate comprehensive reports for different aspects of your business.</p><h3>Available Reports:</h3><ul><li><strong>Call Performance:</strong> Detailed call statistics and outcomes</li><li><strong>Agent Productivity:</strong> Individual agent performance metrics</li><li><strong>Campaign Analysis:</strong> Campaign success rates and ROI</li><li><strong>Cost Reports:</strong> Detailed spending breakdowns</li></ul>"
+      "id": "open-reports",
+      "title": "Open Campaign Reports",
+      "content": "<ol><li>In the left menu, under <strong>Campaigns</strong>, open <strong>Campaign Reports</strong>.</li><li>Each row is one campaign, so you can compare campaigns against each other in a single table.</li></ol>",
+      "images": [
+        { "src": "images/campaigns/campaign-reports-light.png", "alt": "Campaign Reports", "caption": "Campaign Reports lists calls, outcomes, and cost per campaign", "theme": "light" },
+        { "src": "images/campaigns/campaign-reports-dark.png", "alt": "Campaign Reports", "caption": "Campaign Reports lists calls, outcomes, and cost per campaign", "theme": "dark" }
+      ]
     },
     {
-      "id": "report-features",
-      "title": "Report Features",
-      "content": "<p>Customize and schedule reports to meet your business needs.</p><ul><li><strong>Custom Date Ranges:</strong> Specify exact time periods</li><li><strong>Multiple Formats:</strong> PDF, Excel, CSV export options</li><li><strong>Scheduled Reports:</strong> Automatic delivery to email</li><li><strong>Data Filtering:</strong> Focus on specific metrics or segments</li></ul>"
-    }
-  ],
-  "images": [
-    {
-      "src": "images/reports-light.png",
-      "alt": "Reports Interface",
-      "caption": "Report generation and customization tools",
-      "theme": "light"
+      "id": "read-report-columns",
+      "title": "Understand the report columns",
+      "content": "<p>For each campaign the report shows:</p><ul><li><strong>Status</strong> &mdash; whether the campaign is running, paused, or finished.</li><li><strong>Calls/Events</strong> &mdash; how many calls were placed.</li><li><strong>Minutes/Units</strong> &mdash; total talk time consumed.</li><li><strong>Sell Rate</strong> and <strong>Bill Amount</strong> &mdash; the per-minute rate billed and the total billed.</li></ul><p>Main accounts also see <strong>Cost Rate</strong>, <strong>Total Cost</strong>, and <strong>Profit</strong> to compare what a campaign cost against what it was billed.</p>"
     },
     {
-      "src": "images/reports-dark.png",
-      "alt": "Reports Interface",
-      "caption": "Report generation and customization tools",
-      "theme": "dark"
+      "id": "filter-export",
+      "title": "Filter and export",
+      "content": "<ol><li>Use the <strong>date range</strong> at the top to set the reporting window (it defaults to the last 30 days for speed).</li><li>Filter by a specific <strong>campaign</strong> or <strong>account</strong> to narrow the list.</li><li>Click <strong>Download</strong> to export the report as a CSV for your own spreadsheets or records.</li></ol>"
+    },
+    {
+      "id": "open-stats",
+      "title": "Open Campaign Stats for live monitoring",
+      "content": "<ol><li>In the left menu, under <strong>Campaigns</strong>, open <strong>Campaign Stats</strong>.</li><li>This is a live monitoring view: it shows your campaigns side by side with their current status, progress, connect rate, and cost as they run.</li></ol>",
+      "images": [
+        { "src": "images/campaigns/campaign-stats-light.png", "alt": "Campaign Stats", "caption": "Campaign Stats gives a live, side-by-side monitoring view across campaigns", "theme": "light" },
+        { "src": "images/campaigns/campaign-stats-dark.png", "alt": "Campaign Stats", "caption": "Campaign Stats gives a live, side-by-side monitoring view across campaigns", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "act",
+      "title": "Act on what you see",
+      "content": "<ul><li>Low <strong>connect rate</strong>? Adjust your calling hours and time zone so you reach people when they're available.</li><li>Cost climbing faster than results? Pause the campaign and refine the dial list or the AI agent.</li><li>Want per-call detail? Open a campaign's <strong>Overview</strong> tab, or review individual calls in <strong>Call Center &rarr; Call Logs</strong>.</li></ul>"
     }
   ],
-  "metaTitle": "Reports - Generate Custom Analytics | iMash Docs",
-  "metaDescription": "Generate detailed reports on agent performance, call outcomes, and business metrics. Export and schedule reports.",
-  "metaKeywords": "reports, custom analytics, report generation, data export, scheduled reports, business reporting"
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Turn insights into a better-performing operation.",
+    "cards": [
+      { "href": "/campaigns/campaign-analytics", "title": "Read Campaign Analytics", "description": "How to read progress and connect rates." },
+      { "href": "/analytics/analytics-dashboard", "title": "Analytics Dashboard", "description": "Your account-wide call KPIs and filters." },
+      { "href": "/analytics/cost-management", "title": "Cost Management", "description": "See your balance, pricing, and spend." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Reports - Campaign Reports & Stats | iMash Docs",
+  "metaDescription": "Compare iMash campaigns with Campaign Reports (calls, outcomes, cost, profit, CSV export) and Campaign Stats (live progress and connect rates).",
+  "metaKeywords": "campaign reports, campaign stats, connect rate, call outcomes, campaign cost, bill amount, csv export, imash reporting"
 }

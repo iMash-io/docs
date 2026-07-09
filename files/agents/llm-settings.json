@@ -1,61 +1,55 @@
 {
-  "title": "Configure LLM and Real-Time Models for Voice AI Agents in iMash",
-  "lede": "This guide explains the difference between real-time and LLM models in iMash, how they handle speech and text, and how to configure the correct settings for your Voice AI Agent.",
+  "title": "Choose the Brain (LLM) for Your Agent",
+  "lede": "Pick the model that powers your Smart Agent's replies. Learn the difference between realtime (speech-to-speech) models and text (LLM + transcriber) models, and how to configure each.",
   "timeToComplete": "6 minutes",
   "videoUrl": "https://youtu.be/bDy0w1hEz7I",
   "videoLength": "2",
   "steps": [
     {
-      "id": "choose-model-type",
-      "title": "Choose a Model Type",
-      "content": "<p>When creating or editing an agent, you can select from two model types:</p><ul><li><strong>Real-Time Models</strong>: Handle audio input and output directly (speech-to-speech). No additional configuration is required.</li><li><strong>LLM Models</strong>: Process text input and output (speech-to-text-to-speech). These require an additional <em>Transcriber</em> tab to manage speech recognition and set the voice output through the voice configuration.</li></ul>",
+      "id": "open-brains",
+      "title": "Open the Brains (LLM) Panel",
+      "content": "<ol><li>Go to <strong>Intelligence Center → Smart Agents</strong> and open your agent.</li><li>In the middle column, click the <strong>Brains (LLM)</strong> panel. The pill shows the current provider and model.</li></ol>",
+      "images": [
+        { "src": "images/agents/llm-settings-light.png", "alt": "LLM model picker", "caption": "The Brains (LLM) panel: choose the model that powers replies.", "theme": "light" },
+        { "src": "images/agents/llm-settings-dark.png", "alt": "LLM model picker", "caption": "The Brains (LLM) panel: choose the model that powers replies.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "model-types",
+      "title": "Understand the Two Model Types",
+      "content": "<ul><li><strong>Realtime models</strong> (grouped under <em>Realtime Agent</em>): a single model handles audio in and audio out (speech-to-speech). Turn detection and transcription are built in.</li><li><strong>Text (LLM) models</strong>: the flow is Speech → Text → LLM → Voice. These pair with a separate <strong>Transcriber (STT)</strong> for speech recognition and a <strong>Voice (TTS)</strong> for the reply.</li></ul>",
+      "images": [
+        { "src": "images/agents/assistant-editor-light.png", "alt": "Agent editor panels", "caption": "Text models use separate Transcriber (STT) and Voice (TTS) panels.", "theme": "light" },
+        { "src": "images/agents/assistant-editor-dark.png", "alt": "Agent editor panels", "caption": "Text models use separate Transcriber (STT) and Voice (TTS) panels.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "configure-transcriber",
+      "title": "Configure the Transcriber (Text Models)",
+      "content": "<ol><li>When you choose a text LLM, open the <strong>Transcriber (STT)</strong> panel.</li><li>Pick the transcription provider and set the input language for accurate recognition.</li><li>You can also set a backup transcriber that takes over if the primary is unavailable.</li></ol>",
       "images": []
     },
     {
-      "id": "configure-llm",
-      "title": "Configure LLM Settings",
-      "content": "<ol><li>If you choose an <strong>LLM Model</strong>, a new <strong>Transcriber</strong> tab will appear.</li><li>In the Transcriber tab, configure:<ul><li><strong>Input Language</strong>: Select the language the model should recognise for transcription.</li><li><strong>Specialised Model Options</strong>: Choose models optimised for specific vocabularies or domains.</li></ul></li><li>The agent flow will be: Speech → Text → LLM Response → Voice Output.</li></ol>",
-      "images": []
-    },
-    {
-      "id": "use-real-time-models",
-      "title": "Use Real-Time Models",
-      "content": "<ol><li>If you select a <strong>Real-Time Model</strong>, transcription and voice synthesis are handled automatically by the model.</li><li>The conversation flows directly from speech input to speech output, with no additional configuration tabs, but you can always choose a different voice for the model.</li></ol>",
-      "images": []
-    },
-    {
-      "id": "experiment-settings",
-      "title": "Experiment with Settings",
-      "content": "<p>Test different model and transcriber configurations to determine which works best for your use case. Adjust the recognised language or choose specialised models for higher accuracy with industry-specific terms.</p>",
+      "id": "advanced",
+      "title": "Advanced LLM Parameters (Optional)",
+      "content": "<ul><li>Open <strong>Advanced LLM Parameters</strong> to fine-tune behavior: <strong>Max Tool Steps</strong>, <strong>Parallel Tool Calls</strong>, <strong>Top-P</strong>, <strong>Max Output Tokens</strong>, and penalties.</li><li>Note: with a realtime model, some advanced interruption settings are ignored - the model manages turns itself.</li></ul>",
       "images": []
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "After configuring your models, continue enhancing your Voice AI Agent:",
+    "description": "Match the voice and behavior to your chosen model:",
     "cards": [
-      {
-        "href": "/agents/voice-configuration",
-        "title": "Configure Voice Providers",
-        "description": "Select voices from providers like Google, 11 Labs, or OpenAI."
-      },
-      {
-        "href": "/agents/basic-settings",
-        "title": "Adjust Basic Settings",
-        "description": "Fine-tune response delays, idle messages, and conversation length."
-      },
-      {
-        "href": "/agents/knowledge-base",
-        "title": "Add a Knowledge Base",
-        "description": "Upload FAQs or documents so your agent can answer with accurate information."
-      }
+      { "href": "/agents/voice-configuration", "title": "Configure the Voice", "description": "Pick a TTS voice for text models or the model's built-in voice." },
+      { "href": "/agents/agent-settings", "title": "Agent Settings", "description": "Tune interruptions, turn detection, and timeouts." },
+      { "href": "/agents/test-agent", "title": "Test Your Agent", "description": "Compare models live to find the best fit." }
     ]
   },
   "support": {
     "title": "Need Help?",
-    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a> for detailed documentation</li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a> for step-by-step guides</li></ul>"
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Configure LLM and Real-Time Models for Voice AI Agents | iMash",
-  "metaDescription": "Learn the difference between LLM and real-time models in iMash. Step-by-step guide to configure transcriber settings, language options, and specialised models for your Voice AI Agent.",
-  "metaKeywords": "LLM settings, real-time models, imash tutorial, voice ai agent, transcriber, speech-to-text, text-to-speech"
+  "metaTitle": "Choose the Brain (LLM) for Your Agent | iMash Docs",
+  "metaDescription": "Pick your iMash Smart Agent's model. Learn realtime (speech-to-speech) vs. text (LLM + transcriber) models, configure the transcriber, and tune advanced LLM parameters.",
+  "metaKeywords": "llm settings, imash, smart agent, realtime model, transcriber, stt, speech-to-speech, model selection"
 }

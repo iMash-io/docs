@@ -1,22 +1,56 @@
 {
-  "title": "Call Routing",
-  "lede": "Configure intelligent call routing rules to direct calls to the appropriate agents and destinations.",
-  "sections": [
+  "title": "Route Calls to an Agent",
+  "lede": "Decide what happens when someone dials your number. Routing is set per number — assign an inbound AI agent to answer incoming calls, and an outbound agent for calls you place from that number.",
+  "timeToComplete": "5 minutes",
+  "steps": [
     {
-      "id": "routing-rules",
-      "title": "Routing Configuration",
-      "content": "<p>Set up sophisticated call routing based on various criteria.</p><h3>Routing Options:</h3><ul><li><strong>Agent Assignment:</strong> Route to specific AI agents</li><li><strong>Time-based:</strong> Route based on business hours</li><li><strong>Geographic:</strong> Route based on caller location</li><li><strong>Skill-based:</strong> Route to agents with specific capabilities</li></ul>"
+      "id": "open-number",
+      "title": "Open the phone number",
+      "content": "<ol><li>Go to <strong>Call Center → Phone numbers</strong>.</li><li>Click the number you want to configure to open its details panel. The <strong>Inbound Agent</strong> column shows what a number currently routes to (it reads <em>None</em> until you assign one).</li></ol>",
+      "images": [
+        { "src": "images/phone/phone-numbers-light.png", "alt": "Phone numbers list with inbound agent column", "caption": "The Inbound Agent column shows which agent answers each number.", "theme": "light" },
+        { "src": "images/phone/phone-numbers-dark.png", "alt": "Phone numbers list with inbound agent column", "caption": "The Inbound Agent column shows which agent answers each number.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "assign-inbound",
+      "title": "Assign the inbound agent",
+      "content": "<ol><li>In the number's details, find <strong>Inbound Agent</strong> (the AI agent that answers incoming calls).</li><li>Pick an agent from the dropdown. Only agents you've already created appear here.</li><li>Save. From now on, calls to this number are answered by that agent.</li></ol><p>To set an <strong>Outbound Agent</strong> — used when the number places calls (for example dialer campaigns) — pick one from the outbound dropdown in the same panel.</p>"
+    },
+    {
+      "id": "call-forwarding",
+      "title": "Optional: forwarding and fallbacks",
+      "content": "<p>In the same details panel you can add fallback behavior:</p><ul><li><strong>Forward to an agent or number</strong> when a call comes in.</li><li>Send <strong>busy</strong> or <strong>no-answer</strong> calls to a chosen agent.</li><li>Auto-dial <strong>missed calls</strong> back with an agent.</li></ul><p>Leave these off if you just want the inbound agent to answer every call.</p>"
+    },
+    {
+      "id": "bulk-assign",
+      "title": "Assign several numbers at once",
+      "content": "<ol><li>On the Phone numbers list, tick the checkboxes for multiple numbers.</li><li>Use the bulk action to set the same <strong>inbound</strong> or <strong>outbound</strong> agent across all selected numbers.</li><li>Clear an assignment the same way by choosing <em>None</em>.</li></ol>"
+    },
+    {
+      "id": "verify",
+      "title": "Test and confirm",
+      "content": "<ol><li>Call the number from your phone — your assigned agent should pick up.</li><li>Check <strong>Call Center → Call Logs</strong> to confirm the call was recorded and handled by the right agent.</li></ol>",
+      "images": [
+        { "src": "images/phone/call-logs-light.png", "alt": "Call logs confirming a routed call", "caption": "Call Logs confirm which agent handled each call.", "theme": "light" },
+        { "src": "images/phone/call-logs-dark.png", "alt": "Call logs confirming a routed call", "caption": "Call Logs confirm which agent handled each call.", "theme": "dark" }
+      ]
     }
   ],
-  "images": [
-    {
-      "src": "images/call-routing-light.png",
-      "alt": "Call Routing Interface",
-      "caption": "Call routing rule configuration",
-      "theme": "light"
-    }
-  ],
-  "metaTitle": "Call Routing - Configure Call Flow Rules | iMash Docs",
-  "metaDescription": "Set up intelligent call routing rules. Configure IVR, call forwarding, and agent assignment based on conditions.",
-  "metaKeywords": "call routing, IVR, call flow, routing rules, call forwarding, intelligent routing, call distribution"
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Confirm your routing is working and refine your agents.",
+    "cards": [
+      { "href": "/phone/call-logs", "title": "Review Call Logs", "description": "See every call, who handled it, and how it ended." },
+      { "href": "/agents/create-agent", "title": "Create an AI Agent", "description": "Build or tune the agent that answers calls." },
+      { "href": "/phone/add-phone-number", "title": "Add Another Number", "description": "Buy or import more numbers to route." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Route Calls to an Agent - Inbound Call Routing | iMash Docs",
+  "metaDescription": "Assign an inbound AI agent to a phone number so it answers calls, set an outbound agent, add forwarding fallbacks, and bulk-assign numbers.",
+  "metaKeywords": "call routing, inbound agent, outbound agent, call forwarding, assign agent, phone number routing, no-answer, missed call"
 }

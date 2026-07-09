@@ -1,33 +1,53 @@
 {
-  "title": "Flows",
-  "lede": "Create intelligent automation workflows that respond to events and trigger actions.",
-  "sections": [
+  "title": "Build an Automation (Smart Flow)",
+  "lede": "Use the visual Automation builder to connect a trigger to one or more actions - so tasks like creating a lead, sending a message, or starting a call happen automatically.",
+  "timeToComplete": "8 minutes",
+  "steps": [
     {
-      "id": "flow-builder",
-      "title": "Flow Builder",
-      "content": "<p>Design automated workflows with visual drag-and-drop interface.</p><h3>Flow Components:</h3><ul><li><strong>Triggers:</strong> Events that start workflows (calls, form submissions, etc.)</li><li><strong>Conditions:</strong> Logic gates to control flow path</li><li><strong>Actions:</strong> Tasks performed when conditions are met</li><li><strong>Integrations:</strong> Connect to external services and APIs</li></ul>"
+      "id": "open-automation",
+      "title": "Open Automation",
+      "content": "<ol><li>In the left menu, go to <strong>Intelligence Center → Automation</strong>.</li><li>This opens the visual workflow dashboard where all of your automations live.</li><li>Click <strong>New Flow</strong> (or the <strong>+</strong> button) to start a fresh automation.</li></ol>",
+      "images": [
+        { "src": "images/automations/automation-overview-light.png", "alt": "Automation dashboard", "caption": "The Automation dashboard lists your workflows.", "theme": "light" },
+        { "src": "images/automations/automation-overview-dark.png", "alt": "Automation dashboard", "caption": "The Automation dashboard lists your workflows.", "theme": "dark" }
+      ]
     },
     {
-      "id": "flow-management",
-      "title": "Flow Management",
-      "content": "<p>Manage and monitor your automation workflows.</p><ul><li><strong>Flow Templates:</strong> Pre-built workflows for common scenarios</li><li><strong>Version Control:</strong> Track changes and rollback capabilities</li><li><strong>Performance Monitoring:</strong> Monitor execution times and success rates</li><li><strong>Error Handling:</strong> Configure retry logic and fallback actions</li></ul>"
-    }
-  ],
-  "images": [
-    {
-      "src": "images/smart-flows-light.png",
-      "alt": "Smart Flows Builder",
-      "caption": "Visual workflow builder interface",
-      "theme": "light"
+      "id": "pick-trigger",
+      "title": "Choose a Trigger",
+      "content": "<ol><li>Every flow starts with one <strong>trigger</strong> - the event that kicks it off.</li><li>Click the first block and pick a trigger. A common one is <strong>Catch Webhook</strong>, which gives you a URL that external systems can send data to.</li><li>Other triggers include a <strong>schedule</strong> (run every X minutes) or an app event.</li></ol>",
+      "images": [
+        { "src": "images/automations/automation-builder-light.png", "alt": "Automation builder", "caption": "Pick a trigger, then chain actions below it.", "theme": "light" },
+        { "src": "images/automations/automation-builder-dark.png", "alt": "Automation builder", "caption": "Pick a trigger, then chain actions below it.", "theme": "dark" }
+      ]
     },
     {
-      "src": "images/smart-flows-dark.png",
-      "alt": "Smart Flows Builder",
-      "caption": "Visual workflow builder interface",
-      "theme": "dark"
+      "id": "add-actions",
+      "title": "Add Actions",
+      "content": "<ol><li>Click the <strong>+</strong> below the trigger to add an <strong>action</strong> - the task that runs.</li><li>Use the <strong>System Tables</strong> actions to work with iMash data: create a lead or contact, look up rows, or start an outbound call.</li><li>Reference data from the trigger (for example a phone number that arrived in the webhook) inside each action's fields.</li><li>Add as many actions as you need - they run top to bottom.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "test-publish",
+      "title": "Test and Publish",
+      "content": "<ol><li>Use <strong>Test</strong> to run the flow with sample data and confirm each step behaves.</li><li>Fix any step that shows an error before going live.</li><li>Toggle the flow <strong>On</strong> (Publish) so it runs automatically from now on.</li></ol>",
+      "images": []
     }
   ],
-  "metaTitle": "Smart Flows - Visual Workflow Builder | iMash Docs",
-  "metaDescription": "Build complex conversation flows with visual workflow builder. Create branching logic and conditional responses.",
-  "metaKeywords": "smart flows, workflow builder, conversation flows, visual builder, branching logic, automation workflows"
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Extend your automations with data and tools:",
+    "cards": [
+      { "href": "/automations/webhooks", "title": "Receive Data with Webhooks", "description": "Use the Catch Webhook trigger to accept data from other systems." },
+      { "href": "/automations/integrations", "title": "Connect Integrations", "description": "Link external apps and credentials into your flows." },
+      { "href": "/automations/custom-tools", "title": "Build Custom Tools", "description": "Create HTTP tools your AI agent can call mid-call." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Build an Automation (Smart Flow) | iMash Docs",
+  "metaDescription": "Create automated workflows in iMash: pick a trigger like Catch Webhook, add System Tables actions, then test and publish your flow.",
+  "metaKeywords": "automation, smart flows, workflow builder, triggers, actions, catch webhook, system tables, imash"
 }

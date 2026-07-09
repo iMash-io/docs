@@ -1,33 +1,56 @@
 {
-  "title": "Import/Export Data",
-  "lede": "Import and export contact, lead, and account data in various formats.",
-  "sections": [
+  "title": "Import & Export Data",
+  "lede": "Bring contacts, leads, and accounts into iMash in bulk — either by uploading your own spreadsheet or by pulling from the built-in People Explorer directory.",
+  "timeToComplete": "8 minutes",
+  "steps": [
     {
-      "id": "data-import",
-      "title": "Data Import",
-      "content": "<p>Import data from external sources and CRM systems.</p><h3>Import Features:</h3><ul><li><strong>CSV Import:</strong> Upload spreadsheet data</li><li><strong>Field Mapping:</strong> Map columns to CRM fields</li><li><strong>Validation:</strong> Data quality checks before import</li><li><strong>Duplicate Handling:</strong> Skip or merge duplicate records</li></ul>"
+      "id": "csv-import",
+      "title": "Import your own list (CSV)",
+      "content": "<ol><li>Go to the list you want to add to — <strong>CRM → Contacts</strong>, <strong>Leads</strong>, or <strong>Accounts</strong>.</li><li>Click the <strong>Import</strong> button at the top of the list.</li><li>Upload your <strong>CSV</strong> file and follow the prompts to <strong>map your columns</strong> (name, email, phone, etc.) to the matching iMash fields.</li><li>Review the preview, then confirm to import. New records appear in the list right away.</li></ol><p>Tip: put one contact per row, and include a header row so the column mapping is easy.</p>"
     },
     {
-      "id": "data-export",
-      "title": "Data Export",
-      "content": "<p>Export your CRM data for backup or integration purposes.</p><ul><li><strong>Format Options:</strong> CSV, Excel, JSON export formats</li><li><strong>Selective Export:</strong> Choose specific fields and records</li><li><strong>Filtered Export:</strong> Export based on search criteria</li><li><strong>Scheduled Exports:</strong> Automatic recurring exports</li></ul>"
-    }
-  ],
-  "images": [
-    {
-      "src": "images/import-export-light.png",
-      "alt": "Import Export Interface",
-      "caption": "Data import and export tools",
-      "theme": "light"
+      "id": "open-people-import",
+      "title": "Import from People Explorer (Marketing)",
+      "content": "<ol><li>In the left navigation, open <strong>Marketing</strong> and click <strong>Import Contacts / Leads / Accounts</strong> (or go to <code>/marketing/import-people</code>).</li><li>This tool searches a large directory of people and companies so you can build a targeted list without a spreadsheet.</li><li>You'll move through three steps: <strong>Build filters</strong>, <strong>Preview &amp; select</strong>, and <strong>Map &amp; target</strong>.</li></ol>",
+      "images": [
+        { "src": "images/crm/import-people-light.png", "alt": "People Explorer import", "caption": "The Marketing import wizard: build filters, preview, then map and import", "theme": "light" },
+        { "src": "images/crm/import-people-dark.png", "alt": "People Explorer import", "caption": "The Marketing import wizard: build filters, preview, then map and import", "theme": "dark" }
+      ]
     },
     {
-      "src": "images/import-export-dark.png",
-      "alt": "Import Export Interface",
-      "caption": "Data import and export tools",
-      "theme": "dark"
+      "id": "filter-preview",
+      "title": "Build filters and preview",
+      "content": "<ol><li>On <strong>Build filters</strong>, narrow the directory by criteria such as job title, company, industry, or location.</li><li>Click through to <strong>Preview &amp; select</strong> to see matching people.</li><li>Tick the individuals you want, or select all matches. Click a row to inspect the full record before importing.</li></ol>",
+      "images": [
+        { "src": "images/crm/import-export-light.png", "alt": "Import preview and mapping", "caption": "Preview matches and map fields before importing", "theme": "light" },
+        { "src": "images/crm/import-export-dark.png", "alt": "Import preview and mapping", "caption": "Preview matches and map fields before importing", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "map-target",
+      "title": "Map fields and choose the target",
+      "content": "<ol><li>On <strong>Map &amp; target</strong>, pick <strong>Import as</strong>: <strong>Leads</strong>, <strong>Contacts</strong>, or <strong>Accounts (companies)</strong>.</li><li>Map each source field to a standard column, or store extra data in <strong>custom fields</strong>.</li><li>Turn on <strong>Also create companies as Accounts &amp; link</strong> to automatically build company accounts and connect each person to theirs.</li><li>Click to run the import — duplicates are merged, and a summary shows how many records were created.</li></ol>"
+    },
+    {
+      "id": "export",
+      "title": "Export your data",
+      "content": "<ul><li>Open any CRM list (Contacts, Leads, or Accounts) and apply the filters you want to export.</li><li>Use the list's export option to download the filtered records for backup or use in another tool.</li><li>Exported records reflect the current filters and search, so narrow the list first to export only what you need.</li></ul>"
     }
   ],
-  "metaTitle": "Import/Export Data - Bulk Data Operations | iMash Docs",
-  "metaDescription": "Import and export CRM data in bulk. Support for CSV, Excel, and API-based data synchronization.",
-  "metaKeywords": "data import, data export, CSV import, bulk operations, data migration, CRM sync, data transfer"
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Now that your data is in, put it to work.",
+    "cards": [
+      { "href": "/crm/contacts", "title": "Contacts", "description": "Review and organize imported people." },
+      { "href": "/crm/leads", "title": "Leads", "description": "Work imported prospects through your pipeline." },
+      { "href": "/campaigns/create-campaign", "title": "Create a Campaign", "description": "Call or message your newly imported list." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Import & Export Data - CRM | iMash Docs",
+  "metaDescription": "Bulk-import contacts, leads, and accounts into iMash by CSV upload or the People Explorer directory. Map fields, auto-create company accounts, and export data.",
+  "metaKeywords": "import data, export data, CSV import, bulk import, people explorer, lead import, contact import, field mapping"
 }

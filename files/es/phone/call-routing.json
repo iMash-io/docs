@@ -1,0 +1,56 @@
+{
+  "title": "Enrutar llamadas a un agente",
+  "lede": "Decide qué sucede cuando alguien marca tu número. El enrutamiento se configura por número: asigna un agente de IA entrante para responder las llamadas que llegan, y un agente saliente para las llamadas que realizas desde ese número.",
+  "timeToComplete": "5 minutos",
+  "steps": [
+    {
+      "id": "open-number",
+      "title": "Abrir el número de teléfono",
+      "content": "<ol><li>Ve a <strong>Call Center → Phone numbers</strong> (Centro de llamadas → Números de teléfono).</li><li>Haz clic en el número que quieres configurar para abrir su panel de detalles. La columna <strong>Inbound Agent</strong> (Agente entrante) muestra hacia dónde enruta actualmente un número (indica <em>None</em> hasta que asignes uno).</li></ol>",
+      "images": [
+        { "src": "images/phone/phone-numbers-light.png", "alt": "Lista de números de teléfono con la columna de agente entrante", "caption": "La columna Inbound Agent muestra qué agente responde cada número.", "theme": "light" },
+        { "src": "images/phone/phone-numbers-dark.png", "alt": "Lista de números de teléfono con la columna de agente entrante", "caption": "La columna Inbound Agent muestra qué agente responde cada número.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "assign-inbound",
+      "title": "Asignar el agente entrante",
+      "content": "<ol><li>En los detalles del número, busca <strong>Inbound Agent</strong> (Agente entrante — el agente de IA que responde las llamadas que llegan).</li><li>Elige un agente del menú desplegable. Aquí solo aparecen los agentes que ya has creado.</li><li>Guarda. A partir de ahora, las llamadas a este número son respondidas por ese agente.</li></ol><p>Para establecer un <strong>Outbound Agent</strong> (Agente saliente — usado cuando el número realiza llamadas, por ejemplo en campañas de marcado), elige uno del menú desplegable de salientes en el mismo panel.</p>"
+    },
+    {
+      "id": "call-forwarding",
+      "title": "Opcional: reenvío y alternativas",
+      "content": "<p>En el mismo panel de detalles puedes agregar comportamientos de respaldo:</p><ul><li><strong>Reenviar a un agente o número</strong> cuando llega una llamada.</li><li>Enviar las llamadas <strong>ocupadas</strong> o <strong>sin respuesta</strong> a un agente elegido.</li><li>Volver a marcar automáticamente las <strong>llamadas perdidas</strong> con un agente.</li></ul><p>Deja estas opciones desactivadas si solo quieres que el agente entrante responda todas las llamadas.</p>"
+    },
+    {
+      "id": "bulk-assign",
+      "title": "Asignar varios números a la vez",
+      "content": "<ol><li>En la lista de Phone numbers, marca las casillas de varios números.</li><li>Usa la acción masiva para establecer el mismo agente <strong>entrante</strong> o <strong>saliente</strong> en todos los números seleccionados.</li><li>Elimina una asignación de la misma manera eligiendo <em>None</em>.</li></ol>"
+    },
+    {
+      "id": "verify",
+      "title": "Probar y confirmar",
+      "content": "<ol><li>Llama al número desde tu teléfono: tu agente asignado debería contestar.</li><li>Revisa <strong>Call Center → Call Logs</strong> (Centro de llamadas → Registros de llamadas) para confirmar que la llamada se registró y fue atendida por el agente correcto.</li></ol>",
+      "images": [
+        { "src": "images/phone/call-logs-light.png", "alt": "Registros de llamadas confirmando una llamada enrutada", "caption": "Los Call Logs confirman qué agente atendió cada llamada.", "theme": "light" },
+        { "src": "images/phone/call-logs-dark.png", "alt": "Registros de llamadas confirmando una llamada enrutada", "caption": "Los Call Logs confirman qué agente atendió cada llamada.", "theme": "dark" }
+      ]
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Confirma que tu enrutamiento funciona y perfecciona tus agentes.",
+    "cards": [
+      { "href": "/phone/call-logs", "title": "Revisar registros de llamadas", "description": "Ve cada llamada, quién la atendió y cómo terminó." },
+      { "href": "/agents/create-agent", "title": "Crear un agente de IA", "description": "Crea o ajusta el agente que responde las llamadas." },
+      { "href": "/phone/add-phone-number", "title": "Agregar otro número", "description": "Compra o importa más números para enrutar." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o alguna pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Enrutar llamadas a un agente - Enrutamiento de llamadas entrantes | iMash Docs",
+  "metaDescription": "Asigna un agente de IA entrante a un número de teléfono para que responda las llamadas, establece un agente saliente, agrega alternativas de reenvío y asigna números de forma masiva.",
+  "metaKeywords": "enrutamiento de llamadas, agente entrante, agente saliente, reenvío de llamadas, asignar agente, enrutamiento de número de teléfono, sin respuesta, llamada perdida"
+}

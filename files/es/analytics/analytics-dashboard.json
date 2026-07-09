@@ -1,0 +1,51 @@
+{
+  "title": "Panel de Analíticas",
+  "lede": "Consulta de un vistazo las cifras clave de tu centro de llamadas en la página Overview (Resumen) y luego fíltralas por fecha, número de teléfono, agente, etiquetas o propietario para responder cualquier pregunta sobre tus llamadas.",
+  "timeToComplete": "5 minutos",
+  "steps": [
+    {
+      "id": "open-overview",
+      "title": "Abre la página Overview",
+      "content": "<ol><li>Haz clic en <strong>Overview</strong> (Resumen) en la parte superior del menú izquierdo (es también la página en la que aterrizas en <code>/</code> al iniciar sesión).</li><li>La tarjeta superior, <strong>Total Statistics</strong> (Estadísticas totales), muestra los totales históricos de tu cuenta &mdash; contactos, leads, cuentas, agentes de IA, campañas, números de teléfono y más. Son independientes de cualquier filtro de fecha.</li></ol>",
+      "images": [
+        { "src": "images/get-started/dashboard-overview-main-light.png", "alt": "Panel de resumen", "caption": "La página Overview se abre con Total Statistics, tarjetas de rendimiento, filtros y una tabla de llamadas", "theme": "light" },
+        { "src": "images/get-started/dashboard-overview-main-dark.png", "alt": "Panel de resumen", "caption": "La página Overview se abre con Total Statistics, tarjetas de rendimiento, filtros y una tabla de llamadas", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "read-kpis",
+      "title": "Lee las cuatro tarjetas de rendimiento",
+      "content": "<p>Justo debajo de Total Statistics hay cuatro tarjetas que reflejan el rango de fechas que hayas seleccionado:</p><ul><li><strong>Total calls</strong> (Total de llamadas) &mdash; cuántas llamadas se hicieron y recibieron, con la duración promedio.</li><li><strong>Total minutes</strong> (Total de minutos) &mdash; tiempo total de conversación, con tu tasa de éxito.</li><li><strong>Total spent</strong> (Total gastado) &mdash; costo total del período, con el costo por minuto.</li><li><strong>Avg cost / call</strong> (Costo promedio por llamada) &mdash; precio promedio de una sola llamada, con el costo por día.</li></ul><p>Estas se actualizan automáticamente cada vez que cambias el rango de fechas o cualquier filtro.</p>",
+      "images": [
+        { "src": "images/analytics/overview-stats-light.png", "alt": "Tarjetas de estadísticas de resumen", "caption": "Total de llamadas, minutos, gasto y costo promedio por llamada del período seleccionado", "theme": "light" },
+        { "src": "images/analytics/overview-stats-dark.png", "alt": "Tarjetas de estadísticas de resumen", "caption": "Total de llamadas, minutos, gasto y costo promedio por llamada del período seleccionado", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "filter",
+      "title": "Filtra por fecha, agente y más",
+      "content": "<p>Usa la barra de <strong>Filters</strong> (Filtros) para acotar las cifras y la tabla de llamadas que aparece debajo:</p><ol><li><strong>Date</strong> (Fecha) &mdash; elige <em>Today</em> (Hoy), <em>Yesterday</em> (Ayer), <em>This Week</em> (Esta semana), <em>This Month</em> (Este mes), <em>Last 30 Days</em> (Últimos 30 días) o <em>Custom Range</em> (Rango personalizado) para fechas exactas.</li><li><strong>Phone numbers</strong> (Números de teléfono) &mdash; limita a las llamadas de uno de tus números.</li><li><strong>Agent</strong> (Agente) &mdash; concéntrate en un solo agente de IA (o <em>Web Dialer</em> para llamadas manuales).</li><li><strong>Tags</strong> (Etiquetas) &mdash; filtra por resultado, como <em>Voicemail</em> (Buzón de voz), <em>No Answer</em> (Sin respuesta), <em>Transfer</em> (Transferencia) o <em>Calendar</em> (Calendario).</li><li><strong>Owner</strong> (Propietario) &mdash; ve solo las llamadas de un miembro específico del equipo.</li></ol><p>También puedes escribir un nombre en <strong>Search customer</strong> (Buscar cliente) para encontrar las llamadas de un contacto específico.</p>"
+    },
+    {
+      "id": "read-table-charts",
+      "title": "Profundiza en las llamadas y los gráficos",
+      "content": "<ul><li>La tabla <strong>Calls</strong> (Llamadas) lista cada llamada del período con el contacto, agente/campaña, fecha, duración, tipo, etiquetas y propietario. Haz clic en el ícono de ojo de una fila para abrir el detalle completo de la llamada.</li><li>En la parte inferior, tres gráficos desglosan los datos aún más: <strong>Reason call ended</strong> (Motivo de finalización de la llamada), <strong>Avg duration by agent</strong> (Duración promedio por agente) y <strong>Call volume by hour</strong> (Volumen de llamadas por hora) &mdash; útiles para identificar tus horas de mayor actividad y tus agentes de mejor rendimiento.</li></ul>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Profundiza en el rendimiento de las campañas y el gasto.",
+    "cards": [
+      { "href": "/analytics/reports", "title": "Reportes", "description": "Compara resultados, tasas de conexión y costos por campaña." },
+      { "href": "/analytics/cost-management", "title": "Gestión de Costos", "description": "Consulta tu saldo, los precios y a dónde va el gasto." },
+      { "href": "/campaigns/campaign-analytics", "title": "Leer las Analíticas de Campaña", "description": "Progreso en vivo de las campañas y tasas de conexión." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Panel de Analíticas - Resumen y KPIs | iMash Docs",
+  "metaDescription": "Consulta los KPIs de tu centro de llamadas en la página Overview de iMash y filtra llamadas, minutos y gasto por fecha, agente, número de teléfono, etiquetas y propietario.",
+  "metaKeywords": "panel de analíticas, resumen, KPIs de llamadas, total de llamadas, total de minutos, costo de llamadas, filtros del panel, rendimiento de agentes, imash"
+}

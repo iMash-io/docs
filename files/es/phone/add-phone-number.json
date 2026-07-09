@@ -1,0 +1,56 @@
+{
+  "title": "Agregar un número de teléfono",
+  "lede": "Obtén un número de teléfono para que tus agentes de IA puedan hacer y recibir llamadas. Puedes comprar un número nuevo mediante iMash o importar uno que ya tengas con otro proveedor.",
+  "timeToComplete": "5 minutos",
+  "steps": [
+    {
+      "id": "open-phone-numbers",
+      "title": "Abrir Phone numbers",
+      "content": "<ol><li>En el menú de la izquierda, ve a <strong>Call Center → Phone numbers</strong> (Centro de llamadas → Números de teléfono).</li><li>Esta página muestra cada número de tu cuenta con su etiqueta, capacidades, agente asignado y estado.</li></ol><p>Tienes dos maneras de agregar uno: <strong>Buy New Number</strong> (Comprar número nuevo — alquilado a través de iMash) o <strong>Import Number</strong> (Importar número — uno que ya tengas con tu propia portadora).</p>",
+      "images": [
+        { "src": "images/phone/phone-numbers-light.png", "alt": "Página de números de teléfono", "caption": "Call Center → Phone numbers muestra tus números con los botones Buy e Import.", "theme": "light" },
+        { "src": "images/phone/phone-numbers-dark.png", "alt": "Página de números de teléfono", "caption": "Call Center → Phone numbers muestra tus números con los botones Buy e Import.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "buy-search",
+      "title": "Comprar un número nuevo — buscar",
+      "content": "<ol><li>Haz clic en <strong>Buy New Number</strong> (Comprar número nuevo).</li><li>Elige un <strong>Country</strong> (País).</li><li>Selecciona las capacidades que necesitas — <strong>Voice</strong> (Voz) está activada por defecto (requerida para las llamadas de agentes de IA); agrega <strong>SMS</strong>, <strong>MMS</strong> o <strong>Fax</strong> solo si los necesitas (dejarlos desactivados ofrece los resultados más amplios).</li><li>En el cuadro de búsqueda, escribe un <strong>código de área</strong> (por ejemplo, 212), una <strong>ciudad</strong> (por ejemplo, London) o un <strong>prefijo</strong>, y luego haz clic en <strong>Search</strong> (Buscar).</li></ol>",
+      "images": [
+        { "src": "images/phone/add-phone-number-light.png", "alt": "Diálogo para comprar un número", "caption": "Busca números disponibles por país, capacidad y código de área o ciudad.", "theme": "light" },
+        { "src": "images/phone/add-phone-number-dark.png", "alt": "Diálogo para comprar un número", "caption": "Busca números disponibles por país, capacidad y código de área o ciudad.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "buy-purchase",
+      "title": "Comprar un número nuevo — seleccionar y pagar",
+      "content": "<ol><li>Marca uno o más números de los resultados (cada fila muestra su precio mensual).</li><li>Elige una <strong>tarjeta guardada</strong> para pagar. Si aún no tienes una tarjeta, agrégala primero en <strong>Billing</strong> (Facturación).</li><li>Algunos países requieren documentos de identidad; si aparece un formulario regulatorio, complétalo antes de comprar.</li><li>Haz clic en <strong>Buy Numbers</strong> (Comprar números). iMash compra el número y configura el enrutamiento de llamadas automáticamente.</li></ol>"
+    },
+    {
+      "id": "import",
+      "title": "O importar un número que ya tengas",
+      "content": "<ol><li>Haz clic en <strong>Import Number</strong> (Importar número).</li><li>Selecciona el <strong>Provider</strong> (Proveedor — tu portadora SIP conectada), o haz clic en <strong>Add Provider</strong> (Agregar proveedor) para conectar una primero.</li><li>Ingresa una <strong>Label</strong> (Etiqueta) y el <strong>número de teléfono</strong> en formato E.164 (por ejemplo, <code>+14155551234</code>).</li><li>Guarda. El número se une a tu lista y se enruta a través del troncal de tu proveedor.</li></ol>"
+    },
+    {
+      "id": "next",
+      "title": "Dirige el número hacia un agente",
+      "content": "<p>Un número nuevo no responderá llamadas hasta que le asignes un agente. Abre el número (haz clic en él en la lista) o selecciónalo y usa la acción masiva para establecer un <strong>Inbound Agent</strong> (Agente entrante); consulta a continuación la guía de Enrutamiento de llamadas.</p>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Ahora decide qué sucede cuando alguien llama al número.",
+    "cards": [
+      { "href": "/phone/call-routing", "title": "Enrutar llamadas a un agente", "description": "Asigna un agente entrante para que el número responda las llamadas." },
+      { "href": "/agents/create-agent", "title": "Crear un agente de IA", "description": "Crea el agente que maneja la conversación." },
+      { "href": "/phone/add-sip-provider", "title": "Agregar un proveedor SIP", "description": "Conecta tu propia portadora antes de importar un número." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o alguna pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Agregar un número de teléfono - Comprar o importar un número | iMash Docs",
+  "metaDescription": "Compra un número nuevo local, gratuito o internacional mediante iMash, o importa un número que ya tengas. Luego asígnalo a un agente de IA.",
+  "metaKeywords": "número de teléfono, comprar número, importar número, DID, número gratuito, número local, código de área, voz, SMS, aprovisionamiento"
+}

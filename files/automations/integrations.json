@@ -1,33 +1,50 @@
 {
-  "title": "Integrations",
-  "lede": "Connect iMash with your existing business tools and software platforms.",
-  "sections": [
+  "title": "Connect Integrations",
+  "lede": "Link iMash to the outside apps you already use. The Automation builder connects to external services, and its System Tables actions let a flow read and write your iMash CRM data.",
+  "timeToComplete": "6 minutes",
+  "steps": [
     {
-      "id": "available-integrations",
-      "title": "Available Integrations",
-      "content": "<p>Connect with popular business tools and platforms.</p><h3>Integration Categories:</h3><ul><li><strong>CRM Systems:</strong> Salesforce, HubSpot, Pipedrive</li><li><strong>Communication:</strong> Slack, Microsoft Teams, Discord</li><li><strong>Marketing:</strong> Mailchimp, Constant Contact, ActiveCampaign</li><li><strong>Analytics:</strong> Google Analytics, Mixpanel, Segment</li></ul>"
+      "id": "open-automation",
+      "title": "Open Automation",
+      "content": "<ol><li>Go to <strong>Intelligence Center → Automation</strong>.</li><li>Create or open a flow - integrations are added as steps inside a flow.</li></ol>",
+      "images": [
+        { "src": "images/automations/automation-overview-light.png", "alt": "Automation dashboard", "caption": "Integrations live inside your automation flows.", "theme": "light" },
+        { "src": "images/automations/automation-overview-dark.png", "alt": "Automation dashboard", "caption": "Integrations live inside your automation flows.", "theme": "dark" }
+      ]
     },
     {
-      "id": "integration-setup",
-      "title": "Integration Setup",
-      "content": "<p>Set up and configure integrations with your business tools.</p><ul><li><strong>OAuth Authentication:</strong> Secure connection setup</li><li><strong>Field Mapping:</strong> Map data between systems</li><li><strong>Sync Configuration:</strong> Real-time or scheduled data sync</li><li><strong>Integration Monitoring:</strong> Track sync status and errors</li></ul>"
-    }
-  ],
-  "images": [
-    {
-      "src": "images/integrations-light.png",
-      "alt": "Integrations Marketplace",
-      "caption": "Available integrations and connection setup",
-      "theme": "light"
+      "id": "add-app-step",
+      "title": "Add an App Step",
+      "content": "<ol><li>Click the <strong>+</strong> to add a step and search for the app you want to connect.</li><li>Pick the action that app should perform (for example send a message or create a record).</li></ol>",
+      "images": []
     },
     {
-      "src": "images/integrations-dark.png",
-      "alt": "Integrations Marketplace",
-      "caption": "Available integrations and connection setup",
-      "theme": "dark"
+      "id": "connect-credentials",
+      "title": "Connect Your Account",
+      "content": "<ol><li>The first time you use an app, you'll be asked to <strong>connect</strong> it - usually by signing in or pasting an API key.</li><li>iMash saves that connection so you can reuse it in future flows.</li><li>Choose the saved connection whenever you add that app again.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "map-and-test",
+      "title": "Map Fields and Test",
+      "content": "<ol><li>Fill in the step's fields, pulling values from earlier steps where needed.</li><li>Use <strong>System Tables</strong> actions to move data in and out of your iMash CRM (leads, contacts, accounts, calls).</li><li><strong>Test</strong> the step, then <strong>Publish</strong> the flow so the integration runs automatically.</li></ol>",
+      "images": []
     }
   ],
-  "metaTitle": "Integrations - Connect Third-party Services | iMash Docs",
-  "metaDescription": "Integrate with CRMs, helpdesks, and business tools. Connect Salesforce, HubSpot, Zendesk, and more.",
-  "metaKeywords": "integrations, third-party services, CRM integration, Salesforce, HubSpot, Zendesk, API connections"
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Build the flow around your integration:",
+    "cards": [
+      { "href": "/automations/smart-flows", "title": "Build an Automation", "description": "Combine triggers and actions into a full workflow." },
+      { "href": "/automations/webhooks", "title": "Receive Data with Webhooks", "description": "Accept data from systems that don't have a ready-made app." },
+      { "href": "/automations/custom-tools", "title": "Build Custom Tools", "description": "Reach any API your agent needs mid-call." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Connect Integrations | iMash Docs",
+  "metaDescription": "Link iMash to external apps inside the Automation builder: add an app step, connect your account, map fields, and use System Tables to sync CRM data.",
+  "metaKeywords": "integrations, automation, connect apps, system tables, crm sync, credentials, imash"
 }

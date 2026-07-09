@@ -1,0 +1,47 @@
+{
+  "title": "Gestión de Costos",
+  "lede": "Consulta tu saldo prepago, entiende cómo se cobra cada llamada y mensaje, recarga fondos y revisa cada cargo en la página Billing (Facturación).",
+  "timeToComplete": "5 minutos",
+  "steps": [
+    {
+      "id": "open-billing",
+      "title": "Abre la página Billing",
+      "content": "<ol><li>En el menú izquierdo, dentro de <strong>Account</strong> (Cuenta), abre <strong>Billing</strong> (Facturación, en <code>/billing</code>).</li><li>La tarjeta <strong>Prepaid Balance</strong> (Saldo prepago) muestra tu saldo actual &mdash; los fondos disponibles para pagar llamadas y mensajes. El uso se descuenta de este saldo a medida que ocurre.</li></ol>",
+      "images": [
+        { "src": "images/analytics/billing-light.png", "alt": "Página de facturación", "caption": "La página Billing muestra tu saldo prepago, el panel para agregar fondos y las pestañas de transacciones", "theme": "light" },
+        { "src": "images/analytics/billing-dark.png", "alt": "Página de facturación", "caption": "La página Billing muestra tu saldo prepago, el panel para agregar fondos y las pestañas de transacciones", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "how-cost-works",
+      "title": "Comprende cómo se cobra una llamada",
+      "content": "<p>Cada llamada se cobra por uso, no como una tarifa fija. iMash suma el costo de cada parte (\"tramo\") de la llamada &mdash; los minutos de teléfono, el modelo de lenguaje de IA (LLM), la voz (texto a voz, TTS) y la transcripción (voz a texto, STT) &mdash; y guarda el total en la llamada. Los mensajes (SMS/WhatsApp) se cobran por mensaje.</p><ul><li>Los cargos <strong>por minuto</strong> aplican a las llamadas de voz y al tiempo de conversación.</li><li>Los cargos <strong>por mensaje</strong> aplican a cada mensaje de SMS o WhatsApp.</li></ul><p>Puedes ver el gasto que generan esos cargos como <strong>Total spent</strong> (Total gastado) y <strong>Avg cost / call</strong> (Costo promedio por llamada) en la página Overview, y por campaña en Campaign Reports.</p>"
+    },
+    {
+      "id": "add-funds",
+      "title": "Recarga tu saldo",
+      "content": "<ol><li>En el panel <strong>Add Funds</strong> (Agregar fondos), ingresa el monto que deseas agregar.</li><li>Elige un método de pago &mdash; una <strong>card</strong> (tarjeta) guardada o una <strong>bank account (ACH)</strong> (cuenta bancaria, ACH).</li><li>Ten en cuenta la nota de procesamiento: <strong>los pagos bancarios (ACH) no tienen comisión</strong> y acreditan el monto completo, mientras que los pagos con tarjeta llevan una pequeña comisión de procesamiento, por lo que el monto acreditado a tu saldo es un poco menor que el monto cobrado.</li><li>Haz clic en <strong>Add Funds</strong> para completar la recarga. Tu saldo se actualiza una vez que se confirma el pago.</li></ol>"
+    },
+    {
+      "id": "review-charges",
+      "title": "Revisa tus cargos",
+      "content": "<ul><li>Abre la pestaña <strong>Ledger</strong> (Libro mayor) para ver cada transacción &mdash; recargas y cargos por uso &mdash; con el saldo acumulado.</li><li>Abre la pestaña <strong>Phone Number Order</strong> (Pedido de número de teléfono) para revisar tus suscripciones mensuales de números de teléfono.</li><li>Para un desglose del gasto llamada por llamada, usa los filtros de la página <strong>Overview</strong> o <strong>Campaign Reports</strong>.</li></ul>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Vigila el gasto y el rendimiento en conjunto.",
+    "cards": [
+      { "href": "/analytics/analytics-dashboard", "title": "Panel de Analíticas", "description": "Sigue el gasto total y el costo por llamada a lo largo del tiempo." },
+      { "href": "/analytics/reports", "title": "Reportes", "description": "Consulta el costo y la ganancia por campaña." },
+      { "href": "/settings/billing", "title": "Configuración de Facturación", "description": "Administra los métodos de pago y los datos de la cuenta." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Gestión de Costos - Saldo, Precios y Recargas | iMash Docs",
+  "metaDescription": "Administra tu saldo prepago de iMash: entiende los precios por minuto y por mensaje, cómo se calcula el costo de llamada por tramo, agrega fondos y revisa cargos.",
+  "metaKeywords": "gestión de costos, facturación, saldo prepago, agregar fondos, precio por minuto, precio por mensaje, costo de llamada, uso, facturación imash"
+}

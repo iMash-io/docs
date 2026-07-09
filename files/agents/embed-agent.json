@@ -1,67 +1,55 @@
 {
-  "title": "Embed a Voice AI Agent into Your Website with iMash",
-  "lede": "This guide explains how to build a Voice AI Agent in iMash and embed it into your website as a widget or popup, with options for text, voice, and avatar-based interactions.",
+  "title": "Embed Your Agent on Your Website",
+  "lede": "Turn a Smart Agent into a website widget or popup with text, voice, and optional avatar, then paste one snippet of code to go live.",
   "timeToComplete": "8 minutes",
   "videoUrl": "https://youtu.be/3JS-ncMsZ7s",
   "videoLength": "4",
   "steps": [
     {
-      "id": "create-agent",
-      "title": "Create a New Agent",
-      "content": "<ol><li>Navigate to <strong>AI Agents</strong> and click <strong>Create New Agent</strong>.</li><li>Replace the default prompt with a specialised prompt tailored to your product.</li><li>Optionally connect a <strong>Knowledge Base</strong> of FAQs for more accurate responses.</li><li>Select a model (e.g., Gemini) and choose a suitable voice provider.</li></ol>",
-      "images": []
+      "id": "prepare-agent",
+      "title": "Prepare the Agent",
+      "content": "<ol><li>Go to <strong>Intelligence Center → Smart Agents</strong> and open (or create) the agent you want on your site.</li><li>Write a prompt tailored to your product and, optionally, attach a <strong>Knowledge Base</strong> so it answers accurately.</li><li>Pick the brain (LLM) and a voice if you want voice replies.</li></ol>",
+      "images": [
+        { "src": "images/agents/assistant-editor-light.png", "alt": "Agent editor", "caption": "Configure the agent first, then publish it as a website widget.", "theme": "light" },
+        { "src": "images/agents/assistant-editor-dark.png", "alt": "Agent editor", "caption": "Configure the agent first, then publish it as a website widget.", "theme": "dark" }
+      ]
     },
     {
       "id": "enable-widget",
-      "title": "Enable Website Widget",
-      "content": "<ol><li>In the agent configuration, enable the <strong>Website Widget</strong>.</li><li>Select the <strong>interaction type</strong>:<ul><li><strong>Text and Voice</strong> only</li><li><strong>Avatar</strong> (Avatar-only or side-by-side)</li></ul></li></ol>",
+      "title": "Enable the Website Widget",
+      "content": "<ol><li>Open the <strong>Website Widget</strong> panel and turn on <strong>Enable Website Widget</strong>.</li><li>Under <strong>Capabilities</strong>, choose how visitors interact: <strong>Text</strong>, <strong>Voice</strong>, and optionally an <strong>Avatar</strong> (avatar requires voice).</li></ol>",
+      "images": [
+        { "src": "images/agents/website-widget-light.png", "alt": "Website widget settings", "caption": "The Website Widget panel: capabilities, avatar, theme, layout, and embed code.", "theme": "light" },
+        { "src": "images/agents/website-widget-dark.png", "alt": "Website widget settings", "caption": "The Website Widget panel: capabilities, avatar, theme, layout, and embed code.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "design",
+      "title": "Style the Widget",
+      "content": "<ul><li><strong>Avatar</strong>: choose a display mode (<em>Avatar Only</em> or <em>Side by Side</em>) and pick or upload an avatar image.</li><li><strong>Theme &amp; Header</strong>: set Light, Dark, Auto, or Custom colors and a header title.</li><li><strong>Layout &amp; Position</strong>: choose <em>Widget</em> (docked to a corner) or <em>Popup</em>, and set its screen position or size.</li><li><strong>Behavior</strong>: decide whether it auto-opens and whether the agent starts talking when opened.</li></ul>",
       "images": []
     },
     {
-      "id": "design-settings",
-      "title": "Configure Widget Design",
-      "content": "<ul><li><strong>Theme</strong>: Choose light or dark mode.</li><li><strong>Display Mode</strong>:<ul><li><em>Widget</em>: Small window docked to a screen corner.</li><li><em>Popup</em>: Full modal in the centre of the screen.</li></ul></li><li><strong>Placement</strong>: Select bottom-right or copy the embed code for manual placement in your HTML.</li><li><strong>Behaviour</strong>: Choose whether the agent starts speaking automatically or waits until the widget is opened.</li></ul>",
-      "images": []
-    },
-    {
-      "id": "preview-widget",
-      "title": "Preview Widget",
-      "content": "<ol><li>After making changes, click <strong>Update Widget Preview</strong> to refresh the demo.</li><li>Test both widget and popup modes to see how they look.</li><li>Switch between voice-only and avatar options to preview different interaction styles.</li></ol>",
-      "images": []
-    },
-    {
-      "id": "embed-agent",
-      "title": "Embed Agent into Website",
-      "content": "<ol><li>Copy the <strong>embed code</strong> provided in the widget settings.</li><li>Paste it into your website’s HTML where you want the agent to appear (e.g., landing page).</li><li>Reload your website to see the agent live.</li><li>Test by asking product questions and verifying the responses.</li></ol>",
+      "id": "embed",
+      "title": "Preview and Embed",
+      "content": "<ol><li>Open the <strong>Embed Code &amp; Preview</strong> section to see a live preview.</li><li>Copy the generated <code>&lt;script&gt;</code> snippet.</li><li>Paste it into your site's HTML where you want the agent to appear, then reload the page and test it.</li></ol>",
       "images": []
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Once your Voice AI Agent is embedded, continue refining it:",
+    "description": "Improve the on-site experience:",
     "cards": [
-      {
-        "href": "/agents/knowledge-base",
-        "title": "Add a Knowledge Base",
-        "description": "Upload FAQs and documents to give your agent more context."
-      },
-      {
-        "href": "/agents/tools",
-        "title": "Add Tools",
-        "description": "Enable scheduling, custom API calls, or call-ending features."
-      },
-      {
-        "href": "/agents/privacy-settings",
-        "title": "Configure Privacy",
-        "description": "Decide how to handle recordings, transcripts, and external storage."
-      }
+      { "href": "/agents/agent-knowledge-base", "title": "Add a Knowledge Base", "description": "Help the widget answer product questions accurately." },
+      { "href": "/agents/agent-tools", "title": "Add Tools", "description": "Let the widget book meetings or call your APIs." },
+      { "href": "/agents/agent-privacy", "title": "Privacy & Recording", "description": "Decide what conversation data is stored." }
     ]
   },
   "support": {
     "title": "Need Help?",
-    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a> for detailed documentation</li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a> for step-by-step guides</li></ul>"
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Embed a Voice AI Agent into Your Website | iMash",
-  "metaDescription": "Learn how to build and embed a Voice AI Agent in iMash into your website. Configure widget design, preview modes, avatar options, and integrate it into your HTML.",
-  "metaKeywords": "embed voice ai agent, imash tutorial, website widget, popup agent, avatar agent, website integration"
+  "metaTitle": "Embed Your Agent on Your Website | iMash Docs",
+  "metaDescription": "Publish an iMash Smart Agent as a website widget or popup with text, voice, and avatar. Configure capabilities, theme, and layout, then paste the embed code to go live.",
+  "metaKeywords": "embed agent, website widget, imash, smart agent, popup, avatar, voice widget, embed code"
 }

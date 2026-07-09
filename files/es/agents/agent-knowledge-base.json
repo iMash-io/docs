@@ -1,0 +1,55 @@
+{
+  "title": "Agrega una base de conocimiento a tu agente",
+  "lede": "Sube tus preguntas frecuentes, políticas y documentos de soporte para que tu Smart Agent (Agente inteligente) responda preguntas con información precisa y actualizada.",
+  "timeToComplete": "5 minutos",
+  "videoUrl": "https://youtu.be/XvZsh6jPuLg",
+  "videoLength": "2",
+  "steps": [
+    {
+      "id": "open-kb",
+      "title": "Abre el panel Knowledge Base",
+      "content": "<ol><li>Ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes) y abre tu agente.</li><li>En la columna central, haz clic en el panel <strong>Knowledge Base</strong> (Base de conocimiento).</li></ol>",
+      "images": [
+        { "src": "images/agents/knowledge-base-light.png", "alt": "Panel de base de conocimiento", "caption": "El panel Knowledge Base muestra los archivos adjuntos a tu agente.", "theme": "light" },
+        { "src": "images/agents/knowledge-base-dark.png", "alt": "Panel de base de conocimiento", "caption": "El panel Knowledge Base muestra los archivos adjuntos a tu agente.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "upload",
+      "title": "Sube tus documentos",
+      "content": "<ol><li>Haz clic para subir un archivo (por ejemplo PDF o TXT).</li><li>Espera mientras iMash lo procesa e incrusta para que el agente pueda buscar en su contenido. Si un archivo ya se había subido, se te avisará.</li><li>El panel Knowledge Base se activa automáticamente en cuanto hay al menos un archivo adjunto.</li></ol>",
+      "images": [
+        { "src": "images/agents/assistant-editor-light.png", "alt": "Editor del agente con base de conocimiento", "caption": "Una base de conocimiento adjunta se vuelve consultable durante las conversaciones.", "theme": "light" },
+        { "src": "images/agents/assistant-editor-dark.png", "alt": "Editor del agente con base de conocimiento", "caption": "Una base de conocimiento adjunta se vuelve consultable durante las conversaciones.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "verify",
+      "title": "Verifica las respuestas",
+      "content": "<ol><li>Abre <strong>Test Agent</strong> (Probar agente) y conéctate.</li><li>Haz preguntas que tu documento responda (por ejemplo el horario de atención o el correo de soporte).</li><li>Confirma que el agente responde usando datos de tu archivo.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "improve",
+      "title": "Mejora la precisión",
+      "content": "<ul><li>Si el agente no toma la información del archivo, agrega orientación a la indicación; por ejemplo: <em>\"Cuando te hagan una pregunta, responde con las preguntas frecuentes de tu base de conocimiento.\"</em></li><li>Usa documentos claros y bien estructurados, y mantenlos actualizados.</li><li>Divide los temas extensos en archivos separados para que la recuperación se mantenga enfocada.</li></ul>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Completa las capacidades de tu agente:",
+    "cards": [
+      { "href": "/agents/agent-tools", "title": "Agrega herramientas", "description": "Permite que el agente realice acciones como reservas y transferencias." },
+      { "href": "/agents/costum-variables", "title": "Usa variables personalizadas", "description": "Personaliza las respuestas con datos del CRM y variables de API." },
+      { "href": "/agents/test-agent", "title": "Prueba tu agente", "description": "Confirma que las respuestas provienen de los documentos que subiste." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Agrega una base de conocimiento a tu agente | Documentación de iMash",
+  "metaDescription": "Sube preguntas frecuentes y documentos de soporte a tu iMash Smart Agent para que responda con información precisa. Aprende a subir, verificar y mejorar la precisión de la base de conocimiento.",
+  "metaKeywords": "base de conocimiento, imash, agente inteligente, preguntas frecuentes, subida de documentos, rag, recuperación, respuestas de ia"
+}

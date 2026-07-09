@@ -1,55 +1,55 @@
 {
-  "title": "Configure Voice Providers for Voice AI Agents in iMash",
-  "lede": "This guide explains how to configure and choose different voice providers for your Voice AI Agent in iMash, including built-in voices with real-time models and premium third-party providers such as 11 Labs.",
+  "title": "Configure the Voice (TTS) for Your Agent",
+  "lede": "Choose the voice your Smart Agent speaks with. Pick a text-to-speech (TTS) provider, preview voices, filter by gender, accent, and age, and set a backup voice.",
   "timeToComplete": "5 minutes",
   "videoUrl": "https://youtu.be/C3Rkclp_KKQ",
   "videoLength": "2",
   "steps": [
     {
-      "id": "choose-model",
-      "title": "Choose a Model Type",
-      "content": "<ol><li>Go to any of your agents in the <strong>AI Agents</strong> tab.</li><li>Select a model type. There are two options:<ul><li><strong>Real-Time Models</strong>: Come with built-in voices that are included free of charge.</li><li><strong>LLM Models</strong>: Require you to choose an external voice provider (e.g., 11 Labs, Google, Cortesia, OpenAI).</li></ul></li></ol>",
+      "id": "open-voice-panel",
+      "title": "Open the Voice (TTS) Panel",
+      "content": "<ol><li>Go to <strong>Intelligence Center → Smart Agents</strong> and open your agent.</li><li>In the middle column, click the <strong>Voice (TTS)</strong> panel. Make sure its toggle is on.</li></ol>",
+      "images": [
+        { "src": "images/agents/assistant-editor-light.png", "alt": "Agent editor feature panels", "caption": "The Voice (TTS) panel sits in the middle column of the editor.", "theme": "light" },
+        { "src": "images/agents/assistant-editor-dark.png", "alt": "Agent editor feature panels", "caption": "The Voice (TTS) panel sits in the middle column of the editor.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "pick-provider",
+      "title": "Pick a Voice Provider",
+      "content": "<ol><li>Use the provider tabs at the top of the panel to choose a provider. Available providers include <strong>iMash TTS</strong>, <strong>Cartesia</strong>, <strong>ElevenLabs</strong>, <strong>Rime</strong>, <strong>Playht</strong>, <strong>Deepgram</strong>, <strong>OpenAI</strong>, <strong>Azure</strong>, <strong>Resemble</strong>, <strong>MiniMax</strong>, and <strong>Google</strong>.</li><li>Note that realtime (speech-to-speech) models come with their own built-in voices; when using one you pick from that model's voice set.</li></ol>",
+      "images": [
+        { "src": "images/agents/voice-config-light.png", "alt": "Voice configuration panel", "caption": "The Voice panel: provider tabs, filters, a searchable voice list, and preview.", "theme": "light" },
+        { "src": "images/agents/voice-config-dark.png", "alt": "Voice configuration panel", "caption": "The Voice panel: provider tabs, filters, a searchable voice list, and preview.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "filter-preview",
+      "title": "Filter, Preview, and Select a Voice",
+      "content": "<ol><li>Narrow the list with the <strong>Gender</strong>, <strong>Accent</strong>, and <strong>Age</strong> filters.</li><li>Click the play button next to a voice to hear a sample.</li><li>When you find the one you want, tick its checkbox in the last column to make it the agent's voice.</li></ol>",
       "images": []
     },
     {
-      "id": "select-voice",
-      "title": "Select a Voice Provider",
-      "content": "<ol><li>Preview available voices from different providers using the demo play buttons.</li><li>Evaluate quality, style, and cost. <br>For example:<ul><li><strong>Google Real-Time</strong>: Native voices included with the model.</li><li><strong>11 Labs</strong>: High-quality, natural voices but more expensive.</li><li><strong>Cortesia / OpenAI</strong>: Additional alternatives.</li></ul></li><li>Click the checkmark next to your preferred voice to apply it.</li></ol>",
-      "images": []
-    },
-    {
-      "id": "configure-parameters",
-      "title": "Configure Voice Parameters",
-      "content": "<ul><li>Some providers (e.g., 11 Labs) allow extra parameters:</li><ul><li><strong>Gender</strong>: male or female.</li><li><strong>Accent</strong>: regional voice variations.</li><li><strong>Age</strong>: adjust perceived speaker age.</li></ul><li>Set these options according to your desired voice profile.</li></ul>",
+      "id": "advanced-and-backup",
+      "title": "Tune the Voice and Set a Backup",
+      "content": "<ul><li>Some providers expose extra controls under <strong>Advanced Settings</strong> - for example ElevenLabs offers Stability, Clarity, Style Exaggeration, and Speed; Cartesia offers Emotion, Speed, and Volume.</li><li>You can also configure a <strong>Backup</strong> voice/provider that takes over automatically if the primary provider is unavailable.</li></ul>",
       "images": []
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "After configuring voice settings, continue improving your agent:",
+    "description": "After picking a voice, keep tuning your agent:",
     "cards": [
-      {
-        "href": "/agents/basic-settings",
-        "title": "Review Basic Settings",
-        "description": "Adjust conversation limits, idle messages, and voicemail handling."
-      },
-      {
-        "href": "/agents/tools",
-        "title": "Add Tools to Your Agent",
-        "description": "Enhance your agent with features like calendars, custom APIs, and call-ending automation."
-      },
-      {
-        "href": "/agents/knowledge-base",
-        "title": "Add a Knowledge Base",
-        "description": "Upload FAQs and support files to give your agent accurate information."
-      }
+      { "href": "/agents/llm-settings", "title": "Choose the Brain (LLM)", "description": "Understand realtime vs. text models and pick the LLM that powers replies." },
+      { "href": "/agents/agent-settings", "title": "Agent Settings", "description": "Adjust timeouts, idle messages, and voicemail handling." },
+      { "href": "/agents/test-agent", "title": "Test Your Agent", "description": "Hear the voice live in the browser or over a phone call." }
     ]
   },
   "support": {
     "title": "Need Help?",
-    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a> for detailed documentation</li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a> for step-by-step guides</li></ul>"
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Configure Voice Providers for Voice AI Agents in iMash",
-  "metaDescription": "Learn how to configure and choose voices for your Voice AI Agent in iMash, including built-in real-time voices and premium providers like 11 Labs.",
-  "metaKeywords": "voice configuration, imash tutorial, voice ai agent, 11 labs, google voices, cortesia, openai voices"
+  "metaTitle": "Configure the Voice (TTS) for Your Agent | iMash Docs",
+  "metaDescription": "Choose your iMash Smart Agent's voice: pick a TTS provider (iMash TTS, Cartesia, ElevenLabs, OpenAI, Google and more), filter by gender, accent and age, preview and set a backup.",
+  "metaKeywords": "voice configuration, TTS, imash, smart agent, elevenlabs, cartesia, google voices, openai voices, imash tts, backup voice"
 }

@@ -1,33 +1,53 @@
 {
-  "title": "Webhooks",
-  "lede": "Configure real-time event notifications to external systems and applications.",
-  "sections": [
+  "title": "Receive Data with Webhooks",
+  "lede": "Use the Catch Webhook trigger in Automation to accept data from any outside system - so an incoming request can start a workflow, create records, or kick off a call.",
+  "timeToComplete": "6 minutes",
+  "steps": [
     {
-      "id": "webhook-setup",
-      "title": "Webhook Configuration",
-      "content": "<p>Set up webhooks to receive real-time notifications about events in your iMash account.</p><h3>Event Types:</h3><ul><li><strong>Call Events:</strong> Call started, ended, transferred</li><li><strong>Campaign Events:</strong> Campaign started, paused, completed</li><li><strong>CRM Events:</strong> New leads, contact updates</li><li><strong>Agent Events:</strong> Agent status changes</li></ul>"
+      "id": "add-catch-webhook",
+      "title": "Add a Catch Webhook Trigger",
+      "content": "<ol><li>Go to <strong>Intelligence Center → Automation</strong> and create or open a flow.</li><li>Click the trigger block and choose <strong>Catch Webhook</strong>.</li><li>iMash generates a unique <strong>webhook URL</strong> for this flow.</li></ol>",
+      "images": [
+        { "src": "images/automations/automation-builder-light.png", "alt": "Automation builder with webhook trigger", "caption": "Catch Webhook is the trigger that starts a flow from incoming data.", "theme": "light" },
+        { "src": "images/automations/automation-builder-dark.png", "alt": "Automation builder with webhook trigger", "caption": "Catch Webhook is the trigger that starts a flow from incoming data.", "theme": "dark" }
+      ]
     },
     {
-      "id": "webhook-management",
-      "title": "Webhook Management",
-      "content": "<p>Manage and monitor your webhook endpoints.</p><ul><li><strong>Endpoint Configuration:</strong> URL, headers, authentication</li><li><strong>Event Filtering:</strong> Subscribe to specific events only</li><li><strong>Retry Logic:</strong> Automatic retry on failed deliveries</li><li><strong>Delivery Logs:</strong> Track webhook delivery status</li></ul>"
-    }
-  ],
-  "images": [
-    {
-      "src": "images/webhooks-light.png",
-      "alt": "Webhooks Configuration",
-      "caption": "Webhook setup and management interface",
-      "theme": "light"
+      "id": "copy-url",
+      "title": "Copy and Send the URL",
+      "content": "<ol><li><strong>Copy</strong> the generated webhook URL.</li><li>Paste it into the outside system (a form, another app, or your own code) so it sends a request to that URL.</li><li>Trigger a real request once so iMash can <strong>capture a sample</strong> of the incoming data.</li></ol>",
+      "images": []
     },
     {
-      "src": "images/webhooks-dark.png",
-      "alt": "Webhooks Configuration",
-      "caption": "Webhook setup and management interface",
-      "theme": "dark"
+      "id": "use-the-data",
+      "title": "Use the Incoming Data",
+      "content": "<ol><li>After the sample arrives, the fields from the request become available to every step below.</li><li>Add actions (for example a <strong>System Tables</strong> action to create a lead or start a call) and map the webhook fields into them.</li><li><strong>Test</strong> the flow, then <strong>Publish</strong> it so the webhook stays live.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "send-data-out",
+      "title": "Sending Data the Other Way",
+      "content": "<ol><li>Webhooks also work outbound: a Smart Agent can <strong>Send Data to URL</strong> during a call to push information to your systems.</li><li>Set that up as a <strong>Custom Tool</strong> with a <code>POST</code> endpoint and attach it to the agent.</li></ol>",
+      "images": [
+        { "src": "images/agents/webhooks-post-light.png", "alt": "Send data to a URL", "caption": "Agents can POST data to your own URL mid-conversation.", "theme": "light" },
+        { "src": "images/agents/webhooks-post-dark.png", "alt": "Send data to a URL", "caption": "Agents can POST data to your own URL mid-conversation.", "theme": "dark" }
+      ]
     }
   ],
-  "metaTitle": "Webhooks - Real-time Event Notifications | iMash Docs",
-  "metaDescription": "Configure webhooks for real-time notifications. Receive events for calls, messages, and agent interactions.",
-  "metaKeywords": "webhooks, event notifications, real-time updates, API callbacks, event streaming, integration hooks"
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Turn incoming data into automated actions:",
+    "cards": [
+      { "href": "/automations/smart-flows", "title": "Build an Automation", "description": "Chain actions after your webhook trigger." },
+      { "href": "/automations/custom-tools", "title": "Build Custom Tools", "description": "Create the POST endpoint your agent sends data to." },
+      { "href": "/automations/integrations", "title": "Connect Integrations", "description": "Link the systems on both ends of your webhook." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Receive Data with Webhooks | iMash Docs",
+  "metaDescription": "Use the Catch Webhook trigger in iMash Automation to accept data from outside systems, map it into actions, and publish the flow. Includes outbound Send Data to URL.",
+  "metaKeywords": "webhooks, catch webhook, automation trigger, send data to url, incoming data, integration, imash"
 }

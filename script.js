@@ -1,6 +1,82 @@
 // Configuration
 const API_BASE = 'https://dashboard.imash.io/api/v2';
 
+// ---------------------------------------------------------------------------
+// Language layer (English default + Spanish under the /es URL prefix).
+// All internal routing logic keeps operating on canonical, language-stripped
+// routes (e.g. "/agents/advanced-settings"). Only three things are language
+// aware: the URL we read/write, the JSON file path we fetch, and the chrome
+// label lookup. This keeps the existing English behaviour byte-for-byte intact.
+// ---------------------------------------------------------------------------
+function getLang() {
+  const p = window.location.pathname;
+  return (p === '/es' || p === '/es/' || p.startsWith('/es/')) ? 'es' : 'en';
+}
+// "/es/agents/x" -> "/agents/x" ; "/es" -> "/"
+function stripLang(p) {
+  if (p === '/es' || p === '/es/') return '/';
+  if (p.startsWith('/es/')) return p.slice(3);
+  return p;
+}
+// canonical route -> language-prefixed URL for the CURRENT language
+function withLang(route) {
+  if (getLang() !== 'es') return route;
+  return route === '/' ? '/es' : '/es' + route;
+}
+// Chrome (sidebar/nav/footer) string dictionary. Page CONTENT is translated in
+// the files/es/*.json files; this dictionary only covers the static shell.
+const I18N = {
+  es: {
+    'Documentation': 'Documentación', 'API Reference': 'Referencia API', 'Video Tutorials': 'Video Tutoriales',
+    'Homepage': 'Inicio', 'Support': 'Soporte', 'Dashboard': 'Panel', 'Search...': 'Buscar...',
+    'On this page': 'En esta página', 'Powered by iMash': 'Desarrollado por iMash',
+    // sidebar group titles
+    'Get Started': 'Primeros Pasos', 'Agents': 'Agentes', 'Phone System': 'Sistema Telefónico',
+    'Campaigns': 'Campañas', 'CRM': 'CRM', 'Automations': 'Automatizaciones',
+    'Analytics': 'Analíticas', 'Settings': 'Configuración', 'Video Categories': 'Categorías de Video',
+    // sidebar links
+    'Quickstart': 'Inicio Rápido', 'Dashboard Overview': 'Vista del Panel', 'API Keys': 'Claves API',
+    'Create Agent': 'Crear Agente', 'Agent Settings': 'Ajustes del Agente', 'Voice Configuration': 'Configuración de Voz',
+    'Test Your Agent': 'Prueba tu Agente', 'Agent Tools': 'Herramientas del Agente',
+    'Agent Knowledge Base': 'Base de Conocimiento', 'Agent MCP': 'MCP del Agente',
+    'Agent Privacy': 'Privacidad del Agente', 'Custom Variables': 'Variables Personalizadas',
+    'Embed Agent': 'Insertar Agente', 'LLM Settings': 'Ajustes del LLM', 'Observer Agent': 'Agente Observador',
+    'Advanced Settings': 'Ajustes Avanzados', 'Add SIP Provider': 'Añadir Proveedor SIP',
+    'Add Phone Number': 'Añadir Número', 'Call Routing': 'Enrutamiento de Llamadas', 'Call Logs': 'Registros de Llamadas',
+    'Create Campaign': 'Crear Campaña', 'Dial Lists': 'Listas de Marcado', 'Campaign Analytics': 'Analíticas de Campaña',
+    'Do Not Call List': 'Lista de No Llamar', 'Contacts': 'Contactos', 'Leads': 'Prospectos',
+    'Accounts': 'Cuentas', 'Import/Export Data': 'Importar/Exportar Datos', 'Smart Flows': 'Flujos Inteligentes',
+    'Custom Tools': 'Herramientas Personalizadas', 'Webhooks': 'Webhooks', 'Integrations': 'Integraciones',
+    'Analytics Dashboard': 'Panel de Analíticas', 'Reports': 'Informes', 'Cost Management': 'Gestión de Costos',
+    'Team Management': 'Gestión de Equipo', 'Billing': 'Facturación', 'Security': 'Seguridad',
+    'White Label': 'Marca Blanca',
+    // intro / home page
+    'Introduction': 'Introducción',
+    'Build, test, deploy, and monitor AI agents.': 'Crea, prueba, implementa y monitorea agentes de IA.',
+    "Here's what iMash offers": 'Esto es lo que ofrece iMash',
+    'How iMash Works': 'Cómo Funciona iMash',
+    'Agent platform with voice and automation.': 'Plataforma de agentes con voz y automatización.',
+    'Create your first agent in minutes.': 'Crea tu primer agente en minutos.',
+    'Build': 'Crear', 'Test': 'Probar', 'Deploy': 'Implementar', 'Monitor': 'Monitorear',
+    'Define behavior, voice and integrations.': 'Define el comportamiento, la voz y las integraciones.',
+    'Flows': 'Flujos', 'Create structured conversations.': 'Crea conversaciones estructuradas.',
+    'Playground': 'Área de Pruebas', 'Test your agents quickly.': 'Prueba tus agentes rápidamente.',
+    'Simulation': 'Simulación', 'Automate regression tests.': 'Automatiza pruebas de regresión.',
+    'Phone Calls': 'Llamadas Telefónicas', 'Make and receive calls.': 'Realiza y recibe llamadas.',
+    'Custom Telephony': 'Telefonía Personalizada', 'Integrate SIP providers.': 'Integra proveedores SIP.',
+    'Webhook': 'Webhook', 'Receive events in real-time.': 'Recibe eventos en tiempo real.',
+    'Understand agent performance.': 'Comprende el rendimiento de tus agentes.',
+    // rendered content chrome
+    'Time to complete': 'Tiempo para completar', "What You'll Learn": 'Lo que aprenderás'
+  }
+};
+// translate a chrome string for the current language
+function tr(s) {
+  const lang = getLang();
+  if (lang === 'en') return s;
+  return (I18N[lang] && I18N[lang][s]) || s;
+}
+
 // State management
 let currentPage = '/';
 let currentApiResource = 'crm_leads';
@@ -37,10 +113,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Update origin placeholders
   updateOriginPlaceholders();
   
-  // Navigate to initial route
-  let initialRoute = window.location.pathname || '/';
+  // Apply Spanish chrome translations to the static shell (index.html)
+  applyChromeLanguage();
+
+  // Navigate to initial route (canonical, language-stripped)
+  let initialRoute = stripLang(window.location.pathname || '/');
   console.log('Initial route on page load:', initialRoute);
-  
+
   // Force to root if loading docs root
   if (initialRoute === '/docs' || initialRoute === '/docs/' || initialRoute === '') {
     initialRoute = '/';
@@ -154,23 +233,70 @@ function getTableNameMapping() {
 // Router
 function initRouter() {
   window.addEventListener('popstate', (e) => {
-    if (e.state && e.state.route) {
-      showPage(e.state.route);
-    }
+    const route = (e.state && e.state.route) || stripLang(window.location.pathname);
+    showPage(route);
   });
 }
 
 function navigateTo(route, forceShow = false) {
+  // route is always canonical (language-stripped)
   if (!forceShow && route === currentPage) return;
-  
+
   currentPage = route;
-  
-  // Only use pushState when not running in file:// protocol (local mode)
+
+  // Only use pushState when not running in file:// protocol (local mode).
+  // The pushState state carries the canonical route; the URL carries the
+  // language prefix so a reload / share keeps the right language.
   if (window.location.protocol !== 'file:') {
-    window.history.pushState({ route }, '', route);
+    window.history.pushState({ route }, '', withLang(route));
   }
-  
+
   showPage(route);
+}
+
+// Switch the whole site between English and Spanish, staying on the same page.
+function setDocsLanguage(lang) {
+  const canonical = stripLang(window.location.pathname) || '/';
+  const target = lang === 'es' ? (canonical === '/' ? '/es' : '/es' + canonical) : canonical;
+  window.location.assign(target); // full reload re-inits with the correct language
+}
+
+// Translate the static shell (top tabs, nav links, search, footer, TOC header)
+// that lives in index.html rather than being generated by JS.
+function applyChromeLanguage() {
+  if (getLang() !== 'es') return;
+  document.documentElement.lang = 'es';
+  const setText = (sel, val) => { const el = document.querySelector(sel); if (el) el.textContent = val; };
+  document.querySelectorAll('.top-tab').forEach(el => {
+    const key = el.getAttribute('data-top-tab');
+    if (key === '/') el.textContent = tr('Documentation');
+    else if (key === '/api-reference') el.textContent = tr('API Reference');
+    else if (key === '/videos') el.textContent = tr('Video Tutorials');
+  });
+  document.querySelectorAll('.top-links a, .mobile-menu a').forEach(a => {
+    const t = a.textContent.trim();
+    if (I18N.es[t]) a.textContent = I18N.es[t];
+  });
+  document.querySelectorAll('.search-btn span, #mobile-search-btn span').forEach(s => {
+    if (s.textContent.trim() === 'Search...') s.textContent = tr('Search...');
+  });
+  const tocTitle = document.querySelector('#toc .toc-title, .toc-header');
+  if (tocTitle && /on this page/i.test(tocTitle.textContent)) tocTitle.textContent = tr('On this page');
+  // Footer + any element carrying the "Powered by iMash" tagline
+  document.querySelectorAll('footer *, .site-footer *').forEach(el => {
+    if (el.children.length === 0) {
+      const t = el.textContent.trim();
+      if (I18N.es[t]) el.textContent = I18N.es[t];
+    }
+  });
+  // Translate the static intro/home page (index.html #page-introduction)
+  const intro = document.getElementById('page-introduction');
+  if (intro) {
+    intro.querySelectorAll('h1, h2, .lede, .card-title, .card-desc').forEach(el => {
+      const t = el.textContent.trim();
+      if (I18N.es[t]) el.textContent = I18N.es[t];
+    });
+  }
 }
 
 function showPage(route) {
@@ -408,89 +534,89 @@ function updateSidebarForTab(route) {
       sidebar.innerHTML = `
       <div class="sidebar-inner">
         <div class="sidebar-group">
-          <div class="sidebar-group-title">Get Started</div>
+          <div class="sidebar-group-title">${tr('Get Started')}</div>
           <ul>
-            <li><a data-href="/get-started/quick-start" class="nav-link ${route === '/get-started/quick-start' ? 'active' : ''}">Quickstart</a></li>
-            <li><a data-href="/get-started/dashboard-overview" class="nav-link ${route === '/get-started/dashboard-overview' ? 'active' : ''}">Dashboard Overview</a></li>
-            <li><a data-href="/get-started/api-keys" class="nav-link ${route === '/get-started/api-keys' ? 'active' : ''}">API Keys</a></li>
+            <li><a data-href="/get-started/quick-start" class="nav-link ${route === '/get-started/quick-start' ? 'active' : ''}">${tr('Quickstart')}</a></li>
+            <li><a data-href="/get-started/dashboard-overview" class="nav-link ${route === '/get-started/dashboard-overview' ? 'active' : ''}">${tr('Dashboard Overview')}</a></li>
+            <li><a data-href="/get-started/api-keys" class="nav-link ${route === '/get-started/api-keys' ? 'active' : ''}">${tr('API Keys')}</a></li>
           </ul>
         </div>
 
         <div class="sidebar-group">
-          <div class="sidebar-group-title">Agents</div>
+          <div class="sidebar-group-title">${tr('Agents')}</div>
           <ul>
-            <li><a data-href="/agents/create-agent" class="nav-link ${route === '/agents/create-agent' ? 'active' : ''}">Create Agent</a></li>
-            <li><a data-href="/agents/agent-settings" class="nav-link ${route === '/agents/agent-settings' ? 'active' : ''}">Agent Settings</a></li>
-            <li><a data-href="/agents/voice-configuration" class="nav-link ${route === '/agents/voice-configuration' ? 'active' : ''}">Voice Configuration</a></li>
-            <li><a data-href="/agents/test-agent" class="nav-link ${route === '/agents/test-agent' || route === '/agents/test-your-agent' ? 'active' : ''}">Test Your Agent</a></li>
-            <li><a data-href="/agents/agent-tools" class="nav-link ${route === '/agents/agent-tools' ? 'active' : ''}">Agent Tools</a></li>
-            <li><a data-href="/agents/agent-knowledge-base" class="nav-link ${route === '/agents/agent-knowledge-base' ? 'active' : ''}">Agent Knowledge Base</a></li>
-            <li><a data-href="/agents/agent-mcp" class="nav-link ${route === '/agents/agent-mcp' ? 'active' : ''}">Agent MCP</a></li>
-            <li><a data-href="/agents/agent-privacy" class="nav-link ${route === '/agents/agent-privacy' ? 'active' : ''}">Agent Privacy</a></li>
-            <li><a data-href="/agents/costum-variables" class="nav-link ${route === '/agents/costum-variables' ? 'active' : ''}">Custom Variables</a></li>
-              <li><a data-href="/agents/embed-agent" class="nav-link ${route === '/agents/embed-agent' ? 'active' : ''}">Embed Agent</a></li>
-                <li><a data-href="/agents/llm-settings" class="nav-link ${route === '/agents/llm-settings' ? 'active' : ''}">LLM Settings</a></li>
-                  <li><a data-href="/agents/observer-agent" class="nav-link ${route === '/agents/observer-agent' ? 'active' : ''}">Observer Agent</a></li>
-                    <li><a data-href="/agents/advanced-settings" class="nav-link ${route === '/agents/advanced-settings' ? 'active' : ''}">Advanced Settings</a></li>
+            <li><a data-href="/agents/create-agent" class="nav-link ${route === '/agents/create-agent' ? 'active' : ''}">${tr('Create Agent')}</a></li>
+            <li><a data-href="/agents/agent-settings" class="nav-link ${route === '/agents/agent-settings' ? 'active' : ''}">${tr('Agent Settings')}</a></li>
+            <li><a data-href="/agents/voice-configuration" class="nav-link ${route === '/agents/voice-configuration' ? 'active' : ''}">${tr('Voice Configuration')}</a></li>
+            <li><a data-href="/agents/test-agent" class="nav-link ${route === '/agents/test-agent' || route === '/agents/test-your-agent' ? 'active' : ''}">${tr('Test Your Agent')}</a></li>
+            <li><a data-href="/agents/agent-tools" class="nav-link ${route === '/agents/agent-tools' ? 'active' : ''}">${tr('Agent Tools')}</a></li>
+            <li><a data-href="/agents/agent-knowledge-base" class="nav-link ${route === '/agents/agent-knowledge-base' ? 'active' : ''}">${tr('Agent Knowledge Base')}</a></li>
+            <li><a data-href="/agents/agent-mcp" class="nav-link ${route === '/agents/agent-mcp' ? 'active' : ''}">${tr('Agent MCP')}</a></li>
+            <li><a data-href="/agents/agent-privacy" class="nav-link ${route === '/agents/agent-privacy' ? 'active' : ''}">${tr('Agent Privacy')}</a></li>
+            <li><a data-href="/agents/costum-variables" class="nav-link ${route === '/agents/costum-variables' ? 'active' : ''}">${tr('Custom Variables')}</a></li>
+              <li><a data-href="/agents/embed-agent" class="nav-link ${route === '/agents/embed-agent' ? 'active' : ''}">${tr('Embed Agent')}</a></li>
+                <li><a data-href="/agents/llm-settings" class="nav-link ${route === '/agents/llm-settings' ? 'active' : ''}">${tr('LLM Settings')}</a></li>
+                  <li><a data-href="/agents/observer-agent" class="nav-link ${route === '/agents/observer-agent' ? 'active' : ''}">${tr('Observer Agent')}</a></li>
+                    <li><a data-href="/agents/advanced-settings" class="nav-link ${route === '/agents/advanced-settings' ? 'active' : ''}">${tr('Advanced Settings')}</a></li>
           </ul>
         </div>
 
         <div class="sidebar-group">
-          <div class="sidebar-group-title">Phone System</div>
+          <div class="sidebar-group-title">${tr('Phone System')}</div>
           <ul>
-            <li><a data-href="/phone/add-sip-provider" class="nav-link ${route === '/phone/add-sip-provider' || route === '/phone-system/add-sip-provider' ? 'active' : ''}">Add SIP Provider</a></li>
-            <li><a data-href="/phone/add-phone-number" class="nav-link ${route === '/phone/add-phone-number' || route === '/phone-system/add-phone-number' ? 'active' : ''}">Add Phone Number</a></li>
-            <li><a data-href="/phone/call-routing" class="nav-link ${route === '/phone/call-routing' || route === '/phone-system/call-routing' ? 'active' : ''}">Call Routing</a></li>
-            <li><a data-href="/phone/call-logs" class="nav-link ${route === '/phone/call-logs' || route === '/phone-system/call-logs' ? 'active' : ''}">Call Logs</a></li>
+            <li><a data-href="/phone/add-sip-provider" class="nav-link ${route === '/phone/add-sip-provider' || route === '/phone-system/add-sip-provider' ? 'active' : ''}">${tr('Add SIP Provider')}</a></li>
+            <li><a data-href="/phone/add-phone-number" class="nav-link ${route === '/phone/add-phone-number' || route === '/phone-system/add-phone-number' ? 'active' : ''}">${tr('Add Phone Number')}</a></li>
+            <li><a data-href="/phone/call-routing" class="nav-link ${route === '/phone/call-routing' || route === '/phone-system/call-routing' ? 'active' : ''}">${tr('Call Routing')}</a></li>
+            <li><a data-href="/phone/call-logs" class="nav-link ${route === '/phone/call-logs' || route === '/phone-system/call-logs' ? 'active' : ''}">${tr('Call Logs')}</a></li>
           </ul>
         </div>
 
         <div class="sidebar-group">
-          <div class="sidebar-group-title">Campaigns</div>
+          <div class="sidebar-group-title">${tr('Campaigns')}</div>
           <ul>
-            <li><a data-href="/campaigns/create-campaign" class="nav-link ${route === '/campaigns/create-campaign' ? 'active' : ''}">Create Campaign</a></li>
-            <li><a data-href="/campaigns/dial-lists" class="nav-link ${route === '/campaigns/dial-lists' ? 'active' : ''}">Dial Lists</a></li>
-            <li><a data-href="/campaigns/campaign-analytics" class="nav-link ${route === '/campaigns/campaign-analytics' ? 'active' : ''}">Campaign Analytics</a></li>
-            <li><a data-href="/campaigns/do-not-call" class="nav-link ${route === '/campaigns/do-not-call' || route === '/campaigns/do-not-call-list' ? 'active' : ''}">Do Not Call List</a></li>
+            <li><a data-href="/campaigns/create-campaign" class="nav-link ${route === '/campaigns/create-campaign' ? 'active' : ''}">${tr('Create Campaign')}</a></li>
+            <li><a data-href="/campaigns/dial-lists" class="nav-link ${route === '/campaigns/dial-lists' ? 'active' : ''}">${tr('Dial Lists')}</a></li>
+            <li><a data-href="/campaigns/campaign-analytics" class="nav-link ${route === '/campaigns/campaign-analytics' ? 'active' : ''}">${tr('Campaign Analytics')}</a></li>
+            <li><a data-href="/campaigns/do-not-call" class="nav-link ${route === '/campaigns/do-not-call' || route === '/campaigns/do-not-call-list' ? 'active' : ''}">${tr('Do Not Call List')}</a></li>
           </ul>
         </div>
 
         <div class="sidebar-group">
-          <div class="sidebar-group-title">CRM</div>
+          <div class="sidebar-group-title">${tr('CRM')}</div>
           <ul>
-            <li><a data-href="/crm/contacts" class="nav-link ${route === '/crm/contacts' ? 'active' : ''}">Contacts</a></li>
-            <li><a data-href="/crm/leads" class="nav-link ${route === '/crm/leads' ? 'active' : ''}">Leads</a></li>
-            <li><a data-href="/crm/accounts" class="nav-link ${route === '/crm/accounts' ? 'active' : ''}">Accounts</a></li>
-            <li><a data-href="/crm/import-export" class="nav-link ${route === '/crm/import-export' || route === '/crm/import-export-data' ? 'active' : ''}">Import/Export Data</a></li>
+            <li><a data-href="/crm/contacts" class="nav-link ${route === '/crm/contacts' ? 'active' : ''}">${tr('Contacts')}</a></li>
+            <li><a data-href="/crm/leads" class="nav-link ${route === '/crm/leads' ? 'active' : ''}">${tr('Leads')}</a></li>
+            <li><a data-href="/crm/accounts" class="nav-link ${route === '/crm/accounts' ? 'active' : ''}">${tr('Accounts')}</a></li>
+            <li><a data-href="/crm/import-export" class="nav-link ${route === '/crm/import-export' || route === '/crm/import-export-data' ? 'active' : ''}">${tr('Import/Export Data')}</a></li>
           </ul>
         </div>
 
         <div class="sidebar-group">
-          <div class="sidebar-group-title">Automations</div>
+          <div class="sidebar-group-title">${tr('Automations')}</div>
           <ul>
-            <li><a data-href="/automations/smart-flows" class="nav-link ${route === '/automations/smart-flows' ? 'active' : ''}">Smart Flows</a></li>
-            <li><a data-href="/automations/custom-tools" class="nav-link ${route === '/automations/custom-tools' ? 'active' : ''}">Custom Tools</a></li>
-            <li><a data-href="/automations/webhooks" class="nav-link ${route === '/automations/webhooks' ? 'active' : ''}">Webhooks</a></li>
-            <li><a data-href="/automations/integrations" class="nav-link ${route === '/automations/integrations' ? 'active' : ''}">Integrations</a></li>
+            <li><a data-href="/automations/smart-flows" class="nav-link ${route === '/automations/smart-flows' ? 'active' : ''}">${tr('Smart Flows')}</a></li>
+            <li><a data-href="/automations/custom-tools" class="nav-link ${route === '/automations/custom-tools' ? 'active' : ''}">${tr('Custom Tools')}</a></li>
+            <li><a data-href="/automations/webhooks" class="nav-link ${route === '/automations/webhooks' ? 'active' : ''}">${tr('Webhooks')}</a></li>
+            <li><a data-href="/automations/integrations" class="nav-link ${route === '/automations/integrations' ? 'active' : ''}">${tr('Integrations')}</a></li>
           </ul>
         </div>
 
         <div class="sidebar-group">
-          <div class="sidebar-group-title">Analytics</div>
+          <div class="sidebar-group-title">${tr('Analytics')}</div>
           <ul>
-            <li><a data-href="/analytics/dashboard" class="nav-link ${route === '/analytics/dashboard' || route === '/analytics/analytics-dashboard' ? 'active' : ''}">Analytics Dashboard</a></li>
-            <li><a data-href="/analytics/reports" class="nav-link ${route === '/analytics/reports' ? 'active' : ''}">Reports</a></li>
-            <li><a data-href="/analytics/costs" class="nav-link ${route === '/analytics/costs' || route === '/analytics/cost-management' ? 'active' : ''}">Cost Management</a></li>
+            <li><a data-href="/analytics/dashboard" class="nav-link ${route === '/analytics/dashboard' || route === '/analytics/analytics-dashboard' ? 'active' : ''}">${tr('Analytics Dashboard')}</a></li>
+            <li><a data-href="/analytics/reports" class="nav-link ${route === '/analytics/reports' ? 'active' : ''}">${tr('Reports')}</a></li>
+            <li><a data-href="/analytics/costs" class="nav-link ${route === '/analytics/costs' || route === '/analytics/cost-management' ? 'active' : ''}">${tr('Cost Management')}</a></li>
           </ul>
         </div>
 
         <div class="sidebar-group">
-          <div class="sidebar-group-title">Settings</div>
+          <div class="sidebar-group-title">${tr('Settings')}</div>
           <ul>
-            <li><a data-href="/settings/team-management" class="nav-link ${route === '/settings/team-management' ? 'active' : ''}">Team Management</a></li>
-            <li><a data-href="/settings/billing" class="nav-link ${route === '/settings/billing' ? 'active' : ''}">Billing</a></li>
-            <li><a data-href="/settings/security" class="nav-link ${route === '/settings/security' ? 'active' : ''}">Security</a></li>
-            <li><a data-href="/settings/white-label" class="nav-link ${route === '/settings/white-label' ? 'active' : ''}">White Label</a></li>
+            <li><a data-href="/settings/team-management" class="nav-link ${route === '/settings/team-management' ? 'active' : ''}">${tr('Team Management')}</a></li>
+            <li><a data-href="/settings/billing" class="nav-link ${route === '/settings/billing' ? 'active' : ''}">${tr('Billing')}</a></li>
+            <li><a data-href="/settings/security" class="nav-link ${route === '/settings/security' ? 'active' : ''}">${tr('Security')}</a></li>
+            <li><a data-href="/settings/white-label" class="nav-link ${route === '/settings/white-label' ? 'active' : ''}">${tr('White Label')}</a></li>
           </ul>
         </div>
       </div>
@@ -1683,7 +1809,18 @@ function setupEventListeners() {
       loadDynamicContent(currentPage);
     }
   });
-  
+
+  // Language toggle (EN <-> ES). Reflect the current language in the button.
+  const langBtn = document.getElementById('lang-toggle');
+  if (langBtn) {
+    const cur = getLang();
+    langBtn.querySelector('.lang-label').textContent = cur === 'es' ? 'ES' : 'EN';
+    langBtn.setAttribute('title', cur === 'es' ? 'Cambiar a inglés' : 'Switch to Spanish');
+    langBtn.addEventListener('click', () => {
+      setDocsLanguage(getLang() === 'es' ? 'en' : 'es');
+    });
+  }
+
   // Navigation links
   document.querySelectorAll('[data-href]').forEach(link => {
     link.addEventListener('click', (e) => {
@@ -1922,21 +2059,48 @@ async function loadDynamicContent(route) {
     '/settings/team-management': `${basePath}/settings/team-management.json`,
     '/settings/billing': `${basePath}/settings/billing.json`,
     '/settings/security': `${basePath}/settings/security.json`,
-    '/settings/white-label': `${basePath}/settings/white-label.json`
+    '/settings/white-label': `${basePath}/settings/white-label.json`,
+    // Aliases: sidebar links use shorter route forms — map them to the same files
+    '/analytics/dashboard': `${basePath}/analytics/analytics-dashboard.json`,
+    '/analytics/costs': `${basePath}/analytics/cost-management.json`,
+    '/campaigns/do-not-call': `${basePath}/campaigns/do-not-call-list.json`,
+    '/crm/import-export': `${basePath}/crm/import-export-data.json`
   };
-  
+
   const jsonPath = contentMap[route];
   if (jsonPath) {
     try {
-      // Fetch the JSON file
-      console.log('Loading content from:', jsonPath);
-      const response = await fetch(jsonPath);
-      
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+      // In Spanish mode, prefer the translated file under files/es/, falling
+      // back to the English file if a translation is missing. We verify we got
+      // real JSON (not an SPA/index.html 200) before accepting the Spanish file.
+      const fetchJson = async (url) => {
+        const r = await fetch(url);
+        if (!r.ok) return null;
+        const ct = (r.headers.get('content-type') || '').toLowerCase();
+        try {
+          const txt = await r.text();
+          if (!ct.includes('json') && txt.trim().startsWith('<')) return null; // got HTML, not JSON
+          return JSON.parse(txt);
+        } catch (_) { return null; }
+      };
+
+      let content = null;
+      if (getLang() === 'es') {
+        const esPath = jsonPath.replace(`${basePath}/`, `${basePath}/es/`);
+        console.log('Loading content from:', esPath);
+        content = await fetchJson(esPath);
+        if (!content) {
+          console.log('Spanish file missing, falling back to English:', jsonPath);
+          content = await fetchJson(jsonPath);
+        }
+      } else {
+        console.log('Loading content from:', jsonPath);
+        content = await fetchJson(jsonPath);
       }
-      
-      const content = await response.json();
+
+      if (!content) {
+        throw new Error('Content not found or invalid JSON');
+      }
       console.log('Content loaded:', content);
       
       if (content) {
@@ -2006,7 +2170,7 @@ function renderQuickstartContent(content) {
   
   // Add time to complete if available
   if (content.timeToComplete) {
-    html += `<div class="time-to-complete">⏱️ Time to complete: ${content.timeToComplete}</div>`;
+    html += `<div class="time-to-complete">⏱️ ${tr('Time to complete')}: ${content.timeToComplete}</div>`;
   }
   
   // Add embedded YouTube video if available
@@ -2039,7 +2203,7 @@ function renderQuickstartContent(content) {
   // Add what you will learn section if available
   if (content.whatYouWillLearn && content.whatYouWillLearn.length > 0) {
     html += '<div class="what-you-will-learn">';
-    html += '<h2>What You\'ll Learn</h2>';
+    html += `<h2>${tr("What You'll Learn")}</h2>`;
     html += '<ul>';
     content.whatYouWillLearn.forEach(item => {
       // Ensure item is converted to string properly

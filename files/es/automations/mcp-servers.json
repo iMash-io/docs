@@ -1,0 +1,50 @@
+{
+  "title": "Adjuntar un Servidor MCP",
+  "lede": "Un servidor Model Context Protocol (MCP) agrupa herramientas y recursos externos que tu Smart Agent puede usar durante una conversación. Adjunta uno desde el panel Tools / MCP del agente.",
+  "timeToComplete": "5 minutos",
+  "steps": [
+    {
+      "id": "open-tools-mcp",
+      "title": "Abrir el Panel Tools / MCP",
+      "content": "<ol><li>Ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de Inteligencia → Agentes Inteligentes) y abre el agente que quieres ampliar.</li><li>Abre el panel <strong>Tools / MCP</strong> (Herramientas / MCP) en el editor.</li><li>Encuentra el selector <strong>MCP Server</strong> (Servidor MCP).</li></ol>",
+      "images": [
+        { "src": "images/agents/tools-mcp-light.png", "alt": "Panel de Herramientas y MCP", "caption": "El panel Tools / MCP, donde eliges un servidor MCP para el agente.", "theme": "light" },
+        { "src": "images/agents/tools-mcp-dark.png", "alt": "Panel de Herramientas y MCP", "caption": "El panel Tools / MCP, donde eliges un servidor MCP para el agente.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "select-server",
+      "title": "Seleccionar un Servidor MCP",
+      "content": "<ol><li>Abre el desplegable <strong>MCP Server</strong> (Servidor MCP) para ver los servidores configurados en tu cuenta.</li><li>Elige uno: al seleccionarlo se <strong>habilita</strong> automáticamente MCP para este agente y se guarda la elección.</li><li>Para desactivarlo, borra la selección.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "no-servers",
+      "title": "¿No Ves Ningún Servidor?",
+      "content": "<ol><li>Si la lista está vacía, primero necesitas configurar un servidor MCP para tu cuenta.</li><li>Usa el enlace <strong>Setup MCP</strong> (Configurar MCP) en el panel, y luego regresa y selecciónalo aquí.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "test-it",
+      "title": "Probar el Agente",
+      "content": "<ol><li>Abre <strong>Test Agent</strong> (Probar Agente) y conéctate.</li><li>Pregunta algo que deba usar una herramienta MCP y confirma que el agente pueda acceder a ella.</li></ol>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Dale a tu agente más formas de actuar:",
+    "cards": [
+      { "href": "/agents/agent-tools", "title": "Agregar Herramientas a tu Agente", "description": "Combina MCP con herramientas predefinidas y personalizadas." },
+      { "href": "/automations/custom-tools", "title": "Crear Herramientas Personalizadas", "description": "Crea tus propias herramientas HTTP para el agente." },
+      { "href": "/agents/advanced-settings", "title": "Configuración Avanzada del Agente", "description": "Controla cómo decide el agente qué herramientas usar." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o preguntas:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Adjuntar un Servidor MCP | iMash Docs",
+  "metaDescription": "Dale a tu Smart Agent de iMash herramientas externas mediante un servidor Model Context Protocol (MCP): abre el panel Tools / MCP, selecciona un servidor y prueba el agente.",
+  "metaKeywords": "servidor mcp, model context protocol, herramientas de agente, herramientas externas, smart agent, tools mcp, imash"
+}

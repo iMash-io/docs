@@ -1,0 +1,50 @@
+{
+  "title": "Conectar Integraciones",
+  "lede": "Vincula iMash con las apps externas que ya usas. El creador de Automatización se conecta a servicios externos, y sus acciones de System Tables permiten que un flujo lea y escriba los datos de tu CRM de iMash.",
+  "timeToComplete": "6 minutos",
+  "steps": [
+    {
+      "id": "open-automation",
+      "title": "Abrir Automatización",
+      "content": "<ol><li>Ve a <strong>Intelligence Center → Automation</strong> (Centro de Inteligencia → Automatización).</li><li>Crea o abre un flujo: las integraciones se agregan como pasos dentro de un flujo.</li></ol>",
+      "images": [
+        { "src": "images/automations/automation-overview-light.png", "alt": "Panel de Automatización", "caption": "Las integraciones viven dentro de tus flujos de automatización.", "theme": "light" },
+        { "src": "images/automations/automation-overview-dark.png", "alt": "Panel de Automatización", "caption": "Las integraciones viven dentro de tus flujos de automatización.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "add-app-step",
+      "title": "Agregar un Paso de App",
+      "content": "<ol><li>Haz clic en el <strong>+</strong> para agregar un paso y busca la app que quieres conectar.</li><li>Elige la acción que esa app debe realizar (por ejemplo, enviar un mensaje o crear un registro).</li></ol>",
+      "images": []
+    },
+    {
+      "id": "connect-credentials",
+      "title": "Conectar tu Cuenta",
+      "content": "<ol><li>La primera vez que uses una app, se te pedirá que la <strong>conectes</strong>, normalmente iniciando sesión o pegando una clave de API.</li><li>iMash guarda esa conexión para que puedas reutilizarla en futuros flujos.</li><li>Elige la conexión guardada cada vez que agregues esa app de nuevo.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "map-and-test",
+      "title": "Mapear Campos y Probar",
+      "content": "<ol><li>Completa los campos del paso, tomando valores de pasos anteriores cuando sea necesario.</li><li>Usa las acciones de <strong>System Tables</strong> (Tablas del Sistema) para mover datos hacia y desde tu CRM de iMash (leads, contactos, cuentas, llamadas).</li><li><strong>Prueba</strong> (Test) el paso y luego <strong>Publica</strong> (Publish) el flujo para que la integración se ejecute automáticamente.</li></ol>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Construye el flujo en torno a tu integración:",
+    "cards": [
+      { "href": "/automations/smart-flows", "title": "Crear una Automatización", "description": "Combina disparadores y acciones en un flujo de trabajo completo." },
+      { "href": "/automations/webhooks", "title": "Recibir Datos con Webhooks", "description": "Acepta datos de sistemas que no tienen una app lista para usar." },
+      { "href": "/automations/custom-tools", "title": "Crear Herramientas Personalizadas", "description": "Alcanza cualquier API que tu agente necesite durante una llamada." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o preguntas:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Conectar Integraciones | iMash Docs",
+  "metaDescription": "Vincula iMash con apps externas dentro del creador de Automatización: agrega un paso de app, conecta tu cuenta, mapea campos y usa System Tables para sincronizar datos del CRM.",
+  "metaKeywords": "integraciones, automatización, conectar apps, system tables, sincronización crm, credenciales, imash"
+}

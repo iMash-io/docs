@@ -1,33 +1,47 @@
 {
-  "title": "Do Not Call List",
-  "lede": "Manage compliance with do-not-call regulations and customer preferences.",
-  "sections": [
+  "title": "Manage the Do Not Call List",
+  "lede": "Add numbers you must never dial. Any number on this list is automatically skipped by your campaigns, so you stay compliant without extra work.",
+  "timeToComplete": "5 minutes",
+  "steps": [
     {
-      "id": "dnc-management",
-      "title": "DNC List Management",
-      "content": "<p>Maintain compliance with do-not-call regulations and respect customer preferences.</p><h3>Features:</h3><ul><li><strong>Import Lists:</strong> Upload official DNC registry files</li><li><strong>Manual Additions:</strong> Add individual numbers manually</li><li><strong>Auto-exclusion:</strong> Automatically filter from campaigns</li><li><strong>Suppression Lists:</strong> Custom suppression categories</li></ul>"
+      "id": "open-dnc",
+      "title": "Open the Do Not Call list",
+      "content": "<ol><li>In the left menu, under <strong>Call Center</strong>, open <strong>Do Not Call</strong>.</li><li>You'll see every blocked number, when it was added, and any matching contact, lead, or call log.</li></ol>",
+      "images": [
+        { "src": "images/campaigns/do-not-call-light.png", "alt": "Do Not Call list", "caption": "The Do Not Call list with search, import, and per-row actions", "theme": "light" },
+        { "src": "images/campaigns/do-not-call-dark.png", "alt": "Do Not Call list", "caption": "The Do Not Call list with search, import, and per-row actions", "theme": "dark" }
+      ]
     },
     {
-      "id": "compliance",
-      "title": "Compliance Tools",
-      "content": "<p>Stay compliant with federal and state regulations.</p><ul><li><strong>Registry Updates:</strong> Regular updates from official sources</li><li><strong>Opt-out Processing:</strong> Handle customer opt-out requests</li><li><strong>Time Restrictions:</strong> Honor calling time preferences</li><li><strong>Audit Trail:</strong> Track all DNC activities</li></ul>"
-    }
-  ],
-  "images": [
-    {
-      "src": "images/dnc-list-light.png",
-      "alt": "Do Not Call List Management",
-      "caption": "DNC list management interface",
-      "theme": "light"
+      "id": "import",
+      "title": "Add numbers (import or type them in)",
+      "content": "<ol><li>Click <strong>Import Numbers</strong> in the top right.</li><li>Choose <strong>Upload File</strong> to drag in a .txt or .csv (one number per line, or comma / semicolon separated), then click <strong>Import Numbers</strong>.</li><li>Or choose <strong>Manual Input</strong>, paste or type the numbers, and click <strong>Add Numbers</strong>.</li></ol><p>Duplicate numbers are handled automatically, so it's safe to re-import a list.</p>"
     },
     {
-      "src": "images/dnc-list-dark.png",
-      "alt": "Do Not Call List Management",
-      "caption": "DNC list management interface",
-      "theme": "dark"
+      "id": "search-remove",
+      "title": "Find and remove numbers",
+      "content": "<ul><li>Use the <strong>Search phone numbers</strong> box to find a specific number.</li><li>Click the red <strong>Remove</strong> icon on a row to delete a single number.</li><li>Tick several rows and use <strong>Delete Selected</strong> to remove them in bulk.</li></ul>"
+    },
+    {
+      "id": "how-it-works",
+      "title": "How it protects your campaigns",
+      "content": "<p>Every campaign automatically checks this list before dialing &mdash; matching numbers are skipped, so you don't have to scrub your dial lists by hand. You can also mark a contact or lead as <strong>Do Not Call</strong> from their record, and use the <strong>API Info</strong> button to add numbers programmatically.</p>"
     }
   ],
-  "metaTitle": "Do Not Call List - Compliance Management | iMash Docs",
-  "metaDescription": "Manage DNC lists for compliance. Import suppression lists and ensure regulatory compliance for calling campaigns.",
-  "metaKeywords": "do not call, DNC list, compliance, suppression list, regulatory compliance, TCPA, call regulations"
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Keep dialing safely and effectively.",
+    "cards": [
+      { "href": "/campaigns/create-campaign", "title": "Create a Campaign", "description": "Start an automated calling campaign." },
+      { "href": "/campaigns/dial-lists", "title": "Manage the Dial List", "description": "Control exactly who gets called." },
+      { "href": "/crm/contacts", "title": "Manage Contacts", "description": "Mark records as Do Not Call at the source." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Manage the Do Not Call List | iMash Docs",
+  "metaDescription": "Add numbers to the iMash Do Not Call list by import or manual entry. Blocked numbers are automatically skipped by your campaigns to keep dialing compliant.",
+  "metaKeywords": "do not call, dnc list, suppression list, block numbers, calling compliance, tcpa, imash campaigns"
 }

@@ -1,33 +1,52 @@
 {
   "title": "Leads",
-  "lede": "Track and nurture potential customers through your sales pipeline.",
-  "sections": [
+  "lede": "Leads are your potential customers — people who have shown interest but haven't become customers yet. This guide shows you how to add, filter, tag, and convert them.",
+  "timeToComplete": "5 minutes",
+  "steps": [
     {
-      "id": "lead-management",
-      "title": "Lead Management",
-      "content": "<p>Capture, qualify, and nurture leads through your sales process.</p><h3>Lead Features:</h3><ul><li><strong>Lead Capture:</strong> Multiple lead source integration</li><li><strong>Lead Scoring:</strong> Automatic qualification scoring</li><li><strong>Pipeline Stages:</strong> Customizable sales stages</li><li><strong>Follow-up Scheduling:</strong> Automated reminder system</li></ul>"
+      "id": "open-leads",
+      "title": "Open the Leads list",
+      "content": "<ol><li>In the left navigation, open <strong>CRM</strong> and click <strong>Leads</strong> (or go to <code>/crm/leads</code>).</li><li>You'll see every lead in a searchable table with columns for <strong>Name</strong>, <strong>Email</strong>, <strong>Phone</strong>, <strong>Stage</strong>, <strong>Account</strong>, and <strong>Last Updated</strong>.</li><li>Click any name or avatar to open that lead's full profile.</li></ol><p>Think of a lead as a person who might buy from you. Once they do, you convert them into a <strong>Contact</strong>.</p>",
+      "images": [
+        { "src": "images/crm/leads-light.png", "alt": "Leads list", "caption": "The Leads list with search, filters, and stage tags", "theme": "light" },
+        { "src": "images/crm/leads-dark.png", "alt": "Leads list", "caption": "The Leads list with search, filters, and stage tags", "theme": "dark" }
+      ]
     },
     {
-      "id": "lead-conversion",
-      "title": "Lead Conversion",
-      "content": "<p>Convert qualified leads to customers efficiently.</p><ul><li><strong>Qualification Process:</strong> Multi-stage lead qualification</li><li><strong>Convert to Contact:</strong> Seamless conversion workflow</li><li><strong>Campaign Integration:</strong> Target leads with specific campaigns</li><li><strong>Performance Tracking:</strong> Monitor conversion rates</li></ul>"
-    }
-  ],
-  "images": [
-    {
-      "src": "images/leads-light.png",
-      "alt": "Leads Management Interface",
-      "caption": "Lead pipeline and management tools",
-      "theme": "light"
+      "id": "add-lead",
+      "title": "Add a new lead",
+      "content": "<ol><li>Click the <strong>Create</strong> (New Lead) button at the top of the list.</li><li>Enter the <strong>First Name</strong> and <strong>Last Name</strong> (both required).</li><li>Add one or more addresses in the <strong>Emails</strong> field — the first one is the primary email.</li><li>Click <strong>Add Phone Number</strong> to add a phone with a label (Mobile, Work, Home, etc.).</li><li>Optionally set a <strong>Stage</strong>, link an <strong>Account</strong> (company), and fill in the address.</li><li>Click <strong>Save</strong>.</li></ol>"
     },
     {
-      "src": "images/leads-dark.png",
-      "alt": "Leads Management Interface",
-      "caption": "Lead pipeline and management tools",
-      "theme": "dark"
+      "id": "search-filter",
+      "title": "Search, filter, and sort",
+      "content": "<ul><li>Use the <strong>search box</strong> and switch the field between <strong>Name</strong>, <strong>Email</strong>, or <strong>Phone</strong>.</li><li>Add filters for <strong>Stage</strong>, <strong>Account</strong>, <strong>Source</strong>, <strong>Tags</strong>, <strong>Address</strong>, <strong>City</strong>, or <strong>Owner</strong> to narrow the list.</li><li>Click a column header (Name, Email, Stage, Last Updated) to sort by it.</li></ul>"
+    },
+    {
+      "id": "tag-organize",
+      "title": "Tag and organize leads",
+      "content": "<ul><li>Open a lead and add <strong>tags</strong> (for example <em>hot</em>, <em>follow-up</em>, or a campaign name) to group similar leads.</li><li>Set the lead's <strong>Stage</strong> to track where it sits in your pipeline.</li><li>Use the <strong>Tags</strong> filter on the list to instantly pull up everyone with a given tag.</li></ul>"
+    },
+    {
+      "id": "bulk-convert",
+      "title": "Bulk actions and convert to contacts",
+      "content": "<ol><li>Tick the checkboxes next to leads (or select all matching your filters).</li><li>From the bulk toolbar you can <strong>Delete</strong>, <strong>Assign to an Account</strong>, <strong>Change Owner</strong>, or <strong>Convert to Contacts</strong>.</li><li><strong>Convert to Contacts</strong> promotes chosen leads into your Contacts list once they become real customers.</li><li>Use <strong>Find Duplicates</strong> (by phone or email) to clean up repeated records.</li></ol>"
     }
   ],
-  "metaTitle": "Leads Management - Track Sales Pipeline | iMash Docs",
-  "metaDescription": "Manage leads through your sales pipeline. Track lead status, qualify prospects, and convert to customers.",
-  "metaKeywords": "leads, sales pipeline, lead management, lead tracking, prospect management, lead conversion"
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Turn leads into customers and reach out at scale.",
+    "cards": [
+      { "href": "/crm/contacts", "title": "Contacts", "description": "Manage the people who became customers." },
+      { "href": "/crm/accounts", "title": "Accounts", "description": "Group leads and contacts under their company." },
+      { "href": "/campaigns/create-campaign", "title": "Create a Campaign", "description": "Call or message your leads automatically." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Leads - CRM | iMash Docs",
+  "metaDescription": "Add, filter, tag, and convert leads in the iMash CRM. Track potential customers by stage, search by name, email or phone, and bulk-convert to contacts.",
+  "metaKeywords": "leads, CRM leads, potential customers, lead stage, lead pipeline, convert lead to contact, lead tags"
 }

@@ -1,0 +1,53 @@
+{
+  "title": "Recibir Datos con Webhooks",
+  "lede": "Usa el disparador Catch Webhook en Automatización para aceptar datos de cualquier sistema externo, de modo que una solicitud entrante pueda iniciar un flujo de trabajo, crear registros o poner en marcha una llamada.",
+  "timeToComplete": "6 minutos",
+  "steps": [
+    {
+      "id": "add-catch-webhook",
+      "title": "Agregar un Disparador Catch Webhook",
+      "content": "<ol><li>Ve a <strong>Intelligence Center → Automation</strong> (Centro de Inteligencia → Automatización) y crea o abre un flujo.</li><li>Haz clic en el bloque de disparador y elige <strong>Catch Webhook</strong> (Capturar Webhook).</li><li>iMash genera una <strong>URL de webhook</strong> única para este flujo.</li></ol>",
+      "images": [
+        { "src": "images/automations/automation-builder-light.png", "alt": "Creador de Automatización con disparador de webhook", "caption": "Catch Webhook es el disparador que inicia un flujo a partir de datos entrantes.", "theme": "light" },
+        { "src": "images/automations/automation-builder-dark.png", "alt": "Creador de Automatización con disparador de webhook", "caption": "Catch Webhook es el disparador que inicia un flujo a partir de datos entrantes.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "copy-url",
+      "title": "Copiar y Enviar la URL",
+      "content": "<ol><li><strong>Copia</strong> (Copy) la URL de webhook generada.</li><li>Pégala en el sistema externo (un formulario, otra app o tu propio código) para que envíe una solicitud a esa URL.</li><li>Dispara una solicitud real una vez para que iMash pueda <strong>capturar una muestra</strong> de los datos entrantes.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "use-the-data",
+      "title": "Usar los Datos Entrantes",
+      "content": "<ol><li>Después de que llegue la muestra, los campos de la solicitud quedan disponibles para cada paso siguiente.</li><li>Agrega acciones (por ejemplo, una acción de <strong>System Tables</strong> para crear un lead o iniciar una llamada) y mapea los campos del webhook dentro de ellas.</li><li><strong>Prueba</strong> (Test) el flujo y luego <strong>Publícalo</strong> (Publish) para que el webhook siga activo.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "send-data-out",
+      "title": "Enviar Datos en el Otro Sentido",
+      "content": "<ol><li>Los webhooks también funcionan de forma saliente: un Smart Agent puede usar <strong>Send Data to URL</strong> (Enviar Datos a URL) durante una llamada para enviar información a tus sistemas.</li><li>Configúralo como una <strong>Custom Tool</strong> (Herramienta Personalizada) con un endpoint <code>POST</code> y adjúntala al agente.</li></ol>",
+      "images": [
+        { "src": "images/agents/webhooks-post-light.png", "alt": "Enviar datos a una URL", "caption": "Los agentes pueden hacer POST de datos a tu propia URL en medio de la conversación.", "theme": "light" },
+        { "src": "images/agents/webhooks-post-dark.png", "alt": "Enviar datos a una URL", "caption": "Los agentes pueden hacer POST de datos a tu propia URL en medio de la conversación.", "theme": "dark" }
+      ]
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Convierte los datos entrantes en acciones automatizadas:",
+    "cards": [
+      { "href": "/automations/smart-flows", "title": "Crear una Automatización", "description": "Encadena acciones después de tu disparador de webhook." },
+      { "href": "/automations/custom-tools", "title": "Crear Herramientas Personalizadas", "description": "Crea el endpoint POST al que tu agente envía datos." },
+      { "href": "/automations/integrations", "title": "Conectar Integraciones", "description": "Vincula los sistemas en ambos extremos de tu webhook." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o preguntas:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Recibir Datos con Webhooks | iMash Docs",
+  "metaDescription": "Usa el disparador Catch Webhook en la Automatización de iMash para aceptar datos de sistemas externos, mapearlos en acciones y publicar el flujo. Incluye el envío saliente Send Data to URL.",
+  "metaKeywords": "webhooks, catch webhook, disparador de automatización, send data to url, datos entrantes, integración, imash"
+}

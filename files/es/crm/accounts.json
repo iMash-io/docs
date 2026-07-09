@@ -1,0 +1,47 @@
+{
+  "title": "Cuentas",
+  "lede": "Las cuentas son las empresas y organizaciones con las que trabajas. Agrupa bajo una misma cuenta los contactos y leads que pertenecen a un negocio para verlo todo en un solo lugar.",
+  "timeToComplete": "5 minutos",
+  "steps": [
+    {
+      "id": "open-accounts",
+      "title": "Abre la lista de Cuentas",
+      "content": "<ol><li>En la navegación de la izquierda, abre <strong>CRM</strong> y haz clic en <strong>Accounts</strong> (Cuentas) (o ve a <code>/crm/accounts</code>).</li><li>Cada fila es una empresa, y muestra su <strong>Name</strong> (Nombre), su <strong>Stage</strong> (Etapa) y sus datos.</li><li>Haz clic en el nombre de una empresa para abrir su perfil y ver los contactos y leads vinculados a ella.</li></ol><p>Usa las cuentas cuando vendes a empresas: una cuenta (la empresa) puede tener muchos contactos (las personas que trabajan allí).</p>",
+      "images": [
+        { "src": "images/crm/accounts-light.png", "alt": "Lista de cuentas", "caption": "La lista de Cuentas de empresas con búsqueda y filtros", "theme": "light" },
+        { "src": "images/crm/accounts-dark.png", "alt": "Lista de cuentas", "caption": "La lista de Cuentas de empresas con búsqueda y filtros", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "add-account",
+      "title": "Agrega una nueva cuenta",
+      "content": "<ol><li>Haz clic en <strong>Create</strong> (Crear) (New Account / Nueva cuenta) en la parte superior de la lista.</li><li>Ingresa el <strong>Name</strong> (Nombre) de la empresa.</li><li>Completa datos opcionales como la dirección, la <strong>Stage</strong> (Etapa) y cualquier campo personalizado.</li><li>Haz clic en <strong>Save</strong> (Guardar).</li></ol>"
+    },
+    {
+      "id": "link-contacts",
+      "title": "Vincula contactos y leads a una cuenta",
+      "content": "<ul><li>Cuando creas o editas un <strong>Contact</strong> (Contacto) o un <strong>Lead</strong>, elige la empresa en el campo <strong>Account</strong> (Cuenta).</li><li>Desde la lista de Leads o Contactos, selecciona registros y usa <strong>Assign to an Account</strong> (Asignar a una cuenta) para vincular varios a la vez.</li><li>Abre una cuenta para ver a todas sus personas juntas, y salta a los leads de esa empresa haciendo clic desde la cuenta.</li></ul>"
+    },
+    {
+      "id": "search-filter",
+      "title": "Busca, filtra y etiqueta",
+      "content": "<ul><li>Usa el <strong>cuadro de búsqueda</strong> para encontrar una empresa por nombre, correo o teléfono.</li><li>Agrega filtros por <strong>Stage</strong> (Etapa), <strong>Tags</strong> (Etiquetas), <strong>Address</strong> (Dirección), <strong>City</strong> (Ciudad) u <strong>Owner</strong> (Propietario).</li><li>Agrega <strong>tags</strong> (etiquetas) para agrupar empresas (por ejemplo por territorio o industria) y luego filtra por ellas.</li></ul>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Llena tus cuentas con personas y ponte en contacto.",
+    "cards": [
+      { "href": "/crm/contacts", "title": "Contactos", "description": "Agrega a las personas que trabajan en cada empresa." },
+      { "href": "/crm/leads", "title": "Leads", "description": "Da seguimiento a prospectos vinculados a una cuenta." },
+      { "href": "/campaigns/create-campaign", "title": "Crear una campaña", "description": "Dirígete a los contactos de una cuenta con llamadas o mensajes." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Revisa nuestra <a data-href=\"/api-reference\">referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Cuentas - CRM | iMash Docs",
+  "metaDescription": "Crea cuentas de empresa en el CRM de iMash y vincula contactos y leads a ellas. Busca, filtra, etiqueta y gestiona relaciones B2B en un solo lugar.",
+  "metaKeywords": "cuentas, empresas, organizaciones, CRM B2B, gestión de cuentas, vincular contactos, relaciones comerciales"
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Leads",
+  "lede": "Los leads son tus clientes potenciales: personas que han mostrado interés pero aún no se han convertido en clientes. Esta guía te muestra cómo agregarlos, filtrarlos, etiquetarlos y convertirlos.",
+  "timeToComplete": "5 minutos",
+  "steps": [
+    {
+      "id": "open-leads",
+      "title": "Abre la lista de Leads",
+      "content": "<ol><li>En la navegación de la izquierda, abre <strong>CRM</strong> y haz clic en <strong>Leads</strong> (o ve a <code>/crm/leads</code>).</li><li>Verás cada lead en una tabla con búsqueda, con columnas para <strong>Name</strong> (Nombre), <strong>Email</strong> (Correo), <strong>Phone</strong> (Teléfono), <strong>Stage</strong> (Etapa), <strong>Account</strong> (Cuenta) y <strong>Last Updated</strong> (Última actualización).</li><li>Haz clic en cualquier nombre o avatar para abrir el perfil completo de ese lead.</li></ol><p>Piensa en un lead como una persona que podría comprarte. Una vez que lo hace, lo conviertes en un <strong>Contact</strong> (Contacto).</p>",
+      "images": [
+        { "src": "images/crm/leads-light.png", "alt": "Lista de leads", "caption": "La lista de Leads con búsqueda, filtros y etiquetas de etapa", "theme": "light" },
+        { "src": "images/crm/leads-dark.png", "alt": "Lista de leads", "caption": "La lista de Leads con búsqueda, filtros y etiquetas de etapa", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "add-lead",
+      "title": "Agrega un nuevo lead",
+      "content": "<ol><li>Haz clic en el botón <strong>Create</strong> (Crear) (New Lead / Nuevo lead) en la parte superior de la lista.</li><li>Ingresa el <strong>First Name</strong> (Nombre) y el <strong>Last Name</strong> (Apellido) (ambos obligatorios).</li><li>Agrega una o más direcciones en el campo <strong>Emails</strong> (Correos): la primera es el correo principal.</li><li>Haz clic en <strong>Add Phone Number</strong> (Agregar número de teléfono) para añadir un teléfono con una etiqueta (Mobile / Móvil, Work / Trabajo, Home / Casa, etc.).</li><li>Opcionalmente define una <strong>Stage</strong> (Etapa), vincula una <strong>Account</strong> (Cuenta, es decir la empresa) y completa la dirección.</li><li>Haz clic en <strong>Save</strong> (Guardar).</li></ol>"
+    },
+    {
+      "id": "search-filter",
+      "title": "Busca, filtra y ordena",
+      "content": "<ul><li>Usa el <strong>cuadro de búsqueda</strong> y alterna el campo entre <strong>Name</strong> (Nombre), <strong>Email</strong> (Correo) o <strong>Phone</strong> (Teléfono).</li><li>Agrega filtros por <strong>Stage</strong> (Etapa), <strong>Account</strong> (Cuenta), <strong>Source</strong> (Origen), <strong>Tags</strong> (Etiquetas), <strong>Address</strong> (Dirección), <strong>City</strong> (Ciudad) u <strong>Owner</strong> (Propietario) para acotar la lista.</li><li>Haz clic en el encabezado de una columna (Name, Email, Stage, Last Updated) para ordenar por ella.</li></ul>"
+    },
+    {
+      "id": "tag-organize",
+      "title": "Etiqueta y organiza los leads",
+      "content": "<ul><li>Abre un lead y agrega <strong>tags</strong> (etiquetas) (por ejemplo <em>hot</em> / caliente, <em>follow-up</em> / seguimiento, o el nombre de una campaña) para agrupar leads similares.</li><li>Define la <strong>Stage</strong> (Etapa) del lead para saber en qué punto de tu pipeline se encuentra.</li><li>Usa el filtro de <strong>Tags</strong> (Etiquetas) en la lista para ver al instante a todos los que tengan una etiqueta determinada.</li></ul>"
+    },
+    {
+      "id": "bulk-convert",
+      "title": "Acciones masivas y conversión a contactos",
+      "content": "<ol><li>Marca las casillas junto a los leads (o selecciona todos los que coincidan con tus filtros).</li><li>Desde la barra de acciones masivas puedes <strong>Delete</strong> (Eliminar), <strong>Assign to an Account</strong> (Asignar a una cuenta), <strong>Change Owner</strong> (Cambiar propietario) o <strong>Convert to Contacts</strong> (Convertir a contactos).</li><li><strong>Convert to Contacts</strong> (Convertir a contactos) promueve los leads elegidos a tu lista de Contactos una vez que se convierten en clientes reales.</li><li>Usa <strong>Find Duplicates</strong> (Buscar duplicados) (por teléfono o correo) para limpiar registros repetidos.</li></ol>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Convierte leads en clientes y contáctalos a gran escala.",
+    "cards": [
+      { "href": "/crm/contacts", "title": "Contactos", "description": "Gestiona a las personas que se convirtieron en clientes." },
+      { "href": "/crm/accounts", "title": "Cuentas", "description": "Agrupa leads y contactos bajo su empresa." },
+      { "href": "/campaigns/create-campaign", "title": "Crear una campaña", "description": "Llama o envía mensajes a tus leads automáticamente." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Revisa nuestra <a data-href=\"/api-reference\">referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Leads - CRM | iMash Docs",
+  "metaDescription": "Agrega, filtra, etiqueta y convierte leads en el CRM de iMash. Da seguimiento a clientes potenciales por etapa, busca por nombre, correo o teléfono, y conviértelos en contactos de forma masiva.",
+  "metaKeywords": "leads, leads CRM, clientes potenciales, etapa de lead, pipeline de leads, convertir lead en contacto, etiquetas de lead"
+}

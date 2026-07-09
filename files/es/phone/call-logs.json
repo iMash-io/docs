@@ -1,0 +1,47 @@
+{
+  "title": "Registros de llamadas",
+  "lede": "Cada llamada que tus agentes de IA hacen o reciben queda registrada aquí. Usa los Call Logs (Registros de llamadas) para ver quién llamó, qué agente la atendió, cuánto duró, cómo terminó y cuánto costó.",
+  "timeToComplete": "3 minutos",
+  "steps": [
+    {
+      "id": "open-call-logs",
+      "title": "Abrir Call Logs",
+      "content": "<ol><li>En el menú de la izquierda, ve a <strong>Call Center → Call Logs</strong> (Centro de llamadas → Registros de llamadas).</li><li>La tabla muestra las llamadas de la más reciente a la más antigua. Una pequeña flecha junto a cada fecha indica la dirección: hacia arriba/verde para <strong>outbound</strong> (saliente), hacia abajo/rojo para <strong>inbound</strong> (entrante).</li></ol>",
+      "images": [
+        { "src": "images/phone/call-logs-light.png", "alt": "Tabla de registros de llamadas", "caption": "Call Center → Call Logs muestra cada llamada entrante y saliente.", "theme": "light" },
+        { "src": "images/phone/call-logs-dark.png", "alt": "Tabla de registros de llamadas", "caption": "Call Center → Call Logs muestra cada llamada entrante y saliente.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "read-columns",
+      "title": "Leer las columnas",
+      "content": "<p>Cada fila resume una llamada:</p><ul><li><strong>Date &amp; Direction</strong> (Fecha y dirección) — cuándo ocurrió la llamada y si fue entrante o saliente.</li><li><strong>From / To</strong> (De / Para) — los dos números de teléfono de la llamada.</li><li><strong>Duration</strong> (Duración) — cuánto duró la llamada.</li><li><strong>AI Agent</strong> (Agente de IA) — qué agente la atendió.</li><li><strong>Campaign</strong> (Campaña) — la campaña a la que pertenecía la llamada, si corresponde.</li><li><strong>Related Entities</strong> (Entidades relacionadas) — el Contacto o Lead coincidente en tu CRM.</li><li><strong>Ended Reason</strong> (Motivo de finalización) — por qué terminó la llamada (el cliente colgó, el agente finalizó, tiempo de espera por silencio, etc.).</li><li><strong>Cost</strong> (Costo) — el monto facturado por esa llamada.</li></ul>"
+    },
+    {
+      "id": "open-detail",
+      "title": "Abrir una llamada para ver el detalle completo",
+      "content": "<ol><li>Haz clic en una fila para abrir los detalles de la llamada.</li><li>Revisa la <strong>transcripción</strong> completa, el desglose por tramo y cualquier grabación capturada de esa llamada.</li><li>Usa esto para verificar cómo un agente manejó una conversación específica o para diagnosticar una llamada que terminó antes de tiempo.</li></ol>"
+    },
+    {
+      "id": "filter",
+      "title": "Filtrar y encontrar llamadas",
+      "content": "<ol><li>Ordena por cualquier encabezado de columna (fecha, duración, costo y más).</li><li>Acota la lista por <strong>agent</strong> (agente), <strong>campaign</strong> (campaña), dirección o rango de fechas para encontrar las llamadas que te interesan.</li><li>Abre un <strong>Contact</strong> (Contacto) o <strong>Lead</strong> vinculado directamente desde la fila para ver el historial completo de esa persona.</li></ol>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Convierte lo que aprendes de los registros en mejores llamadas.",
+    "cards": [
+      { "href": "/phone/call-routing", "title": "Ajustar el enrutamiento de llamadas", "description": "Envía las llamadas a un agente distinto o mejor ajustado." },
+      { "href": "/agents/create-agent", "title": "Mejorar tu agente", "description": "Perfecciona el agente con base en transcripciones reales." },
+      { "href": "/phone/add-phone-number", "title": "Agregar un número de teléfono", "description": "Agrega más números para manejar el volumen de llamadas." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o alguna pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Registros de llamadas - Revisa el historial de llamadas de agentes de IA | iMash Docs",
+  "metaDescription": "Revisa cada llamada entrante y saliente: quién llamó, agente, campaña, contacto o lead, duración, motivo de finalización, costo, transcripción y grabación.",
+  "metaKeywords": "registros de llamadas, historial de llamadas, transcripciones, grabaciones, motivo de finalización, costo de llamada, entrante, saliente, agente, campaña, contacto, lead"
+}

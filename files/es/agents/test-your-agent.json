@@ -1,0 +1,49 @@
+{
+  "title": "Prueba tu agente",
+  "lede": "Prueba tu Smart Agent (Agente inteligente) antes de ponerlo en producción. Habla con él directamente en el navegador con Test Agent (Probar agente) o haz una llamada telefónica real para escucharlo de principio a fin.",
+  "timeToComplete": "3 minutos",
+  "videoUrl": "https://youtu.be/_Baz0eFGyLI",
+  "videoLength": "1",
+  "steps": [
+    {
+      "id": "open-test-agent",
+      "title": "Abre Test Agent",
+      "content": "<ol><li>Ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes) y abre el agente que quieres probar.</li><li>Haz clic en el botón <strong>Test Agent</strong> (Probar agente) en la parte superior del editor para mostrar el panel de prueba.</li></ol>",
+      "images": [
+        { "src": "images/agents/test-agent-light.png", "alt": "Panel de Test Agent", "caption": "El panel de Test Agent te conecta a una conversación en vivo dentro del navegador.", "theme": "light" },
+        { "src": "images/agents/test-agent-dark.png", "alt": "Panel de Test Agent", "caption": "El panel de Test Agent te conecta a una conversación en vivo dentro del navegador.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "talk-in-browser",
+      "title": "Habla con el agente en el navegador",
+      "content": "<ol><li>Haz clic en <strong>Connect</strong> (Conectar) y permite el acceso al micrófono si se te solicita.</li><li>Empieza a hablar. Confirma que el saludo, el prompt, la voz y las herramientas se comporten como esperas.</li><li>Edita el agente y vuelve a conectar para probar los cambios al instante, sin necesidad de un teléfono.</li></ol>",
+      "images": [
+        { "src": "images/quick-start/test-agent-light.png", "alt": "Prueba del agente en el navegador", "caption": "Probando el agente directamente en el navegador.", "theme": "light" },
+        { "src": "images/quick-start/test-agent-dark.png", "alt": "Prueba del agente en el navegador", "caption": "Probando el agente directamente en el navegador.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "test-by-phone",
+      "title": "Prueba con una llamada telefónica real",
+      "content": "<ol><li>Usa el control de teléfono/marcación en el encabezado para hacer una llamada de prueba saliente.</li><li>Elige el número de teléfono <em>desde</em> el cual llamar y selecciona el agente que quieres probar.</li><li>Ingresa tu propio número, inicia la llamada y mantén una conversación completa para verificar el comportamiento telefónico en condiciones reales.</li></ol>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Una vez que tu agente pase las pruebas, llévalo más lejos:",
+    "cards": [
+      { "href": "/agents/agent-tools", "title": "Agrega herramientas", "description": "Habilita acciones como finalizar llamadas y agendar citas." },
+      { "href": "/agents/agent-knowledge-base", "title": "Agrega una base de conocimiento", "description": "Dale a tu agente documentos y preguntas frecuentes para responder." },
+      { "href": "/agents/embed-agent", "title": "Incrústalo en tu sitio web", "description": "Publica el agente como un widget de chat/voz en tu sitio." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o alguna pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">referencia de la API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Prueba tu agente | iMash Docs",
+  "metaDescription": "Prueba tu Smart Agent de iMash antes de lanzarlo: habla con él en vivo en el navegador con Test Agent o haz una llamada telefónica real para verificar la voz, el prompt y las herramientas.",
+  "metaKeywords": "test agent, imash, smart agent, llamada de prueba, prueba en el navegador, prueba de agente de voz"
+}

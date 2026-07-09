@@ -1,22 +1,56 @@
 {
-  "title": "Add Phone Number",
-  "lede": "Purchase and configure phone numbers for inbound and outbound calling.",
-  "sections": [
+  "title": "Add a Phone Number",
+  "lede": "Get a phone number so your AI agents can make and take calls. You can buy a new number through iMash or import one you already own from another provider.",
+  "timeToComplete": "5 minutes",
+  "steps": [
     {
-      "id": "number-acquisition",
-      "title": "Acquiring Phone Numbers",
-      "content": "<p>Get phone numbers to enable calling functionality for your agents.</p><h3>Number Types:</h3><ul><li><strong>Local Numbers:</strong> Area-code specific numbers</li><li><strong>Toll-Free:</strong> 800, 888, 877, etc.</li><li><strong>International:</strong> Numbers from various countries</li></ul><h3>Setup Process:</h3><ol><li>Browse available numbers</li><li>Select desired area code or type</li><li>Purchase and assign to agents</li><li>Configure routing rules</li></ol>"
+      "id": "open-phone-numbers",
+      "title": "Open Phone numbers",
+      "content": "<ol><li>In the left menu, go to <strong>Call Center → Phone numbers</strong>.</li><li>This page lists every number on your account with its label, capabilities, assigned agent, and status.</li></ol><p>You have two ways to add one: <strong>Buy New Number</strong> (rented through iMash) or <strong>Import Number</strong> (a number you already own on your own carrier).</p>",
+      "images": [
+        { "src": "images/phone/phone-numbers-light.png", "alt": "Phone numbers page", "caption": "Call Center → Phone numbers lists your numbers with Buy and Import buttons.", "theme": "light" },
+        { "src": "images/phone/phone-numbers-dark.png", "alt": "Phone numbers page", "caption": "Call Center → Phone numbers lists your numbers with Buy and Import buttons.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "buy-search",
+      "title": "Buy a new number — search",
+      "content": "<ol><li>Click <strong>Buy New Number</strong>.</li><li>Choose a <strong>Country</strong>.</li><li>Pick the capabilities you need — <strong>Voice</strong> is on by default (required for AI agent calls); add <strong>SMS</strong>, <strong>MMS</strong>, or <strong>Fax</strong> only if you need them (leaving them off gives the broadest results).</li><li>In the search box, type an <strong>area code</strong> (e.g. 212), a <strong>city</strong> (e.g. London), or a <strong>prefix</strong>, then click <strong>Search</strong>.</li></ol>",
+      "images": [
+        { "src": "images/phone/add-phone-number-light.png", "alt": "Buy a number dialog", "caption": "Search available numbers by country, capability, and area code or city.", "theme": "light" },
+        { "src": "images/phone/add-phone-number-dark.png", "alt": "Buy a number dialog", "caption": "Search available numbers by country, capability, and area code or city.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "buy-purchase",
+      "title": "Buy a new number — select and pay",
+      "content": "<ol><li>Tick one or more numbers from the results (each row shows its monthly price).</li><li>Choose a <strong>saved card</strong> to pay with. If you have no card yet, add one under <strong>Billing</strong> first.</li><li>Some countries require identity documents — if a regulatory form appears, fill it in before buying.</li><li>Click <strong>Buy Numbers</strong>. iMash purchases the number and sets up call routing automatically.</li></ol>"
+    },
+    {
+      "id": "import",
+      "title": "Or import a number you own",
+      "content": "<ol><li>Click <strong>Import Number</strong>.</li><li>Select the <strong>Provider</strong> (your connected SIP carrier) — or click <strong>Add Provider</strong> to connect one first.</li><li>Enter a <strong>Label</strong> and the <strong>phone number</strong> in E.164 form (for example <code>+14155551234</code>).</li><li>Save. The number joins your list and routes through your provider's trunk.</li></ol>"
+    },
+    {
+      "id": "next",
+      "title": "Point the number at an agent",
+      "content": "<p>A new number won't answer calls until you assign an agent to it. Open the number (click it in the list) or select it and use the bulk action to set an <strong>Inbound Agent</strong> — see the Call Routing guide next.</p>"
     }
   ],
-  "images": [
-    {
-      "src": "images/phone-numbers-light.png",
-      "alt": "Phone Number Management",
-      "caption": "Phone number selection and configuration interface",
-      "theme": "light"
-    }
-  ],
-  "metaTitle": "Add Phone Number - Set Up Inbound/Outbound Calling | iMash Docs",
-  "metaDescription": "Purchase and configure phone numbers for your AI agents. Set up local, toll-free, and international numbers.",
-  "metaKeywords": "phone number, DID, toll-free, local number, international calling, phone provisioning, number purchase"
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Now decide what happens when someone calls the number.",
+    "cards": [
+      { "href": "/phone/call-routing", "title": "Route Calls to an Agent", "description": "Assign an inbound agent so the number answers calls." },
+      { "href": "/agents/create-agent", "title": "Create an AI Agent", "description": "Build the agent that handles the conversation." },
+      { "href": "/phone/add-sip-provider", "title": "Add a SIP Provider", "description": "Connect your own carrier before importing a number." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Add a Phone Number - Buy or Import a Number | iMash Docs",
+  "metaDescription": "Buy a new local, toll-free, or international number through iMash, or import a number you already own. Then assign it to an AI agent.",
+  "metaKeywords": "phone number, buy number, import number, DID, toll-free, local number, area code, voice, SMS, provisioning"
 }

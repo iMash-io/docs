@@ -1,0 +1,59 @@
+{
+  "title": "Crear una Herramienta Personalizada",
+  "lede": "Las Herramientas Personalizadas (Custom Tools) son acciones HTTP reutilizables que tu agente de IA puede invocar en medio de una conversación: para buscar algo, agendar un trabajo o enviar datos a tu propio sistema.",
+  "timeToComplete": "7 minutos",
+  "steps": [
+    {
+      "id": "open-custom-tools",
+      "title": "Abrir Herramientas Personalizadas",
+      "content": "<ol><li>En el menú de la izquierda, ve a <strong>Call Center → Custom Tools</strong> (Centro de Llamadas → Herramientas Personalizadas).</li><li>Verás la lista de herramientas que ya has creado.</li><li>Haz clic en <strong>Create</strong> (Crear, el botón <strong>+</strong>) para abrir el panel <strong>Create Custom Tool</strong> (Crear Herramienta Personalizada).</li></ol>",
+      "images": [
+        { "src": "images/automations/custom-tools-light.png", "alt": "Lista de Herramientas Personalizadas", "caption": "La biblioteca de Herramientas Personalizadas, donde viven las herramientas HTTP de tu agente.", "theme": "light" },
+        { "src": "images/automations/custom-tools-dark.png", "alt": "Lista de Herramientas Personalizadas", "caption": "La biblioteca de Herramientas Personalizadas, donde viven las herramientas HTTP de tu agente.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "name-describe",
+      "title": "Ponle Nombre y Descríbela",
+      "content": "<ol><li>En <strong>Basic Information</strong> (Información Básica), dale a la herramienta un <strong>Name</strong> (Nombre) claro (por ejemplo <code>lookupAddress</code> o <code>getUserInfo</code>).</li><li>Escribe una <strong>Description</strong> (Descripción) en lenguaje sencillo sobre qué hace y cuándo debe ejecutarse.</li><li>La IA lee esta descripción para decidir cuándo invocar la herramienta, así que sé específico.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "configure-endpoint",
+      "title": "Configurar el Endpoint",
+      "content": "<ol><li>En <strong>API Configuration</strong> (Configuración de API), elige el <strong>Request Method</strong> (Método de Solicitud: <code>GET</code> o <code>POST</code>).</li><li>Ingresa <strong>Your URL</strong> (Tu URL): el endpoint de tu servidor que el agente invocará.</li><li>Define los <strong>parameters</strong> (parámetros) como un esquema JSON. Usa el Visual Builder (Creador Visual) para un formulario simple, o cambia a JSON Code (Código JSON) para edición avanzada.</li><li>Haz clic en <strong>Test</strong> (Probar) para lanzar una solicitud de muestra y confirmar que tu endpoint responde correctamente.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "voice-settings",
+      "title": "Opcional: Configuración de Voz",
+      "content": "<ol><li>Activa <strong>Speaks for Execution</strong> (Habla durante la ejecución) para que el agente diga una frase breve (por ejemplo <em>\"Un momento mientras reviso eso\"</em>) mientras la herramienta se ejecuta.</li><li>Activa <strong>Speak After Execution</strong> (Habla tras la ejecución) para que diga algo una vez que la herramienta responda.</li><li>Haz clic en <strong>Create Tool</strong> (Crear Herramienta) para guardar.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "attach-agent",
+      "title": "Adjuntarla a un Agente",
+      "content": "<ol><li>Abre un Smart Agent desde <strong>Intelligence Center → Smart Agents</strong> (Centro de Inteligencia → Agentes Inteligentes).</li><li>Abre el panel <strong>Tools / MCP</strong> (Herramientas / MCP) y agrega tu nueva herramienta en <strong>Custom</strong> (Personalizadas).</li><li>Prueba el agente y pregúntale algo que deba activar la herramienta para confirmar que se ejecute.</li></ol>",
+      "images": [
+        { "src": "images/agents/tools-mcp-light.png", "alt": "Panel de Herramientas y MCP", "caption": "Adjunta tu herramienta personalizada a un agente en el panel Tools / MCP.", "theme": "light" },
+        { "src": "images/agents/tools-mcp-dark.png", "alt": "Panel de Herramientas y MCP", "caption": "Adjunta tu herramienta personalizada a un agente en el panel Tools / MCP.", "theme": "dark" }
+      ]
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Pon tu herramienta a trabajar en un agente:",
+    "cards": [
+      { "href": "/agents/agent-tools", "title": "Agregar Herramientas a tu Agente", "description": "Adjunta herramientas predefinidas y personalizadas a un Smart Agent." },
+      { "href": "/automations/mcp-servers", "title": "Conectar un Servidor MCP", "description": "Dale a tu agente un conjunto de herramientas externas de una sola vez." },
+      { "href": "/agents/advanced-settings", "title": "Configuración Avanzada del Agente", "description": "Ajusta cómo y cuándo tu agente usa sus herramientas." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o preguntas:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Crear una Herramienta Personalizada | iMash Docs",
+  "metaDescription": "Crea una Herramienta Personalizada HTTP reutilizable que tu agente de IA de iMash pueda invocar durante una llamada: ponle nombre, configura el endpoint y los parámetros, pruébala y adjúntala a un agente.",
+  "metaKeywords": "herramientas personalizadas, custom tools, herramienta http, function calling, herramientas de agente, endpoint api, esquema json, imash"
+}

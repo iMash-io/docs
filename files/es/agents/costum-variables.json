@@ -1,0 +1,55 @@
+{
+  "title": "Personaliza los agentes con variables personalizadas",
+  "lede": "Alimenta a tu Smart Agent (Agente inteligente) con contexto en vivo: el nombre, la dirección y cualquier campo personalizado de quien llama, para que salude a las personas por su nombre y adapte cada conversación.",
+  "timeToComplete": "6 minutos",
+  "videoUrl": "https://youtu.be/mR9rNHDWJJ8",
+  "videoLength": "2",
+  "steps": [
+    {
+      "id": "insert-variable",
+      "title": "Inserta variables en el prompt",
+      "content": "<ol><li>Ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes) y abre tu agente.</li><li>Haz clic en un campo de texto como el system prompt (prompt del sistema) o el primer mensaje.</li><li>Escribe una llave de apertura <code>{</code> para abrir el menú de variables. Las variables integradas incluyen <code>{first_name}</code>, <code>{last_name}</code>, <code>{email}</code> y <code>{full_address}</code>.</li><li>Elige una para insertarla en el cursor; al momento de la llamada se reemplaza por el valor real.</li></ol>",
+      "images": [
+        { "src": "images/agents/templates-variables-light.png", "alt": "Plantillas y variables", "caption": "Escribe { en un campo de prompt para insertar variables del CRM.", "theme": "light" },
+        { "src": "images/agents/templates-variables-dark.png", "alt": "Plantillas y variables", "caption": "Escribe { en un campo de prompt para insertar variables del CRM.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "templates",
+      "title": "Administra plantillas y variables",
+      "content": "<ol><li>Abre el panel <strong>Templates &amp; Variables</strong> (Plantillas y variables) en el editor.</li><li>Aquí puedes guardar plantillas de prompt reutilizables y administrar las variables que tu agente conoce.</li></ol>",
+      "images": [
+        { "src": "images/agents/assistant-editor-light.png", "alt": "Editor de agentes", "caption": "Templates & Variables se encuentra en la columna central del editor.", "theme": "light" },
+        { "src": "images/agents/assistant-editor-dark.png", "alt": "Editor de agentes", "caption": "Templates & Variables se encuentra en la columna central del editor.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "crm-custom-data",
+      "title": "Agrega datos personalizados a un lead o contacto",
+      "content": "<ol><li>Abre un <strong>Lead</strong> (Prospecto) o <strong>Contact</strong> (Contacto) en el CRM.</li><li>Agrega campos personalizados (un nombre y un valor) a ese registro.</li><li>Esos valores quedan disponibles para el agente como contexto siempre que hable con esa persona.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "api-custom-vars",
+      "title": "Envía variables a través de la API",
+      "content": "<ol><li>Cuando inicies una llamada mediante la API, incluye un objeto <strong>customVars</strong> en los metadatos de la solicitud con tus pares clave/valor.</li><li>Esto es ideal para pasar contexto desde un CRM o una aplicación externa al momento de la llamada.</li><li>El agente recibe esos valores y puede referenciarlos en la conversación.</li></ol>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Combina el contexto personalizado con más capacidades:",
+    "cards": [
+      { "href": "/agents/agent-knowledge-base", "title": "Agrega una base de conocimiento", "description": "Combina variables dinámicas con tus documentos y preguntas frecuentes." },
+      { "href": "/agents/agent-tools", "title": "Agrega herramientas", "description": "Permite que el agente actúe sobre los datos que recopila." },
+      { "href": "/agents/advanced-settings", "title": "Procesamiento posterior a la llamada", "description": "Captura datos estructurados y envíalos a tus sistemas." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Personaliza los agentes con variables personalizadas | iMash Docs",
+  "metaDescription": "Dale a tu Smart Agent de iMash contexto en vivo. Inserta {first_name}, {full_address} y campos personalizados en los prompts, agrega datos personalizados a los registros del CRM y pasa customVars a través de la API.",
+  "metaKeywords": "variables personalizadas, imash, smart agent, personalización, customVars, variables del crm, prompt dinámico, plantillas"
+}

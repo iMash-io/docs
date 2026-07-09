@@ -1,0 +1,49 @@
+{
+  "title": "Configuración de privacidad y grabación",
+  "lede": "Controla lo que conserva tu Smart Agent (Agente inteligente): activa o desactiva el almacenamiento de la transcripción y la grabación de la llamada, y elige si quieres guardar el audio de la llamada.",
+  "timeToComplete": "4 minutos",
+  "videoUrl": "https://youtu.be/5tPDfE9WJlI",
+  "videoLength": "1",
+  "steps": [
+    {
+      "id": "open-privacy",
+      "title": "Abre Privacy & Recording",
+      "content": "<ol><li>Ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes) y abre tu agente.</li><li>Haz clic en <strong>Settings</strong> (Configuración) y luego selecciona la sección <strong>Privacy &amp; Recording</strong> (Privacidad y grabación) en el panel izquierdo.</li></ol>",
+      "images": [
+        { "src": "images/agents/agent-settings-panel-light.png", "alt": "Panel de configuración", "caption": "Privacy & Recording es una sección dentro del panel Settings del agente.", "theme": "light" },
+        { "src": "images/agents/agent-settings-panel-dark.png", "alt": "Panel de configuración", "caption": "Privacy & Recording es una sección dentro del panel Settings del agente.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "data-storage",
+      "title": "Elige si almacenar datos sensibles",
+      "content": "<ul><li><strong>Disable Sensitive Data Storage</strong> (Desactivar almacenamiento de datos sensibles): cuando está activado, iMash no almacenará ni registrará la transcripción ni la grabación de la llamada para este agente.</li><li>Déjalo desactivado si quieres guardar las transcripciones para revisarlas y analizarlas más adelante.</li></ul>",
+      "images": [
+        { "src": "images/agents/assistant-editor-light.png", "alt": "Editor del agente", "caption": "Las opciones de privacidad aplican a todas las llamadas que atiende este agente.", "theme": "light" },
+        { "src": "images/agents/assistant-editor-dark.png", "alt": "Editor del agente", "caption": "Las opciones de privacidad aplican a todas las llamadas que atiende este agente.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "audio-recording",
+      "title": "Activa o desactiva la grabación de audio",
+      "content": "<ul><li>Usa el interruptor <strong>Audio Recording</strong> (Grabación de audio) para grabar (o no grabar) el audio de la conversación.</li><li>Esta opción solo está disponible mientras el almacenamiento de datos sensibles esté activado; si desactivas el almacenamiento, la grabación también se apaga.</li></ul>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Con la privacidad configurada, continúa ajustando tu agente:",
+    "cards": [
+      { "href": "/agents/agent-settings", "title": "Configuración del agente", "description": "Ajusta los tiempos de espera, mensajes de inactividad y manejo de buzón de voz." },
+      { "href": "/agents/advanced-settings", "title": "Procesamiento posterior a la llamada", "description": "Extrae datos estructurados y envía los resultados de la llamada a tus sistemas." },
+      { "href": "/phone/call-logs", "title": "Revisa los registros de llamadas", "description": "Consulta transcripciones, grabaciones y resúmenes de llamadas almacenados." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Configuración de privacidad y grabación | Documentación de iMash",
+  "metaDescription": "Controla la privacidad de datos de tu iMash Smart Agent: activa o desactiva el almacenamiento de transcripciones y grabaciones con Disable Sensitive Data Storage, y activa la grabación de audio.",
+  "metaKeywords": "configuración de privacidad, imash, agente inteligente, almacenamiento de datos, grabación de audio, transcripción, datos sensibles"
+}

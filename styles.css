@@ -237,6 +237,14 @@ body {
   color: var(--text);
 }
 
+.lang-btn {
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.lang-btn .lang-label { line-height: 1; }
+
 .dark .sun {
   display: none;
 }

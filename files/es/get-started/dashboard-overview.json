@@ -1,0 +1,91 @@
+{
+  "title": "Resumen del panel: cómo leer tu página de inicio de iMash",
+  "lede": "La página Overview (Resumen) es lo primero que ves al iniciar sesión. Te ofrece una vista rápida de toda tu cuenta: el total de registros, el rendimiento de las llamadas y una lista filtrable de cada llamada.",
+  "timeToComplete": "5 minutos",
+  "steps": [
+    {
+      "id": "open-overview",
+      "title": "Abrir el resumen",
+      "content": "<ol><li>Inicia sesión en iMash. Llegas automáticamente a la página <strong>Overview</strong> (Resumen).</li><li>Para volver aquí en cualquier momento, haz clic en <strong>Overview</strong> (Resumen) en la parte superior de la navegación de la izquierda.</li><li>La página es de reportes de solo lectura &mdash; nada de lo que hagas clic aquí cambia tus datos, así que es seguro explorarla.</li></ol>",
+      "images": [
+        {
+          "src": "images/get-started/dashboard-overview-main-light.png",
+          "alt": "Página de resumen de iMash",
+          "caption": "La página Overview (Resumen): mosaicos de Total Statistics, tarjetas de rendimiento, filtros y la tabla de llamadas.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/dashboard-overview-main-dark.png",
+          "alt": "Página de resumen de iMash",
+          "caption": "La página Overview (Resumen): mosaicos de Total Statistics, tarjetas de rendimiento, filtros y la tabla de llamadas.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "total-statistics",
+      "title": "Leer los mosaicos de Total Statistics",
+      "content": "<p>La sección superior, <strong>Total Statistics</strong> (Estadísticas totales), muestra los conteos históricos de toda tu cuenta. Estos números son independientes del filtro de fecha que está debajo de ellos.</p><ul><li><strong>Contacts</strong> (Contactos), <strong>Leads</strong> (Prospectos) y <strong>Accounts</strong> (Cuentas) &mdash; cuántos registros de CRM tienes.</li><li><strong>Notes</strong> (Notas) y <strong>Calendar entries</strong> (Entradas del calendario) &mdash; la actividad registrada en tus registros.</li><li><strong>AI agents</strong> (Agentes de IA), <strong>Campaigns</strong> (Campañas), <strong>Phone numbers</strong> (Números de teléfono) y <strong>SIP providers</strong> (Proveedores SIP) &mdash; tu configuración de llamadas.</li><li><strong>Knowledge base</strong> (Base de conocimiento), <strong>Sub accounts</strong> (Subcuentas) y <strong>Custom tools</strong> (Herramientas personalizadas) &mdash; el resto de tu espacio de trabajo.</li></ul><p>Si tienes subcuentas, usa el menú desplegable <strong>All owners</strong> (Todos los propietarios) en la parte superior derecha de esta sección para limitar los totales a un solo propietario.</p>",
+      "images": [
+        {
+          "src": "images/analytics/overview-stats-light.png",
+          "alt": "Mosaicos de Total Statistics",
+          "caption": "Totales históricos de contactos, prospectos, agentes, números de teléfono y más.",
+          "theme": "light"
+        },
+        {
+          "src": "images/analytics/overview-stats-dark.png",
+          "alt": "Mosaicos de Total Statistics",
+          "caption": "Totales históricos de contactos, prospectos, agentes, números de teléfono y más.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "performance-cards",
+      "title": "Revisar el rendimiento de tus llamadas",
+      "content": "<p>Debajo de las estadísticas hay una franja de cuatro tarjetas de rendimiento. A diferencia de los mosaicos de arriba, estas <em>sí</em> respetan el filtro de fecha, por lo que siempre reflejan el período que hayas seleccionado.</p><ul><li><strong>Total calls</strong> (Total de llamadas) &mdash; número de llamadas en el período, con la duración promedio.</li><li><strong>Total minutes</strong> (Total de minutos) &mdash; tiempo total de conversación, con tu tasa de éxito.</li><li><strong>Total spent</strong> (Gasto total) &mdash; tu gasto en llamadas, con el costo por minuto.</li><li><strong>Avg cost / call</strong> (Costo promedio por llamada) &mdash; precio promedio por llamada, con una estimación del gasto diario.</li></ul>",
+      "images": []
+    },
+    {
+      "id": "filters",
+      "title": "Filtrar lo que ves",
+      "content": "<p>La barra de <strong>Filters</strong> (Filtros) controla tanto las tarjetas de rendimiento como la tabla de llamadas que está debajo.</p><ol><li>Elige un <strong>rango de fechas</strong>: Today (Hoy), Yesterday (Ayer), This Week (Esta semana), This Month (Este mes), Last 30 Days (Últimos 30 días) o un <strong>Custom Range</strong> (Rango personalizado).</li><li>Acota por <strong>Phone number</strong> (Número de teléfono), <strong>Agent</strong> (Agente) o <strong>Tags</strong> (Etiquetas) (por ejemplo, Voicemail (Buzón de voz), Transfer (Transferencia) o No Answer (Sin respuesta)).</li><li>Si tienes subcuentas, filtra por <strong>Owner</strong> (Propietario).</li><li>Escribe un nombre en el cuadro <strong>Search customer</strong> (Buscar cliente) para encontrar a una persona que haya llamado.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "calls-table",
+      "title": "Explorar la tabla de llamadas",
+      "content": "<p>La tabla <strong>Calls</strong> (Llamadas) muestra cada llamada que coincide con tus filtros. Cada fila muestra el contacto o prospecto, el agente o la campaña que la gestionó, la fecha y hora, la duración, el tipo, las etiquetas y el propietario.</p><ol><li>Haz clic en el nombre de quien llamó para abrir sus datos de <strong>Contact</strong> (Contacto) o <strong>Lead</strong> (Prospecto) en un panel lateral.</li><li>Usa el ícono de <strong>ojo</strong> en la columna Actions (Acciones) para abrir el registro completo de la llamada, incluyendo la transcripción y el análisis.</li><li>Navega por los resultados usando los controles en la parte inferior de la tabla.</li></ol>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Ahora que sabes leer el panel, profundiza en el detalle detrás de cada llamada.",
+    "cards": [
+      {
+        "href": "/phone/call-logs",
+        "title": "Revisar los registros de llamadas",
+        "description": "Abre cualquier llamada para escuchar la grabación, leer la transcripción y ver los datos extraídos."
+      },
+      {
+        "href": "/crm/contacts",
+        "title": "Gestionar contactos y prospectos",
+        "description": "Trabaja los registros del CRM que alimentan los totales de tu panel."
+      },
+      {
+        "href": "/get-started/api-keys",
+        "title": "Generar claves de API",
+        "description": "Lleva los mismos datos a tus propios sistemas a través de la API REST."
+      }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
+  },
+  "metaTitle": "Resumen del panel | Documentación de iMash",
+  "metaDescription": "Aprende a leer la página Overview de iMash: las Total Statistics históricas, las tarjetas de rendimiento de llamadas por fecha, la barra de filtros y la tabla de llamadas.",
+  "metaKeywords": "panel de iMash, página de resumen, análisis de llamadas, estadísticas totales, rendimiento de llamadas, filtros, tabla de llamadas, reportes"
+}

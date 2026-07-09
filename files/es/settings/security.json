@@ -1,0 +1,52 @@
+{
+  "title": "Seguridad",
+  "lede": "Pasos sencillos y prácticos para mantener segura tu cuenta de iMash: contraseñas fuertes, controlar quién tiene sesión iniciada y limitar lo que cada miembro del equipo puede alcanzar.",
+  "timeToComplete": "6 minutos",
+  "steps": [
+    {
+      "id": "password",
+      "title": "Usa una contraseña fuerte y restablécela de forma segura",
+      "content": "<ol><li>Usa una contraseña larga y única para iMash que no reutilices en ningún otro sitio.</li><li>Si alguna vez la olvidas, usa <strong>Forgot password</strong> (Olvidé mi contraseña) en la pantalla de inicio de sesión para recibir un enlace de restablecimiento seguro por correo.</li><li>Cambia la contraseña de un miembro del equipo en cualquier momento desde <strong>Team</strong> (Equipo, o Gestión de usuarios) editando su usuario.</li></ol><p>Nunca compartas un mismo inicio de sesión entre varias personas — en su lugar, dale a cada persona su propia cuenta de miembro del equipo para que puedas rastrear y controlar el acceso.</p>",
+      "images": [
+        { "src": "images/settings/user-management-light.png", "alt": "Gestión del equipo y del acceso", "caption": "La seguridad de la cuenta comienza con cuentas de equipo individuales y acceso controlado", "theme": "light" },
+        { "src": "images/settings/user-management-dark.png", "alt": "Gestión del equipo y del acceso", "caption": "La seguridad de la cuenta comienza con cuentas de equipo individuales y acceso controlado", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "session-control",
+      "title": "Una sesión activa mantiene el control",
+      "content": "<ul><li>iMash permite solo <strong>una sesión activa a la vez</strong> por cuenta. Si tú (o alguien que use tu inicio de sesión) inicias sesión en un lugar nuevo, la ventana más antigua queda cubierta por una pantalla de bloqueo <strong>Take control</strong> (Tomar el control).</li><li>Haz clic en <strong>Take control</strong> en la ventana que quieres usar — la otra permanece bloqueada hasta que vuelva a tomar el control.</li><li>Si ves este bloqueo de forma inesperada, es posible que alguien más esté usando tu inicio de sesión. Cambia tu contraseña de inmediato.</li></ul>"
+    },
+    {
+      "id": "least-access",
+      "title": "Dale a cada persona solo el acceso que necesita",
+      "content": "<ul><li>Asigna a cada miembro del equipo un <strong>Role</strong> (Rol) que otorgue solo los derechos de leer/crear/editar/eliminar que requiere su trabajo.</li><li>Mantén desactivados <strong>Billing</strong> (Facturación), <strong>Credentials</strong> (Credenciales, claves de API) y <strong>User Management</strong> (Gestión de usuarios) para los miembros que no los necesiten — estos controlan el dinero y el acceso.</li><li>Usa los <strong>Permission Groups</strong> (Grupos de permisos) para que un miembro solo vea los registros que pertenecen a su equipo, no a toda la cuenta.</li></ul><p>Administra todo esto en la página <strong>Team</strong> (Equipo).</p>"
+    },
+    {
+      "id": "deactivate",
+      "title": "Desactiva el acceso en el momento en que ya no sea necesario",
+      "content": "<ol><li>Cuando alguien se va o cambia de rol, abre <strong>Team</strong> (Equipo) y usa <strong>Disable</strong> (Deshabilitar) en su fila para bloquear al instante el inicio de sesión.</li><li>Vuelve a habilitarlo más tarde si esa persona regresa — sin necesidad de eliminar y recrear la cuenta.</li><li>Rota las <strong>API Keys</strong> (Claves de API) si una clave pudo haber quedado expuesta, y habilita el acceso a Credentials solo a las personas que administran integraciones.</li></ol>"
+    },
+    {
+      "id": "data-isolation",
+      "title": "Tus datos permanecen aislados",
+      "content": "<ul><li>iMash mantiene los datos de cada cuenta separados a nivel de base de datos, de modo que tus registros nunca son visibles para otros clientes.</li><li>Dentro de tu cuenta, los roles, los grupos y los controles por página deciden exactamente qué puede abrir cada miembro.</li><li>Cuando el propietario usa <strong>Impersonate</strong> (Suplantar) para ayudar a un miembro, es una vista temporal y con tiempo limitado — el propio inicio de sesión del miembro nunca queda expuesto.</li></ul>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Restringe el acceso y mantén tu cuenta en buen estado.",
+    "cards": [
+      { "href": "/settings/team-management", "title": "Gestión del equipo", "description": "Roles, grupos y controles de acceso por miembro." },
+      { "href": "/settings/billing", "title": "Facturación", "description": "Protege los pagos limitando el acceso a la facturación." },
+      { "href": "/settings/white-label", "title": "Marca blanca", "description": "Personaliza la plataforma con tu propio dominio." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Seguridad - Mantén tu cuenta segura | Documentación de iMash",
+  "metaDescription": "Protege tu cuenta de iMash con contraseñas fuertes, control de sesión única, roles de mínimo privilegio y desactivación instantánea del acceso del equipo.",
+  "metaKeywords": "seguridad, seguridad de la cuenta, restablecer contraseña, control de sesiones, control de acceso, permisos, aislamiento de datos, desactivar usuario"
+}

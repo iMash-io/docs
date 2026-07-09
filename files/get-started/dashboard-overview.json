@@ -1,28 +1,91 @@
 {
-  "title": "Dashboard Overview",
-  "lede": "Learn how to navigate the iMash dashboard and understand key features and metrics.",
-  "sections": [
+  "title": "Dashboard Overview - Reading Your iMash Home Page",
+  "lede": "The Overview page is the first thing you see when you log in. It gives you an at-a-glance snapshot of your whole account: total records, call performance, and a filterable list of every call.",
+  "timeToComplete": "5 minutes",
+  "steps": [
     {
-      "id": "overview",
-      "title": "Dashboard Components",
-      "content": "<p>The iMash dashboard provides a comprehensive overview of your AI voice platform activities.</p><h3>Key Sections:</h3><ul><li><strong>Agent Performance:</strong> View metrics for all your AI agents</li><li><strong>Call Statistics:</strong> Monitor call volume and success rates</li><li><strong>Recent Activity:</strong> Track latest calls and agent interactions</li><li><strong>Quick Actions:</strong> Access frequently used features</li></ul>"
-    }
-  ],
-  "images": [
-    {
-      "src": "images/dashboard-main-light.png",
-      "alt": "Main Dashboard View",
-      "caption": "The main dashboard showing key metrics and recent activity",
-      "theme": "light"
+      "id": "open-overview",
+      "title": "Open the Overview",
+      "content": "<ol><li>Log in to iMash. You land on the <strong>Overview</strong> page automatically.</li><li>To return here any time, click <strong>Overview</strong> at the top of the left-hand navigation.</li><li>The page is read-only reporting &mdash; nothing you click here changes your data, so it is safe to explore.</li></ol>",
+      "images": [
+        {
+          "src": "images/get-started/dashboard-overview-main-light.png",
+          "alt": "iMash Overview page",
+          "caption": "The Overview page: Total Statistics tiles, performance cards, filters, and the Calls table.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/dashboard-overview-main-dark.png",
+          "alt": "iMash Overview page",
+          "caption": "The Overview page: Total Statistics tiles, performance cards, filters, and the Calls table.",
+          "theme": "dark"
+        }
+      ]
     },
     {
-      "src": "images/dashboard-main-dark.png",
-      "alt": "Main Dashboard View",
-      "caption": "The main dashboard showing key metrics and recent activity",
-      "theme": "dark"
+      "id": "total-statistics",
+      "title": "Read the Total Statistics tiles",
+      "content": "<p>The top section, <strong>Total Statistics</strong>, shows all-time counts across your account. These numbers are independent of the date filter below them.</p><ul><li><strong>Contacts</strong>, <strong>Leads</strong>, and <strong>Accounts</strong> &mdash; how many CRM records you have.</li><li><strong>Notes</strong> and <strong>Calendar entries</strong> &mdash; activity logged against your records.</li><li><strong>AI agents</strong>, <strong>Campaigns</strong>, <strong>Phone numbers</strong>, and <strong>SIP providers</strong> &mdash; your calling setup.</li><li><strong>Knowledge base</strong>, <strong>Sub accounts</strong>, and <strong>Custom tools</strong> &mdash; the rest of your workspace.</li></ul><p>If you have sub-accounts, use the <strong>All owners</strong> dropdown in the top-right of this section to narrow the totals to one owner.</p>",
+      "images": [
+        {
+          "src": "images/analytics/overview-stats-light.png",
+          "alt": "Total Statistics tiles",
+          "caption": "All-time totals for contacts, leads, agents, phone numbers, and more.",
+          "theme": "light"
+        },
+        {
+          "src": "images/analytics/overview-stats-dark.png",
+          "alt": "Total Statistics tiles",
+          "caption": "All-time totals for contacts, leads, agents, phone numbers, and more.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "performance-cards",
+      "title": "Check your call performance",
+      "content": "<p>Below the statistics is a strip of four performance cards. Unlike the tiles above, these <em>do</em> respect the date filter, so they always reflect the window you have selected.</p><ul><li><strong>Total calls</strong> &mdash; number of calls in the window, with average duration.</li><li><strong>Total minutes</strong> &mdash; total talk time, with your success rate.</li><li><strong>Total spent</strong> &mdash; your call spend, with cost per minute.</li><li><strong>Avg cost / call</strong> &mdash; average price per call, with a daily spend estimate.</li></ul>",
+      "images": []
+    },
+    {
+      "id": "filters",
+      "title": "Filter what you see",
+      "content": "<p>The <strong>Filters</strong> bar controls both the performance cards and the Calls table below.</p><ol><li>Pick a <strong>date range</strong>: Today, Yesterday, This Week, This Month, Last 30 Days, or a <strong>Custom Range</strong>.</li><li>Narrow by <strong>Phone number</strong>, <strong>Agent</strong>, or <strong>Tags</strong> (for example Voicemail, Transfer, or No Answer).</li><li>If you have sub-accounts, filter by <strong>Owner</strong>.</li><li>Type a name into the <strong>Search customer</strong> box to find a specific caller.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "calls-table",
+      "title": "Explore the Calls table",
+      "content": "<p>The <strong>Calls</strong> table lists every call that matches your filters. Each row shows the contact or lead, the agent or campaign that handled it, date and time, duration, type, tags, and owner.</p><ol><li>Click a caller's name to open their <strong>Contact</strong> or <strong>Lead</strong> details in a side drawer.</li><li>Use the <strong>eye</strong> icon in the Actions column to open the full call log, including the transcript and analysis.</li><li>Page through results using the controls at the bottom of the table.</li></ol>",
+      "images": []
     }
   ],
-  "metaTitle": "Dashboard Overview - Navigate iMash Platform Features",
-  "metaDescription": "Explore the iMash dashboard interface. Learn about agents, phone system, campaigns, CRM, analytics, and settings navigation.",
-  "metaKeywords": "dashboard, platform overview, navigation, user interface, control panel, iMash features, admin panel"
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Now that you can read the dashboard, dig into the detail behind each call.",
+    "cards": [
+      {
+        "href": "/phone/call-logs",
+        "title": "Review Call Logs",
+        "description": "Open any call to hear the recording, read the transcript, and see extracted data."
+      },
+      {
+        "href": "/crm/contacts",
+        "title": "Manage Contacts & Leads",
+        "description": "Work the CRM records that feed the totals on your dashboard."
+      },
+      {
+        "href": "/get-started/api-keys",
+        "title": "Generate API Keys",
+        "description": "Pull the same data into your own systems over the REST API."
+      }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Dashboard Overview | iMash Docs",
+  "metaDescription": "Learn to read the iMash Overview page: all-time Total Statistics, date-scoped call performance cards, the Filters bar, and the Calls table.",
+  "metaKeywords": "iMash dashboard, overview page, call analytics, total statistics, call performance, filters, calls table, reporting"
 }

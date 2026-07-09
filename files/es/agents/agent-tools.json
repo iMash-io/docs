@@ -1,0 +1,55 @@
+{
+  "title": "Agrega herramientas a tu agente",
+  "lede": "Dale a tu Smart Agent (Agente inteligente) la capacidad de realizar acciones: finalizar llamadas, agendar citas, transferir o llamar a tus propias API, usando herramientas predefinidas y herramientas HTTP personalizadas.",
+  "timeToComplete": "7 minutos",
+  "videoUrl": "https://youtu.be/Gmo7CE-XORY",
+  "videoLength": "3",
+  "steps": [
+    {
+      "id": "open-tools",
+      "title": "Abre el panel Tools / MCP",
+      "content": "<ol><li>Ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes) y abre tu agente.</li><li>Haz clic en <strong>Tools / MCP</strong> (Herramientas / MCP) en el editor.</li><li>El panel tiene tres áreas en la barra izquierda: <strong>Predefined</strong> (Predefinidas), <strong>Custom</strong> (Personalizadas) y <strong>MCP Servers</strong> (Servidores MCP).</li></ol>",
+      "images": [
+        { "src": "images/agents/tools-mcp-light.png", "alt": "Panel de herramientas y MCP", "caption": "El panel Tools / MCP con Predefined, Custom y MCP Servers.", "theme": "light" },
+        { "src": "images/agents/tools-mcp-dark.png", "alt": "Panel de herramientas y MCP", "caption": "El panel Tools / MCP con Predefined, Custom y MCP Servers.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "add-predefined",
+      "title": "Adjunta herramientas predefinidas",
+      "content": "<ol><li>Abre la sección <strong>Predefined</strong> (Predefinidas) para ver las herramientas integradas (por ejemplo, una herramienta para finalizar la llamada, una herramienta de calendario/agendamiento y herramientas de transferencia de llamadas).</li><li>Haz clic en una herramienta para adjuntarla. Las herramientas adjuntadas muestran una insignia <strong>Added</strong> / <strong>Attached</strong> (Agregada / Adjuntada).</li><li>Algunas herramientas tienen ajustes en línea (como un número de transferencia o una categoría de calendario) que puedes completar después de adjuntarlas.</li></ol>",
+      "images": [
+        { "src": "images/agents/assistant-editor-light.png", "alt": "Editor de agentes", "caption": "Las herramientas adjuntadas aparecen en el agente y quedan disponibles durante las llamadas.", "theme": "light" },
+        { "src": "images/agents/assistant-editor-dark.png", "alt": "Editor de agentes", "caption": "Las herramientas adjuntadas aparecen en el agente y quedan disponibles durante las llamadas.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "add-custom",
+      "title": "Agrega una herramienta personalizada",
+      "content": "<ol><li>Abre la sección <strong>Custom</strong> (Personalizadas) y haz clic en <strong>Add Custom Tool</strong> (Agregar herramienta personalizada).</li><li>Dale a la herramienta un nombre y una descripción claros para que la IA sepa cuándo llamarla.</li><li>Proporciona la URL del endpoint y cualquier parámetro. Guarda la herramienta.</li><li>Durante una llamada, el agente ya puede acceder a ese endpoint en vivo para obtener o enviar información.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "test-tools",
+      "title": "Prueba las herramientas",
+      "content": "<ol><li>Abre <strong>Test Agent</strong> (Probar agente) y conéctate.</li><li>Prueba indicaciones que deberían activar una herramienta, como <em>\"Agenda una demo para mañana a la 1 PM\"</em> o <em>\"Finaliza la llamada.\"</em></li><li>Confirma que la acción ocurre; por ejemplo, una nueva entrada en el calendario del CRM.</li></ol>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Extiende tu agente más allá de las herramientas integradas:",
+    "cards": [
+      { "href": "/agents/agent-mcp", "title": "Conecta un servidor MCP", "description": "Agrupa flujos y herramientas en un solo servidor que tu agente puede llamar." },
+      { "href": "/automations/custom-tools", "title": "Crea herramientas personalizadas", "description": "Crea herramientas HTTP reutilizables en la biblioteca de herramientas personalizadas." },
+      { "href": "/agents/test-agent", "title": "Prueba tu agente", "description": "Verifica que cada herramienta se active correctamente durante una conversación." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Agrega herramientas a tu agente | iMash Docs",
+  "metaDescription": "Dale acciones a tu Smart Agent de iMash con herramientas predefinidas (finalizar llamada, agendamiento, transferencia) y herramientas HTTP personalizadas. Adjunta, configura y prueba herramientas paso a paso.",
+  "metaKeywords": "herramientas del agente, imash, smart agent, herramientas personalizadas, herramienta para finalizar llamada, agendamiento de calendario, mcp, function calling"
+}

@@ -1,33 +1,52 @@
 {
   "title": "Contacts",
-  "lede": "Manage your customer contacts with comprehensive profiles and interaction history.",
-  "sections": [
+  "lede": "Contacts are the people you do business with — usually customers converted from leads. This guide shows you how to add, edit, filter, and tag them.",
+  "timeToComplete": "5 minutes",
+  "steps": [
     {
-      "id": "contact-management",
-      "title": "Contact Management",
-      "content": "<p>Store and organize customer contact information in a centralized database.</p><h3>Contact Features:</h3><ul><li><strong>Contact Profiles:</strong> Complete customer information and history</li><li><strong>Phone Numbers:</strong> Multiple phone number support</li><li><strong>Tags & Categories:</strong> Organize contacts with custom tags</li><li><strong>Interaction History:</strong> Complete call and message history</li></ul>"
+      "id": "open-contacts",
+      "title": "Open the Contacts list",
+      "content": "<ol><li>In the left navigation, open <strong>CRM</strong> and click <strong>Contacts</strong> (or go to <code>/crm/contacts</code>).</li><li>The table shows each contact's <strong>Name</strong>, <strong>Email</strong>, <strong>Phone</strong>, <strong>Stage</strong>, and <strong>Account</strong> (their company).</li><li>Click a name or avatar to open the full profile with call and message history.</li></ol><p>A contact is a real person in your book of business. The companies they belong to are stored as <strong>Accounts</strong>.</p>",
+      "images": [
+        { "src": "images/crm/contacts-light.png", "alt": "Contacts list", "caption": "The Contacts list with search, filters, and tags", "theme": "light" },
+        { "src": "images/crm/contacts-dark.png", "alt": "Contacts list", "caption": "The Contacts list with search, filters, and tags", "theme": "dark" }
+      ]
     },
     {
-      "id": "contact-operations",
-      "title": "Contact Operations",
-      "content": "<p>Perform bulk operations and manage contact lifecycle.</p><ul><li><strong>Bulk Import:</strong> CSV file import capabilities</li><li><strong>Duplicate Detection:</strong> Automatic duplicate identification</li><li><strong>Contact Segmentation:</strong> Group contacts for targeted campaigns</li><li><strong>Data Export:</strong> Export contact data for external use</li></ul>"
-    }
-  ],
-  "images": [
-    {
-      "src": "images/contacts-light.png",
-      "alt": "Contacts Management Interface",
-      "caption": "Contact list and profile management",
-      "theme": "light"
+      "id": "add-contact",
+      "title": "Add a new contact",
+      "content": "<ol><li>Click <strong>Create</strong> (New Contact) at the top of the list.</li><li>Enter the <strong>First Name</strong> and <strong>Last Name</strong> (both required).</li><li>Add addresses in the <strong>Emails</strong> field — the first one becomes the primary email.</li><li>Click <strong>Add Phone Number</strong> to add a number and pick a label (Mobile, Work, Home, etc.).</li><li>Optionally choose an <strong>Account</strong>, set a <strong>Stage</strong>, and fill in the mailing address.</li><li>Click <strong>Save</strong>.</li></ol>"
     },
     {
-      "src": "images/contacts-dark.png",
-      "alt": "Contacts Management Interface",
-      "caption": "Contact list and profile management",
-      "theme": "dark"
+      "id": "edit-contact",
+      "title": "Edit a contact",
+      "content": "<ol><li>Click a contact's name to open their profile.</li><li>Update any field — add more emails or phone numbers, change the <strong>Stage</strong>, or link a different <strong>Account</strong>.</li><li>Remember: the primary email is always the first one in the <strong>Emails</strong> list, so put it first if you need to change which email is primary.</li><li>Save your changes.</li></ol>"
+    },
+    {
+      "id": "search-filter-tag",
+      "title": "Search, filter, and tag",
+      "content": "<ul><li>Use the <strong>search box</strong> and switch between searching by <strong>Name</strong>, <strong>Email</strong>, or <strong>Phone</strong>.</li><li>Add filters for <strong>Stage</strong>, <strong>Tags</strong>, <strong>Address</strong>, <strong>City</strong>, or <strong>Owner</strong>.</li><li>Add <strong>tags</strong> on a contact to group people (for example <em>VIP</em> or <em>renewal</em>), then filter the list by that tag.</li></ul>"
+    },
+    {
+      "id": "bulk-actions",
+      "title": "Bulk actions and cleanup",
+      "content": "<ol><li>Tick the checkboxes to select contacts (or select all that match your filters).</li><li>Use the bulk toolbar to <strong>Delete</strong>, <strong>Assign to an Account</strong>, or <strong>Change Owner</strong>.</li><li>Run <strong>Find Duplicates</strong> by phone or email to remove repeated records and keep your list clean.</li></ol>"
     }
   ],
-  "metaTitle": "Contacts Management - CRM Features | iMash Docs",
-  "metaDescription": "Manage customer contacts in the built-in CRM. Track interactions, notes, and communication history.",
-  "metaKeywords": "contacts, CRM, customer management, contact database, customer records, interaction tracking"
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Round out your CRM and start reaching contacts.",
+    "cards": [
+      { "href": "/crm/leads", "title": "Leads", "description": "Track potential customers before they convert." },
+      { "href": "/crm/accounts", "title": "Accounts", "description": "Organize contacts under their company." },
+      { "href": "/campaigns/create-campaign", "title": "Create a Campaign", "description": "Call or message your contacts automatically." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Contacts - CRM | iMash Docs",
+  "metaDescription": "Add, edit, filter, and tag customer contacts in the iMash CRM. Store multiple emails and phone numbers, link accounts, and clean up duplicates.",
+  "metaKeywords": "contacts, CRM contacts, customer records, contact management, multiple emails, phone numbers, contact tags"
 }

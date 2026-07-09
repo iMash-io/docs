@@ -1,0 +1,61 @@
+{
+  "title": "Conecta un servidor MCP a tu agente",
+  "lede": "Agrupa tus flujos de automatización y herramientas en un servidor MCP y luego adjúntalo a un Smart Agent (Agente inteligente) para que pueda invocarlos en vivo durante una conversación.",
+  "timeToComplete": "10 minutos",
+  "videoUrl": "https://youtu.be/0VZbWIhMBck",
+  "videoLength": "4",
+  "steps": [
+    {
+      "id": "open-automation",
+      "title": "Abre Automation",
+      "content": "<ol><li>En la navegación izquierda, ve a <strong>Intelligence Center → Automation</strong> (Centro de inteligencia → Automatización).</li><li>Aquí es donde creas <strong>Flows</strong> (Flujos, operaciones de varios pasos) y <strong>MCP Servers</strong> (Servidores MCP) que los exponen a los agentes.</li></ol>",
+      "images": [
+        { "src": "images/agents/assistant-editor-light.png", "alt": "Vista general del editor del agente", "caption": "Los servidores MCP creados en Automation se adjuntan de vuelta a tu agente en el editor.", "theme": "light" },
+        { "src": "images/agents/assistant-editor-dark.png", "alt": "Vista general del editor del agente", "caption": "Los servidores MCP creados en Automation se adjuntan de vuelta a tu agente en el editor.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "build-flow",
+      "title": "Crea y publica un flujo",
+      "content": "<ol><li>Crea un flujo nuevo y encadena acciones; por ejemplo: tomar una ciudad como entrada, llamar a una API de clima por HTTP, extraer la temperatura y devolverla.</li><li><strong>Publica</strong> el flujo para que pueda usarse dentro de un servidor MCP.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "create-mcp",
+      "title": "Crea un servidor MCP",
+      "content": "<ol><li>En <strong>Automation</strong> (Automatización), abre <strong>MCP Servers</strong> (Servidores MCP) y crea un nuevo MCP.</li><li>Dale un nombre claro.</li><li>Agrégale herramientas: una <strong>Piece</strong> (Pieza) predefinida o cualquier <strong>Flow</strong> (Flujo) publicado (como tu flujo Check Weather).</li></ol>",
+      "images": []
+    },
+    {
+      "id": "attach",
+      "title": "Adjunta el MCP a tu agente",
+      "content": "<ol><li>Ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes) y abre tu agente.</li><li>Abre <strong>Tools / MCP</strong> (Herramientas / MCP) y cambia a <strong>MCP Servers</strong> (Servidores MCP).</li><li>Adjunta el MCP que creaste. También puedes hacer clic en <strong>Add custom MCP server</strong> (Agregar servidor MCP personalizado) para conectar un MCP externo por URL (un endpoint <code>/sse</code> o <code>/mcp</code>) con un encabezado de autenticación opcional.</li></ol>",
+      "images": [
+        { "src": "images/agents/tools-mcp-light.png", "alt": "Servidores MCP en el panel de herramientas", "caption": "Adjunta un servidor MCP en Tools / MCP → MCP Servers.", "theme": "light" },
+        { "src": "images/agents/tools-mcp-dark.png", "alt": "Servidores MCP en el panel de herramientas", "caption": "Adjunta un servidor MCP en Tools / MCP → MCP Servers.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "test-mcp",
+      "title": "Prueba la integración",
+      "content": "<ol><li>Abre <strong>Test Agent</strong> (Probar agente) y conéctate.</li><li>Pregunta algo que deba activar la herramienta MCP (por ejemplo <em>\"¿Cómo está el clima en París hoy?\"</em>).</li><li>Confirma que el agente llama al flujo y devuelve el resultado correcto. Puedes revisar cada invocación y sus entradas/salidas en el historial del MCP dentro de Automation.</li></ol>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Sigue ampliando las capacidades de tu agente:",
+    "cards": [
+      { "href": "/automations/smart-flows", "title": "Crea flujos avanzados", "description": "Agrega lógica de ramificación y múltiples entradas a tus flujos." },
+      { "href": "/agents/agent-tools", "title": "Agrega más herramientas", "description": "Combina herramientas predefinidas y personalizadas junto con tu MCP." },
+      { "href": "/agents/observer-agent", "title": "Configura el agente observador", "description": "Activa herramientas MCP en segundo plano mientras una llamada está en curso." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Conecta un servidor MCP a tu agente | Documentación de iMash",
+  "metaDescription": "Agrupa flujos de automatización y herramientas de iMash en un servidor MCP y adjúntalo a un Smart Agent. Crea un flujo, crea el MCP, adjúntalo y prueba la integración.",
+  "metaKeywords": "MCP, servidor mcp, imash, agente inteligente, automatización, flujos, herramientas, model context protocol"
+}

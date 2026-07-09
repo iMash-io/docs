@@ -1,33 +1,52 @@
 {
-  "title": "Dial Lists",
-  "lede": "Manage and organize contact lists for your calling campaigns.",
-  "sections": [
+  "title": "Manage a Campaign Dial List",
+  "lede": "The dial list is the queue of leads and contacts a campaign will call. Learn how to add people, review their attempt status, and clean up the list.",
+  "timeToComplete": "6 minutes",
+  "steps": [
     {
-      "id": "list-management",
-      "title": "Managing Dial Lists",
-      "content": "<p>Create and manage targeted contact lists for your campaigns.</p><h3>List Types:</h3><ul><li><strong>Contact Lists:</strong> Import existing contacts</li><li><strong>Lead Lists:</strong> Target potential customers</li><li><strong>Custom Lists:</strong> Upload CSV files with phone numbers</li><li><strong>Dynamic Lists:</strong> Auto-updating based on criteria</li></ul>"
+      "id": "open-campaign",
+      "title": "Open the campaign",
+      "content": "<ol><li>Go to <strong>Campaigns</strong> in the left menu.</li><li>Click a campaign's name to open it.</li><li>Inside, use the tabs at the top: <strong>Overview</strong>, <strong>Settings</strong>, <strong>Dial List</strong>, <strong>Add Leads</strong>, <strong>Add Contacts</strong>, and <strong>Stages</strong>.</li></ol>",
+      "images": [
+        { "src": "images/campaigns/campaign-detail-light.png", "alt": "Campaign detail tabs", "caption": "The tabs inside a campaign, including Dial List, Add Leads, and Add Contacts", "theme": "light" },
+        { "src": "images/campaigns/campaign-detail-dark.png", "alt": "Campaign detail tabs", "caption": "The tabs inside a campaign, including Dial List, Add Leads, and Add Contacts", "theme": "dark" }
+      ]
     },
     {
-      "id": "list-optimization",
-      "title": "List Optimization",
-      "content": "<p>Optimize your dial lists for better campaign performance.</p><ul><li><strong>Deduplication:</strong> Remove duplicate entries</li><li><strong>Phone Validation:</strong> Verify number formats</li><li><strong>Time Zone Detection:</strong> Optimize calling times</li><li><strong>DNC Filtering:</strong> Exclude do-not-call numbers</li></ul>"
-    }
-  ],
-  "images": [
-    {
-      "src": "images/dial-lists-light.png",
-      "alt": "Dial Lists Management",
-      "caption": "Contact list management interface",
-      "theme": "light"
+      "id": "add-people",
+      "title": "Add leads and contacts",
+      "content": "<ol><li>Open the <strong>Add Leads</strong> or <strong>Add Contacts</strong> tab.</li><li>Search your CRM by name, phone, or other fields.</li><li>Select the people you want and add them &mdash; they are queued into this campaign's dial list.</li></ol><p>Tip: keep your CRM lists tidy so it's easy to pull the right audience. New leads live under CRM &rarr; Leads.</p>"
     },
     {
-      "src": "images/dial-lists-dark.png",
-      "alt": "Dial Lists Management",
-      "caption": "Contact list management interface",
-      "theme": "dark"
+      "id": "review",
+      "title": "Review the dial list",
+      "content": "<p>Open the <strong>Dial List</strong> tab to see everyone queued. For each row you can see:</p><ul><li>The contact or lead and their phone number.</li><li>Attempts made and attempts left.</li><li>The current lifecycle stage or last outcome.</li></ul><p>Use the search and filters to narrow the list by stage or status.</p>"
+    },
+    {
+      "id": "cleanup",
+      "title": "Remove or clean up entries",
+      "content": "<ul><li>Select rows and use the bulk <strong>Delete</strong> action to remove people you no longer want to call.</li><li>The <strong>Overview</strong> tab shows live progress: contacts, attempts made, attempts left, and finished counts.</li></ul><p>Numbers on your Do Not Call list are automatically skipped &mdash; you never have to remove them by hand.</p>"
+    },
+    {
+      "id": "completed",
+      "title": "What happens when it's done",
+      "content": "<p>When every contact has been fully attempted, the campaign moves to <strong>Completed</strong> and its dial list becomes a read-only archive (you'll see an \"Archive view\" banner). Completed campaigns can't be edited &mdash; to run the same audience again, create a fresh campaign and add them to its dial list.</p>"
     }
   ],
-  "metaTitle": "Dial Lists - Manage Campaign Contacts | iMash Docs",
-  "metaDescription": "Create and manage dial lists for campaigns. Import contacts, set priorities, and configure calling sequences.",
-  "metaKeywords": "dial lists, contact lists, campaign contacts, call queues, priority calling, contact management"
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Wire up the rest of your campaign and keep an eye on results.",
+    "cards": [
+      { "href": "/campaigns/create-campaign", "title": "Create a Campaign", "description": "Attach an AI agent, phone numbers, and pacing." },
+      { "href": "/crm/leads", "title": "Manage Leads", "description": "Build and organize the audience you'll call." },
+      { "href": "/campaigns/campaign-analytics", "title": "Campaign Analytics", "description": "See connect rate, progress, and cost." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Manage a Campaign Dial List | iMash Docs",
+  "metaDescription": "How to build and manage a campaign dial list in iMash: add leads and contacts, review attempts and stages, clean up entries, and understand archiving.",
+  "metaKeywords": "dial list, campaign contacts, add leads, add contacts, call queue, campaign audience, imash campaigns"
 }

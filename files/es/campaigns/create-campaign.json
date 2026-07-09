@@ -1,0 +1,60 @@
+{
+  "title": "Crea una campaña de llamadas",
+  "lede": "Crea una campaña de llamadas salientes automatizada: créala, adjunta un agente de IA y números de teléfono, carga los contactos a llamar, define tu ritmo de marcación e iníciala.",
+  "timeToComplete": "10 minutos",
+  "steps": [
+    {
+      "id": "create-campaign",
+      "title": "Crea una nueva campaña",
+      "content": "<ol><li>En el menú de la izquierda abre <strong>Campaigns</strong> (Campañas) para ver tu lista de campañas.</li><li>Haz clic en <strong>Create New Campaign</strong> (Crear nueva campaña) en la parte superior derecha.</li><li>Se crea una nueva campaña en borrador y se abre automáticamente. Empieza en estado <strong>Draft</strong> (Borrador), así que aún no se marca nada.</li></ol>",
+      "images": [
+        { "src": "images/campaigns/campaigns-list-light.png", "alt": "Lista de campañas", "caption": "La lista de campañas con el botón Create New Campaign", "theme": "light" },
+        { "src": "images/campaigns/campaigns-list-dark.png", "alt": "Lista de campañas", "caption": "La lista de campañas con el botón Create New Campaign", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "campaign-settings",
+      "title": "Nómbrala y adjunta un agente de IA + números de teléfono",
+      "content": "<p>Abre la pestaña <strong>Settings</strong> (Configuración) dentro de la campaña y completa:</p><ul><li><strong>Name</strong> (Nombre) y <strong>Description</strong> (Descripción) para poder encontrarla más adelante.</li><li><strong>Phone Numbers</strong> (Números de teléfono) &mdash; elige uno o varios de tus números para marcar desde ahí. Puedes seleccionar grupos completos de una sola vez.</li><li><strong>AI Agents</strong> (Agentes de IA) &mdash; elige el agente de IA que atenderá cada llamada contestada. ¿Aún no tienes uno? Créalo primero en Intelligence Center &rarr; Smart Agents.</li></ul><p>Los cambios en esta pestaña se guardan automáticamente.</p>",
+      "images": [
+        { "src": "images/campaigns/campaign-detail-light.png", "alt": "Detalle y configuración de la campaña", "caption": "La pestaña Settings de la campaña donde eliges el agente de IA y los números de teléfono", "theme": "light" },
+        { "src": "images/campaigns/campaign-detail-dark.png", "alt": "Detalle y configuración de la campaña", "caption": "La pestaña Settings de la campaña donde eliges el agente de IA y los números de teléfono", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "add-dial-list",
+      "title": "Agrega personas a llamar (la lista de marcación)",
+      "content": "<ol><li>Abre la pestaña <strong>Add Leads</strong> (Agregar prospectos) o <strong>Add Contacts</strong> (Agregar contactos).</li><li>Busca en tu CRM y agrega a las personas que quieres llamar &mdash; se añaden a la cola de la lista de marcación de esta campaña.</li><li>Cambia a la pestaña <strong>Dial List</strong> (Lista de marcación) para revisar a todos los que están en cola y su estado de intentos.</li></ol>",
+      "images": [
+        { "src": "images/campaigns/new-campaign-light.png", "alt": "Agregar contactos a una campaña", "caption": "Add Leads / Add Contacts traen personas desde tu CRM a la lista de marcación", "theme": "light" },
+        { "src": "images/campaigns/new-campaign-dark.png", "alt": "Agregar contactos a una campaña", "caption": "Add Leads / Add Contacts traen personas desde tu CRM a la lista de marcación", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "pacing",
+      "title": "Define el ritmo de marcación y los horarios",
+      "content": "<p>Aún en la pestaña <strong>Settings</strong>, controla qué tan rápido marca la campaña:</p><ul><li><strong>Max Concurrent Calls</strong> (Llamadas simultáneas máximas) &mdash; cuántas llamadas se ejecutan al mismo tiempo.</li><li><strong>Working hours</strong> (Horario laboral) y <strong>working days</strong> (días laborales) &mdash; la campaña solo marca dentro de esta ventana.</li><li><strong>Time zone</strong> (Zona horaria) &mdash; mantén el valor predeterminado para respetar la hora local de cada contacto, o fija una zona.</li><li>Opcionalmente activa <strong>Inbound Callbacks</strong> (Devoluciones de llamada entrantes) para que las personas que devuelven la llamada a tu número sean dirigidas a un agente de IA o a un grupo del equipo.</li></ul>"
+    },
+    {
+      "id": "start",
+      "title": "Inicia la campaña",
+      "content": "<ol><li>Vuelve a la lista de <strong>Campaigns</strong> (o usa los controles propios de la campaña).</li><li>Haz clic en el ícono <strong>Start</strong> (Iniciar, botón de reproducción) en la fila de la campaña.</li><li>El estado cambia a <strong>Running</strong> (En ejecución) y las llamadas comienzan dentro de tu horario laboral. Usa el ícono <strong>Pause</strong> (Pausar) en cualquier momento para detener la marcación.</li></ol><p>Cuando se hayan intentado por completo todos los contactos, la campaña pasa automáticamente a <strong>Completed</strong> (Completada) y su lista de marcación se archiva.</p>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Ajusta tu lista, observa los resultados y mantente en cumplimiento.",
+    "cards": [
+      { "href": "/campaigns/dial-lists", "title": "Administra la lista de marcación", "description": "Agrega, revisa y depura a quién se llama." },
+      { "href": "/campaigns/campaign-analytics", "title": "Analítica de campañas", "description": "Da seguimiento al progreso, la tasa de conexión y el costo." },
+      { "href": "/agents/create-agent", "title": "Crea un agente de IA", "description": "Crea el agente que atiende tus llamadas." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Crea una campaña de llamadas | Documentación de iMash",
+  "metaDescription": "Guía paso a paso para crear una campaña de llamadas salientes automatizada en iMash: adjunta un agente de IA y números de teléfono, arma una lista de marcación, define el ritmo e inicia.",
+  "metaKeywords": "crear campaña, llamadas salientes, campaña con agente de ia, lista de marcación, ritmo de campaña, marcador inteligente, campañas imash"
+}

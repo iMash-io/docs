@@ -1,33 +1,51 @@
 {
   "title": "Analytics Dashboard",
-  "lede": "Monitor performance metrics and gain insights into your AI calling operations.",
-  "sections": [
+  "lede": "Read your call center's key numbers at a glance on the Overview page, then filter them by date, phone number, agent, tags, or owner to answer any question about your calling.",
+  "timeToComplete": "5 minutes",
+  "steps": [
     {
-      "id": "dashboard-overview",
-      "title": "Dashboard Overview",
-      "content": "<p>Get a comprehensive view of your calling performance with real-time analytics.</p><h3>Key Metrics:</h3><ul><li><strong>Call Volume:</strong> Total calls made and received</li><li><strong>Success Rates:</strong> Conversion and completion percentages</li><li><strong>Agent Performance:</strong> Individual agent statistics</li><li><strong>Cost Analysis:</strong> Spending breakdown by service</li></ul>"
+      "id": "open-overview",
+      "title": "Open the Overview page",
+      "content": "<ol><li>Click <strong>Overview</strong> at the top of the left menu (it's also the page you land on at <code>/</code> when you log in).</li><li>The top card, <strong>Total Statistics</strong>, shows all-time totals for your account &mdash; contacts, leads, accounts, AI agents, campaigns, phone numbers, and more. These are independent of any date filter.</li></ol>",
+      "images": [
+        { "src": "images/get-started/dashboard-overview-main-light.png", "alt": "Overview dashboard", "caption": "The Overview page opens with Total Statistics, performance cards, filters, and a calls table", "theme": "light" },
+        { "src": "images/get-started/dashboard-overview-main-dark.png", "alt": "Overview dashboard", "caption": "The Overview page opens with Total Statistics, performance cards, filters, and a calls table", "theme": "dark" }
+      ]
     },
     {
-      "id": "custom-dashboards",
-      "title": "Custom Dashboards",
-      "content": "<p>Create personalized dashboards with the metrics that matter most to you.</p><ul><li><strong>Widget Library:</strong> Choose from various chart types</li><li><strong>Time Ranges:</strong> Customize date ranges for analysis</li><li><strong>Filters:</strong> Drill down into specific data segments</li><li><strong>Export Options:</strong> Share dashboards and data</li></ul>"
-    }
-  ],
-  "images": [
-    {
-      "src": "images/analytics-dashboard-light.png",
-      "alt": "Analytics Dashboard",
-      "caption": "Main analytics dashboard with key performance metrics",
-      "theme": "light"
+      "id": "read-kpis",
+      "title": "Read the four performance cards",
+      "content": "<p>Just below Total Statistics are four cards that reflect the date range you've selected:</p><ul><li><strong>Total calls</strong> &mdash; how many calls were made and received, with average duration.</li><li><strong>Total minutes</strong> &mdash; total talk time, with your success rate.</li><li><strong>Total spent</strong> &mdash; total cost for the period, with cost per minute.</li><li><strong>Avg cost / call</strong> &mdash; average price of a single call, with cost per day.</li></ul><p>These update automatically whenever you change the date range or any filter.</p>",
+      "images": [
+        { "src": "images/analytics/overview-stats-light.png", "alt": "Overview statistics cards", "caption": "Total calls, minutes, spend, and average cost per call for the selected period", "theme": "light" },
+        { "src": "images/analytics/overview-stats-dark.png", "alt": "Overview statistics cards", "caption": "Total calls, minutes, spend, and average cost per call for the selected period", "theme": "dark" }
+      ]
     },
     {
-      "src": "images/analytics-dashboard-dark.png",
-      "alt": "Analytics Dashboard",
-      "caption": "Main analytics dashboard with key performance metrics",
-      "theme": "dark"
+      "id": "filter",
+      "title": "Filter by date, agent, and more",
+      "content": "<p>Use the <strong>Filters</strong> bar to narrow the numbers and the calls table below it:</p><ol><li><strong>Date</strong> &mdash; pick <em>Today</em>, <em>Yesterday</em>, <em>This Week</em>, <em>This Month</em>, <em>Last 30 Days</em>, or <em>Custom Range</em> for exact dates.</li><li><strong>Phone numbers</strong> &mdash; limit to calls on one of your numbers.</li><li><strong>Agent</strong> &mdash; focus on a single AI agent (or <em>Web Dialer</em> for manual calls).</li><li><strong>Tags</strong> &mdash; filter by outcome, such as <em>Voicemail</em>, <em>No Answer</em>, <em>Transfer</em>, or <em>Calendar</em>.</li><li><strong>Owner</strong> &mdash; view only a specific team member's calls.</li></ol><p>You can also type a name in <strong>Search customer</strong> to find a specific contact's calls.</p>"
+    },
+    {
+      "id": "read-table-charts",
+      "title": "Drill into calls and charts",
+      "content": "<ul><li>The <strong>Calls</strong> table lists every call in the window with the contact, agent/campaign, date, duration, type, tags, and owner. Click a row's eye icon to open the full call detail.</li><li>At the bottom, three charts break the data down further: <strong>Reason call ended</strong>, <strong>Avg duration by agent</strong>, and <strong>Call volume by hour</strong> &mdash; useful for spotting your busiest times and best-performing agents.</li></ul>"
     }
   ],
-  "metaTitle": "Analytics Dashboard - Performance Overview | iMash Docs",
-  "metaDescription": "Monitor AI agent performance with comprehensive analytics. Track KPIs, conversion rates, and system metrics.",
-  "metaKeywords": "analytics dashboard, performance metrics, KPI tracking, data visualization, business intelligence, reporting"
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Go deeper into campaign performance and spending.",
+    "cards": [
+      { "href": "/analytics/reports", "title": "Reports", "description": "Compare per-campaign outcomes, connect rates, and cost." },
+      { "href": "/analytics/cost-management", "title": "Cost Management", "description": "See your balance, pricing, and where spend goes." },
+      { "href": "/campaigns/campaign-analytics", "title": "Read Campaign Analytics", "description": "Live campaign progress and connect rates." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Analytics Dashboard - Overview & KPIs | iMash Docs",
+  "metaDescription": "Read your call center KPIs on the iMash Overview page and filter calls, minutes, and spend by date, agent, phone number, tags, and owner.",
+  "metaKeywords": "analytics dashboard, overview, call KPIs, total calls, total minutes, call cost, dashboard filters, agent performance, imash"
 }

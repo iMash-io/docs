@@ -1,0 +1,53 @@
+{
+  "title": "Crear una Automatización (Smart Flow)",
+  "lede": "Usa el creador visual de Automatización para conectar un disparador con una o más acciones, de modo que tareas como crear un lead, enviar un mensaje o iniciar una llamada ocurran automáticamente.",
+  "timeToComplete": "8 minutos",
+  "steps": [
+    {
+      "id": "open-automation",
+      "title": "Abrir Automatización",
+      "content": "<ol><li>En el menú de la izquierda, ve a <strong>Intelligence Center → Automation</strong> (Centro de Inteligencia → Automatización).</li><li>Esto abre el panel visual de flujos de trabajo donde viven todas tus automatizaciones.</li><li>Haz clic en <strong>New Flow</strong> (Nuevo flujo) o en el botón <strong>+</strong> para comenzar una automatización nueva.</li></ol>",
+      "images": [
+        { "src": "images/automations/automation-overview-light.png", "alt": "Panel de Automatización", "caption": "El panel de Automatización lista tus flujos de trabajo.", "theme": "light" },
+        { "src": "images/automations/automation-overview-dark.png", "alt": "Panel de Automatización", "caption": "El panel de Automatización lista tus flujos de trabajo.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "pick-trigger",
+      "title": "Elegir un Disparador",
+      "content": "<ol><li>Cada flujo comienza con un <strong>disparador</strong>: el evento que lo pone en marcha.</li><li>Haz clic en el primer bloque y elige un disparador. Uno común es <strong>Catch Webhook</strong> (Capturar Webhook), que te da una URL a la que los sistemas externos pueden enviar datos.</li><li>Otros disparadores incluyen un <strong>schedule</strong> (programación: ejecutar cada X minutos) o un evento de una app.</li></ol>",
+      "images": [
+        { "src": "images/automations/automation-builder-light.png", "alt": "Creador de Automatización", "caption": "Elige un disparador y luego encadena acciones debajo de él.", "theme": "light" },
+        { "src": "images/automations/automation-builder-dark.png", "alt": "Creador de Automatización", "caption": "Elige un disparador y luego encadena acciones debajo de él.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "add-actions",
+      "title": "Agregar Acciones",
+      "content": "<ol><li>Haz clic en el <strong>+</strong> debajo del disparador para agregar una <strong>acción</strong>: la tarea que se ejecuta.</li><li>Usa las acciones de <strong>System Tables</strong> (Tablas del Sistema) para trabajar con datos de iMash: crear un lead o contacto, buscar filas o iniciar una llamada saliente.</li><li>Referencia datos del disparador (por ejemplo, un número de teléfono que llegó en el webhook) dentro de los campos de cada acción.</li><li>Agrega tantas acciones como necesites: se ejecutan de arriba hacia abajo.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "test-publish",
+      "title": "Probar y Publicar",
+      "content": "<ol><li>Usa <strong>Test</strong> (Probar) para ejecutar el flujo con datos de muestra y confirmar que cada paso funcione.</li><li>Corrige cualquier paso que muestre un error antes de ponerlo en producción.</li><li>Activa el flujo en <strong>On</strong> (Encendido, Publicar) para que se ejecute automáticamente de ahora en adelante.</li></ol>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Amplía tus automatizaciones con datos y herramientas:",
+    "cards": [
+      { "href": "/automations/webhooks", "title": "Recibir Datos con Webhooks", "description": "Usa el disparador Catch Webhook para aceptar datos de otros sistemas." },
+      { "href": "/automations/integrations", "title": "Conectar Integraciones", "description": "Vincula apps externas y credenciales a tus flujos." },
+      { "href": "/automations/custom-tools", "title": "Crear Herramientas Personalizadas", "description": "Crea herramientas HTTP que tu agente de IA pueda invocar durante una llamada." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o preguntas:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Crear una Automatización (Smart Flow) | iMash Docs",
+  "metaDescription": "Crea flujos de trabajo automatizados en iMash: elige un disparador como Catch Webhook, agrega acciones de System Tables y luego prueba y publica tu flujo.",
+  "metaKeywords": "automatización, smart flows, creador de flujos, disparadores, acciones, catch webhook, system tables, imash"
+}

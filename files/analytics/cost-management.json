@@ -1,33 +1,47 @@
 {
   "title": "Cost Management",
-  "lede": "Monitor and optimize your spending on voice services, API calls, and platform usage.",
-  "sections": [
+  "lede": "See your prepaid balance, understand how each call and message is priced, top up funds, and review every charge on the Billing page.",
+  "timeToComplete": "5 minutes",
+  "steps": [
     {
-      "id": "cost-tracking",
-      "title": "Cost Tracking",
-      "content": "<p>Track spending across all iMash services and usage categories.</p><h3>Cost Categories:</h3><ul><li><strong>Voice Calls:</strong> Inbound and outbound calling costs</li><li><strong>AI Processing:</strong> Language model and voice synthesis costs</li><li><strong>Phone Numbers:</strong> Monthly phone number rental fees</li><li><strong>Storage:</strong> Call recording and data storage costs</li></ul>"
+      "id": "open-billing",
+      "title": "Open the Billing page",
+      "content": "<ol><li>In the left menu, under <strong>Account</strong>, open <strong>Billing</strong> (at <code>/billing</code>).</li><li>The <strong>Prepaid Balance</strong> card shows your current balance &mdash; the funds available to pay for calls and messages. Usage is drawn down from this balance as it happens.</li></ol>",
+      "images": [
+        { "src": "images/analytics/billing-light.png", "alt": "Billing page", "caption": "The Billing page shows your prepaid balance, add-funds panel, and transaction tabs", "theme": "light" },
+        { "src": "images/analytics/billing-dark.png", "alt": "Billing page", "caption": "The Billing page shows your prepaid balance, add-funds panel, and transaction tabs", "theme": "dark" }
+      ]
     },
     {
-      "id": "cost-optimization",
-      "title": "Cost Optimization",
-      "content": "<p>Identify opportunities to reduce costs and improve efficiency.</p><ul><li><strong>Usage Patterns:</strong> Analyze peak usage times</li><li><strong>Cost Alerts:</strong> Set spending thresholds and notifications</li><li><strong>Budget Management:</strong> Set monthly spending limits</li><li><strong>Provider Comparison:</strong> Compare costs across different providers</li></ul>"
-    }
-  ],
-  "images": [
-    {
-      "src": "images/cost-management-light.png",
-      "alt": "Cost Management Dashboard",
-      "caption": "Cost tracking and budget management interface",
-      "theme": "light"
+      "id": "how-cost-works",
+      "title": "Understand how a call is priced",
+      "content": "<p>Every call is priced per usage, not as a flat fee. iMash adds up the cost of each part (\"leg\") of the call &mdash; the phone minutes, the AI language model, the voice (text-to-speech), and the transcription (speech-to-text) &mdash; and stores the total on the call. Messages (SMS/WhatsApp) are priced per message.</p><ul><li><strong>Per-minute</strong> charges apply to voice calls and talk time.</li><li><strong>Per-message</strong> charges apply to each SMS or WhatsApp message.</li></ul><p>You can see the spend those charges produce as <strong>Total spent</strong> and <strong>Avg cost / call</strong> on the Overview page, and per campaign in Campaign Reports.</p>"
     },
     {
-      "src": "images/cost-management-dark.png",
-      "alt": "Cost Management Dashboard",
-      "caption": "Cost tracking and budget management interface",
-      "theme": "dark"
+      "id": "add-funds",
+      "title": "Top up your balance",
+      "content": "<ol><li>In the <strong>Add Funds</strong> panel, enter the amount you want to add.</li><li>Choose a payment method &mdash; a saved <strong>card</strong> or a <strong>bank account (ACH)</strong>.</li><li>Note the processing note: <strong>bank (ACH) payments have no fee</strong> and credit the full amount, while card payments carry a small processing fee, so the amount credited to your balance is slightly less than the amount charged.</li><li>Click <strong>Add Funds</strong> to complete the top-up. Your balance updates once the payment confirms.</li></ol>"
+    },
+    {
+      "id": "review-charges",
+      "title": "Review your charges",
+      "content": "<ul><li>Open the <strong>Ledger</strong> tab to see every transaction &mdash; top-ups and usage charges &mdash; with running balance.</li><li>Open the <strong>Phone Number Order</strong> tab to review your monthly phone-number subscriptions.</li><li>For a call-by-call breakdown of spend, use the <strong>Overview</strong> page filters or <strong>Campaign Reports</strong>.</li></ul>"
     }
   ],
-  "metaTitle": "Cost Management - Monitor Usage & Billing | iMash Docs",
-  "metaDescription": "Track usage costs and manage billing. Monitor call minutes, API usage, and optimize spending.",
-  "metaKeywords": "cost management, billing, usage tracking, cost optimization, expense monitoring, budget control"
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Keep an eye on spend and performance together.",
+    "cards": [
+      { "href": "/analytics/analytics-dashboard", "title": "Analytics Dashboard", "description": "Track total spend and cost per call over time." },
+      { "href": "/analytics/reports", "title": "Reports", "description": "See cost and profit per campaign." },
+      { "href": "/settings/billing", "title": "Billing Settings", "description": "Manage payment methods and account details." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Cost Management - Balance, Pricing & Top-ups | iMash Docs",
+  "metaDescription": "Manage your iMash prepaid balance: understand per-minute and per-message pricing, how call cost is calculated per leg, add funds, and review charges.",
+  "metaKeywords": "cost management, billing, prepaid balance, add funds, per minute pricing, per message pricing, call cost, usage, imash billing"
 }

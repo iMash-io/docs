@@ -1,0 +1,59 @@
+{
+  "title": "Crea tu primer agente",
+  "lede": "Crea un Smart Agent (Agente inteligente) desde cero: ponle nombre, escribe su prompt y su saludo, elige un modelo y una voz, y luego pruébalo, todo desde un solo editor.",
+  "timeToComplete": "6 minutos",
+  "steps": [
+    {
+      "id": "open-list",
+      "title": "Abre Smart Agents",
+      "content": "<ol><li>En la navegación izquierda, ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes).</li><li>Verás la lista de tus agentes existentes.</li><li>Haz clic en <strong>Create</strong> (Crear, el botón de nuevo agente) para empezar un agente nuevo.</li></ol>",
+      "images": [
+        { "src": "images/agents/assistants-list-light.png", "alt": "Lista de Smart Agents", "caption": "La lista de Smart Agents: crea un nuevo agente desde aquí.", "theme": "light" },
+        { "src": "images/agents/assistants-list-dark.png", "alt": "Lista de Smart Agents", "caption": "La lista de Smart Agents: crea un nuevo agente desde aquí.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "name-and-prompt",
+      "title": "Ponle nombre y escribe el prompt",
+      "content": "<ol><li>Dale al agente un <strong>nombre</strong> claro para que puedas encontrarlo más tarde.</li><li>En la columna de prompt a la izquierda, describe el rol, la personalidad y las reglas del agente: qué debe hacer y cómo debe hablar.</li><li>Define el <strong>first message</strong> (primer mensaje) que dice el agente cuando se conecta una llamada.</li></ol>",
+      "images": [
+        { "src": "images/agents/assistant-editor-light.png", "alt": "Editor de agentes", "caption": "El editor: el prompt a la izquierda, los paneles de funciones en el centro.", "theme": "light" },
+        { "src": "images/agents/assistant-editor-dark.png", "alt": "Editor de agentes", "caption": "El editor: el prompt a la izquierda, los paneles de funciones en el centro.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "model-and-voice",
+      "title": "Elige el cerebro y la voz",
+      "content": "<ol><li>Abre el panel <strong>Brains (LLM)</strong> (Cerebros) y elige el modelo que genera las respuestas (un modelo de voz a voz en tiempo real, o un modelo de texto combinado con un transcriptor).</li><li>Abre el panel <strong>Voice (TTS)</strong> (Voz) y elige la voz con la que habla tu agente.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "enhance",
+      "title": "Agrega capacidades (opcional)",
+      "content": "<ul><li><strong>Knowledge Base</strong> (Base de conocimiento): sube preguntas frecuentes y documentos para responder a partir de ellos.</li><li><strong>Tools / MCP</strong> (Herramientas / MCP): permite que el agente finalice llamadas, agende citas o llame a tus API.</li><li><strong>Settings</strong> (Configuración): ajusta los tiempos de espera, los mensajes de inactividad, el buzón de voz y la privacidad.</li></ul>",
+      "images": []
+    },
+    {
+      "id": "test",
+      "title": "Prueba y guarda",
+      "content": "<ol><li>Haz clic en <strong>Test Agent</strong> (Probar agente) y conéctate para hablar con él en vivo en el navegador.</li><li>Refina el prompt, la voz y la configuración hasta que se comporte como quieres.</li><li>Tus cambios se guardan en el agente para que quede listo para vincularlo a un número de teléfono o a un sitio web.</li></ol>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Ahora desarrolla y lanza tu nuevo agente:",
+    "cards": [
+      { "href": "/agents/voice-configuration", "title": "Configura la voz", "description": "Elige un proveedor de TTS y previsualiza voces." },
+      { "href": "/agents/agent-tools", "title": "Agrega herramientas", "description": "Permite que el agente realice acciones durante una llamada." },
+      { "href": "/agents/test-agent", "title": "Prueba tu agente", "description": "Pruébalo en el navegador o con una llamada telefónica real." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Crea tu primer agente | iMash Docs",
+  "metaDescription": "Guía paso a paso para crear un Smart Agent de iMash: ponle nombre, escribe el prompt y el saludo, elige un modelo y una voz, agrega herramientas y una base de conocimiento, y luego pruébalo.",
+  "metaKeywords": "crear agente, imash, smart agent, agente de voz, asistente de ia, configuración del agente, system prompt, primer mensaje"
+}

@@ -1,33 +1,60 @@
 {
-  "title": "Create Campaign",
-  "lede": "Set up automated calling campaigns with AI agents to reach your target audience.",
-  "sections": [
+  "title": "Create a Calling Campaign",
+  "lede": "Build an automated outbound calling campaign: create it, attach an AI agent and phone numbers, load the contacts to call, set your dialing pace, and start it.",
+  "timeToComplete": "10 minutes",
+  "steps": [
     {
-      "id": "campaign-basics",
-      "title": "Campaign Configuration",
-      "content": "<p>Create outbound calling campaigns with customizable settings and targeting.</p><h3>Campaign Settings:</h3><ul><li><strong>Name & Description:</strong> Identify your campaign</li><li><strong>Agent Selection:</strong> Choose which AI agent handles calls</li><li><strong>Target Audience:</strong> Select contacts, leads, or custom lists</li><li><strong>Schedule:</strong> Set calling times and frequency</li></ul>"
+      "id": "create-campaign",
+      "title": "Create a new campaign",
+      "content": "<ol><li>In the left menu open <strong>Campaigns</strong> to see your campaign list.</li><li>Click <strong>Create New Campaign</strong> in the top right.</li><li>A new draft campaign is created and opens automatically. It starts in <strong>Draft</strong> status, so nothing is dialed yet.</li></ol>",
+      "images": [
+        { "src": "images/campaigns/campaigns-list-light.png", "alt": "Campaigns list", "caption": "The Campaigns list with the Create New Campaign button", "theme": "light" },
+        { "src": "images/campaigns/campaigns-list-dark.png", "alt": "Campaigns list", "caption": "The Campaigns list with the Create New Campaign button", "theme": "dark" }
+      ]
     },
     {
-      "id": "dial-strategy",
-      "title": "Dialing Strategy",
-      "content": "<p>Configure how your campaign makes calls.</p><ul><li><strong>Dial Rate:</strong> Calls per hour or concurrent calls</li><li><strong>Retry Logic:</strong> Handle busy signals and no-answers</li><li><strong>Time Zones:</strong> Respect caller local time zones</li><li><strong>Compliance:</strong> Honor do-not-call lists</li></ul>"
-    }
-  ],
-  "images": [
-    {
-      "src": "images/campaign-creation-light.png",
-      "alt": "Campaign Creation Interface",
-      "caption": "Campaign setup and configuration form",
-      "theme": "light"
+      "id": "campaign-settings",
+      "title": "Name it and attach an AI agent + phone numbers",
+      "content": "<p>Open the <strong>Settings</strong> tab inside the campaign and fill in:</p><ul><li><strong>Name</strong> and <strong>Description</strong> so you can find it later.</li><li><strong>Phone Numbers</strong> &mdash; pick one or more of your numbers to dial out from. You can select whole groups at once.</li><li><strong>AI Agents</strong> &mdash; choose the AI agent that will handle each answered call. Don't have one yet? Create it first under Intelligence Center &rarr; Smart Agents.</li></ul><p>Changes on this tab save automatically.</p>",
+      "images": [
+        { "src": "images/campaigns/campaign-detail-light.png", "alt": "Campaign detail and settings", "caption": "The campaign Settings tab where you pick the AI agent and phone numbers", "theme": "light" },
+        { "src": "images/campaigns/campaign-detail-dark.png", "alt": "Campaign detail and settings", "caption": "The campaign Settings tab where you pick the AI agent and phone numbers", "theme": "dark" }
+      ]
     },
     {
-      "src": "images/campaign-creation-dark.png",
-      "alt": "Campaign Creation Interface",
-      "caption": "Campaign setup and configuration form",
-      "theme": "dark"
+      "id": "add-dial-list",
+      "title": "Add people to call (the dial list)",
+      "content": "<ol><li>Open the <strong>Add Leads</strong> or <strong>Add Contacts</strong> tab.</li><li>Search your CRM and add the people you want to call &mdash; they get queued into this campaign's dial list.</li><li>Switch to the <strong>Dial List</strong> tab to review everyone queued and their attempt status.</li></ol>",
+      "images": [
+        { "src": "images/campaigns/new-campaign-light.png", "alt": "Adding contacts to a campaign", "caption": "Add Leads / Add Contacts pull people from your CRM into the dial list", "theme": "light" },
+        { "src": "images/campaigns/new-campaign-dark.png", "alt": "Adding contacts to a campaign", "caption": "Add Leads / Add Contacts pull people from your CRM into the dial list", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "pacing",
+      "title": "Set the dialing pace and hours",
+      "content": "<p>Still on the <strong>Settings</strong> tab, control how fast the campaign dials:</p><ul><li><strong>Max Concurrent Calls</strong> &mdash; how many calls run at the same time.</li><li><strong>Working hours</strong> and <strong>working days</strong> &mdash; the campaign only dials inside this window.</li><li><strong>Time zone</strong> &mdash; keep the default to respect each contact's local time, or pin one zone.</li><li>Optionally enable <strong>Inbound Callbacks</strong> so people who call your number back are routed to an AI agent or a team group.</li></ul>"
+    },
+    {
+      "id": "start",
+      "title": "Start the campaign",
+      "content": "<ol><li>Go back to the <strong>Campaigns</strong> list (or use the campaign's own controls).</li><li>Click the <strong>Start</strong> (play) icon on the campaign row.</li><li>The status changes to <strong>Running</strong> and calls begin within your working hours. Use the <strong>Pause</strong> icon any time to stop dialing.</li></ol><p>When every contact has been fully attempted, the campaign automatically moves to <strong>Completed</strong> and its dial list is archived.</p>"
     }
   ],
-  "metaTitle": "Create Campaign - Automated Outreach Campaigns | iMash Docs",
-  "metaDescription": "Set up automated calling campaigns with AI agents. Configure dial lists, scheduling, and campaign objectives.",
-  "metaKeywords": "create campaign, outbound calling, automated campaigns, dial lists, campaign management, outreach automation"
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Fine-tune your list, watch the results, and stay compliant.",
+    "cards": [
+      { "href": "/campaigns/dial-lists", "title": "Manage the Dial List", "description": "Add, review, and clean up who gets called." },
+      { "href": "/campaigns/campaign-analytics", "title": "Campaign Analytics", "description": "Track progress, connect rate, and cost." },
+      { "href": "/agents/create-agent", "title": "Create an AI Agent", "description": "Build the agent that answers your calls." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Create a Calling Campaign | iMash Docs",
+  "metaDescription": "Step-by-step guide to creating an automated outbound calling campaign in iMash: attach an AI agent and phone numbers, build a dial list, set pacing, and start.",
+  "metaKeywords": "create campaign, outbound calling, ai agent campaign, dial list, campaign pacing, smart dialer, imash campaigns"
 }

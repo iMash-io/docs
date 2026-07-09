@@ -1,0 +1,61 @@
+{
+  "title": "Procesamiento posterior a la llamada y webhooks",
+  "lede": "Convierte cada llamada en resultados estructurados: genera un resumen, califica el éxito, extrae datos JSON personalizados y envíalo todo por POST a tus sistemas, configurado en el panel Webhooks Post Processing (Procesamiento posterior de webhooks).",
+  "timeToComplete": "10 minutos",
+  "videoUrl": "https://youtu.be/l7_wH8Bpsp0",
+  "videoLength": "3",
+  "steps": [
+    {
+      "id": "open-webhooks",
+      "title": "Abre Webhooks Post Processing",
+      "content": "<ol><li>Ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes) y abre tu agente.</li><li>Abre el panel <strong>Webhooks Post Processing</strong> (Procesamiento posterior de webhooks). Sus secciones son <strong>Server URL &amp; Events</strong> (URL del servidor y eventos), <strong>Summary</strong> (Resumen), <strong>Success Evaluation</strong> (Evaluación de éxito) y <strong>Structured Data</strong> (Datos estructurados).</li></ol>",
+      "images": [
+        { "src": "images/agents/webhooks-post-light.png", "alt": "Panel de procesamiento posterior de webhooks", "caption": "El panel Webhooks Post Processing: URL del servidor, resumen, evaluación de éxito y datos estructurados.", "theme": "light" },
+        { "src": "images/agents/webhooks-post-dark.png", "alt": "Panel de procesamiento posterior de webhooks", "caption": "El panel Webhooks Post Processing: URL del servidor, resumen, evaluación de éxito y datos estructurados.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "server-url",
+      "title": "Configura la URL del servidor y los eventos",
+      "content": "<ol><li>En <strong>Server URL &amp; Events</strong>, ingresa la URL que debe recibir los datos de la llamada mediante HTTP POST.</li><li>Marca los eventos que quieres enviar; por ejemplo resumen, transcripción, actualizaciones de estado, llamadas a herramientas, datos estructurados y evaluación de éxito.</li></ol>",
+      "images": [
+        { "src": "images/agents/assistant-editor-light.png", "alt": "Editor del agente", "caption": "Los resultados posteriores a la llamada se envían automáticamente cuando la llamada termina.", "theme": "light" },
+        { "src": "images/agents/assistant-editor-dark.png", "alt": "Editor del agente", "caption": "Los resultados posteriores a la llamada se envían automáticamente cuando la llamada termina.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "summary-eval",
+      "title": "Resumen y evaluación de éxito",
+      "content": "<ul><li><strong>Summary</strong> (Resumen): escribe una indicación que describa cómo resumir cada llamada.</li><li><strong>Success Evaluation</strong> (Evaluación de éxito): escribe una indicación y elige una rúbrica, como una escala del 1 al 10, una lista de verificación o un simple aprobado/reprobado, para que cada llamada se califique de forma coherente.</li></ul>",
+      "images": []
+    },
+    {
+      "id": "structured-data",
+      "title": "Extrae datos estructurados",
+      "content": "<ol><li>En <strong>Structured Data</strong> (Datos estructurados), agrega una indicación y crea un <strong>Data Schema</strong> (Esquema de datos) con las propiedades que quieres capturar (por ejemplo nombre, número de pedido o intención).</li><li>iMash extrae esos campos de la transcripción y los incluye en el POST a tu URL del servidor.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "connect-automation",
+      "title": "Envíalo a una automatización",
+      "content": "<ol><li>En <strong>Intelligence Center → Automation</strong> (Centro de inteligencia → Automatización), crea un flujo que comience con un disparador <strong>Catch Webhook</strong> (Capturar webhook) y copia su URL.</li><li>Pega esa URL como la URL del servidor de arriba.</li><li>Ahora los resultados de las llamadas pueden fluir directamente a una automatización: enviar un resumen por correo, actualizar una hoja de cálculo o llamar a otra API.</li></ol>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Haz más con los datos de tus llamadas:",
+    "cards": [
+      { "href": "/automations/webhooks", "title": "Crea un flujo de webhook", "description": "Captura el POST y enrútalo a donde quieras con automatizaciones." },
+      { "href": "/agents/observer-agent", "title": "Agente observador", "description": "Marca momentos importantes en vivo, durante la llamada." },
+      { "href": "/agents/agent-privacy", "title": "Privacidad y grabación", "description": "Controla qué transcripción y audio se almacenan." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Procesamiento posterior a la llamada y webhooks | Documentación de iMash",
+  "metaDescription": "Configura iMash Webhooks Post Processing: resume llamadas, califica el éxito, extrae datos JSON estructurados y envía todo por POST a tu servidor o a una automatización.",
+  "metaKeywords": "webhooks, procesamiento posterior, imash, agente inteligente, datos estructurados, evaluación de éxito, resumen de llamada, automatización"
+}

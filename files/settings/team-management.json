@@ -1,33 +1,57 @@
 {
   "title": "Team Management",
-  "lede": "Manage team members, roles, and permissions across your iMash organization.",
-  "sections": [
+  "lede": "Invite your staff as team members, give each person a role and the exact features they should see, and turn access on or off at any time.",
+  "timeToComplete": "8 minutes",
+  "steps": [
     {
-      "id": "user-management",
-      "title": "User Management",
-      "content": "<p>Add, remove, and manage team members with appropriate access levels.</p><h3>User Features:</h3><ul><li><strong>User Invitations:</strong> Send email invitations to new team members</li><li><strong>Role Assignment:</strong> Assign specific roles and permissions</li><li><strong>Access Control:</strong> Control access to features and data</li><li><strong>Activity Monitoring:</strong> Track user login and activity</li></ul>"
+      "id": "open-user-management",
+      "title": "Open Team Management",
+      "content": "<ol><li>In the left navigation, open the <strong>Account</strong> group and click <strong>Team</strong> (or go to <code>/user-management</code>).</li><li>The <strong>Users</strong> tab lists everyone on your account. The account owner is shown with an <strong>Owner</strong> badge; everyone you add is a <strong>sub-account</strong> (team member) under you.</li><li>The tabs across the top are <strong>Users</strong>, <strong>Groups</strong> (Permission Groups), and <strong>View Profiles</strong>. Start on <strong>Users</strong>.</li></ol><p>Only the account owner and members you give the <em>User Management</em> permission can manage the team.</p>",
+      "images": [
+        { "src": "images/settings/user-management-light.png", "alt": "Team Management users list", "caption": "The Users tab lists the owner and every team member with their role and access toggles", "theme": "light" },
+        { "src": "images/settings/user-management-dark.png", "alt": "Team Management users list", "caption": "The Users tab lists the owner and every team member with their role and access toggles", "theme": "dark" }
+      ]
     },
     {
-      "id": "roles-permissions",
-      "title": "Roles & Permissions",
-      "content": "<p>Define custom roles with specific permissions for different team functions.</p><ul><li><strong>Predefined Roles:</strong> Admin, Manager, Agent, Viewer</li><li><strong>Custom Roles:</strong> Create roles tailored to your organization</li><li><strong>Permission Levels:</strong> Read, write, delete, admin permissions</li><li><strong>Feature Access:</strong> Control access to specific platform features</li></ul>"
-    }
-  ],
-  "images": [
-    {
-      "src": "images/team-management-light.png",
-      "alt": "Team Management Interface",
-      "caption": "User management and role assignment tools",
-      "theme": "light"
+      "id": "add-member",
+      "title": "Add a team member",
+      "content": "<ol><li>On the <strong>Users</strong> tab, click <strong>Create</strong> (Add User).</li><li>Enter the member's <strong>First Name</strong>, <strong>Last Name</strong>, <strong>Email</strong>, and a starting <strong>Password</strong>.</li><li>Pick a <strong>Role</strong> from the list (see the next step). You can leave it blank and set it later.</li><li>Click <strong>Save</strong>. The member can now sign in with that email and password.</li></ol><p>For safety, <strong>Billing</strong> and <strong>Credentials</strong> access are always turned off for a brand-new member. Turn them on later only if you trust the person with payments and API keys.</p>"
     },
     {
-      "src": "images/team-management-dark.png",
-      "alt": "Team Management Interface",
-      "caption": "User management and role assignment tools",
-      "theme": "dark"
+      "id": "roles",
+      "title": "Give the member a role",
+      "content": "<ul><li>A <strong>Role</strong> decides which data a member can read, add, edit, or delete. Roles are managed in the <strong>Roles</strong> and <strong>Permissions</strong> areas of this page.</li><li>Start from a ready-made role template (for example <strong>Manager</strong>, <strong>Agent</strong>, or <strong>Viewer</strong>) — selecting it creates a real, editable copy for your account.</li><li>Open a role's permissions to fine-tune each area: allow <strong>Read</strong>, <strong>Create</strong>, <strong>Update</strong>, or <strong>Delete</strong>, and set the <strong>scope</strong> (own records only, or the whole account).</li></ul><p>Assign the same role to everyone who does the same job so their access stays consistent.</p>"
+    },
+    {
+      "id": "groups-view-profiles",
+      "title": "Control visibility with Groups and View Profiles",
+      "content": "<ul><li><strong>Permission Groups</strong> (Groups tab) decide <em>whose records</em> a member can see. A member with account-wide scope only sees records owned by people in their group — great for splitting a large team into pods.</li><li><strong>View Profiles</strong> (View Profiles tab) are reusable presets of feature toggles and pricing. Assign a profile to a member to apply the same page-visibility rules in one click.</li><li>On each user row you can quickly set the member's <strong>Groups</strong> and <strong>View Profile</strong> without opening a modal.</li></ul>"
+    },
+    {
+      "id": "feature-toggles",
+      "title": "Turn features on or off per member",
+      "content": "<ol><li>On a member's row, use the toggles and settings buttons to control access to <strong>Billing</strong>, <strong>Credentials</strong>, <strong>Automation</strong>, <strong>CRM</strong>, <strong>Call Center</strong>, <strong>Campaigns</strong>, <strong>API Keys</strong>, and <strong>User Management</strong>.</li><li>Open <strong>Call Center</strong> settings to hide individual sub-pages (Phone numbers, Call Logs, Live Calls, and more) from that member.</li><li>Use the per-member <strong>Billing</strong> option to set a custom per-minute price or hide prices from that member.</li></ol>"
+    },
+    {
+      "id": "activate-deactivate",
+      "title": "Activate, deactivate, or assist a member",
+      "content": "<ul><li>Use <strong>Enable</strong> / <strong>Disable</strong> on a member's row to instantly allow or block their sign-in — no need to delete the account.</li><li>As the owner, use <strong>Impersonate</strong> to view the app exactly as that member sees it, so you can help them or check their access.</li><li>Update a member's name or role at any time from the same row.</li></ul>"
     }
   ],
-  "metaTitle": "Team Management - User Roles & Permissions | iMash Docs",
-  "metaDescription": "Manage team members, assign roles, and control permissions. Configure access levels and team collaboration.",
-  "metaKeywords": "team management, user roles, permissions, access control, team collaboration, user administration"
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Round out your account setup and keep it secure.",
+    "cards": [
+      { "href": "/settings/security", "title": "Security", "description": "Passwords, session control, and account safety." },
+      { "href": "/settings/billing", "title": "Billing", "description": "Add funds and manage payment methods." },
+      { "href": "/analytics/cost-management", "title": "Cost Management", "description": "See where your usage and spend go." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Team Management - Invite Users, Roles & Permissions | iMash Docs",
+  "metaDescription": "Add team members, assign roles, set Permission Groups and View Profiles, toggle feature access, and enable or disable users in iMash.",
+  "metaKeywords": "team management, user management, invite users, roles, permissions, permission groups, view profiles, access control"
 }

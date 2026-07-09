@@ -1,55 +1,55 @@
 {
-  "title": "Using Custom Data with Voice AI Agents in iMash",
-  "lede": "This guide explains how to work with custom data in iMash to provide your Voice AI Agent with additional context from leads, contacts, and external applications.",
+  "title": "Personalize Agents with Custom Variables",
+  "lede": "Feed your Smart Agent live context - a caller's name, address, and any custom fields - so it can greet people by name and tailor every conversation.",
   "timeToComplete": "6 minutes",
   "videoUrl": "https://youtu.be/mR9rNHDWJJ8",
   "videoLength": "2",
   "steps": [
     {
-      "id": "use-parameters",
-      "title": "Use Parameters in Settings and Prompts",
-      "content": "<ol><li>Open any of your <strong>AI Agents</strong>.</li><li>Go to a text field such as <em>system prompt</em>.</li><li>Type an opening parenthesis <strong>{</strong> to see available parameter fields in a pop-up menu.</li><li>Choose a field to dynamically insert values (e.g., name, email, family name).</li></ol>",
-      "images": []
+      "id": "insert-variable",
+      "title": "Insert Variables in the Prompt",
+      "content": "<ol><li>Go to <strong>Intelligence Center → Smart Agents</strong> and open your agent.</li><li>Click into a text field such as the system prompt or the first message.</li><li>Type an opening brace <code>{</code> to open the variable menu. Built-in variables include <code>{first_name}</code>, <code>{last_name}</code>, <code>{email}</code>, and <code>{full_address}</code>.</li><li>Pick one to insert it at the cursor - at call time it is replaced with the real value.</li></ol>",
+      "images": [
+        { "src": "images/agents/templates-variables-light.png", "alt": "Templates and variables", "caption": "Type { in a prompt field to insert CRM variables.", "theme": "light" },
+        { "src": "images/agents/templates-variables-dark.png", "alt": "Templates and variables", "caption": "Type { in a prompt field to insert CRM variables.", "theme": "dark" }
+      ]
     },
     {
-      "id": "custom-data-tab",
-      "title": "Add Custom Data to Leads or Contacts",
-      "content": "<ol><li>Navigate to a specific <strong>Lead</strong> or <strong>Contact</strong> in the CRM.</li><li>Open the <strong>Custom Data</strong> tab.</li><li>Add new fields by giving them a <strong>Name</strong> and a <strong>Value</strong>.</li><li>These values will be passed to the agent as context during conversations.</li></ol>",
+      "id": "templates",
+      "title": "Manage Templates & Variables",
+      "content": "<ol><li>Open the <strong>Templates &amp; Variables</strong> panel in the editor.</li><li>Here you can save reusable prompt templates and manage the variables your agent knows about.</li></ol>",
+      "images": [
+        { "src": "images/agents/assistant-editor-light.png", "alt": "Agent editor", "caption": "Templates & Variables lives in the middle column of the editor.", "theme": "light" },
+        { "src": "images/agents/assistant-editor-dark.png", "alt": "Agent editor", "caption": "Templates & Variables lives in the middle column of the editor.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "crm-custom-data",
+      "title": "Add Custom Data to a Lead or Contact",
+      "content": "<ol><li>Open a <strong>Lead</strong> or <strong>Contact</strong> in the CRM.</li><li>Add custom fields (a name and a value) to that record.</li><li>Those values become available to the agent as context whenever it speaks with that person.</li></ol>",
       "images": []
     },
     {
       "id": "api-custom-vars",
-      "title": "Send Custom Variables via API",
-      "content": "<ol><li>Open the <strong>API Info</strong> window in your dashboard.</li><li>In the POST request, under metadata, include <strong>customVars</strong> with key–value pairs (variable name and value).</li><li>Example: send custom data when initiating calls from an external CRM.</li><li>The agent will then receive and use this context dynamically during the call.</li></ol>",
+      "title": "Send Variables via the API",
+      "content": "<ol><li>When you start a call through the API, include a <strong>customVars</strong> object in the request metadata with your key/value pairs.</li><li>This is ideal for passing context from an external CRM or app at call time.</li><li>The agent receives those values and can reference them in the conversation.</li></ol>",
       "images": []
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Now that you’ve added custom data, you can enrich conversations even further:",
+    "description": "Combine personalized context with more capabilities:",
     "cards": [
-      {
-        "href": "/agents/knowledge-base",
-        "title": "Add a Knowledge Base",
-        "description": "Combine dynamic custom data with FAQs and documents for richer responses."
-      },
-      {
-        "href": "/agents/tools",
-        "title": "Add Tools",
-        "description": "Enable your agent to perform actions like scheduling and external API calls."
-      },
-      {
-        "href": "/agents/mcp-servers",
-        "title": "Connect MCP Servers",
-        "description": "Group tools and flows in an MCP to expand your agent’s capabilities."
-      }
+      { "href": "/agents/agent-knowledge-base", "title": "Add a Knowledge Base", "description": "Pair dynamic variables with your documents and FAQs." },
+      { "href": "/agents/agent-tools", "title": "Add Tools", "description": "Let the agent act on the data it collects." },
+      { "href": "/agents/advanced-settings", "title": "Post-Call Processing", "description": "Capture structured data and push it to your systems." }
     ]
   },
   "support": {
     "title": "Need Help?",
-    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a> for detailed documentation</li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a> for step-by-step guides</li></ul>"
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Custom Data with Voice AI Agents in iMash",
-  "metaDescription": "Learn how to use custom data with Voice AI Agents in iMash. Add fields to leads and contacts or send custom variables via API for richer conversation context.",
-  "metaKeywords": "custom data, imash tutorial, voice ai agent, crm integration, api customVars, dynamic parameters"
+  "metaTitle": "Personalize Agents with Custom Variables | iMash Docs",
+  "metaDescription": "Give your iMash Smart Agent live context. Insert {first_name}, {full_address} and custom fields in prompts, add custom data to CRM records, and pass customVars via the API.",
+  "metaKeywords": "custom variables, imash, smart agent, personalization, customVars, crm variables, dynamic prompt, templates"
 }

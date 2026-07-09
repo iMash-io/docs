@@ -1,0 +1,57 @@
+{
+  "title": "Gestión del equipo",
+  "lede": "Invita a tu personal como miembros del equipo, dale a cada persona un rol y exactamente las funciones que debe ver, y activa o desactiva el acceso en cualquier momento.",
+  "timeToComplete": "8 minutos",
+  "steps": [
+    {
+      "id": "open-user-management",
+      "title": "Abre Gestión del equipo",
+      "content": "<ol><li>En la navegación izquierda, abre el grupo <strong>Account</strong> (Cuenta) y haz clic en <strong>Team</strong> (Equipo) (o ve a <code>/user-management</code>).</li><li>La pestaña <strong>Users</strong> (Usuarios) lista a todas las personas de tu cuenta. El propietario de la cuenta aparece con una insignia de <strong>Owner</strong> (Propietario); cada persona que agregues es una <strong>sub-account</strong> (subcuenta), es decir, un miembro del equipo bajo tu cuenta.</li><li>Las pestañas de la parte superior son <strong>Users</strong> (Usuarios), <strong>Groups</strong> (Grupos, o Grupos de permisos) y <strong>View Profiles</strong> (Perfiles de vista). Comienza en <strong>Users</strong>.</li></ol><p>Solo el propietario de la cuenta y los miembros a quienes le des el permiso <em>User Management</em> (Gestión de usuarios) pueden administrar el equipo.</p>",
+      "images": [
+        { "src": "images/settings/user-management-light.png", "alt": "Lista de usuarios de Gestión del equipo", "caption": "La pestaña Users lista al propietario y a cada miembro del equipo con su rol y sus controles de acceso", "theme": "light" },
+        { "src": "images/settings/user-management-dark.png", "alt": "Lista de usuarios de Gestión del equipo", "caption": "La pestaña Users lista al propietario y a cada miembro del equipo con su rol y sus controles de acceso", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "add-member",
+      "title": "Agrega un miembro del equipo",
+      "content": "<ol><li>En la pestaña <strong>Users</strong>, haz clic en <strong>Create</strong> (Crear, Agregar usuario).</li><li>Ingresa el <strong>First Name</strong> (Nombre), <strong>Last Name</strong> (Apellido), <strong>Email</strong> (Correo) y una <strong>Password</strong> (Contraseña) inicial del miembro.</li><li>Elige un <strong>Role</strong> (Rol) de la lista (consulta el siguiente paso). Puedes dejarlo en blanco y configurarlo después.</li><li>Haz clic en <strong>Save</strong> (Guardar). El miembro ya puede iniciar sesión con ese correo y contraseña.</li></ol><p>Por seguridad, el acceso a <strong>Billing</strong> (Facturación) y <strong>Credentials</strong> (Credenciales) siempre está desactivado para un miembro recién creado. Actívalos después solo si confías en que esa persona maneje pagos y claves de API.</p>"
+    },
+    {
+      "id": "roles",
+      "title": "Asigna un rol al miembro",
+      "content": "<ul><li>Un <strong>Role</strong> (Rol) decide qué datos puede leer, agregar, editar o eliminar un miembro. Los roles se administran en las áreas <strong>Roles</strong> y <strong>Permissions</strong> (Permisos) de esta página.</li><li>Comienza a partir de una plantilla de rol lista para usar (por ejemplo <strong>Manager</strong> (Gerente), <strong>Agent</strong> (Agente) o <strong>Viewer</strong> (Espectador)) — al seleccionarla se crea una copia real y editable para tu cuenta.</li><li>Abre los permisos de un rol para ajustar cada área: permite <strong>Read</strong> (Leer), <strong>Create</strong> (Crear), <strong>Update</strong> (Actualizar) o <strong>Delete</strong> (Eliminar), y define el <strong>scope</strong> (alcance: solo los propios registros, o toda la cuenta).</li></ul><p>Asigna el mismo rol a todas las personas que hacen el mismo trabajo para que su acceso sea consistente.</p>"
+    },
+    {
+      "id": "groups-view-profiles",
+      "title": "Controla la visibilidad con Groups y View Profiles",
+      "content": "<ul><li>Los <strong>Permission Groups</strong> (Grupos de permisos, pestaña Groups) deciden <em>los registros de quién</em> puede ver un miembro. Un miembro con alcance de toda la cuenta solo ve los registros que pertenecen a las personas de su grupo — ideal para dividir un equipo grande en células.</li><li>Los <strong>View Profiles</strong> (Perfiles de vista, pestaña View Profiles) son ajustes preestablecidos reutilizables de controles de funciones y precios. Asigna un perfil a un miembro para aplicar las mismas reglas de visibilidad de páginas con un solo clic.</li><li>En cada fila de usuario puedes definir rápidamente los <strong>Groups</strong> (Grupos) y el <strong>View Profile</strong> (Perfil de vista) del miembro sin abrir una ventana emergente.</li></ul>"
+    },
+    {
+      "id": "feature-toggles",
+      "title": "Activa o desactiva funciones por miembro",
+      "content": "<ol><li>En la fila de un miembro, usa los controles y botones de configuración para gestionar el acceso a <strong>Billing</strong> (Facturación), <strong>Credentials</strong> (Credenciales), <strong>Automation</strong> (Automatización), <strong>CRM</strong>, <strong>Call Center</strong> (Centro de llamadas), <strong>Campaigns</strong> (Campañas), <strong>API Keys</strong> (Claves de API) y <strong>User Management</strong> (Gestión de usuarios).</li><li>Abre la configuración de <strong>Call Center</strong> para ocultar subpáginas individuales (Phone numbers, Call Logs, Live Calls y más) a ese miembro.</li><li>Usa la opción <strong>Billing</strong> por miembro para establecer un precio personalizado por minuto u ocultar los precios a ese miembro.</li></ol>"
+    },
+    {
+      "id": "activate-deactivate",
+      "title": "Activa, desactiva o asiste a un miembro",
+      "content": "<ul><li>Usa <strong>Enable</strong> (Habilitar) / <strong>Disable</strong> (Deshabilitar) en la fila de un miembro para permitir o bloquear al instante su inicio de sesión — sin necesidad de eliminar la cuenta.</li><li>Como propietario, usa <strong>Impersonate</strong> (Suplantar) para ver la aplicación exactamente como la ve ese miembro, de modo que puedas ayudarlo o revisar su acceso.</li><li>Actualiza el nombre o el rol de un miembro en cualquier momento desde la misma fila.</li></ul>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Completa la configuración de tu cuenta y mantenla segura.",
+    "cards": [
+      { "href": "/settings/security", "title": "Seguridad", "description": "Contraseñas, control de sesiones y protección de la cuenta." },
+      { "href": "/settings/billing", "title": "Facturación", "description": "Agrega fondos y administra métodos de pago." },
+      { "href": "/analytics/cost-management", "title": "Gestión de costos", "description": "Descubre a dónde va tu uso y tu gasto." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Gestión del equipo - Invitar usuarios, roles y permisos | Documentación de iMash",
+  "metaDescription": "Agrega miembros del equipo, asigna roles, configura Grupos de permisos y Perfiles de vista, alterna el acceso a funciones y habilita o deshabilita usuarios en iMash.",
+  "metaKeywords": "gestión del equipo, gestión de usuarios, invitar usuarios, roles, permisos, grupos de permisos, perfiles de vista, control de acceso"
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Importar y exportar datos",
+  "lede": "Trae contactos, leads y cuentas a iMash de forma masiva, ya sea subiendo tu propia hoja de cálculo o extrayéndolos del directorio integrado de People Explorer.",
+  "timeToComplete": "8 minutos",
+  "steps": [
+    {
+      "id": "csv-import",
+      "title": "Importa tu propia lista (CSV)",
+      "content": "<ol><li>Ve a la lista a la que quieres agregar datos: <strong>CRM → Contacts</strong> (Contactos), <strong>Leads</strong> o <strong>Accounts</strong> (Cuentas).</li><li>Haz clic en el botón <strong>Import</strong> (Importar) en la parte superior de la lista.</li><li>Sube tu archivo <strong>CSV</strong> y sigue las indicaciones para <strong>mapear tus columnas</strong> (nombre, correo, teléfono, etc.) a los campos correspondientes de iMash.</li><li>Revisa la vista previa y luego confirma para importar. Los nuevos registros aparecen en la lista de inmediato.</li></ol><p>Consejo: coloca un contacto por fila e incluye una fila de encabezados para que el mapeo de columnas sea fácil.</p>"
+    },
+    {
+      "id": "open-people-import",
+      "title": "Importa desde People Explorer (Marketing)",
+      "content": "<ol><li>En la navegación de la izquierda, abre <strong>Marketing</strong> y haz clic en <strong>Import Contacts / Leads / Accounts</strong> (Importar contactos / leads / cuentas) (o ve a <code>/marketing/import-people</code>).</li><li>Esta herramienta busca en un amplio directorio de personas y empresas para que puedas armar una lista específica sin una hoja de cálculo.</li><li>Avanzarás por tres pasos: <strong>Build filters</strong> (Crear filtros), <strong>Preview &amp; select</strong> (Vista previa y selección) y <strong>Map &amp; target</strong> (Mapear y destinar).</li></ol>",
+      "images": [
+        { "src": "images/crm/import-people-light.png", "alt": "Importación desde People Explorer", "caption": "El asistente de importación de Marketing: crear filtros, vista previa y luego mapear e importar", "theme": "light" },
+        { "src": "images/crm/import-people-dark.png", "alt": "Importación desde People Explorer", "caption": "El asistente de importación de Marketing: crear filtros, vista previa y luego mapear e importar", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "filter-preview",
+      "title": "Crea filtros y previsualiza",
+      "content": "<ol><li>En <strong>Build filters</strong> (Crear filtros), acota el directorio por criterios como puesto de trabajo, empresa, industria o ubicación.</li><li>Avanza a <strong>Preview &amp; select</strong> (Vista previa y selección) para ver las personas que coinciden.</li><li>Marca las personas que quieres, o selecciona todas las coincidencias. Haz clic en una fila para inspeccionar el registro completo antes de importar.</li></ol>",
+      "images": [
+        { "src": "images/crm/import-export-light.png", "alt": "Vista previa y mapeo de importación", "caption": "Previsualiza las coincidencias y mapea los campos antes de importar", "theme": "light" },
+        { "src": "images/crm/import-export-dark.png", "alt": "Vista previa y mapeo de importación", "caption": "Previsualiza las coincidencias y mapea los campos antes de importar", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "map-target",
+      "title": "Mapea campos y elige el destino",
+      "content": "<ol><li>En <strong>Map &amp; target</strong> (Mapear y destinar), elige <strong>Import as</strong> (Importar como): <strong>Leads</strong>, <strong>Contacts</strong> (Contactos) o <strong>Accounts (companies)</strong> (Cuentas / empresas).</li><li>Mapea cada campo de origen a una columna estándar, o guarda datos adicionales en <strong>custom fields</strong> (campos personalizados).</li><li>Activa <strong>Also create companies as Accounts &amp; link</strong> (Crear también empresas como cuentas y vincular) para generar automáticamente cuentas de empresa y conectar a cada persona con la suya.</li><li>Haz clic para ejecutar la importación: los duplicados se combinan y un resumen muestra cuántos registros se crearon.</li></ol>"
+    },
+    {
+      "id": "export",
+      "title": "Exporta tus datos",
+      "content": "<ul><li>Abre cualquier lista del CRM (Contactos, Leads o Cuentas) y aplica los filtros que quieres exportar.</li><li>Usa la opción de exportación de la lista para descargar los registros filtrados como respaldo o para usarlos en otra herramienta.</li><li>Los registros exportados reflejan los filtros y la búsqueda actuales, así que acota la lista primero para exportar solo lo que necesitas.</li></ul>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Ahora que tus datos están dentro, ponlos a trabajar.",
+    "cards": [
+      { "href": "/crm/contacts", "title": "Contactos", "description": "Revisa y organiza las personas importadas." },
+      { "href": "/crm/leads", "title": "Leads", "description": "Trabaja los prospectos importados a través de tu pipeline." },
+      { "href": "/campaigns/create-campaign", "title": "Crear una campaña", "description": "Llama o envía mensajes a tu lista recién importada." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda?",
+    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Revisa nuestra <a data-href=\"/api-reference\">referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Importar y exportar datos - CRM | iMash Docs",
+  "metaDescription": "Importa de forma masiva contactos, leads y cuentas a iMash mediante carga de CSV o el directorio de People Explorer. Mapea campos, crea cuentas de empresa automáticamente y exporta datos.",
+  "metaKeywords": "importar datos, exportar datos, importar CSV, importación masiva, people explorer, importar leads, importar contactos, mapeo de campos"
+}

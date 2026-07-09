@@ -236,7 +236,7 @@
     "title": "Call Logs",
     "tableName": "callLogs",
     "excludeColumns": [
-      "id", "user_id", "call_sid", "recording_url", "sip_room", "uuid", "metadata", "affiliate_id", "recordedFile", "messageLogs", "created_at"
+      "id", "user_id", "call_sid", "recording_url", "sip_room", "uuid", "metadata", "affiliate_id", "recording", "messageLogs", "created_at"
     ],
     "supportedOperations": ["SELECT"],
     "exampleLimit": 5,

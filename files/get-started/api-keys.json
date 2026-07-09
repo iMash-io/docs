@@ -1,33 +1,78 @@
 {
-  "title": "API Keys",
-  "lede": "Learn how to generate, manage, and secure your API keys for programmatic access to iMash.",
-  "sections": [
+  "title": "API Keys - Access iMash Programmatically",
+  "lede": "API keys let your own software talk to iMash through the REST API &mdash; start calls, read call logs, sync CRM records, and more &mdash; without logging into the dashboard. This guide covers generating, storing, and revoking keys.",
+  "timeToComplete": "5 minutes",
+  "steps": [
     {
-      "id": "generating-keys",
-      "title": "Generating API Keys",
-      "content": "<p>API keys provide secure access to the iMash platform programmatically.</p><h3>Steps to Generate:</h3><ol><li>Navigate to Settings → API Keys</li><li>Click 'Generate New Key'</li><li>Set permissions and expiration</li><li>Copy and save securely</li></ol>"
+      "id": "what-are-keys",
+      "title": "What API keys are for",
+      "content": "<p>An API key is a secret token that identifies your account when you call the iMash REST API. Instead of a username and password, your code sends the key with each request.</p><ul><li>Use them to automate iMash from your own backend, scripts, or third-party tools.</li><li>Each key acts on behalf of your account, so treat it like a password.</li><li>A key is shown in full <strong>only once</strong>, at the moment you create it. After that, iMash stores only a hashed version and can show you the prefix.</li></ul>",
+      "images": [
+        {
+          "src": "images/get-started/api-keys-light.png",
+          "alt": "API Keys page",
+          "caption": "The API Keys page lists your keys with their name, prefix, created date, and last used time.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/api-keys-dark.png",
+          "alt": "API Keys page",
+          "caption": "The API Keys page lists your keys with their name, prefix, created date, and last used time.",
+          "theme": "dark"
+        }
+      ]
     },
     {
-      "id": "security",
-      "title": "Security Best Practices",
-      "content": "<p>Keep your API keys secure by following these guidelines:</p><ul><li>Never expose keys in client-side code</li><li>Use environment variables</li><li>Rotate keys regularly</li><li>Set appropriate permissions</li></ul>"
-    }
-  ],
-  "images": [
-    {
-      "src": "images/api-key-generation-light.png",
-      "alt": "API Key Generation Interface",
-      "caption": "The API key generation form",
-      "theme": "light"
+      "id": "open-page",
+      "title": "Open the API Keys page",
+      "content": "<ol><li>In the left-hand navigation, open <strong>Account</strong>.</li><li>Click <strong>API Keys</strong>.</li><li>You will see a table of your existing keys, each showing its <strong>Name</strong>, <strong>Key Prefix</strong>, <strong>Created At</strong>, and <strong>Last Used</strong>.</li></ol>",
+      "images": []
     },
     {
-      "src": "images/api-key-generation-dark.png",
-      "alt": "API Key Generation Interface",
-      "caption": "The API key generation form",
-      "theme": "dark"
+      "id": "generate",
+      "title": "Generate a new key",
+      "content": "<ol><li>Click <strong>Generate New API Key</strong> in the top-right.</li><li>Enter a clear, descriptive <strong>name</strong> (for example \"Zapier integration\" or \"Nightly CRM sync\") so you can tell your keys apart later.</li><li>Click <strong>Generate</strong>.</li><li>iMash displays the full secret key. Use the eye icon to reveal it and the <strong>Copy</strong> button to copy it.</li></ol>",
+      "images": []
+    },
+    {
+      "id": "store-securely",
+      "title": "Copy and store it safely",
+      "content": "<p>The full key is shown once and cannot be retrieved again. If you lose it, you must generate a new one.</p><ul><li>Paste it straight into your integration's secret store or an environment variable &mdash; never into shared documents or chat.</li><li>Do <strong>not</strong> embed the key in front-end code, mobile apps, or anything a user can view.</li><li>Give each integration its own key so you can revoke one without breaking the others.</li></ul>",
+      "images": []
+    },
+    {
+      "id": "revoke",
+      "title": "Revoke a key you no longer need",
+      "content": "<ol><li>Find the key in the table on the <strong>API Keys</strong> page.</li><li>Click the <strong>delete</strong> (trash) icon in its row.</li><li>Confirm. The key stops working immediately &mdash; any integration still using it will lose access, so update it first.</li></ol><p>Check the <strong>Last Used</strong> column to spot keys that are no longer active before removing them.</p>",
+      "images": []
     }
   ],
-  "metaTitle": "API Keys Management - Authentication & Security | iMash Docs",
-  "metaDescription": "Generate and manage API keys for secure access to iMash platform. Learn about authentication, permissions, and best practices.",
-  "metaKeywords": "API keys, authentication, security, access tokens, API authentication, credentials management, secure access"
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "With a key in hand, connect iMash to your other systems.",
+    "cards": [
+      {
+        "href": "/api-reference",
+        "title": "API Reference",
+        "description": "See every endpoint, parameter, and example request for the iMash REST API."
+      },
+      {
+        "href": "/get-started/dashboard-overview",
+        "title": "Dashboard Overview",
+        "description": "Understand the same call and CRM data you can pull through the API."
+      },
+      {
+        "href": "/automations/smart-flows",
+        "title": "Build Automations",
+        "description": "Trigger workflows and connect external tools without writing code."
+      }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "API Keys | iMash Docs",
+  "metaDescription": "Generate, name, store, and revoke iMash API keys for programmatic REST API access under Account → API Keys. Keys are shown in full only once.",
+  "metaKeywords": "iMash API keys, REST API, programmatic access, generate api key, revoke api key, api authentication, integrations"
 }
