@@ -103,6 +103,22 @@ function applyBrandText(root) {
   }
   nodes.forEach(n => { n.nodeValue = n.nodeValue.split('iMash.io').join(name).split('iMash').join(name); });
 }
+// Swap screenshot <img> srcs to their white-label variant (e.g. foo.sophia.png)
+// where one exists. If a variant is missing (image has no app logo to rebrand),
+// the onerror handler falls back to the original — so no allowlist is needed.
+function applyBrandImages(root) {
+  if (!DOCS_BRAND.swapImages || !root) return;
+  root.querySelectorAll('img').forEach(img => {
+    const src = img.getAttribute('src') || '';
+    if (!/\/images\//.test(src) || /\.sophia\.png$/i.test(src) || img.dataset.brandSwapped) return;
+    if (!/\.png$/i.test(src)) return;
+    img.dataset.brandSwapped = '1';
+    const orig = src;
+    img.addEventListener('error', function onerr() { img.removeEventListener('error', onerr); img.src = orig; }, { once: true });
+    img.src = src.replace(/\.png$/i, '.sophia.png');
+  });
+}
+
 function applyBrandChrome() {
   if (DOCS_BRAND.id === 'imash') return;
   if (DOCS_BRAND.logo) {
@@ -113,8 +129,16 @@ function applyBrandChrome() {
   }
   if (DOCS_BRAND.noInvertLogo) document.documentElement.setAttribute('data-brand-logo', 'image');
   if (DOCS_BRAND.hideSocials) document.querySelectorAll('.socials').forEach(el => { el.style.display = 'none'; });
+  // Hide all video UI for brands with videos disabled.
+  if (DOCS_BRAND.hideVideos && !document.getElementById('brand-hide-videos')) {
+    const st = document.createElement('style');
+    st.id = 'brand-hide-videos';
+    st.textContent = '.video-container,.video-modal,[data-top-tab="/videos"]{display:none !important;}';
+    document.head.appendChild(st);
+  }
   applyBrandText(document.getElementById('footer'));
   applyBrandText(document.getElementById('page-introduction'));
+  applyBrandImages(document.getElementById('page-introduction'));
 }
 
 // State management
@@ -354,6 +378,11 @@ function showPage(route) {
     navigateTo('/get-started/quick-start', true);
     return;
   }
+  // Brands with videos disabled never show the /videos page.
+  if (DOCS_BRAND.hideVideos && route === '/videos') {
+    navigateTo('/get-started/quick-start', true);
+    return;
+  }
 
   // Hide all pages (but we'll re-add active to the correct one)
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -451,6 +480,7 @@ function showPage(route) {
         if (raw && !/^https?:\/\//.test(raw) && !raw.startsWith('/')) img.setAttribute('src', '/' + raw);
       });
       applyBrandText(page);
+      applyBrandImages(page);
       page.style.display = 'block';
       page.classList.add('active');
       updateNavigation(route);
@@ -2169,8 +2199,9 @@ async function loadDynamicContent(route) {
         dynamicSection.innerHTML = renderedHTML;
         dynamicSection.style.display = 'block';
         dynamicSection.setAttribute('data-route', route);
-        // Re-apply white-label brand text to freshly rendered content
+        // Re-apply white-label branding to freshly rendered content
         applyBrandText(dynamicSection);
+        applyBrandImages(dynamicSection);
 
         // Re-attach event listeners for any new navigation links
         dynamicSection.querySelectorAll('[data-href]').forEach(link => {

@@ -2030,6 +2030,6 @@ html.dark .image-container[data-theme="light"] { display: none; }
    by HEIGHT, not the 200px width used for the wide iMash wordmark. */
 html[data-brand-logo="image"] .brand-icon-large {
   width: auto;
-  height: 34px;
-  max-width: 200px;
+  height: 40px;
+  max-width: 230px;
 }
