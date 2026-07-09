@@ -195,8 +195,8 @@ async function loadConfigurations() {
   try {
     // Try to fetch configurations from API endpoints (works when deployed)
     const [apiInfoResponse, systemTableResponse] = await Promise.all([
-      fetch('https://docs.imash.io/api/config/apiInfoConfig'),
-      fetch('https://docs.imash.io/api/config/systemTableConfig')
+      fetch('/api/config/apiInfoConfig'),
+      fetch('/api/config/systemTableConfig')
     ]);
     
     if (apiInfoResponse.ok) {
@@ -348,33 +348,13 @@ function showPage(route) {
   // Update meta tags for the new route
   updateMetaForRoute(route);
   
-  // Special handling for root route - show introduction
+  // The docs "home" is the Quickstart guide — the old Introduction landing page
+  // is retired. Any navigation to the bare root lands on Quickstart instead.
   if (route === '/' || route === '') {
-    const introPage = document.getElementById('page-introduction');
-    const dynamicContent = document.getElementById('dynamic-content');
-    
-    // Hide all pages first
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    
-    // Clear and hide dynamic content if it exists
-    if (dynamicContent) {
-      dynamicContent.innerHTML = '';
-      dynamicContent.style.display = 'none';
-      dynamicContent.classList.remove('active');
-    }
-    
-    // Show introduction page
-    if (introPage) {
-      console.log('Showing introduction page');
-      introPage.classList.add('active');
-      updateNavigation(route);
-      updateSidebarForTab(route);
-      updateTOC();
-      window.scrollTo(0, 0);
-      return; // Exit after handling introduction
-    }
+    navigateTo('/get-started/quick-start', true);
+    return;
   }
-  
+
   // Hide all pages (but we'll re-add active to the correct one)
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   
