@@ -83,6 +83,39 @@ function tr(s) {
   return (I18N[lang] && I18N[lang][s]) || s;
 }
 
+// ---------------------------------------------------------------------------
+// White-label brand. The server injects window.__DOCS_BRAND__ based on the
+// visiting host (e.g. docs.soph-ia.ai). It handles the static shell (logo,
+// socials, first paint); the client re-applies branding to content that the
+// SPA re-renders on navigation. Text replacement is case-sensitive so it only
+// touches the DISPLAY brand ("iMash" / "iMash.io"), never lowercase "imash.io"
+// inside URLs, emails or storage paths.
+// ---------------------------------------------------------------------------
+const DOCS_BRAND = (typeof window !== 'undefined' && window.__DOCS_BRAND__) ||
+  { id: 'imash', name: 'iMash', textReplace: false, hideSocials: false };
+function applyBrandText(root) {
+  if (!DOCS_BRAND.textReplace || !root) return;
+  const name = DOCS_BRAND.name;
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  const nodes = [];
+  while (walker.nextNode()) {
+    if (walker.currentNode.nodeValue.indexOf('iMash') !== -1) nodes.push(walker.currentNode);
+  }
+  nodes.forEach(n => { n.nodeValue = n.nodeValue.split('iMash.io').join(name).split('iMash').join(name); });
+}
+function applyBrandChrome() {
+  if (DOCS_BRAND.id === 'imash') return;
+  if (DOCS_BRAND.logo) {
+    document.querySelectorAll('.brand-icon').forEach(img => {
+      img.src = DOCS_BRAND.logo; img.alt = DOCS_BRAND.name;
+      if (DOCS_BRAND.noInvertLogo) img.style.filter = 'none';
+    });
+  }
+  if (DOCS_BRAND.hideSocials) document.querySelectorAll('.socials').forEach(el => { el.style.display = 'none'; });
+  applyBrandText(document.getElementById('footer'));
+  applyBrandText(document.getElementById('page-introduction'));
+}
+
 // State management
 let currentPage = '/';
 let currentApiResource = 'crm_leads';
@@ -121,6 +154,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   
   // Apply Spanish chrome translations to the static shell (index.html)
   applyChromeLanguage();
+
+  // Apply white-label branding to the shell (logo, socials, intro/footer text)
+  applyBrandChrome();
 
   // Navigate to initial route (canonical, language-stripped)
   let initialRoute = stripLang(window.location.pathname || '/');
@@ -426,7 +462,14 @@ function showPage(route) {
     
     // Check if there's already pre-rendered content for this route
     if (page && page.getAttribute('data-route') === route && page.innerHTML.trim() !== '') {
-      // Pre-rendered content exists, just show it
+      // Pre-rendered (server-rendered) content exists, just show it.
+      // Defensively normalize any relative image srcs to absolute so a deep-link
+      // / refresh renders images correctly, and re-apply white-label brand text.
+      page.querySelectorAll('img').forEach(img => {
+        const raw = img.getAttribute('src') || '';
+        if (raw && !/^https?:\/\//.test(raw) && !raw.startsWith('/')) img.setAttribute('src', '/' + raw);
+      });
+      applyBrandText(page);
       page.style.display = 'block';
       page.classList.add('active');
       updateNavigation(route);
@@ -2145,7 +2188,9 @@ async function loadDynamicContent(route) {
         dynamicSection.innerHTML = renderedHTML;
         dynamicSection.style.display = 'block';
         dynamicSection.setAttribute('data-route', route);
-        
+        // Re-apply white-label brand text to freshly rendered content
+        applyBrandText(dynamicSection);
+
         // Re-attach event listeners for any new navigation links
         dynamicSection.querySelectorAll('[data-href]').forEach(link => {
           link.addEventListener('click', (e) => {

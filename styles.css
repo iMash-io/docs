@@ -2007,3 +2007,10 @@ code {
     font-size: 0.8rem;
   }
 }
+
+/* Server-rendered pages emit BOTH the light and dark screenshot for each step
+   (the client renderer emits only the active one). Hide the off-theme image so
+   a fresh page load / refresh shows a single, correct screenshot instead of a
+   duplicate. Default (no .dark on <html>) = light. */
+html:not(.dark) .image-container[data-theme="dark"] { display: none; }
+html.dark .image-container[data-theme="light"] { display: none; }
