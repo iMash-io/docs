@@ -1,0 +1,113 @@
+{
+  "title": "Bandeja de SMS y Mensajería",
+  "lede": "Cada mensaje de texto que su negocio envía y recibe — respuestas de clientes, confirmaciones de técnicos, hilos grupales e incluso las conversaciones de su agente de IA — llega a una única bandeja de SMS con búsqueda integrada. Esta guía lo lleva de la A a la Z: leer hilos, filtrar como un profesional, responder con plantillas de un clic y comenzar conversaciones nuevas.",
+  "timeToComplete": "10 minutos",
+  "steps": [
+    {
+      "id": "open-inbox",
+      "title": "Abra la bandeja de SMS",
+      "content": "<p>Toda su operación de mensajería vive en una sola pantalla. Vamos a encontrarla.</p><ol><li>En la navegación superior, haga clic en <strong>Messages</strong> (Mensajes) y luego en la pestaña <strong>SMS MESSAGES</strong> (Mensajes SMS) — o en la barra lateral izquierda, bajo <strong>MESSAGES</strong>, haga clic en <strong>SMS Messages</strong>.</li><li>La página <strong>Messages</strong> se abre con tres zonas:</li></ol><ul><li><strong>Fila de encabezado</strong> — el título de la página con una insignia roja de <strong>contador de no leídos</strong>, un cuadro <strong>Search messages...</strong> (Buscar mensajes) que busca nombres, números y texto de los mensajes, un icono de <strong>Refresh</strong> (Actualizar) y el botón verde <strong>New Message</strong> (Nuevo mensaje).</li><li><strong>Barra de filtros</strong> — controles de canal, dirección, orden y fecha (los cubrimos en los siguientes pasos).</li><li><strong>Espacio de trabajo de dos paneles</strong> — la lista de conversaciones a la izquierda y, a la derecha, el hilo completo de la conversación que seleccione.</li></ul><blockquote>💡 Los mensajes nuevos aparecen automáticamente en tiempo real — no necesita actualizar. La insignia de no leídos del encabezado se actualiza en el momento en que un cliente le escribe.</blockquote>",
+      "images": [
+        {"src": "images/messages/sms-inbox-light.png", "alt": "La bandeja de SMS Messages con la barra de filtros, la lista de conversaciones a la izquierda y el hilo abierto a la derecha", "caption": "La bandeja de SMS — conversaciones a la izquierda, el hilo seleccionado a la derecha.", "theme": "light"},
+        {"src": "images/messages/sms-inbox-dark.png", "alt": "La bandeja de SMS Messages en modo oscuro con la barra de filtros, la lista de conversaciones y el hilo abierto", "caption": "La bandeja de SMS — conversaciones a la izquierda, el hilo seleccionado a la derecha.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "conversation-cards",
+      "title": "Lea una tarjeta de conversación de un vistazo",
+      "content": "<p>Cada tarjeta de la lista izquierda es una conversación completa con una persona (o un grupo). La tarjeta concentra mucha información en poco espacio:</p><ul><li><strong>Nombre o número</strong> — si el número de teléfono coincide con un lead, contacto o técnico de su CRM, el nombre aparece automáticamente. Los números desconocidos se muestran como número hasta que los guarde como registro del CRM.</li><li><strong>Marca de tiempo</strong> — cuándo se envió o recibió el último mensaje.</li><li><strong>Línea de vista previa</strong> — las primeras palabras del mensaje más reciente.</li><li><strong>Flecha de dirección</strong> — verde si el último mensaje fue <em>entrante</em> (le escribieron) o roja si fue <em>saliente</em> (usted escribió). Pase el cursor para ver la dirección exacta.</li><li><strong>Chip de canal</strong> — <strong>SMS</strong> (azul) o <strong>WhatsApp</strong> (verde), ya que esta bandeja unifica ambos canales de texto.</li><li><strong>Recuento de mensajes</strong> — el total de mensajes del hilo.</li><li><strong>Insignia de no leídos</strong> — un contador rojo cuando el hilo tiene mensajes que aún no ha abierto.</li></ul><p>Los hilos de MMS grupales (varias personas en un mismo hilo) muestran un icono morado de equipo y listan a los participantes — pase el cursor sobre la fila del nombre para ver la lista completa. Los hilos que llegaron por una fuente de trabajos también muestran una pequeña etiqueta <strong>Source</strong> (Fuente).</p><blockquote>💡 La vinculación es automática: como iMash compara los números de teléfono con su CRM, al escribirse con un lead su nombre aparece aquí, y su hilo aparece al filtrar por ese lead — sin etiquetado manual.</blockquote>",
+      "images": [
+        {"src": "images/messages/sms-conversation-card-light.png", "alt": "Una tarjeta de conversación que muestra el número, la hora, la vista previa, la flecha de dirección, el chip de canal SMS y el recuento de mensajes", "caption": "Una tarjeta de conversación: nombre/número, hora del último mensaje, vista previa, flecha de dirección, chip de canal y recuento total.", "theme": "light"},
+        {"src": "images/messages/sms-conversation-card-dark.png", "alt": "Una tarjeta de conversación en modo oscuro con el número, la hora, la vista previa, la flecha de dirección, el chip SMS y el recuento de mensajes", "caption": "Una tarjeta de conversación: nombre/número, hora del último mensaje, vista previa, flecha de dirección, chip de canal y recuento total.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "filter-and-sort",
+      "title": "Filtre y ordene la bandeja",
+      "content": "<p>Cuando los mensajes no paran, la barra de filtros lo mantiene enfocado. De izquierda a derecha:</p><ul><li><strong>Canal</strong> — <strong>All</strong> (Todos), <strong>SMS</strong> o <strong>WhatsApp</strong>. Esta única bandeja lleva ambos canales; elija uno para aislarlo.</li><li><strong>Dirección</strong> — <strong>All</strong> (Todos), <strong>Outbound</strong> (Salientes) o <strong>Inbound</strong> (Entrantes).</li><li><strong>Orden</strong> — <strong>Sort: Newest</strong> (Más recientes), <strong>Sort: Oldest</strong> (Más antiguos) o <strong>Sort: Most unread</strong> (Más no leídos, que sube al principio los hilos que necesitan atención).</li><li><strong>Preajuste de fecha</strong> — <strong>Today</strong> (Hoy), <strong>Yesterday</strong> (Ayer) o <strong>Last 7 Days</strong> (Últimos 7 días), más un selector de rango de fechas personalizado al lado para cualquier período. Haga clic en la pequeña <strong>×</strong> del selector de rango para quitar el filtro de fecha y verlo todo.</li></ul><p>Cada filtro activo también aparece como un chip removible junto al título de la página — haga clic en la <strong>×</strong> de un chip para quitar solo ese filtro, o en <strong>Clear all</strong> (Borrar todo) para restablecer toda la barra.</p><blockquote>⚠️ La bandeja se abre con <strong>Last 7 Days</strong> preseleccionado. Si una conversación parece \"desaparecida\", quite primero el filtro de fecha — casi siempre está justo fuera de la ventana.</blockquote>",
+      "images": [
+        {"src": "images/messages/sms-filters-light.png", "alt": "La barra de filtros con canal, dirección, orden, preajuste de fecha, rango de fechas y los botones More filters y Bulk", "caption": "La barra de filtros: canal, dirección, orden y fecha de un vistazo — More filters y Bulk en la segunda fila.", "theme": "light"},
+        {"src": "images/messages/sms-filters-dark.png", "alt": "La barra de filtros en modo oscuro con canal, dirección, orden, preajuste de fecha y los botones More filters y Bulk", "caption": "La barra de filtros: canal, dirección, orden y fecha de un vistazo — More filters y Bulk en la segunda fila.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "refine-filters",
+      "title": "Profundice con More filters",
+      "content": "<p>Haga clic en <strong>More filters</strong> (Más filtros) para abrir el panel de refinamientos. Una insignia con contador en el botón le recuerda cuándo alguno de estos filtros está activo en silencio.</p><ul><li><strong>Entity</strong> (Entidad) — limite a conversaciones con <strong>Technicians</strong> (Técnicos), <strong>Contacts</strong> (Contactos), <strong>Leads</strong> o números <strong>Other / Unlinked</strong> (Otros / Sin vincular). Al elegir un tipo aparece un segundo desplegable para centrarse en una persona concreta — perfecto para ver todos los mensajes con un cliente.</li><li><strong>Delivery Status</strong> (Estado de entrega) — muestre solo hilos cuyos mensajes fueron <em>entregados</em>, <em>pendientes</em> o <em>fallidos</em>.</li><li><strong>From Number (10DLC)</strong> (Número de origen) — si envía desde varias líneas de negocio, filtre a los hilos de un número concreto.</li><li><strong>Source</strong> (Fuente) — aparece cuando sus números están vinculados a fuentes de trabajos; filtra a los hilos que llegaron por una fuente de leads.</li><li><strong>Unread only</strong> (Solo no leídos) — un interruptor que oculta todo lo que ya leyó.</li><li><strong>Has media</strong> (Con archivos) — un interruptor que muestra solo hilos con fotos o adjuntos (MMS).</li></ul><p>Haga clic en <strong>Clear refinements</strong> (Borrar refinamientos) al pie del panel para restablecer solo estos filtros avanzados.</p>",
+      "images": [
+        {"src": "images/messages/sms-more-filters-light.png", "alt": "El panel More filters con los controles Entity, Delivery Status, From Number, Unread only y Has media", "caption": "More filters: entidad, estado de entrega, línea de negocio y los interruptores Unread only / Has media.", "theme": "light"},
+        {"src": "images/messages/sms-more-filters-dark.png", "alt": "El panel More filters en modo oscuro con los controles Entity, Delivery Status, From Number, Unread only y Has media", "caption": "More filters: entidad, estado de entrega, línea de negocio y los interruptores Unread only / Has media.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "read-a-thread",
+      "title": "Abra un hilo y léalo como un chat",
+      "content": "<p>Haga clic en cualquier tarjeta de conversación y el hilo completo se abre a la derecha, con los mensajes más recientes abajo — igual que en su teléfono.</p><ul><li><strong>Encabezado del hilo</strong> — el nombre y número de la persona a la izquierda; a la derecha, <strong>via</strong> muestra en cuál de sus números de negocio corre este hilo, y los <strong>Associated Jobs</strong> (Trabajos asociados) aparecen como etiquetas azules — haga clic en una para saltar directo a la página de detalle de ese trabajo.</li><li><strong>Burbujas de mensaje</strong> — sus mensajes salientes a la derecha (azul), los entrantes a la izquierda. Bajo cada burbuja saliente verá el estado de entrega: ✓ enviado, ✓✓ entregado, ✓✓ azul leído.</li><li><strong>Mensajes fallidos</strong> — marcados con una etiqueta roja <strong>FAILED</strong>. Pase el cursor sobre el icono <strong>!</strong> para leer el error del operador y haga clic en <strong>Retry</strong> (Reintentar) para reenviarlo al instante.</li><li><strong>Acciones al pasar el cursor</strong> — pase el cursor sobre cualquier burbuja para revelar <strong>Reply</strong> (Responder, citando ese mensaje), <strong>Forward</strong> (Reenviar a otra persona) y, en hilos de WhatsApp, <strong>React</strong> (Reaccionar con un emoji).</li><li><strong>Desplácese hacia arriba</strong> — los mensajes antiguos se cargan automáticamente al desplazarse, hasta llegar a \"Start of conversation\" (Inicio de la conversación).</li></ul><p>Abrir un hilo marca automáticamente sus mensajes como leídos y borra la insignia roja.</p>",
+      "images": [
+        {"src": "images/messages/sms-thread-light.png", "alt": "Un hilo de SMS abierto con el encabezado, las burbujas de mensaje con estado de entrega y el cuadro de respuesta abajo", "caption": "La vista de hilo: encabezado, burbujas con estado de entrega por mensaje (y Retry para envíos fallidos), cuadro de respuesta abajo.", "theme": "light"},
+        {"src": "images/messages/sms-thread-dark.png", "alt": "Un hilo de SMS abierto en modo oscuro con el encabezado, las burbujas con estado de entrega y el cuadro de respuesta", "caption": "La vista de hilo: encabezado, burbujas con estado de entrega por mensaje (y Retry para envíos fallidos), cuadro de respuesta abajo.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "reply-to-a-thread",
+      "title": "Responda — con plantillas de un clic, emojis y fotos",
+      "content": "<p>El cuadro de respuesta al pie de cada hilo está hecho para la velocidad:</p><ol><li>Haga clic en un chip de plantilla <strong>Quick:</strong> (Rápidas) — como <strong>Tech on the way</strong> (Técnico en camino), <strong>Running late</strong> (Con retraso) o <strong>Confirm appointment</strong> (Confirmar cita) — y un mensaje ya redactado cae en el cuadro con los datos del cliente y del técnico completados. Puede añadir sus propios chips en Dispatch Settings → Messages Templates.</li><li>O escriba su mensaje en el cuadro <strong>Type your reply...</strong> (Escriba su respuesta). Use el icono de carita para <strong>emojis</strong> y el clip para <strong>adjuntar una foto o archivo</strong> — los adjuntos salen como MMS y su texto se convierte en la leyenda.</li><li>Haga clic en <strong>Send Reply</strong> (Enviar respuesta) o presione <strong>Ctrl+Enter</strong>.</li></ol><p>Las respuestas salen automáticamente por el mismo número de negocio en el que vive el hilo, así el cliente siempre ve un número consistente. En un hilo grupal, una sola respuesta llega a todos los participantes.</p><blockquote>💡 ¿Quiere citar un mensaje concreto? Pase el cursor, haga clic en <strong>Reply</strong> y su respuesta sale con el texto citado arriba — ideal para contestar una pregunta antigua en un hilo movido.</blockquote>",
+      "images": [
+        {"src": "images/messages/sms-reply-light.png", "alt": "El cuadro de respuesta con chips de plantillas Quick, el área de texto, los botones de emoji y adjunto y el botón Send Reply", "caption": "El cuadro de respuesta: chips de plantillas Quick, botones de emoji y adjunto, y Send Reply (Ctrl+Enter también funciona).", "theme": "light"},
+        {"src": "images/messages/sms-reply-dark.png", "alt": "El cuadro de respuesta en modo oscuro con chips de plantillas Quick, área de texto, botones de emoji y adjunto y Send Reply", "caption": "El cuadro de respuesta: chips de plantillas Quick, botones de emoji y adjunto, y Send Reply (Ctrl+Enter también funciona).", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "start-new-conversation",
+      "title": "Comience una conversación nueva",
+      "content": "<p>¿Es usted quien da el primer paso? Haga clic en el botón verde <strong>New Message</strong> (Nuevo mensaje) arriba a la derecha.</p><ol><li>En la ventana <strong>New SMS Message</strong> (Nuevo mensaje SMS), elija a quién escribe en <strong>Send To</strong> (Enviar a): <strong>Technician</strong> (Técnico), <strong>Contact</strong> (Contacto), <strong>Lead</strong> o un <strong>Phone Number</strong> (Número de teléfono) directo.</li><li>Elija a la persona en el desplegable con búsqueda — sus números guardados completan automáticamente el campo <strong>Destination Phone Number</strong> (Número de destino). ¿No hay número guardado? Escriba uno manualmente.</li><li>Elija su <strong>From Number</strong> (Número de origen) — la línea de negocio registrada en 10DLC desde la que sale el mensaje. iMash preselecciona el número que usó más recientemente con esa persona.</li><li>Escriba su texto en <strong>Message Body</strong> (Cuerpo del mensaje) — el clip y el botón de emoji también funcionan aquí, y los chips de plantillas rápidas aparecen debajo para destinatarios vinculados a un registro del CRM.</li><li>Haga clic en <strong>Send Message</strong> (Enviar mensaje). El nuevo hilo aparece al principio de su bandeja.</li></ol><blockquote>⚠️ Los operadores de EE. UU. exigen que sus números de mensajería estén <strong>registrados en 10DLC</strong> — la lista From Number solo muestra números registrados. Si está vacía, registre primero un número (vea la guía de Números de Teléfono abajo). Si ha conectado WhatsApp, aquí también aparece un selector de <strong>Channel</strong> (Canal) para que el mismo compositor envíe por WhatsApp.</blockquote>",
+      "images": [
+        {"src": "images/messages/sms-compose-light.png", "alt": "El modal New SMS Message con las opciones Send To, Destination Phone Number, From Number y Message Body", "caption": "El compositor: elija tipo de destinatario, destino y número de origen, escriba el mensaje y pulse Send Message.", "theme": "light"},
+        {"src": "images/messages/sms-compose-dark.png", "alt": "El modal New SMS Message en modo oscuro con las opciones Send To, Destination Phone Number, From Number y Message Body", "caption": "El compositor: elija tipo de destinatario, destino y número de origen, escriba el mensaje y pulse Send Message.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "bulk-actions",
+      "title": "Ordene la bandeja con acciones masivas",
+      "content": "<p>¿La bandeja se acumula? El botón <strong>Bulk</strong> (Masivo) de la barra de filtros maneja muchas conversaciones a la vez:</p><ol><li>Haga clic en <strong>Bulk</strong> → <strong>Select conversations</strong> (Seleccionar conversaciones) — aparecen casillas en cada tarjeta.</li><li>Marque los hilos que quiera (o use la casilla <strong>Select all</strong> (Seleccionar todo) que aparece sobre la lista).</li><li>Abra <strong>Bulk</strong> de nuevo y elija una acción:</li></ol><ul><li><strong>Mark selected as read</strong> (Marcar seleccionados como leídos) — borra las insignias de no leídos de los hilos marcados.</li><li><strong>Mark all visible as read</strong> (Marcar todos los visibles como leídos) — un clic limpia todos los hilos que coinciden con sus filtros actuales (el contador muestra cuántos).</li><li><strong>Archive selected</strong> (Archivar seleccionados) — oculta las conversaciones marcadas de la bandeja. Archivar nunca borra los mensajes; el hilo reaparece si la persona vuelve a escribirle.</li></ul><p>Haga clic en <strong>Exit multi-select</strong> (Salir de la selección múltiple) cuando termine.</p>",
+      "images": [
+        {"src": "images/messages/sms-bulk-light.png", "alt": "El menú desplegable Bulk con Select conversations, Mark selected as read, Mark all visible as read y Archive selected", "caption": "El menú Bulk: selección múltiple, marcar como leído y archivar.", "theme": "light"},
+        {"src": "images/messages/sms-bulk-dark.png", "alt": "El menú desplegable Bulk en modo oscuro con las opciones de selección múltiple, marcar como leído y Archive selected", "caption": "El menú Bulk: selección múltiple, marcar como leído y archivar.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "groups-ai-and-optout",
+      "title": "Bueno saberlo: textos grupales, agentes de IA y bajas",
+      "content": "<p>Tres comportamientos potentes ocurren tras bambalinas en esta bandeja:</p><ul><li><strong>Hilos de MMS grupales.</strong> Cuando varias personas comparten un mismo hilo de texto (por ejemplo, el chat grupal de una empresa fuente de leads), se muestra como una sola conversación con un icono morado de equipo. Su respuesta llega a <em>todos</em> los del grupo, y el botón <strong>Add</strong> (Agregar) del encabezado del hilo le permite sumar otro participante (se une con su próximo mensaje). Los hilos grupales son solo SMS/MMS.</li><li><strong>Agentes de texto con IA.</strong> Si vinculó un Smart Agent a uno de sus números (en la pestaña Channels del agente), los textos entrantes en ese número los responde la IA automáticamente — y toda la conversación fluye a esta misma bandeja en tiempo real. Puede intervenir y responder manualmente en cualquier momento; el hilo se mantiene unificado, así que siempre ve tanto los mensajes de la IA como los suyos.</li><li><strong>Bajas y cumplimiento.</strong> Los destinatarios siempre pueden responder <strong>STOP</strong> para dejar de recibir textos — los operadores lo aplican a nivel de red, e iMash puede añadir un aviso de baja a los textos salientes para mantener sus campañas 10DLC en regla. Mantenga la mensajería de negocio en números registrados y respete las bajas para proteger sus tasas de entrega.</li></ul><p>Ese es el recorrido completo — ahora dirige una operación de mensajería profesional y multicanal desde una sola pantalla. 🚀</p>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Ya domina su bandeja de SMS — ahora sume más potencia a su plataforma de mensajería.",
+    "cards": [
+      {
+        "href": "/phone/add-phone-number",
+        "title": "Agregar un Número de Teléfono",
+        "description": "Compre y registre en 10DLC los números de negocio desde los que salen sus textos."
+      },
+      {
+        "href": "/messages/whatsapp",
+        "title": "Mensajería de WhatsApp",
+        "description": "Conecte WhatsApp Business y gestiónelo desde esta misma bandeja unificada."
+      },
+      {
+        "href": "/agents/create-agent",
+        "title": "Crear un Smart Agent",
+        "description": "Deje que un agente de IA responda los textos entrantes en sus números 24/7."
+      }
+    ]
+  },
+  "support": {
+    "title": "¿Necesita ayuda?",
+    "content": "<p>¿Dudas sobre la entrega de SMS, el registro 10DLC o un hilo que no se comporta como debería? Escriba a <a href=\"mailto:support@imash.io\">support@imash.io</a> y nuestro equipo lo investigará con usted.</p>"
+  },
+  "metaTitle": "Bandeja de SMS y Mensajería | iMash Documentation",
+  "metaDescription": "Domine la bandeja de SMS de iMash: lea y filtre hilos de conversación, responda con plantillas rápidas y adjuntos MMS, inicie conversaciones nuevas, ejecute acciones masivas y entienda los textos grupales, los agentes de IA y las bajas.",
+  "metaKeywords": "bandeja sms, mensajes de texto, hilos sms, mms, plantillas rápidas, 10dlc, mms grupal, acciones masivas sms, baja de sms, bandeja unificada"
+}

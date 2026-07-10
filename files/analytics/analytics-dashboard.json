@@ -1,51 +1,100 @@
 {
   "title": "Analytics Dashboard",
-  "lede": "Read your call center's key numbers at a glance on the Overview page, then filter them by date, phone number, agent, tags, or owner to answer any question about your calling.",
-  "timeToComplete": "5 minutes",
+  "lede": "Your Overview page is mission control for your entire call operation — every call, every minute, every dollar, live on one screen. This guide teaches you to read each number, slice it with filters, and drill from a KPI all the way down to a single call transcript.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
       "id": "open-overview",
-      "title": "Open the Overview page",
-      "content": "<ol><li>Click <strong>Overview</strong> at the top of the left menu (it's also the page you land on at <code>/</code> when you log in).</li><li>The top card, <strong>Total Statistics</strong>, shows all-time totals for your account &mdash; contacts, leads, accounts, AI agents, campaigns, phone numbers, and more. These are independent of any date filter.</li></ol>",
+      "title": "Open the Overview dashboard",
+      "content": "<p>The analytics dashboard is the first thing you see when you log in — no digging required.</p><ol><li>In the left sidebar, click <strong>Overview</strong> (the first item at the top). It is also your landing page after login.</li><li>Give it a second to load. From top to bottom you'll see: <strong>Total Statistics</strong> (all-time counts), four <strong>performance cards</strong>, a <strong>Filters</strong> bar, the <strong>Calls</strong> table, and three <strong>charts</strong>.</li></ol><blockquote>💡 New to the layout itself? The <em>Dashboard Overview</em> guide in Get Started is a tour of where everything lives. This page is about what the numbers <em>mean</em> and how to use them.</blockquote>",
       "images": [
-        { "src": "images/get-started/dashboard-overview-main-light.png", "alt": "Overview dashboard", "caption": "The Overview page opens with Total Statistics, performance cards, filters, and a calls table", "theme": "light" },
-        { "src": "images/get-started/dashboard-overview-main-dark.png", "alt": "Overview dashboard", "caption": "The Overview page opens with Total Statistics, performance cards, filters, and a calls table", "theme": "dark" }
+        { "src": "images/analytics/analytics-dashboard-full-light.png", "alt": "The Overview analytics dashboard with Total Statistics, KPI cards, filters, and the calls table", "caption": "The Overview dashboard — all-time totals on top, date-filtered performance below", "theme": "light" },
+        { "src": "images/analytics/analytics-dashboard-full-dark.png", "alt": "The Overview analytics dashboard with Total Statistics, KPI cards, filters, and the calls table", "caption": "The Overview dashboard — all-time totals on top, date-filtered performance below", "theme": "dark" }
       ]
     },
     {
-      "id": "read-kpis",
+      "id": "total-statistics",
+      "title": "Read Total Statistics — your all-time footprint",
+      "content": "<p>The <strong>Total Statistics</strong> card counts everything you've ever built in iMash. These are <em>all-time</em> totals — they ignore the date filter further down the page.</p><ul><li><strong>Contacts</strong>, <strong>Leads</strong>, <strong>Accounts</strong> — the size of your CRM database.</li><li><strong>Notes</strong> and <strong>Calendar entries</strong> — activity your team and AI agents have logged.</li><li><strong>AI agents</strong> — how many smart agents you've created.</li><li><strong>Campaigns</strong> — outbound calling campaigns, past and present.</li><li><strong>Phone numbers</strong> and <strong>SIP providers</strong> — your telephony footprint.</li><li><strong>Knowledge base</strong> — files your agents can search during calls.</li><li><strong>Sub accounts</strong> — team member logins under your account.</li><li><strong>Custom tools</strong> — custom actions you've connected to your agents.</li></ul><ol><li>To see one team member's slice of these totals, open the <strong>All owners</strong> dropdown in the card's top-right corner and pick their email.</li><li>Clear the selection to go back to whole-account totals.</li></ol>",
+      "images": [
+        { "src": "images/analytics/analytics-dashboard-total-stats-light.png", "alt": "Total Statistics tiles showing contacts, leads, accounts, agents, campaigns, and more", "caption": "Twelve all-time counters — filter them per team member with the All owners dropdown", "theme": "light" },
+        { "src": "images/analytics/analytics-dashboard-total-stats-dark.png", "alt": "Total Statistics tiles showing contacts, leads, accounts, agents, campaigns, and more", "caption": "Twelve all-time counters — filter them per team member with the All owners dropdown", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "performance-kpis",
       "title": "Read the four performance cards",
-      "content": "<p>Just below Total Statistics are four cards that reflect the date range you've selected:</p><ul><li><strong>Total calls</strong> &mdash; how many calls were made and received, with average duration.</li><li><strong>Total minutes</strong> &mdash; total talk time, with your success rate.</li><li><strong>Total spent</strong> &mdash; total cost for the period, with cost per minute.</li><li><strong>Avg cost / call</strong> &mdash; average price of a single call, with cost per day.</li></ul><p>These update automatically whenever you change the date range or any filter.</p>",
+      "content": "<p>The strip of four cards below Total Statistics is your calling scoreboard for the <em>selected date range</em>. Each card carries a headline number plus a smaller companion metric underneath:</p><ul><li><strong>Total calls</strong> — every call made and received in the window. Underneath: <em>Avg duration</em>, the mean length of a call in minutes.</li><li><strong>Total minutes</strong> — total talk time. Underneath: <em>Success rate</em>, the share of calls that connected and completed rather than failing or going unanswered.</li><li><strong>Total spent</strong> — what the period's calling cost you. Underneath: the effective <em>$ / min</em> rate you actually paid.</li><li><strong>Avg cost / call</strong> — the average price of a single call. Underneath: your average <em>$ / day</em> spend across the window.</li></ul><p>All four recalculate instantly every time you change the date range or any filter below — so you can get, say, \"total spend on agent Sarah's voicemail calls last week\" in two clicks.</p><blockquote>⚠️ If the numbers look suspiciously low, check the date range first — the dashboard defaults to <strong>Last 30 Days</strong>, not all time.</blockquote>",
       "images": [
-        { "src": "images/analytics/overview-stats-light.png", "alt": "Overview statistics cards", "caption": "Total calls, minutes, spend, and average cost per call for the selected period", "theme": "light" },
-        { "src": "images/analytics/overview-stats-dark.png", "alt": "Overview statistics cards", "caption": "Total calls, minutes, spend, and average cost per call for the selected period", "theme": "dark" }
+        { "src": "images/analytics/analytics-dashboard-kpis-light.png", "alt": "Four KPI cards: Total calls, Total minutes, Total spent, and Avg cost per call", "caption": "The performance strip — each headline number has a companion metric beneath it", "theme": "light" },
+        { "src": "images/analytics/analytics-dashboard-kpis-dark.png", "alt": "Four KPI cards: Total calls, Total minutes, Total spent, and Avg cost per call", "caption": "The performance strip — each headline number has a companion metric beneath it", "theme": "dark" }
       ]
     },
     {
-      "id": "filter",
-      "title": "Filter by date, agent, and more",
-      "content": "<p>Use the <strong>Filters</strong> bar to narrow the numbers and the calls table below it:</p><ol><li><strong>Date</strong> &mdash; pick <em>Today</em>, <em>Yesterday</em>, <em>This Week</em>, <em>This Month</em>, <em>Last 30 Days</em>, or <em>Custom Range</em> for exact dates.</li><li><strong>Phone numbers</strong> &mdash; limit to calls on one of your numbers.</li><li><strong>Agent</strong> &mdash; focus on a single AI agent (or <em>Web Dialer</em> for manual calls).</li><li><strong>Tags</strong> &mdash; filter by outcome, such as <em>Voicemail</em>, <em>No Answer</em>, <em>Transfer</em>, or <em>Calendar</em>.</li><li><strong>Owner</strong> &mdash; view only a specific team member's calls.</li></ol><p>You can also type a name in <strong>Search customer</strong> to find a specific contact's calls.</p>"
+      "id": "choose-date-range",
+      "title": "Pick the time window",
+      "content": "<p>Every number below Total Statistics obeys one date range. The Filters card's subtitle always shows the exact dates in play (e.g. <em>Last 30 Days · Jun 10 – Jul 10</em>), so you never have to guess.</p><ol><li>In the <strong>Filters</strong> card, click the date button (it shows the current choice, e.g. <strong>Last 30 Days</strong>).</li><li>Pick a preset: <strong>Today</strong>, <strong>Yesterday</strong>, <strong>This Week</strong>, <strong>This Month</strong>, or <strong>Last 30 Days</strong>.</li><li>For exact dates, choose <strong>Custom Range</strong> — a start/end date picker appears right below the button. Select both dates and the whole page refreshes.</li></ol><blockquote>💡 A quick habit worth building: compare <strong>Today</strong> against <strong>Yesterday</strong> each morning. A sudden drop in Total calls usually surfaces here before anyone notices it anywhere else.</blockquote>",
+      "images": [
+        { "src": "images/analytics/analytics-dashboard-date-menu-light.png", "alt": "Date range menu with Today, Yesterday, This Week, This Month, Last 30 Days, and Custom Range options", "caption": "Six ways to set the window — Custom Range reveals a start/end date picker", "theme": "light" },
+        { "src": "images/analytics/analytics-dashboard-date-menu-dark.png", "alt": "Date range menu with Today, Yesterday, This Week, This Month, Last 30 Days, and Custom Range options", "caption": "Six ways to set the window — Custom Range reveals a start/end date picker", "theme": "dark" }
+      ]
     },
     {
-      "id": "read-table-charts",
-      "title": "Drill into calls and charts",
-      "content": "<ul><li>The <strong>Calls</strong> table lists every call in the window with the contact, agent/campaign, date, duration, type, tags, and owner. Click a row's eye icon to open the full call detail.</li><li>At the bottom, three charts break the data down further: <strong>Reason call ended</strong>, <strong>Avg duration by agent</strong>, and <strong>Call volume by hour</strong> &mdash; useful for spotting your busiest times and best-performing agents.</li></ul>"
+      "id": "filter-slice",
+      "title": "Slice the data with the other filters",
+      "content": "<p>Next to the date button sit five more filters. They stack — combine as many as you like, and the KPI cards, table, and charts all narrow together:</p><ul><li><strong>Phone numbers</strong> — only calls on one of your numbers. Perfect for judging whether a new number is pulling its weight.</li><li><strong>Agent</strong> — one AI agent's calls only. Pick <strong>Web Dialer</strong> to see manual calls placed by your team instead.</li><li><strong>Tags</strong> — filter by what happened on the call. You can select several at once: <strong>Calendar</strong> (an appointment was booked), <strong>Knowledge Search</strong> (the agent looked something up), <strong>Transfer</strong> (call was handed to a human), <strong>Agent Ended Call</strong>, <strong>Customer Ended</strong>, <strong>No Answer</strong>, <strong>Voicemail</strong>, <strong>Silence Timeout</strong>, and <strong>User Hang up</strong>.</li><li><strong>Owner</strong> — only calls belonging to one team member (sub account).</li><li><strong>Search customer…</strong> — type a name to jump straight to a specific contact's calls.</li></ul><p>To undo a filter, click the small <strong>×</strong> that appears inside its box.</p><blockquote>💡 Recipe: <strong>Tags = Calendar</strong> + this week's date range = every appointment your AI booked this week, with the exact calls that produced them listed underneath.</blockquote>",
+      "images": [
+        { "src": "images/analytics/analytics-dashboard-filters-light.png", "alt": "Filters bar with date, phone numbers, agent, tags, owner, and customer search controls", "caption": "The Filters bar — the subtitle confirms the exact dates currently applied", "theme": "light" },
+        { "src": "images/analytics/analytics-dashboard-filters-dark.png", "alt": "Filters bar with date, phone numbers, agent, tags, owner, and customer search controls", "caption": "The Filters bar — the subtitle confirms the exact dates currently applied", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "read-calls-table",
+      "title": "Read the Calls table",
+      "content": "<p>The <strong>Calls</strong> table is the receipt behind every KPI: each row is one call in the current window, newest first. The card header tells you the total and page count. Column by column:</p><ul><li><strong>Contact / Lead</strong> — who was on the call. Click the name to open their full CRM record in a side panel without leaving the dashboard.</li><li><strong>Agent / Campaign</strong> — which AI agent handled it (or <em>Web Dialer</em> for manual calls), with the campaign name underneath when the call came from one.</li><li><strong>Date &amp; Time</strong> — when it happened. The little arrow shows direction: green pointing up-right = outbound, blue pointing down-left = inbound. Your own number that carried the call sits just below.</li><li><strong>Duration</strong> — call length as <em>HH:MM:SS</em>.</li><li><strong>Type</strong> — <strong>Phone</strong> for regular calls or <strong>Web</strong> for browser/web-embed calls.</li><li><strong>Tags</strong> — the first pill is how the call ended (e.g. <em>Voicemail</em>, <em>Customer Ended</em>), followed by action tags like <em>Transfer</em>. A <strong>+N</strong> pill means more — hover it to see the rest.</li><li><strong>Owner</strong> — whose call it is: <em>Main</em>, <em>Own</em>, or a sub user's name.</li><li><strong>Actions</strong> — the play button plays the recording; the eye opens the full call detail (next step).</li></ul><p>Use the pagination controls at the bottom-right to move between pages or change how many rows show per page.</p>",
+      "images": [
+        { "src": "images/analytics/analytics-dashboard-calls-table-light.png", "alt": "Calls table with contact, agent, date and time, duration, type, tags, and action columns", "caption": "Every KPI traces back to rows in this table — one row per call, newest first", "theme": "light" },
+        { "src": "images/analytics/analytics-dashboard-calls-table-dark.png", "alt": "Calls table with contact, agent, date and time, duration, type, tags, and action columns", "caption": "Every KPI traces back to rows in this table — one row per call, newest first", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "drill-into-a-call",
+      "title": "Drill into a single call",
+      "content": "<p>When a number surprises you, go see the actual call — it's one click away.</p><ol><li>In the <strong>Actions</strong> column, click the <strong>eye</strong> icon on any row.</li><li>The <strong>Call Details</strong> panel slides open with the recording player on top (or a note if recording wasn't enabled for that call) and five tabs:</li></ol><ul><li><strong>Call Overview</strong> — the call ID, agent name, type &amp; direction, status, duration, and start time at a glance.</li><li><strong>Transcripts</strong> — the full word-for-word conversation between your agent and the caller.</li><li><strong>Analysis</strong> — what the AI extracted from the call (outcomes, captured details).</li><li><strong>Call Cost</strong> — the per-call price breakdown, so you know exactly where each cent went.</li><li><strong>Observer Events</strong> — real-time evaluation events, if you've enabled an observer agent.</li></ul><ol start=\"3\"><li>Click the <strong>×</strong> in the top-left corner to return to the dashboard — your filters stay exactly as you left them.</li></ol>",
+      "images": [
+        { "src": "images/analytics/analytics-dashboard-call-detail-light.png", "alt": "Call Details panel with Call Overview, Transcripts, Analysis, Call Cost, and Observer Events tabs", "caption": "From a KPI to the transcript in one click — the Call Details panel", "theme": "light" },
+        { "src": "images/analytics/analytics-dashboard-call-detail-dark.png", "alt": "Call Details panel with Call Overview, Transcripts, Analysis, Call Cost, and Observer Events tabs", "caption": "From a KPI to the transcript in one click — the Call Details panel", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "read-the-charts",
+      "title": "Read the three charts at the bottom",
+      "content": "<p>Scroll to the bottom for three charts that turn the current view into patterns. They follow your filters, and hovering any bar or point shows the exact value:</p><ul><li><strong>Reason call ended</strong> — a bar per outcome. A tall <em>Voicemail</em> or <em>No Answer</em> bar on an outbound campaign says \"try a different calling time\"; lots of <em>User Hang up</em> suggests the opening script needs work.</li><li><strong>Avg duration by agent</strong> — mean call length per agent, in minutes. Compare agents doing the same job: an unusually short average can mean callers bail early; an unusually long one can mean the agent rambles.</li><li><strong>Call volume by hour</strong> — calls across the 24 hours of the day. Find your rush hours, then schedule campaigns and staff around them.</li></ul><blockquote>💡 The charts read from the calls currently listed in the table, so filter first (one agent, one campaign, one week) and the patterns get much sharper.</blockquote>",
+      "images": [
+        { "src": "images/analytics/analytics-dashboard-charts-light.png", "alt": "Three charts: reason call ended, average duration by agent, and call volume by hour", "caption": "Outcome mix, per-agent duration, and hourly volume — hover for exact values", "theme": "light" },
+        { "src": "images/analytics/analytics-dashboard-charts-dark.png", "alt": "Three charts: reason call ended, average duration by agent, and call volume by hour", "caption": "Outcome mix, per-agent duration, and hourly volume — hover for exact values", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "answer-real-questions",
+      "title": "Put it together: three questions you can now answer",
+      "content": "<p>The dashboard's real power is combining filters. Try these on your own data:</p><ul><li><strong>\"What did my AI actually book this week?\"</strong> — Date: <strong>This Week</strong> → Tags: <strong>Calendar</strong>. The Total calls card is your booking count; the table lists each booked call, and the eye icon shows the conversation that closed it.</li><li><strong>\"Which agent gives me the cheapest completed call?\"</strong> — Pick each agent in the <strong>Agent</strong> filter and compare the <strong>Avg cost / call</strong> card across them. Pair it with <em>Success rate</em> under Total minutes so you're not just optimizing for cheap failures.</li><li><strong>\"Is my new phone number performing?\"</strong> — Select it under <strong>Phone numbers</strong>, set <strong>Last 30 Days</strong>, and read Total calls plus the <em>Reason call ended</em> chart. Heavy <em>No Answer</em>? Check the hourly chart and shift your calling window.</li></ul><p>Once reading this page is second nature, you're running your call center on evidence — not gut feeling.</p>"
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Go deeper into campaign performance and spending.",
+    "description": "You can read the room — now go deeper into per-campaign results and your spending.",
     "cards": [
-      { "href": "/analytics/reports", "title": "Reports", "description": "Compare per-campaign outcomes, connect rates, and cost." },
-      { "href": "/analytics/cost-management", "title": "Cost Management", "description": "See your balance, pricing, and where spend goes." },
-      { "href": "/campaigns/campaign-analytics", "title": "Read Campaign Analytics", "description": "Live campaign progress and connect rates." }
+      { "href": "/analytics/reports", "title": "Reports", "description": "Compare campaigns side by side: outcomes, connect rates, and cost." },
+      { "href": "/analytics/cost-management", "title": "Cost Management", "description": "Track your balance, pricing, and exactly where your spend goes." },
+      { "href": "/campaigns/campaign-analytics", "title": "Campaign Analytics", "description": "Watch live campaign progress, dial lists, and connect rates." }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Analytics Dashboard - Overview & KPIs | iMash Docs",
-  "metaDescription": "Read your call center KPIs on the iMash Overview page and filter calls, minutes, and spend by date, agent, phone number, tags, and owner.",
-  "metaKeywords": "analytics dashboard, overview, call KPIs, total calls, total minutes, call cost, dashboard filters, agent performance, imash"
+  "metaTitle": "Analytics Dashboard - Read Your Call KPIs | iMash Documentation",
+  "metaDescription": "Learn to read every stat card and chart on the iMash Overview dashboard: total calls, minutes, spend, cost per call, filters by date, agent, tags and owner, plus per-call drill-downs.",
+  "metaKeywords": "analytics dashboard, overview, call KPIs, total calls, total minutes, call cost, success rate, dashboard filters, call ended reasons, call volume by hour, agent performance, imash"
 }

@@ -1,55 +1,161 @@
 {
-  "title": "Configura el Observer Agent",
-  "lede": "Ejecuta una segunda IA en segundo plano que observa cada llamada en vivo, marca los momentos importantes como eventos y puede activar herramientas de forma silenciosa, sin ralentizar la conversación principal.",
-  "timeToComplete": "7 minutos",
-  "videoUrl": "https://youtu.be/-cgpNKzS6FY",
-  "videoLength": "3",
+  "title": "Configure el Observer Agent",
+  "lede": "Dele a cada llamada un supervisor silencioso: el Observer Agent (agente observador) es una segunda IA que observa la conversación en tiempo real, marca los momentos críticos en el instante en que ocurren e incluso puede activar herramientas en segundo plano — todo sin ralentizar al agente principal ni un solo milisegundo.",
+  "timeToComplete": "10 minutos",
   "steps": [
     {
-      "id": "enable",
-      "title": "Activa el Observer Agent",
-      "content": "<ol><li>Ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes) y abre tu agente.</li><li>Abre el panel <strong>Observer Agent</strong> (Agente observador) y actívalo (está desactivado de forma predeterminada).</li><li>El panel tiene dos áreas: <strong>Configuration</strong> (Configuración) y <strong>Events</strong> (Eventos).</li></ol>",
+      "id": "open-agent",
+      "title": "Abra el agente que desea monitorear",
+      "content": "<p>El Observer Agent se configura por agente, de modo que cada uno de sus Smart Agents puede vigilar cosas distintas: su agente de ventas puede marcar señales de compra mientras su agente de soporte marca frustración.</p><ol><li>En la barra lateral izquierda, haga clic en <strong>Intelligence Center → Smart Agents</strong> (Centro de Inteligencia → Agentes Inteligentes).</li><li>Haga clic en el <strong>nombre</strong> del agente al que desea añadir un observador. Se abre el editor del agente.</li></ol>",
       "images": [
-        { "src": "images/agents/observer-light.png", "alt": "Panel del Observer Agent", "caption": "El panel del Observer Agent con Configuration y Events.", "theme": "light" },
-        { "src": "images/agents/observer-dark.png", "alt": "Panel del Observer Agent", "caption": "El panel del Observer Agent con Configuration y Events.", "theme": "dark" }
+        {
+          "src": "images/agents/observer-agent-open-light.png",
+          "alt": "Lista de Smart Agents en Intelligence Center",
+          "caption": "Abra Intelligence Center → Smart Agents y haga clic en el nombre de un agente.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/observer-agent-open-dark.png",
+          "alt": "Lista de Smart Agents en Intelligence Center",
+          "caption": "Abra Intelligence Center → Smart Agents y haga clic en el nombre de un agente.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "enable",
+      "title": "Active el Observer Agent",
+      "content": "<p>En el editor del agente (vista Form), la columna central muestra todas las capacidades que su agente puede tener — <strong>Knowledge Base</strong> (base de conocimiento), <strong>Voice (TTS)</strong> (voz), <strong>Webhooks Post Processing</strong> (procesamiento posterior con webhooks) y más.</p><ol><li>Localice la fila <strong>Observer Agent</strong> (icono de campana).</li><li>Haga clic en la píldora <strong>OFF</strong> a la derecha para cambiarla a <strong>ON</strong>. Se selecciona automáticamente un modelo predeterminado.</li><li>Haga clic en cualquier parte de la etiqueta de la fila <strong>Observer Agent</strong> para abrir su ventana de configuración.</li></ol><blockquote>💡 ¿Usa la vista <strong>Node</strong> (nodos)? La misma tarjeta Observer Agent está en la barra de capacidades — haga clic en ella para abrir la misma ventana de configuración. El chip <strong>Observer</strong> bajo el nombre del agente, en la parte superior del editor, también se ilumina cuando el observador está activo.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/observer-agent-editor-row-light.png",
+          "alt": "Editor del agente con la fila Observer Agent activada en ON",
+          "caption": "La fila Observer Agent en la lista de capacidades — actívela en ON y luego haga clic en la fila para configurar.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/observer-agent-editor-row-dark.png",
+          "alt": "Editor del agente con la fila Observer Agent activada en ON",
+          "caption": "La fila Observer Agent en la lista de capacidades — actívela en ON y luego haga clic en la fila para configurar.",
+          "theme": "dark"
+        }
       ]
     },
     {
       "id": "configure",
-      "title": "Configura el modelo y las herramientas",
-      "content": "<ol><li>En <strong>Configuration</strong>, elige un <strong>LLM Model</strong> (Modelo LLM) para impulsar al observador. Como se ejecuta en segundo plano, puedes usar un modelo más lento y minucioso sin afectar la latencia de la llamada.</li><li>De forma opcional, elige un <strong>MCP Server</strong> (Servidor MCP) para que el observador pueda activar herramientas en segundo plano cuando se cumplan ciertas condiciones, sin hacer esperar al agente principal.</li></ol>",
+      "title": "Configure el modelo y las herramientas",
+      "content": "<p>La ventana del Observer Agent se abre con una tarjeta de <strong>Configuration</strong> (configuración) en la parte superior y su lista de eventos a la izquierda. La tarjeta de configuración tiene tres controles:</p><ul><li><strong>LLM Model</strong> (modelo LLM) — el modelo de lenguaje que impulsa al observador. Como escucha en segundo plano y nunca habla, puede permitirse un modelo más lento y minucioso sin añadir latencia a la conversación en vivo. Al habilitar el observador se preselecciona un modelo rápido y económico.</li><li><strong>MCP Server (optional)</strong> (servidor MCP, opcional) — conecte un servidor MCP y el observador podrá activar herramientas externas de forma silenciosa cuando se dispare un evento (crear un ticket, publicar en Slack, actualizar un registro) mientras el agente principal sigue hablando. Déjelo vacío si solo desea las marcas de eventos.</li><li><strong>Píldora ON / OFF</strong> — el interruptor maestro. Cuando está en OFF, todo lo demás aparece atenuado y el observador nunca se une a una llamada.</li></ul><blockquote>💡 ¿Aún no hay servidores MCP en la lista? Cree uno primero en <strong>Intelligence Center → Automation</strong> y luego regrese a seleccionarlo aquí.</blockquote>",
       "images": [
-        { "src": "images/agents/assistant-editor-light.png", "alt": "Editor de agentes", "caption": "El observador se ejecuta junto al agente principal durante cada llamada.", "theme": "light" },
-        { "src": "images/agents/assistant-editor-dark.png", "alt": "Editor de agentes", "caption": "El observador se ejecuta junto al agente principal durante cada llamada.", "theme": "dark" }
+        {
+          "src": "images/agents/observer-agent-modal-light.png",
+          "alt": "Ventana de configuración del Observer Agent con selector de modelo, selector de MCP y lista de eventos",
+          "caption": "La tarjeta de configuración arriba, el riel de eventos a la izquierda y el panel de edición a la derecha.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/observer-agent-modal-dark.png",
+          "alt": "Ventana de configuración del Observer Agent con selector de modelo, selector de MCP y lista de eventos",
+          "caption": "La tarjeta de configuración arriba, el riel de eventos a la izquierda y el panel de edición a la derecha.",
+          "theme": "dark"
+        }
       ]
     },
     {
-      "id": "events",
-      "title": "Configura los eventos",
-      "content": "<ul><li>Abre <strong>Events</strong> para ver los eventos predeterminados, entre ellos <em>Call Quality Issues</em> (Problemas de calidad de llamada), <em>Customer Frustration Detected</em> (Frustración del cliente detectada), <em>Escalation Request</em> (Solicitud de escalamiento), <em>Payment Information Discussed</em> (Información de pago comentada), <em>High-Value Opportunity</em> (Oportunidad de alto valor) y más.</li><li>Haz clic en <strong>Add Custom Event</strong> (Agregar evento personalizado) para crear el tuyo con un nombre, una descripción y un color. Puedes desactivar los eventos que no necesites o usar <strong>Reset to Defaults</strong> (Restablecer los valores predeterminados).</li></ul>",
+      "id": "default-events",
+      "title": "Revise los 10 eventos integrados",
+      "content": "<p>Los eventos son los momentos que el observador vigila. El riel de <strong>Events</strong> (eventos) a la izquierda viene precargado con 10 eventos predeterminados y probados, cada uno con su propio color y su píldora individual <strong>ON / OFF</strong>:</p><ul><li><strong>Call Quality Issues</strong> (problemas de calidad de llamada) — el audio se degrada, la conexión se cae u ocurren problemas técnicos.</li><li><strong>Customer Frustration Detected</strong> (frustración del cliente detectada) — señales de enojo o insatisfacción.</li><li><strong>Escalation Request</strong> (solicitud de escalación) — el cliente pide hablar con un agente humano o supervisor.</li><li><strong>Payment Information Discussed</strong> (información de pago mencionada) — se comparten datos financieros sensibles.</li><li><strong>Compliance Violation Risk</strong> (riesgo de incumplimiento) — la conversación se acerca a temas regulados o restringidos por políticas.</li><li><strong>High-Value Opportunity</strong> (oportunidad de alto valor) — gran interés en productos premium o compras de alto valor.</li><li><strong>Competitor Mention</strong> (mención de la competencia) — el cliente menciona un producto o empresa de la competencia.</li><li><strong>Confusion or Misunderstanding</strong> (confusión o malentendido) — el cliente parece confundido con precios, detalles o próximos pasos.</li><li><strong>Objection Handling Needed</strong> (manejo de objeciones necesario) — inquietudes u objeciones que requieren una respuesta especializada.</li><li><strong>Call Duration Exceeded</strong> (duración de llamada excedida) — la llamada supera la duración óptima.</li></ul><p>Desactive cualquier evento que no necesite con su píldora, o elimínelo por completo con el <strong>icono de papelera</strong> (primero se pide confirmación). El contador en la parte superior del riel (p. ej. <em>10/10</em>) muestra cuántos eventos están activos. ¿Eliminó o alteró los predeterminados? Haga clic en <strong>Reset to Defaults</strong> (restablecer valores predeterminados) al final del riel para restaurar los 10.</p>",
       "images": []
     },
     {
-      "id": "monitor",
-      "title": "Obsérvalo en las llamadas en vivo",
-      "content": "<ol><li>Abre la pantalla <strong>Live Calls</strong> (Llamadas en vivo) mientras una llamada está activa.</li><li>Cuando el observador detecta un evento (por ejemplo, la persona que llama dice \"no te escucho\"), la llamada se etiqueta y se mueve a la columna correspondiente.</li><li>Filtra por evento para concentrarte en las conversaciones que requieren atención.</li></ol>",
+      "id": "edit-event",
+      "title": "Ajuste un evento con precisión",
+      "content": "<p>Haga clic en cualquier evento del riel izquierdo para abrir su editor a la derecha. Tres campos definen su comportamiento:</p><ol><li><strong>Event Name</strong> (nombre del evento) — la etiqueta que se muestra en Live Calls y en los reportes. Manténgala corta y fácil de leer.</li><li><strong>Description</strong> (descripción) — este es el campo clave: es la instrucción que la IA del observador realmente sigue. Describa exactamente <em>cuándo</em> debe dispararse el evento, p. ej. \"Se activa cuando el cliente pide explícitamente hablar con un agente humano o supervisor\".</li><li><strong>Color</strong> — elija con el selector de color o con la paleta <strong>Quick select</strong> (selección rápida). Este color tiñe la tarjeta y la columna de la llamada en el tablero de Live Calls, así que use tonos rojos/naranjas para eventos urgentes y verdes/azules para los positivos.</li></ol><p>Los cambios se guardan automáticamente mientras escribe. El encabezado del editor también muestra una insignia <strong>DEFAULT</strong> para los eventos integrados, además de la píldora <strong>ON / OFF</strong> propia del evento.</p><blockquote>⚠️ Las descripciones vagas producen marcas ruidosas. \"El cliente está descontento\" se dispara constantemente; \"El cliente usa lenguaje agresivo, amenaza con cancelar o dice que quiere un reembolso\" se dispara exactamente cuando lo necesita.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/observer-agent-event-editor-light.png",
+          "alt": "Editor de eventos mostrando nombre, descripción y color del evento Escalation Request",
+          "caption": "Seleccione un evento a la izquierda para editar su nombre, la descripción del disparador y su color.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/observer-agent-event-editor-dark.png",
+          "alt": "Editor de eventos mostrando nombre, descripción y color del evento Escalation Request",
+          "caption": "Seleccione un evento a la izquierda para editar su nombre, la descripción del disparador y su color.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "add-custom-event",
+      "title": "Añada sus propios eventos personalizados",
+      "content": "<p>Los eventos predeterminados son solo el comienzo — el verdadero poder está en enseñarle al observador a vigilar los momentos que importan en <em>su</em> negocio.</p><ol><li>Haga clic en <strong>+ Add Event</strong> (añadir evento) al final del riel de eventos.</li><li>Escriba un <strong>Event Name</strong> (p. ej. \"Mención de reclamo de garantía\").</li><li>Redacte una <strong>Description</strong> precisa de cuándo debe dispararse.</li><li>Elija un <strong>Event Color</strong> (color del evento) y haga clic en <strong>Add</strong> (añadir).</li></ol><p>El nuevo evento aparece en el riel, habilitado y seleccionado, listo para más ajustes. Cuando termine con todo, haga clic en <strong>Done</strong> (listo) para cerrar la ventana — todos los cambios ya están guardados.</p>",
+      "images": [
+        {
+          "src": "images/agents/observer-agent-add-event-light.png",
+          "alt": "Diálogo Add New Event con campos de nombre, descripción y color",
+          "caption": "Cree un evento personalizado con su propia descripción de disparo y color.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/observer-agent-add-event-dark.png",
+          "alt": "Diálogo Add New Event con campos de nombre, descripción y color",
+          "caption": "Cree un evento personalizado con su propia descripción de disparo y color.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "watch-live",
+      "title": "Véalo funcionar en Live Calls",
+      "content": "<p>Esta es la recompensa: un tablero en vivo donde las conversaciones marcadas saltan a la vista en el momento en que algo sucede.</p><ol><li>En la navegación superior, haga clic en <strong>Contact Center</strong> y abra la pestaña <strong>Live Calls</strong> (llamadas en vivo) — o entre por <strong>Call Logs → Live Calls</strong> desde la sección Call Center de la barra lateral.</li><li>La franja de estadísticas superior muestra <strong>Live Calls</strong>, <strong>Dialing</strong>, <strong>Ongoing</strong>, <strong>Transferred</strong>, <strong>Events Flagged</strong> y <strong>Finished</strong> — la tarjeta <strong>Events Flagged</strong> (eventos marcados) cuenta cada detección del observador en sus llamadas activas.</li><li>Cuando el observador dispara un evento a mitad de llamada, la tarjeta de la llamada se tiñe con el color del evento y se etiqueta con su nombre. Pase el cursor sobre la etiqueta para ver el <strong>razonamiento</strong> del observador y su <strong>puntaje de confianza</strong>.</li></ol><ul><li>En el diseño <strong>Tabs</strong> (pestañas), cada evento activo obtiene su propia pestaña (igual que las columnas kanban), de modo que todas las llamadas con \"Escalation Request\" quedan agrupadas.</li><li>En la vista de tabla, la columna <strong>Observer Event</strong> muestra la marca más reciente de cada llamada, y las filas marcadas reciben un tinte suave con el color del evento.</li><li>Use el <strong>filtro de eventos del observador</strong> sobre el tablero para mostrar solo llamadas con eventos específicos — perfecto para un supervisor que prioriza las marcas de frustración.</li></ul>",
+      "images": [
+        {
+          "src": "images/agents/observer-agent-live-calls-light.png",
+          "alt": "Página Live Calls con la tarjeta Events Flagged y la columna Observer Event",
+          "caption": "Live Calls: la tarjeta Events Flagged y la columna Observer Event se iluminan a medida que el observador detecta eventos.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/observer-agent-live-calls-dark.png",
+          "alt": "Página Live Calls con la tarjeta Events Flagged y la columna Observer Event",
+          "caption": "Live Calls: la tarjeta Events Flagged y la columna Observer Event se iluminan a medida que el observador detecta eventos.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "how-it-behaves",
+      "title": "Conviene saber: cómo se comporta el observador",
+      "content": "<ul><li><strong>Nunca habla.</strong> El observador es invisible para el cliente — solo observa, marca y (si conectó un servidor MCP) actúa en segundo plano.</li><li><strong>Cero latencia añadida.</strong> Corre en paralelo con el agente principal, así que incluso un modelo pesado no ralentizará las respuestas.</li><li><strong>Las marcas persisten después de la llamada.</strong> Los eventos detectados se guardan con el registro de la llamada, para que pueda revisarlos más tarde en su historial.</li><li><strong>Configuración por agente.</strong> Habilitar el observador en un agente no afecta a los demás — configure cada uno con los eventos que correspondan a su función.</li></ul><p>Eso es todo — a partir de ahora, ningún momento crítico pasará desapercibido. Su equipo verá escalaciones, frustración y oportunidades valiosas en el mismo segundo en que ocurren, en cada una de las llamadas.</p>",
       "images": []
     }
   ],
   "nextSteps": {
     "title": "¿Qué sigue?",
-    "description": "Combina el monitoreo en segundo plano con más automatización:",
+    "description": "Combine el monitoreo en segundo plano con más músculo de automatización:",
     "cards": [
-      { "href": "/agents/agent-mcp", "title": "Conecta un servidor MCP", "description": "Dale al observador herramientas en segundo plano para activar." },
-      { "href": "/agents/advanced-settings", "title": "Procesamiento posterior a la llamada", "description": "Resume y califica las llamadas después de que terminan." },
-      { "href": "/phone/call-logs", "title": "Revisa los registros de llamadas", "description": "Consulta las etiquetas de eventos y los resúmenes de llamadas pasadas." }
+      {
+        "href": "/agents/agent-mcp",
+        "title": "Conecte un servidor MCP",
+        "description": "Dele al observador herramientas en segundo plano para activar cuando se disparen eventos."
+      },
+      {
+        "href": "/agents/advanced-settings",
+        "title": "Procesamiento posterior a la llamada",
+        "description": "Resuma, califique y extraiga datos de las llamadas después de que terminen."
+      },
+      {
+        "href": "/phone/call-logs",
+        "title": "Revise los registros de llamadas",
+        "description": "Explore etiquetas de eventos, transcripciones y resúmenes de llamadas pasadas."
+      }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o alguna pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">referencia de la API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+    "title": "¿Necesita ayuda?",
+    "content": "<p>Si tiene algún problema o alguna pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
   },
-  "metaTitle": "Configura el Observer Agent | iMash Docs",
-  "metaDescription": "Ejecuta una IA en segundo plano que monitorea las llamadas en vivo de iMash, marca eventos como frustración del cliente y solicitudes de escalamiento, y activa herramientas de forma silenciosa. Actívalo, configúralo y monitoréalo.",
-  "metaKeywords": "observer agent, imash, smart agent, llamadas en vivo, monitoreo de llamadas, eventos, frustración del cliente, escalamiento"
+  "metaTitle": "Configure el Observer Agent | iMash Documentation",
+  "metaDescription": "Ejecute una IA en segundo plano que monitorea las llamadas en vivo de iMash, marca eventos como frustración del cliente y solicitudes de escalación, y activa herramientas de forma silenciosa. Habilítela, ajuste sus eventos y vea las marcas en Live Calls.",
+  "metaKeywords": "observer agent, agente observador, imash, smart agent, live calls, monitoreo de llamadas, eventos, frustración del cliente, escalación, MCP, marcas de llamadas en tiempo real"
 }

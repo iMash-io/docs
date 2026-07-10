@@ -1,47 +1,76 @@
 {
-  "title": "Asignación de roles",
-  "lede": "La asignación de roles (Role Mapping) vincula cada rol de Contact Center con un rol de acceso (Access role) y un perfil de vista (View profile), para que los miembros obtengan automáticamente los permisos correctos al definirse su rol. Esta pestaña está disponible para usuarios con User Management (Gestión de usuarios).",
-  "timeToComplete": "5 minutos",
+  "title": "Mapeo de Roles",
+  "lede": "Deje de configurar permisos miembro por miembro. El Mapeo de Roles vincula cada rol del Contact Center con un rol de acceso y un perfil de vista — así, en cuanto alguien se convierte en Agent, Supervisor, Monitor o Admin, la plataforma le entrega automáticamente los permisos correctos.",
+  "timeToComplete": "10 minutos",
   "steps": [
     {
       "id": "open-role-mapping",
-      "title": "Abre la pestaña Role Mapping (Asignación de roles)",
-      "content": "<ol><li>Ve a <strong>Call Center &rarr; Contact Center &rarr; Groups</strong> (Grupos) y selecciona un grupo.</li><li>Abre la pestaña <strong>Role Mapping</strong> (Asignación de roles). Aparece solo para la cuenta principal o una subcuenta con la gestión de usuarios habilitada.</li></ol>",
+      "title": "Abra la pestaña Role Mapping",
+      "content": "<p>El Mapeo de Roles vive dentro de la configuración de un grupo, en el espacio de trabajo del Contact Center:</p><ol><li>En la barra lateral izquierda, bajo <strong>CALL CENTER</strong>, haga clic en <strong>Contact Center</strong>.</li><li>En la parte superior de la página, abra la pestaña <strong>Groups</strong> (Grupos).</li><li>En el panel <strong>Groups</strong> de la izquierda, haga clic en el grupo que desea configurar — su configuración se abre a la derecha.</li><li>En la barra de pestañas interna del grupo, haga clic en <strong>Role Mapping</strong> (Mapeo de Roles).</li></ol><blockquote>💡 ¿No ve la pestaña <strong>Role Mapping</strong>? Solo aparece para la <strong>cuenta principal</strong> o para una subcuenta con la <strong>gestión de usuarios habilitada</strong>. Un Admin del Contact Center que no sea gestor de usuarios ve las demás pestañas del grupo, pero no esta — el mapeo se lo define un usuario de User Management.</blockquote><p>La misma pestaña también está disponible desde <strong>User Management → Groups</strong> — es exactamente el mismo formulario, así que puede editar el mapeo desde cualquiera de las dos páginas.</p>",
       "images": [
-        { "src": "images/contact-center/cc-group-role-mapping-light.png", "alt": "Pestaña Role Mapping", "caption": "Role Mapping: listas permitidas más la asignación de rol a acceso.", "theme": "light" },
-        { "src": "images/contact-center/cc-group-role-mapping-dark.png", "alt": "Pestaña Role Mapping", "caption": "Role Mapping: listas permitidas más la asignación de rol a acceso.", "theme": "dark" }
+        { "src": "images/contact-center/cc-group-role-mapping-light.png", "alt": "Pestaña Groups del Contact Center con la pestaña Role Mapping abierta para un grupo", "caption": "Role Mapping: las listas permitidas arriba y el mapeo de rol a acceso abajo.", "theme": "light" },
+        { "src": "images/contact-center/cc-group-role-mapping-dark.png", "alt": "Pestaña Groups del Contact Center con la pestaña Role Mapping abierta para un grupo", "caption": "Role Mapping: las listas permitidas arriba y el mapeo de rol a acceso abajo.", "theme": "dark" },
+        { "src": "images/contact-center/role-mapping-tab-bar-light.png", "alt": "Barra de pestañas interna del grupo con la pestaña Role Mapping seleccionada", "caption": "La barra de pestañas interna del grupo — Role Mapping está entre Members Roles e Inbound SIP Routing.", "theme": "light" },
+        { "src": "images/contact-center/role-mapping-tab-bar-dark.png", "alt": "Barra de pestañas interna del grupo con la pestaña Role Mapping seleccionada", "caption": "La barra de pestañas interna del grupo — Role Mapping está entre Members Roles e Inbound SIP Routing.", "theme": "dark" }
       ]
     },
     {
+      "id": "understand-the-pieces",
+      "title": "Entienda las tres piezas que se conectan",
+      "content": "<p>El Mapeo de Roles une tres conceptos distintos — conocer qué hace cada uno vuelve obvio el resto de esta página:</p><ul><li><strong>Rol del Contact Center</strong> — lo que un miembro puede ver y hacer <em>dentro del Contact Center</em>. Hay cuatro: <ul><li><strong>Agent</strong> (Agente) — un representante normal que hace y recibe llamadas y atiende clientes. Solo ve su propia cola.</li><li><strong>Monitor / QA</strong> — puede escuchar llamadas y revisar reportes y grabaciones, pero no puede gestionar agentes ni cambiar la configuración.</li><li><strong>Supervisor</strong> — gestiona agentes: escuchar, susurrar, intervenir, forzar el estado y revisar el desempeño.</li><li><strong>Admin</strong> (Administrador) — acceso completo al Contact Center, incluidas las pestañas Groups y Call Transfer.</li></ul></li><li><strong>Rol de acceso</strong> (Access role) — el rol de permisos de toda la plataforma definido en <strong>User Management</strong> (qué tablas y acciones puede tocar el usuario en toda la aplicación).</li><li><strong>Perfil de vista</strong> (View profile) — qué páginas y menús ve realmente el usuario (su vista simplificada de la aplicación).</li></ul><p>El rol del Contact Center <strong>efectivo</strong> de un miembro es el rol <em>más alto</em> que tiene entre todos sus grupos, y la cuenta principal siempre es <strong>Admin</strong>. La tarea del Mapeo de Roles: cuando se define el rol del Contact Center de un miembro, asignarle automáticamente el rol de acceso y el perfil de vista correspondientes — sin trabajo manual de permisos por miembro.</p>"
+    },
+    {
       "id": "allowed-lists",
-      "title": "Elige los roles de acceso y perfiles de vista permitidos",
-      "content": "<p>En la tarjeta <strong>Allowed access roles &amp; view profiles</strong> (Roles de acceso y perfiles de vista permitidos), elige qué <strong>Access roles</strong> (Roles de acceso) y qué <strong>View profiles</strong> (Perfiles de vista) pueden usarse en la asignación de abajo. Estas listas limitan los menús desplegables del siguiente paso — no limitan lo que puedes asignar en otras partes de User Management.</p>"
+      "title": "Elija los roles de acceso y perfiles de vista permitidos",
+      "content": "<p>La primera tarjeta, <strong>Allowed access roles &amp; view profiles</strong> (Roles de acceso y perfiles de vista permitidos), es un límite de seguridad. Decide qué valores pueden usarse en el mapeo de abajo:</p><ol><li>En <strong>Access roles</strong>, seleccione cada rol de acceso que el mapeo de este grupo pueda otorgar.</li><li>En <strong>View profiles</strong>, seleccione cada perfil de vista que el mapeo pueda asignar.</li></ol><p>Ambos campos son de selección múltiple — haga clic en el campo y elija tantas entradas como necesite; haga clic en la <strong>×</strong> de una etiqueta para quitarla.</p><blockquote>⚠️ Estas listas delimitan lo que un Admin del Contact Center puede asignar a los miembros de este grupo — una lista vacía significa que un Admin de CC no puede asignar <em>nada</em>. <strong>No</strong> lo limitan a usted como usuario de User Management: usted todavía puede asignar cualquier rol o perfil directamente en <strong>User Management</strong>. El límite aplica solo al mapeo del Contact Center.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/role-mapping-allowed-lists-light.png", "alt": "Tarjeta de roles de acceso y perfiles de vista permitidos con campos de selección múltiple", "caption": "Las listas permitidas delimitan qué valores pueden usar los desplegables del mapeo de abajo.", "theme": "light" },
+        { "src": "images/contact-center/role-mapping-allowed-lists-dark.png", "alt": "Tarjeta de roles de acceso y perfiles de vista permitidos con campos de selección múltiple", "caption": "Las listas permitidas delimitan qué valores pueden usar los desplegables del mapeo de abajo.", "theme": "dark" }
+      ]
     },
     {
       "id": "map-roles",
-      "title": "Asigna cada rol de Contact Center",
-      "content": "<p>En la tarjeta <strong>Contact Center role &rarr; Access role &amp; View profile</strong> (Rol de Contact Center → Rol de acceso y perfil de vista), para cada rol — <strong>Agent</strong>, <strong>Monitor / QA</strong>, <strong>Supervisor</strong>, <strong>Admin</strong> — elige el <strong>Access role</strong> (Rol de acceso) y el <strong>View profile</strong> (Perfil de vista) que debe recibir un miembro con ese rol.</p><p>Deja una celda vacía para dejar ese valor sin cambios para los miembros de ese rol.</p>"
+      "title": "Mapee cada rol del Contact Center",
+      "content": "<p>Ahora el corazón de la función — la tarjeta <strong>Contact Center role → Access role &amp; View profile</strong>. Muestra una fila por cada rol del Contact Center: <strong>Agent</strong>, <strong>Monitor / QA</strong>, <strong>Supervisor</strong> y <strong>Admin</strong>.</p><ol><li>Para cada rol que quiera automatizar, elija un <strong>Access role</strong> (rol de acceso) en el primer desplegable.</li><li>Elija un <strong>View profile</strong> (perfil de vista) en el segundo desplegable.</li><li>Repita para cada fila que le interese — no es obligatorio completarlas todas.</li></ol><ul><li>Los desplegables solo ofrecen los valores que agregó a las listas permitidas en el paso anterior. Si ambos desplegables se ven vacíos, la tarjeta se lo recuerda: <em>\"Add some allowed access roles / view profiles above to map them here.\"</em></li><li>Una <strong>celda vacía significa \"no tocar\"</strong> — los miembros con ese rol del Contact Center conservan el rol de acceso o el perfil de vista que ya tienen. El mapeo nunca borra un valor existente.</li><li>Use el icono <strong>×</strong> (borrar) de un desplegable para vaciar una celda de nuevo.</li></ul><blockquote>💡 Una configuración clásica: mapee <strong>Agent</strong> a un rol de acceso restringido y a un perfil de vista mínimo (solo el marcador y su cola), y mapee <strong>Supervisor</strong> a un rol más amplio con páginas de reportes. Las nuevas contrataciones reciben un espacio de trabajo listo para producción en el instante en que usted define su rol.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/role-mapping-map-grid-light.png", "alt": "Cuadrícula de mapeo con una fila por rol del Contact Center y desplegables de rol de acceso y perfil de vista", "caption": "Una fila por rol. Las celdas vacías dejan sin cambios a los miembros de ese rol.", "theme": "light" },
+        { "src": "images/contact-center/role-mapping-map-grid-dark.png", "alt": "Cuadrícula de mapeo con una fila por rol del Contact Center y desplegables de rol de acceso y perfil de vista", "caption": "Una fila por rol. Las celdas vacías dejan sin cambios a los miembros de ese rol.", "theme": "dark" }
+      ]
     },
     {
       "id": "save-apply",
-      "title": "Guarda para aplicar la asignación",
-      "content": "<p>Haz clic en <strong>Save</strong> (Guardar). La asignación se aplica a cada miembro según su rol de Contact Center actual (definido en la pestaña <strong>Members Roles</strong>). La cuenta principal nunca se reasigna. Las asignaciones vacías nunca borran los valores existentes de un miembro.</p>"
+      "title": "Guarde — y vea cómo el mapeo se aplica solo",
+      "content": "<p>Haga clic en <strong>Save</strong> (Guardar) en la esquina inferior derecha. Un solo clic hace dos cosas:</p><ol><li>Guarda las listas permitidas y el mapeo en sí.</li><li>Aplica inmediatamente el mapeo a <strong>todos los miembros del grupo</strong>, según el rol del Contact Center que cada miembro tiene actualmente en la pestaña <strong>Members Roles</strong>.</li></ol><p>Las reglas que sigue la plataforma al aplicarlo:</p><ul><li>Un miembro sin un rol del Contact Center explícito cuenta como <strong>Agent</strong>.</li><li>La <strong>cuenta principal nunca se remapea</strong> — su acceso no puede degradarse por accidente.</li><li>Las celdas de mapeo vacías <strong>nunca borran</strong> el rol de acceso o el perfil de vista existente de un miembro.</li><li>Los miembros cuyos valores ya coinciden se omiten — no se reescribe nada innecesariamente.</li><li>Si algún miembro no puede actualizarse, verá una advertencia como <em>\"2 member(s) could not be updated to the role mapping.\"</em> — el resto se aplica igualmente.</li></ul>"
+    },
+    {
+      "id": "verify-members-roles",
+      "title": "Verifique el resultado en la pestaña Members Roles",
+      "content": "<p>Cambie a la pestaña <strong>Members Roles</strong> (Roles de los Miembros) para ver el mapeo en acción:</p><ol><li>Cada fila de miembro muestra su desplegable editable de <strong>Contact Center role</strong>.</li><li>Junto a él, las columnas <strong>Access role (by role)</strong> y <strong>View profile (by role)</strong> muestran lo que asigna el mapeo — estas columnas son de <strong>solo lectura</strong>, porque se derivan del mapeo y no se definen por miembro.</li><li>Cambie el rol del Contact Center de un miembro y haga clic en <strong>Save</strong> (Guardar) — su rol de acceso y su perfil de vista siguen automáticamente al nuevo rol.</li></ol><blockquote>💡 Las columnas de la cuenta principal muestran <em>Main account</em>, y un rol sin mapear muestra <em>Not mapped</em>. Si una columna muestra un destino incorrecto, corríjalo una sola vez en la pestaña <strong>Role Mapping</strong> — no miembro por miembro.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/role-mapping-members-derived-light.png", "alt": "Pestaña Members Roles mostrando las columnas de solo lectura de rol de acceso y perfil de vista derivadas del mapeo", "caption": "Members Roles: las columnas Access role / View profile se derivan del Role Mapping y se aplican al Guardar.", "theme": "light" },
+        { "src": "images/contact-center/role-mapping-members-derived-dark.png", "alt": "Pestaña Members Roles mostrando las columnas de solo lectura de rol de acceso y perfil de vista derivadas del mapeo", "caption": "Members Roles: las columnas Access role / View profile se derivan del Role Mapping y se aplican al Guardar.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "new-users-follow-mapping",
+      "title": "Los usuarios nuevos siguen el mapeo automáticamente",
+      "content": "<p>El mapeo no es solo para los miembros existentes. Cuando crea un usuario desde dentro de un grupo (la acción <strong>Create User</strong> (Crear Usuario) en la pestaña <strong>Members</strong> del grupo), usted elige su <strong>Contact Center role</strong> en el formulario de creación — y el rol de acceso y el perfil de vista de la nueva cuenta siguen el Mapeo de Roles del grupo desde su primer inicio de sesión.</p><p>Esa es la recompensa: incorporar a un nuevo agente se convierte en <em>crear usuario → elegir rol → listo</em>. Sin pasar por User Management, sin lista de verificación de permisos, sin configuraciones olvidadas.</p>"
     }
   ],
   "nextSteps": {
-    "title": "¿Qué sigue?",
-    "description": "Define los roles de los miembros y dirige llamadas al grupo.",
+    "title": "¿Qué Sigue?",
+    "description": "El mapeo ya está activo — ahora defina el rol de cada miembro y ponga el grupo a trabajar con llamadas reales.",
     "cards": [
-      { "href": "/contact-center/members-roles", "title": "Miembros y roles", "description": "Define el rol de Contact Center que impulsa la asignación." },
-      { "href": "/contact-center/inbound-sip-routing", "title": "Enrutamiento SIP entrante", "description": "Dirige un número de teléfono a este grupo." },
-      { "href": "/contact-center/overview", "title": "Visión general del Contact Center", "description": "Repasa todo el espacio de trabajo." }
+      { "href": "/contact-center/members-roles", "title": "Miembros y Roles", "description": "Asigne el rol del Contact Center que impulsa el mapeo, además de habilidades y disposiciones." },
+      { "href": "/contact-center/groups", "title": "Grupos", "description": "Cree grupos, agregue miembros y gestione cada ajuste por grupo." },
+      { "href": "/settings/team-management", "title": "Gestión del Equipo", "description": "Gestione los roles de acceso y los perfiles de vista a nivel de plataforma." }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
+    "title": "¿Necesita Ayuda?",
+    "content": "<p>Si tiene algún problema o alguna pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Asignación de roles | iMash Docs",
-  "metaDescription": "Asigna cada rol de Contact Center a un rol de acceso y un perfil de vista en iMash para que los miembros del grupo obtengan los permisos correctos automáticamente al guardar.",
-  "metaKeywords": "asignación de roles, rol de acceso, perfil de vista, contact center, grupo de permisos, gestión de usuarios"
+  "metaTitle": "Mapeo de Roles | Documentación de iMash",
+  "metaDescription": "Mapee cada rol del Contact Center a un rol de acceso y un perfil de vista en iMash para que los miembros del grupo reciban automáticamente los permisos correctos al definir su rol.",
+  "metaKeywords": "mapeo de roles, rol de acceso, perfil de vista, contact center, grupo de permisos, gestión de usuarios, permisos de agente, supervisor"
 }

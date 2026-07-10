@@ -1,47 +1,76 @@
 {
   "title": "Role Mapping",
-  "lede": "Role Mapping links each Contact Center role to an Access role and a View profile, so members automatically get the right permissions when their role is set. This tab is available to User-Management users.",
-  "timeToComplete": "5 minutes",
+  "lede": "Stop configuring permissions one member at a time. Role Mapping links each Contact Center role to an Access role and a View profile — so the moment someone is made an Agent, Supervisor, Monitor or Admin, the platform hands them exactly the right permissions automatically.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
       "id": "open-role-mapping",
       "title": "Open the Role Mapping tab",
-      "content": "<ol><li>Go to <strong>Call Center &rarr; Contact Center &rarr; Groups</strong> and select a group.</li><li>Open the <strong>Role Mapping</strong> tab. It appears only for the main account or a sub-account with user management enabled.</li></ol>",
+      "content": "<p>Role Mapping lives inside a group's settings in the Contact Center workspace:</p><ol><li>In the left sidebar, under <strong>CALL CENTER</strong>, click <strong>Contact Center</strong>.</li><li>At the top of the page, open the <strong>Groups</strong> tab.</li><li>In the <strong>Groups</strong> panel on the left, click the group you want to configure — its settings open on the right.</li><li>In the group's inner tab bar, click <strong>Role Mapping</strong>.</li></ol><blockquote>💡 Don't see the <strong>Role Mapping</strong> tab? It only appears for the <strong>main account</strong> or a sub-account with <strong>user management enabled</strong>. A Contact Center Admin who is not a user manager sees the other group tabs but not this one — the mapping is set for them by a User-Management user.</blockquote><p>The same tab is also available from <strong>User Management → Groups</strong> — it's the exact same form, so you can edit the mapping from whichever page you're on.</p>",
       "images": [
-        { "src": "images/contact-center/cc-group-role-mapping-light.png", "alt": "Role Mapping tab", "caption": "Role Mapping: allowed lists plus the role-to-access mapping.", "theme": "light" },
-        { "src": "images/contact-center/cc-group-role-mapping-dark.png", "alt": "Role Mapping tab", "caption": "Role Mapping: allowed lists plus the role-to-access mapping.", "theme": "dark" }
+        { "src": "images/contact-center/cc-group-role-mapping-light.png", "alt": "Contact Center Groups tab with the Role Mapping tab open for a group", "caption": "Role Mapping: the allowed lists on top, the role-to-access mapping below.", "theme": "light" },
+        { "src": "images/contact-center/cc-group-role-mapping-dark.png", "alt": "Contact Center Groups tab with the Role Mapping tab open for a group", "caption": "Role Mapping: the allowed lists on top, the role-to-access mapping below.", "theme": "dark" },
+        { "src": "images/contact-center/role-mapping-tab-bar-light.png", "alt": "Group inner tab bar with the Role Mapping tab selected", "caption": "The group's inner tab bar — Role Mapping sits between Members Roles and Inbound SIP Routing.", "theme": "light" },
+        { "src": "images/contact-center/role-mapping-tab-bar-dark.png", "alt": "Group inner tab bar with the Role Mapping tab selected", "caption": "The group's inner tab bar — Role Mapping sits between Members Roles and Inbound SIP Routing.", "theme": "dark" }
       ]
     },
     {
+      "id": "understand-the-pieces",
+      "title": "Understand the three pieces being connected",
+      "content": "<p>Role Mapping ties together three separate concepts — knowing what each one does makes the rest of this page obvious:</p><ul><li><strong>Contact Center role</strong> — what a member can see and do <em>inside the Contact Center</em>. There are four: <ul><li><strong>Agent</strong> — a regular rep who makes and receives calls and handles customers. Sees only their own queue.</li><li><strong>Monitor / QA</strong> — can listen to calls and review reporting and recordings, but cannot manage agents or change settings.</li><li><strong>Supervisor</strong> — manages agents: listen, whisper, barge, force status, review performance.</li><li><strong>Admin</strong> — full Contact Center access, including the Groups and Call Transfer tabs.</li></ul></li><li><strong>Access role</strong> — the platform-wide permission role from <strong>User Management</strong> (what tables and actions the user may touch across the whole app).</li><li><strong>View profile</strong> — which pages and menus the user actually sees (their simplified view of the app).</li></ul><p>A member's <strong>effective</strong> Contact Center role is the <em>highest</em> role they hold across all their groups, and the main account is always <strong>Admin</strong>. Role Mapping's job: when a member's Contact Center role is set, automatically assign the matching Access role and View profile — no manual permission work per member.</p>"
+    },
+    {
       "id": "allowed-lists",
-      "title": "Choose the allowed access roles and view profiles",
-      "content": "<p>In the <strong>Allowed access roles &amp; view profiles</strong> card, pick which <strong>Access roles</strong> and which <strong>View profiles</strong> may be used in the mapping below. These lists bound the dropdowns in the next step — they don't limit what you can assign elsewhere in User Management.</p>"
+      "title": "Choose the allowed Access roles and View profiles",
+      "content": "<p>The first card, <strong>Allowed access roles &amp; view profiles</strong>, is a safety boundary. It decides which values may be used in the mapping below:</p><ol><li>In <strong>Access roles</strong>, select every access role this group's mapping should be allowed to hand out.</li><li>In <strong>View profiles</strong>, select every view profile the mapping may assign.</li></ol><p>Both fields are multi-select — click into the field and pick as many entries as you need; click the <strong>×</strong> on a tag to remove it.</p><blockquote>⚠️ These lists bound what a Contact Center Admin can assign to this group's members — an empty list means a CC Admin can assign <em>nothing</em>. They do <strong>not</strong> limit you as a User-Management user: you can still assign any role or profile directly in <strong>User Management</strong>. The limit applies only to the Contact Center mapping.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/role-mapping-allowed-lists-light.png", "alt": "Allowed access roles and view profiles card with multi-select fields", "caption": "The allow-lists bound which values the mapping dropdowns below can use.", "theme": "light" },
+        { "src": "images/contact-center/role-mapping-allowed-lists-dark.png", "alt": "Allowed access roles and view profiles card with multi-select fields", "caption": "The allow-lists bound which values the mapping dropdowns below can use.", "theme": "dark" }
+      ]
     },
     {
       "id": "map-roles",
       "title": "Map each Contact Center role",
-      "content": "<p>In the <strong>Contact Center role &rarr; Access role &amp; View profile</strong> card, for each role — <strong>Agent</strong>, <strong>Monitor / QA</strong>, <strong>Supervisor</strong>, <strong>Admin</strong> — pick the <strong>Access role</strong> and <strong>View profile</strong> a member with that role should get.</p><p>Leave a cell empty to leave that value unchanged for members of that role.</p>"
+      "content": "<p>Now the heart of the feature — the <strong>Contact Center role → Access role &amp; View profile</strong> card. It shows one row per Contact Center role: <strong>Agent</strong>, <strong>Monitor / QA</strong>, <strong>Supervisor</strong> and <strong>Admin</strong>.</p><ol><li>For each role you want to automate, pick an <strong>Access role</strong> in the first dropdown.</li><li>Pick a <strong>View profile</strong> in the second dropdown.</li><li>Repeat for every row you care about — you don't have to fill them all.</li></ol><ul><li>The dropdowns only offer values you added to the allow-lists in the previous step. If both dropdowns look empty, the card reminds you: <em>\"Add some allowed access roles / view profiles above to map them here.\"</em></li><li>An <strong>empty cell means \"don't touch\"</strong> — members with that Contact Center role keep whatever Access role or View profile they already have. The mapping never clears an existing value.</li><li>Use the <strong>×</strong> (clear) icon on a dropdown to empty a cell again.</li></ul><blockquote>💡 A classic setup: map <strong>Agent</strong> to a locked-down access role and a minimal view profile (dialer + their queue only), and map <strong>Supervisor</strong> to a broader role with reporting pages. New hires then get a production-ready workspace the second you set their role.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/role-mapping-map-grid-light.png", "alt": "Mapping grid with one row per Contact Center role and dropdowns for access role and view profile", "caption": "One row per role. Empty cells leave members of that role unchanged.", "theme": "light" },
+        { "src": "images/contact-center/role-mapping-map-grid-dark.png", "alt": "Mapping grid with one row per Contact Center role and dropdowns for access role and view profile", "caption": "One row per role. Empty cells leave members of that role unchanged.", "theme": "dark" }
+      ]
     },
     {
       "id": "save-apply",
-      "title": "Save to apply the mapping",
-      "content": "<p>Click <strong>Save</strong>. The mapping is applied to every member based on their current Contact Center role (set on the <strong>Members Roles</strong> tab). The main account is never remapped. Empty mappings never clear a member's existing values.</p>"
+      "title": "Save — and watch the mapping apply itself",
+      "content": "<p>Click <strong>Save</strong> in the bottom-right corner. One click does two things:</p><ol><li>Saves the allow-lists and the mapping itself.</li><li>Immediately applies the mapping to <strong>every member of the group</strong>, based on the Contact Center role each member currently has on the <strong>Members Roles</strong> tab.</li></ol><p>The rules the platform follows when applying:</p><ul><li>A member with no explicit Contact Center role counts as an <strong>Agent</strong>.</li><li>The <strong>main account is never remapped</strong> — its access can't be accidentally downgraded.</li><li>Empty mapping cells <strong>never clear</strong> a member's existing Access role or View profile.</li><li>Members whose values already match are skipped — nothing is rewritten needlessly.</li><li>If any member can't be updated, you'll see a warning like <em>\"2 member(s) could not be updated to the role mapping.\"</em> — the rest are still applied.</li></ul>"
+    },
+    {
+      "id": "verify-members-roles",
+      "title": "Verify the result on the Members Roles tab",
+      "content": "<p>Switch to the <strong>Members Roles</strong> tab to see the mapping in action:</p><ol><li>Each member row shows their editable <strong>Contact Center role</strong> dropdown.</li><li>Next to it, the <strong>Access role (by role)</strong> and <strong>View profile (by role)</strong> columns show what the mapping assigns — these columns are <strong>read-only</strong>, because they're derived from the mapping, not set per member.</li><li>Change a member's Contact Center role and click <strong>Save</strong> — their Access role and View profile follow the new role automatically.</li></ol><blockquote>💡 The main account's columns show <em>Main account</em>, and an unmapped role shows <em>Not mapped</em>. If a column shows the wrong target, fix it once on the <strong>Role Mapping</strong> tab — not per member.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/role-mapping-members-derived-light.png", "alt": "Members Roles tab showing the read-only Access role and View profile columns derived from the mapping", "caption": "Members Roles: the Access role / View profile columns are derived from the Role Mapping and apply on Save.", "theme": "light" },
+        { "src": "images/contact-center/role-mapping-members-derived-dark.png", "alt": "Members Roles tab showing the read-only Access role and View profile columns derived from the mapping", "caption": "Members Roles: the Access role / View profile columns are derived from the Role Mapping and apply on Save.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "new-users-follow-mapping",
+      "title": "New users follow the mapping automatically",
+      "content": "<p>The mapping isn't just for existing members. When you create a user from inside a group (the <strong>Create User</strong> action on the group's <strong>Members</strong> tab), you pick their <strong>Contact Center role</strong> in the creation form — and the new account's Access role and View profile follow the group's Role Mapping from the very first login.</p><p>That's the payoff: onboarding a new agent becomes <em>create user → pick role → done</em>. No trip to User Management, no permission checklist, no forgotten settings.</p>"
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Set member roles and route calls to the group.",
+    "description": "The mapping is live — now set each member's role and put the group to work on real calls.",
     "cards": [
-      { "href": "/contact-center/members-roles", "title": "Members & Roles", "description": "Set the Contact Center role that drives the mapping." },
-      { "href": "/contact-center/inbound-sip-routing", "title": "Inbound SIP Routing", "description": "Point a phone number at this group." },
-      { "href": "/contact-center/overview", "title": "Contact Center Overview", "description": "Review the whole workspace." }
+      { "href": "/contact-center/members-roles", "title": "Members & Roles", "description": "Assign the Contact Center role that drives the mapping, plus skills and dispositions." },
+      { "href": "/contact-center/groups", "title": "Groups", "description": "Create groups, add members, and manage every per-group setting." },
+      { "href": "/settings/team-management", "title": "Team Management", "description": "Manage access roles and view profiles at the platform level." }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Role Mapping | iMash Docs",
-  "metaDescription": "Map each Contact Center role to an Access role and View profile in iMash so group members get the right permissions automatically on Save.",
-  "metaKeywords": "role mapping, access role, view profile, contact center, permission group, user management"
+  "metaTitle": "Role Mapping | iMash Documentation",
+  "metaDescription": "Map each Contact Center role to an Access role and View profile in iMash so group members automatically receive the right permissions when their role is set.",
+  "metaKeywords": "role mapping, access role, view profile, contact center, permission group, user management, agent permissions, supervisor"
 }

@@ -1,130 +1,126 @@
 {
-  "title": "Crea tu primer agente",
-  "lede": "Crea un Smart Agent (Agente inteligente) desde cero: ponle nombre, escribe su prompt y su saludo, elige un modelo y una voz, y luego pruébalo, todo desde un solo editor.",
-  "timeToComplete": "6 minutos",
+  "title": "Cree su primer agente",
+  "lede": "En los próximos minutos construirá un agente de voz con IA capaz de contestar llamadas, mantener conversaciones naturales y trabajar para usted 24/7 — sin código y sin esperas. Este es el recorrido completo, desde una lista vacía hasta un agente que habla.",
+  "timeToComplete": "10 minutos",
   "steps": [
     {
-      "id": "open-list",
-      "title": "Abre Smart Agents",
-      "content": "<ol><li>En la navegación izquierda, ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes).</li><li>Verás la lista de tus agentes existentes.</li><li>Haz clic en <strong>Create</strong> (Crear, el botón de nuevo agente) para empezar un agente nuevo.</li></ol>",
+      "id": "open-smart-agents",
+      "title": "Abra Smart Agents",
+      "content": "<p>Todos los agentes que construya viven en un solo lugar: la lista de <strong>Smart Agents</strong> (Agentes Inteligentes).</p><ol><li>En el encabezado, haga clic en la sección <strong>Automation</strong> (Automatización) — normalmente es la primera pestaña.</li><li>Haga clic en la sub-pestaña <strong>Smart Agents</strong> — o use la barra lateral izquierda: bajo <strong>Intelligence Center</strong> (Centro de Inteligencia), haga clic en <strong>Smart Agents</strong>.</li><li>Verá una tabla con sus agentes y sus columnas <strong>Voice</strong> (voz), <strong>LLM</strong>, <strong>STT</strong> (transcriptor), <strong>TTS</strong> (motor de voz) y <strong>Label</strong> (etiqueta).</li></ol><p>La barra de herramientas sobre la tabla le ofrece:</p><ul><li>Filtro <strong>Label</strong> — acota la lista a los agentes con una etiqueta.</li><li>Filtro <strong>Owner</strong> (propietario) — filtra por cuenta principal o subcuenta.</li><li><strong>List / Folders</strong> (Lista / Carpetas) — alterna entre una tabla plana y una vista agrupada por etiquetas.</li><li><strong>Create New Agent</strong> (Crear nuevo agente) — el botón azul que está a punto de pulsar.</li><li><strong>API Info</strong> — muestra cómo crear y gestionar agentes mediante la API.</li></ul>",
       "images": [
-        {
-          "src": "images/agents/assistants-list-light.png",
-          "alt": "Lista de Smart Agents",
-          "caption": "La lista de Smart Agents: crea un nuevo agente desde aquí.",
-          "theme": "light"
-        },
-        {
-          "src": "images/agents/assistants-list-dark.png",
-          "alt": "Lista de Smart Agents",
-          "caption": "La lista de Smart Agents: crea un nuevo agente desde aquí.",
-          "theme": "dark"
-        }
+        {"src": "images/agents/create-agent-list-light.png", "alt": "Lista de Smart Agents con el botón Create New Agent", "caption": "La lista de Smart Agents — aquí viven todos los agentes que construya.", "theme": "light"},
+        {"src": "images/agents/create-agent-list-dark.png", "alt": "Lista de Smart Agents con el botón Create New Agent", "caption": "La lista de Smart Agents — aquí viven todos los agentes que construya.", "theme": "dark"}
       ]
     },
     {
-      "id": "name-and-prompt",
-      "title": "Ponle nombre y escribe el prompt",
-      "content": "<ol><li>Dale al agente un <strong>nombre</strong> claro para que puedas encontrarlo más tarde.</li><li>En la columna de prompt a la izquierda, describe el rol, la personalidad y las reglas del agente: qué debe hacer y cómo debe hablar.</li><li>Define el <strong>first message</strong> (primer mensaje) que dice el agente cuando se conecta una llamada.</li></ol>",
+      "id": "create-new-agent",
+      "title": "Haga clic en Create New Agent",
+      "content": "<ol><li>Haga clic en <strong>Create New Agent</strong> (Crear nuevo agente), arriba a la derecha de la barra de herramientas.</li><li>Eso es todo: iMash crea al instante un agente listo para funcionar (con un nombre como <em>Agent_1234567</em>), con cerebro, voz y transcriptor predeterminados, y lo abre en el editor.</li></ol><p>Nunca empieza desde un lienzo roto: un agente recién creado ya puede hablar. Todo lo que haga a partir de aquí es personalización.</p><blockquote>💡 <strong>Consejo:</strong> La pequeña flecha junto a <strong>Create New Agent</strong> abre un menú con <strong>Browse Templates</strong> (Explorar plantillas) — un comienzo más rápido si una plantilla se ajusta a su caso (siguiente paso).</blockquote>",
       "images": [
-        {
-          "src": "images/agents/assistant-editor-light.png",
-          "alt": "Editor del agente",
-          "caption": "El editor: el prompt a la izquierda, los paneles de funciones en el centro.",
-          "theme": "light"
-        },
-        {
-          "src": "images/agents/assistant-editor-dark.png",
-          "alt": "Editor del agente",
-          "caption": "El editor: el prompt a la izquierda, los paneles de funciones en el centro.",
-          "theme": "dark"
-        }
+        {"src": "images/agents/create-agent-new-button-light.png", "alt": "Barra de herramientas con el botón Create New Agent", "caption": "La barra de herramientas: filtros, cambio de vista y el botón Create New Agent.", "theme": "light"},
+        {"src": "images/agents/create-agent-new-button-dark.png", "alt": "Barra de herramientas con el botón Create New Agent", "caption": "La barra de herramientas: filtros, cambio de vista y el botón Create New Agent.", "theme": "dark"}
       ]
     },
     {
-      "id": "model-and-voice",
-      "title": "Elige el cerebro y la voz",
-      "content": "<ol><li>Abre el panel <strong>Brains (LLM)</strong> (Cerebros) y elige el modelo que genera las respuestas (un modelo de voz a voz en tiempo real, o un modelo de texto combinado con un transcriptor).</li><li>Abre el panel <strong>Voice (TTS)</strong> (Voz) y elige la voz con la que habla tu agente.</li></ol>",
+      "id": "start-from-template",
+      "title": "Opcional: empiece desde una plantilla",
+      "content": "<p>¿No quiere escribir un prompt desde cero? Haga clic en la flecha junto a <strong>Create New Agent</strong> y elija <strong>Browse Templates</strong> (Explorar plantillas).</p><ul><li><strong>System Templates</strong> (Plantillas del sistema) — agentes redactados profesionalmente para tareas comunes: contestador fuera de horario, línea de preguntas frecuentes, seguimiento de leads, recordatorio de citas, encuestas, soporte técnico y más.</li><li><strong>Organization Templates</strong> (Plantillas de la organización) — plantillas compartidas dentro de su organización.</li><li><strong>My Templates</strong> (Mis plantillas) — agentes que usted guardó con <strong>Save As</strong> (lo veremos más adelante en esta guía).</li></ul><ol><li>Use el buscador o los filtros de categoría (<strong>Inbound</strong>, <strong>Outbound</strong>, <strong>Support</strong>, <strong>Sales</strong>, <strong>Scheduling</strong>, <strong>General</strong>) para encontrar la adecuada.</li><li>Haga clic en <strong>Use Template</strong> (Usar plantilla) en una tarjeta — se crea un agente nuevo a partir de ella y se abre en el editor, listo para personalizar.</li></ol>",
       "images": [
-        {
-          "src": "images/agents/voice-config-light.png",
-          "alt": "Voz y modelo",
-          "caption": "Elige la voz (TTS) y el cerebro (LLM) de tu agente",
-          "theme": "light"
-        },
-        {
-          "src": "images/agents/voice-config-dark.png",
-          "alt": "Voz y modelo",
-          "caption": "Elige la voz (TTS) y el cerebro (LLM) de tu agente",
-          "theme": "dark"
-        }
+        {"src": "images/agents/create-agent-templates-light.png", "alt": "Galería de plantillas de agentes", "caption": "La galería Agent Templates — un clic crea un agente completamente configurado.", "theme": "light"},
+        {"src": "images/agents/create-agent-templates-dark.png", "alt": "Galería de plantillas de agentes", "caption": "La galería Agent Templates — un clic crea un agente completamente configurado.", "theme": "dark"}
       ]
     },
     {
-      "id": "enhance",
-      "title": "Agrega capacidades (opcional)",
-      "content": "<ul><li><strong>Knowledge Base</strong> (Base de conocimiento): sube preguntas frecuentes y documentos para responder a partir de ellos.</li><li><strong>Tools / MCP</strong> (Herramientas / MCP): permite que el agente finalice llamadas, agende citas o llame a tus API.</li><li><strong>Settings</strong> (Configuración): ajusta los tiempos de espera, los mensajes de inactividad, el buzón de voz y la privacidad.</li></ul>",
+      "id": "meet-the-canvas",
+      "title": "Conozca el editor: el lienzo de nodos",
+      "content": "<p>Los agentes nuevos se abren en la vista <strong>Node</strong> (Nodos) — un lienzo visual donde su agente es un diagrama vivo. Todo lo que ve en pantalla es configuración real, no decoración:</p><ul><li><strong>El nodo Agent</strong> (centro-derecha) — el corazón de su agente: sus entradas, identidad, capacidades y comportamiento.</li><li><strong>Nodos de proveedor</strong> conectados a él — un nodo <strong>LLM</strong> (el cerebro, con su modelo y temperatura), un nodo <strong>TTS</strong> (la voz con la que habla) y un nodo <strong>STT</strong> (cómo transcribe lo que dicen las personas). Las líneas punteadas animadas muestran qué alimenta a qué.</li><li><strong>Barra de capacidades</strong> (arriba) — tarjetas ON/OFF para Knowledge Base, Webhooks, Observer Agent, IVR, CRM y más (paso 7).</li><li><strong>Riel de acciones</strong> (borde derecho) — paleta de componentes, registros de llamadas, historial de versiones, compartir, ajustes del editor y cambio de tema.</li><li><strong>Barra Agent Builder</strong> (abajo) — hable con una IA que construye el lienzo por usted, o pruebe su agente en vivo (paso 9).</li><li><strong>Píldora de navegación</strong> (abajo a la izquierda) — Atrás, el conmutador de vista <strong>Form / Node</strong>, selector de propietario y <strong>Save As</strong> (guardar como plantilla).</li></ul><blockquote>💡 <strong>Consejo:</strong> Todo se guarda automáticamente. Observe la insignia en la esquina inferior derecha junto al nombre del agente — cambia a <strong>Saved · just now</strong> (Guardado · ahora mismo) tras cada cambio. No hay botón de guardar que olvidar.</blockquote>",
       "images": [
-        {
-          "src": "images/agents/tools-mcp-light.png",
-          "alt": "Agrega herramientas",
-          "caption": "Agrega herramientas, servidores MCP y una base de conocimiento",
-          "theme": "light"
-        },
-        {
-          "src": "images/agents/tools-mcp-dark.png",
-          "alt": "Agrega herramientas",
-          "caption": "Agrega herramientas, servidores MCP y una base de conocimiento",
-          "theme": "dark"
-        }
+        {"src": "images/agents/create-agent-canvas-light.png", "alt": "El editor de lienzo de nodos con el agente y los nodos de proveedor", "caption": "La vista Node: su agente como diagrama vivo — cerebro, voz y oídos conectados al nodo Agent.", "theme": "light"},
+        {"src": "images/agents/create-agent-canvas-dark.png", "alt": "El editor de lienzo de nodos con el agente y los nodos de proveedor", "caption": "La vista Node: su agente como diagrama vivo — cerebro, voz y oídos conectados al nodo Agent.", "theme": "dark"}
       ]
     },
     {
-      "id": "test",
-      "title": "Prueba y guarda",
-      "content": "<ol><li>Haz clic en <strong>Test Agent</strong> (Probar agente) y conéctate para hablar con él en vivo en el navegador.</li><li>Refina el prompt, la voz y la configuración hasta que se comporte como quieres.</li><li>Tus cambios se guardan en el agente para que quede listo para vincularlo a un número de teléfono o a un sitio web.</li></ol>",
+      "id": "name-and-persona",
+      "title": "Nombre al agente y escriba su persona",
+      "content": "<p>Es hora de darle personalidad a su agente. En el nodo <strong>Agent</strong>, haga clic en el <strong>icono de engranaje</strong> (esquina superior derecha del nodo) para abrir el panel <strong>Agent Identity</strong> (Identidad del agente):</p><ul><li><strong>Agent name</strong> (Nombre del agente) — sustituya el nombre autogenerado por algo reconocible, p. ej. <em>Recepcionista Acme</em>.</li><li><strong>Persona</strong> — el prompt del sistema. Describa en lenguaje natural quién es el agente, qué debe hacer, su tono y sus reglas. Es el campo más importante de todo el editor.</li><li><strong>Agent language</strong> (Idioma del agente) — el o los idiomas en los que escucha (p. ej. <em>Multilingual</em>, inglés, español).</li><li><strong>Conversation → How the call opens</strong> (Cómo se abre la llamada) — quién habla primero y el saludo exacto. Elija si la persona que llama habla primero, si la IA improvisa una apertura, o si la IA dice un <strong>mensaje definido</strong> que usted escribe palabra por palabra.</li></ul><blockquote>💡 <strong>Consejos de prompt:</strong> Redacte la persona como si diera instrucciones a un empleado nuevo — rol, objetivo, tono, qué hacer y qué no. Manténgala por debajo de ~3.000 tokens (el editor muestra una estimación); mueva el material de referencia extenso a la Knowledge Base.</blockquote>",
       "images": [
-        {
-          "src": "images/agents/test-agent-light.png",
-          "alt": "Prueba el agente",
-          "caption": "Haz clic en Test Agent (Probar agente) para probarlo en vivo antes de publicarlo",
-          "theme": "light"
-        },
-        {
-          "src": "images/agents/test-agent-dark.png",
-          "alt": "Prueba el agente",
-          "caption": "Haz clic en Test Agent (Probar agente) para probarlo en vivo antes de publicarlo",
-          "theme": "dark"
-        }
+        {"src": "images/agents/create-agent-agent-panel-light.png", "alt": "Panel Agent Identity con nombre, persona e idioma", "caption": "Agent Identity: nombre, persona (prompt del sistema), idioma y cómo se abre la llamada.", "theme": "light"},
+        {"src": "images/agents/create-agent-agent-panel-dark.png", "alt": "Panel Agent Identity con nombre, persona e idioma", "caption": "Agent Identity: nombre, persona (prompt del sistema), idioma y cómo se abre la llamada.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "brain-voice-ears",
+      "title": "Revise el cerebro, la voz y los oídos",
+      "content": "<p>Observe la sección <strong>INPUTS</strong> (entradas) del nodo <strong>Agent</strong>: <strong>LLM</strong>, <strong>TTS</strong> y <strong>STT</strong> se conectan cada uno a un nodo de proveedor en el lienzo.</p><ol><li>En el nodo <strong>LLM</strong>, haga clic en el campo <strong>Model</strong> para elegir el modelo que genera las respuestas, y arrastre el deslizador <strong>Temperature</strong> (Precise ↔ Creative).</li><li>En el nodo <strong>TTS</strong>, haga clic en el campo <strong>Voice</strong> para elegir la voz con la que habla su agente (despliegue <strong>Advanced</strong> para ajustes finos).</li><li>En el nodo <strong>STT</strong>, revise el <strong>Model</strong> de transcripción y el <strong>Language</strong>, y añada opcionalmente términos de <strong>Keyword Boost</strong> (nombres de marca que el transcriptor debe reconocer).</li><li>Para cambiar de proveedor por completo, haga clic en el <strong>icono de engranaje</strong> de cualquier nodo de proveedor.</li></ol><p>Los valores predeterminados están listos para producción, así que puede saltarse este paso el primer día — las guías <em>Choose the Brain (LLM)</em> y <em>Voice Configuration</em> profundizan en el tema.</p>",
+      "images": [
+        {"src": "images/agents/create-agent-agent-node-light.png", "alt": "El nodo Agent con las entradas LLM, TTS y STT", "caption": "El nodo Agent: entradas (LLM, TTS, STT), identidad, capacidades y comportamiento de un vistazo.", "theme": "light"},
+        {"src": "images/agents/create-agent-agent-node-dark.png", "alt": "El nodo Agent con las entradas LLM, TTS y STT", "caption": "El nodo Agent: entradas (LLM, TTS, STT), identidad, capacidades y comportamiento de un vistazo.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "capabilities-bar",
+      "title": "Active capacidades",
+      "content": "<p>La barra en la parte superior del lienzo es el panel de superpoderes de su agente. Cada tarjeta refleja un panel de configuración completo — haga clic en una tarjeta para configurarla, o pulse su píldora <strong>ON/OFF</strong> para activarla. Cuando una capacidad está en ON, una línea animada la conecta con su agente.</p><ul><li><strong>Settings</strong> (Ajustes) — tiempos de espera, mensajes de inactividad, comportamiento de buzón de voz, privacidad y grabación.</li><li><strong>Knowledge Base</strong> (Base de conocimiento) — deje que el agente responda a partir de sus documentos (RAG).</li><li><strong>Webhooks</strong> — extracción de datos post-llamada y entrega por webhook.</li><li><strong>Observer Agent</strong> (Agente observador) — una segunda IA que supervisa llamadas en vivo y marca/extrae en tiempo real.</li><li><strong>IVR</strong> — comportamiento de navegación por menús telefónicos.</li><li><strong>CRM</strong> / <strong>Dispatch</strong> — inteligencia CRM y capacidades de despacho de técnicos.</li><li><strong>Messages</strong> (Mensajes) — ejecute este mismo agente por SMS, WhatsApp, Email y chat web.</li><li><strong>Widget</strong> — incruste el agente en su sitio web.</li></ul><blockquote>💡 <strong>Consejo:</strong> El botón de plegado a la izquierda contrae la barra en un solo icono de engranaje cuando quiera un lienzo limpio — una insignia verde indica cuántas capacidades están en ON.</blockquote>",
+      "images": [
+        {"src": "images/agents/create-agent-capabilities-bar-light.png", "alt": "Barra de capacidades con tarjetas ON/OFF", "caption": "La barra de capacidades — cada tarjeta abre un panel completo; las píldoras activan o desactivan funciones.", "theme": "light"},
+        {"src": "images/agents/create-agent-capabilities-bar-dark.png", "alt": "Barra de capacidades con tarjetas ON/OFF", "caption": "La barra de capacidades — cada tarjeta abre un panel completo; las píldoras activan o desactivan funciones.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "components-palette",
+      "title": "Explore la paleta de componentes",
+      "content": "<p>¿Listo para ir más allá de un solo agente? El riel de acciones del borde derecho del lienzo guarda las herramientas avanzadas:</p><ol><li>Haga clic en el <strong>icono de cuadrícula</strong> (arriba del riel) para abrir el panel <strong>Components</strong> (Componentes).</li><li>Arrastre cualquier componente al lienzo para añadirlo:</li></ol><ul><li><strong>Components</strong> — nodos adicionales de <strong>LLM</strong>, <strong>TTS</strong>, <strong>STT</strong> o <strong>Agent</strong>.</li><li><strong>Agents &amp; Transitions</strong> (Agentes y transiciones) — <strong>Task</strong> (una sub-llamada acotada con su propio prompt), <strong>If / Else</strong> y <strong>Category</strong> (nodos de decisión que ramifican la conversación), <strong>Instruction Agent</strong> y <strong>Handoff</strong> (transferencia a otro agente). Así es como un agente se convierte en todo un equipo — vea la guía <em>Sub-Agents, Tasks &amp; Handoffs</em>.</li><li><strong>Tools</strong> (Herramientas) — <strong>End Call</strong> (colgar), <strong>SIP Transfer</strong>, <strong>Internal Transfer</strong> y más acciones que el agente puede ejecutar en plena llamada.</li></ul><p>El resto del riel: <strong>Call logs</strong> (registros de llamadas) de este agente, <strong>Version history</strong> (historial de versiones — restaure cualquier lienzo anterior), <strong>Share</strong> (copiar un enlace directo), <strong>Editor settings</strong> (cuadrícula, imán, auto-disposición) y un <strong>cambio de tema</strong>.</p>",
+      "images": [
+        {"src": "images/agents/create-agent-palette-light.png", "alt": "Paleta de componentes abierta sobre el lienzo", "caption": "La paleta Components: arrastre tareas, nodos de decisión, handoffs y herramientas directamente al lienzo.", "theme": "light"},
+        {"src": "images/agents/create-agent-palette-dark.png", "alt": "Paleta de componentes abierta sobre el lienzo", "caption": "La paleta Components: arrastre tareas, nodos de decisión, handoffs y herramientas directamente al lienzo.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "ai-builder-and-test",
+      "title": "Construya con IA y luego hable con su agente",
+      "content": "<p>La barra inferior del lienzo es donde ocurre la magia — tiene dos modos:</p><ul><li><strong>AI Builder</strong> (Constructor IA) — pulse <strong>Start</strong> (o escriba en el cuadro de abajo) y dígale literalmente a la IA qué construir: <em>«Añade un If/Else que ramifique según la intención del llamante»</em> o <em>«Crea un nodo Categorize para facturación / soporte / ventas»</em>. Edita el lienzo por usted en tiempo real.</li><li><strong>Live Test</strong> (Prueba en vivo) — cambie el conmutador y pulse <strong>Start</strong> para iniciar una llamada de voz real al agente tal y como está configurado en el lienzo. Su navegador pedirá permiso de micrófono — acéptelo y simplemente hable.</li></ul><ol><li>Haga clic en <strong>Live Test</strong> y luego en <strong>Start</strong>.</li><li>Salude y compruebe el saludo inicial, la voz y la persona.</li><li>Ajuste, pruebe de nuevo, repita — los cambios se guardan solos, así que cada prueba usa sus últimas ediciones.</li></ol><blockquote>⚠️ <strong>Atención:</strong> Las llamadas de prueba usan proveedores de voz reales, así que asegúrese de tener crédito en su cuenta. Si el agente no contesta, verifique que LLM, Voice y Transcriber estén activados (sus píldoras se muestran en rojo cuando falta una pieza crítica).</blockquote>",
+      "images": [
+        {"src": "images/agents/create-agent-ai-builder-light.png", "alt": "Barra AI Builder y Live Test con el cuadro de texto", "caption": "AI Builder edita el lienzo desde lenguaje natural; Live Test llama a su agente en el navegador.", "theme": "light"},
+        {"src": "images/agents/create-agent-ai-builder-dark.png", "alt": "Barra AI Builder y Live Test con el cuadro de texto", "caption": "AI Builder edita el lienzo desde lenguaje natural; Live Test llama a su agente en el navegador.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "form-view-toggle",
+      "title": "¿Prefiere formularios clásicos? Cambie a la vista Form",
+      "content": "<p>El lienzo y el editor de formularios clásico son dos ventanas al mismo agente — cambie cuando quiera, no se pierde nada.</p><ol><li>En la píldora de navegación inferior izquierda, haga clic en <strong>Form</strong> (Formulario) en el conmutador <strong>Form / Node</strong>.</li><li>El editor pasa a un diseño de tres columnas: el <strong>prompt del sistema</strong> y el saludo a la izquierda, los <strong>paneles de funciones</strong> (Knowledge Base, Transcriber, Voice, Brains, Webhooks, Observer, IVR, CRM Intelligence, Messages, Website Widget, Templates &amp; Variables) en el centro, y el chat <strong>Test Agent</strong> a la derecha.</li><li>Haga clic en <strong>Node</strong> para volver al lienzo.</li></ol><p>El encabezado de la vista Form también muestra el <strong>ID</strong> del agente (copia con un clic — lo necesitará para llamadas a la API), un contador <strong>Est. tokens</strong> de su prompt, el selector <strong>Owner</strong> (propietario) y píldoras de estado que se ponen verdes cuando Voice, Transcriber y LLM están listos.</p>",
+      "images": [
+        {"src": "images/agents/create-agent-form-view-light.png", "alt": "Vista Form con prompt, paneles de funciones y chat de prueba", "caption": "Vista Form: prompt a la izquierda, paneles de funciones en el centro y chat de prueba en vivo a la derecha.", "theme": "light"},
+        {"src": "images/agents/create-agent-form-view-dark.png", "alt": "Vista Form con prompt, paneles de funciones y chat de prueba", "caption": "Vista Form: prompt a la izquierda, paneles de funciones en el centro y chat de prueba en vivo a la derecha.", "theme": "dark"},
+        {"src": "images/agents/create-agent-form-header-light.png", "alt": "Encabezado de la vista Form", "caption": "El encabezado de la vista Form: nombre, ID, estimación de tokens, propietario, conmutador Form/Node, Save As y Test Agent.", "theme": "light"},
+        {"src": "images/agents/create-agent-form-header-dark.png", "alt": "Encabezado de la vista Form", "caption": "El encabezado de la vista Form: nombre, ID, estimación de tokens, propietario, conmutador Form/Node, Save As y Test Agent.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "save-and-launch",
+      "title": "Guarde como plantilla y salga en vivo",
+      "content": "<p>Su agente está vivo — así lo protege y lo lanza:</p><ul><li><strong>Guardado automático</strong> — cada edición ya está persistida; la insignia inferior derecha lo confirma (<strong>Saved · just now</strong>).</li><li><strong>Save As</strong> (Guardar como — píldora inferior izquierda en la vista Node, botón del encabezado en la vista Form) — capture el agente como <strong>plantilla</strong> reutilizable para que su equipo cree copias desde <strong>Browse Templates → My Templates</strong>.</li><li><strong>Version history</strong> (Historial de versiones — icono de reloj en el riel de acciones) — restaure cualquier versión anterior si un experimento sale mal.</li><li><strong>Salga en vivo</strong> — asigne el agente a un número de teléfono para que conteste llamadas reales, o incrústelo en su sitio web. Esa es la recompensa: un agente incansable que nunca pierde una llamada.</li></ul>",
+      "images": [
+        {"src": "images/agents/create-agent-node-nav-light.png", "alt": "Píldora de navegación inferior izquierda con el conmutador Form/Node y Save As", "caption": "La píldora de navegación: Atrás, conmutador Form/Node, selector de propietario y Save As (plantilla).", "theme": "light"},
+        {"src": "images/agents/create-agent-node-nav-dark.png", "alt": "Píldora de navegación inferior izquierda con el conmutador Form/Node y Save As", "caption": "La píldora de navegación: Atrás, conmutador Form/Node, selector de propietario y Save As (plantilla).", "theme": "dark"}
       ]
     }
   ],
   "nextSteps": {
     "title": "¿Qué sigue?",
-    "description": "Ahora desarrolla y lanza tu nuevo agente:",
+    "description": "Su agente ya habla — ahora hágalo imparable:",
     "cards": [
-      {
-        "href": "/agents/voice-configuration",
-        "title": "Configura la voz",
-        "description": "Elige un proveedor de TTS y previsualiza voces."
-      },
-      {
-        "href": "/agents/agent-tools",
-        "title": "Agrega herramientas",
-        "description": "Permite que el agente realice acciones durante una llamada."
-      },
-      {
-        "href": "/agents/test-agent",
-        "title": "Prueba tu agente",
-        "description": "Pruébalo en el navegador o con una llamada telefónica real."
-      }
+      {"href": "/phone/add-phone-number", "title": "Dele un número de teléfono", "description": "Asigne un número para que su agente conteste llamadas reales."},
+      {"href": "/agents/test-your-agent", "title": "Pruebe su agente", "description": "Llamadas web, pruebas telefónicas y lectura de resultados."},
+      {"href": "/agents/llm-settings", "title": "Elija el cerebro (LLM)", "description": "Modelos, temperatura y modos realtime vs pipeline."},
+      {"href": "/agents/voice-configuration", "title": "Configure la voz", "description": "Elija, escuche e incluso clone la voz perfecta."},
+      {"href": "/agents/sub-agents", "title": "Sub-agentes, tareas y handoffs", "description": "Convierta un agente en todo un equipo coordinado."}
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+    "title": "¿Necesita ayuda?",
+    "content": "<p>Si tiene problemas o preguntas:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Crea tu primer agente | iMash Docs",
-  "metaDescription": "Guía paso a paso para crear un Smart Agent de iMash: ponle nombre, escribe el prompt y el saludo, elige un modelo y una voz, agrega herramientas y una base de conocimiento, y luego pruébalo.",
-  "metaKeywords": "crear agente, imash, smart agent, agente de voz, asistente de ia, configuración del agente, system prompt, primer mensaje"
+  "metaTitle": "Cree su primer agente | Documentación de iMash",
+  "metaDescription": "Guía paso a paso para crear un Smart Agent de iMash: créelo con un clic o desde una plantilla, domine el lienzo de nodos y la vista de formulario, escriba la persona, elija el cerebro y la voz, active capacidades y pruébelo en vivo en el navegador.",
+  "metaKeywords": "crear agente, imash, smart agent, agente de voz, asistente ia, editor de nodos, lienzo, plantilla de agente, persona, prompt del sistema, ai builder, prueba en vivo"
 }

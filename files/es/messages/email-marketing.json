@@ -1,0 +1,321 @@
+{
+  "title": "Campañas de Email Marketing",
+  "lede": "Envíe correos masivos personalizados y atractivos a miles de contactos — con contenido escrito por IA, pruebas A/B de plantillas, velocidad de envío ajustable y seguimiento en vivo de aperturas y clics — todo sin salir de iMash.",
+  "timeToComplete": "12 minutos",
+  "steps": [
+    {
+      "id": "open-email-marketing",
+      "title": "Abra el espacio de Marketing",
+      "content": "<p>Todo su motor de email marketing vive dentro de la sección de Mensajes — campañas, plantillas reutilizables, listas de destinatarios y la red de seguridad de supresión, todo en un solo lugar.</p><ol><li>En la barra lateral izquierda, haga clic en <strong>Email</strong> (bajo <em>Messages</em>). También puede usar la navegación superior: <strong>Messages → Email</strong> (Mensajes → Correo).</li><li>En la parte superior de la página de Email, haga clic en la pestaña <strong>Marketing</strong> (junto a <strong>Mailbox</strong> (Buzón), <strong>Sending Domains</strong> (Dominios de envío) y <strong>Settings</strong> (Configuración)).</li><li>Aparece un selector de cuatro vistas: <strong>Campaigns</strong> (Campañas), <strong>Templates</strong> (Plantillas), <strong>Lists</strong> (Listas) y <strong>Suppression</strong> (Supresión). Cada una es un bloque de construcción:</li></ol><ul><li><strong>Campaigns</strong> — los envíos en sí: quién recibe qué, cuándo y a qué velocidad.</li><li><strong>Templates</strong> — contenido reutilizable de asunto + cuerpo que puede rotar y probar en A/B.</li><li><strong>Lists</strong> — las audiencias: destinatarios extraídos de su CRM, archivos CSV o datos pegados.</li><li><strong>Suppression</strong> — direcciones que nunca deben recibir correo (rebotes, quejas, bajas).</li></ul>",
+      "images": [
+        {
+          "src": "images/messages/email-marketing-campaigns-light.png",
+          "alt": "Messages → Email → pestaña Marketing con el selector de Campañas, Plantillas, Listas y Supresión y una campaña en borrador en la tabla",
+          "caption": "Messages → Email → Marketing: la vista de Campañas con el selector de cuatro vistas arriba",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-campaigns-dark.png",
+          "alt": "Messages → Email → pestaña Marketing con el selector de Campañas, Plantillas, Listas y Supresión y una campaña en borrador en la tabla",
+          "caption": "Messages → Email → Marketing: la vista de Campañas con el selector de cuatro vistas arriba",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "prep-sending-address",
+      "title": "Antes de empezar: tenga una dirección de envío verificada",
+      "content": "<p>Las campañas de marketing se envían desde una de sus direcciones de correo <strong>verificadas</strong> — eso es lo que mantiene su correo fuera de la carpeta de spam.</p><ol><li>En la página de Email, abra la pestaña <strong>Sending Domains</strong> (Dominios de envío) y verifique su dominio (agregue los registros DNS que le muestra).</li><li>Cree al menos un buzón/dirección remitente en ese dominio — aparecerá entonces en el desplegable <strong>From address</strong> (Dirección remitente) del constructor de campañas.</li></ol><blockquote>⚠️ Si el desplegable <strong>From address</strong> del constructor dice <em>\"No verified sending addresses\"</em> (Sin direcciones de envío verificadas), complete primero la verificación del dominio — mientras tanto puede crear y guardar campañas como borradores, pero no podrá enviarlas.</blockquote>"
+    },
+    {
+      "id": "create-list",
+      "title": "Cree una lista de destinatarios",
+      "content": "<p>Cada campaña se envía exactamente a una lista, así que empiece construyendo su audiencia.</p><ol><li>En el selector, haga clic en <strong>Lists</strong> (Listas).</li><li>Haga clic en <strong>New list</strong> (Nueva lista) arriba a la izquierda.</li><li>Asigne un <strong>List name</strong> (Nombre de la lista) — p. ej. \"Promo de primavera — clientes anteriores\" — y una <strong>Description</strong> (Descripción) opcional, luego haga clic en <strong>Create</strong> (Crear).</li></ol><p>La lista se abre de inmediato para que agregue miembros. La tabla muestra cada lista con su recuento de <strong>Members</strong> (Miembros) y la fecha de <strong>Created</strong> (Creación) — haga clic en el nombre de una lista o en su botón <strong>Manage</strong> (Gestionar) en cualquier momento para reabrirla.</p>",
+      "images": [
+        {
+          "src": "images/messages/email-marketing-lists-light.png",
+          "alt": "Vista de Listas mostrando el botón New list y una lista con 10 miembros",
+          "caption": "La vista de Listas — cada fila muestra el número de miembros; Manage abre la lista",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-lists-dark.png",
+          "alt": "Vista de Listas mostrando el botón New list y una lista con 10 miembros",
+          "caption": "La vista de Listas — cada fila muestra el número de miembros; Manage abre la lista",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "add-recipients",
+      "title": "Llene la lista — carga de CSV o datos pegados",
+      "content": "<p>Abra una lista y verá tres formas de agregar personas en la parte superior del panel:</p><ul><li><strong>Upload CSV</strong> (Subir CSV) — elija un archivo .csv de su computadora. Necesita una fila de encabezados con una columna que contenga \"email\"; cada OTRA columna que suba se convierte en un <code>{token}</code> de personalización que puede usar en sus correos (una columna <em>city</em> se convierte en <code>{city}</code>, etc.).</li><li><strong>Add from CRM</strong> (Agregar desde el CRM) — incorpore sus contactos y leads existentes (siguiente paso).</li><li><strong>Paste data</strong> (Pegar datos) — copie filas directamente desde una hoja de cálculo: péguelas con una línea de encabezado (separadas por comas o tabulaciones), haga clic en <strong>Parse columns</strong> (Analizar columnas) para mapear cada columna y luego en <strong>Import</strong> (Importar).</li></ul><p>La tabla de miembros muestra el <strong>Email</strong>, <strong>Name</strong> (Nombre), <strong>Source</strong> (Origen: <em>contact</em>, <em>lead</em> o <em>csv</em>) y <strong>Status</strong> (Estado: <em>subscribed</em> / <em>unsubscribed</em>) de cada persona. Use el cuadro <strong>Search email…</strong> (Buscar correo) para encontrar a alguien; marque filas y haga clic en <strong>Remove</strong> (Quitar) para sacarlas de la lista.</p><blockquote>💡 Los duplicados se gestionan por usted — la misma dirección de correo solo se agrega una vez a cada lista, y quien se dé de baja permanece en la lista pero es omitido automáticamente en todos los envíos futuros.</blockquote>",
+      "images": [
+        {
+          "src": "images/messages/email-marketing-list-members-light.png",
+          "alt": "Panel de miembros de la lista con botones Upload CSV, Add from CRM y Paste data y una tabla de miembros con orígenes contact y csv",
+          "caption": "El panel de la lista — tres vías de entrada, más una nota de personalización que explica qué {tokens} lleva cada miembro",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-list-members-dark.png",
+          "alt": "Panel de miembros de la lista con botones Upload CSV, Add from CRM y Paste data y una tabla de miembros con orígenes contact y csv",
+          "caption": "El panel de la lista — tres vías de entrada, más una nota de personalización que explica qué {tokens} lleva cada miembro",
+          "theme": "dark"
+        },
+        {
+          "src": "images/messages/email-marketing-paste-light.png",
+          "alt": "Modal Paste recipients con un área de texto para filas separadas por comas o tabulaciones y un botón Parse columns",
+          "caption": "Paste data: pegue filas de su hoja de cálculo con una línea de encabezado y luego mapee las columnas",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-paste-dark.png",
+          "alt": "Modal Paste recipients con un área de texto para filas separadas por comas o tabulaciones y un botón Parse columns",
+          "caption": "Paste data: pegue filas de su hoja de cálculo con una línea de encabezado y luego mapee las columnas",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "add-from-crm",
+      "title": "Agregue destinatarios directamente desde su CRM",
+      "content": "<p>Aquí es donde iMash brilla: su CRM ya está lleno de leads y contactos, con nombres, direcciones y campos personalizados — y cada uno de esos datos viaja al correo como token de personalización.</p><ol><li>En el panel de la lista, haga clic en <strong>Add from CRM</strong> (Agregar desde el CRM).</li><li>Alterne entre <strong>Contacts</strong> (Contactos) y <strong>Leads</strong> en la parte superior.</li><li>Acote la audiencia con los filtros: <strong>Search name or email…</strong> (Buscar nombre o correo), <strong>Tags (any)</strong> (Etiquetas), <strong>Accounts</strong> (Cuentas), <strong>State</strong> (Estado) y <strong>City</strong> (Ciudad) — los leads también tienen filtros de <strong>Status</strong> y <strong>Source</strong>. Haga clic en <strong>Apply filters</strong> (Aplicar filtros) — el recuento de coincidencias se actualiza al instante.</li><li>Marque filas individuales y haga clic en <strong>Add selected</strong> (Agregar seleccionados), o haga clic en <strong>Add all N matching</strong> (Agregar las N coincidencias) para capturar de una vez <em>todos</em> los registros que cumplan sus filtros.</li></ol><blockquote>💡 Los registros sin dirección de correo (o con una duplicada) se omiten automáticamente y se reportan — verá \"Added 42 (3 skipped — no/dup email)\".</blockquote>",
+      "images": [
+        {
+          "src": "images/messages/email-marketing-add-crm-light.png",
+          "alt": "Modal Add from CRM con alternador Contacts/Leads, búsqueda, filtros de etiquetas, cuentas, estado y ciudad, un contador de coincidencias y el botón Add all matching",
+          "caption": "Add from CRM — filtre por etiquetas, cuenta o geografía, y agregue filas seleccionadas o todas las coincidencias",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-add-crm-dark.png",
+          "alt": "Modal Add from CRM con alternador Contacts/Leads, búsqueda, filtros de etiquetas, cuentas, estado y ciudad, un contador de coincidencias y el botón Add all matching",
+          "caption": "Add from CRM — filtre por etiquetas, cuenta o geografía, y agregue filas seleccionadas o todas las coincidencias",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "create-template",
+      "title": "Cree plantillas reutilizables (opcional pero poderoso)",
+      "content": "<p>Las plantillas son combinaciones reutilizables de asunto + cuerpo. Adjunte varias a una campaña y iMash las rota automáticamente — una prueba A/B/n instantánea con resultados por plantilla.</p><ol><li>En el selector, haga clic en <strong>Templates</strong> (Plantillas) y luego en <strong>New template</strong> (Nueva plantilla).</li><li>Escriba un <strong>Template name</strong> (Nombre de plantilla) — p. ej. \"Variante A — mensaje corto\" — y un <strong>Subject</strong> (Asunto) — ambos admiten <code>{tokens}</code>.</li><li>En la tarjeta de configuración, elija la fuente de <strong>Content</strong> (Contenido: <em>Static body</em> (Cuerpo estático) o <em>🪄 AI per recipient</em> (IA por destinatario) — siguiente paso), el <strong>Format</strong> (Formato: <em>HTML</em> con respaldo de texto plano, o solo <em>Plain text</em>) y si incluir el encabezado de <strong>One-click unsubscribe</strong> (Baja en un clic).</li><li>Escriba el cuerpo en las pestañas <strong>HTML body</strong> y <strong>Plain-text fallback</strong>. Haga clic en cualquier chip de token de la barra <strong>Insert:</strong> — <code>{first_name}</code>, <code>{city}</code>, <code>{account_name}</code>… — para insertarlo donde estuvo su cursor por última vez. <strong>Custom fields</strong> (Campos personalizados) oculta los tokens de campos personalizados de su CRM, incluido <code>{all_custom_vars}</code>, que inserta en un solo bloque todos los campos personalizados del destinatario.</li><li>Haga clic en <strong>Preview</strong> (Vista previa) en el encabezado del panel para renderizar la plantilla con un contacto o lead <em>real</em> — busque un registro específico o haga clic en <strong>Random</strong> (Aleatorio) — y vea exactamente lo que recibirá el destinatario, con los tokens rellenados. Haga clic en <strong>Edit</strong> (Editar) para volver.</li><li>Haga clic en <strong>Save</strong> (Guardar).</li></ol><blockquote>⚠️ Mantenga <strong>One-click unsubscribe</strong> ACTIVADO — Gmail y Yahoo exigen el encabezado oculto List-Unsubscribe a los remitentes masivos, y desactivarlo puede perjudicar la entregabilidad.</blockquote>",
+      "images": [
+        {
+          "src": "images/messages/email-marketing-templates-light.png",
+          "alt": "Vista de Plantillas listando dos variantes con sus asuntos y acciones Edit/Delete",
+          "caption": "La vista de Plantillas — cree varias variantes y luego rótelas en una sola campaña",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-templates-dark.png",
+          "alt": "Vista de Plantillas listando dos variantes con sus asuntos y acciones Edit/Delete",
+          "caption": "La vista de Plantillas — cree varias variantes y luego rótelas en una sola campaña",
+          "theme": "dark"
+        },
+        {
+          "src": "images/messages/email-marketing-template-editor-light.png",
+          "alt": "Editor de plantillas con nombre, asunto, tarjeta de configuración de contenido/formato/baja, chips de tokens y el editor de cuerpo HTML",
+          "caption": "El editor de plantillas — tarjeta de configuración arriba, chips de tokens y el cuerpo HTML con {tokens}",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-template-editor-dark.png",
+          "alt": "Editor de plantillas con nombre, asunto, tarjeta de configuración de contenido/formato/baja, chips de tokens y el editor de cuerpo HTML",
+          "caption": "El editor de plantillas — tarjeta de configuración arriba, chips de tokens y el cuerpo HTML con {tokens}",
+          "theme": "dark"
+        },
+        {
+          "src": "images/messages/email-marketing-preview-light.png",
+          "alt": "Vista previa de la plantilla renderizando el correo con un registro real del CRM y los tokens del asunto y el cuerpo rellenados",
+          "caption": "Preview renderiza su plantilla con un contacto o lead real — todos los tokens rellenados",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-preview-dark.png",
+          "alt": "Vista previa de la plantilla renderizando el correo con un registro real del CRM y los tokens del asunto y el cuerpo rellenados",
+          "caption": "Preview renderiza su plantilla con un contacto o lead real — todos los tokens rellenados",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "ai-writer",
+      "title": "Deje que la IA escriba sus correos",
+      "content": "<p>El editor de plantillas incluye dos niveles de ayuda con IA:</p><ul><li><strong>Write with AI</strong> (Escribir con IA — una sola vez) — con <em>Static body</em> seleccionado, haga clic en el botón <strong>Write with AI</strong> junto a la barra de tokens. Describa el correo que quiere (\"Una promo de mantenimiento de primavera para {first_name} en {city} — tono amistoso, un CTA para reservar en línea\"), elija un modelo y haga clic en <strong>Generate HTML email</strong> (Generar correo HTML). La IA transmite su borrador en vivo y rellena por usted el asunto + el cuerpo — luego usted edita y guarda como siempre. Se factura por token a su saldo, como el chat de IA.</li><li><strong>🪄 AI per recipient</strong> (IA por destinatario) — cambie <strong>Content</strong> a <em>AI per recipient</em> y los editores de cuerpo se reemplazan por un panel de instrucciones. Al momento del envío, el modelo escribe un <em>correo único y distinto para cada destinatario</em>, con los tokens y el perfil de CRM de esa persona (nombre, dirección, campos personalizados) incorporados a su prompt. Deje el <strong>Subject</strong> vacío para que la IA también escriba el asunto por destinatario.</li></ul><blockquote>⚠️ La IA por destinatario se factura por generación — una campaña de 1,000 destinatarios significa 1,000 generaciones de IA. Es insuperable para personalizar, pero use el escritor de una sola vez cuando un gran correo para todos sea suficiente. Las plantillas marcadas <strong>🪄 AI</strong> en la lista de Plantillas no tienen vista previa estática — se escriben en vivo al momento del envío.</blockquote>",
+      "images": [
+        {
+          "src": "images/messages/email-marketing-write-ai-light.png",
+          "alt": "Panel del escritor de correos con IA abierto en el editor de plantillas con cuadro de prompt, selector de modelo y botón Generate HTML email",
+          "caption": "Write with AI: describa el correo, elija un modelo y el borrador fluye directo a sus campos",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-write-ai-dark.png",
+          "alt": "Panel del escritor de correos con IA abierto en el editor de plantillas con cuadro de prompt, selector de modelo y botón Generate HTML email",
+          "caption": "Write with AI: describa el correo, elija un modelo y el borrador fluye directo a sus campos",
+          "theme": "dark"
+        },
+        {
+          "src": "images/messages/email-marketing-template-ai-light.png",
+          "alt": "Editor de plantillas en modo AI per recipient mostrando el panel de prompt del escritor por destinatario y el selector de modelo",
+          "caption": "AI per recipient: el modelo escribe un correo único para cada persona de la lista al momento del envío",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-template-ai-dark.png",
+          "alt": "Editor de plantillas en modo AI per recipient mostrando el panel de prompt del escritor por destinatario y el selector de modelo",
+          "caption": "AI per recipient: el modelo escribe un correo único para cada persona de la lista al momento del envío",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "build-campaign",
+      "title": "Construya la campaña",
+      "content": "<p>Es hora de juntarlo todo.</p><ol><li>En el selector, haga clic en <strong>Campaigns</strong> (Campañas) y luego en <strong>New campaign</strong> (Nueva campaña) arriba a la izquierda.</li><li><strong>Campaign name</strong> (Nombre de campaña) — una etiqueta interna; los destinatarios nunca la ven.</li><li><strong>From address</strong> (Dirección remitente) — elija una de sus direcciones verificadas. <strong>From name</strong> (Nombre remitente) es el nombre visible para los destinatarios; <strong>Reply-To</strong> (Responder a) redirige opcionalmente las respuestas a otra dirección.</li><li><strong>Recipient list</strong> (Lista de destinatarios) — elija la lista que construyó; el número de miembros aparece en el propio desplegable.</li><li>Bajo <strong>Email content</strong> (Contenido del correo), elija <strong>Compose inline</strong> (Redactar aquí) para escribir el asunto y el cuerpo directamente (los mismos chips de tokens, pestañas HTML + texto plano y un botón <strong>Preview</strong> que el editor de plantillas).</li><li>Haga clic en <strong>Save</strong> (Guardar) en el encabezado del panel en cualquier momento — la campaña se guarda como <em>borrador</em> al que puede volver.</li></ol>",
+      "images": [
+        {
+          "src": "images/messages/email-marketing-builder-light.png",
+          "alt": "Panel del constructor de campañas con nombre, dirección remitente, lista de destinatarios, niveles de velocidad de envío, modo de contenido, asunto, chips de tokens y cuerpo HTML",
+          "caption": "El constructor de campañas — audiencia, velocidad y contenido en un solo panel; Save, Test, Schedule y Send now viven en el encabezado",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-builder-dark.png",
+          "alt": "Panel del constructor de campañas con nombre, dirección remitente, lista de destinatarios, niveles de velocidad de envío, modo de contenido, asunto, chips de tokens y cuerpo HTML",
+          "caption": "El constructor de campañas — audiencia, velocidad y contenido en un solo panel; Save, Test, Schedule y Send now viven en el encabezado",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "rotate-templates",
+      "title": "O rote plantillas para una prueba A/B instantánea",
+      "content": "<p>En lugar de redactar aquí, deje que sus plantillas compitan:</p><ol><li>Bajo <strong>Email content</strong>, haga clic en <strong>Rotate templates</strong> (Rotar plantillas).</li><li>En <strong>Templates to rotate</strong> (Plantillas a rotar), elija una o más de sus plantillas guardadas.</li></ol><p>Los destinatarios se reparten equitativamente entre las plantillas seleccionadas — cada plantilla lleva su propio asunto y cuerpo, mientras que la dirección remitente, el pie de página y el seguimiento de la campaña se aplican a todas. Tras el envío, el informe de la campaña muestra una tabla de <strong>Template rotation</strong> comparando las tasas de entrega, apertura, clics y respuestas de cada variante — para que la próxima campaña use la ganadora comprobada.</p>",
+      "images": [
+        {
+          "src": "images/messages/email-marketing-rotate-light.png",
+          "alt": "Constructor de campañas con Rotate templates seleccionado y el selector múltiple Templates to rotate visible",
+          "caption": "Rotate templates: elija varias variantes y iMash reparte los destinatarios equitativamente entre ellas",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-rotate-dark.png",
+          "alt": "Constructor de campañas con Rotate templates seleccionado y el selector múltiple Templates to rotate visible",
+          "caption": "Rotate templates: elija varias variantes y iMash reparte los destinatarios equitativamente entre ellas",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "pick-speed",
+      "title": "Elija una velocidad de envío",
+      "content": "<p>Disparar 50,000 correos en un minuto desde un dominio nuevo es la receta para caer en spam. Los niveles de <strong>Sending speed</strong> (Velocidad de envío) le permiten ajustar el ritmo a su lista y a la reputación de su dominio:</p><ul><li><strong>🐢 Trickle</strong> (Goteo) — el más lento; prospección en frío o calentamiento de un dominio nuevo.</li><li><strong>🚶 Steady</strong> (Constante) — el valor recomendado (~3,000/hora) para boletines y correos de nutrición.</li><li><strong>🏃 Fast</strong> (Rápido) — para listas comprometidas y ya calentadas.</li><li><strong>🚀 Rapid</strong> (Veloz) — envíos urgentes desde un dominio de confianza.</li><li><strong>⚡ Max</strong> (Máximo) — toda la tubería compartida, limitada solo por el regulador de su cuenta.</li><li><strong>🎛️ Custom</strong> (Personalizado) — escriba una tasa exacta de correos por hora.</li></ul><p>La línea de ayuda bajo los niveles hace el cálculo por usted — elija una lista y estima la duración total del envío (\"~3,000/hr · ≈ menos de un minuto para 10 destinatarios\").</p><blockquote>💡 Puede cambiar la velocidad <em>mientras la campaña está enviándose</em> — abra su informe y use ahí el desplegable <strong>Sending speed</strong>; la nueva tasa se aplica en ~30 segundos. ¿Empezó demasiado rápido? Reduzca la marcha sin cancelar.</blockquote>",
+      "images": [
+        {
+          "src": "images/messages/email-marketing-speed-light.png",
+          "alt": "Botones de niveles de velocidad Trickle, Steady, Fast, Rapid, Max y Custom con una estimación de duración en vivo debajo",
+          "caption": "Seis niveles de velocidad, con una estimación en vivo de cuánto tardará su lista a la tasa elegida",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-speed-dark.png",
+          "alt": "Botones de niveles de velocidad Trickle, Steady, Fast, Rapid, Max y Custom con una estimación de duración en vivo debajo",
+          "caption": "Seis niveles de velocidad, con una estimación en vivo de cuánto tardará su lista a la tasa elegida",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "tracking-footer",
+      "title": "Seguimiento y el pie de página de baja",
+      "content": "<p>Desplácese hasta el final del constructor de campañas para los dos últimos controles:</p><ul><li><strong>Track opens</strong> (Rastrear aperturas) / <strong>Track clicks</strong> (Rastrear clics) — activados por defecto. Las aperturas y los clics se miden a través de su dominio de seguimiento y alimentan el informe de la campaña. El rastreo de aperturas necesita un cuerpo HTML — una campaña de solo texto se convierte automáticamente a HTML cuando el seguimiento está activado; desactive <em>ambos</em> interruptores para enviar texto plano puro.</li><li><strong>Include unsubscribe footer</strong> (Incluir pie de baja) — añade un pie de página con el enlace personal de baja del destinatario. Edite las pestañas <strong>Footer (HTML)</strong> y <strong>Footer (plain text)</strong> para adaptarlo a su marca y coloque <code>{unsubscribe_url}</code> donde quiera el enlace.</li></ul><blockquote>💡 Aun con el pie visible desactivado, siempre se envía un encabezado oculto <code>List-Unsubscribe</code> de un clic — es lo que alimenta el botón de Unsubscribe integrado de Gmail y Yahoo y protege su reputación de remitente.</blockquote>",
+      "images": [
+        {
+          "src": "images/messages/email-marketing-footer-light.png",
+          "alt": "Parte inferior del constructor de campañas mostrando los interruptores Track opens y Track clicks y la sección Include unsubscribe footer con el editor de pie HTML",
+          "caption": "Interruptores de seguimiento y el pie de baja personalizable con el token {unsubscribe_url}",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-footer-dark.png",
+          "alt": "Parte inferior del constructor de campañas mostrando los interruptores Track opens y Track clicks y la sección Include unsubscribe footer con el editor de pie HTML",
+          "caption": "Interruptores de seguimiento y el pie de baja personalizable con el token {unsubscribe_url}",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "test-schedule-send",
+      "title": "Pruébela, luego envíe o programe",
+      "content": "<p>Los cuatro botones del encabezado del panel de campaña son su plataforma de lanzamiento:</p><ol><li><strong>Save</strong> (Guardar) — almacena la campaña como borrador (los borradores y las campañas programadas siguen siendo totalmente editables).</li><li><strong>Test</strong> (Probar) — escriba cualquier dirección de correo y reciba la campaña real renderizada en esa bandeja. Envíese <em>siempre</em> una prueba primero — revise el asunto, los tokens y cómo se ve en su teléfono.</li><li><strong>Schedule</strong> (Programar) — elija fecha y hora, haga clic en <strong>Schedule</strong>, y la campaña se dispara automáticamente en ese momento. Una campaña programada muestra su hora de lanzamiento en la tabla de Campañas y aún puede editarse o cancelarse hasta entonces.</li><li><strong>Send now</strong> (Enviar ahora) — una confirmación explica exactamente qué ocurre: los correos salen de inmediato a cada miembro <em>suscrito y no suprimido</em> de la lista. Confirme y el envío comienza a la velocidad elegida.</li></ol><blockquote>💡 ¿Cambió de opinión a mitad del envío? En la tabla de Campañas, haga clic en <strong>Cancel</strong> (Cancelar) en una campaña <em>sending</em> (enviando) o <em>scheduled</em> (programada) — simplemente no se envía a los destinatarios restantes.</blockquote>"
+    },
+    {
+      "id": "monitor-report",
+      "title": "Vea los resultados en vivo en el informe de campaña",
+      "content": "<p>La propia tabla de Campañas muestra el <strong>Status</strong> (Estado: draft, scheduled, sending, sent, cancelled), una barra de <strong>Progress</strong> (Progreso) en vivo, <strong>Recipients</strong> (Destinatarios), <strong>Opens</strong> (Aperturas) y <strong>Clicks</strong> (Clics) — refrescándose automáticamente mientras corre un envío. Para la historia completa, haga clic en <strong>Report</strong> (Informe) en cualquier campaña:</p><ul><li><strong>Mosaicos de estadísticas</strong> — Recipients, Sent (Enviados), Delivered (Entregados, con tasa), Failed (Fallidos), Opens y Clicks únicos (con tasas), Bounced (Rebotados), Complaints (Quejas), Replied (Respondidos), Unsubscribed (Bajas), Blocked (AWS — validación previa a la entrega), Suppressed (Suprimidos/omitidos), además de aperturas/clics totales.</li><li><strong>Sending speed</strong> — reajuste la velocidad a mitad del envío directamente desde el informe.</li><li><strong>Template rotation</strong> — si rotó plantillas, una tabla comparativa muestra lado a lado los números de enviados/entregados/abiertos/clics/respuestas de cada variante.</li><li><strong>Tabla de destinatarios</strong> — cada dirección con su estado (<em>sent, delivered, opened, clicked, bounced, complained, unsubscribed, failed…</em>), recuentos de aperturas/clics, marca de tiempo y cualquier error. Fíltrela con el desplegable de estado.</li><li><strong>Add new list members</strong> (Agregar nuevos miembros de la lista) — ¿creció la lista después de enviar? Este botón envía <em>solo a los nuevos</em> miembros suscritos; a nadie que ya esté en la campaña se le escribe dos veces.</li></ul>",
+      "images": [
+        {
+          "src": "images/messages/email-marketing-report-light.png",
+          "alt": "Panel del informe de campaña con mosaicos de destinatarios, enviados, entregados, aperturas, clics, rebotes y quejas y una tabla por destinatario debajo",
+          "caption": "El informe de campaña — todas las métricas importantes, control de velocidad a mitad de envío y desglose por destinatario",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-report-dark.png",
+          "alt": "Panel del informe de campaña con mosaicos de destinatarios, enviados, entregados, aperturas, clics, rebotes y quejas y una tabla por destinatario debajo",
+          "caption": "El informe de campaña — todas las métricas importantes, control de velocidad a mitad de envío y desglose por destinatario",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "suppression",
+      "title": "La lista de Supresión — su guardaespaldas de entregabilidad",
+      "content": "<p>La vista <strong>Suppression</strong> (Supresión) es la lista de direcciones a las que iMash <em>nunca</em> volverá a escribir, sin importar en qué lista estén. Se llena sola:</p><ul><li><strong>bounce</strong> (rebote) — la dirección rebotó de forma permanente (no existe / buzón muerto).</li><li><strong>complaint</strong> (queja) — el destinatario marcó su correo como spam.</li><li><strong>unsubscribe</strong> (baja) — hizo clic en un enlace de baja o en el botón de un clic de Gmail.</li><li><strong>manual</strong> — usted lo agregó: escriba una dirección en <strong>Add email to suppress</strong> (Agregar correo a suprimir) y haga clic en <strong>Suppress</strong> (Suprimir).</li></ul><p>Cada fila muestra el <strong>Reason</strong> (Motivo), el <strong>Source</strong> (Origen) y <strong>When</strong> (Cuándo). Use <strong>Search email…</strong> para verificar una dirección específica. Los destinatarios suprimidos se cuentan como \"Suppressed (skipped)\" en los informes de campaña — no le cuestan nada y protegen su reputación de remitente.</p><blockquote>⚠️ Quitar una dirección de la supresión está restringido a la cuenta principal, y debería ser algo excepcional — escribir a alguien que se quejó es la vía más rápida para que su dominio quede en una lista negra. Ese es el ciclo completo de campaña: audiencia → contenido → velocidad → envío → aprendizaje. Su próxima promo está a un clic de <strong>New campaign</strong>.</blockquote>",
+      "images": [
+        {
+          "src": "images/messages/email-marketing-suppression-light.png",
+          "alt": "Vista de Supresión con búsqueda, un campo Add email to suppress y una tabla de direcciones suprimidas con motivo y origen",
+          "caption": "Supresión: los rebotes, quejas y bajas llegan aquí automáticamente — y nunca vuelven a recibir correo",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-suppression-dark.png",
+          "alt": "Vista de Supresión con búsqueda, un campo Add email to suppress y una tabla de direcciones suprimidas con motivo y origen",
+          "caption": "Supresión: los rebotes, quejas y bajas llegan aquí automáticamente — y nunca vuelven a recibir correo",
+          "theme": "dark"
+        }
+      ]
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Sus campañas valen tanto como su audiencia y su dominio — mejore ambos a continuación.",
+    "cards": [
+      {
+        "href": "/messages/email",
+        "title": "Bandeja de Email y Dominios de Envío",
+        "description": "Verifique su dominio de envío, gestione buzones y atienda las respuestas a sus campañas."
+      },
+      {
+        "href": "/messages/whatsapp-campaigns",
+        "title": "Campañas de WhatsApp",
+        "description": "Aplique el mismo manual de campañas masivas sobre plantillas de WhatsApp."
+      },
+      {
+        "href": "/crm/import-export-data",
+        "title": "Importar y Exportar Datos del CRM",
+        "description": "Cargue hojas de cálculo de clientes para que Add from CRM tenga todo lo que necesita."
+      }
+    ]
+  },
+  "support": {
+    "title": "¿Necesita ayuda?",
+    "content": "<p>¿Preguntas sobre entregabilidad, velocidades de envío o el escritor con IA? Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a> — con gusto le ayudamos a lanzar su primera campaña.</p>"
+  },
+  "metaTitle": "Campañas de Email Marketing | Documentación de iMash",
+  "metaDescription": "Envíe campañas de correo masivo en iMash: construya listas de destinatarios desde el CRM o CSV, personalice con {tokens}, escriba contenido con IA, rote plantillas como pruebas A/B, controle la velocidad de envío y rastree aperturas, clics y bajas.",
+  "metaKeywords": "email marketing, correo masivo, campañas de correo, escritor de correos con IA, pruebas A/B, velocidad de envío, seguimiento de aperturas, seguimiento de clics, baja, lista de supresión, iMash"
+}

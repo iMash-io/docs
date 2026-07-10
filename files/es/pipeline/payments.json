@@ -1,0 +1,119 @@
+{
+  "title": "Pagos (Stripe)",
+  "lede": "Convierta iMash en su terminal de pago: conecte una cuenta de comerciante una sola vez y cada factura, cotización y trabajo que envíe podrá pagarse al instante — con el dinero depositándose directamente en su cuenta bancaria.",
+  "timeToComplete": "10 minutos",
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Abra la página de Pagos",
+      "content": "<p>Esta página es su centro de control de comerciante: aquí conecta una cuenta de pagos, ve llegar las transacciones y administra los depósitos a su banco. Es distinta de <em>Billing</em> (Facturación — lo que usted paga a iMash); <em>Payments</em> (Pagos) es lo que <strong>sus clientes le pagan a usted</strong>.</p><ol><li>En la barra lateral izquierda, desplácese hasta la sección <strong>CRM</strong> y haga clic en <strong>Payments</strong> (Pagos), o vaya directamente a <code>/settings/payments</code>.</li><li>El encabezado dice <strong>Payments — Accept invoice payments directly into your bank account</strong> (Acepte pagos de facturas directamente en su cuenta bancaria).</li><li>Si aparece una etiqueta dorada <strong>TEST MODE</strong> (Modo de prueba) junto al título, los pagos son simulados: use tarjetas de prueba como <code>4242 4242 4242 4242</code>; no se mueve dinero real hasta activar el modo en vivo.</li></ol><blockquote>💡 ¿No ve Payments en la barra lateral? O bien el administrador de la plataforma aún no ha habilitado los pagos de comerciante para su cuenta, o (en una subcuenta) su cuenta principal no le ha otorgado <strong>Payments Page Access</strong> (Acceso a la página de Pagos). Contáctelos — o escriba a <a href=\"mailto:support@imash.io\">support@imash.io</a> — para activarlo.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/payments-overview-light.png", "alt": "Pestaña Overview de la página de Pagos con el estado de la cuenta de comerciante", "caption": "La página de Pagos: avisos de estado arriba y ocho pestañas debajo", "theme": "light" },
+        { "src": "images/pipeline/payments-overview-dark.png", "alt": "Pestaña Overview de la página de Pagos con el estado de la cuenta de comerciante", "caption": "La página de Pagos: avisos de estado arriba y ocho pestañas debajo", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "read-status-card",
+      "title": "Interprete el estado de su cuenta de comerciante",
+      "content": "<p>La pestaña <strong>Overview</strong> (Resumen) se abre primero. Su tarjeta <strong>Merchant Account</strong> (Cuenta de comerciante) le dice de un vistazo si puede cobrar:</p><ul><li><strong>Active</strong> (Activa, verde) — totalmente verificada; cobros y depósitos habilitados.</li><li><strong>Onboarding in progress</strong> (Alta en curso, dorado) — comenzó a conectar pero Stripe aún necesita información.</li><li><strong>Restricted</strong> (Restringida, rojo) — hay algo vencido (verificación, cuenta bancaria, datos del negocio) y los cobros o depósitos pueden estar pausados hasta resolverlo.</li><li><strong>Disconnected</strong> (Desconectada) — la cuenta fue desvinculada; las facturas no se pueden cobrar.</li></ul><p>Debajo del estado verá <strong>Account ID</strong> (ID de cuenta), <strong>Country</strong> (País), <strong>Charges enabled</strong> (Cobros habilitados), <strong>Payouts enabled</strong> (Depósitos habilitados), <strong>Connected since</strong> (Conectada desde) y <strong>Mode</strong> (Modo: Test o Live). Use los botones del encabezado de la tarjeta:</p><ul><li><strong>Refresh</strong> (Actualizar) — consulta su estado más reciente en el proveedor de pagos.</li><li><strong>Disconnect</strong> (Desconectar) — desvincula la cuenta de comerciante (pide confirmación; se muestra una vez completada el alta).</li></ul>",
+      "images": [
+        { "src": "images/pipeline/payments-status-card-light.png", "alt": "Tarjeta de estado Merchant Account con etiqueta Restricted y detalles de la cuenta", "caption": "La tarjeta Merchant Account: etiqueta de estado, alertas y detalles de la cuenta", "theme": "light" },
+        { "src": "images/pipeline/payments-status-card-dark.png", "alt": "Tarjeta de estado Merchant Account con etiqueta Restricted y detalles de la cuenta", "caption": "La tarjeta Merchant Account: etiqueta de estado, alertas y detalles de la cuenta", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "connect-merchant-account",
+      "title": "Conecte (o termine de conectar) su cuenta de comerciante",
+      "content": "<p>Conectarse toma de 5 a 10 minutos y solo se hace una vez. iMash se asocia con Stripe, así que sus datos bancarios van directamente al proveedor de pagos: la plataforma nunca los ve ni los almacena.</p><ol><li>Si nunca se ha conectado: en la pestaña <strong>Overview</strong>, haga clic en <strong>Connect Merchant Account</strong> (Conectar cuenta de comerciante).</li><li>Si empezó antes y ve la alerta <strong>Onboarding incomplete</strong> (Alta incompleta) — o el aviso rojo <strong>Your merchant account needs urgent attention</strong> (Su cuenta de comerciante necesita atención urgente) — haga clic en <strong>Continue onboarding</strong> (Continuar alta).</li><li>La ventana <strong>Connect your merchant account</strong> se abre dentro de iMash. Haga clic en <strong>Add information</strong> (Agregar información) y complete el formulario: tipo de negocio, datos del negocio (sitio web, descripción del producto, teléfono de soporte), su verificación personal y la <strong>cuenta bancaria</strong> donde llegarán sus depósitos.</li><li>Al terminar, vuelve a la página de Pagos y el estado se actualiza automáticamente. Haga clic en <strong>Refresh</strong> en la tarjeta Merchant Account si desea verificar de nuevo.</li></ol><blockquote>⚠️ Si cierra el formulario a medias, su cuenta queda en <strong>Onboarding in progress</strong> (o pasa a <strong>Restricted</strong> con requisitos \"past due\" — vencidos) y no podrá aceptar pagos. El aviso rojo enumera exactamente qué elementos le faltan a Stripe: haga clic en <strong>Continue onboarding</strong> y complete solo esos.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/payments-onboarding-modal-light.png", "alt": "Ventana de alta Connect your merchant account", "caption": "El alta ocurre en una ventana integrada — haga clic en Add information para comenzar", "theme": "light" },
+        { "src": "images/pipeline/payments-onboarding-modal-dark.png", "alt": "Ventana de alta Connect your merchant account", "caption": "El alta ocurre en una ventana integrada — haga clic en Add information para comenzar", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "tour-the-tabs",
+      "title": "Conozca las ocho pestañas",
+      "content": "<p>Todo lo relacionado con el dinero vive en una fila de pestañas:</p><ul><li><strong>Overview</strong> (Resumen) — estado de conexión, resumen de saldo y (para cuentas principales) permisos de pago de las subcuentas.</li><li><strong>Transactions</strong> (Transacciones) — cada pago de sus clientes, con comisiones y controles de reembolso.</li><li><strong>Disputes</strong> (Disputas) — contracargos y la evidencia que envía para defenderse.</li><li><strong>Payouts &amp; Bank</strong> (Depósitos y banco) — su saldo, calendario de depósitos y cuentas bancarias.</li><li><strong>Account</strong> (Cuenta) — información del negocio, descriptor de estado de cuenta y documentos de verificación.</li><li><strong>Balances</strong> (Saldos) — el panorama completo del saldo: disponible vs. pendiente, más recargas si un reembolso lo dejó en negativo.</li><li><strong>Documents</strong> (Documentos) — formularios fiscales (como el 1099-K de EE. UU.), estados de cuenta e informes de depósitos.</li><li><strong>Notifications</strong> (Notificaciones) — alertas de comerciante urgentes (disputas, depósitos fallidos, avisos de fraude).</li></ul><p>Cada pestaña tiene su propia dirección web (por ejemplo <code>/settings/payments/payouts</code>), de modo que los enlaces de los correos del proveedor de pagos lo llevan exactamente a donde se necesita acción.</p>",
+      "images": [
+        { "src": "images/pipeline/payments-tabs-light.png", "alt": "Fila de pestañas de Pagos: Overview, Transactions, Disputes, Payouts and Bank, Account, Balances, Documents, Notifications", "caption": "Las ocho pestañas de Pagos", "theme": "light" },
+        { "src": "images/pipeline/payments-tabs-dark.png", "alt": "Fila de pestañas de Pagos: Overview, Transactions, Disputes, Payouts and Bank, Account, Balances, Documents, Notifications", "caption": "Las ocho pestañas de Pagos", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "transactions",
+      "title": "Siga cada pago en Transactions",
+      "content": "<ol><li>Haga clic en la pestaña <strong>Transactions</strong> (Transacciones).</li><li>Con la cuenta activa, cada pago hecho contra sus facturas aparece aquí a medida que los clientes pagan. Haga clic en cualquier línea para ver el desglose completo — monto bruto, comisión de procesamiento de tarjeta y comisión de plataforma — y para emitir un <strong>reembolso</strong> directamente desde el detalle del pago.</li><li>Debajo de la lista de pagos, la tarjeta <strong>Linked transactions</strong> (Transacciones vinculadas) asocia cada pago con el registro del CRM que lo originó: acceda a la <strong>factura</strong> o el <strong>trabajo</strong> exacto que se pagó.</li></ol><p>Hasta que termine el alta, esta pestaña muestra el aviso <strong>Onboarding not complete</strong> (Alta incompleta) en lugar de la lista — una razón más para completar el paso 3.</p>",
+      "images": [
+        { "src": "images/pipeline/payments-transactions-light.png", "alt": "Pestaña Transactions de la página de Pagos", "caption": "La pestaña Transactions — los pagos aparecen aquí cuando los clientes pagan sus facturas", "theme": "light" },
+        { "src": "images/pipeline/payments-transactions-dark.png", "alt": "Pestaña Transactions de la página de Pagos", "caption": "La pestaña Transactions — los pagos aparecen aquí cuando los clientes pagan sus facturas", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "payouts-and-bank",
+      "title": "Administre depósitos y cuentas bancarias",
+      "content": "<ol><li>Haga clic en la pestaña <strong>Payouts &amp; Bank</strong> (Depósitos y banco).</li><li>Aquí ve su saldo disponible, configura su <strong>calendario de depósitos</strong> (con qué frecuencia el dinero pasa a su banco) y administra las <strong>cuentas bancarias</strong> donde llegan sus fondos. Los depósitos suelen llegar en 1–2 días hábiles para pagos con tarjeta y 1–3 días hábiles para transferencias bancarias.</li><li>Con la cuenta activa, la pestaña <strong>Overview</strong> también muestra la tarjeta <strong>Balance &amp; Payouts</strong> con dos indicadores en vivo — <strong>Available</strong> (Disponible: listo para depositarse según su calendario) y <strong>Pending</strong> (Pendiente: capturado de los clientes, en liquidación — típicamente 2 días hábiles para tarjetas) — más una tabla <strong>Recent payouts</strong> (Depósitos recientes) con Amount, Status, Method y fecha de llegada (Arrives).</li></ol><blockquote>💡 Los pagos nuevos siempre pasan un tiempo breve en <strong>Pending</strong> antes de volverse <strong>Available</strong> — es la liquidación normal de tarjetas, no un problema con su cuenta.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/payments-payouts-light.png", "alt": "Pestaña Payouts and Bank de la página de Pagos", "caption": "La pestaña Payouts & Bank — saldo, calendario de depósitos y cuentas bancarias", "theme": "light" },
+        { "src": "images/pipeline/payments-payouts-dark.png", "alt": "Pestaña Payouts and Bank de la página de Pagos", "caption": "La pestaña Payouts & Bank — saldo, calendario de depósitos y cuentas bancarias", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "disputes",
+      "title": "Responda a las disputas antes de la fecha límite",
+      "content": "<ol><li>Haga clic en la pestaña <strong>Disputes</strong> (Disputas) para ver todos los contracargos abiertos e históricos. Filtre por <strong>Reason</strong> (Motivo), <strong>Status</strong> (Estado), <strong>Amount</strong> (Monto), <strong>Disputed date</strong> (Fecha de disputa) o <strong>Respond by</strong> (Responder antes de), y use <strong>Export</strong> (Exportar) para descargar la lista.</li><li>Entre a cualquier disputa para <strong>subir evidencia</strong> — recibos, comunicaciones con el cliente, comprobantes de entrega — antes de la fecha límite <strong>Respond by</strong>.</li></ol><blockquote>⚠️ Las disputas tienen fechas límite estrictas. Si pasa la fecha <strong>Respond by</strong>, el contracargo normalmente se pierde de forma automática — revise la pestaña <strong>Notifications</strong> (paso 9) para que ninguna disputa nueva se le escape.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/payments-disputes-light.png", "alt": "Pestaña Disputes con filtros y lista de disputas", "caption": "La pestaña Disputes — filtre, exporte y entre a una disputa para subir evidencia", "theme": "light" },
+        { "src": "images/pipeline/payments-disputes-dark.png", "alt": "Pestaña Disputes con filtros y lista de disputas", "caption": "La pestaña Disputes — filtre, exporte y entre a una disputa para subir evidencia", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "account-balances-documents",
+      "title": "Actualice datos del negocio, saldos y documentos",
+      "content": "<p>Tres pestañas más completan el panorama:</p><ul><li><strong>Account</strong> (Cuenta) — actualice la información de su negocio, el <strong>statement descriptor</strong> (descriptor: el texto que aparece en los estados de cuenta de las tarjetas de sus clientes) y los documentos de verificación. Por seguridad, esta pestaña pide primero <strong>Sign in to see details</strong> (Iniciar sesión para ver los detalles): una verificación rápida de identidad con el proveedor de pagos antes de mostrar datos sensibles.</li><li><strong>Balances</strong> (Saldos) — el panorama completo de su saldo: lo disponible para depositar ahora mismo, lo pendiente de liquidación, su cadencia de depósitos y — si un contracargo o reembolso dejó su saldo en negativo — la opción de recargar para que los depósitos se reanuden.</li><li><strong>Documents</strong> (Documentos) — todos los documentos que el proveedor de pagos ha preparado para su cuenta, incluidos los <strong>formularios fiscales 1099-K</strong> (comerciantes de EE. UU. que alcanzan el umbral del IRS), estados de cuenta mensuales e informes de depósitos. Haga clic en cualquier fila para descargar un PDF o CSV.</li></ul>",
+      "images": [
+        { "src": "images/pipeline/payments-account-light.png", "alt": "Pestaña Account con la configuración del negocio y el aviso de inicio de sesión", "caption": "La pestaña Account — un inicio de sesión rápido protege sus datos bancarios y del negocio", "theme": "light" },
+        { "src": "images/pipeline/payments-account-dark.png", "alt": "Pestaña Account con la configuración del negocio y el aviso de inicio de sesión", "caption": "La pestaña Account — un inicio de sesión rápido protege sus datos bancarios y del negocio", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "notifications",
+      "title": "Vigile las alertas de comerciante en Notifications",
+      "content": "<ol><li>Haga clic en la pestaña <strong>Notifications</strong> (Notificaciones).</li><li>El panel <strong>Merchant alerts</strong> (Alertas de comerciante) acumula los eventos urgentes para que nada se pierda: <strong>Dispute filed</strong> (Disputa presentada), <strong>Dispute updated</strong> (Disputa actualizada), <strong>Payout failed</strong> (Depósito fallido) y <strong>Fraud warning</strong> (Aviso de fraude).</li><li>Cada fila muestra el <strong>Type</strong> (Tipo) de alerta, el <strong>Subject</strong> (Asunto), el estado de entrega por <strong>Email</strong> y <strong>When</strong> (Cuándo) ocurrió. Haga clic en <strong>Refresh</strong> (Actualizar) para traer lo más reciente.</li></ol><p>Una lista vacía aquí es buena noticia: significa que no hay disputas, depósitos fallidos ni señales de fraude que requieran su atención.</p>",
+      "images": [
+        { "src": "images/pipeline/payments-notifications-light.png", "alt": "Pestaña Notifications con el panel de alertas de comerciante", "caption": "La pestaña Notifications — disputas, depósitos fallidos y avisos de fraude llegan aquí", "theme": "light" },
+        { "src": "images/pipeline/payments-notifications-dark.png", "alt": "Pestaña Notifications con el panel de alertas de comerciante", "caption": "La pestaña Notifications — disputas, depósitos fallidos y avisos de fraude llegan aquí", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "sub-accounts",
+      "title": "Controle los pagos de sus subcuentas (solo cuentas principales)",
+      "content": "<p>Si dirige un equipo, la tarjeta <strong>Sub-accounts</strong> (Subcuentas) al final de la pestaña <strong>Overview</strong> decide cómo se cobran las facturas de cada miembro. Toda subcuenta comienza completamente desactivada, con tres interruptores independientes por usuario:</p><ul><li><strong>Payment Processing</strong> (Procesamiento de pagos) — el interruptor maestro. Encendido: sus facturas se pueden pagar (por su propia cuenta de comerciante o por la suya). Apagado: no se procesa nada para ese usuario, punto.</li><li><strong>Payments Page Access</strong> (Acceso a la página de Pagos) — si puede abrir esta página de Pagos por sí mismo. Apagado oculta la página, pero sus facturas se siguen procesando por la cuenta de comerciante <em>de usted</em> si Payment Processing está encendido.</li><li><strong>Independent Processor</strong> (Procesador independiente) — Encendido: conecta y usa su <strong>propia</strong> cuenta de comerciante. Apagado: sus pagos pasan por la cuenta de comerciante <strong>de usted</strong>. (Bloqueado hasta activar Page Access — no puede administrar una cuenta que no puede ver.)</li></ul><p>Las columnas <strong>Routing</strong> (Enrutamiento) y <strong>Merchant status</strong> (Estado de comerciante) muestran, por subcuenta, por dónde fluye su dinero y si su propia cuenta está conectada.</p><blockquote>⚠️ Encender <strong>Independent Processor</strong> para una subcuenta que aún no ha conectado su propia cuenta significa que sus facturas <strong>dejan de procesarse</strong> hasta que termine de conectarse — no pasarán silenciosamente por la cuenta de comerciante de usted.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/payments-subaccounts-light.png", "alt": "Tarjeta de permisos Sub-accounts con interruptores de pago por usuario", "caption": "La tarjeta Sub-accounts — Payment Processing, Page Access e Independent Processor por usuario", "theme": "light" },
+        { "src": "images/pipeline/payments-subaccounts-dark.png", "alt": "Tarjeta de permisos Sub-accounts con interruptores de pago por usuario", "caption": "La tarjeta Sub-accounts — Payment Processing, Page Access e Independent Processor por usuario", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "get-paid-everywhere",
+      "title": "Póngalo a trabajar: enlaces de pago, tarjetas guardadas, tap-to-pay y reembolsos",
+      "content": "<p>Con su cuenta de comerciante en <strong>Active</strong>, cobrar deja de ser una tarea pesada:</p><ul><li><strong>Enlaces de pago en cada factura y cotización</strong> — envíe una factura por correo o use la opción de SMS <strong>Text Pay Link</strong> (Enviar enlace de pago por texto) en el compositor de envío, y su cliente paga en línea con tarjeta en segundos. Las facturas pagadas se actualizan automáticamente en su Pipeline.</li><li><strong>Tarjetas guardadas</strong> — en cualquier registro de lead, contacto o cuenta, haga clic en <strong>Add card</strong> (Agregar tarjeta) en Payment Methods para dejar una tarjeta en archivo y cobrar futuras facturas con un clic — perfecto para clientes recurrentes.</li><li><strong>Tap-to-pay en campo</strong> — los técnicos que usan la app móvil iMash Tech pueden cobrar con tarjeta en persona acercando la tarjeta o el teléfono del cliente a su propio dispositivo. Sin lector de tarjetas.</li><li><strong>Reembolsos</strong> — abra la lista de pagos de una factura (o una transacción en la pestaña <strong>Transactions</strong>) y emita un reembolso total o parcial; el estado del pago cambia automáticamente a <strong>Fully Refunded</strong> (Reembolsado por completo) o <strong>Partially Refunded</strong> (Reembolsado parcialmente).</li></ul><p>Ese es el ciclo completo: cotícelo, factúrelo, cobre y vea el dinero llegar a su banco — todo sin salir de iMash.</p>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Su cuenta de comerciante está lista — ahora cree los documentos que sus clientes pagarán.",
+    "cards": [
+      { "href": "/pipeline/invoices", "title": "Facturas", "description": "Cree y envíe facturas pagaderas — los documentos que sus clientes liquidan a través de su nueva cuenta de comerciante." },
+      { "href": "/pipeline/quotes", "title": "Cotizaciones", "description": "Envíe cotizaciones que sus clientes pueden aprobar y pagar en línea." },
+      { "href": "/pipeline/subscriptions", "title": "Suscripciones", "description": "Cobre a sus clientes de forma recurrente usando métodos de pago guardados." },
+      { "href": "/settings/billing", "title": "Facturación", "description": "El otro lado del dinero: administre el saldo prepagado que financia su uso de iMash." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesita ayuda?",
+    "content": "<p>¿Atascado con el alta, una cuenta restringida o una disputa? Escriba a <a href=\"mailto:support@imash.io\">support@imash.io</a> y le ayudaremos a cobrar.</p>"
+  },
+  "metaTitle": "Pagos (Stripe) — Acepte pagos de clientes | iMash Documentation",
+  "metaDescription": "Conecte una cuenta de comerciante Stripe en iMash, acepte pagos de facturas, siga transacciones y disputas, administre depósitos y cuentas bancarias, y controle los permisos de pago de las subcuentas.",
+  "metaKeywords": "pagos iMash, stripe connect, cuenta de comerciante, pagos de facturas, depósitos, disputas, reembolsos, tap to pay, tarjetas guardadas, pagos de subcuentas"
+}

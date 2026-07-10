@@ -1,52 +1,118 @@
 {
   "title": "Contacts",
-  "lede": "Contacts are the people you do business with — usually customers converted from leads. This guide shows you how to add, edit, filter, and tag them.",
-  "timeToComplete": "5 minutes",
+  "lede": "Contacts are the real people in your book of business — every one of them one click away from a call, an email, or a text. This guide walks you A to Z through adding, organizing, filtering, and cleaning up contacts in the iMash CRM.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
       "id": "open-contacts",
       "title": "Open the Contacts list",
-      "content": "<ol><li>In the left navigation, open <strong>CRM</strong> and click <strong>Contacts</strong> (or go to <code>/crm/contacts</code>).</li><li>The table shows each contact's <strong>Name</strong>, <strong>Email</strong>, <strong>Phone</strong>, <strong>Stage</strong>, and <strong>Account</strong> (their company).</li><li>Click a name or avatar to open the full profile with call and message history.</li></ol><p>A contact is a real person in your book of business. The companies they belong to are stored as <strong>Accounts</strong>.</p>",
+      "content": "<p>Everything starts at the Contacts list — a live table of every person you do business with, with calling built right in.</p><ol><li>In the top navigation, click <strong>CRM</strong>, then click the <strong>Contacts</strong> tab (or go directly to <code>/crm/contacts</code>). The tab badge shows your total contact count.</li><li>Each row shows the contact's <strong>Avatar</strong>, <strong>Name</strong> (with their primary email underneath), <strong>Email</strong>, <strong>Phone</strong>, <strong>Stage</strong>, <strong>Account</strong> (their company), and <strong>Last Updated</strong>.</li><li>In the <strong>Phone</strong> column, click any blue number to call the contact instantly through the web dialer. If they have several numbers, click <strong>+N more</strong> to pick one.</li><li>The <strong>Actions</strong> column gives you three one-click shortcuts per row: the green eye opens the profile, the blue phone starts a call, and the red trash deletes the contact (with a confirmation).</li><li>Click any column header (<strong>Name</strong>, <strong>Email</strong>, <strong>Stage</strong>, <strong>Account</strong>, <strong>Last Updated</strong>) to sort by it; click again to flip the direction.</li></ol><blockquote>💡 A <strong>Contact</strong> is a person. The company they work for lives in <strong>Accounts</strong>, and prospects who haven't converted yet live in <strong>Leads</strong>.</blockquote>",
       "images": [
-        { "src": "images/crm/contacts-light.png", "alt": "Contacts list", "caption": "The Contacts list with search, filters, and tags", "theme": "light" },
-        { "src": "images/crm/contacts-dark.png", "alt": "Contacts list", "caption": "The Contacts list with search, filters, and tags", "theme": "dark" }
+        { "src": "images/crm/contacts-light.png", "alt": "The Contacts list showing avatars, names, phones, stages, and accounts", "caption": "The Contacts list — search, filters, bulk tools, and click-to-call in one screen", "theme": "light" },
+        { "src": "images/crm/contacts-dark.png", "alt": "The Contacts list showing avatars, names, phones, stages, and accounts", "caption": "The Contacts list — search, filters, bulk tools, and click-to-call in one screen", "theme": "dark" }
       ]
     },
     {
       "id": "add-contact",
       "title": "Add a new contact",
-      "content": "<ol><li>Click <strong>Create</strong> (New Contact) at the top of the list.</li><li>Enter the <strong>First Name</strong> and <strong>Last Name</strong> (both required).</li><li>Add addresses in the <strong>Emails</strong> field — the first one becomes the primary email.</li><li>Click <strong>Add Phone Number</strong> to add a number and pick a label (Mobile, Work, Home, etc.).</li><li>Optionally choose an <strong>Account</strong>, set a <strong>Stage</strong>, and fill in the mailing address.</li><li>Click <strong>Save</strong>.</li></ol>"
+      "content": "<ol><li>Click <strong>+ Add Contact</strong> in the toolbar at the top-right of the list. The <strong>Create Contact</strong> drawer slides in from the right.</li><li>Enter the <strong>First Name</strong> and <strong>Last Name</strong> — these are the only two required fields.</li><li>Optionally pick an <strong>Account</strong> to link the person to their company (type to search; each option shows the company logo).</li><li>Choose a <strong>Stage</strong> — it defaults to <strong>New</strong> and tracks where this person is in your relationship.</li><li>Fill in the mailing address if you have it: <strong>Street Address</strong>, <strong>Apartment/Suite</strong>, <strong>City</strong>, <strong>State/Province</strong>, <strong>Postal Code</strong>, and <strong>Country</strong>.</li><li>Click <strong>Save</strong> in the bottom-right. The drawer closes and your new contact appears in the list.</li></ol><blockquote>💡 If you pick <strong>United States</strong> as the country, the <strong>State/Province</strong> field turns into a dropdown of US states — otherwise it stays free text.</blockquote>",
+      "images": [
+        { "src": "images/crm/contacts-create-light.png", "alt": "The Create Contact drawer with name, emails, phone numbers, account, stage, and address fields", "caption": "The Create Contact drawer — only First Name and Last Name are required", "theme": "light" },
+        { "src": "images/crm/contacts-create-dark.png", "alt": "The Create Contact drawer with name, emails, phone numbers, account, stage, and address fields", "caption": "The Create Contact drawer — only First Name and Last Name are required", "theme": "dark" }
+      ]
     },
     {
-      "id": "edit-contact",
-      "title": "Edit a contact",
-      "content": "<ol><li>Click a contact's name to open their profile.</li><li>Update any field — add more emails or phone numbers, change the <strong>Stage</strong>, or link a different <strong>Account</strong>.</li><li>Remember: the primary email is always the first one in the <strong>Emails</strong> list, so put it first if you need to change which email is primary.</li><li>Save your changes.</li></ol>"
+      "id": "emails-and-phones",
+      "title": "Add multiple emails and phone numbers",
+      "content": "<p>Real people have more than one way to reach them — iMash stores as many emails and phone numbers per contact as you need.</p><ol><li>In the <strong>Emails</strong> field, click <strong>+ Add Email</strong> for each address. <strong>The first email in the list is the primary one</strong> — it's what appears in the list view and is used by default when you email the contact. Reorder to change which is primary.</li><li>In the <strong>Phone Numbers</strong> field, click <strong>Add Phone Number</strong>. A small dialog opens.</li><li>Type the <strong>Phone Number</strong> and pick a <strong>Label</strong> — <strong>Mobile</strong>, <strong>Home</strong>, <strong>Work</strong>, <strong>Office</strong>, <strong>Other</strong>, <strong>Landline</strong>, <strong>Personal</strong>, or <strong>Fax</strong>.</li><li>Click <strong>Save</strong>. The number appears as a labeled entry; use the red trash icon next to it to remove it.</li><li>Repeat for every number the contact has — all of them become click-to-call in the list and profile.</li></ol>",
+      "images": [
+        { "src": "images/crm/contacts-create-phone-light.png", "alt": "The Add Phone Number dialog with a phone number field and a label dropdown", "caption": "Add as many numbers as you need, each with its own label", "theme": "light" },
+        { "src": "images/crm/contacts-create-phone-dark.png", "alt": "The Add Phone Number dialog with a phone number field and a label dropdown", "caption": "Add as many numbers as you need, each with its own label", "theme": "dark" }
+      ]
     },
     {
-      "id": "search-filter-tag",
-      "title": "Search, filter, and tag",
-      "content": "<ul><li>Use the <strong>search box</strong> and switch between searching by <strong>Name</strong>, <strong>Email</strong>, or <strong>Phone</strong>.</li><li>Add filters for <strong>Stage</strong>, <strong>Tags</strong>, <strong>Address</strong>, <strong>City</strong>, or <strong>Owner</strong>.</li><li>Add <strong>tags</strong> on a contact to group people (for example <em>VIP</em> or <em>renewal</em>), then filter the list by that tag.</li></ul>"
+      "id": "search-and-filter",
+      "title": "Search, filter, and sort the list",
+      "content": "<p>Find anyone in seconds, even in a list of thousands.</p><ol><li>Use the dropdown to the left of the search box to choose what to search by: <strong>Name</strong>, <strong>Email</strong>, or <strong>Phone</strong>. Then type in <strong>Search Contacts</strong> — results update as you type.</li><li>To narrow further, open the <strong>Filter By</strong> dropdown and tick one or more filter types. Each one adds its own control next to the toolbar:</li></ol><ul><li><strong>Stage</strong> — show only contacts in a specific lifecycle stage.</li><li><strong>Account</strong> — show contacts linked to one or more companies (type to search accounts).</li><li><strong>Tags</strong> — filter by a tag; this also adds a <strong>Tags</strong> column to the table.</li><li><strong>Address</strong> — free-text match across street, city, state, postal code, and country; adds an <strong>Address</strong> column.</li><li><strong>City</strong> — match on city only; adds a <strong>City</strong> column.</li><li><strong>Owner</strong> — show contacts owned by specific team members.</li></ul><blockquote>💡 Phone search is forgiving — it matches partial numbers and ignores dashes and spaces, so <em>555010</em> finds <em>+1 (555) 010-7788</em>.</blockquote>",
+      "images": [
+        { "src": "images/crm/contacts-toolbar-light.png", "alt": "The Contacts toolbar with search field selector, search box, and Filter By dropdown", "caption": "The toolbar: search-by selector, search box, and Filter By", "theme": "light" },
+        { "src": "images/crm/contacts-toolbar-dark.png", "alt": "The Contacts toolbar with search field selector, search box, and Filter By dropdown", "caption": "The toolbar: search-by selector, search box, and Filter By", "theme": "dark" },
+        { "src": "images/crm/contacts-filters-light.png", "alt": "The toolbar with Stage and Tags filters enabled, showing their extra dropdown controls", "caption": "Enabling Stage and Tags in Filter By adds their own dropdowns to the toolbar", "theme": "light" },
+        { "src": "images/crm/contacts-filters-dark.png", "alt": "The toolbar with Stage and Tags filters enabled, showing their extra dropdown controls", "caption": "Enabling Stage and Tags in Filter By adds their own dropdowns to the toolbar", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "contact-profile",
+      "title": "Open a contact's profile",
+      "content": "<p>Click any contact's name or avatar to open the <strong>Contact Details</strong> drawer — the full 360° view of that person.</p><ol><li>The header shows the avatar (click the camera icon to upload a photo), the contact's name, current stage pill, primary email, and primary phone.</li><li>Use the round buttons in the top-right of the header: the blue <strong>phone</strong> button calls the contact, the <strong>envelope</strong> button starts an email.</li><li>The <strong>Contact Information</strong> tab is where you edit the essentials inline — no separate edit mode needed:</li></ol><ul><li><strong>Emails</strong> — the same multi-email editor; the entry marked <strong>Primary</strong> (starred, first in the list) is the default address.</li><li><strong>Account</strong> — click to search and link the contact to a company.</li><li><strong>Tags</strong> — type a tag and press <strong>Enter</strong> to add it (for example <em>VIP</em> or <em>renewal</em>); click the <strong>×</strong> on a tag to remove it. Tags power the Tags filter in the list.</li><li><strong>Phone Numbers</strong> — pick a label, type the number, and click <strong>Add</strong>; the trash icon deletes a number.</li><li><strong>Timezone</strong> — set the contact's local timezone so calls and calendar events display at the right local time.</li></ul>",
+      "images": [
+        { "src": "images/crm/contacts-detail-light.png", "alt": "The Contact Details drawer showing the header and the Contact Information tab with emails, account, tags, phone numbers, and timezone", "caption": "The Contact Information tab — everything is editable inline", "theme": "light" },
+        { "src": "images/crm/contacts-detail-dark.png", "alt": "The Contact Details drawer showing the header and the Contact Information tab with emails, account, tags, phone numbers, and timezone", "caption": "The Contact Information tab — everything is editable inline", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "profile-tabs",
+      "title": "Explore the profile tabs",
+      "content": "<p>The tab row across the profile turns each contact into a complete customer file:</p><ul><li><strong>Additional Information</strong> — edit the name, full mailing address (street, apartment/suite, city, state, postal code, country), and tax settings (<strong>Tax-Exempt</strong> plus <strong>Exemption Certificate #</strong>).</li><li><strong>Call Logs</strong> — every call with this contact; click a row to open the full call detail.</li><li><strong>Files</strong> — attach documents, photos, and contracts to the contact.</li><li><strong>Custom Data</strong> — free-form custom variables your AI agents and automations can read and write.</li><li><strong>Calendar</strong> — the contact's calendar events; click <strong>Add Event</strong> to schedule a new one with them.</li><li><strong>Email</strong> — the full email conversation with this contact; badges on the tab show total and unread counts.</li><li><strong>Deals</strong>, <strong>Invoices</strong>, <strong>Quotes</strong>, <strong>Jobs</strong> — every pipeline record linked to this person.</li><li><strong>Payment Methods</strong> — cards saved on file for this contact, ready for one-click charging.</li></ul><blockquote>💡 Changes in the info tabs save as you make them — there is no separate Save button on the profile.</blockquote>",
+      "images": [
+        { "src": "images/crm/contacts-detail-additional-light.png", "alt": "The Additional Information tab showing name and address fields", "caption": "The Additional Information tab — name, address, and tax details", "theme": "light" },
+        { "src": "images/crm/contacts-detail-additional-dark.png", "alt": "The Additional Information tab showing name and address fields", "caption": "The Additional Information tab — name, address, and tax details", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "lifecycle-and-notes",
+      "title": "Track the lifecycle stage and add notes",
+      "content": "<p>Scroll to the bottom of the profile to manage where this person stands and what your team should know.</p><ol><li>Under <strong>Lifecycle</strong>, the stage bar shows the journey from <strong>New</strong> through <strong>Contacted</strong>, <strong>Interested</strong>, <strong>Qualified</strong>, <strong>Negotiation</strong>, and <strong>Won</strong>. The current stage is highlighted in color.</li><li>Click a stage to move the contact there. Stages with a small arrow open a dropdown of sub-stages (for example <em>Contacted → No Answer, Voicemail, Wrong Number</em>) — pick the exact one.</li><li>If the contact is enrolled in campaigns with their own stage sets, read-only <strong>Campaign Lifecycles</strong> bars appear below, one per campaign.</li><li>Under <strong>Notes</strong>, type in <strong>Add your note</strong> and press <strong>Enter</strong>. Notes are timestamped, so anyone opening the profile gets the story at a glance.</li></ol><blockquote>💡 Your stage names and colors are configurable in <strong>CRM Settings</strong>, so your bar may show custom stages instead of the defaults.</blockquote>",
+      "images": [
+        { "src": "images/crm/contacts-detail-lifecycle-light.png", "alt": "The lifecycle stage bar showing New highlighted and the following stages with sub-stage dropdown arrows", "caption": "Click a stage to update it — arrows open sub-stage choices", "theme": "light" },
+        { "src": "images/crm/contacts-detail-lifecycle-dark.png", "alt": "The lifecycle stage bar showing New highlighted and the following stages with sub-stage dropdown arrows", "caption": "Click a stage to update it — arrows open sub-stage choices", "theme": "dark" }
+      ]
     },
     {
       "id": "bulk-actions",
-      "title": "Bulk actions and cleanup",
-      "content": "<ol><li>Tick the checkboxes to select contacts (or select all that match your filters).</li><li>Use the bulk toolbar to <strong>Delete</strong>, <strong>Assign to an Account</strong>, or <strong>Change Owner</strong>.</li><li>Run <strong>Find Duplicates</strong> by phone or email to remove repeated records and keep your list clean.</li></ol>"
+      "title": "Work in bulk: owner, account, delete",
+      "content": "<ol><li>Tick the checkbox on individual rows, or tick <strong>Select all N contacts</strong> in the toolbar to select every contact matching your current search and filters — across all pages. Untick specific rows to exclude them.</li><li>As soon as something is selected, three bulk buttons appear next to the <strong>Selected N</strong> counter:</li></ol><ul><li><strong>Change Owner</strong> (person icon) — reassign all selected contacts to another team member.</li><li><strong>Assign Account</strong> (card icon) — link every selected contact to one company; leave the account empty and click <strong>Assign</strong> to clear their account instead.</li><li><strong>Delete Selected</strong> (red trash icon) — remove all selected contacts after a confirmation.</li></ul><blockquote>⚠️ Bulk delete is permanent and can cover thousands of records when <strong>Select all</strong> is on — double-check the count in the confirmation dialog before you confirm.</blockquote>",
+      "images": [
+        { "src": "images/crm/contacts-bulk-light.png", "alt": "The toolbar with Select all checked, showing Selected count and the Change Owner, Assign Account, and Delete buttons", "caption": "With contacts selected, the bulk buttons appear: owner, account, delete", "theme": "light" },
+        { "src": "images/crm/contacts-bulk-dark.png", "alt": "The toolbar with Select all checked, showing Selected count and the Change Owner, Assign Account, and Delete buttons", "caption": "With contacts selected, the bulk buttons appear: owner, account, delete", "theme": "dark" },
+        { "src": "images/crm/contacts-assign-account-light.png", "alt": "The Assign Account to Selected Contacts dialog with an account search dropdown", "caption": "Assign Account links every selected contact to one company in a single click", "theme": "light" },
+        { "src": "images/crm/contacts-assign-account-dark.png", "alt": "The Assign Account to Selected Contacts dialog with an account search dropdown", "caption": "Assign Account links every selected contact to one company in a single click", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "find-duplicates",
+      "title": "Find and remove duplicates",
+      "content": "<p>Duplicate records waste dials and split your history. The built-in duplicate finder keeps your list spotless.</p><ol><li>Click the <strong>copy icon</strong> (Find Duplicates) in the toolbar. The <strong>Find &amp; Remove Duplicate Contacts</strong> dialog opens.</li><li>Pick a <strong>Duplicate scope</strong>: <strong>Across all contacts</strong> (any matching phone/email) or <strong>Within same account only</strong>.</li><li>Click <strong>Phone Number</strong> or <strong>Email Address</strong> to run the scan.</li><li>Matches appear in groups with summary tiles for <strong>Duplicate Groups</strong> and <strong>Total Duplicates to Remove</strong>. In each group the oldest contact is marked <strong>Keep</strong> and the rest <strong>Delete</strong>.</li><li>Click <strong>Delete N Duplicate(s)</strong> on a single group, or <strong>Delete All Duplicates</strong> to clean everything at once — both ask for confirmation first.</li></ol><blockquote>⚠️ Deleting duplicates cannot be undone. The oldest record in each group is always the one kept.</blockquote>",
+      "images": [
+        { "src": "images/crm/contacts-duplicates-light.png", "alt": "The Find and Remove Duplicate Contacts dialog with scope selector and Phone Number / Email Address buttons", "caption": "Scan by phone or email, across all contacts or within the same account", "theme": "light" },
+        { "src": "images/crm/contacts-duplicates-dark.png", "alt": "The Find and Remove Duplicate Contacts dialog with scope selector and Phone Number / Email Address buttons", "caption": "Scan by phone or email, across all contacts or within the same account", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "import-and-api",
+      "title": "Import contacts and connect via API",
+      "content": "<p>Bringing an existing list into iMash takes a minute.</p><ol><li>Click the <strong>upload icon</strong> (Import) in the toolbar to open <strong>Import Contacts from CSV</strong>.</li><li>Click or drag your CSV file into the upload area. The file needs headers in the first row and must include <strong>First Name</strong>, <strong>Last Name</strong>, and either <strong>Email</strong> or <strong>Phone</strong>.</li><li>Click <strong>Next</strong> to map your CSV columns to contact fields, then finish the import — your contacts appear in the list immediately.</li><li>Prefer code? Click the <strong>link icon</strong> (API Info) in the toolbar for ready-to-copy API examples to create and query contacts programmatically.</li></ol><p>That's it — your entire book of business is now in one place, one click from every call, message, and invoice. 🚀</p>",
+      "images": [
+        { "src": "images/crm/contacts-import-light.png", "alt": "The Import Contacts from CSV dialog with a drag-and-drop upload area", "caption": "Drag in a CSV with First Name, Last Name, and Email or Phone", "theme": "light" },
+        { "src": "images/crm/contacts-import-dark.png", "alt": "The Import Contacts from CSV dialog with a drag-and-drop upload area", "caption": "Drag in a CSV with First Name, Last Name, and Email or Phone", "theme": "dark" }
+      ]
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Round out your CRM and start reaching contacts.",
+    "description": "Your contacts are in — now put them to work.",
     "cards": [
-      { "href": "/crm/leads", "title": "Leads", "description": "Track potential customers before they convert." },
-      { "href": "/crm/accounts", "title": "Accounts", "description": "Organize contacts under their company." },
-      { "href": "/campaigns/create-campaign", "title": "Create a Campaign", "description": "Call or message your contacts automatically." }
+      { "href": "/crm/leads", "title": "Leads", "description": "Track potential customers before they convert into contacts." },
+      { "href": "/crm/accounts", "title": "Accounts", "description": "Organize your contacts under the companies they belong to." },
+      { "href": "/crm/import-export-data", "title": "Import & Export Data", "description": "Bulk-move CRM data in and out with CSV files." },
+      { "href": "/campaigns/create-campaign", "title": "Create a Campaign", "description": "Call or message your contacts automatically with AI agents." }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Contacts - CRM | iMash Docs",
-  "metaDescription": "Add, edit, filter, and tag customer contacts in the iMash CRM. Store multiple emails and phone numbers, link accounts, and clean up duplicates.",
-  "metaKeywords": "contacts, CRM contacts, customer records, contact management, multiple emails, phone numbers, contact tags"
+  "metaTitle": "Contacts - CRM | iMash Documentation",
+  "metaDescription": "Add, organize, filter, and clean up customer contacts in the iMash CRM: multiple emails and phone numbers, click-to-call, lifecycle stages, tags, bulk actions, duplicate removal, and CSV import.",
+  "metaKeywords": "contacts, CRM contacts, customer records, contact management, multiple emails, phone numbers, contact tags, lifecycle stage, duplicate contacts, CSV import, bulk actions"
 }

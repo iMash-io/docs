@@ -1,0 +1,116 @@
+{
+  "title": "Subscriptions (Recurring Billing)",
+  "lede": "Turn one-time customers into predictable, recurring revenue. Subscriptions let you bill any service on autopilot — weekly, monthly, annual, or any custom cadence — with automatic invoices, saved-card charging, trials, pauses, and refund-aware cancellations. This guide takes you from an empty list to a live, self-billing subscription.",
+  "timeToComplete": "12 minutes",
+  "steps": [
+    {
+      "id": "open-subscriptions",
+      "title": "Open the Subscriptions list",
+      "content": "<p>Everything recurring lives on one screen — every plan, its status, and how much monthly revenue it represents.</p><ol><li>In the top navigation, click <strong>CRM</strong>, then click the <strong>Subscriptions</strong> tab (or go directly to <code>/pipeline/subscriptions</code>).</li><li>The table shows one row per subscription with these columns:<ul><li><strong>Subscription Name</strong> — click it to open the full detail page.</li><li><strong>Number</strong> — the subscription's reference number.</li><li><strong>Status</strong> — a colored badge: <strong>Draft</strong>, <strong>Due</strong>, <strong>Trial</strong>, <strong>Active</strong>, <strong>Paused</strong>, <strong>Past Due</strong>, <strong>Cancelled</strong>, or <strong>Expired</strong>. An orange <strong>Cancelling</strong> pill appears next to Active when the customer is scheduled to cancel at the end of the current period.</li><li><strong>Account</strong> — the company the subscription is linked to.</li><li><strong>Billing Cycle</strong> — Weekly, Monthly, Quarterly, Semi-Annual, Annual, or Biennial.</li><li><strong>Billing Amount</strong> — what the customer pays each cycle.</li><li><strong>MRR</strong> and <strong>ARR</strong> — the subscription's Monthly and Annual Recurring Revenue, calculated automatically from the amount and cycle. Click either column header to sort.</li><li><strong>Start Date</strong> and <strong>Next Billing</strong> — when it began and when the next charge lands.</li><li><strong>Auto-Renew</strong> — <strong>Yes</strong> (green) keeps billing until cancelled; use the column's filter to show only <strong>Auto-Renew</strong> or <strong>Manual</strong> rows.</li><li><strong>Actions</strong> — <strong>View</strong> (eye), <strong>Edit</strong> (pencil), and <strong>Delete</strong> (trash) icons.</li></ul></li></ol><blockquote>💡 Phone-number subscriptions (the ones iMash creates when you buy a number) are managed from the <strong>Phone Numbers</strong> page — their trash icon redirects you there instead of deleting.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/subscriptions-list-light.png", "alt": "Subscriptions list showing draft and active subscriptions with status, billing cycle and actions columns", "caption": "The Subscriptions list — every recurring plan with its status, cycle, MRR/ARR, and per-row actions", "theme": "light" },
+        { "src": "images/pipeline/subscriptions-list-dark.png", "alt": "Subscriptions list showing draft and active subscriptions with status, billing cycle and actions columns", "caption": "The Subscriptions list — every recurring plan with its status, cycle, MRR/ARR, and per-row actions", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "search-filter",
+      "title": "Search and filter the list",
+      "content": "<p>Click <strong>Show Filters</strong> in the top-right to reveal the filter bar:</p><ul><li><strong>Search subscriptions…</strong> — type part of a name and press Enter.</li><li><strong>Filter by status</strong> — narrow to a single status: <strong>Draft</strong>, <strong>Due</strong>, <strong>Trial</strong>, <strong>Active</strong>, <strong>Paused</strong>, <strong>Past Due</strong>, <strong>Cancelled</strong>, or <strong>Expired</strong>.</li><li><strong>Show:</strong> — the view selector, your quickest lens on the list:<ul><li><strong>Active only</strong> (default) — only subscriptions currently billing.</li><li><strong>Cancelling</strong> — active subscriptions scheduled to end at period end.</li><li><strong>All live</strong> — everything that isn't cancelled or deleted (includes drafts, trials, paused, and past-due).</li><li><strong>Cancelled / Expired</strong> — plans that have ended.</li><li><strong>Deleted only</strong> — soft-deleted rows, marked with a red <strong>Deleted</strong> pill.</li><li><strong>Everything</strong> — the whole history, no filter.</li></ul></li><li><strong>Start date / End date</strong> — show only subscriptions that started within a date range.</li><li><strong>Filter by owner</strong> — see one team member's subscriptions.</li></ul><blockquote>💡 Just created a draft and can't see it? That's the default <strong>Show: Active only</strong> view hiding it — switch to <strong>All live</strong> and your draft appears.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/subscriptions-filters-light.png", "alt": "Filter bar with search box, status filter, view selector, date range and owner filter", "caption": "The filter bar — search, status, the Show view selector, date range, and owner", "theme": "light" },
+        { "src": "images/pipeline/subscriptions-filters-dark.png", "alt": "Filter bar with search box, status filter, view selector, date range and owner filter", "caption": "The filter bar — search, status, the Show view selector, date range, and owner", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "create-subscription",
+      "title": "Create a subscription — the basics",
+      "content": "<p>Time to build your first recurring plan. Click <strong>Create Subscription</strong> in the top-right of the list — the <strong>New Subscription</strong> form opens.</p><ol><li><strong>Subscription Name</strong> (required) — a name the customer would recognize, e.g. <em>Monthly Lawn Care — Riverside Apartments</em>.</li><li><strong>Billing Cycle</strong> — pick <strong>Weekly</strong>, <strong>Monthly</strong>, <strong>Quarterly</strong>, <strong>Semi-annual</strong>, <strong>Annual</strong>, <strong>Biennial</strong>, or <strong>Custom…</strong>. Choosing Custom reveals <strong>Every</strong> and <strong>Unit</strong> fields so you can bill every <em>N</em> day(s), week(s), month(s), or year(s) — every 45 days, every 2 weeks, anything.</li><li><strong>Currency</strong> — USD, EUR, GBP, CAD, or AUD.</li><li><strong>Auto-Renew</strong> — leave <strong>Yes</strong> so the plan keeps billing each cycle until cancelled.</li><li>Link the customer with the <strong>Account</strong>, <strong>Contact</strong>, or <strong>Lead</strong> picker — start typing a name and select the match. You only need one of the three; if you set several, the account wins, then the contact, then the lead.</li><li><strong>Start Date</strong> — when billing begins. Leave it empty to start today.</li></ol>",
+      "images": [
+        { "src": "images/pipeline/subscriptions-create-light.png", "alt": "New Subscription form with name, billing cycle, currency, auto-renew, customer pickers, saved card, trial and cancellation policy fields", "caption": "The New Subscription form — cycle, currency, customer, payment, trial, and policy in one screen", "theme": "light" },
+        { "src": "images/pipeline/subscriptions-create-dark.png", "alt": "New Subscription form with name, billing cycle, currency, auto-renew, customer pickers, saved card, trial and cancellation policy fields", "caption": "The New Subscription form — cycle, currency, customer, payment, trial, and policy in one screen", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "line-items",
+      "title": "Add line items — what the customer pays each cycle",
+      "content": "<p>Scroll to the <strong>Line items</strong> card at the bottom of the form. Each line is a product or service that bills every cycle, and the blue banner keeps a running <strong>Total per cycle</strong> as you type.</p><ol><li>In the first row, enter the <strong>Item name</strong> (e.g. <em>Weekly lawn mowing service</em>).</li><li>Set <strong>Qty</strong> and <strong>Unit price</strong>. Optional <strong>Discount</strong> and <strong>Tax</strong> amounts adjust the <strong>Line total</strong>.</li><li>Click <strong>Add line</strong> (top-right of the card) for each additional item; remove a row with its trash icon (at least one line must remain).</li></ol><blockquote>⚠️ At least one line item with a name is required — the sum of all line totals becomes the subscription's <strong>Billing Amount</strong>.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/subscriptions-create-lines-light.png", "alt": "Line items editor with two service lines, quantities, unit prices and the per-cycle total banner", "caption": "Line items — each row bills every cycle; the banner shows the total per cycle", "theme": "light" },
+        { "src": "images/pipeline/subscriptions-create-lines-dark.png", "alt": "Line items editor with two service lines, quantities, unit prices and the per-cycle total banner", "caption": "Line items — each row bills every cycle; the banner shows the total per cycle", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "payment-trial-policy",
+      "title": "Choose how the customer pays — plus trials, end dates, and refund policy",
+      "content": "<p>These four settings decide how money actually moves:</p><ul><li><strong>Saved card on file (optional)</strong> — enabled once you've picked a customer. Two modes:<ul><li><strong>Pick a saved card</strong> — renewals are charged to that card automatically, no customer action needed.</li><li><strong>Leave it empty</strong> — the customer receives the first invoice's payment link and pays with their own card. The card they enter is saved and used for future renewals automatically.</li></ul></li><li><strong>Free trial?</strong> — switch to <strong>Yes</strong> and pick a <strong>Trial end date</strong>. The customer isn't charged until the trial ends, and the subscription shows the <strong>Trial</strong> status until then. Leave it at <strong>No</strong> and billing starts immediately.</li><li><strong>Has end date?</strong> — switch to <strong>Yes</strong> and pick a date to stop the subscription automatically; leave <strong>No</strong> and it continues until cancelled.</li><li><strong>Cancellation policy</strong> — what happens if you ever cancel immediately:<ul><li><strong>No refund</strong> (default) — just stop the next billing cycle.</li><li><strong>SaaS model</strong> — refund the unused portion of the current period.</li><li><strong>Refund the last billing cycle in full</strong>.</li></ul>The policy only applies to immediate cancellations — cancelling at period end never refunds, because the customer used the full period.</li><li><strong>Tags</strong> — optional labels for organizing and filtering.</li></ul><p>Now click <strong>Save Draft</strong> in the top-right. Nothing is charged yet — the subscription is saved as a <strong>Draft</strong> and you land on its detail page.</p><blockquote>💡 Recurring charging runs on your connected Stripe account — connect it under <strong>Settings → Payments</strong> before activating your first subscription.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/subscriptions-create-payment-light.png", "alt": "Saved card on file field with explanation of auto-charge versus invoice link", "caption": "Saved card on file — pick a card to auto-charge, or leave empty to send an invoice link", "theme": "light" },
+        { "src": "images/pipeline/subscriptions-create-payment-dark.png", "alt": "Saved card on file field with explanation of auto-charge versus invoice link", "caption": "Saved card on file — pick a card to auto-charge, or leave empty to send an invoice link", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "detail-overview",
+      "title": "Read the detail page — your subscription command center",
+      "content": "<p>Click any subscription's name to open its detail page. The <strong>Overview</strong> tab shows:</p><ul><li><strong>Four stat tiles</strong> — <strong>Per-cycle total</strong>, <strong>MRR</strong> (monthly recurring revenue), <strong>ARR</strong> (annual recurring revenue), and <strong>Lifetime Value</strong> (everything this customer has paid so far).</li><li><strong>A status banner</strong> — a blue <strong>Draft — not activated</strong> notice while nothing has been charged, or a green <strong>Subscription is active</strong> banner once recurring billing is running (with an orange <strong>Will cancel at period end</strong> tag if a cancellation is scheduled).</li><li><strong>The details table</strong> — name, number, status, billing cycle, auto-renew, the linked <strong>Account</strong> / <strong>Contact</strong> / <strong>Lead</strong> (clickable), start date, trial end date, <strong>Next Billing Date</strong> (with a day countdown), end date, cancellation policy, and any tags.</li><li><strong>Line items</strong> — the items billed each cycle with quantity, unit price, discount, tax, and totals.</li></ul>",
+      "images": [
+        { "src": "images/pipeline/subscriptions-detail-light.png", "alt": "Subscription detail page with stat tiles, draft banner and details table", "caption": "The detail page — stat tiles, status banner, and the full details table", "theme": "light" },
+        { "src": "images/pipeline/subscriptions-detail-dark.png", "alt": "Subscription detail page with stat tiles, draft banner and details table", "caption": "The detail page — stat tiles, status banner, and the full details table", "theme": "dark" },
+        { "src": "images/pipeline/subscriptions-detail-lines-light.png", "alt": "Line items card on the subscription detail page", "caption": "Line items on the detail page — what bills every cycle", "theme": "light" },
+        { "src": "images/pipeline/subscriptions-detail-lines-dark.png", "alt": "Line items card on the subscription detail page", "caption": "Line items on the detail page — what bills every cycle", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "activate",
+      "title": "Activate the subscription — two ways to start billing",
+      "content": "<p>This is the moment your draft becomes real revenue. A draft's header shows two activation buttons:</p><ol><li><strong>Create &amp; Send Invoice</strong> — sets up the recurring billing and generates the first invoice <em>without charging anything</em>. The subscription moves to <strong>Due</strong>; share the invoice's payment link with the customer, and once they pay, the card they used is saved and future renewals charge automatically. Use this when you don't have the customer's card yet.</li><li><strong>Activate &amp; Charge</strong> — creates the subscription <em>and charges the saved card immediately</em>. On success the status jumps straight to <strong>Active</strong>. This button is only enabled when a <strong>Saved card on file</strong> is picked on the subscription (click <strong>Edit</strong> to pick one).</li></ol><p>Also in the header: <strong>Edit</strong> reopens the form, and <strong>Delete</strong> removes the subscription.</p><blockquote>💡 After activating, give the page a few seconds — the first invoice is generated asynchronously and appears on the <strong>Invoices</strong> tab shortly after.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/subscriptions-detail-actions-light.png", "alt": "Draft subscription header with Create and Send Invoice, Activate and Charge, Edit and Delete buttons", "caption": "A draft's header — Create & Send Invoice (no charge yet) vs Activate & Charge (needs a saved card)", "theme": "light" },
+        { "src": "images/pipeline/subscriptions-detail-actions-dark.png", "alt": "Draft subscription header with Create and Send Invoice, Activate and Charge, Edit and Delete buttons", "caption": "A draft's header — Create & Send Invoice (no charge yet) vs Activate & Charge (needs a saved card)", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "invoices-tab",
+      "title": "Track generated invoices",
+      "content": "<p>Every billing cycle produces a real invoice — and they all collect on the <strong>Invoices</strong> tab of the detail page (the tab label shows the count).</p><ol><li>Click the <strong>Invoices</strong> tab.</li><li>Each row shows the invoice <strong>Number</strong>, <strong>Date</strong>, <strong>Status</strong>, <strong>Payment</strong> status (<strong>paid</strong> green, <strong>failed</strong> red), <strong>Total</strong>, <strong>Paid</strong>, and <strong>Due</strong> amounts.</li><li>Click <strong>Open</strong> on any row to jump to the full invoice — from there you can download the PDF, resend the payment link, or refund.</li></ol><p>If a renewal charge fails, the subscription flips to <strong>Past Due</strong> so you can spot it from the list and chase the payment.</p>",
+      "images": [
+        { "src": "images/pipeline/subscriptions-detail-invoices-light.png", "alt": "Invoices tab of a subscription showing the invoice table columns", "caption": "The Invoices tab — one invoice per billing cycle, each openable in full", "theme": "light" },
+        { "src": "images/pipeline/subscriptions-detail-invoices-dark.png", "alt": "Invoices tab of a subscription showing the invoice table columns", "caption": "The Invoices tab — one invoice per billing cycle, each openable in full", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "pause-cancel",
+      "title": "Pause, resume, or cancel",
+      "content": "<p>Life happens — customers travel, budgets change. The detail-page header adapts to the subscription's status:</p><ul><li><strong>Pause</strong> — available while the plan is Active, Due, Trial, or Past Due. Billing stops but the subscription is kept; the status becomes <strong>Paused</strong>.</li><li><strong>Resume</strong> — appears on a paused subscription and restarts billing.</li><li><strong>Cancel</strong> — appears once the subscription is activated. It opens the <strong>Cancel subscription</strong> dialog:<ol><li>By default the cancellation happens <strong>at the end of the current period</strong> — the customer keeps access until then, no more invoices after, and no refund (they used what they paid for). The list shows an orange <strong>Cancelling</strong> pill until the period ends.</li><li>Tick <strong>Cancel immediately (skip end-of-period grace)</strong> to end it right now. The dialog's banner tells you exactly what your cancellation policy will do: no refund, an automatic prorated refund of the unused time (SaaS policy), or a full refund of the last cycle.</li><li>Optionally pick a <strong>Cancellation reason (internal)</strong> — it's stored on the subscription for your reporting, never shown to the customer.</li><li>Click <strong>Confirm cancellation</strong>.</li></ol></li></ul><blockquote>⚠️ Policy-driven refunds fire only on <em>immediate</em> cancellations. If an automatic refund fails, you'll see a warning — issue it manually from the invoice.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/subscriptions-active-actions-light.png", "alt": "Action buttons on an active subscription showing Pause, Edit and Delete", "caption": "An active subscription's actions — Pause appears while the plan is billing", "theme": "light" },
+        { "src": "images/pipeline/subscriptions-active-actions-dark.png", "alt": "Action buttons on an active subscription showing Pause, Edit and Delete", "caption": "An active subscription's actions — Pause appears while the plan is billing", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "delete",
+      "title": "Delete a subscription (and when not to)",
+      "content": "<p>Deleting is the nuclear option — prefer <strong>Cancel</strong> for anything a customer once paid for, so the history stays intact.</p><ol><li>Click the trash icon on a list row (or <strong>Delete</strong> on the detail page).</li><li>Read the confirmation carefully: if the subscription is currently billing, deleting <strong>cancels it immediately</strong> — the customer loses access right away — and then removes it from the CRM.</li><li>Click <strong>Delete</strong> to confirm.</li></ol><p>Deleted rows aren't gone forever on screen: switch the list's view selector to <strong>Show: Deleted only</strong> to review them, marked with a red <strong>Deleted</strong> pill.</p><blockquote>⚠️ Phone-number subscriptions can't be deleted here — their trash icon takes you to the <strong>Phone Numbers</strong> page, where releasing the number handles the billing correctly.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/subscriptions-delete-confirm-light.png", "alt": "Delete subscription confirmation popover with Cancel and Delete buttons", "caption": "The delete confirmation — active subscriptions are cancelled immediately before removal", "theme": "light" },
+        { "src": "images/pipeline/subscriptions-delete-confirm-dark.png", "alt": "Delete subscription confirmation popover with Cancel and Delete buttons", "caption": "The delete confirmation — active subscriptions are cancelled immediately before removal", "theme": "dark" }
+      ]
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Your recurring revenue engine is running — now connect the rest of your money flow.",
+    "cards": [
+      { "href": "/pipeline/invoices", "title": "Invoices", "description": "Open, send, and refund the invoices your subscriptions generate." },
+      { "href": "/pipeline/payments", "title": "Payments", "description": "Connect Stripe, take payments, and manage saved cards." },
+      { "href": "/pipeline/products-services", "title": "Products & Services", "description": "Build the catalog you bill from." },
+      { "href": "/crm/contacts", "title": "Contacts", "description": "Manage the customers behind every subscription." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Subscriptions & Recurring Billing | iMash Documentation",
+  "metaDescription": "Create recurring subscriptions in iMash: billing cycles, line items, saved-card auto-charging, free trials, generated invoices, pause/resume, and refund-aware cancellation.",
+  "metaKeywords": "subscriptions, recurring billing, MRR, ARR, auto-charge, saved card, free trial, pause subscription, cancel subscription, invoices"
+}

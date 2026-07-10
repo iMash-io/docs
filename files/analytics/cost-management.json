@@ -1,47 +1,112 @@
 {
   "title": "Cost Management",
-  "lede": "See your prepaid balance, understand how each call and message is priced, top up funds, and review every charge on the Billing page.",
-  "timeToComplete": "5 minutes",
+  "lede": "Know exactly where every cent goes. This guide shows you how to read per-call cost breakdowns, spot what drives your spend, and keep your usage under control — so you can scale your AI call center with total confidence.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
-      "id": "open-billing",
-      "title": "Open the Billing page",
-      "content": "<ol><li>In the left menu, under <strong>Account</strong>, open <strong>Billing</strong> (at <code>/billing</code>).</li><li>The <strong>Prepaid Balance</strong> card shows your current balance &mdash; the funds available to pay for calls and messages. Usage is drawn down from this balance as it happens.</li></ol>",
+      "id": "open-call-logs",
+      "title": "Open Call Logs — your cost command center",
+      "content": "<p>Every call your platform handles is logged with its full price attached. The Call Logs page is where you audit that spend, call by call.</p><ol><li>In the left sidebar, under <strong>Call Center</strong>, click <strong>Call Logs</strong> (you can also reach it from the top navigation: <strong>Contact Center</strong> → <strong>Call Logs</strong>).</li><li>You'll see three zones on this page, top to bottom: a <strong>filter bar</strong>, a strip of <strong>summary tiles</strong> with your totals, and the <strong>call table</strong> with one row per call.</li><li>Each row shows the call's date, AI agent, type, direction, and — most importantly for this guide — its <strong>Cost/Price</strong> and <strong>Profit</strong> columns.</li></ol><blockquote>💡 Use the <strong>Columns</strong> button in the top-right to show or hide columns if your table looks different from the screenshots.</blockquote>",
       "images": [
-        { "src": "images/analytics/billing-light.png", "alt": "Billing page", "caption": "The Billing page shows your prepaid balance, add-funds panel, and transaction tabs", "theme": "light" },
-        { "src": "images/analytics/billing-dark.png", "alt": "Billing page", "caption": "The Billing page shows your prepaid balance, add-funds panel, and transaction tabs", "theme": "dark" }
+        { "src": "images/analytics/cost-management-call-logs-light.png", "alt": "Call Logs page with filters, summary tiles, and the call table", "caption": "Call Logs: filters on top, cost totals in the middle, one row per call below", "theme": "light" },
+        { "src": "images/analytics/cost-management-call-logs-dark.png", "alt": "Call Logs page with filters, summary tiles, and the call table", "caption": "Call Logs: filters on top, cost totals in the middle, one row per call below", "theme": "dark" }
       ]
     },
     {
-      "id": "how-cost-works",
-      "title": "Understand how a call is priced",
-      "content": "<p>Every call is priced per usage, not as a flat fee. iMash adds up the cost of each part (\"leg\") of the call &mdash; the phone minutes, the AI language model, the voice (text-to-speech), and the transcription (speech-to-text) &mdash; and stores the total on the call. Messages (SMS/WhatsApp) are priced per message.</p><ul><li><strong>Per-minute</strong> charges apply to voice calls and talk time.</li><li><strong>Per-message</strong> charges apply to each SMS or WhatsApp message.</li></ul><p>You can see the spend those charges produce as <strong>Total spent</strong> and <strong>Avg cost / call</strong> on the Overview page, and per campaign in Campaign Reports.</p>"
+      "id": "filter-the-period",
+      "title": "Filter to the period and calls you care about",
+      "content": "<p>All the money totals on this page recalculate instantly to match your filters — so the first move in any cost review is narrowing down what you're looking at.</p><ol><li>Click the date chip (it says <strong>This Week</strong> by default) and pick <strong>Today</strong>, <strong>This Week</strong>, <strong>This Month</strong>, or <strong>Custom</strong>. For a custom window, use the <strong>Start date → End date</strong> picker on the left.</li><li>Narrow further with the other filters:</li></ol><ul><li><strong>Call Type</strong> / <strong>Direction</strong> — e.g. only outbound phone calls, or only web calls.</li><li><strong>Ended reason</strong> — find calls that ended a specific way (customer hung up, silence timeout, etc.).</li><li><strong>AI Agent</strong> / <strong>Campaign</strong> — isolate the spend of one agent or one campaign.</li><li><strong>Search by phone number</strong>, <strong>Search by Call ID (UUID)</strong>, <strong>Contact/Lead Name or Email</strong>, <strong>Account name</strong>, <strong>Search by address</strong> — jump straight to specific calls.</li><li><strong>Owner (email)</strong> — show only the calls of one sub-account (perfect for per-user cost audits).</li><li><strong>Lifecycle Stage</strong> — filter by the CRM stage the call produced.</li></ul><blockquote>💡 The summary tiles and the table always agree: whatever combination of filters you set, the totals above reflect exactly the rows below — across <em>all</em> pages of results, not just the visible page.</blockquote>",
+      "images": [
+        { "src": "images/analytics/cost-management-filters-light.png", "alt": "Call Logs filter bar with date range, call type, direction, agent, campaign and search filters", "caption": "The filter bar — every total on the page recalculates to match your selection", "theme": "light" },
+        { "src": "images/analytics/cost-management-filters-dark.png", "alt": "Call Logs filter bar with date range, call type, direction, agent, campaign and search filters", "caption": "The filter bar — every total on the page recalculates to match your selection", "theme": "dark" }
+      ]
     },
     {
-      "id": "add-funds",
-      "title": "Top up your balance",
-      "content": "<ol><li>In the <strong>Add Funds</strong> panel, enter the amount you want to add.</li><li>Choose a payment method &mdash; a saved <strong>card</strong> or a <strong>bank account (ACH)</strong>.</li><li>Note the processing note: <strong>bank (ACH) payments have no fee</strong> and credit the full amount, while card payments carry a small processing fee, so the amount credited to your balance is slightly less than the amount charged.</li><li>Click <strong>Add Funds</strong> to complete the top-up. Your balance updates once the payment confirms.</li></ol>"
+      "id": "read-the-summary-tiles",
+      "title": "Read the summary tiles — your spend at a glance",
+      "content": "<p>The tile strip is your instant answer to \"what did this period cost me?\". Swipe or scroll horizontally to see them all:</p><ul><li><strong>Profit</strong> — your margin on your sub-accounts' calls, credited to your balance. Green when positive.</li><li><strong>Profit %</strong> — profit divided by total price, as a percentage.</li><li><strong>Total Price</strong> — the total amount billed for all matching calls (per-minute rates × duration, plus service costs).</li><li><strong>Total mCost</strong> — what those calls really cost <em>you</em>: the price minus the margin you keep on sub-account calls.</li><li><strong>Calls</strong> — how many calls match the filters.</li><li><strong>Duration</strong> — total talk time in minutes.</li><li><strong>Avg $/min</strong> — your own cost divided by total minutes: the single best number to watch when comparing agents, models, or campaigns.</li><li><strong>Inbound / Outbound</strong> — the call mix.</li></ul><blockquote>💡 Hover the small ⓘ next to any tile title for a plain-language explanation of exactly how that number is calculated.</blockquote>",
+      "images": [
+        { "src": "images/analytics/cost-management-summary-tiles-light.png", "alt": "Summary tiles showing Profit, Profit %, Total Price, Total mCost, Calls, Duration and Avg $/min", "caption": "The summary strip — totals for every call that matches your filters", "theme": "light" },
+        { "src": "images/analytics/cost-management-summary-tiles-dark.png", "alt": "Summary tiles showing Profit, Profit %, Total Price, Total mCost, Calls, Duration and Avg $/min", "caption": "The summary strip — totals for every call that matches your filters", "theme": "dark" }
+      ]
     },
     {
-      "id": "review-charges",
-      "title": "Review your charges",
-      "content": "<ul><li>Open the <strong>Ledger</strong> tab to see every transaction &mdash; top-ups and usage charges &mdash; with running balance.</li><li>Open the <strong>Phone Number Order</strong> tab to review your monthly phone-number subscriptions.</li><li>For a call-by-call breakdown of spend, use the <strong>Overview</strong> page filters or <strong>Campaign Reports</strong>.</li></ul>"
+      "id": "hover-cost-breakdown",
+      "title": "Hover any money cell for the full \"who paid what\" breakdown",
+      "content": "<p>This is the superpower of the Call Logs page: every dollar amount in the table explains itself.</p><ol><li>In the call table, hover over any value in the <strong>Cost/Price</strong> or <strong>Profit</strong> column.</li><li>A breakdown card appears showing, for that exact call:</li></ol><ul><li><strong>Who paid for this call</strong> — which account's balance was charged (a sub-account's own balance, or rolled up to your main account).</li><li><strong>How the money was split</strong> — a simple top-to-bottom waterfall: the call price, minus your margin (your earnings, added to your balance — this is the Profit column), equals your cost.</li><li><strong>Duration and per-minute rate</strong> — at the bottom of the card, so you can sanity-check any call in seconds.</li></ul><blockquote>💡 If you resell to sub-accounts, this card is your transparency tool: it shows the exact margin you earned on each of their calls. The numbers literally add up line by line.</blockquote>",
+      "images": [
+        { "src": "images/analytics/cost-management-cost-breakdown-light.png", "alt": "Hover breakdown card showing who paid for the call and how the money was split", "caption": "Hover a Cost or Profit cell — the card walks through the call's money, line by line", "theme": "light" },
+        { "src": "images/analytics/cost-management-cost-breakdown-dark.png", "alt": "Hover breakdown card showing who paid for the call and how the money was split", "caption": "Hover a Cost or Profit cell — the card walks through the call's money, line by line", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "call-cost-tab",
+      "title": "Open a call's Call Cost tab to see what was used",
+      "content": "<p>Want to know <em>why</em> a call cost what it did? Open its detail view and inspect the usage of every service that ran during the call.</p><ol><li>Click any row in the call table (or the green eye icon at the end of the row) to open the <strong>Call Details</strong> panel.</li><li>Click the <strong>Call Cost</strong> tab.</li><li>You'll see the <strong>Total Cost</strong> billed for the call, plus a usage card for each service leg:</li></ol><ul><li><strong>LLM</strong> — the language model used, with input and output token counts. Tokens are the biggest cost driver on long conversations.</li><li><strong>TTS</strong> (text-to-speech) — the voice provider and how many characters were spoken.</li><li><strong>STT</strong> (speech-to-text) — the transcription provider and how many seconds were transcribed.</li><li><strong>Webhooks</strong> — tokens consumed by post-call data extraction and analysis.</li><li><strong>Observer</strong> — tokens consumed by the observer agent, if you use one.</li><li><strong>Avatar</strong> — avatar rendering seconds, for video agents.</li></ul><p>Cards marked <strong>Not Used</strong> simply didn't run on that call — for example, a realtime voice agent has no separate TTS/STT legs.</p><blockquote>⚠️ The <strong>Credentials</strong> badge on each card tells you whose provider account was used: <strong>iMash</strong> means platform-billed usage; your own name means the call ran on API keys you brought yourself (billed to you directly by that provider, not from your iMash balance).</blockquote>",
+      "images": [
+        { "src": "images/analytics/cost-management-call-cost-tab-light.png", "alt": "Call Details panel open on the Call Cost tab with per-service usage cards", "caption": "The Call Cost tab: total billed cost plus LLM, TTS, STT, Webhooks, Observer and Avatar usage", "theme": "light" },
+        { "src": "images/analytics/cost-management-call-cost-tab-dark.png", "alt": "Call Details panel open on the Call Cost tab with per-service usage cards", "caption": "The Call Cost tab: total billed cost plus LLM, TTS, STT, Webhooks, Observer and Avatar usage", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "summary-by-owner",
+      "title": "Switch to Summary view for per-user spend",
+      "content": "<p>Running a team or reselling to sub-accounts? See who is spending what in one table.</p><ol><li>Above the call table on the right, next to <strong>View</strong>, click <strong>Summary</strong> (the default is <strong>Rows</strong>).</li><li>The table regroups into one row per owner — your main account and each sub-account — with their <strong>Calls</strong>, <strong>In/Out</strong> mix, <strong>Duration</strong>, <strong>Avg $/min</strong>, <strong>mCost/Price</strong>, <strong>Profit</strong>, and <strong>Profit %</strong> for the filtered period.</li><li>Hover any money value for the same who-paid breakdown, totaled across all of that owner's calls.</li><li>To take the numbers with you, click <strong>Export Summary</strong> and choose <strong>Summary as CSV</strong> or <strong>Summary as PDF</strong>. For the raw per-call data, use <strong>Export to CSV (Max 50,000)</strong> in the page header.</li></ol><blockquote>💡 Sort the Summary by <strong>Avg $/min</strong> to instantly spot which user (or which agent setup) is burning money fastest — that's where optimization pays off first.</blockquote>",
+      "images": [
+        { "src": "images/analytics/cost-management-summary-view-light.png", "alt": "Summary view grouping calls by owner with cost and profit totals per user", "caption": "Summary view: one row per owner with their calls, duration, cost and profit", "theme": "light" },
+        { "src": "images/analytics/cost-management-summary-view-dark.png", "alt": "Summary view grouping calls by owner with cost and profit totals per user", "caption": "Summary view: one row per owner with their calls, duration, cost and profit", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "what-drives-cost",
+      "title": "Know your cost levers — and pull them",
+      "content": "<p>Now that you can read the numbers, here's what actually moves them. A call's price is built from its parts: <strong>telephony minutes</strong> + <strong>LLM tokens</strong> + <strong>voice (TTS) characters</strong> + <strong>transcription (STT) seconds</strong>, plus any extras (webhooks, observer, avatar). Messages (SMS/WhatsApp/email) are priced per message, and phone numbers carry a monthly fee. Your biggest levers:</p><ul><li><strong>Model choice</strong> — premium LLMs and ultra-realistic voices cost more per call. In your agent's settings, try a lighter LLM or voice for high-volume, simple flows and keep the premium stack for high-value conversations.</li><li><strong>Call duration</strong> — every extra minute multiplies everything. Tighten your agent's prompt so it gets to the point, and use silence timeouts and end-call rules so calls don't idle.</li><li><strong>Extras</strong> — the observer agent, post-call webhook analysis, and avatars each add their own usage. Enable them where they earn their keep, not everywhere.</li><li><strong>Phone numbers</strong> — unused numbers still bill monthly. Audit them in the <strong>Phone Number Order</strong> tab (step 10) and release what you don't need.</li><li><strong>Messaging volume</strong> — campaign SMS/WhatsApp blasts are per-message; keep your lists clean so you're not paying to text dead numbers.</li></ul><blockquote>💡 Make it a habit: once a week, filter Call Logs to <strong>This Week</strong>, check <strong>Avg $/min</strong>, and hover the most expensive calls. Ten minutes of review keeps your unit economics sharp as you scale.</blockquote>"
+    },
+    {
+      "id": "open-billing",
+      "title": "Open the Billing page to track your balance",
+      "content": "<p>Usage is one side of the coin — the Billing page is the other: it shows the prepaid balance your calls draw from, and every transaction that touched it.</p><ol><li>In the top navigation, click <strong>Billing</strong> (at <code>/billing</code>).</li><li>The <strong>Billing &amp; Usage</strong> header shows your billing mode — <strong>Prepaid Balance</strong> (usage is deducted from funds you've added in advance).</li><li>The <strong>Prepaid Balance</strong> card on the right shows your current balance in real time.</li><li>The left card holds your <strong>payment methods</strong> — add a <strong>Card</strong> or <strong>US bank account</strong> with <strong>Add Payment Method</strong>.</li></ol><p>Below the two cards you'll find the <strong>Ledger</strong> and <strong>Phone Number Order</strong> tabs — your complete charge history (steps 9 and 10).</p><blockquote>💡 This guide is about <em>understanding</em> your spend. For the payment side — managing cards, plans and payment settings — see the <strong>Billing Settings</strong> guide in What's Next.</blockquote>",
+      "images": [
+        { "src": "images/analytics/cost-management-billing-page-light.png", "alt": "Billing page with payment methods, prepaid balance, add funds and the Ledger tab", "caption": "The Billing page: payment methods, live prepaid balance, Add Funds, and the transaction tabs", "theme": "light" },
+        { "src": "images/analytics/cost-management-billing-page-dark.png", "alt": "Billing page with payment methods, prepaid balance, add funds and the Ledger tab", "caption": "The Billing page: payment methods, live prepaid balance, Add Funds, and the transaction tabs", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "top-up-and-ledger",
+      "title": "Top up funds and audit every charge in the Ledger",
+      "content": "<p>Keep your balance healthy and verify every movement of money:</p><ol><li>To top up: enter an amount next to <strong>Add Funds</strong>, make sure a payment method is selected, and click <strong>Add Funds</strong>. Note the fee rule shown on screen: <strong>credit card payments include a 3% processing fee; bank account payments have no fee</strong> — so ACH tops up the full amount.</li><li>Click <strong>View Transactions</strong> for a quick history of your top-ups.</li><li>For the full picture, open the <strong>Ledger</strong> tab below and use its controls:</li></ol><ul><li><strong>View</strong> — <strong>Single user</strong> (one account's ledger) or <strong>All users combined</strong> (you plus all your sub-accounts).</li><li><strong>Combined view</strong> — <strong>Summary &amp; per-user</strong> (totals per account) or <strong>Activity feed</strong> (every transaction, newest first).</li><li><strong>Date range</strong> — limit the feed to a period.</li><li><strong>Show</strong> — filter by transaction type: <strong>All</strong>, <strong>Deposits</strong>, <strong>Transfers</strong>, <strong>Usage</strong>, or <strong>Commission</strong>.</li><li><strong>Service type</strong> — narrow usage rows to one service.</li></ul><p>Each row is tagged by type — <strong>Usage</strong> (a call or message drawing down the balance), <strong>Deposit</strong> (a top-up), <strong>Admin credit</strong>, <strong>Commission</strong> (margin credited from a sub-account's call), or <strong>Transfer</strong> — with the user, description, amount, and running balance. Click <strong>View ledger</strong> on any row to jump into that user's own ledger.</p><blockquote>💡 The Ledger and Call Logs tell the same story from two angles: a <strong>Usage</strong> row here corresponds to the call cost you saw in the logs, and a <strong>Commission</strong> row is the Profit column landing in your balance.</blockquote>",
+      "images": [
+        { "src": "images/analytics/cost-management-balance-add-funds-light.png", "alt": "Prepaid balance card with Add Funds amount field and View Transactions button", "caption": "Add Funds: bank (ACH) payments carry no fee; card payments include a small processing fee", "theme": "light" },
+        { "src": "images/analytics/cost-management-balance-add-funds-dark.png", "alt": "Prepaid balance card with Add Funds amount field and View Transactions button", "caption": "Add Funds: bank (ACH) payments carry no fee; card payments include a small processing fee", "theme": "dark" },
+        { "src": "images/analytics/cost-management-ledger-light.png", "alt": "Ledger tab with view toggles, type filters and the activity feed of transactions", "caption": "The Ledger: every deposit, usage charge, commission and transfer — filterable and per-user", "theme": "light" },
+        { "src": "images/analytics/cost-management-ledger-dark.png", "alt": "Ledger tab with view toggles, type filters and the activity feed of transactions", "caption": "The Ledger: every deposit, usage charge, commission and transfer — filterable and per-user", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "phone-number-order",
+      "title": "Review your monthly phone-number subscriptions",
+      "content": "<p>Phone numbers are the one recurring cost on the platform — each active number renews monthly. Audit them here:</p><ol><li>On the Billing page, click the <strong>Phone Number Order</strong> tab.</li><li>Use the <strong>Active</strong> / <strong>All</strong> toggle to show only currently billing numbers, or include released ones.</li><li>The table shows each number's <strong>Owner</strong>, <strong>Status</strong>, <strong>Next Billing</strong> date, <strong>Price</strong>, <strong>Purchased</strong> date, and <strong>Last Used</strong>.</li><li>In the <strong>Action</strong> column you can cancel a number's subscription (it stays active until the end of the paid period, and you can undo before then) or delete and release it immediately. Select multiple rows with the checkboxes to cancel in bulk.</li></ol><blockquote>⚠️ The <strong>Last Used</strong> column is your waste detector: a number that hasn't taken a call in months but renews every month is pure cost. Cancel what you don't use.</blockquote><p>That's the full loop — you can now trace any dollar from the moment a call ends, through its per-service usage, to the exact line in your ledger. Cost surprises are officially a thing of the past. 🎉</p>",
+      "images": [
+        { "src": "images/analytics/cost-management-phone-orders-light.png", "alt": "Phone Number Order tab listing number subscriptions with next billing, price and actions", "caption": "Phone Number Order: every number's monthly subscription, next billing date and cancel actions", "theme": "light" },
+        { "src": "images/analytics/cost-management-phone-orders-dark.png", "alt": "Phone Number Order tab listing number subscriptions with next billing, price and actions", "caption": "Phone Number Order: every number's monthly subscription, next billing date and cancel actions", "theme": "dark" }
+      ]
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Keep an eye on spend and performance together.",
+    "description": "You've mastered the money — now pair cost with performance to find your winning formula.",
     "cards": [
-      { "href": "/analytics/analytics-dashboard", "title": "Analytics Dashboard", "description": "Track total spend and cost per call over time." },
-      { "href": "/analytics/reports", "title": "Reports", "description": "See cost and profit per campaign." },
-      { "href": "/settings/billing", "title": "Billing Settings", "description": "Manage payment methods and account details." }
+      { "href": "/analytics/analytics-dashboard", "title": "Analytics Dashboard", "description": "Track call volume, outcomes and trends alongside your spend." },
+      { "href": "/analytics/reports", "title": "Reports", "description": "See cost and results per campaign to compute true ROI." },
+      { "href": "/phone/call-logs", "title": "Call Logs", "description": "Everything else the call log can do — transcripts, recordings, analysis." },
+      { "href": "/settings/billing", "title": "Billing Settings", "description": "Manage payment methods, plans and account billing details." }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Cost Management - Balance, Pricing & Top-ups | iMash Docs",
-  "metaDescription": "Manage your iMash prepaid balance: understand per-minute and per-message pricing, how call cost is calculated per leg, add funds, and review charges.",
-  "metaKeywords": "cost management, billing, prepaid balance, add funds, per minute pricing, per message pricing, call cost, usage, imash billing"
+  "metaTitle": "Cost Management - Understand & Optimize Your Usage Costs | iMash Documentation",
+  "metaDescription": "Understand every iMash charge: per-call cost breakdowns in Call Logs, what drives cost (LLM, TTS, STT, telephony), per-user spend, the billing ledger, and how to control your spend.",
+  "metaKeywords": "cost management, call cost, cost breakdown, usage costs, avg per minute, LLM tokens, TTS, STT, telephony cost, prepaid balance, ledger, phone number subscription, imash costs"
 }

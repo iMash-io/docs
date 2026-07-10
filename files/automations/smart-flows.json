@@ -1,53 +1,110 @@
 {
   "title": "Build an Automation (Smart Flow)",
-  "lede": "Use the visual Automation builder to connect a trigger to one or more actions - so tasks like creating a lead, sending a message, or starting a call happen automatically.",
-  "timeToComplete": "8 minutes",
+  "lede": "Connect a trigger to a chain of actions in iMash's visual Automation builder — so new leads get follow-up calls, records update themselves, and busywork simply stops being your job. No code required.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
       "id": "open-automation",
-      "title": "Open Automation",
-      "content": "<ol><li>In the left menu, go to <strong>Intelligence Center → Automation</strong>.</li><li>This opens the visual workflow dashboard where all of your automations live.</li><li>Click <strong>New Flow</strong> (or the <strong>+</strong> button) to start a fresh automation.</li></ol>",
+      "title": "Open the Automation Dashboard",
+      "content": "<p>Every automation you build lives in one visual workspace. Let's open it.</p><ol><li>In the left sidebar, under <strong>Intelligence Center</strong>, click <strong>Automation</strong>. (You can also click the <strong>Automation</strong> tab at the top of the app, then <strong>Automation Flows</strong>.)</li><li>The <strong>Flows</strong> dashboard opens. Here's what you'll see:<ul><li><strong>Flows / Runs / Issues</strong> tabs — your flow list, every execution, and any failures that need attention.</li><li><strong>Folders</strong> panel — organize flows into folders; <strong>All flows</strong> and <strong>Uncategorized</strong> are built in, and the <strong>+</strong> button adds new folders.</li><li><strong>Flow name</strong>, <strong>Status</strong> and <strong>Connection</strong> filters — quickly find a flow in a long list.</li><li>A left rail with <strong>Flows</strong>, <strong>Custom Tables</strong>, <strong>System Tables</strong>, <strong>MCP</strong>, <strong>Todos</strong> and <strong>Connections</strong> — this guide focuses on Flows; Connections is where linked app credentials live.</li></ul></li></ol>",
       "images": [
-        { "src": "images/automations/automation-overview-light.png", "alt": "Automation dashboard", "caption": "The Automation dashboard lists your workflows.", "theme": "light" },
-        { "src": "images/automations/automation-overview-dark.png", "alt": "Automation dashboard", "caption": "The Automation dashboard lists your workflows.", "theme": "dark" }
+        { "src": "images/automations/automation-overview-light.png", "alt": "Automation dashboard showing the Flows list", "caption": "The Automation dashboard — every flow, run and issue in one place.", "theme": "light" },
+        { "src": "images/automations/automation-overview-dark.png", "alt": "Automation dashboard showing the Flows list", "caption": "The Automation dashboard — every flow, run and issue in one place.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "create-flow",
+      "title": "Create a New Flow",
+      "content": "<ol><li>Click <strong>Create flow</strong> in the top-right corner.</li><li>Pick how you want to start:<ul><li><strong>From scratch</strong> — a blank canvas (what we'll use in this guide).</li><li><strong>Use a template</strong> — browse ready-made flows and customize them.</li><li><strong>From local file</strong> — import a flow that was previously exported as a JSON file (great for copying flows between accounts).</li></ul></li><li>Click <strong>From scratch</strong>. A new flow named <strong>Untitled</strong> opens in the builder.</li></ol>",
+      "images": [
+        { "src": "images/automations/smart-flows-create-menu-light.png", "alt": "Create flow menu with From scratch, Use a template, and From local file options", "caption": "Create flow → From scratch starts a blank automation.", "theme": "light" },
+        { "src": "images/automations/smart-flows-create-menu-dark.png", "alt": "Create flow menu with From scratch, Use a template, and From local file options", "caption": "Create flow → From scratch starts a blank automation.", "theme": "dark" }
       ]
     },
     {
       "id": "pick-trigger",
-      "title": "Choose a Trigger",
-      "content": "<ol><li>Every flow starts with one <strong>trigger</strong> - the event that kicks it off.</li><li>Click the first block and pick a trigger. A common one is <strong>Catch Webhook</strong>, which gives you a URL that external systems can send data to.</li><li>Other triggers include a <strong>schedule</strong> (run every X minutes) or an app event.</li></ol>",
+      "title": "Choose Your Trigger",
+      "content": "<p>Every flow starts with exactly one <strong>trigger</strong> — the event that kicks everything off. Until you pick one, the canvas shows <strong>1. Select Trigger</strong> with an \"Empty Trigger\" warning and a <strong>Complete 1 step</strong> badge.</p><ol><li>Click the <strong>1. Select Trigger</strong> block (the picker usually opens by itself on a new flow).</li><li>Use the <strong>Search</strong> box, or narrow the list with the <strong>All</strong> / <strong>AI</strong> / <strong>Core</strong> / <strong>Apps</strong> filter pills.</li><li>Popular trigger sources include <strong>Webhook</strong> (receive data from any external system), <strong>Schedule</strong> (run on a timer), plus apps like <strong>Gmail</strong>, <strong>Google Sheets</strong>, <strong>Slack</strong> and <strong>Human Input</strong>.</li><li>Click a piece on the left to preview its available triggers on the right, then click a trigger to select it.</li></ol>",
       "images": [
-        { "src": "images/automations/automation-builder-light.png", "alt": "Automation builder", "caption": "Pick a trigger, then chain actions below it.", "theme": "light" },
-        { "src": "images/automations/automation-builder-dark.png", "alt": "Automation builder", "caption": "Pick a trigger, then chain actions below it.", "theme": "dark" }
+        { "src": "images/automations/smart-flows-trigger-picker-light.png", "alt": "Trigger picker with search box, filter pills and popular pieces", "caption": "Click the Select Trigger block and browse the trigger catalog.", "theme": "light" },
+        { "src": "images/automations/smart-flows-trigger-picker-dark.png", "alt": "Trigger picker with search box, filter pills and popular pieces", "caption": "Click the Select Trigger block and browse the trigger catalog.", "theme": "dark" }
       ]
     },
     {
-      "id": "add-actions",
-      "title": "Add Actions",
-      "content": "<ol><li>Click the <strong>+</strong> below the trigger to add an <strong>action</strong> - the task that runs.</li><li>Use the <strong>System Tables</strong> actions to work with iMash data: create a lead or contact, look up rows, or start an outbound call.</li><li>Reference data from the trigger (for example a phone number that arrived in the webhook) inside each action's fields.</li><li>Add as many actions as you need - they run top to bottom.</li></ol>",
-      "images": []
+      "id": "schedule-triggers",
+      "title": "Example: Run on a Schedule",
+      "content": "<p>Want a flow that runs on autopilot with no external event at all? Pick the <strong>Schedule</strong> piece and choose how often it fires:</p><ul><li><strong>Every X Minutes</strong> — perfect for frequent checks (e.g. poll for new records).</li><li><strong>Every Hour</strong>, <strong>Every Day</strong>, <strong>Every Week</strong>, <strong>Every Month</strong> — classic recurring jobs like daily digests or weekly reports.</li><li><strong>Cron Expression</strong> — full control for advanced timing patterns.</li></ul><blockquote>💡 <strong>Tip:</strong> If another system should push data into iMash the moment something happens (a form fill, a new order, a lead from an ad platform), choose <strong>Webhook → Catch Webhook</strong> instead — that's what we'll use next.</blockquote>",
+      "images": [
+        { "src": "images/automations/smart-flows-trigger-schedule-light.png", "alt": "Schedule piece showing Every X Minutes, Every Hour, Every Day, Every Week, Every Month and Cron Expression triggers", "caption": "The Schedule piece offers timer triggers from minutes to a full cron expression.", "theme": "light" },
+        { "src": "images/automations/smart-flows-trigger-schedule-dark.png", "alt": "Schedule piece showing Every X Minutes, Every Hour, Every Day, Every Week, Every Month and Cron Expression triggers", "caption": "The Schedule piece offers timer triggers from minutes to a full cron expression.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "configure-webhook",
+      "title": "Configure the Trigger (Catch Webhook)",
+      "content": "<p>Once you select <strong>Webhook → Catch Webhook</strong>, the trigger's settings panel opens on the right — and your flow instantly gets its own private URL:</p><ul><li><strong>Live URL</strong> — copy this with the copy icon and paste it into the external system that should trigger the flow. Any HTTP request sent to it starts your <em>published</em> flow.</li><li><strong>Test URL</strong> — a separate URL for safely testing the current draft without touching the live version.</li><li><strong>Synchronous Requests</strong> — add <code>/sync</code> to the end of the URL if the caller expects a response back (pair it with a <strong>Return Response</strong> action later in the flow).</li><li><strong>Generate Sample Data → Test Trigger</strong> — send a real request to the Test URL, then click this so the builder captures the incoming data. That sample is what lets later steps map fields like a phone number or name.</li></ul><blockquote>⚠️ <strong>Don't skip Test Trigger.</strong> Without sample data, later steps can't show you the incoming fields to map, and testing the whole flow is blocked.</blockquote>",
+      "images": [
+        { "src": "images/automations/smart-flows-webhook-trigger-light.png", "alt": "Builder canvas with the Catch Webhook trigger and its settings panel showing the Live URL", "caption": "Catch Webhook gives your flow a unique URL any system can call.", "theme": "light" },
+        { "src": "images/automations/smart-flows-webhook-trigger-dark.png", "alt": "Builder canvas with the Catch Webhook trigger and its settings panel showing the Live URL", "caption": "Catch Webhook gives your flow a unique URL any system can call.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "add-action",
+      "title": "Add an Action",
+      "content": "<p>Actions are the steps that actually do the work. They run top to bottom, and you can chain as many as you need.</p><ol><li>Hover over the line below your trigger and click the <strong>+</strong> button.</li><li>The action picker opens — the same search box and <strong>All / AI / Core / Apps</strong> filters as before. Popular picks include <strong>HTTP</strong> (call any API), <strong>OpenAI</strong>, <strong>Gmail</strong>, <strong>Google Sheets</strong> and <strong>Human Input</strong>.</li><li>Under <strong>Core</strong> you'll also find flow-control pieces like branches and loops for smarter logic.</li><li>Click a piece, then click the specific action you want — it's added to the canvas as step 2.</li></ol>",
+      "images": [
+        { "src": "images/automations/smart-flows-action-picker-light.png", "alt": "Action picker opened from the plus button below the trigger", "caption": "Click + below the trigger to add your first action.", "theme": "light" },
+        { "src": "images/automations/smart-flows-action-picker-dark.png", "alt": "Action picker opened from the plus button below the trigger", "caption": "Click + below the trigger to add your first action.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "imash-actions",
+      "title": "Use the iMash Actions (CRM Data + AI Calls)",
+      "content": "<p>Here's where automations get superpowers: the built-in <strong>iMash</strong> piece connects flows directly to your CRM and your AI call center.</p><ol><li>In the action picker's search box, type <strong>imash</strong>.</li><li>The <strong>iMash</strong> piece appears with five actions:<ul><li><strong>Find System Table Rows</strong> — look up existing records (leads, contacts, jobs and more).</li><li><strong>Create System Table Record(s)</strong> — add new records, e.g. create a lead from webhook data.</li><li><strong>Update System Table Row</strong> — change an existing record's fields.</li><li><strong>Delete System Table Row(s)</strong> — remove records.</li><li><strong>Create Outbound Call</strong> — have one of your AI agents place a phone call. New lead in → AI follow-up call out, in seconds.</li></ul></li><li>After adding an action, fill in its fields in the right-hand panel. Click into any field to open the <strong>Data Selector</strong> and insert values from earlier steps — for example the phone number that arrived in your webhook.</li></ol><blockquote>💡 <strong>The killer combo:</strong> Catch Webhook → Create System Table Record(s) (save the lead) → Create Outbound Call (AI calls them back immediately). Speed-to-lead, fully automated.</blockquote>",
+      "images": [
+        { "src": "images/automations/smart-flows-imash-actions-light.png", "alt": "Action picker searching imash, showing System Table actions and Create Outbound Call", "caption": "Search \"imash\" to work with CRM records or launch AI calls from a flow.", "theme": "light" },
+        { "src": "images/automations/smart-flows-imash-actions-dark.png", "alt": "Action picker searching imash, showing System Table actions and Create Outbound Call", "caption": "Search \"imash\" to work with CRM records or launch AI calls from a flow.", "theme": "dark" }
+      ]
     },
     {
       "id": "test-publish",
-      "title": "Test and Publish",
-      "content": "<ol><li>Use <strong>Test</strong> to run the flow with sample data and confirm each step behaves.</li><li>Fix any step that shows an error before going live.</li><li>Toggle the flow <strong>On</strong> (Publish) so it runs automatically from now on.</li></ol>",
+      "title": "Test, Then Publish",
+      "content": "<p>Time to bring it to life.</p><ol><li>Click <strong>Test Flow</strong> at the top of the canvas. The builder runs every step with your sample trigger data and shows each step's input and output — fix any step that reports an error.</li><li>You can also test a single step from its settings panel before running the whole flow.</li><li>When everything passes, click <strong>Publish</strong> in the top-right corner. Your flow is now live: it runs automatically every time the trigger fires.</li><li>Need to pause it later? Use the flow's status toggle in the Flows list to turn it off without deleting anything.</li></ol><blockquote>⚠️ <strong>Publish is required.</strong> A draft flow never runs on its own — external systems calling the Live URL do nothing until the flow is published.</blockquote>",
       "images": []
+    },
+    {
+      "id": "manage-flow",
+      "title": "Rename, Duplicate, Export and More",
+      "content": "<p>Give your flow a name you'll recognize in six months — \"Untitled\" won't cut it.</p><ol><li>In the builder, click the <strong>˅</strong> arrow next to the flow name at the top-left.</li><li>The flow menu offers:<ul><li><strong>Rename</strong> — type the new name and press <strong>Enter</strong>.</li><li><strong>Move To</strong> — file the flow into a folder.</li><li><strong>Duplicate</strong> — copy a working flow as the starting point for a new one.</li><li><strong>Import</strong> / <strong>Export</strong> — bring a flow in from a JSON file, or save this one out (backups, sharing, moving between accounts).</li><li><strong>Delete</strong> — remove the flow permanently.</li></ul></li><li>Also in the top bar: <strong>Versions</strong> shows the flow's version history, and <strong>Runs</strong> jumps to this flow's execution log.</li></ol>",
+      "images": [
+        { "src": "images/automations/smart-flows-flow-menu-light.png", "alt": "Flow name menu with Rename, Move To, Duplicate, Import, Export and Delete", "caption": "The flow menu — rename, organize, duplicate, import/export or delete.", "theme": "light" },
+        { "src": "images/automations/smart-flows-flow-menu-dark.png", "alt": "Flow name menu with Rename, Move To, Duplicate, Import, Export and Delete", "caption": "The flow menu — rename, organize, duplicate, import/export or delete.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "monitor-runs",
+      "title": "Monitor Runs and Issues",
+      "content": "<p>Once flows are live, the dashboard tells you exactly how they're performing.</p><ol><li>Back on the Automation dashboard, click the <strong>Runs</strong> tab to see every execution with its <strong>Flow</strong>, <strong>Status</strong>, <strong>Start Time</strong> and <strong>Duration</strong>.</li><li>Filter by <strong>Flow name</strong>, <strong>Status</strong>, or <strong>Pick a date range</strong> to zero in on what you're looking for.</li><li>Click any run to replay it step by step and inspect each step's exact input and output — the fastest way to debug.</li><li>Select failed runs and click <strong>Retry</strong> to run them again.</li><li>The <strong>Issues</strong> tab collects flows that are failing repeatedly, so problems never slip by unnoticed.</li></ol><p>That's it — you've built, tested and published your first Smart Flow. Every one you add from here compounds the time you save. 🚀</p>",
+      "images": [
+        { "src": "images/automations/smart-flows-runs-light.png", "alt": "Runs tab with Flow name, Status and date range filters and the Retry button", "caption": "The Runs tab logs every execution — filter, inspect and retry from here.", "theme": "light" },
+        { "src": "images/automations/smart-flows-runs-dark.png", "alt": "Runs tab with Flow name, Status and date range filters and the Retry button", "caption": "The Runs tab logs every execution — filter, inspect and retry from here.", "theme": "dark" }
+      ]
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Extend your automations with data and tools:",
+    "description": "Your first flow is live — now wire it into everything else iMash can do:",
     "cards": [
-      { "href": "/automations/webhooks", "title": "Receive Data with Webhooks", "description": "Use the Catch Webhook trigger to accept data from other systems." },
-      { "href": "/automations/integrations", "title": "Connect Integrations", "description": "Link external apps and credentials into your flows." },
-      { "href": "/automations/custom-tools", "title": "Build Custom Tools", "description": "Create HTTP tools your AI agent can call mid-call." }
+      { "href": "/automations/webhooks", "title": "Receive Data with Webhooks", "description": "Master the Catch Webhook trigger and connect any external system to your flows." },
+      { "href": "/automations/integrations", "title": "Connect Integrations", "description": "Link Gmail, Slack, Google Sheets and hundreds of other apps into your automations." },
+      { "href": "/automations/custom-tools", "title": "Build Custom Tools", "description": "Create HTTP tools your AI agent can call mid-conversation." }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Build an Automation (Smart Flow) | iMash Docs",
-  "metaDescription": "Create automated workflows in iMash: pick a trigger like Catch Webhook, add System Tables actions, then test and publish your flow.",
-  "metaKeywords": "automation, smart flows, workflow builder, triggers, actions, catch webhook, system tables, imash"
+  "metaTitle": "Build an Automation (Smart Flow) | iMash Documentation",
+  "metaDescription": "Step-by-step guide to iMash Smart Flows: create a flow, pick a webhook or schedule trigger, add iMash actions like Create Outbound Call, then test, publish and monitor runs.",
+  "metaKeywords": "automation, smart flows, workflow builder, triggers, actions, catch webhook, schedule, system tables, outbound call, runs, imash"
 }

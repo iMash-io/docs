@@ -41,10 +41,20 @@ THEMES = ("light", "dark")   # docs support both; capture both by default
 
 # JS snippet that blurs any email-looking text before a screenshot, so audit
 # emails never leak into the docs. Pass to page.evaluate().
+# It installs a MutationObserver so the blur SURVIVES re-renders (the header's
+# "Owner — <email>" badge re-renders on live-count polling and used to wipe a
+# one-shot blur between evaluate() and screenshot()).
 REDACT_EMAILS_JS = r"""() => {
   const rx = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}/i;
-  const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-  const hits = [];
-  while (w.nextNode()) { if (rx.test(w.currentNode.nodeValue)) hits.push(w.currentNode); }
-  hits.forEach(n => { if (n.parentElement) n.parentElement.style.filter = 'blur(6px)'; });
+  const blur = () => {
+    const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    const hits = [];
+    while (w.nextNode()) { if (rx.test(w.currentNode.nodeValue)) hits.push(w.currentNode); }
+    hits.forEach(n => { if (n.parentElement) n.parentElement.style.filter = 'blur(6px)'; });
+  };
+  blur();
+  if (!window.__redactObserver) {
+    window.__redactObserver = new MutationObserver(() => blur());
+    window.__redactObserver.observe(document.body, { childList: true, subtree: true, characterData: true });
+  }
 }"""

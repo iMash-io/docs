@@ -1,0 +1,122 @@
+{
+  "title": "Audit Log & Notifications",
+  "lede": "Every change in your iMash account — who made it, when, and exactly what changed — is recorded automatically in the Audit Log. Learn to read it, filter it, and turn the events you care about into instant notifications.",
+  "timeToComplete": "8 minutes",
+  "steps": [
+    {
+      "id": "open-audit-log",
+      "title": "Open the Audit Log",
+      "content": "<p>Think of the Audit Log as your account's flight recorder: settings edits, deleted records, billing changes, impersonated actions — it's all captured, automatically, with no setup required.</p><ol><li>In the top navigation, click <strong>User Management</strong>.</li><li>In the left sidebar, click <strong>Audit</strong>.</li></ol><p>The subtitle under the page title tells you what you're looking at:</p><ul><li><strong>Main account owners</strong> see <em>\"Every change across your account and sub-accounts\"</em> — the full picture.</li><li><strong>Sub-account users</strong> see <em>\"Your account activity\"</em> — their own actions only, unless you grant them wider access (Step 6).</li></ul>",
+      "images": [
+        { "src": "images/settings/audit-log-overview-light.png", "alt": "Audit Log page showing the activity table, filters, and header buttons", "caption": "The Audit Log — every change in your account, newest first", "theme": "light" },
+        { "src": "images/settings/audit-log-overview-dark.png", "alt": "Audit Log page showing the activity table, filters, and header buttons", "caption": "The Audit Log — every change in your account, newest first", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "read-the-activity-feed",
+      "title": "Read the activity feed",
+      "content": "<p>Each row is one recorded event, newest first. The columns:</p><ul><li><strong>When</strong> — relative time (\"9 minutes ago\"). Hover to see the exact date and time.</li><li><strong>Who</strong> — the person who made the change, with a colored tag: <strong>Main</strong> (the main account), <strong>Sub (Own)</strong> (a sub-account in your tenant), or <strong>Sub</strong> (a sub-account in a referred tenant, for affiliates). Rows labeled <strong>System · automated</strong> were performed by a background process — account setup, billing, or dialer activity — with no signed-in user.</li><li><strong>What happened</strong> — a plain-language summary (\"Deleted phone number…\", \"Updated lead…\") plus the area it belongs to (CRM, AI Agents, Billing & Settings, Telephony, Dialers, Roles & Access, Security).</li><li><strong>Importance</strong> — <strong>Routine</strong>, <strong>Notable</strong>, <strong>Warning</strong>, or <strong>Sensitive</strong>. Sensitive events are things like role changes, credential rotations, and security-relevant edits.</li></ul><blockquote>💡 If a change was made while an admin was <strong>impersonating</strong> another user, the Who column shows an orange <strong>via …</strong> tag naming the real person behind it. Impersonation can never hide — it's always recorded.</blockquote>",
+      "images": [
+        { "src": "images/settings/audit-log-rows-light.png", "alt": "Audit log rows showing When, Who, What happened, and Importance columns", "caption": "Each row: when, who, what happened, and how important it is", "theme": "light" },
+        { "src": "images/settings/audit-log-rows-dark.png", "alt": "Audit log rows showing When, Who, What happened, and Importance columns", "caption": "Each row: when, who, what happened, and how important it is", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "filter-the-log",
+      "title": "Filter to find exactly what you need",
+      "content": "<p>The filter bar above the table narrows thousands of events down to the handful you're hunting for:</p><ul><li><strong>Table (e.g. assistants)</strong> — type a record type (like <em>assistants</em> or <em>crm_leads</em>) and press <strong>Enter</strong>.</li><li><strong>Category</strong> — one area only: <em>ai_config, telephony, rbac, security, billing, campaigns, crm</em>.</li><li><strong>Severity</strong> — only events of a given importance (<em>critical, warn, notice, info</em>).</li><li><strong>Action</strong> — <em>INSERT</em> (created), <em>UPDATE</em> (edited), <em>DELETE</em> (removed), or <em>ROLLUP</em> (aggregated activity like calls and messages).</li><li><strong>Sub-account</strong> — main accounts can isolate one sub-account's activity.</li><li><strong>Start date → End date</strong> — a precise date-and-time window.</li><li><strong>Impersonated</strong> toggle — show only actions performed while impersonating.</li><li><strong>Clear</strong> — reset everything at once.</li></ul>",
+      "images": [
+        { "src": "images/settings/audit-log-filters-light.png", "alt": "Audit log filter bar with table, category, severity, action, sub-account, date range, and impersonated filters", "caption": "Combine filters to zero in on any event", "theme": "light" },
+        { "src": "images/settings/audit-log-filters-dark.png", "alt": "Audit log filter bar with table, category, severity, action, sub-account, date range, and impersonated filters", "caption": "Combine filters to zero in on any event", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "open-event-details",
+      "title": "Open an event to see the exact change",
+      "content": "<p>This is where the Audit Log earns its keep — field-level before-and-after detail.</p><ol><li>Click any row in the table. A detail panel slides in from the right.</li><li>The colored banner at the top restates the event in plain language.</li><li>Below it, the summary grid shows <strong>When</strong>, <strong>Who</strong>, <strong>Area</strong>, <strong>Importance</strong>, and <strong>Affects</strong> (the exact record touched, by name).</li><li>For edits, the <strong>What changed</strong> section lists each modified field with the old value in red on the left and the new value in green on the right.</li></ol><ul><li>Passwords, API keys, and tokens are never shown — a changed secret appears as a 🔒 <strong>secret rotated</strong> badge with no values.</li><li><strong>Technical details</strong> at the bottom expands the raw record IDs, useful when working with iMash support.</li></ul>",
+      "images": [
+        { "src": "images/settings/audit-log-detail-light.png", "alt": "Event detail drawer showing summary info and a before/after field diff", "caption": "Field-level diff: old value in red, new value in green", "theme": "light" },
+        { "src": "images/settings/audit-log-detail-dark.png", "alt": "Event detail drawer showing summary info and a before/after field diff", "caption": "Field-level diff: old value in red, new value in green", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "show-metrics",
+      "title": "See the big picture with metrics",
+      "content": "<p>Want a health check at a glance instead of row-by-row reading?</p><ol><li>Click <strong>Show metrics</strong> in the top-right of the page.</li><li>Two rows of stat cards appear, always respecting your current filters:</li></ol><ul><li><strong>Events</strong> — total events in view.</li><li><strong>Critical</strong> / <strong>Warnings</strong> — how many sensitive or warning-level events occurred.</li><li><strong>Impersonated actions</strong> — changes made while impersonating.</li><li><strong>Created / Updated / Deleted</strong> — new records, edits, and removals.</li><li><strong>Activity rollups</strong> — aggregated call, message, and import activity.</li></ul><p>Click <strong>Hide metrics</strong> to collapse them again, and <strong>Refresh</strong> any time to pull the latest events.</p>",
+      "images": [
+        { "src": "images/settings/audit-log-metrics-light.png", "alt": "Metric cards showing totals for events, critical, warnings, impersonated actions, created, updated, deleted, and rollups", "caption": "Metrics summarize whatever your current filters select", "theme": "light" },
+        { "src": "images/settings/audit-log-metrics-dark.png", "alt": "Metric cards showing totals for events, critical, warnings, impersonated actions, created, updated, deleted, and rollups", "caption": "Metrics summarize whatever your current filters select", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "sub-account-access",
+      "title": "Control what sub-accounts can see (main accounts)",
+      "content": "<p>By default every sub-account sees only its own activity. As the main account you can widen that per person:</p><ol><li>Click <strong>Sub-account access</strong> in the top-right of the Audit Log.</li><li>For each sub-account, pick one of three modes:<ul><li><strong>Own only</strong> — the default; they see just their own actions.</li><li><strong>View all</strong> — they see the whole tenant's audit trail (great for a trusted manager).</li><li><strong>By group</strong> — they see activity from the permission groups you select below their row.</li></ul></li><li>Click <strong>Save</strong>.</li></ol><blockquote>⚠️ Access changes apply immediately. You, the main account, always see everything — these settings only widen (never narrow) a sub-account's view.</blockquote>",
+      "images": [
+        { "src": "images/settings/audit-log-access-light.png", "alt": "Sub-account audit access modal with Own only, View all, and By group options per sub-account", "caption": "Grant each sub-account exactly the visibility it needs", "theme": "light" },
+        { "src": "images/settings/audit-log-access-dark.png", "alt": "Sub-account audit access modal with Own only, View all, and By group options per sub-account", "caption": "Grant each sub-account exactly the visibility it needs", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "notification-bell",
+      "title": "Meet the notification bell",
+      "content": "<p>Why keep checking the log when it can come to you? The <strong>bell icon</strong> in the top header is your personal alert feed, powered by the audit log and the rules you'll build in the next steps.</p><ol><li>Click the <strong>bell</strong> in the header. A red badge on it counts unread notifications.</li><li>Each entry shows the event title, a summary, and how long ago it happened. Unread items are highlighted with a colored severity dot.</li><li>Click an entry to toggle it read/unread. Use the small <strong>View</strong> chip to jump to the related page, or <strong>Details</strong> to open the full audit event in place.</li><li><strong>Mark all read</strong> clears the badge; <strong>Open audit log</strong> at the bottom takes you back to the full log.</li></ol><p>The feed starts empty — entries appear as soon as activity matches one of your notification rules.</p>",
+      "images": [
+        { "src": "images/settings/audit-log-bell-light.png", "alt": "Notification bell popover with the feed, settings gear, and Open audit log link", "caption": "The bell feed — matching events land here the moment they happen", "theme": "light" },
+        { "src": "images/settings/audit-log-bell-dark.png", "alt": "Notification bell popover with the feed, settings gear, and Open audit log link", "caption": "The bell feed — matching events land here the moment they happen", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "enable-browser-push",
+      "title": "Enable browser push notifications",
+      "content": "<p>In-app alerts are great — but push notifications reach you even when the iMash tab is in the background.</p><ol><li>Click the <strong>bell</strong>, then the <strong>gear</strong> icon to open <strong>Notification settings</strong>.</li><li>In the <strong>Browser notifications</strong> box at the top, click <strong>Enable on this device</strong> and accept the browser's permission prompt.</li><li>Once enabled you'll see a green <strong>Enabled on this device</strong> tag, plus <strong>Send test</strong> to fire a test notification and <strong>Disable</strong> to turn it off.</li></ol><blockquote>💡 If the box says notifications are <strong>blocked</strong>, you previously denied the browser permission — re-allow notifications for this site in your browser's site settings, then reload the page.</blockquote><p>Push is per device: enable it on each computer where you want alerts.</p>",
+      "images": [
+        { "src": "images/settings/audit-log-notification-settings-light.png", "alt": "Notification settings drawer with the browser notifications box and quick presets list", "caption": "Notification settings: push enrollment on top, quick presets below", "theme": "light" },
+        { "src": "images/settings/audit-log-notification-settings-dark.png", "alt": "Notification settings drawer with the browser notifications box and quick presets list", "caption": "Notification settings: push enrollment on top, quick presets below", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "quick-presets",
+      "title": "Subscribe with one-click quick presets",
+      "content": "<p>Quick presets are ready-made subscriptions for the things teams most want to know about. Flip a switch on and you're subscribed — no configuration needed:</p><ul><li><strong>Security & access changes</strong> — roles, permission groups, view profiles, API keys.</li><li><strong>Anything done while impersonating</strong> — any change made by an admin acting as another user.</li><li><strong>Credential / API-key changes</strong> — keys, WhatsApp & email connections, secrets.</li><li><strong>Billing & payment changes</strong> — pricing, payment accounts, subscriptions.</li><li><strong>AI agent changes</strong> — assistants, agent flows, models and tools.</li><li><strong>SIP / phone-number changes</strong> — providers, numbers, and number orders.</li><li><strong>Anything deleted</strong> — every record deletion, anywhere.</li><li><strong>Missed incoming calls</strong> — unanswered inbound calls, perfect for follow-up.</li><li><strong>Low balance</strong> — an account drops under $5 or goes negative.</li></ul><p>Turning a preset off unsubscribes you instantly.</p>",
+      "images": [
+        { "src": "images/settings/audit-log-presets-light.png", "alt": "Quick presets list with toggle switches, Security and access changes enabled", "caption": "Flip a preset on to subscribe — off to unsubscribe", "theme": "light" },
+        { "src": "images/settings/audit-log-presets-dark.png", "alt": "Quick presets list with toggle switches, Security and access changes enabled", "caption": "Flip a preset on to subscribe — off to unsubscribe", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "build-custom-rule",
+      "title": "Build a custom notification rule",
+      "content": "<p>Need something more specific? The <strong>Build a custom rule</strong> section lets you compose your own trigger from any mix of conditions:</p><ol><li><strong>Area</strong> — limit to one area (CRM, AI Agents, Billing & Settings, Telephony, Dialers, Roles & Access, Security).</li><li><strong>Specific things (optional)</strong> — pick exact record types (searchable, grouped by area).</li><li><strong>What happens</strong> — Created, Updated, Deleted, or Activity (calls, messages…).</li><li><strong>Minimum importance</strong> — only notify at or above a severity (Routine → Sensitive).</li><li><strong>Threshold (for activity rollups)</strong> — for aggregated activity, only notify when the count reaches this number.</li><li><strong>Only while impersonating</strong> — restrict to impersonated actions.</li></ol><p>As you pick conditions, the live preview shows <em>\"Matches N events in the last 7 days\"</em> — instant feedback on how chatty the rule will be. When it looks right, click <strong>Create rule</strong>.</p><blockquote>💡 A rule matching hundreds of events per week will flood your bell. Aim for previews in the tens, or add a severity or table condition to narrow it.</blockquote>",
+      "images": [
+        { "src": "images/settings/audit-log-rule-builder-light.png", "alt": "Custom rule builder with Area set to CRM and a live preview showing matched events", "caption": "The live preview tells you how often the rule would have fired", "theme": "light" },
+        { "src": "images/settings/audit-log-rule-builder-dark.png", "alt": "Custom rule builder with Area set to CRM and a live preview showing matched events", "caption": "The live preview tells you how often the rule would have fired", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "manage-rules",
+      "title": "Manage your rules",
+      "content": "<p>Everything you create lives under <strong>Your custom rules</strong> at the bottom of the settings drawer:</p><ul><li>Each rule shows a plain-language description of its conditions (e.g. <em>CRM · Updated</em>).</li><li>Use the <strong>toggle</strong> to pause a rule without losing it — handy during a noisy migration or bulk import.</li><li>Click the <strong>trash</strong> icon to delete a rule permanently.</li></ul><p>That's the full loop: iMash records everything, you decide what deserves your attention — and the moment it happens, you know. Total accountability, zero effort.</p>",
+      "images": [
+        { "src": "images/settings/audit-log-custom-rules-light.png", "alt": "Your custom rules list with an enabled CRM Updated rule, toggle, and delete button", "caption": "Pause a rule with the toggle or remove it with the trash icon", "theme": "light" },
+        { "src": "images/settings/audit-log-custom-rules-dark.png", "alt": "Your custom rules list with an enabled CRM Updated rule, toggle, and delete button", "caption": "Pause a rule with the toggle or remove it with the trash icon", "theme": "dark" }
+      ]
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "You now have a complete paper trail and real-time alerts. Round out your account governance with these guides:",
+    "cards": [
+      { "href": "/settings/security", "title": "Security", "description": "Strong passwords, session control, and least-privilege access for your team." },
+      { "href": "/settings/team-management", "title": "Team Management", "description": "Add team members, assign roles, and scope what each person can see and do." },
+      { "href": "/settings/system-health", "title": "System Health", "description": "Monitor the live status of your account's services and integrations." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>Questions about an audit event you can't explain, or about notification rules? Email <a href=\"mailto:support@imash.io\">support@imash.io</a> — include the event's Technical details (bottom of the detail panel) and we'll trace it with you.</p>"
+  },
+  "metaTitle": "Audit Log & Notifications | iMash Documentation",
+  "metaDescription": "Read the iMash audit log — who changed what and when, with field-level diffs — filter events, control sub-account visibility, and build notification rules with browser push alerts.",
+  "metaKeywords": "audit log, activity log, change history, notifications, notification rules, browser push, impersonation tracking, security, accountability, iMash"
+}

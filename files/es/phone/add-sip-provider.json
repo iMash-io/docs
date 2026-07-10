@@ -1,56 +1,97 @@
 {
-  "title": "Agregar un proveedor SIP",
-  "lede": "Conecta tu propio troncal SIP o portadora para que iMash pueda enviar y recibir llamadas telefónicas a través de él. La mayoría de los usuarios pueden omitir esto: los números de iMash ya incluyen la capacidad de llamadas. Usa esto solo si traes tu propia portadora.",
+  "title": "Conecte un Proveedor SIP",
+  "lede": "Traiga su propio operador a iMash. Conecte cualquier troncal SIP — Telnyx, Twilio, un operador mayorista o su PBX local — y sus agentes de IA podrán contestar y realizar llamadas con los números que usted ya posee.",
   "timeToComplete": "10 minutos",
   "steps": [
     {
       "id": "open-sip-providers",
-      "title": "Abrir SIP Providers",
-      "content": "<ol><li>En el menú de la izquierda, ve a <strong>Call Center → SIP Providers</strong> (Centro de llamadas → Proveedores SIP).</li><li>Haz clic en <strong>Add Provider</strong> (Agregar proveedor) o en el botón <strong>+</strong> para abrir el panel <strong>Create New SIP Provider</strong> (Crear nuevo proveedor SIP).</li></ol><p>Un proveedor SIP es tu portadora telefónica externa (por ejemplo, tu propio troncal de Telnyx, Twilio o una PBX local). Conectar uno permite que iMash enrute las llamadas a través de él en lugar de comprar números mediante iMash.</p>",
+      "title": "Abra la página de proveedores SIP",
+      "content": "<p>La mayoría de los usuarios nunca necesita esta página — los números que compra dentro de iMash ya incluyen la telefonía. Conecte un proveedor SIP solo cuando quiera <strong>traer su propio operador</strong> y enrutar las llamadas por una troncal que usted controla.</p><ol><li>En la barra lateral izquierda, desplácese hasta la sección <strong>Call Center</strong> (Centro de llamadas) y haga clic en <strong>SIP Providers</strong> (Proveedores SIP). (También puede llegar desde la navegación superior: <strong>Contact Center → SIP Providers</strong>.)</li></ol><p>La página muestra cada troncal personalizada que tiene conectada, con estas columnas:</p><ul><li><strong>Label</strong> (Etiqueta) — el nombre que le dio a la troncal. Haga clic en él para abrir y editar el proveedor.</li><li><strong>Title</strong> (Título) / <strong>Type</strong> (Tipo) — los proveedores SIP personalizados aparecen como <strong>Custom</strong>.</li><li><strong>Status</strong> (Estado) — <strong>Active</strong> (Activo) significa que la troncal está operativa y lista para usarse.</li><li><strong>Owner</strong> (Propietario) — a qué miembro del equipo pertenece la troncal. Use el desplegable <strong>Filter by owner</strong> (Filtrar por propietario) sobre la tabla para acotar la lista.</li><li><strong>Actions</strong> (Acciones) — el icono del ojo abre el proveedor; el icono de la papelera lo elimina.</li></ul><blockquote>💡 El botón <strong>API Info</strong> en la esquina superior derecha muestra cómo gestionar proveedores SIP mediante la API — muy útil si más adelante quiere automatizar la configuración de troncales.</blockquote>",
       "images": [
-        { "src": "images/phone/sip-providers-light.png", "alt": "Página de proveedores SIP", "caption": "En Call Center → SIP Providers es donde conectas una portadora externa.", "theme": "light" },
-        { "src": "images/phone/sip-providers-dark.png", "alt": "Página de proveedores SIP", "caption": "En Call Center → SIP Providers es donde conectas una portadora externa.", "theme": "dark" }
+        { "src": "images/phone/sip-providers-light.png", "alt": "Página de proveedores SIP con una troncal conectada", "caption": "Call Center → SIP Providers lista cada troncal de operador que tiene conectada.", "theme": "light" },
+        { "src": "images/phone/sip-providers-dark.png", "alt": "Página de proveedores SIP con una troncal conectada", "caption": "Call Center → SIP Providers lista cada troncal de operador que tiene conectada.", "theme": "dark" }
       ]
     },
     {
-      "id": "whitelist-and-name",
-      "title": "Nómbralo y agrega iMash a la lista blanca",
-      "content": "<ol><li>Ingresa un <strong>Provider Name</strong> (Nombre del proveedor) (por ejemplo, \"Mi troncal de Telnyx\") para reconocerlo más adelante.</li><li>Del lado de tu portadora, <strong>agrega a la lista blanca la IP de señalización SIP de iMash</strong> que se muestra en el panel — <code>34.150.248.33:5060</code> — para que tu portadora acepte llamadas hacia y desde iMash.</li></ol>",
+      "id": "open-create-drawer",
+      "title": "Inicie un nuevo proveedor",
+      "content": "<ol><li>Haga clic en <strong>Add SIP Provider</strong> (Agregar proveedor SIP) en la parte superior derecha de la página.</li></ol><p>Se despliega el panel <strong>Create SIP Provider</strong> (Crear proveedor SIP). Todo lo necesario está en este único formulario:</p><ul><li><strong>Provider Name</strong> (Nombre del proveedor) — una etiqueta para reconocer la troncal más adelante.</li><li><strong>Have your carriers whitelist our SIP signaling IPs</strong> (Haga que su operador autorice nuestras IP de señalización SIP) — la dirección de iMash que su operador debe permitir.</li><li><strong>Authentication</strong> (Autenticación) — usuario y contraseña opcionales, si su operador los exige.</li><li><strong>SIP gateways</strong> (Puertas de enlace SIP) — dónde vive su operador en la red (dirección, puerto, sentido del tráfico).</li></ul><p>Los siguientes pasos recorren cada sección.</p>",
       "images": [
-        { "src": "images/phone/sip-providers-light.png", "alt": "Formulario de proveedor SIP", "caption": "Dale un nombre al troncal y agrega la IP de señalización de iMash a la lista blanca de tu portadora.", "theme": "light" },
-        { "src": "images/phone/sip-providers-dark.png", "alt": "Formulario de proveedor SIP", "caption": "Dale un nombre al troncal y agrega la IP de señalización de iMash a la lista blanca de tu portadora.", "theme": "dark" }
+        { "src": "images/phone/add-sip-provider-create-drawer-light.png", "alt": "Panel Create SIP Provider", "caption": "El panel Create SIP Provider — nombre, IP a autorizar, autenticación y puertas de enlace en un solo formulario.", "theme": "light" },
+        { "src": "images/phone/add-sip-provider-create-drawer-dark.png", "alt": "Panel Create SIP Provider", "caption": "El panel Create SIP Provider — nombre, IP a autorizar, autenticación y puertas de enlace en un solo formulario.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "name-and-whitelist",
+      "title": "Nombre la troncal y autorice a iMash en su operador",
+      "content": "<ol><li>Escriba un <strong>Provider Name</strong> (Nombre del proveedor) — por ejemplo <em>Mi troncal Telnyx</em> o <em>PBX de la oficina</em>. Será la etiqueta de la troncal en todo iMash.</li><li>Abra el panel <strong>Have your carriers whitelist our SIP signaling IPs</strong> y copie la dirección mostrada: <code>34.150.248.33:5060</code>.</li><li>En el portal de administración de su operador (o de su PBX), agregue esa IP y puerto a la <strong>lista de IP permitidas</strong> de la troncal, para que acepte tráfico SIP de iMash y le envíe las llamadas entrantes.</li></ol><blockquote>⚠️ Este paso de autorización se realiza <strong>del lado de su operador</strong>, no en iMash. Si se omite, las llamadas fallarán silenciosamente aunque todo en iMash parezca correcto — es la causa más común de que una troncal nueva \"no funcione\".</blockquote>",
+      "images": [
+        { "src": "images/phone/add-sip-provider-whitelist-light.png", "alt": "IP de señalización SIP de iMash a autorizar", "caption": "Autorice 34.150.248.33:5060 en el portal de su operador para que confíe en iMash.", "theme": "light" },
+        { "src": "images/phone/add-sip-provider-whitelist-dark.png", "alt": "IP de señalización SIP de iMash a autorizar", "caption": "Autorice 34.150.248.33:5060 en el portal de su operador para que confíe en iMash.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "authentication",
+      "title": "Agregue autenticación (solo si su operador la exige)",
+      "content": "<p>Muchas troncales se autentican únicamente por IP — si es su caso, omita este paso. Si su operador le entregó credenciales SIP:</p><ol><li>Marque la casilla <strong>Authentication</strong> (Autenticación) para expandir la sección.</li><li>Ingrese el <strong>Auth username</strong> (Usuario) y la <strong>Password</strong> (Contraseña) exactamente como se los entregó su operador.</li><li>Marque <strong>Require Auth for Incoming</strong> (Exigir autenticación en entrantes) si el operador espera credenciales en las llamadas que <em>entran</em> a iMash.</li><li>Marque <strong>Require Auth for Outgoing</strong> (Exigir autenticación en salientes) si las espera en las llamadas que iMash envía <em>hacia afuera</em>.</li></ol><blockquote>💡 ¿No sabe qué casillas marcar? La mayoría de las troncales con credenciales solo necesita <strong>Require Auth for Outgoing</strong> — revise la configuración de la troncal en su operador o consulte a su soporte.</blockquote>",
+      "images": [
+        { "src": "images/phone/add-sip-provider-auth-light.png", "alt": "Sección Authentication con usuario, contraseña y casillas de dirección", "caption": "Active Authentication y elija en qué sentido se requieren credenciales.", "theme": "light" },
+        { "src": "images/phone/add-sip-provider-auth-dark.png", "alt": "Sección Authentication con usuario, contraseña y casillas de dirección", "caption": "Active Authentication y elija en qué sentido se requieren credenciales.", "theme": "dark" }
       ]
     },
     {
       "id": "gateways",
-      "title": "Agrega tus gateways SIP",
-      "content": "<p>Un gateway le indica a iMash dónde se encuentra tu portadora en la red.</p><ol><li>En <strong>SIP gateways</strong> (Gateways SIP), completa la <strong>Network address</strong> (Dirección de red) (una IP como <code>1.2.3.4</code>, o para salientes un dominio como <code>sip.mycarrier.com</code>), el <strong>Port</strong> (Puerto) (normalmente <code>5060</code>) y el <strong>Netmask</strong> (Máscara de red).</li><li>Elige una dirección: <strong>Inbound</strong> (Entrante — llamadas que llegan) o <strong>Outbound</strong> (Saliente — llamadas que salen). Puedes agregar varios gateways entrantes, pero solo <strong>uno</strong> saliente.</li><li>Haz clic en <strong>Add New Gateway</strong> (Agregar nuevo gateway) para añadir más según sea necesario.</li></ol>"
+      "title": "Configure sus puertas de enlace SIP",
+      "content": "<p>Una puerta de enlace le indica a iMash dónde vive su operador en la red. Puede agregar varias puertas <strong>Inbound</strong> (entrantes), pero solo <strong>una Outbound</strong> (saliente).</p><ol><li>En la primera tarjeta de puerta de enlace, ingrese la <strong>Network address</strong> (Dirección de red):<ul><li>Las puertas <strong>Inbound</strong> requieren una dirección IP (por ejemplo <code>1.2.3.4</code>) — la dirección <em>desde</em> la cual su operador envía las llamadas.</li><li>Las puertas <strong>Outbound</strong> aceptan una IP <em>o</em> un dominio (por ejemplo <code>sip.mycarrier.com</code>) — el destino al que iMash envía sus llamadas salientes.</li></ul></li><li>Defina el <strong>Port</strong> (Puerto) — <code>5060</code> es el estándar SIP y casi siempre es el correcto.</li><li>Configure el tercer campo:<ul><li>En puertas <strong>Inbound</strong> es la <strong>Netmask</strong> (Máscara de red) — mantenga <code>32</code> para una sola IP, o redúzcala para permitir todo un rango de IP del operador.</li><li>En puertas <strong>Outbound</strong> se convierte en el selector de <strong>Protocol</strong> (Protocolo) — <strong>AUTO</strong>, <strong>UDP</strong>, <strong>TCP</strong> o <strong>TLS</strong>. Deje <strong>AUTO</strong> salvo que su operador especifique uno.</li></ul></li><li>Elija el sentido con los botones <strong>Inbound</strong> / <strong>Outbound</strong> de la tarjeta.</li><li>Haga clic en <strong>Add New Gateway</strong> (Agregar nueva puerta de enlace) para añadir más (por ejemplo una entrante + una saliente), o en <strong>Delete</strong> (Eliminar) en una tarjeta para quitarla.</li></ol><blockquote>💡 Para llamadas en ambos sentidos normalmente necesita <strong>ambas</strong>: una puerta entrante con la IP de señalización de su operador y una saliente apuntando al dominio SIP de su operador.</blockquote>",
+      "images": [
+        { "src": "images/phone/add-sip-provider-gateways-light.png", "alt": "Tarjeta de puerta de enlace SIP con dirección de red, puerto, máscara y botones de sentido", "caption": "Cada tarjeta de puerta de enlace contiene dirección de red, puerto, máscara/protocolo y un sentido de tráfico.", "theme": "light" },
+        { "src": "images/phone/add-sip-provider-gateways-dark.png", "alt": "Tarjeta de puerta de enlace SIP con dirección de red, puerto, máscara y botones de sentido", "caption": "Cada tarjeta de puerta de enlace contiene dirección de red, puerto, máscara/protocolo y un sentido de tráfico.", "theme": "dark" },
+        { "src": "images/phone/add-sip-provider-outbound-gateway-light.png", "alt": "Tarjeta de puerta entrante con máscara junto a una tarjeta saliente con el selector de protocolo AUTO", "caption": "Un par entrante + saliente: la tarjeta Outbound cambia la máscara por el selector de protocolo (AUTO/UDP/TCP/TLS), y cuando una tarjeta es Outbound las demás quedan fijadas en Inbound.", "theme": "light" },
+        { "src": "images/phone/add-sip-provider-outbound-gateway-dark.png", "alt": "Tarjeta de puerta entrante con máscara junto a una tarjeta saliente con el selector de protocolo AUTO", "caption": "Un par entrante + saliente: la tarjeta Outbound cambia la máscara por el selector de protocolo (AUTO/UDP/TCP/TLS), y cuando una tarjeta es Outbound las demás quedan fijadas en Inbound.", "theme": "dark" }
+      ]
     },
     {
-      "id": "authentication",
-      "title": "Agregar autenticación (opcional)",
-      "content": "<p>Si tu portadora requiere un usuario y una contraseña:</p><ol><li>Abre la sección <strong>Authentication</strong> (Autenticación).</li><li>Ingresa el <strong>Auth username</strong> (Usuario de autenticación) y la <strong>Password</strong> (Contraseña).</li><li>Marca <strong>Require Auth for Incoming</strong> (Requerir autenticación para entrantes) o <strong>Require Auth for Outgoing</strong> (Requerir autenticación para salientes) si tu portadora espera credenciales en esa dirección.</li></ol>"
+      "id": "create-and-verify",
+      "title": "Cree el proveedor y verifíquelo",
+      "content": "<ol><li>Revise el formulario — el botón <strong>Create Provider</strong> (Crear proveedor) permanece deshabilitado hasta que el nombre esté completo y cada puerta de enlace tenga una dirección y un puerto válidos (y las credenciales estén completas si activó Authentication).</li><li>Haga clic en <strong>Create Provider</strong>.</li><li>De vuelta en la lista, su troncal aparece con la insignia verde <strong>Active</strong> (Activo) — esa es la confirmación de que se guardó y está lista para llevar números.</li></ol>",
+      "images": [
+        { "src": "images/phone/sip-providers-light.png", "alt": "Lista de proveedores SIP mostrando la nueva troncal con estado Active", "caption": "Su nueva troncal aparece en la lista con estado Active.", "theme": "light" },
+        { "src": "images/phone/sip-providers-dark.png", "alt": "Lista de proveedores SIP mostrando la nueva troncal con estado Active", "caption": "Su nueva troncal aparece en la lista con estado Active.", "theme": "dark" }
+      ]
     },
     {
-      "id": "save",
-      "title": "Crear el proveedor",
-      "content": "<ol><li>Revisa tus datos: el botón <strong>Create Provider</strong> (Crear proveedor) permanece deshabilitado hasta que los campos requeridos sean válidos.</li><li>Haz clic en <strong>Create Provider</strong>.</li><li>Tu troncal ahora aparece en la lista de SIP Providers. Cuando importes un número bajo este proveedor, iMash aprovisiona el enrutamiento automáticamente.</li></ol>"
+      "id": "attach-numbers",
+      "title": "Asocie sus números de teléfono a la troncal",
+      "content": "<p>La troncal ya está conectada — ahora asígnele números. Las llamadas solo fluyen cuando hay al menos un número importado bajo este proveedor.</p><ol><li>En la barra lateral izquierda, haga clic en <strong>Phone numbers</strong> (Números de teléfono), bajo <strong>Call Center</strong>.</li><li>Haga clic en <strong>Import Number</strong> (Importar número).</li><li>En el desplegable <strong>SIP Phone Provider</strong> (Proveedor SIP), seleccione la troncal que acaba de crear.</li><li>Asigne una <strong>Label</strong> (Etiqueta) al número (por ejemplo <em>Línea principal</em>).</li><li>Ingrese el <strong>Phone Number</strong> (Número de teléfono) exactamente como lo envía su proveedor SIP — con o sin el prefijo <code>+</code>, p. ej. <code>+14155551234</code>, <code>14155551234</code> o <code>14155551234#001</code>. Desmarque <strong>Use country selector</strong> (Usar selector de país) si necesita escribir un formato sin procesar.</li><li>Haga clic en <strong>Import Phone Number</strong> (Importar número de teléfono). iMash aprovisiona el enrutamiento de llamadas del número automáticamente.</li></ol><blockquote>⚠️ Los números en un proveedor SIP personalizado transportan <strong>llamadas de voz</strong> a través de su operador. Los SMS de estos números los gestiona su proveedor externo — iMash no envía ni recibe mensajes de texto en ellos.</blockquote>",
+      "images": [
+        { "src": "images/phone/add-sip-provider-import-number-light.png", "alt": "Ventana Import Phone Number con el desplegable de proveedor SIP", "caption": "Import Number: elija su troncal, etiquete el número y escríbalo exactamente como lo envía su operador.", "theme": "light" },
+        { "src": "images/phone/add-sip-provider-import-number-dark.png", "alt": "Ventana Import Phone Number con el desplegable de proveedor SIP", "caption": "Import Number: elija su troncal, etiquete el número y escríbalo exactamente como lo envía su operador.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "edit-or-delete",
+      "title": "Edite o elimine un proveedor más adelante",
+      "content": "<ol><li>En la página <strong>SIP Providers</strong>, haga clic en la <strong>Label</strong> (Etiqueta) de la troncal (o en el icono del ojo bajo <strong>Actions</strong>).</li><li>Se abre el panel <strong>SIP Provider Details</strong> (Detalles del proveedor SIP) con los mismos campos de la creación — renombre la troncal, active o desactive <strong>Authentication</strong>, o ajuste las <strong>SIP gateways</strong>.</li><li>Haga clic en <strong>Save</strong> (Guardar) para aplicar los cambios, o en <strong>Delete</strong> (Eliminar) — confirme con <strong>Yes</strong> (Sí) — para quitar la troncal.</li></ol><blockquote>⚠️ Antes de eliminar una troncal, mueva o elimine los números de teléfono importados bajo ella — los números sin proveedor no pueden transportar llamadas.</blockquote><p>Eso es todo — su propio operador ya está integrado en iMash, y cada agente, campaña y regla de enrutamiento puede usar los números que viajan por él.</p>",
+      "images": [
+        { "src": "images/phone/add-sip-provider-edit-drawer-light.png", "alt": "Panel de edición SIP Provider Details con botones Save y Delete", "caption": "Abra una troncal en cualquier momento para ajustar puertas de enlace o credenciales — Save aplica al instante.", "theme": "light" },
+        { "src": "images/phone/add-sip-provider-edit-drawer-dark.png", "alt": "Panel de edición SIP Provider Details con botones Save y Delete", "caption": "Abra una troncal en cualquier momento para ajustar puertas de enlace o credenciales — Save aplica al instante.", "theme": "dark" }
+      ]
     }
   ],
   "nextSteps": {
     "title": "¿Qué sigue?",
-    "description": "Con un troncal conectado, agrega un número y dirige las llamadas hacia un agente.",
+    "description": "Su operador ya está conectado — ahora ponga esos números a trabajar con un agente de IA que conteste cada llamada.",
     "cards": [
-      { "href": "/phone/add-phone-number", "title": "Agregar un número de teléfono", "description": "Compra un número de iMash o importa uno de tu proveedor." },
-      { "href": "/phone/call-routing", "title": "Enrutar llamadas a un agente", "description": "Envía las llamadas entrantes de un número a un agente de IA específico." },
-      { "href": "/agents/create-agent", "title": "Crear un agente de IA", "description": "Crea el agente que responde tus llamadas." }
+      { "href": "/phone/add-phone-number", "title": "Agregue un número de teléfono", "description": "Compre un número de iMash o importe más números de su proveedor." },
+      { "href": "/phone/call-routing", "title": "Enrute llamadas a un agente", "description": "Dirija las llamadas entrantes de un número a un agente de IA específico." },
+      { "href": "/contact-center/inbound-sip-routing", "title": "Enrutamiento SIP entrante", "description": "Ajuste con precisión cómo se distribuyen las llamadas SIP entrantes entre agentes y grupos." }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o alguna pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+    "title": "¿Necesita ayuda?",
+    "content": "<p>Si tiene algún problema o alguna pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Agregar un proveedor SIP - Conecta tu portadora | iMash Docs",
-  "metaDescription": "Conecta tu propio troncal SIP o portadora a iMash. Configura el nombre del proveedor, agrega la IP de señalización a la lista blanca, añade gateways entrantes/salientes y la autenticación.",
-  "metaKeywords": "proveedor SIP, troncal SIP, portadora, VoIP, gateway, entrante, saliente, telefonía, Telnyx, Twilio, PBX, integración telefónica"
+  "metaTitle": "Conecte un Proveedor SIP - Traiga su Propio Operador | Documentación de iMash",
+  "metaDescription": "Conecte su propia troncal SIP u operador a iMash: autorice la IP de señalización, configure puertas de enlace entrantes y salientes, agregue autenticación e importe sus números.",
+  "metaKeywords": "proveedor SIP, troncal SIP, BYOC, traiga su propio operador, VoIP, puerta de enlace, entrante, saliente, autenticación, importar número de teléfono, Telnyx, Twilio, PBX"
 }

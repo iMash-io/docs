@@ -1,70 +1,215 @@
 {
-  "title": "API Keys - Access iMash Programmatically",
-  "lede": "API keys let your own software talk to iMash through the REST API &mdash; start calls, read call logs, sync CRM records, and more &mdash; without logging into the dashboard. This guide covers generating, storing, and revoking keys.",
-  "timeToComplete": "5 minutes",
+  "title": "API Keys & Credentials",
+  "lede": "Two pages turn iMash from a dashboard into a hub: API Keys let your own software drive iMash through the REST API, and Credentials let iMash run on your own AI provider accounts — your OpenAI, ElevenLabs, or Deepgram keys, even your own S3 bucket for recordings. This guide walks you through both, end to end.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
-      "id": "what-are-keys",
-      "title": "What API keys are for",
-      "content": "<p>An API key is a secret token that identifies your account when you call the iMash REST API. Instead of a username and password, your code sends the key with each request.</p><ul><li>Use them to automate iMash from your own backend, scripts, or third-party tools.</li><li>Each key acts on behalf of your account, so treat it like a password.</li><li>A key is shown in full <strong>only once</strong>, at the moment you create it. After that, iMash stores only a hashed version and can show you the prefix.</li></ul>",
+      "id": "what-you-will-set-up",
+      "title": "Know the difference: API Keys vs. Credentials",
+      "content": "<p>iMash has two key-related pages, and they point in opposite directions:</p><ul><li><strong>API Keys</strong> (<em>your code &rarr; iMash</em>): secret tokens that identify your account when your own backend, scripts, or third-party tools call the iMash REST API — start calls, read call logs, sync CRM records, and more, without ever logging into the dashboard.</li><li><strong>Credentials</strong> (<em>iMash &rarr; your providers</em>): a secure vault where you store your <em>own</em> accounts' keys for voice (TTS), LLM, and transcription providers, plus optional cloud storage. When a provider is keyed here, your agents run on your account and its billing instead of iMash's.</li></ul><blockquote>💡 You don't need either page to start using iMash — agents work out of the box on platform-managed providers. Come here when you want to integrate programmatically or bring your own provider accounts.</blockquote>",
+      "images": []
+    },
+    {
+      "id": "open-api-keys",
+      "title": "Open the API Keys page",
+      "content": "<ol><li>In the top navigation bar, click the <strong>Credentials</strong> section (far right, with the 🔍 key icon).</li><li>In the left sidebar, scroll down to the <strong>Account</strong> group and click <strong>API Keys</strong>.</li></ol><p>You'll see a table of every key on your account, with one row per key:</p><ul><li><strong>Name</strong> — the label you gave the key when you created it.</li><li><strong>Key Prefix</strong> — the first characters of the key, so you can match it to the copy in your code. The full secret is never shown again after creation.</li><li><strong>Created At</strong> — when the key was generated.</li><li><strong>Last Used</strong> — the last time this key authenticated an API request (<strong>Never</strong> if it hasn't been used yet). Perfect for spotting dead keys.</li><li><strong>Actions</strong> — the red trash icon revokes the key.</li></ul>",
       "images": [
         {
           "src": "images/get-started/api-keys-light.png",
-          "alt": "API Keys page",
-          "caption": "The API Keys page lists your keys with their name, prefix, created date, and last used time.",
+          "alt": "API Keys page listing keys with name, prefix, created date, and last used time",
+          "caption": "The API Keys page: every key with its name, prefix, creation date, and last-used time.",
           "theme": "light"
         },
         {
           "src": "images/get-started/api-keys-dark.png",
-          "alt": "API Keys page",
-          "caption": "The API Keys page lists your keys with their name, prefix, created date, and last used time.",
+          "alt": "API Keys page listing keys with name, prefix, created date, and last used time",
+          "caption": "The API Keys page: every key with its name, prefix, creation date, and last-used time.",
           "theme": "dark"
         }
       ]
     },
     {
-      "id": "open-page",
-      "title": "Open the API Keys page",
-      "content": "<ol><li>In the left-hand navigation, open <strong>Account</strong>.</li><li>Click <strong>API Keys</strong>.</li><li>You will see a table of your existing keys, each showing its <strong>Name</strong>, <strong>Key Prefix</strong>, <strong>Created At</strong>, and <strong>Last Used</strong>.</li></ol>",
+      "id": "generate-key",
+      "title": "Generate a new API key",
+      "content": "<ol><li>Click <strong>+ Generate New API Key</strong> in the top-right corner.</li><li>In the modal, type a clear, descriptive name — for example <em>\"Zapier integration\"</em> or <em>\"Nightly CRM sync\"</em> — so you can tell your keys apart months from now.</li><li>Click <strong>Generate New API Key</strong>. (The button stays disabled until you enter a name.)</li></ol><blockquote>💡 Create one key per integration. When you retire or rotate one tool, you can revoke just its key without breaking everything else.</blockquote>",
+      "images": [
+        {
+          "src": "images/get-started/api-keys-generate-modal-light.png",
+          "alt": "Generate New API Key modal asking for a descriptive key name",
+          "caption": "Name your key after the integration that will use it.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/api-keys-generate-modal-dark.png",
+          "alt": "Generate New API Key modal asking for a descriptive key name",
+          "caption": "Name your key after the integration that will use it.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "copy-secret",
+      "title": "Copy the secret key — this is your only chance",
+      "content": "<p>The moment the key is generated, iMash shows it once:</p><ul><li><strong>Key Name</strong> — the name you chose.</li><li><strong>Key Prefix (for identification)</strong> — the short public prefix that will appear in the keys table.</li><li><strong>Secret Key (copy this!)</strong> — the full secret, masked by default. Click the <strong>eye</strong> icon to reveal it and <strong>Copy</strong> to copy it to your clipboard.</li></ul><ol><li>Click <strong>Copy</strong> and paste the key straight into your integration's secret store or an environment variable.</li><li>Click <strong>Close</strong>.</li></ol><blockquote>⚠️ <strong>The full key is shown only once.</strong> iMash stores just a hashed version — if you lose the key, you can't retrieve it; you'll have to generate a new one. Never paste it into shared documents, chat, front-end code, or mobile apps.</blockquote>",
+      "images": [
+        {
+          "src": "images/get-started/api-keys-generated-key-light.png",
+          "alt": "API Key Generated modal showing the key name, prefix, and masked secret key with eye and Copy buttons",
+          "caption": "The one-time reveal: use the eye icon to show the secret and Copy to grab it.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/api-keys-generated-key-dark.png",
+          "alt": "API Key Generated modal showing the key name, prefix, and masked secret key with eye and Copy buttons",
+          "caption": "The one-time reveal: use the eye icon to show the secret and Copy to grab it.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "use-key",
+      "title": "Use the key in your code",
+      "content": "<p>Send the key with every request to the iMash REST API — it takes the place of your username and password:</p><ul><li>Pass it in the <strong>Authorization</strong> header of your HTTP requests, exactly as shown in the <a data-href=\"/api-reference\">API Reference</a> for each endpoint.</li><li>Each key acts with your account's full permissions, so treat it like a password.</li><li>Store it server-side only — environment variables or a secrets manager, never in client-side code.</li></ul><p>Once your first request lands, the key's <strong>Last Used</strong> column starts updating — a quick way to confirm your integration is alive.</p>",
       "images": []
     },
     {
-      "id": "generate",
-      "title": "Generate a new key",
-      "content": "<ol><li>Click <strong>Generate New API Key</strong> in the top-right.</li><li>Enter a clear, descriptive <strong>name</strong> (for example \"Zapier integration\" or \"Nightly CRM sync\") so you can tell your keys apart later.</li><li>Click <strong>Generate</strong>.</li><li>iMash displays the full secret key. Use the eye icon to reveal it and the <strong>Copy</strong> button to copy it.</li></ol>",
-      "images": []
-    },
-    {
-      "id": "store-securely",
-      "title": "Copy and store it safely",
-      "content": "<p>The full key is shown once and cannot be retrieved again. If you lose it, you must generate a new one.</p><ul><li>Paste it straight into your integration's secret store or an environment variable &mdash; never into shared documents or chat.</li><li>Do <strong>not</strong> embed the key in front-end code, mobile apps, or anything a user can view.</li><li>Give each integration its own key so you can revoke one without breaking the others.</li></ul>",
-      "images": []
-    },
-    {
-      "id": "revoke",
+      "id": "revoke-key",
       "title": "Revoke a key you no longer need",
-      "content": "<ol><li>Find the key in the table on the <strong>API Keys</strong> page.</li><li>Click the <strong>delete</strong> (trash) icon in its row.</li><li>Confirm. The key stops working immediately &mdash; any integration still using it will lose access, so update it first.</li></ol><p>Check the <strong>Last Used</strong> column to spot keys that are no longer active before removing them.</p>",
-      "images": []
+      "content": "<ol><li>Find the key's row in the table (check <strong>Last Used</strong> first — <strong>Never</strong> or an old date usually means it's safe to remove).</li><li>Click the red <strong>trash</strong> icon under <strong>Actions</strong>.</li><li>In the <strong>Delete API Key?</strong> confirmation, click <strong>Delete</strong>.</li></ol><blockquote>⚠️ Revocation is instant and permanent — any integration still using the key loses access immediately. Switch the integration to a new key <em>before</em> deleting the old one.</blockquote>",
+      "images": [
+        {
+          "src": "images/get-started/api-keys-revoke-confirm-light.png",
+          "alt": "Delete API Key confirmation dialog with Cancel and Delete buttons",
+          "caption": "The delete confirmation — this action cannot be undone.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/api-keys-revoke-confirm-dark.png",
+          "alt": "Delete API Key confirmation dialog with Cancel and Delete buttons",
+          "caption": "The delete confirmation — this action cannot be undone.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "open-credentials",
+      "title": "Open the Credentials page (bring your own providers)",
+      "content": "<p>Now for the other direction: giving iMash <em>your</em> provider accounts. This is how power users control cost and capacity — your agents can run on your own OpenAI, ElevenLabs, or Deepgram plans.</p><ol><li>In the top navigation bar, click <strong>Credentials</strong>.</li><li>You land on <strong>Service Providers Credentials</strong> (also reachable from the sidebar under <strong>Account &rarr; Credentials</strong>).</li></ol><p>The page is organized into sections, each a grid of provider cards:</p><ul><li><strong>Voice Providers</strong> — text-to-speech accounts (PlayHT, RimeAI, ElevenLabs, Deepgram, Cartesia, Azure, OpenAI, IBM Watson, MiniMax).</li><li><strong>LLM Providers</strong> — the agent's brain (OpenAI, Anthropic, Groq, Google).</li><li><strong>Custom LLM Models</strong> — any OpenAI-compatible endpoint you host or subscribe to.</li><li><strong>Transcriber Providers</strong> — speech-to-text (Deepgram, Speechmatics, AssemblyAI, Groq STT).</li><li><strong>Webhooks Providers</strong> — optional separate LLM keys just for post-call processing.</li><li><strong>Cloud Storage</strong> — your own S3-compatible bucket for call recordings.</li></ul>",
+      "images": [
+        {
+          "src": "images/get-started/api-keys-credentials-page-light.png",
+          "alt": "Service Providers Credentials page showing the Voice Providers section with provider cards",
+          "caption": "The Credentials page: provider cards grouped by section, starting with Voice Providers.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/api-keys-credentials-page-dark.png",
+          "alt": "Service Providers Credentials page showing the Voice Providers section with provider cards",
+          "caption": "The Credentials page: provider cards grouped by section, starting with Voice Providers.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "add-provider-key",
+      "title": "Add a provider key",
+      "content": "<p>Every provider card works the same way:</p><ol><li>Find the provider's card (for example <strong>ElevenLabs</strong> under <strong>Voice Providers</strong>).</li><li>Paste your key into the <strong>API Key</strong> field. Some providers ask for one extra field — PlayHT wants a <strong>User ID</strong>, Deepgram an optional <strong>API Url</strong>, Azure a <strong>Region</strong>, Twilio-style providers an account SID and token.</li><li>Click <strong>Save</strong>. The button only activates once you've changed something.</li></ol><p>After saving, the card locks: values display as hidden dots and the buttons change to <strong>Edit</strong> (re-enter a new key) and <strong>Delete</strong> (remove the credential after a confirmation). Nobody — including you — can read a saved key back from the screen.</p><blockquote>💡 The 🔗 link icon in each card's corner opens that provider's own documentation, handy when you're hunting for where to create the key on their side.</blockquote>",
+      "images": [
+        {
+          "src": "images/get-started/api-keys-credentials-card-light.png",
+          "alt": "ElevenLabs credential card with an API Key field and Save button",
+          "caption": "A provider card: paste your key, click Save, and the value is hidden from then on.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/api-keys-credentials-card-dark.png",
+          "alt": "ElevenLabs credential card with an API Key field and Save button",
+          "caption": "A provider card: paste your key, click Save, and the value is hidden from then on.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "custom-llm-models",
+      "title": "Add a Custom LLM model (optional)",
+      "content": "<p>Beyond the big-name providers, the <strong>Custom LLM Models</strong> section lets you plug in <em>any</em> OpenAI-compatible endpoint — DeepSeek, Together, OpenRouter, or a self-hosted vLLM server:</p><ol><li>Scroll to <strong>Custom LLM Models</strong> and click <strong>+ Add Custom LLM</strong>.</li><li>Fill in the form: <ul><li><strong>Name</strong> — the label shown in model pickers (e.g. <em>DeepSeek V3</em>).</li><li><strong>Model code</strong> — the exact model id the endpoint expects (e.g. <em>deepseek-chat</em>).</li><li><strong>Base URL</strong> — the endpoint root (e.g. <em>https://api.deepseek.com/v1</em>).</li><li><strong>API key</strong> — your key for that endpoint.</li><li><strong>Use for</strong> — where the model becomes selectable: the live agent, post-call webhooks, and/or the observer agent.</li></ul></li><li>Click save in the modal — the model appears as a card and shows up in the assistant editor's model picker.</li></ol><p>Cards labeled <strong>Global (provided by iMash admin)</strong> are platform-shared models you can use but not edit.</p>",
+      "images": [
+        {
+          "src": "images/get-started/api-keys-credentials-custom-llm-light.png",
+          "alt": "Custom LLM Models section with Add Custom LLM button and a model card showing base URL, model code, and use-for tags",
+          "caption": "Custom LLM Models: bring any OpenAI-compatible endpoint into your model pickers.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/api-keys-credentials-custom-llm-dark.png",
+          "alt": "Custom LLM Models section with Add Custom LLM button and a model card showing base URL, model code, and use-for tags",
+          "caption": "Custom LLM Models: bring any OpenAI-compatible endpoint into your model pickers.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "webhook-llm-keys",
+      "title": "Webhooks Providers: separate keys for post-call AI (optional)",
+      "content": "<p>After each call, iMash runs LLM-powered post-call work: the summary, success evaluation, structured-data extraction, lifecycle stage, job creation, and more. The <strong>Webhooks Providers</strong> section lets you key that work separately from your live agents:</p><ul><li><strong>Leave a provider blank</strong> and post-call processing falls back to the key in your <strong>LLM Providers</strong> section above — the simple default.</li><li><strong>Add a key here</strong> to route webhook work through a different account — a cheaper plan or a separate rate-limit pool so heavy post-call traffic never slows your live agents. When a provider is keyed here, iMash bills you $0 for webhooks on that provider.</li></ul>",
+      "images": [
+        {
+          "src": "images/get-started/api-keys-credentials-webhooks-light.png",
+          "alt": "Webhooks Providers section with OpenAI, Anthropic, Groq, and Google cards for separate post-call LLM keys",
+          "caption": "Optional dedicated keys for post-call processing — blank cards fall back to your main LLM keys.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/api-keys-credentials-webhooks-dark.png",
+          "alt": "Webhooks Providers section with OpenAI, Anthropic, Groq, and Google cards for separate post-call LLM keys",
+          "caption": "Optional dedicated keys for post-call processing — blank cards fall back to your main LLM keys.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "s3-storage",
+      "title": "Cloud Storage: keep recordings in your own S3 bucket (optional)",
+      "content": "<p>By default, call recordings live in iMash's storage. The <strong>Cloud Storage</strong> section lets you point recordings at your own S3-compatible bucket instead — great for compliance, retention policies, or just owning your data:</p><ol><li>Pick your <strong>S3 Provider</strong>: Amazon S3, MinIO, Cloudflare R2, DigitalOcean Spaces, Backblaze B2, Wasabi, or Custom S3-Compatible.</li><li>Fill the required fields: <strong>Access Key ID</strong>, <strong>Secret Access Key</strong>, <strong>Region</strong> (e.g. <em>us-east-1</em>), and <strong>Bucket Name</strong>. Non-AWS providers also require the <strong>Endpoint URL</strong> (each provider shows an example format).</li><li>Optionally set a <strong>Bucket Prefix</strong> (e.g. <em>recordings/</em>) to keep files in a folder, and turn on <strong>Force Path Style</strong> for MinIO and some S3-compatible services.</li><li>Click <strong>Test Connection</strong> to verify your details, then <strong>Save</strong>. Saving re-tests the connection and automatically configures CORS on your bucket so recordings play in the browser — nothing is stored unless the test passes.</li><li>Flip <strong>Enable Custom S3 Storage</strong> to <strong>ON</strong> to switch new recordings to your bucket. Optionally enable <strong>Also Store Call Data</strong> to keep transcripts and analysis results there too.</li></ol><blockquote>💡 The enable toggle stays locked until every required field is filled — if it won't switch on, look for the empty field.</blockquote>",
+      "images": [
+        {
+          "src": "images/get-started/api-keys-credentials-s3-light.png",
+          "alt": "S3-Compatible Storage card with provider selector, access keys, region, bucket fields, and Test Connection button",
+          "caption": "The S3-Compatible Storage card: connect your own bucket for call recordings.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/api-keys-credentials-s3-dark.png",
+          "alt": "S3-Compatible Storage card with provider selector, access keys, region, bucket fields, and Test Connection button",
+          "caption": "The S3-Compatible Storage card: connect your own bucket for call recordings.",
+          "theme": "dark"
+        }
+      ]
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "With a key in hand, connect iMash to your other systems.",
+    "description": "Keys in place — now put them to work. Wire iMash into your stack, or point your new provider credentials at an agent.",
     "cards": [
       {
         "href": "/api-reference",
         "title": "API Reference",
-        "description": "See every endpoint, parameter, and example request for the iMash REST API."
+        "description": "Every endpoint, parameter, and example request for the iMash REST API."
       },
       {
-        "href": "/get-started/dashboard-overview",
-        "title": "Dashboard Overview",
-        "description": "Understand the same call and CRM data you can pull through the API."
+        "href": "/agents/llm-settings",
+        "title": "Choose the Brain (LLM)",
+        "description": "Pick the model your agent thinks with — including the providers you just keyed."
       },
       {
-        "href": "/automations/smart-flows",
-        "title": "Build Automations",
-        "description": "Trigger workflows and connect external tools without writing code."
+        "href": "/agents/voice-configuration",
+        "title": "Voice Configuration (TTS)",
+        "description": "Give your agent its voice using platform voices or your own provider account."
+      },
+      {
+        "href": "/automations/webhooks",
+        "title": "Webhooks",
+        "description": "Push call results into your own systems the moment a call ends."
       }
     ]
   },
@@ -72,7 +217,7 @@
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "API Keys | iMash Docs",
-  "metaDescription": "Generate, name, store, and revoke iMash API keys for programmatic REST API access under Account → API Keys. Keys are shown in full only once.",
-  "metaKeywords": "iMash API keys, REST API, programmatic access, generate api key, revoke api key, api authentication, integrations"
+  "metaTitle": "API Keys & Credentials | iMash Documentation",
+  "metaDescription": "Generate, copy, and revoke iMash API keys for REST API access, and store your own provider credentials — TTS, LLM, transcription, custom LLM endpoints, webhook keys, and S3 recording storage.",
+  "metaKeywords": "iMash API keys, REST API, credentials, bring your own key, BYOK, OpenAI key, ElevenLabs key, Deepgram, custom LLM, S3 recordings, webhook LLM, api authentication"
 }

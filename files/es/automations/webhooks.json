@@ -1,53 +1,92 @@
 {
-  "title": "Recibir Datos con Webhooks",
-  "lede": "Usa el disparador Catch Webhook en Automatización para aceptar datos de cualquier sistema externo, de modo que una solicitud entrante pueda iniciar un flujo de trabajo, crear registros o poner en marcha una llamada.",
-  "timeToComplete": "6 minutos",
+  "title": "Webhooks: Recibir y Enviar Datos",
+  "lede": "Los webhooks convierten a iMash en el centro de todo su ecosistema. Apunte cualquier formulario, aplicación o script a una URL única y podrá iniciar una automatización en el instante en que algo suceda — y después de cada llamada, iMash puede enviar resúmenes, transcripciones y datos extraídos de vuelta a sus propios sistemas. Esta guía cubre ambas direcciones, de la A a la Z.",
+  "timeToComplete": "10 minutos",
   "steps": [
     {
-      "id": "add-catch-webhook",
-      "title": "Agregar un Disparador Catch Webhook",
-      "content": "<ol><li>Ve a <strong>Intelligence Center → Automation</strong> (Centro de Inteligencia → Automatización) y crea o abre un flujo.</li><li>Haz clic en el bloque de disparador y elige <strong>Catch Webhook</strong> (Capturar Webhook).</li><li>iMash genera una <strong>URL de webhook</strong> única para este flujo.</li></ol>",
+      "id": "open-automation",
+      "title": "Abra el Panel de Flujos de Automatización",
+      "content": "<p>Los webhooks entrantes viven dentro del constructor de flujos, así que empezamos allí.</p><ol><li>En la barra lateral izquierda, bajo <strong>Intelligence Center</strong> (Centro de Inteligencia), haga clic en <strong>Automation</strong> (Automatización) — o use las pestañas superiores: <strong>Automation → Automation Flows</strong>.</li><li>Se abre el panel <strong>Flows</strong> (Flujos). Aquí puede ver todos sus flujos, además de otras pestañas:<ul><li><strong>Flows</strong> — su lista de automatizaciones, con nombre, pasos, carpeta, fecha de última modificación y estado.</li><li><strong>Runs</strong> (Ejecuciones) — el historial de ejecución de cada flujo, incluida cada entrega de webhook.</li><li><strong>Issues</strong> (Problemas) — ejecuciones fallidas que requieren atención.</li></ul></li><li>A la izquierda del panel también encontrará <strong>Folders</strong> (Carpetas para organizar flujos), <strong>Custom Tables</strong> (Tablas Personalizadas), <strong>System Tables</strong> (Tablas del Sistema), <strong>MCP</strong>, <strong>Todos</strong> (Pendientes) y <strong>Connections</strong> (Conexiones).</li></ol>",
       "images": [
-        { "src": "images/automations/automation-builder-light.png", "alt": "Creador de Automatización con disparador de webhook", "caption": "Catch Webhook es el disparador que inicia un flujo a partir de datos entrantes.", "theme": "light" },
-        { "src": "images/automations/automation-builder-dark.png", "alt": "Creador de Automatización con disparador de webhook", "caption": "Catch Webhook es el disparador que inicia un flujo a partir de datos entrantes.", "theme": "dark" }
+        { "src": "images/automations/webhooks-automation-page-light.png", "alt": "Panel de Flujos de Automatización con la lista de flujos y el botón Create flow", "caption": "El panel Flows — toda automatización disparada por webhook comienza aquí.", "theme": "light" },
+        { "src": "images/automations/webhooks-automation-page-dark.png", "alt": "Panel de Flujos de Automatización con la lista de flujos y el botón Create flow", "caption": "El panel Flows — toda automatización disparada por webhook comienza aquí.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "create-flow",
+      "title": "Cree un Flujo Nuevo",
+      "content": "<ol><li>Haga clic en <strong>Create flow</strong> (Crear flujo) en la esquina superior derecha del panel.</li><li>Elija <strong>From scratch</strong> (Desde cero).</li><li>El constructor se abre con el nombre del flujo seleccionado — escriba un nombre descriptivo (por ejemplo <em>Webhook Lead Intake</em>) y pulse <strong>Enter</strong>.</li></ol><p>Ahora tiene un lienzo vacío con un único paso: <strong>1. Select Trigger</strong> (Seleccionar Disparador). El disparador es lo que inicia el flujo — y para los webhooks, ese disparador es una solicitud HTTP entrante.</p>",
+      "images": []
+    },
+    {
+      "id": "pick-catch-webhook",
+      "title": "Elija el Disparador Catch Webhook",
+      "content": "<ol><li>Haga clic en el paso <strong>1. Select Trigger</strong> del lienzo. Se abre el selector de disparadores.</li><li>Escriba <strong>webhook</strong> en el cuadro <strong>Search</strong> (Buscar). También puede navegar por categoría — <strong>All</strong> (Todos), <strong>AI</strong> (IA), <strong>Core</strong> (Núcleo) o <strong>Apps</strong> (Aplicaciones).</li><li>Bajo la pieza <strong>Webhook</strong>, haga clic en <strong>Catch Webhook</strong> (Capturar Webhook) — \"recibe solicitudes HTTP y dispara flujos usando URLs únicas\".</li></ol><blockquote>💡 <strong>Consejo:</strong> La búsqueda también muestra disparadores de webhook específicos de aplicaciones (Drupal, Fountain y más). Para un endpoint genérico que \"cualquier sistema puede llamar\", <strong>Catch Webhook</strong> es el indicado.</blockquote>",
+      "images": [
+        { "src": "images/automations/webhooks-trigger-picker-light.png", "alt": "Selector de disparadores con 'webhook' escrito en la búsqueda y Catch Webhook en la lista", "caption": "Busque \"webhook\" y elija Catch Webhook bajo la pieza Webhook.", "theme": "light" },
+        { "src": "images/automations/webhooks-trigger-picker-dark.png", "alt": "Selector de disparadores con 'webhook' escrito en la búsqueda y Catch Webhook en la lista", "caption": "Busque \"webhook\" y elija Catch Webhook bajo la pieza Webhook.", "theme": "dark" }
       ]
     },
     {
       "id": "copy-url",
-      "title": "Copiar y Enviar la URL",
-      "content": "<ol><li><strong>Copia</strong> (Copy) la URL de webhook generada.</li><li>Pégala en el sistema externo (un formulario, otra app o tu propio código) para que envíe una solicitud a esa URL.</li><li>Dispara una solicitud real una vez para que iMash pueda <strong>capturar una muestra</strong> de los datos entrantes.</li></ol>",
-      "images": []
-    },
-    {
-      "id": "use-the-data",
-      "title": "Usar los Datos Entrantes",
-      "content": "<ol><li>Después de que llegue la muestra, los campos de la solicitud quedan disponibles para cada paso siguiente.</li><li>Agrega acciones (por ejemplo, una acción de <strong>System Tables</strong> para crear un lead o iniciar una llamada) y mapea los campos del webhook dentro de ellas.</li><li><strong>Prueba</strong> (Test) el flujo y luego <strong>Publícalo</strong> (Publish) para que el webhook siga activo.</li></ol>",
-      "images": []
-    },
-    {
-      "id": "send-data-out",
-      "title": "Enviar Datos en el Otro Sentido",
-      "content": "<ol><li>Los webhooks también funcionan de forma saliente: un Smart Agent puede usar <strong>Send Data to URL</strong> (Enviar Datos a URL) durante una llamada para enviar información a tus sistemas.</li><li>Configúralo como una <strong>Custom Tool</strong> (Herramienta Personalizada) con un endpoint <code>POST</code> y adjúntala al agente.</li></ol>",
+      "title": "Copie Su URL Única de Webhook",
+      "content": "<p>En cuanto selecciona Catch Webhook, iMash genera una URL que pertenece solo a este flujo. El panel de configuración de la derecha muestra todo lo necesario:</p><ul><li><strong>Live URL</strong> (URL en vivo) — el endpoint de producción. Haga clic en el icono de copiar junto a ella. Las solicitudes enviadas aquí disparan el flujo <em>una vez publicado</em>.</li><li><strong>Test URL</strong> (URL de prueba) — añada <code>/test</code> al final de la Live URL. Las solicitudes enviadas aquí se capturan como datos de muestra mientras construye, sin publicar nada.</li><li><strong>Synchronous Requests</strong> (Solicitudes Síncronas) — si el sistema que llama espera una respuesta, añada <code>/sync</code> al final de la URL. El flujo tiene hasta 30 segundos para responder (de lo contrario quien llama recibe un <code>408 Request Timeout</code>). Para devolver datos, añada un paso <strong>Webhook</strong> con la acción <strong>Return Response</strong> (Devolver Respuesta) al final de su flujo.</li></ul><ol><li>Copie la <strong>Live URL</strong>.</li><li>Péguela en el sistema externo que debe disparar este flujo — un formulario web, Zapier, su CRM o su propio código. Funciona cualquier método HTTP con JSON, datos de formulario o parámetros de consulta.</li></ol><blockquote>⚠️ <strong>Atención:</strong> La Live URL solo se activa después de hacer clic en <strong>Publish</strong> (Publicar). Mientras construye, use la URL <code>/test</code> para capturar solicitudes de muestra.</blockquote>",
       "images": [
-        { "src": "images/agents/webhooks-post-light.png", "alt": "Enviar datos a una URL", "caption": "Los agentes pueden hacer POST de datos a tu propia URL en medio de la conversación.", "theme": "light" },
-        { "src": "images/agents/webhooks-post-dark.png", "alt": "Enviar datos a una URL", "caption": "Los agentes pueden hacer POST de datos a tu propia URL en medio de la conversación.", "theme": "dark" }
+        { "src": "images/automations/webhooks-catch-config-light.png", "alt": "Panel de configuración de Catch Webhook mostrando la Live URL, la nota de Synchronous Requests y el botón Test Trigger", "caption": "El panel de Catch Webhook: Live URL, comportamiento /sync y Generate Sample Data.", "theme": "light" },
+        { "src": "images/automations/webhooks-catch-config-dark.png", "alt": "Panel de configuración de Catch Webhook mostrando la Live URL, la nota de Synchronous Requests y el botón Test Trigger", "caption": "El panel de Catch Webhook: Live URL, comportamiento /sync y Generate Sample Data.", "theme": "dark" }
       ]
+    },
+    {
+      "id": "capture-sample",
+      "title": "Envíe una Solicitud de Prueba y Capture Datos de Muestra",
+      "content": "<p>Antes de poder mapear los campos entrantes hacia acciones, iMash necesita ver un ejemplo real de los datos.</p><ol><li>En la sección <strong>Generate Sample Data</strong> (Generar Datos de Muestra), al final del panel, haga clic en <strong>Test Trigger</strong> (Probar Disparador).</li><li>Desde el sistema externo (o un <code>curl</code> rápido), envíe una solicitud a la <strong>Test URL</strong> (la Live URL + <code>/test</code>). Por ejemplo:<br><code>curl -X POST &lt;su-test-url&gt; -H \"Content-Type: application/json\" -d '{\"first_name\":\"Dana\",\"phone\":\"+1 555 010 7788\"}'</code></li><li>La solicitud capturada aparece como <strong>Result #1</strong> (Resultado #1), desglosada en <strong>headers</strong> (encabezados), <strong>body</strong> (cuerpo), <strong>queryParams</strong> (parámetros de consulta) y <strong>rawBody</strong> (cuerpo sin procesar).</li></ol><p>Cada campo que ve aquí — <code>body.first_name</code>, <code>body.phone</code>, etc. — queda disponible para todos los pasos posteriores a través del <strong>Data Selector</strong> (Selector de Datos).</p>",
+      "images": [
+        { "src": "images/automations/webhooks-sample-data-light.png", "alt": "Muestra de webhook capturada mostrando los campos del cuerpo de la solicitud de prueba", "caption": "La solicitud capturada: cada campo del cuerpo se convierte en datos mapeables para los pasos del flujo.", "theme": "light" },
+        { "src": "images/automations/webhooks-sample-data-dark.png", "alt": "Muestra de webhook capturada mostrando los campos del cuerpo de la solicitud de prueba", "caption": "La solicitud capturada: cada campo del cuerpo se convierte en datos mapeables para los pasos del flujo.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "build-and-publish",
+      "title": "Añada Acciones y Publique",
+      "content": "<p>Ahora haga que el webhook <em>haga</em> algo.</p><ol><li>Haga clic en el botón <strong>+</strong> bajo el paso disparador para añadir una acción — por ejemplo una acción de <strong>System Tables</strong> para crear un lead, una acción de llamada saliente para que un Smart Agent marque al nuevo contacto, o un paso de SMS.</li><li>En los campos de cada acción, use el <strong>Data Selector</strong> para mapear los campos del webhook (como <code>body.first_name</code>) dentro de la acción.</li><li>Use <strong>Test Flow</strong> (Probar Flujo) en la parte superior del lienzo para ejecutar el flujo completo con sus datos de muestra.</li><li>Cuando funcione, haga clic en <strong>Publish</strong> (Publicar) en la esquina superior derecha. Desde ese momento la <strong>Live URL</strong> queda armada — cada solicitud inicia una ejecución.</li></ol><blockquote>💡 <strong>Consejo:</strong> Revise la pestaña <strong>Runs</strong> del panel de Flujos para ver cada solicitud entrante y exactamente qué hizo cada paso con ella — perfecto para depurar una integración que falla.</blockquote>",
+      "images": [
+        { "src": "images/automations/webhooks-flow-canvas-light.png", "alt": "Lienzo del constructor de flujos con el disparador Catch Webhook configurado y el botón Publish visible", "caption": "Catch Webhook en su lugar — añada acciones debajo, pruebe y luego publique.", "theme": "light" },
+        { "src": "images/automations/webhooks-flow-canvas-dark.png", "alt": "Lienzo del constructor de flujos con el disparador Catch Webhook configurado y el botón Publish visible", "caption": "Catch Webhook en su lugar — añada acciones debajo, pruebe y luego publique.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "post-call-webhooks",
+      "title": "Envíe Datos HACIA AFUERA: Webhooks Post-Llamada",
+      "content": "<p>Los webhooks también fluyen en la otra dirección — después de cada llamada, su Smart Agent puede enviar por POST resultados completos a cualquier URL suya.</p><ol><li>Vaya a <strong>Intelligence Center → Smart Agents</strong> y abra su agente.</li><li>Desplácese hasta la fila <strong>Webhooks Post Processing</strong> (Procesamiento Posterior por Webhooks) y haga clic en ella.</li><li>En <strong>Server URL &amp; Events</strong> (URL del Servidor y Eventos), pegue el endpoint que debe recibir los datos y marque los <strong>Webhook Events</strong> (Eventos de Webhook) que desea recibir:<ul><li><strong>Summary</strong> (Resumen) — un resumen de la llamada escrito por IA.</li><li><strong>Success Evaluation</strong> (Evaluación de Éxito) — si la llamada cumplió su objetivo, calificada con la rúbrica que elija.</li><li><strong>Structured Data</strong> (Datos Estructurados) — campos JSON personalizados extraídos de la transcripción usando su propio esquema.</li><li><strong>Transcript</strong> (Transcripción) — el texto completo de la conversación.</li><li><strong>Status Updates</strong> (Actualizaciones de Estado) — eventos en tiempo real como llamada iniciada y llamada finalizada.</li><li><strong>Tool Calls</strong> (Llamadas a Herramientas) — detalles de cada herramienta que el agente usó durante la conversación.</li></ul></li></ol><p>Para la guía completa de prompts, rúbricas y el constructor de esquemas de datos, consulte <strong>Procesamiento Post-Llamada y Webhooks</strong> en la sección de Smart Agents.</p>",
+      "images": [
+        { "src": "images/agents/webhooks-post-light.png", "alt": "Modal Webhooks Post Processing de un Smart Agent con Server URL & Events seleccionado", "caption": "El centro de webhooks del agente: Server URL & Events, Summary, Success Evaluation, Structured Data.", "theme": "light" },
+        { "src": "images/agents/webhooks-post-dark.png", "alt": "Modal Webhooks Post Processing de un Smart Agent con Server URL & Events seleccionado", "caption": "El centro de webhooks del agente: Server URL & Events, Summary, Success Evaluation, Structured Data.", "theme": "dark" },
+        { "src": "images/agents/advanced-settings-events-light.png", "alt": "Campo Server URL y la lista de casillas de eventos de webhook", "caption": "Elija exactamente qué eventos se envían por POST a su Server URL.", "theme": "light" },
+        { "src": "images/agents/advanced-settings-events-dark.png", "alt": "Campo Server URL y la lista de casillas de eventos de webhook", "caption": "Elija exactamente qué eventos se envían por POST a su Server URL.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "mid-call-sends",
+      "title": "Extra: Envíe Datos EN MEDIO de la Llamada con Custom Tools",
+      "content": "<p>Los webhooks post-llamada se disparan al terminar la conversación. Si necesita enviar datos <em>mientras la persona sigue en línea</em> — reservar un horario, consultar un pedido, notificar a su equipo — dele al agente una <strong>Custom Tool</strong> (Herramienta Personalizada):</p><ol><li>Cree una Custom Tool con un endpoint <code>POST</code> apuntando a su sistema.</li><li>Defina los parámetros que la IA debe completar a partir de la conversación (nombre, hora de devolución de llamada, descripción del problema…).</li><li>Adjunte la herramienta a su agente — llamará a su URL en vivo, en plena conversación, cuando llegue el momento adecuado.</li></ol><p>Y aquí está lo mejor: apunte esa Custom Tool a una URL de <strong>Catch Webhook</strong> del paso 4, y sus agentes y automatizaciones se comunican entre sí — un circuito cerrado sin una sola línea de código.</p>",
+      "images": []
     }
   ],
   "nextSteps": {
-    "title": "¿Qué sigue?",
-    "description": "Convierte los datos entrantes en acciones automatizadas:",
+    "title": "¿Qué Sigue?",
+    "description": "Su webhook está en vivo — ahora ponga los datos a trabajar:",
     "cards": [
-      { "href": "/automations/smart-flows", "title": "Crear una Automatización", "description": "Encadena acciones después de tu disparador de webhook." },
-      { "href": "/automations/custom-tools", "title": "Crear Herramientas Personalizadas", "description": "Crea el endpoint POST al que tu agente envía datos." },
-      { "href": "/automations/integrations", "title": "Conectar Integraciones", "description": "Vincula los sistemas en ambos extremos de tu webhook." }
+      { "href": "/automations/smart-flows", "title": "Construya una Automatización", "description": "Encadene acciones — crear leads, iniciar llamadas, enviar SMS — después de su disparador de webhook." },
+      { "href": "/agents/advanced-settings", "title": "Procesamiento Post-Llamada y Webhooks", "description": "Profundice en resúmenes, evaluación de éxito y extracción de datos estructurados." },
+      { "href": "/automations/custom-tools", "title": "Cree Custom Tools", "description": "Permita que su agente llame a sus APIs en vivo, en plena conversación." },
+      { "href": "/automations/integrations", "title": "Conecte Integraciones", "description": "Vincule Google Sheets, Slack, CRMs y más en ambos extremos de su webhook." }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o preguntas:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+    "title": "¿Necesita Ayuda?",
+    "content": "<p>Si tiene algún problema o pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Recibir Datos con Webhooks | iMash Docs",
-  "metaDescription": "Usa el disparador Catch Webhook en la Automatización de iMash para aceptar datos de sistemas externos, mapearlos en acciones y publicar el flujo. Incluye el envío saliente Send Data to URL.",
-  "metaKeywords": "webhooks, catch webhook, disparador de automatización, send data to url, datos entrantes, integración, imash"
+  "metaTitle": "Webhooks: Recibir y Enviar Datos | Documentación de iMash",
+  "metaDescription": "Reciba datos en iMash con el disparador Catch Webhook — URLs únicas, solicitudes de prueba, datos de muestra — y envíe resultados de llamadas con webhooks post-llamada y Custom Tools en vivo.",
+  "metaKeywords": "webhooks, catch webhook, disparador webhook, url de webhook, webhook sincrónico, webhook post-llamada, server url, eventos de webhook, automatización, integración, imash"
 }

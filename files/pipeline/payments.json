@@ -1,0 +1,119 @@
+{
+  "title": "Payments (Stripe)",
+  "lede": "Turn iMash into your payment terminal: connect a merchant account once, and every invoice, quote, and job you send becomes instantly payable — with the money settling straight into your bank account.",
+  "timeToComplete": "10 minutes",
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open the Payments page",
+      "content": "<p>This page is your merchant control center — where you connect a payment account, watch transactions come in, and manage payouts to your bank. It's separate from <em>Billing</em> (which is what you pay iMash); <em>Payments</em> is what your <strong>customers pay you</strong>.</p><ol><li>In the left sidebar, scroll to the <strong>CRM</strong> section and click <strong>Payments</strong> (or go directly to <code>/settings/payments</code>).</li><li>The header reads <strong>Payments — Accept invoice payments directly into your bank account</strong>.</li><li>If a gold <strong>TEST MODE</strong> tag appears next to the title, payments are simulated: use test cards like <code>4242 4242 4242 4242</code> and no real money moves until live mode is enabled.</li></ol><blockquote>💡 Don't see Payments in the sidebar? Either the platform admin hasn't enabled merchant payments for your account yet, or (on a sub-account) your main account hasn't granted you <strong>Payments Page Access</strong>. Contact them — or <a href=\"mailto:support@imash.io\">support@imash.io</a> — to switch it on.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/payments-overview-light.png", "alt": "Payments page Overview tab with merchant account status", "caption": "The Payments page: status banners at the top, eight tabs below", "theme": "light" },
+        { "src": "images/pipeline/payments-overview-dark.png", "alt": "Payments page Overview tab with merchant account status", "caption": "The Payments page: status banners at the top, eight tabs below", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "read-status-card",
+      "title": "Read your Merchant Account status",
+      "content": "<p>The <strong>Overview</strong> tab opens first. Its <strong>Merchant Account</strong> card tells you at a glance whether you can take money:</p><ul><li><strong>Active</strong> (green) — fully verified; charges and payouts are on.</li><li><strong>Onboarding in progress</strong> (gold) — you started connecting but Stripe still needs information.</li><li><strong>Restricted</strong> (red) — something is past due (verification, bank account, business details) and charging or payouts may be paused until you fix it.</li><li><strong>Disconnected</strong> — the account was unlinked; invoices can't be charged.</li></ul><p>Below the status you'll see <strong>Account ID</strong>, <strong>Country</strong>, <strong>Charges enabled</strong>, <strong>Payouts enabled</strong>, <strong>Connected since</strong>, and <strong>Mode</strong> (Test or Live). Use the buttons in the card header:</p><ul><li><strong>Refresh</strong> — pulls your latest live status from the payment provider.</li><li><strong>Disconnect</strong> — unlinks the merchant account (asks for confirmation; shown once onboarding is complete).</li></ul>",
+      "images": [
+        { "src": "images/pipeline/payments-status-card-light.png", "alt": "Merchant Account status card with Restricted tag and account details", "caption": "The Merchant Account card: status tag, alerts, and account details", "theme": "light" },
+        { "src": "images/pipeline/payments-status-card-dark.png", "alt": "Merchant Account status card with Restricted tag and account details", "caption": "The Merchant Account card: status tag, alerts, and account details", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "connect-merchant-account",
+      "title": "Connect (or finish connecting) your merchant account",
+      "content": "<p>Connecting takes 5–10 minutes and you only do it once. iMash partners with Stripe, so your banking details go straight to the payment provider — the platform never sees or stores them.</p><ol><li>If you've never connected: on the <strong>Overview</strong> tab, click <strong>Connect Merchant Account</strong>.</li><li>If you started before and see an <strong>Onboarding incomplete</strong> alert (or the red <strong>Your merchant account needs urgent attention</strong> banner): click <strong>Continue onboarding</strong>.</li><li>The <strong>Connect your merchant account</strong> window opens right inside iMash. Click <strong>Add information</strong> and follow the form: business type, business details (website, product description, support phone), your personal verification, and the <strong>bank account</strong> your payouts will land in.</li><li>When you finish, you return to the Payments page and the status refreshes automatically. Click <strong>Refresh</strong> on the Merchant Account card if you want to re-check.</li></ol><blockquote>⚠️ If you close the form halfway, your account sits in <strong>Onboarding in progress</strong> (or becomes <strong>Restricted</strong> with \"past due\" requirements) and you can't accept payments. The red banner lists exactly which items Stripe still needs — click <strong>Continue onboarding</strong> and complete just those.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/payments-onboarding-modal-light.png", "alt": "Connect your merchant account onboarding window", "caption": "Onboarding happens in an embedded window — click Add information to start", "theme": "light" },
+        { "src": "images/pipeline/payments-onboarding-modal-dark.png", "alt": "Connect your merchant account onboarding window", "caption": "Onboarding happens in an embedded window — click Add information to start", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "tour-the-tabs",
+      "title": "Know your way around the eight tabs",
+      "content": "<p>Everything money-related lives in one row of tabs:</p><ul><li><strong>Overview</strong> — connection status, balance snapshot, and (for main accounts) sub-account payment permissions.</li><li><strong>Transactions</strong> — every payment your customers make, with fees and refund controls.</li><li><strong>Disputes</strong> — chargebacks and the evidence you submit to fight them.</li><li><strong>Payouts & Bank</strong> — your balance, payout schedule, and bank accounts.</li><li><strong>Account</strong> — business info, statement descriptor, and verification documents.</li><li><strong>Balances</strong> — the full balance picture: available vs. pending, plus top-ups if a refund pulled you negative.</li><li><strong>Documents</strong> — tax forms (like US 1099-K), statements, and payout reports.</li><li><strong>Notifications</strong> — time-sensitive merchant alerts (disputes, payout failures, fraud warnings).</li></ul><p>Each tab has its own web address (for example <code>/settings/payments/payouts</code>), so links in payment-provider emails land you exactly where action is needed.</p>",
+      "images": [
+        { "src": "images/pipeline/payments-tabs-light.png", "alt": "Payments tabs row: Overview, Transactions, Disputes, Payouts and Bank, Account, Balances, Documents, Notifications", "caption": "The eight Payments tabs", "theme": "light" },
+        { "src": "images/pipeline/payments-tabs-dark.png", "alt": "Payments tabs row: Overview, Transactions, Disputes, Payouts and Bank, Account, Balances, Documents, Notifications", "caption": "The eight Payments tabs", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "transactions",
+      "title": "Track every payment in Transactions",
+      "content": "<ol><li>Click the <strong>Transactions</strong> tab.</li><li>Once your account is active, every payment made against your invoices appears here as customers pay. Click any line for the full breakdown — gross amount, card processing fee, and platform fee — and to issue a <strong>refund</strong> directly from the payment detail.</li><li>Below the payment list, the <strong>Linked transactions</strong> card matches each payment to the CRM record behind it — click through to the exact <strong>invoice</strong> or <strong>job</strong> that was paid.</li></ol><p>Until onboarding is finished, this tab shows an <strong>Onboarding not complete</strong> notice instead of the list — one more reason to finish step 3.</p>",
+      "images": [
+        { "src": "images/pipeline/payments-transactions-light.png", "alt": "Transactions tab of the Payments page", "caption": "The Transactions tab — payments appear here as customers pay your invoices", "theme": "light" },
+        { "src": "images/pipeline/payments-transactions-dark.png", "alt": "Transactions tab of the Payments page", "caption": "The Transactions tab — payments appear here as customers pay your invoices", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "payouts-and-bank",
+      "title": "Manage payouts and bank accounts",
+      "content": "<ol><li>Click the <strong>Payouts &amp; Bank</strong> tab.</li><li>Here you view your available balance, set your <strong>payout schedule</strong> (how often money moves to your bank), and manage the <strong>bank accounts</strong> your funds land in. Payouts typically arrive within 1–2 business days for card payments and 1–3 business days for bank deposits.</li><li>Once your account is active, the <strong>Overview</strong> tab also grows a <strong>Balance &amp; Payouts</strong> card with two live tiles — <strong>Available</strong> (ready to pay out per your schedule) and <strong>Pending</strong> (captured from customers, settling — typically 2 business days for cards) — plus a <strong>Recent payouts</strong> table showing Amount, Status, Method, and Arrives date.</li></ol><blockquote>💡 New payments always sit in <strong>Pending</strong> briefly before becoming <strong>Available</strong> — that's normal card settlement, not a problem with your account.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/payments-payouts-light.png", "alt": "Payouts and Bank tab of the Payments page", "caption": "The Payouts & Bank tab — balance, payout schedule, and bank accounts", "theme": "light" },
+        { "src": "images/pipeline/payments-payouts-dark.png", "alt": "Payouts and Bank tab of the Payments page", "caption": "The Payouts & Bank tab — balance, payout schedule, and bank accounts", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "disputes",
+      "title": "Respond to disputes before the deadline",
+      "content": "<ol><li>Click the <strong>Disputes</strong> tab to see all open and historical chargebacks. Filter by <strong>Reason</strong>, <strong>Status</strong>, <strong>Amount</strong>, <strong>Disputed date</strong>, or <strong>Respond by</strong>, and use <strong>Export</strong> to download the list.</li><li>Click into any dispute to <strong>upload evidence</strong> — receipts, customer communications, proof of delivery — before the <strong>Respond by</strong> deadline.</li></ol><blockquote>⚠️ Disputes have hard deadlines. Miss the <strong>Respond by</strong> date and the chargeback is usually lost automatically — check the <strong>Notifications</strong> tab (step 9) so a new dispute never slips past you.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/payments-disputes-light.png", "alt": "Disputes tab with filters and dispute list", "caption": "The Disputes tab — filter, export, and click into a dispute to upload evidence", "theme": "light" },
+        { "src": "images/pipeline/payments-disputes-dark.png", "alt": "Disputes tab with filters and dispute list", "caption": "The Disputes tab — filter, export, and click into a dispute to upload evidence", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "account-balances-documents",
+      "title": "Update business details, balances, and documents",
+      "content": "<p>Three more tabs round out the picture:</p><ul><li><strong>Account</strong> — update your business information, <strong>statement descriptor</strong> (the text that shows on your customers' card statements), and verification documents. For security, this tab asks you to <strong>Sign in to see details</strong> first — a quick identity check with the payment provider before sensitive data is shown.</li><li><strong>Balances</strong> — your full balance picture: what's available for payout right now, what's still pending settlement, your payout cadence, and — if a chargeback or refund pulled your balance negative — a top-up option so future payouts can resume.</li><li><strong>Documents</strong> — every document the payments provider has prepared for your account, including <strong>1099-K tax forms</strong> (US merchants meeting the IRS reporting threshold), monthly account statements, and payout reports. Click any row to download a PDF or CSV.</li></ul>",
+      "images": [
+        { "src": "images/pipeline/payments-account-light.png", "alt": "Account tab with business settings and sign-in prompt", "caption": "The Account tab — a quick sign-in protects your business and bank details", "theme": "light" },
+        { "src": "images/pipeline/payments-account-dark.png", "alt": "Account tab with business settings and sign-in prompt", "caption": "The Account tab — a quick sign-in protects your business and bank details", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "notifications",
+      "title": "Watch merchant alerts in Notifications",
+      "content": "<ol><li>Click the <strong>Notifications</strong> tab.</li><li>The <strong>Merchant alerts</strong> feed queues time-sensitive events so nothing slips by: <strong>Dispute filed</strong>, <strong>Dispute updated</strong>, <strong>Payout failed</strong>, and <strong>Fraud warning</strong>.</li><li>Each row shows the alert <strong>Type</strong>, <strong>Subject</strong>, <strong>Email</strong> delivery status, and <strong>When</strong> it happened. Click <strong>Refresh</strong> to pull the latest.</li></ol><p>An empty list here is good news — it means no disputes, failed payouts, or fraud flags need your attention.</p>",
+      "images": [
+        { "src": "images/pipeline/payments-notifications-light.png", "alt": "Notifications tab with merchant alerts feed", "caption": "The Notifications tab — disputes, payout failures, and fraud warnings land here", "theme": "light" },
+        { "src": "images/pipeline/payments-notifications-dark.png", "alt": "Notifications tab with merchant alerts feed", "caption": "The Notifications tab — disputes, payout failures, and fraud warnings land here", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "sub-accounts",
+      "title": "Control payments for your sub-accounts (main accounts only)",
+      "content": "<p>If you run a team, the <strong>Sub-accounts</strong> card at the bottom of the <strong>Overview</strong> tab decides how each team member's invoices get paid. Every sub-account starts fully off, with three independent switches per user:</p><ul><li><strong>Payment Processing</strong> — the master kill switch. ON: their invoices are payable (through their own merchant account or yours). OFF: nothing processes for them, period.</li><li><strong>Payments Page Access</strong> — whether they can open this Payments page themselves. OFF hides the page, but their invoices still process through <em>your</em> merchant account if Payment Processing is on.</li><li><strong>Independent Processor</strong> — ON: they connect and use their <strong>own</strong> merchant account. OFF: their payments route through <strong>your</strong> merchant account. (Locked until Page Access is on — they can't manage an account they can't see.)</li></ul><p>The <strong>Routing</strong> and <strong>Merchant status</strong> columns show, per sub-account, where their money flows and whether their own account is connected.</p><blockquote>⚠️ Turning on <strong>Independent Processor</strong> for a sub who hasn't connected their own account yet means their invoices <strong>stop processing</strong> until they finish connecting — they will not silently fall back to your merchant account.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/payments-subaccounts-light.png", "alt": "Sub-accounts permissions card with per-user payment toggles", "caption": "The Sub-accounts card — Payment Processing, Page Access, and Independent Processor per user", "theme": "light" },
+        { "src": "images/pipeline/payments-subaccounts-dark.png", "alt": "Sub-accounts permissions card with per-user payment toggles", "caption": "The Sub-accounts card — Payment Processing, Page Access, and Independent Processor per user", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "get-paid-everywhere",
+      "title": "Put it to work: pay links, saved cards, tap-to-pay, and refunds",
+      "content": "<p>Once your merchant account is <strong>Active</strong>, getting paid stops being a chore:</p><ul><li><strong>Pay links on every invoice and quote</strong> — send an invoice by email or use the SMS <strong>Text Pay Link</strong> option in the send composer, and your customer pays online with a card in seconds. Paid invoices update automatically in your Pipeline.</li><li><strong>Saved cards</strong> — on any lead, contact, or account record, click <strong>Add card</strong> under Payment Methods to keep a card on file, then charge future invoices in one click — perfect for repeat customers.</li><li><strong>Tap-to-pay in the field</strong> — technicians using the iMash Tech mobile app can take in-person card payments by tapping the customer's card or phone on their own device. No card reader needed.</li><li><strong>Refunds</strong> — open an invoice's payment list (or a transaction in the <strong>Transactions</strong> tab) and issue a full or partial refund; the payment's status flips to <strong>Fully Refunded</strong> or <strong>Partially Refunded</strong> automatically.</li></ul><p>That's the whole loop: quote it, invoice it, get paid, and watch the money land in your bank — all without leaving iMash.</p>"
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Your merchant account is live — now build the documents your customers will pay.",
+    "cards": [
+      { "href": "/pipeline/invoices", "title": "Invoices", "description": "Create and send payable invoices — the documents your customers settle through your new merchant account." },
+      { "href": "/pipeline/quotes", "title": "Quotes", "description": "Send quotes your customers can approve and pay online." },
+      { "href": "/pipeline/subscriptions", "title": "Subscriptions", "description": "Charge customers on a repeating schedule using saved payment methods." },
+      { "href": "/settings/billing", "title": "Billing", "description": "The other side of money: manage the prepaid balance that funds your iMash usage." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>Stuck on onboarding, a restricted account, or a dispute? Email <a href=\"mailto:support@imash.io\">support@imash.io</a> and we'll help you get paid.</p>"
+  },
+  "metaTitle": "Payments (Stripe) — Accept Customer Payments | iMash Documentation",
+  "metaDescription": "Connect a Stripe merchant account in iMash, accept invoice payments, track transactions and disputes, manage payouts and bank accounts, and control sub-account payment permissions.",
+  "metaKeywords": "iMash payments, stripe connect, merchant account, invoice payments, payouts, disputes, refunds, tap to pay, saved cards, sub-account payments"
+}

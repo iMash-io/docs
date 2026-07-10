@@ -1,47 +1,78 @@
 {
   "title": "Experiencia de espera y retención",
-  "lede": "Controla el audio que escucha una persona mientras espera a un humano — durante el timbrado, mientras está en cola y cuando un agente presiona Hold (Retener). Sube música y agrega mensajes hablados periódicos.",
-  "timeToComplete": "6 minutos",
+  "lede": "El silencio y el timbrado interminable hacen que las personas cuelguen — una experiencia de espera cuidada las mantiene en la línea. En pocos minutos configurará la música y los mensajes hablados que sus llamantes escuchan mientras timbra el grupo, mientras esperan en cola y cuando un agente los pone en espera.",
+  "timeToComplete": "8 minutos",
   "steps": [
     {
       "id": "open-waithold",
-      "title": "Abre la pestaña Wait & Hold experience (Experiencia de espera y retención)",
-      "content": "<ol><li>Ve a <strong>Call Center &rarr; Contact Center &rarr; Groups</strong> (Grupos) y selecciona un grupo.</li><li>Abre la pestaña <strong>Wait &amp; Hold experience</strong> (Experiencia de espera y retención).</li></ol>",
+      "title": "Abra la pestaña Wait & Hold experience",
+      "content": "<p>Todo lo de esta página se configura por grupo, así que cada equipo puede tener su propio sonido.</p><ol><li>En la barra lateral izquierda, bajo <strong>Call Center</strong> (Centro de llamadas), haga clic en <strong>Contact Center</strong> (Centro de contacto).</li><li>Abra la pestaña <strong>Groups</strong> (Grupos) en la parte superior de la página.</li><li>En la lista <strong>Groups</strong> de la izquierda, haga clic en el grupo que desea configurar.</li><li>En el panel del grupo, abra la pestaña <strong>Wait &amp; Hold experience</strong> (Experiencia de espera y retención); si no la ve, haga clic en el desbordamiento <strong>&hellip;</strong> al final de la barra de pestañas.</li></ol><p>Llegará a la tarjeta <strong>Caller wait &amp; hold experience</strong> con cuatro controles: <strong>Play wait audio during the initial group ring</strong>, <strong>Wait music</strong>, <strong>Periodic messages</strong> y <strong>Hold music</strong>.</p>",
       "images": [
-        { "src": "images/contact-center/cc-group-wait-hold-light.png", "alt": "Pestaña Wait & Hold experience", "caption": "Wait & Hold: música de espera, mensajes periódicos y música de retención.", "theme": "light" },
-        { "src": "images/contact-center/cc-group-wait-hold-dark.png", "alt": "Pestaña Wait & Hold experience", "caption": "Wait & Hold: música de espera, mensajes periódicos y música de retención.", "theme": "dark" }
+        { "src": "images/contact-center/cc-group-wait-hold-light.png", "alt": "Pestaña Wait & Hold experience dentro de un grupo del Contact Center", "caption": "La pestaña Wait & Hold experience: modo de audio de timbrado, música de espera, mensajes periódicos y música de retención.", "theme": "light" },
+        { "src": "images/contact-center/cc-group-wait-hold-dark.png", "alt": "Pestaña Wait & Hold experience dentro de un grupo del Contact Center", "caption": "La pestaña Wait & Hold experience: modo de audio de timbrado, música de espera, mensajes periódicos y música de retención.", "theme": "dark" }
       ]
     },
     {
+      "id": "understand-journey",
+      "title": "Conozca los tres momentos en que el llamante puede escuchar este audio",
+      "content": "<p>Antes de activar cualquier interruptor, conviene saber exactamente cuándo suena cada cosa:</p><ul><li><strong>Durante el timbrado inicial</strong> — mientras iMash hace sonar los teléfonos de los miembros del grupo. Por defecto el llamante escucha el tono de llamada normal; puede reemplazarlo por su audio de espera (siguiente paso).</li><li><strong>Mientras está en cola</strong> — cuando el llamante espera en fila al siguiente agente libre (por ejemplo, una transferencia a cola, o cuando todos los agentes están ocupados). Su <strong>Wait music</strong> (música de espera) y sus <strong>Periodic messages</strong> (mensajes periódicos) también suenan aquí.</li><li><strong>En espera (Hold)</strong> — cuando un agente presiona <strong>Hold</strong> (Retener) durante una llamada activa, el llamante escucha su <strong>Hold music</strong> (música de retención).</li></ul><blockquote>💡 La cola tiene opciones adicionales exclusivas — tiempo máximo de espera, acción al agotarse y anuncios propios de la cola con el token en vivo <code>{callers_queue_position}</code>. Estas opciones están en la pestaña <strong>Queue Settings</strong> (Configuración de cola), cubierta en su propia guía.</blockquote>"
+    },
+    {
       "id": "wait-audio-mode",
-      "title": "Decide qué suena durante el timbrado",
-      "content": "<p>Usa <strong>Play wait audio during the initial group ring</strong> (Reproducir audio de espera durante el timbrado inicial del grupo) para elegir qué escucha la persona mientras el grupo está sonando:</p><ul><li><strong>Off</strong> (Desactivado) — timbre telefónico normal (predeterminado).</li><li><strong>Only when a member is online</strong> (Solo cuando hay un miembro en línea).</li><li><strong>Always</strong> (Siempre) — incluso si no hay nadie en línea.</li></ul><p>Activarlo contesta la llamada anticipadamente para que suene tu música y mensajes de espera en lugar del timbre — ten en cuenta que la llamada se conecta (y se factura) desde ese momento.</p>"
+      "title": "Elija qué suena durante el timbrado inicial del grupo",
+      "content": "<p>El menú <strong>Play wait audio during the initial group ring</strong> (Reproducir audio de espera durante el timbrado inicial del grupo) decide qué escucha el llamante mientras suenan los teléfonos de su equipo:</p><ul><li><strong>Off — normal phone ringing (default)</strong> — el llamante escucha el tono de llamada estándar hasta que alguien contesta.</li><li><strong>Only when a member is online</strong> — reproduce su audio de espera en lugar del timbrado, pero solo cuando al menos un miembro del grupo está en línea para atender.</li><li><strong>Always (even if nobody is online)</strong> — reproduce su audio de espera en cada llamada, incluso sin nadie en línea.</li></ul><blockquote>⚠️ Activar esta opción contesta la llamada de inmediato para que su música y mensajes suenen en lugar del timbrado — es decir, la llamada se conecta (y empieza a facturarse) desde ese momento. Déjela en <strong>Off</strong> si prefiere que la llamada se conecte solo cuando conteste un humano.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/wait-hold-ring-audio-light.png", "alt": "Opciones del modo de audio de timbrado: Off, Only when a member is online, Always", "caption": "Los tres modos de audio de timbrado: tono normal, solo cuando hay un miembro en línea, o siempre.", "theme": "light" },
+        { "src": "images/contact-center/wait-hold-ring-audio-dark.png", "alt": "Opciones del modo de audio de timbrado: Off, Only when a member is online, Always", "caption": "Los tres modos de audio de timbrado: tono normal, solo cuando hay un miembro en línea, o siempre.", "theme": "dark" }
+      ]
     },
     {
       "id": "wait-music",
-      "title": "Agrega música de espera y mensajes periódicos",
-      "content": "<ol><li>Activa <strong>Wait music</strong> (Música de espera) y usa <strong>Upload wait music</strong> (Subir música de espera) (o pega una URL de audio). Usa un bucle corto; el límite es 10 MB.</li><li>Activa <strong>Periodic messages</strong> (Mensajes periódicos) para decir líneas cortas en bucle mientras la persona espera. Agrega varios — se reproducen en orden, cada uno tras su intervalo.</li><li>Define el intervalo de cada mensaje como un solo número (por ejemplo 30) o un rango como 15-45 para una espera aleatoria. Tokens como {first_name} se completan para la llamada.</li></ol>"
+      "title": "Agregue música de espera",
+      "content": "<p><strong>Wait music</strong> (Música de espera) es la banda sonora mientras el grupo timbra o el llamante está en cola. Para configurarla:</p><ol><li>Active el interruptor <strong>Wait music</strong> — aparece un área de carga.</li><li>Haga clic en <strong>Upload wait music</strong> (Subir música de espera) y elija un archivo de audio (un MP3 funciona muy bien), o pegue un enlace en el campo <strong>&hellip;or paste an audio URL</strong> (o pegue una URL de audio) si su pista ya está alojada en línea.</li></ol><blockquote>💡 El límite de carga es 10 MB — de sobra, ya que un MP3 de 128&nbsp;kbps pesa alrededor de 1&nbsp;MB por minuto. Use un bucle corto y agradable (30–90 segundos); la pista se repite automáticamente mientras el llamante espere.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/wait-hold-wait-music-light.png", "alt": "Wait music activada con el botón Upload wait music y el campo de URL de audio", "caption": "Active Wait music y luego suba una pista o pegue una URL de audio.", "theme": "light" },
+        { "src": "images/contact-center/wait-hold-wait-music-dark.png", "alt": "Wait music activada con el botón Upload wait music y el campo de URL de audio", "caption": "Active Wait music y luego suba una pista o pegue una URL de audio.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "periodic-messages",
+      "title": "Agregue mensajes periódicos hablados",
+      "content": "<p>La música sola está bien — la música más una voz amable es mejor. Los <strong>Periodic messages</strong> (mensajes periódicos) son frases cortas habladas sobre la experiencia de espera en bucle: suenan en orden, cada una tras su propio intervalo, y luego el ciclo se repite.</p><ol><li>Active el interruptor <strong>Periodic messages</strong>.</li><li>(Opcional) Marque <strong>Play the first message once before the wait music starts</strong> (Reproducir el primer mensaje una vez antes de que empiece la música) para convertir el mensaje 1 en un saludo único — recibe una etiqueta azul <strong>Before music</strong> (Antes de la música) y suena de inmediato, antes de cualquier música.</li><li>Escriba cada mensaje en su cuadro de texto (hasta 300 caracteres). Los tokens de personalización como <code>{first_name}</code> se completan automáticamente para el llamante, p. ej. <em>&laquo;Gracias por esperar, {first_name} — ¡es el siguiente!&raquo;</em></li><li>En el campo pequeño junto a cada mensaje, defina los segundos de espera antes de que suene — un solo número como <strong>30</strong>, o un rango como <strong>15-45</strong> para una espera aleatoria cada vez (se siente más natural que anuncios de relojería).</li><li>Haga clic en <strong>Add message</strong> (Agregar mensaje) para añadir más líneas, o en el icono rojo de papelera para eliminar una (el último mensaje restante no se puede borrar).</li></ol>",
+      "images": [
+        { "src": "images/contact-center/wait-hold-periodic-light.png", "alt": "Editor de mensajes periódicos con la casilla de introducción antes de la música, dos filas de mensajes e intervalos", "caption": "El editor de mensajes periódicos: un saludo opcional antes de la música y luego mensajes en bucle con intervalos por mensaje.", "theme": "light" },
+        { "src": "images/contact-center/wait-hold-periodic-dark.png", "alt": "Editor de mensajes periódicos con la casilla de introducción antes de la música, dos filas de mensajes e intervalos", "caption": "El editor de mensajes periódicos: un saludo opcional antes de la música y luego mensajes en bucle con intervalos por mensaje.", "theme": "dark" }
+      ]
     },
     {
       "id": "hold-music",
-      "title": "Configura la música de retención",
-      "content": "<p>Activa <strong>Hold music</strong> (Música de retención) y sube una pista (o pega una URL). Esto se reproduce a la persona cuando un agente presiona <strong>Hold</strong> (Retener) durante una llamada en vivo. Haz clic en <strong>Save</strong> (Guardar) cuando termines.</p>"
+      "title": "Configure la música de retención",
+      "content": "<p><strong>Hold music</strong> (Música de retención) suena cuando un agente presiona <strong>Hold</strong> (Retener) durante una llamada activa — el llamante escucha su pista en lugar de silencio absoluto.</p><ol><li>Active el interruptor <strong>Hold music</strong>.</li><li>Haga clic en <strong>Upload hold music</strong> (Subir música de retención) y elija un archivo de audio, o pegue un enlace en el campo <strong>&hellip;or paste an audio URL</strong>.</li></ol><blockquote>💡 Puede reutilizar la misma pista que su música de espera para un sonido de marca uniforme, o elegir otra distinta — son configuraciones independientes. Esta pista es también la que escuchan los llamantes en cola cuando la opción <strong>Play hold music while queued</strong> (Reproducir música de retención en cola) está activada (vea Configuración de cola).</blockquote>",
+      "images": [
+        { "src": "images/contact-center/wait-hold-hold-music-light.png", "alt": "Hold music activada con el botón Upload hold music y el campo de URL de audio", "caption": "Active Hold music y suba la pista que escuchan los llamantes cuando un agente presiona Hold.", "theme": "light" },
+        { "src": "images/contact-center/wait-hold-hold-music-dark.png", "alt": "Hold music activada con el botón Upload hold music y el campo de URL de audio", "caption": "Active Hold music y suba la pista que escuchan los llamantes cuando un agente presiona Hold.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "save-and-test",
+      "title": "Guarde y escúchelo usted mismo",
+      "content": "<ol><li>Haga clic en <strong>Save</strong> (Guardar) en la esquina inferior derecha — un solo Save confirma todas las pestañas de la configuración del grupo.</li><li>Pruébelo como cliente: llame a uno de los números entrantes del grupo (definidos en la pestaña <strong>Inbound SIP Routing</strong>) y deje que timbre sin contestar. Debería escuchar su música y mensajes de espera exactamente como los configuró.</li><li>Para probar la música de retención, conteste una llamada del grupo desde el marcador web y presione <strong>Hold</strong> — el lado del llamante cambia a su pista de retención.</li></ol><p>Eso es todo — desde el primer timbre hasta que un agente contesta, sus llamantes ahora escuchan una experiencia profesional y de marca en lugar de silencio. 🎶</p>"
     }
   ],
   "nextSteps": {
     "title": "¿Qué sigue?",
-    "description": "Decide qué pasa cuando la espera se alarga.",
+    "description": "Ya perfeccionó lo que escuchan sus llamantes — ahora decida cuánto esperan y qué pasa cuando la espera se alarga.",
     "cards": [
-      { "href": "/contact-center/queue-settings", "title": "Ajustes de cola", "description": "Tiempo máximo de espera y comportamiento al agotarse el tiempo." },
-      { "href": "/contact-center/ring-strategy", "title": "Estrategia de timbrado", "description": "Cómo suena el grupo antes de pasar a la cola." },
-      { "href": "/contact-center/overview", "title": "Visión general del Contact Center", "description": "Ve todo el espacio de trabajo." }
+      { "href": "/contact-center/queue-settings", "title": "Configuración de cola", "description": "Tiempo máximo de espera, acción al agotarse y anuncios exclusivos de la cola con posición en vivo." },
+      { "href": "/contact-center/ring-strategy", "title": "Estrategia de timbrado", "description": "Cómo se hace timbrar a los miembros del grupo antes del respaldo con IA." },
+      { "href": "/contact-center/agent-guide", "title": "Guía del agente", "description": "Cómo sus agentes contestan, retienen y transfieren llamadas en el día a día." }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
+    "title": "¿Necesita ayuda?",
+    "content": "<p>Si tiene algún problema o pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Experiencia de espera y retención | iMash Docs",
-  "metaDescription": "Configura la música de retención, la música de espera y los mensajes hablados periódicos que escucha una persona mientras está en cola o en espera para un grupo del Contact Center en iMash.",
-  "metaKeywords": "música de retención, música de espera, mensajes periódicos, saludo, audio de cola, contact center, grupo de permisos"
+  "metaTitle": "Experiencia de espera y retención | Documentación de iMash",
+  "metaDescription": "Configure la música de espera, los mensajes periódicos hablados y la música de retención que escuchan los llamantes mientras timbra un grupo del Contact Center, esperan en cola o están en espera en iMash.",
+  "metaKeywords": "música de espera, música de retención, mensajes periódicos, audio de cola, experiencia en espera, audio de timbrado, contact center, grupo de permisos, iMash"
 }

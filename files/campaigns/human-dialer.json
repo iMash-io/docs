@@ -1,0 +1,128 @@
+{
+  "title": "Human Dialer — Power & Predictive Dialing for Your Team",
+  "lede": "Turn a list of leads into back-to-back live conversations. The Human Dialer places outbound calls automatically, screens out voicemails with AI, and rings only the real humans through to your sales team — so your people spend their day talking, not dialing.",
+  "timeToComplete": "12 minutes",
+  "steps": [
+    {
+      "id": "meet-the-human-dialer",
+      "title": "Meet the Human Dialer",
+      "content": "<p>The Human Dialer is the counterpart to your AI campaigns: instead of an AI agent doing the talking, <em>your human team</em> takes the calls — and the platform does everything else. It dials the list, detects answering machines, and hands each connected human to the first available agent, right in their web dialer.</p><p>Two dialing modes are built in:</p><ul><li><strong>📞 Power Dial</strong> — one line per agent. The moment an agent is free, the next contact is dialed. Zero risk of abandoned calls.</li><li><strong>⚡ Predictive</strong> — several lines per agent at once, screened by AI. Maximum talk time for large teams, with a configurable overflow policy for the rare call nobody can take.</li></ul><ol><li>In the top navigation, click <strong>Campaigns</strong>.</li><li>Select the <strong>Human Dialer</strong> sub-tab. You land on the <strong>Dial Lists</strong> table — every human-dialing campaign you have.</li><li>Each row shows the list's <strong>Name</strong>, <strong>Description</strong>, <strong>Contacts</strong> count, <strong>Progress</strong> bar (completed vs. total), <strong>Status</strong> (Active/Inactive) and <strong>Created</strong> date. Use the <strong>Search dial lists</strong> box or the <strong>Filter by owner</strong> dropdown to find a list fast.</li><li>Under <strong>Actions</strong>, the green eye opens a list and the red trash icon deletes it (you'll be asked to confirm — deleting also removes the list's queued contacts).</li></ol><blockquote>💡 Looking for AI-run campaigns instead? That's the <strong>Smart Dialer</strong> tab right next door — the Human Dialer is specifically for lists your people will talk through live.</blockquote>",
+      "images": [
+        {"src": "images/campaigns/human-dialer-list-light.png", "alt": "Human Dialer dial lists table under Campaigns", "caption": "Campaigns → Human Dialer — every dial list with contacts, progress, and status at a glance.", "theme": "light"},
+        {"src": "images/campaigns/human-dialer-list-dark.png", "alt": "Human Dialer dial lists table under Campaigns (dark mode)", "caption": "Campaigns → Human Dialer — every dial list with contacts, progress, and status at a glance.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "create-dial-list",
+      "title": "Create your dial list",
+      "content": "<p>A dial list is the container for one human-dialing campaign: the people to call plus the dialer configuration.</p><ol><li>Click <strong>Create Dial List</strong> in the top-right of the Human Dialer page.</li><li>Enter a <strong>Name</strong> your team will recognize (required) — e.g. \"Warm Leads Follow-Up\".</li><li>Optionally add a <strong>Description</strong> so everyone knows what this list is for.</li><li>Leave the <strong>Active</strong> toggle on (an inactive list is kept but clearly flagged as not in use).</li><li>Click <strong>Save</strong>. You're taken straight to the new list's page.</li></ol>",
+      "images": [
+        {"src": "images/campaigns/human-dialer-create-light.png", "alt": "Create Dial List form with Name, Description and Active toggle", "caption": "Create Dial List — a name is all you need to get started.", "theme": "light"},
+        {"src": "images/campaigns/human-dialer-create-dark.png", "alt": "Create Dial List form with Name, Description and Active toggle (dark mode)", "caption": "Create Dial List — a name is all you need to get started.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "add-contacts",
+      "title": "Load contacts and leads into the queue",
+      "content": "<p>Now fill the list with the people your team should reach. Everything comes straight from your CRM — no CSV juggling.</p><ol><li>On the dial list page, click <strong>Add Contacts/Leads</strong> in the top-right.</li><li>In the modal, pick the <strong>Entity Type</strong>: <strong>Contacts</strong> or <strong>Leads</strong>.</li><li>Narrow the pool with the three filters: <strong>Search</strong> (by name or email), <strong>Filter by Tag</strong>, and <strong>Filter by Account</strong>.</li><li>Tick individual people, or use <strong>Select All on This Page</strong>. For big audiences, <strong>Select All Across All Pages</strong> grabs every record that matches your filters — the total count is shown right on the checkbox.</li><li>Click <strong>Add Selected</strong>. Large selections show a progress dialog while they're queued.</li></ol><blockquote>💡 You can re-open this modal any time to top up the list — people already on the list aren't duplicated, and the dialer picks up new entries even mid-session.</blockquote>",
+      "images": [
+        {"src": "images/campaigns/human-dialer-add-contacts-light.png", "alt": "Add Contacts/Leads to Dial List modal with entity type, search, tag and account filters", "caption": "Add Contacts/Leads — filter your CRM, select in bulk, done.", "theme": "light"},
+        {"src": "images/campaigns/human-dialer-add-contacts-dark.png", "alt": "Add Contacts/Leads to Dial List modal with entity type, search, tag and account filters (dark mode)", "caption": "Add Contacts/Leads — filter your CRM, select in bulk, done.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "know-the-list-page",
+      "title": "Know your way around the dial list page",
+      "content": "<p>The list page is mission control for this campaign. From top to bottom:</p><ul><li><strong>Stat tiles</strong> — <strong>Total Contacts</strong>, <strong>Completed</strong>, <strong>Progress</strong> (%), and <strong>Status</strong> (Active/Inactive).</li><li><strong>Predictive Dialer card</strong> — the heart of the page. It shows the current configuration as chips (or <strong>Not configured yet</strong>), with <strong>Configure</strong> and <strong>Start Session</strong> buttons. While a session runs, this card becomes the live dashboard.</li><li><strong>Description card</strong> — click <strong>Edit</strong> to update the note for your team.</li><li><strong>Contacts card</strong> — the full calling queue (next step).</li></ul><p>Two handy details:</p><ol><li>Click the list's <strong>title</strong> (or the ✏️ pencil next to it) to rename it inline.</li><li>Notice the hint under the buttons: agents never need to open this page — they take calls from their own web dialer. This page is for whoever runs the campaign.</li></ol>",
+      "images": [
+        {"src": "images/campaigns/human-dialer-detail-light.png", "alt": "Dial list page with stat tiles, Predictive Dialer card, description and contacts", "caption": "The dial list page — stats on top, the Predictive Dialer card in the middle, the queue below.", "theme": "light"},
+        {"src": "images/campaigns/human-dialer-detail-dark.png", "alt": "Dial list page with stat tiles, Predictive Dialer card, description and contacts (dark mode)", "caption": "The dial list page — stats on top, the Predictive Dialer card in the middle, the queue below.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "manage-the-queue",
+      "title": "Manage the calling queue",
+      "content": "<p>The <strong>Contacts</strong> card lists everyone in the queue with their live calling state:</p><ul><li><strong>Name</strong> — with a <strong>lead</strong>/<strong>contact</strong> badge; click through to the CRM record.</li><li><strong>Phone Number</strong> — the number that will be dialed.</li><li><strong>Status</strong> — e.g. <em>pending</em> (not called yet) or <em>completed</em>.</li><li><strong>Lifecycle Stage</strong> — the CRM stage, used by the dialer's audience filters.</li><li><strong>Call Count</strong> and <strong>Last Called</strong> — how many attempts so far and when the last one was.</li></ul><ol><li>Click <strong>Filters</strong> (top-right of the card) to open the filter panel: <strong>Status</strong>, <strong>Lifecycle Stage</strong>, <strong>Call Count (Min)</strong> and <strong>Call Count (Max)</strong>. <strong>Clear Filters</strong> resets everything.</li><li>To dial one person manually right now, click the blue phone icon in their <strong>Actions</strong> column — it opens your web dialer with the number ready.</li><li>To prune the queue, tick rows (or use <strong>Select All</strong> for every page) and click <strong>Remove Selected</strong>. The red trash icon removes a single entry.</li></ol><blockquote>⚠️ Removing someone from the dial list only takes them out of this queue — it never deletes the contact or lead from your CRM.</blockquote>",
+      "images": [
+        {"src": "images/campaigns/human-dialer-contacts-light.png", "alt": "Contacts queue table with filters, statuses, call counts and per-row actions", "caption": "The queue — filter it, dial one manually, or remove entries in bulk.", "theme": "light"},
+        {"src": "images/campaigns/human-dialer-contacts-dark.png", "alt": "Contacts queue table with filters, statuses, call counts and per-row actions (dark mode)", "caption": "The queue — filter it, dial one manually, or remove entries in bulk.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "configure-the-dialer",
+      "title": "Configure the dialer — mode, screening, and routing",
+      "content": "<p>Click <strong>Configure</strong> on the Predictive Dialer card to open the <strong>Dialer Settings</strong> drawer. This is where the magic is tuned. Top to bottom:</p><ul><li><strong>Dialing mode</strong> — pick the <strong>📞 Power Dial</strong> card (1 line per agent, no abandoned calls) or <strong>⚡ Predictive</strong> (multiple lines per agent, AI-screened, maximum talk time).</li><li><strong>Lines per agent</strong> (Predictive only) — 2, 3, 4, 5, 8 or 10 simultaneous calls per ready agent. Higher = less waiting, but more chance a human answers when everyone is busy.</li><li><strong>Use AMD screening</strong> — on: the AI listens to who answers and only hands <em>humans</em> to your team (voicemails are dropped automatically). Off: the call connects to the group the instant it's answered, voicemails included.</li><li><strong>Screening AI agent</strong> — the assistant that does the listening. Any transcription-only assistant works; the dialer runs answering-machine detection on it automatically.</li><li><strong>Route calls to group</strong> — <em>required.</em> Screened calls ring this Contact Center group's online agents, first to accept wins. The dialer paces itself off how many are available — and won't dial at all when nobody's online.</li><li><strong>Exclude specific agents (optional)</strong> — group members who should not receive calls from this campaign.</li><li><strong>Your caller ID(s)</strong> — pick one or more of your phone numbers. With several selected, the dialer rotates them round-robin, one per call, to spread volume.</li><li><strong>Route callbacks to the group</strong> — while the campaign runs, a prospect calling back one of your caller IDs rings the same group. The dropdown below sets the fallback when nobody's free: <strong>Let the number's default AI agent answer</strong>, <strong>Hand to a specific AI agent</strong>, <strong>Send to voicemail</strong>, or <strong>Drop the call</strong>.</li><li><strong>Overflow policy</strong> (Predictive only) — when a human answers but every agent is busy: <strong>Hang up politely</strong> or <strong>Hand to AI assistant</strong> (pick which one). Overflow-to-AI means no opportunity is ever wasted.</li><li><strong>Wrap-up time (seconds)</strong> — breathing room after each call before the next one is pushed to the agent.</li><li><strong>Treat uncertain answers as human</strong> — when the AI can't tell human from machine, connect it to an agent anyway (recommended: better a rare voicemail than a missed prospect).</li><li><strong>Dialing order</strong> — <strong>List order (as added)</strong>, <strong>Fewest attempts first</strong>, <strong>Longest since last call first</strong>, or <strong>Shuffle</strong>.</li></ul><p>The footer always shows <strong>Eligible to dial: X of Y</strong> — a live preview of how many queued contacts pass your current rules. Click <strong>Save Settings</strong> when you're done.</p><blockquote>⚠️ Your caller ID must be a number with outbound calling enabled — the save will tell you if a selected number has no outbound trunk configured. Settings are also locked while a session is running: stop the session first.</blockquote>",
+      "images": [
+        {"src": "images/campaigns/human-dialer-settings-light.png", "alt": "Dialer Settings drawer with mode cards, screening, group routing, caller IDs and overflow policy", "caption": "Dialer Settings — mode, AI screening, the operator group, caller IDs, callbacks and overflow.", "theme": "light"},
+        {"src": "images/campaigns/human-dialer-settings-dark.png", "alt": "Dialer Settings drawer with mode cards, screening, group routing, caller IDs and overflow policy (dark mode)", "caption": "Dialer Settings — mode, AI screening, the operator group, caller IDs, callbacks and overflow.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "advanced-rules",
+      "title": "Fine-tune retries, audience, and calling hours",
+      "content": "<p>Below the main settings, four collapsible panels give you enterprise-grade control:</p><ul><li><strong>🔄 Retry policy</strong> — <strong>Stop retrying after N total attempt(s) per contact</strong>; <strong>Minimum wait between attempts</strong> (in minutes, hours or days) so nobody gets hammered; <strong>Limit attempts per day to N per contact</strong>; and <strong>Retry only these outcomes</strong> — re-dial only contacts whose <em>last</em> call ended a certain way (no answer, busy, voicemail…). Never-called contacts are always eligible.</li><li><strong>🔎 Who gets dialed</strong> — include or exclude <strong>lifecycle stages</strong>, require or exclude <strong>tags</strong>, and add <strong>custom field filters</strong> (each row must match the contact's custom field exactly, case-insensitive). Perfect for dialing only \"New\" leads tagged \"VIP\".</li><li><strong>🕐 Calling hours</strong> — flip on <strong>Only dial during these hours</strong>, then set the window, the <strong>Days</strong>, and the <strong>Timezone</strong>. Outside the window no <em>new</em> calls are placed — calls already ringing finish normally, and dialing resumes by itself.</li><li><strong>🏷️ Custom lifecycle stages</strong> — give this list its own stage set (it starts as a copy of your CRM stages). These stages power the filters above and the post-call status popup your agents see.</li></ul><blockquote>💡 The <strong>Eligible to dial</strong> counter in the drawer footer updates live as you tighten these rules — you always know exactly how big your dialable audience is before you hit start.</blockquote>",
+      "images": [
+        {"src": "images/campaigns/human-dialer-settings-advanced-light.png", "alt": "Advanced panels: Retry policy, Who gets dialed, Calling hours, Custom lifecycle stages", "caption": "Retry limits, audience filters, calling hours and custom stages — all per dial list.", "theme": "light"},
+        {"src": "images/campaigns/human-dialer-settings-advanced-dark.png", "alt": "Advanced panels: Retry policy, Who gets dialed, Calling hours, Custom lifecycle stages (dark mode)", "caption": "Retry limits, audience filters, calling hours and custom stages — all per dial list.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "start-session",
+      "title": "Start the session and watch it live",
+      "content": "<p>Once configured, the Predictive Dialer card summarizes everything as chips — mode, lines per agent, screening agent, caller ID, operator group, overflow policy, wrap-up time, and how many contacts are eligible.</p><ol><li>Make sure at least one agent in the routed group is online and <strong>Available</strong> in their web dialer (next step) — the dialer only places calls when someone can take them.</li><li>Click <strong>Start Session</strong>. Only the main account can start, pause or stop sessions.</li><li>The card flips into a <strong>live dashboard</strong>: a <strong>Running</strong> badge, live counters for <strong>Connects</strong> (with humans reached), <strong>Voicemails</strong> (and total dialed), <strong>Abandoned</strong> (plus failed/cancelled), and <strong>AI Handoffs</strong>, a queue progress bar, and a roster of your agents with their current state.</li><li>Use <strong>Pause</strong> / <strong>Resume</strong> to hold dialing without losing your place, and <strong>Stop</strong> to end the session — you'll be asked to confirm, and any active lines are hung up.</li></ol><blockquote>💡 The session is fully server-side: you can close this page, and dialing continues. Come back any time — the dashboard reconnects to the live session automatically.</blockquote>",
+      "images": [
+        {"src": "images/campaigns/human-dialer-launcher-light.png", "alt": "Predictive Dialer launcher card with Configure and Start Session buttons", "caption": "The launcher card — configure once, then Start Session. While running, this becomes the live board.", "theme": "light"},
+        {"src": "images/campaigns/human-dialer-launcher-dark.png", "alt": "Predictive Dialer launcher card with Configure and Start Session buttons (dark mode)", "caption": "The launcher card — configure once, then Start Session. While running, this becomes the live board.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "agent-experience",
+      "title": "What your agents do — just be Available",
+      "content": "<p>Here's the beautiful part: your agents don't open the campaign at all. Their entire world is the web dialer they already use for inbound calls.</p><ol><li>Each agent logs into their own iMash account and opens the <strong>web dialer</strong> (the phone icon in the top-right of any page).</li><li>In the <strong>My status</strong> panel at the bottom of the dialer, they set themselves to <strong>Online</strong>. That's it — they're now in the pool for every campaign routed to their group.</li><li>When the dialer connects a real human, the call <strong>rings in their web dialer</strong> like any inbound call — with the contact's name and campaign context on the ring card. First agent to accept wins the call.</li><li>After hanging up, a short <strong>wrap-up countdown</strong> runs (the one you configured) before the next call is pushed. A status popup lets them log the outcome and move the contact's stage.</li></ol><blockquote>💡 Because screened calls ring the whole group and the first to accept wins, adding capacity is as simple as more agents flipping themselves Online — the dialer instantly paces up to match.</blockquote>",
+      "images": [
+        {"src": "images/campaigns/human-dialer-agent-home-light.png", "alt": "Agent view with the web dialer open on the right side", "caption": "The agent's view — the web dialer is where campaign calls arrive.", "theme": "light"},
+        {"src": "images/campaigns/human-dialer-agent-home-dark.png", "alt": "Agent view with the web dialer open on the right side (dark mode)", "caption": "The agent's view — the web dialer is where campaign calls arrive.", "theme": "dark"},
+        {"src": "images/campaigns/human-dialer-agent-status-light.png", "alt": "My status panel in the web dialer set to Online", "caption": "My status → Online — the only switch an agent needs to flip.", "theme": "light"},
+        {"src": "images/campaigns/human-dialer-agent-status-dark.png", "alt": "My status panel in the web dialer set to Online (dark mode)", "caption": "My status → Online — the only switch an agent needs to flip.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "review-results",
+      "title": "Review the results",
+      "content": "<p>Every dialer call is a first-class call in iMash, so your usual reporting works out of the box:</p><ul><li>The dial list's <strong>Progress</strong> tile and each contact's <strong>Status</strong>, <strong>Call Count</strong> and <strong>Last Called</strong> update as the session runs.</li><li>Open <strong>Contact Center → Call Logs</strong> for full recordings, transcripts and outcomes of every connected call — including which agent took it.</li><li>The session's own tallies (connects, voicemails, abandoned, AI handoffs) stay visible on the card until you start the next run.</li></ul><p>That's the whole loop: load a list in the morning, flip your team Online, and let the Human Dialer keep their headsets warm all day. 🚀</p>"
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Your team is dialing at full speed — round out the operation with groups, numbers, and the AI side of the house.",
+    "cards": [
+      {
+        "href": "/contact-center/groups",
+        "title": "Contact Center Groups",
+        "description": "Create and manage the agent groups your dialer routes calls to."
+      },
+      {
+        "href": "/contact-center/agent-guide",
+        "title": "Agent Guide",
+        "description": "The web dialer from your agents' point of view — statuses, transfers, and more."
+      },
+      {
+        "href": "/phone/add-phone-number",
+        "title": "Add a Phone Number",
+        "description": "Get outbound-ready caller IDs to rotate across your campaigns."
+      },
+      {
+        "href": "/campaigns/create-campaign",
+        "title": "Create an AI Campaign",
+        "description": "Let an AI agent run the conversation end-to-end with the Smart Dialer."
+      }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Human Dialer — Power & Predictive Dialing | iMash Documentation",
+  "metaDescription": "Set up the iMash Human Dialer: build a dial list from your CRM, choose Power Dial or Predictive mode, configure AI answering-machine screening, route connected humans to your agent group, and run live server-side dial sessions.",
+  "metaKeywords": "human dialer, predictive dialer, power dialer, auto dialer, dial list, AMD screening, answering machine detection, outbound calling, call center dialer, iMash"
+}

@@ -1,0 +1,153 @@
+{
+  "title": "Online Booking Forms",
+  "lede": "Let customers book you 24/7 — no phone call needed. Build a beautiful public booking page in minutes, drop the link into your Google Business Profile or embed it on your website, and every booking lands in iMash as a lead, a scheduled job, and a calendar appointment automatically.",
+  "timeToComplete": "15 minutes",
+  "steps": [
+    {
+      "id": "open-booking-forms",
+      "title": "Open Booking Forms",
+      "content": "<p>Booking Forms are public, self-service scheduling pages — think of them as your own \"Book Now\" website that fills your calendar while you sleep.</p><ol><li>In the top navigation, click <strong>CRM</strong>, then click the <strong>Booking Forms</strong> tab (or go directly to <code>/crm/booking-forms</code>).</li><li>The list shows every form you have created, with these columns:</li></ol><ul><li><strong>Form</strong> — the form name and its public link (<code>/forms/your-slug</code>). Click the link to open the live page, or the copy icon to copy the full URL.</li><li><strong>Type</strong> — <em>Booking</em> (scheduling with a time picker) or <em>Contact</em> (a capture form with no scheduling). Booking forms also show their availability mode: <em>standalone</em> or <em>by technicians</em>.</li><li><strong>Status</strong> — a <strong>Live</strong>/<strong>Off</strong> switch. Flip it off and the public page immediately stops accepting bookings — no need to open the editor.</li><li><strong>Performance</strong> — a live conversion funnel: <em>views → time → details → review → booked</em>, ending with a green tag showing total bookings and the conversion percentage.</li><li><strong>Actions</strong> — <strong>Bookings</strong> (opens the submissions list), the pencil to edit, and the trash icon to delete.</li></ul>",
+      "images": [
+        { "src": "images/crm/booking-forms-light.png", "alt": "Booking Forms list page with a live form and its conversion funnel", "caption": "The Booking Forms list — every form with its public link, Live switch, and a real-time conversion funnel", "theme": "light" },
+        { "src": "images/crm/booking-forms-dark.png", "alt": "Booking Forms list page with a live form and its conversion funnel", "caption": "The Booking Forms list — every form with its public link, Live switch, and a real-time conversion funnel", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "create-form",
+      "title": "Create your first form",
+      "content": "<ol><li>Click <strong>New form</strong> in the top-right corner.</li><li>Choose the type from the dropdown:</li></ol><ul><li><strong>Booking form (scheduling)</strong> — the full experience: customers pick services, choose a real open time slot, and confirm an appointment. This is what this guide focuses on.</li><li><strong>Contact form (capture / connect)</strong> — a simpler form that captures name, contact details, and a message (no time picker). It can also receive submissions from forms you already have on your own website. See the last step of this guide.</li></ol><p>The form is created instantly and you land in the full-page editor. A public web address (slug) is generated automatically from the form name — you can start sharing it as soon as you flip the form to <strong>Live</strong>.</p>",
+      "images": [
+        { "src": "images/crm/booking-forms-new-form-light.png", "alt": "New form dropdown with Booking form and Contact form options", "caption": "New form → choose Booking form (scheduling) or Contact form (capture / connect)", "theme": "light" },
+        { "src": "images/crm/booking-forms-new-form-dark.png", "alt": "New form dropdown with Booking form and Contact form options", "caption": "New form → choose Booking form (scheduling) or Contact form (capture / connect)", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "editor-tour",
+      "title": "Get to know the editor",
+      "content": "<p>The editor is a split screen: settings on the left, a <strong>live preview</strong> of your public page on the right. Every change you make appears in the preview instantly — before you even save.</p><ul><li><strong>Header bar</strong> — <strong>Back</strong> returns to the list; the name field renames the form; the <strong>Live</strong>/<strong>Off</strong> switch controls whether the public page accepts bookings; the read-only URL field shows your public link with <strong>Copy URL</strong> and <strong>Open in new tab</strong> buttons; <strong>Save</strong> writes all your changes (it lights up only when something changed).</li><li><strong>Settings tabs</strong> — <strong>Design</strong>, <strong>Steps</strong>, <strong>Services</strong>, <strong>Availability</strong>, <strong>Options</strong>, and <strong>Share &amp; Embed</strong>. The next steps walk through each one.</li><li><strong>Preview pane</strong> — toggle between <strong>Desktop</strong> and <strong>Mobile</strong> to see both layouts. The time slots shown are samples generated from your business hours (the label says <em>Times shown are samples</em>). Click <strong>Open live</strong> to see the real public page.</li></ul><blockquote>💡 The preview is fully interactive — you can click through the whole wizard, exactly as a customer would, without creating a real booking.</blockquote>",
+      "images": [
+        { "src": "images/crm/booking-forms-editor-light.png", "alt": "Full-page booking form editor with settings tabs on the left and live preview on the right", "caption": "The full-page editor — settings on the left, a live interactive preview of your public page on the right", "theme": "light" },
+        { "src": "images/crm/booking-forms-editor-dark.png", "alt": "Full-page booking form editor with settings tabs on the left and live preview on the right", "caption": "The full-page editor — settings on the left, a live interactive preview of your public page on the right", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "design-tab",
+      "title": "Design tab — make it yours",
+      "content": "<p>The <strong>Design</strong> tab controls the entire look and feel of the public page:</p><ul><li><strong>Theme</strong> — <em>Light</em>, <em>Dark</em>, or <em>Auto</em> (Auto follows the visitor's device theme).</li><li><strong>Accent color (buttons &amp; highlights)</strong> — your brand color; it drives buttons, selected states, and the calendar highlight.</li><li><strong>Logo (shown at the top of the form)</strong> — upload your company logo.</li><li><strong>Hero image (banner above the form)</strong> — an optional wide banner photo.</li><li><strong>Background</strong> — <em>Plain</em>, <em>Tinted</em> (a soft wash of your accent color), or <em>Image</em> (upload a full-page background).</li><li><strong>Card corner radius</strong> — a slider from sharp corners to fully rounded cards.</li><li><strong>Font</strong> — Poppins, Inter, System, Roboto, or Lora.</li><li><strong>Button style</strong> — <em>Rounded</em>, <em>Pill</em>, or <em>Square</em>.</li><li><strong>Progress indicator</strong> — <em>Bars</em>, <em>Dots</em>, <em>Numbered</em>, or <em>None</em>.</li><li><strong>Density</strong> — <em>Comfortable</em> or <em>Compact</em> spacing.</li><li><strong>Header intro (text under the form name)</strong> — a one-line welcome, e.g. \"Book your appointment in under a minute.\"</li><li><strong>Show \"powered by\" footer</strong> — toggle the small iMash credit at the bottom on or off.</li></ul>",
+      "images": [
+        { "src": "images/crm/booking-forms-editor-design-light.png", "alt": "Design tab with theme, accent color, logo, background, font, and button style controls", "caption": "The Design tab — theme, brand color, logo, hero image, fonts, and more", "theme": "light" },
+        { "src": "images/crm/booking-forms-editor-design-dark.png", "alt": "Design tab with theme, accent color, logo, background, font, and button style controls", "caption": "The Design tab — theme, brand color, logo, hero image, fonts, and more", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "steps-tab",
+      "title": "Steps tab — reorder, hide, and customize the wizard",
+      "content": "<p>Your public form is a step-by-step wizard: <strong>Services → Time → Details → Service details → Review</strong>. The <strong>Steps</strong> tab lets you reshape it:</p><ol><li><strong>Drag</strong> a step card by its handle to change the order.</li><li><strong>Toggle</strong> a step off to skip it entirely (the <em>Details</em> step is the one exception — contact details can never be removed).</li><li>Expand <strong>Customize</strong> under any step to edit its <strong>Title</strong> and <strong>Intro text</strong>, plus per-step extras:</li></ol><ul><li><strong>Details</strong> — show/hide the <strong>company</strong>, <strong>email</strong>, <strong>phone</strong>, and <strong>address</strong> fields, the <strong>marketing opt-in checkbox</strong>, and choose whether the address is <strong>required</strong>.</li><li><strong>Service details</strong> — <strong>Require notes</strong>, <strong>Allow photo uploads</strong> (customers can attach up to 10 photos of the job), and a custom <strong>Notes field label</strong>.</li><li><strong>Custom fields</strong> — add your own questions to the Details or Service details step: text, paragraph, dropdown, checkbox, or number, each with its own required toggle. Answers are saved with the booking and stamped onto the created job.</li></ul><blockquote>⚠️ Turning the <strong>Time</strong> step off switches the form to <em>request mode</em>: customers submit a request without picking a slot, the job is created unscheduled, and no calendar appointment is made. Also note: hiding the <strong>email</strong> field disables duplicate-booking protection, since duplicates are matched by email.</blockquote>",
+      "images": [
+        { "src": "images/crm/booking-forms-editor-steps-light.png", "alt": "Steps tab with draggable step cards and enable toggles", "caption": "The Steps tab — drag to reorder, toggle a step off, or expand Customize for titles, fields, and custom questions", "theme": "light" },
+        { "src": "images/crm/booking-forms-editor-steps-dark.png", "alt": "Steps tab with draggable step cards and enable toggles", "caption": "The Steps tab — drag to reorder, toggle a step off, or expand Customize for titles, fields, and custom questions", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "services-tab",
+      "title": "Services tab — what customers can book",
+      "content": "<p>The <strong>Services</strong> tab decides what appears on the first step of the form and what happens in your pipeline when someone books:</p><ul><li><strong>Services shown on the form</strong> — pick one or more services from your CRM. Each shows its name, description, estimated duration, and price on the public page. No service yet? Click <strong>New service</strong> right inside the dropdown to create one on the spot (name, base rate, estimated hours, description).</li><li><strong>Create a job for each booking</strong> — ON by default. Every booking creates a job in your pipeline (which can trigger auto-dispatch). Turn it OFF for consultation-style forms: bookings still create the lead, the calendar appointment, and the submission record — just no job.</li><li><strong>Job type (optional)</strong> — stamp new jobs with one of your Dispatch job types. You can quick-create one here too.</li><li><strong>Job source</strong> — the source stamped on created jobs (defaults to <code>online_booking</code>), so your reports can tell exactly which work came from the form.</li><li><strong>Calendar category (optional)</strong> — booked appointments get this category and its color in your calendar.</li><li><strong>Status for new jobs</strong> — the pipeline status new jobs start in (defaults to <em>Scheduled</em>).</li></ul>",
+      "images": [
+        { "src": "images/crm/booking-forms-editor-services-light.png", "alt": "Services tab with selected services, create-job toggle, job source, and status settings", "caption": "The Services tab — what customers can book, and how bookings land in your pipeline", "theme": "light" },
+        { "src": "images/crm/booking-forms-editor-services-dark.png", "alt": "Services tab with selected services, create-job toggle, job source, and status settings", "caption": "The Services tab — what customers can book, and how bookings land in your pipeline", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "availability-tab",
+      "title": "Availability tab — when customers can book",
+      "content": "<p>The <strong>Availability</strong> tab builds the time-slot grid customers see. iMash only ever offers slots that are genuinely open — double-bookings are impossible by design.</p><ul><li><strong>Mode</strong> — <em>Standalone (own slots)</em>: the form manages its own capacity using <strong>Max bookings per slot</strong>. <em>By technicians</em>: capacity comes from your real team — a slot is open only when at least one of the selected technicians is inside their working hours and has no conflicting job. Pick the technicians in the <strong>Technicians</strong> selector that appears.</li><li><strong>Max bookings per slot</strong> — (standalone mode) how many customers can book the same time.</li><li><strong>Timezone</strong> — the timezone your business hours are defined in. Customers see times converted for them.</li><li><strong>Slot length (min)</strong> — how long each appointment lasts (e.g. 60 = one-hour slots).</li><li><strong>Slot step (min)</strong> — the spacing between slot start times (e.g. length 60 with step 30 gives 9:00, 9:30, 10:00…).</li><li><strong>Book up to (days)</strong> — how far in the future customers can book.</li><li><strong>Minimum notice (minutes before now)</strong> — e.g. 120 blocks bookings less than 2 hours away.</li><li><strong>Business hours (slot grid)</strong> — toggle each weekday on/off and set start/end times (24-hour format, in the form timezone).</li></ul><blockquote>💡 In technicians mode, the booking engine is deliberately conservative — it never overbooks your team. The actual technician is assigned later (automatically, if you use Auto-Dispatch); the form only guarantees someone will be free.</blockquote>",
+      "images": [
+        { "src": "images/crm/booking-forms-editor-availability-light.png", "alt": "Availability tab with mode, timezone, slot settings, and business hours", "caption": "The Availability tab — standalone or technician-based capacity, slot sizes, notice, and weekly business hours", "theme": "light" },
+        { "src": "images/crm/booking-forms-editor-availability-dark.png", "alt": "Availability tab with mode, timezone, slot settings, and business hours", "caption": "The Availability tab — standalone or technician-based capacity, slot sizes, notice, and weekly business hours", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "options-tab",
+      "title": "Options tab — final touches",
+      "content": "<ul><li><strong>Require email</strong> / <strong>Require phone</strong> — make either field mandatory on the Details step.</li><li><strong>Show pricing</strong> — ON shows per-service prices and a running subtotal. Turn it OFF for quote-only or free-assessment forms — all prices and the subtotal disappear from the public page.</li><li><strong>Thank-you message</strong> — a custom message on the confirmation screen after booking.</li><li><strong>Redirect URL after booking (optional)</strong> — send customers to any page (e.g. your website's thank-you page) right after they confirm.</li></ul>",
+      "images": [
+        { "src": "images/crm/booking-forms-editor-options-light.png", "alt": "Options tab with require email/phone, show pricing, thank-you message, and redirect URL", "caption": "The Options tab — required fields, pricing visibility, and the post-booking experience", "theme": "light" },
+        { "src": "images/crm/booking-forms-editor-options-dark.png", "alt": "Options tab with require email/phone, show pricing, thank-you message, and redirect URL", "caption": "The Options tab — required fields, pricing visibility, and the post-booking experience", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "share-embed",
+      "title": "Share & Embed — Google, your website, anywhere",
+      "content": "<p>This is where your form goes to work. The <strong>Share &amp; Embed</strong> tab gives you three ways to put it in front of customers:</p><ol><li><strong>Google Business Profile</strong> — the blue banner at the top holds your public URL. In your Business Profile, go to <strong>Bookings</strong> → <em>\"add your own link\"</em> and paste it. Customers searching for you on Google get a direct <em>Book online</em> path. Use <strong>Copy</strong> and <strong>Preview</strong> to grab and test the link.</li><li><strong>Embed on your website</strong> — pick a mode:<ul><li><strong>Inline</strong> — the form renders inside your page, sized automatically.</li><li><strong>Popup button</strong> — a floating <strong>Book now</strong> button opens the form in an overlay. Customize the <strong>Button label</strong>, <strong>Button color</strong>, <strong>Text color</strong>, <strong>Position</strong> (e.g. Bottom right), and <strong>Popup width (px)</strong> — a live <strong>Button preview</strong> shows exactly how it will look on your site.</li><li><strong>Custom trigger</strong> — no button; your own link or button opens the popup.</li></ul></li><li><strong>Paste this on your site</strong> — copy the one-line <code>&lt;script&gt;</code> snippet at the bottom and paste it into your website's HTML. That's the whole integration.</li></ol><p>Extra switches: <strong>Hide form header</strong> (drop the form name inside the embed) and <strong>Transparent background</strong> (blend into your page).</p><blockquote>💡 Embed settings are stored on iMash's side — change the button color or popup size later and every site that already has the snippet updates automatically. No re-pasting.</blockquote>",
+      "images": [
+        { "src": "images/crm/booking-forms-editor-share-light.png", "alt": "Share and Embed tab with Google Business Profile link and embed widget settings", "caption": "Share & Embed — the Google Business Profile link, embed modes, button styling, and the copy-paste snippet", "theme": "light" },
+        { "src": "images/crm/booking-forms-editor-share-dark.png", "alt": "Share and Embed tab with Google Business Profile link and embed widget settings", "caption": "Share & Embed — the Google Business Profile link, embed modes, button styling, and the copy-paste snippet", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "customer-services-time",
+      "title": "What customers see — pick a service and a time",
+      "content": "<p>Here is the journey your customers experience (open your live page or click through the editor preview to follow along):</p><ol><li><strong>Select your services</strong> — each service is a card with its description, estimated duration, and price. Customers can select one or several, then click <strong>Next</strong>.</li><li><strong>Schedule an appointment</strong> — a month calendar shows only days that actually have openings; picking a day lists its open time slots on the right. The <strong>Time Zone</strong> selector at the bottom converts every slot for customers booking from another region.</li></ol><p>Slots that are already booked simply never appear — the calendar reflects your real availability in real time.</p>",
+      "images": [
+        { "src": "images/crm/booking-forms-public-services-light.png", "alt": "Public form service selection step with two service cards", "caption": "Step 1 — customers pick one or more services, with duration and price on each card", "theme": "light" },
+        { "src": "images/crm/booking-forms-public-services-dark.png", "alt": "Public form service selection step with two service cards", "caption": "Step 1 — customers pick one or more services, with duration and price on each card", "theme": "dark" },
+        { "src": "images/crm/booking-forms-public-time-light.png", "alt": "Public form time step with month calendar and open slots", "caption": "Step 2 — a month calendar with real open slots, plus a timezone selector", "theme": "light" },
+        { "src": "images/crm/booking-forms-public-time-dark.png", "alt": "Public form time step with month calendar and open slots", "caption": "Step 2 — a month calendar with real open slots, plus a timezone selector", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "customer-details-notes",
+      "title": "What customers see — details and job description",
+      "content": "<ol><li><strong>Your details</strong> — name, company (optional), email, phone (with a country dial-code selector), an optional marketing opt-in, and the service address. Which fields appear — and which are required — is exactly what you configured in the Steps and Options tabs.</li><li><strong>Service details</strong> — customers describe what they need in their own words and can attach up to 10 photos of the job (if you enabled photo uploads). The note and photos land on the created job, so your technician arrives knowing exactly what to expect.</li></ol>",
+      "images": [
+        { "src": "images/crm/booking-forms-public-details-light.png", "alt": "Public form details step with contact and address fields", "caption": "Step 3 — contact information and service address", "theme": "light" },
+        { "src": "images/crm/booking-forms-public-details-dark.png", "alt": "Public form details step with contact and address fields", "caption": "Step 3 — contact information and service address", "theme": "dark" },
+        { "src": "images/crm/booking-forms-public-notes-light.png", "alt": "Public form service details step with notes field and photo uploader", "caption": "Step 4 — a free-text description of the job plus optional photos", "theme": "light" },
+        { "src": "images/crm/booking-forms-public-notes-dark.png", "alt": "Public form service details step with notes field and photo uploader", "caption": "Step 4 — a free-text description of the job plus optional photos", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "customer-review-confirm",
+      "title": "What customers see — review and instant confirmation",
+      "content": "<ol><li><strong>Review &amp; confirm</strong> — a summary of the chosen services, the appointment time (with timezone), and the subtotal. One click on <strong>Confirm booking</strong> and it's done.</li><li><strong>Booking confirmed!</strong> — the confirmation screen shows the appointment time (plus your custom thank-you message, if you set one). If you configured a redirect URL, customers are sent there automatically.</li></ol><p>The same email can't double-book the same slot — if someone re-submits, the form recognizes the existing booking instead of creating a duplicate.</p>",
+      "images": [
+        { "src": "images/crm/booking-forms-public-review-light.png", "alt": "Public form review step with services, time, and subtotal", "caption": "Step 5 — review the services, time, and subtotal, then Confirm booking", "theme": "light" },
+        { "src": "images/crm/booking-forms-public-review-dark.png", "alt": "Public form review step with services, time, and subtotal", "caption": "Step 5 — review the services, time, and subtotal, then Confirm booking", "theme": "dark" },
+        { "src": "images/crm/booking-forms-public-confirmed-light.png", "alt": "Booking confirmed screen with green checkmark", "caption": "Done — the customer gets instant confirmation, and the booking is already in your CRM", "theme": "light" },
+        { "src": "images/crm/booking-forms-public-confirmed-dark.png", "alt": "Booking confirmed screen with green checkmark", "caption": "Done — the customer gets instant confirmation, and the booking is already in your CRM", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "track-bookings",
+      "title": "Where bookings land — leads, jobs, calendar, and the funnel",
+      "content": "<p>Every confirmed booking creates a complete record across iMash, automatically:</p><ul><li>A <strong>lead</strong> in CRM → Leads (source <em>online_booking</em>) with the customer's contact details and address.</li><li>A <strong>job</strong> in your pipeline with the service, schedule, address, customer notes, photos, and custom-field answers. If Auto-Dispatch is enabled for your account, the job is dispatched to your technicians the moment it's created.</li><li>A <strong>calendar appointment</strong> in CRM → Calendar (color-coded by the form's calendar category) — this is also what blocks the slot from being booked twice.</li></ul><p>To review your bookings:</p><ol><li>On the Booking Forms list, click <strong>Bookings</strong> on a form's row. A panel lists every submission — when it came in, the customer's name and contact info, and the appointment time.</li><li>Click <strong>Lead</strong> or <strong>Job</strong> in the <em>Created in CRM</em> column to jump straight to the records.</li><li>Click <strong>Export CSV</strong> to download the whole list.</li></ol><p>And keep an eye on the <strong>Performance</strong> funnel on the list page — it shows where visitors drop off (<em>views → time → details → review → booked</em>) so you know exactly what to improve.</p>",
+      "images": [
+        { "src": "images/crm/booking-forms-submissions-light.png", "alt": "Bookings panel listing submissions with lead and job links and CSV export", "caption": "The Bookings panel — every submission with deep links to the created lead and job, plus Export CSV", "theme": "light" },
+        { "src": "images/crm/booking-forms-submissions-dark.png", "alt": "Bookings panel listing submissions with lead and job links and CSV export", "caption": "The Bookings panel — every submission with deep links to the created lead and job, plus Export CSV", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "contact-forms",
+      "title": "Bonus: Contact forms — capture leads from any website",
+      "content": "<p>Choose <strong>Contact form (capture / connect)</strong> when creating a form and the editor swaps to contact-specific tabs:</p><ul><li><strong>Fields</strong> — which fields the hosted form shows (name, email, phone, company, message) plus your own custom fields.</li><li><strong>Destination</strong> — what a submission creates: always a lead (deduplicated by email); optionally also a job with a source and tags, so website inquiries can flow straight into dispatch.</li><li><strong>Connect</strong> — three ways to receive submissions:<ol><li><strong>Hosted page / embed</strong> — use the iMash-hosted form exactly like a booking form.</li><li><strong>JS listener</strong> — one script tag makes an <em>existing</em> form on your website forward its submissions to iMash, without changing how your site works.</li><li><strong>Webhook</strong> — point any form builder or backend at the form's secure inbound URL. Click <strong>Detect fields</strong> after a test submission and map incoming fields to iMash fields visually.</li></ol></li></ul><p><strong>Design</strong>, <strong>Options</strong>, and <strong>Share &amp; Embed</strong> work just like booking forms — same themes, same embed widget, same tracking. Your website's contact form finally lives in the same pipeline as everything else.</p>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Your booking page is live and filling the calendar. Now connect the rest of the machine — dispatch the jobs automatically and keep every appointment in view.",
+    "cards": [
+      { "href": "/dispatch/auto-dispatch", "title": "Auto-Dispatch", "description": "Automatically offer every new booking to your technicians by SMS — first to accept wins." },
+      { "href": "/crm/calendar", "title": "Calendar", "description": "See every booked appointment, color-coded by category, in the CRM calendar." },
+      { "href": "/dispatch/jobs", "title": "Jobs", "description": "Track the jobs your booking form creates from scheduled to completed and paid." },
+      { "href": "/crm/leads", "title": "Leads", "description": "Every booking also creates a lead — follow up, qualify, and convert." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>Questions about booking forms, availability, or embedding? Email <a href=\"mailto:support@imash.io\">support@imash.io</a> and our team will help you get your booking page live.</p>"
+  },
+  "metaTitle": "Online Booking Forms | iMash Documentation",
+  "metaDescription": "Build a public online booking page in iMash: design it, set services and availability, add it to Google Business Profile or embed it on your website, and turn every booking into a lead, job, and calendar appointment automatically.",
+  "metaKeywords": "online booking, booking form, appointment scheduling, google business profile booking, embed booking widget, self-service scheduling, iMash booking"
+}

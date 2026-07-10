@@ -1,0 +1,1130 @@
+{
+  "comment": "Per-page briefs for the docs quality pipeline. Each entry drives one dedicated agent (see PAGE_AGENT_PLAYBOOK.md). isNew=true pages are already registered in routes/sidebar centrally.",
+  "briefs": [
+    {
+      "slug": "get-started/quick-start",
+      "route": "/get-started/quick-start",
+      "title": "Welcome to iMash",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/"
+      ],
+      "srcHints": [
+        "src/pages/"
+      ],
+      "brief": "SPECIAL PAGE — the landing guide. Rewrite as a broad, exciting, marketing-energy tour of EVERYTHING iMash does: AI voice agents that answer/make calls 24/7, smart campaigns & dialers, full CRM + sales pipeline (quotes/invoices/payments), field-service dispatch, omnichannel messaging (SMS/WhatsApp/Email), automations, contact center for human teams, analytics. Structure: 1) what iMash is (1 exciting paragraph), 2) a 'your first 15 minutes' quick-win path (create agent → give it a number → test call) with screenshots, 3) a 'explore the platform' section — one short exciting blurb per major area, each with a nextSteps-style link to its docs section. Keep it focused and direct — excitement, not fluff. It should flow naturally into /get-started/dashboard-overview as the next step (make that the #1 nextSteps card)."
+    },
+    {
+      "slug": "get-started/dashboard-overview",
+      "route": "/get-started/dashboard-overview",
+      "title": "Dashboard Overview",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/"
+      ],
+      "srcHints": [
+        "src/pages/overview/",
+        "src/components/navigation/SiteSectionTabs.tsx"
+      ],
+      "brief": "SPECIAL PAGE — continues quick-start. A guided walk through the actual UI: the home Overview page (stats tiles, recent calls), the 11 header sections and what lives in each (Automation, Contact Center, CRM, Dispatch, Messages, Campaigns, Marketing, User Management, Billing, Credentials), the account menu, theme toggle, notifications bell. Zoomed screenshots of the header nav, a section sub-tab strip, and the overview tiles. Every section blurb links to its docs page. Marketing energy in the intro, then precise orientation."
+    },
+    {
+      "slug": "get-started/api-keys",
+      "route": "/get-started/api-keys",
+      "title": "API Keys & Credentials",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/apikeys",
+        "/credentials"
+      ],
+      "srcHints": [
+        "src/pages/apikeys/",
+        "src/pages/credentials/"
+      ],
+      "brief": "Cover BOTH /apikeys (create/copy/revoke API keys, where to use them) AND the /credentials page (third-party credential store). Screenshot each list + the create modal."
+    },
+    {
+      "slug": "agents/create-agent",
+      "route": "/agents/create-agent",
+      "title": "Create Your First Agent",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/assistants",
+        "/assistants/new"
+      ],
+      "srcHints": [
+        "src/pages/assistants/"
+      ],
+      "brief": "Full create flow: Smart Agents list → new agent → name/prompt basics → the editor layout (node canvas view AND form view toggle) → save. Zoom into the editor toolbar, the CapabilitiesBar, a node on the canvas. This is a flagship page — make it shine."
+    },
+    {
+      "slug": "agents/agent-settings",
+      "route": "/agents/agent-settings",
+      "title": "Agent Settings",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/assistants"
+      ],
+      "srcHints": [
+        "src/pages/assistants/"
+      ],
+      "brief": "Open an existing assistant's Settings panel and document EVERY option: timeouts, idle messages/timeouts, voicemail detection & behavior, max call duration, background sound, filler audio, interruption settings. Zoomed screenshot per settings cluster. Open via /assistants then click an agent, then Settings."
+    },
+    {
+      "slug": "agents/voice-configuration",
+      "route": "/agents/voice-configuration",
+      "title": "Voice Configuration (TTS)",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/assistants"
+      ],
+      "srcHints": [
+        "src/pages/assistants/components/VoiceTab*",
+        "src/pages/assistants/components/CloneVoiceTab*"
+      ],
+      "brief": "Voice panel: provider/voice picker, preview a voice, speed/stability sliders, voice cloning (iMash Clone Voice tab), per-language voices. Zoom into the voice picker and clone UI."
+    },
+    {
+      "slug": "agents/test-your-agent",
+      "route": "/agents/test-your-agent",
+      "title": "Test Your Agent",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/assistants"
+      ],
+      "srcHints": [
+        "src/pages/assistants/"
+      ],
+      "brief": "Currently one of the thinnest pages (108 words) — rebuild fully: the in-browser Test Agent web call (mic permissions, talking to it, transcript panel), testing over a real phone number, reading the call afterwards in Call Logs. Simulate a test web call if possible (click Test/Connect, screenshot the live panel)."
+    },
+    {
+      "slug": "agents/agent-tools",
+      "route": "/agents/agent-tools",
+      "title": "Agent Tools",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/assistants",
+        "/tools"
+      ],
+      "srcHints": [
+        "src/pages/assistants/",
+        "src/pages/tools/"
+      ],
+      "brief": "Tools panel: built-in tools (transfers, end call, lead create, calendar...), attaching Custom Tools, per-tool config, how the agent decides to call them. Zoom into the tools list and a tool's config drawer."
+    },
+    {
+      "slug": "agents/agent-knowledge-base",
+      "route": "/agents/agent-knowledge-base",
+      "title": "Knowledge Base (RAG)",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/files",
+        "/assistants"
+      ],
+      "srcHints": [
+        "src/pages/files/"
+      ],
+      "brief": "THIN page — rebuild: upload files at /files (supported types, processing states), attach KB to an agent in the editor, how the agent uses it mid-call, tips for good source docs. Screenshot the /files page, upload modal, and the agent KB panel."
+    },
+    {
+      "slug": "agents/agent-mcp",
+      "route": "/agents/agent-mcp",
+      "title": "Connect MCP to Your Agent",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/assistants"
+      ],
+      "srcHints": [
+        "src/pages/assistants/components/McpTab*"
+      ],
+      "brief": "Agent-side MCP attach: the MCP tab in the agent editor, choosing a configured server, tool discovery. Differentiate from automations/mcp-servers (that page = registering MCP servers; this page = attaching to an agent). Cross-link both."
+    },
+    {
+      "slug": "agents/agent-privacy",
+      "route": "/agents/agent-privacy",
+      "title": "Privacy & Recording",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/assistants"
+      ],
+      "srcHints": [
+        "src/pages/assistants/"
+      ],
+      "brief": "THINNEST page in the corpus (91 words) — rebuild fully: recording on/off, transcript retention, privacy notices/disclaimers the agent can speak, compliance tips. Zoomed screenshots of the Privacy & Recording section."
+    },
+    {
+      "slug": "agents/costum-variables",
+      "route": "/agents/costum-variables",
+      "title": "Custom Variables & Templates",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/assistants"
+      ],
+      "srcHints": [
+        "src/pages/assistants/"
+      ],
+      "brief": "Prompt variables: {first_name} etc from leads/contacts, custom vars, using them in prompts/greetings/SMS templates, where values come from (campaign dial list, CRM record, API). Show the templates & variables UI zoomed."
+    },
+    {
+      "slug": "agents/embed-agent",
+      "route": "/agents/embed-agent",
+      "title": "Embed Your Agent on a Website",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/assistants"
+      ],
+      "srcHints": [
+        "src/pages/assistants/",
+        "public/embed/"
+      ],
+      "brief": "Website Widget: enable web_chat/web call channel, customize the widget (colors, position, greeting), copy the embed snippet, what visitors see. Screenshot the widget config panel and the snippet."
+    },
+    {
+      "slug": "agents/llm-settings",
+      "route": "/agents/llm-settings",
+      "title": "Choose the Brain (LLM)",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/assistants"
+      ],
+      "srcHints": [
+        "src/pages/assistants/"
+      ],
+      "brief": "LLM/Brain panel: model picker (OpenAI/Anthropic/Gemini/custom), temperature, the transcriber (STT) picker, realtime vs pipeline modes, when to pick what. Zoomed screenshots of pickers."
+    },
+    {
+      "slug": "agents/observer-agent",
+      "route": "/agents/observer-agent",
+      "title": "Observer Agent",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/assistants",
+        "/callcenter/live"
+      ],
+      "srcHints": [
+        "src/pages/assistants/components/ObserverAgentTab*"
+      ],
+      "brief": "Observer agent: what it does (watches live calls, flags/extracts in real time), enabling it, configuring its instructions, where results appear (Live Calls). Screenshots of the Observer tab + live calls page."
+    },
+    {
+      "slug": "agents/advanced-settings",
+      "route": "/agents/advanced-settings",
+      "title": "Post-Call Processing & Webhooks",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/assistants"
+      ],
+      "srcHints": [
+        "src/pages/assistants/webhooks*"
+      ],
+      "brief": "Post-call: structured data extraction (define fields the LLM extracts after each call), webhooks (URL, payload, when fired), success evaluation. Zoomed screenshots of the webhook config and extraction fields UI."
+    },
+    {
+      "slug": "agents/sub-agents",
+      "route": "/agents/sub-agents",
+      "title": "Sub-Agents, Tasks & Handoffs",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/assistants"
+      ],
+      "srcHints": [
+        "src/pages/assistants/subAgents/",
+        "src/pages/assistants/nodeEditor/"
+      ],
+      "brief": "NEW PAGE. The multi-agent graph: mini sub-agents, tasks, decision nodes, handoffs between agents, return targets — built on the node canvas. Explain when to split one agent into sub-agents (menus, departments, workflows). Screenshot the node editor with a transition graph, the TransitionPicker, a decision node config. This is a headline feature — give it marketing energy."
+    },
+    {
+      "slug": "phone/add-phone-number",
+      "route": "/phone/add-phone-number",
+      "title": "Add a Phone Number",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/phonenumbers"
+      ],
+      "srcHints": [
+        "src/pages/phoneNumbers/"
+      ],
+      "brief": "Buy a number vs bring your own (SIP), the buy flow (country/area code search), assigning an agent to the number, number settings. Screenshot list + buy modal + assignment."
+    },
+    {
+      "slug": "phone/add-sip-provider",
+      "route": "/phone/add-sip-provider",
+      "title": "Connect a SIP Provider",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/phoneproviders"
+      ],
+      "srcHints": [
+        "src/pages/phoneProviders/"
+      ],
+      "brief": "BYO carrier: add SIP provider (gateway, auth username/password, outbound settings), verify it, attach numbers to it. Screenshot the provider list + add-provider form (zoomed per section)."
+    },
+    {
+      "slug": "phone/call-routing",
+      "route": "/phone/call-routing",
+      "title": "Inbound Call Routing",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/phonenumbers"
+      ],
+      "srcHints": [
+        "src/pages/phoneNumbers/"
+      ],
+      "brief": "How an inbound call finds its destination: number → agent assignment, routing to a human group instead (cross-link contact-center/inbound-sip-routing), forwarding, after-hours behavior. Screenshots of the number's routing config."
+    },
+    {
+      "slug": "phone/call-logs",
+      "route": "/phone/call-logs",
+      "title": "Call Logs & Recordings",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/logs"
+      ],
+      "srcHints": [
+        "src/pages/logs/"
+      ],
+      "brief": "The call log list (columns, filters, search, date ranges), opening a call: transcript, recording player, extracted data, cost breakdown, agent logs. Zoom into an opened call detail drawer. Explain statuses/directions."
+    },
+    {
+      "slug": "phone/pbx-extensions",
+      "route": "/phone/pbx-extensions",
+      "title": "PBX Extensions",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/pbxextensions"
+      ],
+      "srcHints": [
+        "src/pages/pbxExtensions/"
+      ],
+      "brief": "NEW PAGE. What PBX extensions are in iMash, creating one, assigning, dialing between extensions. Screenshot the list + create modal."
+    },
+    {
+      "slug": "phone/voicemail-settings",
+      "route": "/phone/voicemail-settings",
+      "title": "Voicemail Settings",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/callcenter/voicemail-settings"
+      ],
+      "srcHints": [
+        "src/pages/"
+      ],
+      "brief": "NEW PAGE. The Voicemail Settings page: greetings, when calls go to voicemail, notifications, listening to voicemails. Screenshot every section."
+    },
+    {
+      "slug": "contact-center/overview",
+      "route": "/contact-center/overview",
+      "title": "Contact Center Overview",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/callcenter/contact-center",
+        "/callcenter/live"
+      ],
+      "srcHints": [
+        "src/pages/contactCenter/"
+      ],
+      "brief": "The admin console: Live Monitor (agents' statuses, active calls, Monitor/Whisper/Barge buttons, force-status), the tabs (live/reporting/accounts/calltransfer), Live Calls page. Zoom into the roster and the monitor controls. Marketing energy — this is the command center."
+    },
+    {
+      "slug": "contact-center/agent-guide",
+      "route": "/contact-center/agent-guide",
+      "title": "Human Agent Guide",
+      "auth": "agent",
+      "isNew": false,
+      "appRoutes": [
+        "/callcenter/contact-center"
+      ],
+      "srcHints": [
+        "src/pages/contactCenter/"
+      ],
+      "brief": "Already the best page (12 steps) — polish, don't rebuild: verify each existing screenshot still matches the UI (re-shoot stale ones, the dialer now has a Teammate button — existing shots were already redone, verify), improve step wording per the style guide, keep login-first flow. Use --auth agent. Add anything missing: setting Available status, the queue, teammate calls."
+    },
+    {
+      "slug": "contact-center/groups",
+      "route": "/contact-center/groups",
+      "title": "Permission Groups",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/callcenter/contact-center"
+      ],
+      "srcHints": [
+        "src/pages/contactCenter/"
+      ],
+      "brief": "Creating a group, adding members, the group's inner tabs overview (each has its own docs page — link them), online/offline logic. Screenshot group list, create modal, member management."
+    },
+    {
+      "slug": "contact-center/members-roles",
+      "route": "/contact-center/members-roles",
+      "title": "Members & Roles",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/callcenter/contact-center",
+        "/user-management"
+      ],
+      "srcHints": [
+        "src/pages/contactCenter/"
+      ],
+      "brief": "The roles model (the four roles), what each can do, assigning roles to members, how roles affect the console. Expand from 213 words with per-role screenshots/zooms."
+    },
+    {
+      "slug": "contact-center/role-mapping",
+      "route": "/contact-center/role-mapping",
+      "title": "Role Mapping",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/callcenter/contact-center"
+      ],
+      "srcHints": [
+        "src/pages/contactCenter/"
+      ],
+      "brief": "Role Mapping tab: mapping platform users to contact-center roles, defaults, precedence. Expand from 163 words, zoomed screenshots of the mapping UI."
+    },
+    {
+      "slug": "contact-center/inbound-sip-routing",
+      "route": "/contact-center/inbound-sip-routing",
+      "title": "Inbound SIP Routing (to Humans)",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/callcenter/contact-center"
+      ],
+      "srcHints": [
+        "src/pages/contactCenter/"
+      ],
+      "brief": "THIN page — rebuild: routing a DID straight to a human group (before/instead of AI), per-group DID assignment, how it interacts with agent routing. Zoomed screenshots of the Inbound SIP Routing tab."
+    },
+    {
+      "slug": "contact-center/ring-strategy",
+      "route": "/contact-center/ring-strategy",
+      "title": "Ring Strategy",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/callcenter/contact-center"
+      ],
+      "srcHints": [
+        "src/pages/contactCenter/"
+      ],
+      "brief": "Ring strategies (all-at-once vs sequential etc), ring window/timeouts, what the caller hears, first-answer-wins. Zoomed screenshots of the Ring strategy tab options."
+    },
+    {
+      "slug": "contact-center/wait-hold",
+      "route": "/contact-center/wait-hold",
+      "title": "Wait & Hold Experience",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/callcenter/contact-center"
+      ],
+      "srcHints": [
+        "src/pages/contactCenter/"
+      ],
+      "brief": "Hold music, wait announcements, what callers experience while queued, customizing. Zoomed screenshots of the Wait & Hold tab."
+    },
+    {
+      "slug": "contact-center/queue-settings",
+      "route": "/contact-center/queue-settings",
+      "title": "Queue Settings",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/callcenter/contact-center"
+      ],
+      "srcHints": [
+        "src/pages/contactCenter/"
+      ],
+      "brief": "THIN page — rebuild: max wait time, on-timeout behavior (AI takes over / voicemail), queue priorities, the agent-side queue experience. Zoomed screenshots."
+    },
+    {
+      "slug": "contact-center/reporting",
+      "route": "/contact-center/reporting",
+      "title": "Contact Center Reporting",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/callcenter/contact-center"
+      ],
+      "srcHints": [
+        "src/pages/contactCenter/Reporting*"
+      ],
+      "brief": "Reporting tab: agent performance metrics, call volumes, the view switcher, CSV export, date filters. Expand with zoomed chart/table screenshots."
+    },
+    {
+      "slug": "contact-center/call-transfer",
+      "route": "/contact-center/call-transfer",
+      "title": "Call Transfer Settings",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/callcenter/contact-center"
+      ],
+      "srcHints": [
+        "src/pages/contactCenter/"
+      ],
+      "brief": "THIN page — rebuild: AI→human transfers (transferToGroup), human→human transfers, queue transfers, transfer settings tab, what each party hears. Cross-link agent-guide steps."
+    },
+    {
+      "slug": "campaigns/create-campaign",
+      "route": "/campaigns/create-campaign",
+      "title": "Create a Smart Dialer Campaign",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/campaigns"
+      ],
+      "srcHints": [
+        "src/pages/campaigns/"
+      ],
+      "brief": "AI outbound campaigns end-to-end: create → pick agent + caller numbers → dial list → pacing/concurrency → schedule/hours → start/pause. Screenshot every step of the wizard + the campaign detail page."
+    },
+    {
+      "slug": "campaigns/dial-lists",
+      "route": "/campaigns/dial-lists",
+      "title": "Dial Lists",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/campaigns"
+      ],
+      "srcHints": [
+        "src/pages/campaigns/"
+      ],
+      "brief": "Building dial lists: CSV import, from CRM leads, add-leads tab, list columns/custom vars, completed list split, retry logic. Screenshots of the list UI and import flow."
+    },
+    {
+      "slug": "campaigns/human-dialer",
+      "route": "/campaigns/human-dialer",
+      "title": "Human Dialer (Power Dialing)",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/campaigns/manual-dialer"
+      ],
+      "srcHints": [
+        "src/pages/campaigns/predictive/"
+      ],
+      "brief": "NEW PAGE. The predictive/manual dialer for human teams: create a manual-dialer campaign, lines-per-agent pacing, operators join via webphone Available toggle, AMD screening, overflow to AI. Screenshot the manual-dialer list, create flow, session view. Marketing energy — this is a power feature."
+    },
+    {
+      "slug": "campaigns/campaign-analytics",
+      "route": "/campaigns/campaign-analytics",
+      "title": "Campaign Reports & Stats",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/campaigns/reports",
+        "/campaigns/stats"
+      ],
+      "srcHints": [
+        "src/pages/campaigns/"
+      ],
+      "brief": "Both Campaign Reports and Campaign Stats pages: metrics, funnels, outcomes, exporting. Zoomed chart screenshots of each."
+    },
+    {
+      "slug": "campaigns/do-not-call-list",
+      "route": "/campaigns/do-not-call-list",
+      "title": "Do Not Call List",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/donotcall"
+      ],
+      "srcHints": [
+        "src/pages/"
+      ],
+      "brief": "DNC management: add numbers (manual/CSV), how DNC blocks campaign + manual dials, SMS opt-out feeding DNC, compliance tips. Screenshots of the page and add flow."
+    },
+    {
+      "slug": "crm/contacts",
+      "route": "/crm/contacts",
+      "title": "Contacts",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/crm/contacts"
+      ],
+      "srcHints": [
+        "src/pages/contacts/"
+      ],
+      "brief": "Contacts A-Z: list (columns, filters, search, bulk actions), create (drawer + full form, multi-email), the contact detail drawer (activity, calls, messages, custom fields), linking to accounts. Screenshot list + create + detail, zoomed."
+    },
+    {
+      "slug": "crm/leads",
+      "route": "/crm/leads",
+      "title": "Leads",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/crm/leads"
+      ],
+      "srcHints": [
+        "src/pages/leads/"
+      ],
+      "brief": "Leads A-Z: list, create, lead detail drawer (stages, lifecycle, call logs, notes, custom vars the AI uses), converting leads, how AI calls create/update leads. Screenshot list + detail drawer sections zoomed."
+    },
+    {
+      "slug": "crm/accounts",
+      "route": "/crm/accounts",
+      "title": "Accounts",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/crm/accounts"
+      ],
+      "srcHints": [
+        "src/pages/accounts/"
+      ],
+      "brief": "Accounts (companies): list, create, detail (linked contacts/deals), when to use accounts vs contacts. Expand from 196 words with detail-view screenshots."
+    },
+    {
+      "slug": "crm/tasks",
+      "route": "/crm/tasks",
+      "title": "Tasks & Kanban",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/crm/tasks",
+        "/crm/kanban"
+      ],
+      "srcHints": [
+        "src/pages/tasks/",
+        "src/pages/kanban/"
+      ],
+      "brief": "NEW PAGE. Tasks: create/assign/due dates/status, task list + filters; the project Kanban board view. Screenshots of both."
+    },
+    {
+      "slug": "crm/calendar",
+      "route": "/crm/calendar",
+      "title": "Calendar & Scheduling",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/crm/calendar"
+      ],
+      "srcHints": [
+        "src/pages/calendar/"
+      ],
+      "brief": "NEW PAGE. The calendar: views, creating events, event categories, linking events to leads/jobs, reminders (SMS calendar reminders exist). AI agents can book into it — mention with cross-link to agent tools. Screenshots of month view + event create."
+    },
+    {
+      "slug": "crm/booking-forms",
+      "route": "/crm/booking-forms",
+      "title": "Online Booking Forms",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/crm/booking-forms"
+      ],
+      "srcHints": [
+        "src/pages/settings/BookingForms.tsx",
+        "src/pages/settings/booking-editor/",
+        "src/pages/booking/"
+      ],
+      "brief": "NEW PAGE. Jobber-style public booking pages: create a form, the full-page editor (theme/font/steps, live preview), availability (standalone vs technicians), what customers see, embed widget (inline/popup), where submissions land (lead+job+calendar). Screenshot the forms list, editor, and public form. Marketing energy — big feature."
+    },
+    {
+      "slug": "crm/import-export-data",
+      "route": "/crm/import-export-data",
+      "title": "Import & Export Data",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/crm/contacts"
+      ],
+      "srcHints": [
+        "src/pages/"
+      ],
+      "brief": "CSV import (field mapping, dedup), exporting lists, cross-link marketing/import-people for the People Explorer. Screenshots of import modal steps."
+    },
+    {
+      "slug": "crm/crm-settings",
+      "route": "/crm/crm-settings",
+      "title": "CRM Settings",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/crm/settings"
+      ],
+      "srcHints": [
+        "src/pages/settings/"
+      ],
+      "brief": "NEW PAGE. The /crm/settings tabs: Stages (lead stages), Pipeline (deal stages, auto-numbering masks), Invoices & Quotes (templates, numbering), Company info, Sales Tax, Email. One step per tab with screenshot."
+    },
+    {
+      "slug": "pipeline/deals",
+      "route": "/pipeline/deals",
+      "title": "Deals",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/pipeline/deals"
+      ],
+      "srcHints": [
+        "src/pages/deals/"
+      ],
+      "brief": "NEW PAGE. Deal pipeline: list/board, create a deal, stages, linking contacts/accounts, deal→quote/invoice/job sync (auto-triggers). Screenshots list + create + detail."
+    },
+    {
+      "slug": "pipeline/quotes",
+      "route": "/pipeline/quotes",
+      "title": "Quotes",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/pipeline/quotes"
+      ],
+      "srcHints": [
+        "src/pages/quotes/"
+      ],
+      "brief": "NEW PAGE. Quotes: builder (line items, products/services, taxes, discounts), sending (email + Text Quote SMS), public quote page, accept→convert to invoice. Screenshots of builder + send composer + a quote detail."
+    },
+    {
+      "slug": "pipeline/invoices",
+      "route": "/pipeline/invoices",
+      "title": "Invoices & Getting Paid",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/pipeline/invoices"
+      ],
+      "srcHints": [
+        "src/pages/invoices/"
+      ],
+      "brief": "NEW PAGE. Invoices: builder, send (email/SMS pay link), public pay page, payment statuses, partial payments/tips/refunds surface, PDF templates. Screenshots of list, builder, InvoiceDetail, send composer."
+    },
+    {
+      "slug": "pipeline/products-services",
+      "route": "/pipeline/products-services",
+      "title": "Products & Services",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/pipeline/products",
+        "/pipeline/services"
+      ],
+      "srcHints": [
+        "src/pages/products/",
+        "src/pages/services/"
+      ],
+      "brief": "NEW PAGE. The catalogs: create products (price/cost/SKU/inventory) and services, using them as line items in quotes/invoices/jobs, inventory decrement on paid invoice. Screenshots of both lists + create forms."
+    },
+    {
+      "slug": "pipeline/subscriptions",
+      "route": "/pipeline/subscriptions",
+      "title": "Subscriptions (Recurring Billing)",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/pipeline/subscriptions"
+      ],
+      "srcHints": [
+        "src/pages/subscriptions/"
+      ],
+      "brief": "NEW PAGE. Recurring billing: create a subscription (interval, items, customer payment method), lifecycle (active/paused/canceled), generated invoices. Screenshots of list + create + detail."
+    },
+    {
+      "slug": "pipeline/payments",
+      "route": "/pipeline/payments",
+      "title": "Payments (Stripe)",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/settings/payments"
+      ],
+      "srcHints": [
+        "src/pages/settings/payments/",
+        "src/pages/billing/"
+      ],
+      "brief": "NEW PAGE. Getting paid through iMash: connect Stripe (onboarding), the Payments tabs (Overview/Transactions/Disputes/Payouts/Account/Balances/Documents/Notifications), saved payment methods, tap-to-pay mention, refunds. Screenshot the payments overview + transactions + payouts tabs. NOTE: audit account may show a not-connected state — document the connect flow from whatever state exists, do NOT complete a real Stripe onboarding."
+    },
+    {
+      "slug": "dispatch/overview",
+      "route": "/dispatch/overview",
+      "title": "Dispatch Overview",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/pipeline/jobs"
+      ],
+      "srcHints": [
+        "src/pages/jobs/DispatchDashboard.tsx"
+      ],
+      "brief": "NEW PAGE. Field-service dispatch intro + the DispatchDashboard: Statistics tab (KPIs, date ranges), the tab strip tour (dispatch/kanban/map/messages/technicians/reports...) each 1-2 sentences linking to its docs page, the Settings modal entry point. Marketing energy — iMash runs your field business. Screenshots: statistics tab, tab strip zoomed, map view, kanban view."
+    },
+    {
+      "slug": "dispatch/jobs",
+      "route": "/dispatch/jobs",
+      "title": "Creating & Managing Jobs",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/pipeline/jobs"
+      ],
+      "srcHints": [
+        "src/pages/jobs/JobDetail.tsx",
+        "src/pages/jobs/JobForm*"
+      ],
+      "brief": "NEW PAGE. Job lifecycle: create a job (customer, service address, job type/source, schedule), JobDetail walkthrough (status stepper, dispatch controls, finance section, messages, attachments), statuses explained, completing a job. Screenshots: job form, JobDetail zoomed per section. CAUTION: use a simulator/test job or create a new one; don't mutate real-looking demo jobs destructively."
+    },
+    {
+      "slug": "dispatch/auto-dispatch",
+      "route": "/dispatch/auto-dispatch",
+      "title": "Auto Tech Dispatch",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/pipeline/jobs?tab=dispatch"
+      ],
+      "srcHints": [
+        "src/pages/jobs/DispatchDashboard.tsx",
+        "services/auto_Tech_Dispatch/"
+      ],
+      "brief": "NEW PAGE. The auto-dispatch engine in USER terms: SMS blast to techs, sequential vs broadcast/race mode (first ACK wins), ACK/PASS replies, escalation & auto-calls, masked calling between tech & customer, customer notifications, the Dispatch tab + Settings modal + waiting-ack view + SMS simulator. Read repo doc docs/auto-tech-dispatch.md for behavior. Screenshots: dispatch tab, settings modal sections zoomed, simulator. Headline feature — marketing energy."
+    },
+    {
+      "slug": "dispatch/technicians",
+      "route": "/dispatch/technicians",
+      "title": "Team Members (Technicians)",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/pipeline/jobs?tab=technicians"
+      ],
+      "srcHints": [
+        "src/pages/jobs/components/TechnicianSettings.tsx"
+      ],
+      "brief": "NEW PAGE. Technicians tab: add a tech (phone, skills/tags, active toggle), commission settings overview (percent/flat, team-member cuts), the tech dashboard they get (mobile link), tech statuses. Screenshots: technicians list, TechnicianSettings modal zoomed per panel."
+    },
+    {
+      "slug": "dispatch/job-sources-types",
+      "route": "/dispatch/job-sources-types",
+      "title": "Job Sources, Types & Payment Types",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/pipeline/jobs?tab=job_sources",
+        "/pipeline/jobs?tab=job_types",
+        "/pipeline/jobs?tab=payment_types"
+      ],
+      "srcHints": [
+        "src/pages/jobs/"
+      ],
+      "brief": "NEW PAGE. The three config tabs: job sources (lead-source companies, per-source settings, group-SMS sources), job types, payment types — what each drives (reporting, dispatch SMS, finance). Screenshot each tab + an edit modal."
+    },
+    {
+      "slug": "dispatch/reports",
+      "route": "/dispatch/reports",
+      "title": "Dispatch Reports & Statistics",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/pipeline/jobs?tab=reports_finance",
+        "/pipeline/jobs?tab=reports_technician",
+        "/pipeline/jobs?tab=statistics"
+      ],
+      "srcHints": [
+        "src/pages/jobs/"
+      ],
+      "brief": "NEW PAGE. Finance Reports (revenue/costs/profit, completion-date bucketing), Team Reports (per-tech, commissions, team cuts), Statistics tab deep-dive. Screenshot each report view with filters zoomed."
+    },
+    {
+      "slug": "messages/sms",
+      "route": "/messages/sms",
+      "title": "SMS Inbox",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/messages"
+      ],
+      "srcHints": [
+        "src/pages/messages/"
+      ],
+      "brief": "NEW PAGE. The SMS threads inbox: conversation list, replying, thread↔lead/job linking, group MMS threads, AI text-agent takeover vs manual, templates/opt-out basics. Screenshots: inbox, an open thread, compose zoomed."
+    },
+    {
+      "slug": "messages/whatsapp",
+      "route": "/messages/whatsapp",
+      "title": "WhatsApp Setup & Messaging",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/whatsapp"
+      ],
+      "srcHints": [
+        "src/pages/whatsapp/"
+      ],
+      "brief": "NEW PAGE. Connect WhatsApp Business (embedded signup), Numbers tab (calling toggle mention), Messages tab (threads), Templates (create/submit for approval, categories). Screenshots per tab. NOTE: audit account may have no WABA connected — document from the empty/connect state and describe onward steps textually; do NOT start a real Meta OAuth."
+    },
+    {
+      "slug": "messages/whatsapp-campaigns",
+      "route": "/messages/whatsapp-campaigns",
+      "title": "WhatsApp Bots, Flows & Campaigns",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/whatsapp"
+      ],
+      "srcHints": [
+        "src/pages/whatsapp/"
+      ],
+      "brief": "NEW PAGE. The power tabs: Flows (designer), Bots (designer), Catalog, Lists & Campaigns (bulk template sends). Screenshots of each tab; if empty-state, capture the empty state + create modal. Marketing energy."
+    },
+    {
+      "slug": "messages/email",
+      "route": "/messages/email",
+      "title": "Email Inbox & Sending Domains",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/messages/email"
+      ],
+      "srcHints": [
+        "src/pages/messages/Email.tsx",
+        "src/pages/messages/"
+      ],
+      "brief": "NEW PAGE. Email in iMash: Mailbox tab (read/reply), Sending Domains (add domain, DNS records, verify), connected mailboxes, Settings tab. Screenshots per tab; DNS records table zoomed."
+    },
+    {
+      "slug": "messages/email-marketing",
+      "route": "/messages/email-marketing",
+      "title": "Email Marketing Campaigns",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/messages/email?tab=marketing"
+      ],
+      "srcHints": [
+        "src/pages/messages/"
+      ],
+      "brief": "NEW PAGE. Bulk email campaigns: build a campaign (recipients from CRM/CSV, {tokens}, AI template writer), send speed tiers, open/click/unsubscribe tracking, suppression list. Screenshots of campaign builder + a campaign's stats."
+    },
+    {
+      "slug": "automations/smart-flows",
+      "route": "/automations/smart-flows",
+      "title": "Build an Automation (Smart Flows)",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/automation"
+      ],
+      "srcHints": [
+        "src/pages/"
+      ],
+      "brief": "The visual workflow builder (embedded Activepieces): create a flow, triggers (record created, webhook, schedule), actions (SMS, call via createOutboundCall, CRM updates), publish/test. Screenshots of the builder canvas + trigger/action pickers."
+    },
+    {
+      "slug": "automations/custom-tools",
+      "route": "/automations/custom-tools",
+      "title": "Custom Tools (HTTP Functions)",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/tools"
+      ],
+      "srcHints": [
+        "src/pages/tools/"
+      ],
+      "brief": "Build a custom tool: endpoint/method/headers, parameters schema the LLM fills, response mapping, attach to agent, test it. Screenshots of the tool form zoomed per section."
+    },
+    {
+      "slug": "automations/webhooks",
+      "route": "/automations/webhooks",
+      "title": "Webhooks",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/automation",
+        "/assistants"
+      ],
+      "srcHints": [
+        "src/pages/"
+      ],
+      "brief": "Both directions: receive data INTO flows (catch-webhook trigger, payload) and send data OUT (post-call webhooks — cross-link agents/advanced-settings). Screenshots of the webhook trigger config."
+    },
+    {
+      "slug": "automations/integrations",
+      "route": "/automations/integrations",
+      "title": "Integrations",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/automation"
+      ],
+      "srcHints": [
+        "src/pages/"
+      ],
+      "brief": "THIN page — rebuild: the integration pieces available in the flow builder (Google Sheets, Slack, HTTP, CRMs...), connecting accounts, using them in flows. Screenshots of the pieces picker + a connection modal."
+    },
+    {
+      "slug": "automations/mcp-servers",
+      "route": "/automations/mcp-servers",
+      "title": "MCP Servers",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/assistants",
+        "/credentials"
+      ],
+      "srcHints": [
+        "src/pages/assistants/components/McpTab*"
+      ],
+      "brief": "THIN page — rebuild: registering MCP servers (URL/auth), what MCP unlocks, managing them; agent-side attach lives in agents/agent-mcp (cross-link, don't duplicate)."
+    },
+    {
+      "slug": "automations/smart-studio",
+      "route": "/automations/smart-studio",
+      "title": "Smart Studio (AI Workspace)",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/ai-chat"
+      ],
+      "srcHints": [
+        "src/pages/marketing/AiChat*"
+      ],
+      "brief": "NEW PAGE. The AI chat workspace: what it can do (draft content, analyze data, image generation if present), starting chats, using results in campaigns/templates. Screenshots of the workspace + a chat."
+    },
+    {
+      "slug": "analytics/analytics-dashboard",
+      "route": "/analytics/analytics-dashboard",
+      "title": "Analytics Dashboard",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/"
+      ],
+      "srcHints": [
+        "src/pages/overview/"
+      ],
+      "brief": "The Overview analytics: every stat card/chart explained, date filters, drill-downs. DIFFERENTIATE from get-started/dashboard-overview (that page = UI orientation tour; this page = reading & using the numbers). Zoomed per-card screenshots."
+    },
+    {
+      "slug": "analytics/reports",
+      "route": "/analytics/reports",
+      "title": "Reports",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/campaigns/reports",
+        "/campaigns/stats"
+      ],
+      "srcHints": [
+        "src/pages/campaigns/"
+      ],
+      "brief": "Cross-platform reporting map: campaign reports/stats, contact-center reporting, dispatch reports — what lives where, with links; deep-dive the campaign reports screens. Zoomed screenshots."
+    },
+    {
+      "slug": "analytics/cost-management",
+      "route": "/analytics/cost-management",
+      "title": "Cost Management",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/billing",
+        "/logs"
+      ],
+      "srcHints": [
+        "src/pages/billing/"
+      ],
+      "brief": "Understanding costs: per-call cost breakdown in call logs, usage on the billing page, what drives cost (LLM/TTS/STT/telephony legs), controlling spend. DIFFERENTIATE from settings/billing (that page = paying/credits/plans; this = understanding & optimizing usage costs)."
+    },
+    {
+      "slug": "settings/team-management",
+      "route": "/settings/team-management",
+      "title": "Team & Access",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/user-management"
+      ],
+      "srcHints": [
+        "src/pages/userManagement/"
+      ],
+      "brief": "Rich page, weak visuals — add screenshots per step: create sub-account, permission groups, View Profiles (hide pages/modules, default home page), module toggles, impersonation/login-as. Zoomed per-panel shots."
+    },
+    {
+      "slug": "settings/billing",
+      "route": "/settings/billing",
+      "title": "Billing & Credits",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/billing"
+      ],
+      "srcHints": [
+        "src/pages/billing/"
+      ],
+      "brief": "The billing page: balance/credits, adding funds, auto-recharge, invoices/receipts, usage history. Screenshots per section."
+    },
+    {
+      "slug": "settings/security",
+      "route": "/settings/security",
+      "title": "Security",
+      "auth": "admin",
+      "isNew": false,
+      "appRoutes": [
+        "/user-management"
+      ],
+      "srcHints": [
+        "src/pages/"
+      ],
+      "brief": "Make it concrete: password/session policies, session control lock, audit trail pointer, data isolation in USER terms, API key hygiene. Anchor every claim to a screenshot where a real screen exists (user-management, audit)."
+    },
+    {
+      "slug": "settings/audit-log",
+      "route": "/settings/audit-log",
+      "title": "Audit Log & Notifications",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/audit"
+      ],
+      "srcHints": [
+        "src/pages/audit/",
+        "src/components/notifications/"
+      ],
+      "brief": "NEW PAGE. The audit log: what's recorded (who/when/what changed, impersonator tag), filters, per-row diff view; the notification bell + building notify rules (quick presets + advanced), browser push opt-in. Screenshots: audit list, a diff row, bell feed, rule builder."
+    },
+    {
+      "slug": "settings/system-health",
+      "route": "/settings/system-health",
+      "title": "System Health",
+      "auth": "admin",
+      "isNew": true,
+      "appRoutes": [
+        "/monitor"
+      ],
+      "srcHints": [
+        "src/pages/monitor/"
+      ],
+      "brief": "NEW PAGE. The /monitor page: service statuses, uptime, drilling into a service. Short page is fine (4-5 steps). Screenshots of the dashboard + a service detail."
+    }
+  ]
+}

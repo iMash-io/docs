@@ -1,0 +1,101 @@
+{
+  "title": "System Health & Uptime",
+  "lede": "Is the platform up? Now you never have to wonder. The System Health dashboard shows you live status, 90-day uptime, and per-service metrics for every part of iMash — from your voice agents to the database — all on one beautiful page.",
+  "timeToComplete": "5 minutes",
+  "steps": [
+    {
+      "id": "open-system-health",
+      "title": "Open the System Health dashboard",
+      "content": "<p>iMash monitors itself around the clock and turns that telemetry into a status page built just for you. Here's where to find it:</p><ol><li>In the left sidebar, click <strong>System Health</strong> (in the top group, next to <strong>Overview</strong>, <strong>Team &amp; Access</strong> and <strong>Audit</strong>). You can also go directly to <code>/monitor</code>.</li><li>The page title reads <strong>System Health &amp; Uptime</strong>. From top to bottom you'll see: a big <strong>status banner</strong>, a <strong>KPI strip</strong>, a <strong>Live Activity</strong> row, and then a <strong>service list</strong> on the left with the service grid (or a service's detail view) on the right.</li></ol><blockquote>💡 If you don't see <strong>System Health</strong> in your sidebar, your administrator has hidden it for your role — ask the account owner to enable it in your View Profile.</blockquote>",
+      "images": [
+        {"src": "images/settings/system-health-overview-light.png", "alt": "System Health & Uptime dashboard with status banner, KPI strip, live activity and service cards", "caption": "The System Health dashboard: status banner, KPIs, live activity, and every monitored service in one view", "theme": "light"},
+        {"src": "images/settings/system-health-overview-dark.png", "alt": "System Health & Uptime dashboard with status banner, KPI strip, live activity and service cards", "caption": "The System Health dashboard: status banner, KPIs, live activity, and every monitored service in one view", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "read-status-banner",
+      "title": "Read the status banner (and the color legend)",
+      "content": "<p>The banner at the top answers the big question at a glance:</p><ul><li><strong>Overall status</strong> — <strong>All Systems Operational</strong> when everything is healthy. If anything is off, the banner changes to <strong>Some Systems Degraded</strong>, <strong>Partial System Outage</strong> or <strong>Major System Outage</strong> and the banner tint changes with it (green → amber → red).</li><li><strong>Updated … ago</strong> — how fresh the data is. The dashboard refreshes itself every minute while the tab is open; click the small <strong>refresh</strong> icon to update immediately.</li><li><strong>Uptime · last 90 days</strong> — the platform-wide uptime percentage on the right.</li><li><strong>1H / 6H / 24H / 7D</strong> — the time-range selector. It controls the metric charts across the whole page, so you can zoom from the last hour out to the last week.</li></ul><p>Not sure what a color means? Click <strong>Legend</strong> in the top-right corner of the page to see all five states: <strong>Operational</strong>, <strong>Degraded</strong>, <strong>Partial Outage</strong>, <strong>Outage</strong> and <strong>Unknown</strong>.</p>",
+      "images": [
+        {"src": "images/settings/system-health-hero-light.png", "alt": "Status banner showing All Systems Operational, 90-day uptime and the time range selector", "caption": "The status banner: overall status, freshness, 90-day uptime, and the 1H/6H/24H/7D range selector", "theme": "light"},
+        {"src": "images/settings/system-health-hero-dark.png", "alt": "Status banner showing All Systems Operational, 90-day uptime and the time range selector", "caption": "The status banner: overall status, freshness, 90-day uptime, and the 1H/6H/24H/7D range selector", "theme": "dark"},
+        {"src": "images/settings/system-health-legend-light.png", "alt": "Status legend popover listing Operational, Degraded, Partial Outage, Outage and Unknown", "caption": "Click Legend to decode the status colors", "theme": "light"},
+        {"src": "images/settings/system-health-legend-dark.png", "alt": "Status legend popover listing Operational, Degraded, Partial Outage, Outage and Unknown", "caption": "Click Legend to decode the status colors", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "check-the-kpis",
+      "title": "Check the four headline KPIs",
+      "content": "<p>Right under the banner, the KPI strip gives you the health story in four numbers:</p><ul><li><strong>Platform Uptime</strong> — overall uptime across the last 90 days.</li><li><strong>Healthy Services</strong> — how many monitored services are operational right now (e.g. <strong>22/22</strong>).</li><li><strong>Incidents</strong> — the number of incidents recorded in the last 90 days.</li><li><strong>Live Calls</strong> — how many of <em>your</em> calls are in progress at this very moment.</li></ul><blockquote>💡 <strong>Healthy Services</strong> is the fastest \"is it me or the platform?\" check. If it shows all services healthy but something feels wrong in your account, the issue is likely local to your setup — reach out to support with details.</blockquote>",
+      "images": [
+        {"src": "images/settings/system-health-kpis-light.png", "alt": "KPI strip showing Platform Uptime, Healthy Services, Incidents and Live Calls", "caption": "Four headline numbers: uptime, healthy services, incidents, and your live calls", "theme": "light"},
+        {"src": "images/settings/system-health-kpis-dark.png", "alt": "KPI strip showing Platform Uptime, Healthy Services, Incidents and Live Calls", "caption": "Four headline numbers: uptime, healthy services, incidents, and your live calls", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "live-activity",
+      "title": "Watch your live activity",
+      "content": "<p>The <strong>Live Activity</strong> row is proof the platform is working for <em>you</em> right now — it's scoped to your own account, not the whole platform:</p><ul><li><strong>calls in progress</strong> — your calls happening at this moment (the icon pulses while calls are live).</li><li><strong>calls today</strong> — your total call volume so far today.</li><li><strong>messages today</strong> — your SMS/WhatsApp/email message volume so far today.</li></ul>",
+      "images": [
+        {"src": "images/settings/system-health-activity-light.png", "alt": "Live Activity row with calls in progress, calls today and messages today", "caption": "Live Activity: your own calls and messages, updating in real time", "theme": "light"},
+        {"src": "images/settings/system-health-activity-dark.png", "alt": "Live Activity row with calls in progress, calls today and messages today", "caption": "Live Activity: your own calls and messages, updating in real time", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "browse-services",
+      "title": "Browse the monitored services",
+      "content": "<p>Below the KPIs, every monitored service gets its own card, organized into three groups (the same groups appear in the left rail):</p><ul><li><strong>Application</strong> — the parts you interact with: <strong>Automation</strong>, <strong>Call Recording</strong>, <strong>Core API</strong>, <strong>Dashboard</strong>, <strong>Realtime Media</strong>, <strong>Telephony</strong> and <strong>Voice Agents</strong>.</li><li><strong>Infrastructure</strong> — what everything runs on: <strong>Cache &amp; State</strong>, <strong>Database</strong>, <strong>Database Pooler</strong>, <strong>Network Gateway</strong>, <strong>Tracking Proxy</strong>, and more.</li><li><strong>Platform Services</strong> — supporting services such as <strong>API Gateway</strong>, <strong>Authentication</strong> and <strong>Data API</strong>.</li></ul><p>Each card packs a lot into a small space:</p><ul><li>A <strong>status pill</strong> (Operational / Degraded / …).</li><li><strong>Uptime · 24h</strong> with a sparkline of the selected time range.</li><li>A mini <strong>30-day uptime bar</strong> — each block is one day; green means a clean day.</li><li><strong>Instances</strong> (healthy/desired), <strong>CPU</strong> and <strong>Memory</strong> load.</li></ul><p>The sticky rail on the left lists the same services with their live status dot and 24-hour uptime — use it to jump between <strong>Overview</strong> and any service without scrolling.</p>",
+      "images": [
+        {"src": "images/settings/system-health-services-light.png", "alt": "Application service cards showing status, uptime sparkline, 30-day bar and resource metrics", "caption": "Service cards: status, 24h uptime sparkline, 30-day history and live resource usage", "theme": "light"},
+        {"src": "images/settings/system-health-services-dark.png", "alt": "Application service cards showing status, uptime sparkline, 30-day bar and resource metrics", "caption": "Service cards: status, 24h uptime sparkline, 30-day history and live resource usage", "theme": "dark"},
+        {"src": "images/settings/system-health-rail-light.png", "alt": "Left service rail grouped into Application, Infrastructure and Platform Services", "caption": "The left rail: every service, its status dot, and 24h uptime — one click away", "theme": "light"},
+        {"src": "images/settings/system-health-rail-dark.png", "alt": "Left service rail grouped into Application, Infrastructure and Platform Services", "caption": "The left rail: every service, its status dot, and 24h uptime — one click away", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "drill-into-a-service",
+      "title": "Drill into a service",
+      "content": "<p>Want the full story on one service? Open its detail view:</p><ol><li>Click any <strong>service card</strong> in the grid, or click the service's name in the left rail (for example <strong>Voice Agents</strong>).</li><li>The header shows the service name, its <strong>status pill</strong>, and how many <strong>instances</strong> are healthy (e.g. <em>2/2 instances healthy</em>).</li><li>Five stat tiles summarize the service:<ul><li><strong>Uptime · 90d</strong> — long-term uptime, with the 24-hour figure underneath.</li><li><strong>Instances</strong> — healthy vs. desired copies of the service.</li><li><strong>Restarts · 24h</strong> — container restarts in the last day (0 is what you want).</li><li><strong>Avg CPU</strong> and <strong>Peak Memory</strong> — resource utilization for the selected time range.</li></ul></li><li>The <strong>Uptime — last 90 days</strong> bar shows one block per day, followed by the service's incident history — or a friendly <strong>No incidents in the last 90 days</strong> when the record is clean.</li></ol><blockquote>💡 Hover any day block in the uptime bar to see that day's exact uptime percentage.</blockquote>",
+      "images": [
+        {"src": "images/settings/system-health-detail-light.png", "alt": "Voice Agents service detail with status, stat tiles and 90-day uptime bar", "caption": "A service detail view: status, instances, restarts, CPU/memory, and 90 days of uptime", "theme": "light"},
+        {"src": "images/settings/system-health-detail-dark.png", "alt": "Voice Agents service detail with status, stat tiles and 90-day uptime bar", "caption": "A service detail view: status, instances, restarts, CPU/memory, and 90 days of uptime", "theme": "dark"},
+        {"src": "images/settings/system-health-detail-uptime-light.png", "alt": "Uptime last 90 days bar with No incidents message", "caption": "One block per day — all green means 90 flawless days", "theme": "light"},
+        {"src": "images/settings/system-health-detail-uptime-dark.png", "alt": "Uptime last 90 days bar with No incidents message", "caption": "One block per day — all green means 90 flawless days", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "resource-metrics",
+      "title": "Explore the Resource Metrics charts",
+      "content": "<p>Below the uptime history, the <strong>Resource Metrics</strong> section charts how the service is performing over the selected time range:</p><ul><li><strong>CPU Usage</strong> and <strong>Memory Usage</strong> — load over time, with the current and average values in each chart header.</li><li><strong>Network In</strong> / <strong>Network Out</strong> — traffic flowing to and from the service.</li><li><strong>Healthy Instances</strong> — running copies vs. the target line.</li><li><strong>Restarts</strong> — a flat line at zero is a healthy service.</li></ul><ol><li>Use the <strong>1H / 6H / 24H / 7D</strong> selector in the status banner to change the window for every chart.</li><li>If the service runs more than one instance, a dropdown appears in the section header — switch between <strong>All instances · aggregate</strong> and each individual instance to spot an unhealthy one.</li><li>Hover any chart to read exact values at a point in time.</li></ol>",
+      "images": [
+        {"src": "images/settings/system-health-detail-metrics-light.png", "alt": "Resource Metrics charts for CPU, memory, network, healthy instances and restarts", "caption": "Resource Metrics: CPU, memory, network, instances and restarts — with a per-instance dropdown", "theme": "light"},
+        {"src": "images/settings/system-health-detail-metrics-dark.png", "alt": "Resource Metrics charts for CPU, memory, network, healthy instances and restarts", "caption": "Resource Metrics: CPU, memory, network, instances and restarts — with a per-instance dropdown", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "third-party-providers",
+      "title": "Check third-party AI providers",
+      "content": "<p>Your agents also depend on outside AI services — and iMash watches those too. Scroll to the bottom of the <strong>Overview</strong> and find the <strong>Third-Party Providers</strong> section:</p><ul><li>Each row shows a provider (such as <strong>OpenAI</strong>, <strong>ElevenLabs</strong>, <strong>Cartesia</strong> or <strong>Google Gemini API</strong>) with its current <strong>status pill</strong>.</li><li>The <strong>30-day history bar</strong> shows one block per day — hover a block for that day's details.</li><li>Click the <strong>link</strong> icon (or <strong>Check status</strong>) to open the provider's own official status page.</li></ul><blockquote>⚠️ If your voice agent suddenly sounds off or responds slowly while all iMash services are green, check this section — a degraded LLM or TTS provider is the usual culprit, and it typically recovers on the provider's side.</blockquote><p>That's it — you now have a single page that tells you, at any moment, exactly how the platform powering your business is doing.</p>",
+      "images": [
+        {"src": "images/settings/system-health-providers-light.png", "alt": "Third-Party Providers section with OpenAI, ElevenLabs, Cartesia and Google Gemini API status history", "caption": "Third-party AI providers with 30-day status history and links to their official status pages", "theme": "light"},
+        {"src": "images/settings/system-health-providers-dark.png", "alt": "Third-Party Providers section with OpenAI, ElevenLabs, Cartesia and Google Gemini API status history", "caption": "Third-party AI providers with 30-day status history and links to their official status pages", "theme": "dark"}
+      ]
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "You know the platform is healthy — now keep the same watchful eye on your own operation.",
+    "cards": [
+      {"href": "/settings/audit-log", "title": "Audit Log", "description": "See who changed what across your account — every configuration change, tracked."},
+      {"href": "/analytics/analytics-dashboard", "title": "Analytics Dashboard", "description": "Monitor your calls, agents and campaigns with the same at-a-glance clarity."},
+      {"href": "/phone/call-logs", "title": "Call Logs", "description": "Dig into individual calls — recordings, transcripts, outcomes and costs."}
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "System Health & Uptime | iMash Documentation",
+  "metaDescription": "Monitor iMash platform health in real time: overall status, 90-day uptime, per-service metrics, incident history, and third-party AI provider status.",
+  "metaKeywords": "system health, uptime, status page, platform monitoring, incidents, service status, iMash monitor"
+}

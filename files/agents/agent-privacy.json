@@ -1,49 +1,204 @@
 {
   "title": "Privacy & Recording Settings",
-  "lede": "Control what your Smart Agent keeps: turn call transcript and recording storage on or off, and choose whether to save the call audio.",
-  "timeToComplete": "4 minutes",
-  "videoUrl": "https://youtu.be/5tPDfE9WJlI",
-  "videoLength": "1",
+  "lede": "Decide exactly what your Smart Agent keeps from every conversation — full transcripts and audio recordings, or nothing at all. Two toggles give you total control over call data, so you can stay compliant without giving up the insights that make your agent smarter.",
+  "timeToComplete": "6 minutes",
   "steps": [
     {
-      "id": "open-privacy",
-      "title": "Open Privacy & Recording",
-      "content": "<ol><li>Go to <strong>Intelligence Center → Smart Agents</strong> and open your agent.</li><li>Click <strong>Settings</strong>, then select the <strong>Privacy &amp; Recording</strong> section in the left rail.</li></ol>",
+      "id": "open-agent",
+      "title": "Open Your Smart Agent",
+      "content": "<p>Privacy is configured per agent, so each agent can have its own recording policy — record your sales line, keep your medical-intake line storage-free.</p><ol><li>In the left sidebar, click <strong>Smart Agents</strong> (under <strong>Intelligence Center</strong>). You can also reach the same list from the top navigation via <strong>Automation → Smart Agents</strong>.</li><li>In the agent list, click the <strong>name</strong> of the agent you want to configure. The agent editor opens.</li></ol>",
       "images": [
-        { "src": "images/agents/agent-settings-panel-light.png", "alt": "Settings panel", "caption": "Privacy & Recording is a section inside the agent Settings panel.", "theme": "light" },
-        { "src": "images/agents/agent-settings-panel-dark.png", "alt": "Settings panel", "caption": "Privacy & Recording is a section inside the agent Settings panel.", "theme": "dark" }
+        {
+          "src": "images/agents/agent-privacy-agents-list-light.png",
+          "alt": "Smart Agents list with agent names in the first column",
+          "caption": "Click an agent's name to open its editor.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-privacy-agents-list-dark.png",
+          "alt": "Smart Agents list with agent names in the first column",
+          "caption": "Click an agent's name to open its editor.",
+          "theme": "dark"
+        }
       ]
     },
     {
-      "id": "data-storage",
-      "title": "Choose Whether to Store Sensitive Data",
-      "content": "<ul><li><strong>Disable Sensitive Data Storage</strong>: when on, iMash will not store or log the call transcript or recording for this agent.</li><li>Leave it off if you want transcripts saved for later review and analysis.</li></ul>",
+      "id": "open-settings",
+      "title": "Open the Settings Panel",
+      "content": "<ol><li>In the agent editor, look at the bottom of the large prompt card on the left.</li><li>Click the <strong>Settings</strong> button (gear icon) — it sits next to <strong>Sub Agents / Tasks / Handoffs</strong> and <strong>Tools / MCP</strong>.</li><li>The <strong>Settings</strong> window opens with a list of sections down the left side: General, Idle Messages, Voicemail, Speech, Voice Activity Detection, Audio Quality, Background Audio, Interruptions, User Turn Limits, Turn Detection, and Privacy &amp; Recording.</li></ol>",
       "images": [
-        { "src": "images/agents/assistant-editor-light.png", "alt": "Agent editor", "caption": "Privacy choices apply to every call this agent handles.", "theme": "light" },
-        { "src": "images/agents/assistant-editor-dark.png", "alt": "Agent editor", "caption": "Privacy choices apply to every call this agent handles.", "theme": "dark" }
+        {
+          "src": "images/agents/agent-privacy-open-settings-light.png",
+          "alt": "Agent editor with the Settings button at the bottom of the prompt card",
+          "caption": "The Settings button lives at the bottom of the prompt card in the agent editor.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-privacy-open-settings-dark.png",
+          "alt": "Agent editor with the Settings button at the bottom of the prompt card",
+          "caption": "The Settings button lives at the bottom of the prompt card in the agent editor.",
+          "theme": "dark"
+        }
       ]
     },
     {
-      "id": "audio-recording",
-      "title": "Turn Audio Recording On or Off",
-      "content": "<ul><li>Use the <strong>Audio Recording</strong> toggle to record (or not record) the conversation audio.</li><li>This option is only available while sensitive-data storage is enabled - if you disable storage, recording is turned off too.</li></ul>",
+      "id": "open-privacy-section",
+      "title": "Select Privacy & Recording",
+      "content": "<ol><li>In the Settings window, scroll the left rail to the bottom and click <strong>Privacy &amp; Recording</strong> (lock icon, hint text \"Data storage and audio recording\").</li><li>The right side now shows the Privacy &amp; Recording card with two controls: <strong>Disable Sensitive Data Storage</strong> and <strong>Audio Recording</strong>.</li></ol><blockquote>💡 Changes here save instantly — there is no separate Save button. Click <strong>Done</strong> (or the <strong>×</strong>) when you're finished; it simply closes the window.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/agent-privacy-section-light.png",
+          "alt": "Settings window with Privacy & Recording selected in the left rail",
+          "caption": "Privacy & Recording is the last section in the Settings rail.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-privacy-section-dark.png",
+          "alt": "Settings window with Privacy & Recording selected in the left rail",
+          "caption": "Privacy & Recording is the last section in the Settings rail.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "understand-toggles",
+      "title": "Understand the Two Controls",
+      "content": "<p>Here's what each pill toggle does:</p><ul><li><strong>Disable Sensitive Data Storage</strong> — the master privacy switch. When it shows <strong>ON</strong>, iMash will <em>not</em> store or log the call transcript or the call recording for this agent. When it shows <strong>OFF</strong> (the default), transcripts are saved and recording follows the toggle below.</li><li><strong>Audio Recording</strong> — when <strong>ON</strong> (the default), the full conversation audio is recorded and attached to the call log so you can replay it later. Turn it <strong>OFF</strong> to keep transcripts but skip the audio file.</li></ul><p>These settings apply to <strong>every call this agent handles</strong> — phone calls, web calls, and test calls alike.</p>",
+      "images": [
+        {
+          "src": "images/agents/agent-privacy-toggles-light.png",
+          "alt": "Privacy & Recording card with Disable Sensitive Data Storage OFF and Audio Recording ON",
+          "caption": "The default state: storage enabled (toggle OFF) and Audio Recording ON.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-privacy-toggles-dark.png",
+          "alt": "Privacy & Recording card with Disable Sensitive Data Storage OFF and Audio Recording ON",
+          "caption": "The default state: storage enabled (toggle OFF) and Audio Recording ON.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "disable-storage",
+      "title": "Go Fully Storage-Free (Optional)",
+      "content": "<p>Handling medical, legal, or payment conversations? Flip the master switch and iMash keeps nothing sensitive:</p><ol><li>Click the pill next to <strong>Disable Sensitive Data Storage</strong> so it reads <strong>ON</strong>.</li><li>Notice that the <strong>Audio Recording</strong> row immediately greys out — recording is controlled by storage, so no audio is kept while storage is disabled, regardless of what the recording pill showed before.</li></ol><blockquote>⚠️ Trade-off to know before you flip it: with storage disabled there is no transcript to review in Call Logs, nothing for post-call analysis or summaries to work from, and no recording to settle \"who said what\" disputes. Only enable this when a regulation or policy truly requires it.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/agent-privacy-storage-off-light.png",
+          "alt": "Disable Sensitive Data Storage ON with the Audio Recording row greyed out",
+          "caption": "With storage disabled, the Audio Recording control is locked — nothing is kept.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-privacy-storage-off-dark.png",
+          "alt": "Disable Sensitive Data Storage ON with the Audio Recording row greyed out",
+          "caption": "With storage disabled, the Audio Recording control is locked — nothing is kept.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "video-recording-node-view",
+      "title": "Web-Call Video Recording (Node View)",
+      "content": "<p>If your agent takes <strong>web calls with video</strong> (for example through the website widget), there is a third control that only appears in the advanced editor:</p><ol><li>At the top of the agent editor, switch the <strong>Form / Node</strong> toggle to <strong>Node</strong>.</li><li>Find the <strong>Privacy</strong> node on the canvas and click it. Its inspector shows the same two toggles plus <strong>Video Recording</strong> — \"Record the user's video during a web call\".</li><li>The Privacy node's summary line tells you the current policy at a glance: <em>Default recording + storage</em>, <em>audio off</em>, <em>video off</em>, or <em>PII redacted</em>.</li></ol><p>Like Audio Recording, Video Recording is automatically locked off while <strong>Disable Sensitive Data Storage</strong> is on.</p>",
+      "images": []
+    },
+    {
+      "id": "recording-disclosure",
+      "title": "Tell Callers They're Being Recorded",
+      "content": "<p>Recording laws in many places require that callers are informed — some jurisdictions require <em>all parties</em> to consent. The easiest way to stay safe is to have your agent say so up front:</p><ol><li>Back in the agent editor (Form view), look at the top row of the prompt card. Set the first dropdown to <strong>Defined Message</strong> so the agent speaks first with your exact wording.</li><li>In the message field next to it, include a short notice, for example: <em>\"Hi! This call may be recorded for quality and training purposes. How can I help you today?\"</em></li><li>For extra coverage, add a line to the system prompt instructing the agent to confirm recording status honestly if a caller asks whether the call is being recorded.</li></ol><blockquote>⚠️ Consent rules differ by country and state (one-party vs. all-party consent). This guide isn't legal advice — confirm your disclosure wording with your legal counsel, especially if you operate across borders.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/agent-privacy-greeting-light.png",
+          "alt": "Defined Message selector and greeting field at the top of the agent editor",
+          "caption": "Put your recording notice in the Defined Message greeting so it's spoken on every call.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-privacy-greeting-dark.png",
+          "alt": "Defined Message selector and greeting field at the top of the agent editor",
+          "caption": "Put your recording notice in the Defined Message greeting so it's spoken on every call.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "verify-call-logs",
+      "title": "See What's Actually Stored in Call Logs",
+      "content": "<p>Trust, but verify — Call Logs is where every stored transcript and recording lives:</p><ol><li>In the left sidebar, click <strong>Call Logs</strong> (under <strong>Call Center</strong>).</li><li>Use the <strong>AI Agent</strong> filter at the top to narrow the list to the agent you just configured.</li><li>Each row is one call. This list (date, direction, duration, cost) is always kept for billing and reporting — the privacy toggles control the <em>sensitive content</em> of a call (transcript and audio), not the fact that a call happened.</li></ol>",
+      "images": [
+        {
+          "src": "images/agents/agent-privacy-call-logs-light.png",
+          "alt": "Call Logs page with filters and a list of recent calls",
+          "caption": "Call Logs lists every call; the privacy toggles decide whether transcript and audio are attached.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-privacy-call-logs-dark.png",
+          "alt": "Call Logs page with filters and a list of recent calls",
+          "caption": "Call Logs lists every call; the privacy toggles decide whether transcript and audio are attached.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "check-call-detail",
+      "title": "Open a Call to Confirm Your Policy Works",
+      "content": "<ol><li>Click any call row to open the <strong>Call Details</strong> panel.</li><li>With recording <strong>ON</strong>, an audio player appears at the top so you can replay the call, and the <strong>Transcripts</strong> tab shows the full conversation.</li><li>With recording <strong>OFF</strong> (or storage disabled), the top banner reads <strong>\"Recording not enabled for this call\"</strong> — exactly what you want to see after locking things down.</li></ol><p>That's it — your agent now keeps precisely as much (or as little) as your business and your regulators require. 🎉</p>",
+      "images": [
+        {
+          "src": "images/agents/agent-privacy-call-detail-light.png",
+          "alt": "Call Details panel showing the banner Recording not enabled for this call",
+          "caption": "The Call Details panel confirms your policy: no recording was kept for this call.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-privacy-call-detail-dark.png",
+          "alt": "Call Details panel showing the banner Recording not enabled for this call",
+          "caption": "The Call Details panel confirms your policy: no recording was kept for this call.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "compliance-tips",
+      "title": "Compliance Quick Checklist",
+      "content": "<p>A short checklist to keep your call program clean:</p><ul><li><strong>Disclose recording</strong> in the agent's greeting wherever consent laws apply (see the step above).</li><li><strong>Match the policy to the line</strong>: it's normal to record sales and support agents while running intake agents for regulated data (health, payments) storage-free.</li><li><strong>Review before launch</strong>: place a test call, then check Call Logs to confirm the transcript/recording behavior matches your intent.</li><li><strong>Limit who can listen</strong>: recordings and transcripts are visible to teammates with access to Call Logs — pair your privacy policy with sensible team permissions.</li><li><strong>Audit changes</strong>: privacy toggles are configuration changes; keep an eye on your audit log so you know who changed a recording policy and when.</li></ul>",
       "images": []
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "With privacy set, continue configuring your agent:",
+    "description": "Your data policy is locked in — now fine-tune the rest of your agent and put your stored data to work:",
     "cards": [
-      { "href": "/agents/agent-settings", "title": "Agent Settings", "description": "Adjust timeouts, idle messages, and voicemail handling." },
-      { "href": "/agents/advanced-settings", "title": "Post-Call Processing", "description": "Extract structured data and send call results to your systems." },
-      { "href": "/phone/call-logs", "title": "Review Call Logs", "description": "See stored transcripts, recordings, and call summaries." }
+      {
+        "href": "/agents/agent-settings",
+        "title": "Agent Settings",
+        "description": "Timeouts, idle messages, voicemail handling, and turn-taking behavior."
+      },
+      {
+        "href": "/agents/advanced-settings",
+        "title": "Post-Call Processing",
+        "description": "Extract structured data from stored transcripts and send results to your systems."
+      },
+      {
+        "href": "/phone/call-logs",
+        "title": "Call Logs",
+        "description": "Browse stored transcripts, recordings, costs, and call analytics."
+      },
+      {
+        "href": "/settings/audit-log",
+        "title": "Audit Log",
+        "description": "Track who changed configuration — including privacy settings — and when."
+      }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Privacy & Recording Settings | iMash Docs",
-  "metaDescription": "Control your iMash Smart Agent's data privacy: turn transcript and recording storage on or off with Disable Sensitive Data Storage, and toggle audio recording.",
-  "metaKeywords": "privacy settings, imash, smart agent, data storage, audio recording, transcript, sensitive data"
+  "metaTitle": "Privacy & Recording Settings | iMash Documentation",
+  "metaDescription": "Control what your iMash Smart Agent stores: enable or disable call recording, go fully storage-free with Disable Sensitive Data Storage, add recording disclosures, and verify your policy in Call Logs.",
+  "metaKeywords": "privacy settings, call recording, imash, smart agent, sensitive data storage, transcript, audio recording, video recording, compliance, consent"
 }

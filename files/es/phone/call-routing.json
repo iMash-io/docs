@@ -1,56 +1,110 @@
 {
   "title": "Enrutar llamadas a un agente",
-  "lede": "Decide qué sucede cuando alguien marca tu número. El enrutamiento se configura por número: asigna un agente de IA entrante para responder las llamadas que llegan, y un agente saliente para las llamadas que realizas desde ese número.",
-  "timeToComplete": "5 minutos",
+  "lede": "Decida exactamente qué sucede en el momento en que alguien marca su número: envíe a los llamantes a un agente de IA 24/7, cambie de agente según la hora del día, desvíe a una línea humana con una red de seguridad de IA o transfiera la llamada por completo. Todo se configura por número, en un solo panel.",
+  "timeToComplete": "10 minutos",
   "steps": [
     {
       "id": "open-number",
-      "title": "Abrir el número de teléfono",
-      "content": "<ol><li>Ve a <strong>Call Center → Phone numbers</strong> (Centro de llamadas → Números de teléfono).</li><li>Haz clic en el número que quieres configurar para abrir su panel de detalles. La columna <strong>Inbound Agent</strong> (Agente entrante) muestra hacia dónde enruta actualmente un número (indica <em>None</em> hasta que asignes uno).</li></ol>",
+      "title": "Abra el número de teléfono que desea configurar",
+      "content": "<p>Toda decisión de enrutamiento vive en el propio número, así que empiece en su lista de números.</p><ol><li>En la barra lateral izquierda, haga clic en <strong>Phone numbers</strong> (Números de teléfono, bajo <strong>Call Center</strong>).</li><li>Asegúrese de estar en la pestaña <strong>Numbers</strong> (Números). La lista muestra cada número con su <strong>Label</strong> (Etiqueta), sus <strong>Capabilities</strong> (Capacidades: Voz, SMS, proveedor, WhatsApp) y una columna <strong>Inbound Agent</strong> (Agente entrante) — esta columna le dice de un vistazo a qué se enruta cada número. Muestra <em>None</em> (Ninguno) hasta que asigne un agente.</li><li>Haga clic en el número de teléfono (el enlace azul de la columna <strong>Phone Number</strong>) o en el icono verde del ojo bajo <strong>Actions</strong> (Acciones) para abrir su panel de detalles.</li></ol><blockquote>💡 Si la columna Inbound Agent muestra <strong>Unknown</strong> (Desconocido) en naranja, el agente asignado fue eliminado o no es visible para su cuenta — abra el número y elija uno nuevo.</blockquote>",
       "images": [
-        { "src": "images/phone/phone-numbers-light.png", "alt": "Lista de números de teléfono con la columna de agente entrante", "caption": "La columna Inbound Agent muestra qué agente responde cada número.", "theme": "light" },
-        { "src": "images/phone/phone-numbers-dark.png", "alt": "Lista de números de teléfono con la columna de agente entrante", "caption": "La columna Inbound Agent muestra qué agente responde cada número.", "theme": "dark" }
+        { "src": "images/phone/call-routing-numbers-list-light.png", "alt": "Lista de números de teléfono con la columna Inbound Agent", "caption": "La columna Inbound Agent muestra a qué se enruta actualmente cada número.", "theme": "light" },
+        { "src": "images/phone/call-routing-numbers-list-dark.png", "alt": "Lista de números de teléfono con la columna Inbound Agent", "caption": "La columna Inbound Agent muestra a qué se enruta actualmente cada número.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "choose-call-handling",
+      "title": "Elija un modo de Call Handling (manejo de llamadas)",
+      "content": "<p>El panel <strong>Phone Number Details</strong> (Detalles del número) se abre en la pestaña <strong>Settings</strong> (Configuración), en la tarjeta <strong>Inbound Settings</strong> (Configuración entrante). El selector <strong>Call Handling</strong> de la parte superior es la decisión maestra — tiene tres modos:</p><ul><li><strong>Enable Agents</strong> (Habilitar agentes) — un agente de IA responde cada llamada entrante (y puede rotar agentes con un horario). Es el modo predeterminado y el más popular.</li><li><strong>Warm Transfer</strong> (Transferencia asistida) — las llamadas se desvían a un número de teléfono real (su línea de oficina, un móvil) mientras iMash permanece en la línea, de modo que un agente de IA puede intervenir si nadie contesta.</li><li><strong>Cold Transfer</strong> (Transferencia directa) — las llamadas se transfieren de inmediato a otro número y abandonan la plataforma por completo.</li></ul><p>El panel también tiene las pestañas <strong>Inbound Calls</strong> (Llamadas entrantes) y <strong>Outbound Calls</strong> (Llamadas salientes) — el historial propio de este número — además de dos botones en la parte inferior: <strong>Test Call</strong> (Llamada de prueba) y <strong>Save Settings</strong> (Guardar configuración).</p>",
+      "images": [
+        { "src": "images/phone/call-routing-number-details-light.png", "alt": "Panel de detalles del número mostrando los modos de Call Handling", "caption": "Inbound Settings — elija Enable Agents, Warm Transfer o Cold Transfer.", "theme": "light" },
+        { "src": "images/phone/call-routing-number-details-dark.png", "alt": "Panel de detalles del número mostrando los modos de Call Handling", "caption": "Inbound Settings — elija Enable Agents, Warm Transfer o Cold Transfer.", "theme": "dark" }
       ]
     },
     {
       "id": "assign-inbound",
-      "title": "Asignar el agente entrante",
-      "content": "<ol><li>En los detalles del número, busca <strong>Inbound Agent</strong> (Agente entrante — el agente de IA que responde las llamadas que llegan).</li><li>Elige un agente del menú desplegable. Aquí solo aparecen los agentes que ya has creado.</li><li>Guarda. A partir de ahora, las llamadas a este número son respondidas por ese agente.</li></ol><p>Para establecer un <strong>Outbound Agent</strong> (Agente saliente — usado cuando el número realiza llamadas, por ejemplo en campañas de marcado), elige uno del menú desplegable de salientes en el mismo panel.</p>"
+      "title": "Asigne el agente de IA que responde las llamadas",
+      "content": "<p>Este es el momento mágico: un menú desplegable y su número se responde solo, de día y de noche.</p><ol><li>Con <strong>Call Handling</strong> en <strong>Enable Agents</strong>, haga clic en el desplegable <strong>Inbound Agent</strong> (Agente entrante).</li><li>Elija el agente que debe responder este número. Aquí solo aparecen los agentes que ya haya creado — si la lista está vacía, cree uno primero (vea <em>Crear un agente de IA</em> más abajo).</li><li>Haga clic en <strong>Save Settings</strong> (Guardar configuración) abajo a la derecha. El botón se ilumina en azul cuando hay cambios sin guardar.</li></ol><p>A partir de ese momento, cada llamada a este número la responde ese agente. Puede quitar la asignación en cualquier momento con la pequeña <strong>×</strong> dentro del desplegable.</p><blockquote>⚠️ Nada se aplica hasta que haga clic en <strong>Save Settings</strong> — si cierra el panel con el botón todavía azul, sus cambios se pierden.</blockquote>",
+      "images": [
+        { "src": "images/phone/call-routing-inbound-agent-light.png", "alt": "Desplegable Inbound Agent abierto con una lista de agentes de IA", "caption": "Elija cualquiera de sus agentes de IA en el desplegable Inbound Agent.", "theme": "light" },
+        { "src": "images/phone/call-routing-inbound-agent-dark.png", "alt": "Desplegable Inbound Agent abierto con una lista de agentes de IA", "caption": "Elija cualquiera de sus agentes de IA en el desplegable Inbound Agent.", "theme": "dark" }
+      ]
     },
     {
-      "id": "call-forwarding",
-      "title": "Opcional: reenvío y alternativas",
-      "content": "<p>En el mismo panel de detalles puedes agregar comportamientos de respaldo:</p><ul><li><strong>Reenviar a un agente o número</strong> cuando llega una llamada.</li><li>Enviar las llamadas <strong>ocupadas</strong> o <strong>sin respuesta</strong> a un agente elegido.</li><li>Volver a marcar automáticamente las <strong>llamadas perdidas</strong> con un agente.</li></ul><p>Deja estas opciones desactivadas si solo quieres que el agente entrante responda todas las llamadas.</p>"
+      "id": "scheduler",
+      "title": "Opcional: rote agentes según la hora del día (horario nocturno)",
+      "content": "<p>¿Quiere su agente de ventas en horario laboral y un agente que tome mensajes por la noche? El <strong>Assistant Scheduler</strong> (Programador de asistentes) hace exactamente eso.</p><ol><li>Aún en modo <strong>Enable Agents</strong>, marque <strong>Enable Scheduler</strong> (Habilitar programador) en la tarjeta <strong>Assistant Scheduler</strong>. (El desplegable simple de Inbound Agent se desactiva y muestra <em>Managed by Scheduler</em> — ahora manda el horario.)</li><li>Configure el <strong>Timezone</strong> (Zona horaria) — todas las franjas se evalúan en esta zona horaria, así que elija donde opera su negocio.</li><li>Elija un <strong>Default Assistant</strong> (Asistente predeterminado). Este agente responde cuando <em>ninguna</em> franja horaria coincide — es, en la práctica, su agente fuera de horario.</li><li>Haga clic en <strong>Add Time Slot</strong> (Agregar franja horaria). Para cada franja, marque los <strong>Days</strong> (Días) a los que aplica (Sun–Sat), configure las horas de <strong>Start</strong> (Inicio) y <strong>End</strong> (Fin), y elija el <strong>Agent</strong> (Agente) que responde en esa ventana.</li><li>Agregue tantas franjas como necesite (días laborables, mañanas de fin de semana, etc.) y luego haga clic en <strong>Save Settings</strong>.</li></ol><blockquote>⚠️ Las franjas no deben superponerse en el mismo día — si lo hacen, aparece una alerta roja <strong>Schedule Overlap Detected</strong> (Superposición de horarios detectada) y <strong>Save Settings</strong> queda deshabilitado hasta que corrija las horas.</blockquote>",
+      "images": [
+        { "src": "images/phone/call-routing-scheduler-light.png", "alt": "Assistant Scheduler con zona horaria, asistente predeterminado y una franja de días laborables", "caption": "Una franja para el horario laboral; el Default Assistant cubre todo lo demás.", "theme": "light" },
+        { "src": "images/phone/call-routing-scheduler-dark.png", "alt": "Assistant Scheduler con zona horaria, asistente predeterminado y una franja de días laborables", "caption": "Una franja para el horario laboral; el Default Assistant cubre todo lo demás.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "warm-transfer",
+      "title": "Opcional: desvíe a un teléfono real con Warm Transfer",
+      "content": "<p>¿Prefiere que primero conteste una persona? <strong>Warm Transfer</strong> desvía las llamadas entrantes a cualquier número de teléfono mientras iMash permanece en la línea — la llamada se sigue registrando y grabando, y su IA puede recoger lo que la persona no alcance a atender.</p><ol><li>Ponga <strong>Call Handling</strong> en <strong>Warm Transfer</strong>.</li><li>En <strong>Forward To Number</strong> (Desviar al número), ingrese el número de destino. Use el pequeño selector <strong>+</strong> / <strong>No +</strong> de la derecha para controlar si el número se marca en formato internacional (con <code>+</code>) o como una cadena de dígitos simple — la mayoría de los números deben mantener <strong>+</strong>.</li><li>Opcionalmente elija un <strong>Forward Agent</strong> (Agente de desvío) — el agente de IA asociado a la transferencia asistida.</li><li>Haga clic en <strong>Save Settings</strong>.</li></ol>",
+      "images": [
+        { "src": "images/phone/call-routing-warm-transfer-light.png", "alt": "Configuración de Warm Transfer con Forward To Number y Forward Agent", "caption": "Warm Transfer mantiene a iMash en la línea mientras suena su teléfono real.", "theme": "light" },
+        { "src": "images/phone/call-routing-warm-transfer-dark.png", "alt": "Configuración de Warm Transfer con Forward To Number y Forward Agent", "caption": "Warm Transfer mantiene a iMash en la línea mientras suena su teléfono real.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "warm-advanced",
+      "title": "Dele a Warm Transfer una red de seguridad de IA",
+      "content": "<p>La tarjeta <strong>Advanced Call Routing</strong> (Enrutamiento avanzado, visible solo en modo Warm Transfer) es donde se asegura de que ninguna llamada se pierda de verdad. Cada opción es un selector <strong>Disabled / Enabled</strong> (Deshabilitado / Habilitado) que revela un selector de agente al habilitarse:</p><ul><li><strong>Send Busy Calls to AI</strong> (Enviar llamadas ocupadas a la IA) — si la línea desviada está ocupada, el agente de IA seleccionado toma la llamada en lugar de que el llamante oiga el tono de ocupado.</li><li><strong>Auto Dial Missed Calls</strong> (Marcar automáticamente llamadas perdidas) — si se pierde una llamada, el agente de IA seleccionado devuelve la llamada al cliente automáticamente.</li><li><strong>No Answer Timeout</strong> (Tiempo de espera sin respuesta) — si nadie contesta dentro del número de <strong>seconds</strong> (segundos) que configure (30 por defecto), el agente de IA seleccionado atiende la llamada.</li></ul><ol><li>Cambie a <strong>Enabled</strong> las opciones que desee.</li><li>Elija un agente para cada opción habilitada (pueden ser todas el mismo agente).</li><li>Para No Answer Timeout, configure cuántos segundos debe sonar el teléfono primero.</li><li>Haga clic en <strong>Save Settings</strong>.</li></ol><blockquote>💡 La combinación \"Warm Transfer + No Answer Timeout\" es la configuración clásica de una pequeña empresa: su teléfono suena 25–30 segundos y, si no puede atender, la IA responde para que el prospecto nunca acabe en el buzón de voz — ni con la competencia.</blockquote>",
+      "images": [
+        { "src": "images/phone/call-routing-warm-advanced-light.png", "alt": "Advanced Call Routing con los respaldos de IA para ocupado, llamada perdida y sin respuesta habilitados", "caption": "Cada respaldo revela su propio selector de agente al habilitarse.", "theme": "light" },
+        { "src": "images/phone/call-routing-warm-advanced-dark.png", "alt": "Advanced Call Routing con los respaldos de IA para ocupado, llamada perdida y sin respuesta habilitados", "caption": "Cada respaldo revela su propio selector de agente al habilitarse.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "cold-transfer",
+      "title": "Opcional: transfiera llamadas por completo con Cold Transfer",
+      "content": "<p><strong>Cold Transfer</strong> desvía de inmediato cada llamada entrante a otro número mediante un SIP REFER — una transferencia a ciegas, sin presentación previa y sin intervención de la IA.</p><ol><li>Ponga <strong>Call Handling</strong> en <strong>Cold Transfer</strong>.</li><li>Ingrese el destino en <strong>Forward To Number</strong> (mismo selector <strong>+</strong> / <strong>No +</strong> que en Warm Transfer).</li><li>Haga clic en <strong>Save Settings</strong>.</li></ol><blockquote>⚠️ Como explica la tarjeta azul informativa del panel: una vez completada la transferencia directa, iMash ya no puede rastrear ni grabar la llamada — pierde visibilidad de todo lo que ocurre después del traspaso. Si quiere grabaciones, analíticas o respaldos de IA, use <strong>Warm Transfer</strong>.</blockquote>",
+      "images": [
+        { "src": "images/phone/call-routing-cold-transfer-light.png", "alt": "Configuración de Cold Transfer con la tarjeta informativa de SIP REFER", "caption": "Cold Transfer entrega la llamada por completo — sin seguimiento tras el traspaso.", "theme": "light" },
+        { "src": "images/phone/call-routing-cold-transfer-dark.png", "alt": "Configuración de Cold Transfer con la tarjeta informativa de SIP REFER", "caption": "Cold Transfer entrega la llamada por completo — sin seguimiento tras el traspaso.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "route-to-humans",
+      "title": "Enrutar a un equipo humano en lugar de a una IA",
+      "content": "<p>Asignar un agente entrante cubre la atención con IA primero, pero también puede hacer sonar a todo un equipo de operadores en vivo:</p><ul><li><strong>Hacer sonar un grupo humano directamente</strong> — un número puede enrutarse a un grupo de permisos del Contact Center para que suene el marcador de todos los miembros en línea a la vez y el primero en contestar tome la llamada. Esto se configura en el grupo, no en el número — vea la guía de <a data-href=\"/contact-center/inbound-sip-routing\">Enrutamiento SIP entrante</a>.</li><li><strong>IA primero, humanos bajo demanda</strong> — mantenga al agente de IA como puerta de entrada y dele una herramienta de transferencia, para que pase a los llamantes a su equipo solo cuando haga falta (vea <a data-href=\"/contact-center/call-transfer\">Transferencia de llamadas</a>).</li><li><strong>Humanos primero, IA de respaldo</strong> — use <strong>Warm Transfer</strong> hacia la línea de su equipo con el respaldo <strong>No Answer Timeout</strong> del paso anterior.</li></ul><p>Combine libremente por número — su línea principal puede ser IA-primero mientras una línea VIP suena directo a su equipo sénior.</p>"
     },
     {
       "id": "bulk-assign",
-      "title": "Asignar varios números a la vez",
-      "content": "<ol><li>En la lista de Phone numbers, marca las casillas de varios números.</li><li>Usa la acción masiva para establecer el mismo agente <strong>entrante</strong> o <strong>saliente</strong> en todos los números seleccionados.</li><li>Elimina una asignación de la misma manera eligiendo <em>None</em>.</li></ol>"
+      "title": "Asigne un agente a muchos números a la vez",
+      "content": "<p>¿Gestiona docenas de números? No los abra uno por uno.</p><ol><li>En la lista <strong>Numbers</strong>, marque la casilla a la izquierda de cada número que quiera cambiar (la casilla del encabezado selecciona toda la página). Aparecen un contador <strong>N selected</strong> (N seleccionados) y una barra de acciones masivas.</li><li>Haga clic en el botón <strong>Inbound Agent</strong> y elija un agente del desplegable — se aplica a todos los números seleccionados al instante.</li><li>Para desasignar en masa, elija <strong>Clear Inbound Agent</strong> (Quitar agente entrante) al final del mismo desplegable.</li></ol><p>La misma barra también ofrece <strong>Edit Label</strong> (Editar etiqueta — renombrar muchos números a la vez) y <strong>Delete Selected</strong> (Eliminar seleccionados).</p>",
+      "images": [
+        { "src": "images/phone/call-routing-bulk-assign-light.png", "alt": "Dos números seleccionados con el desplegable masivo de Inbound Agent abierto", "caption": "Seleccione varios números y luego asigne o quite su agente entrante con un clic.", "theme": "light" },
+        { "src": "images/phone/call-routing-bulk-assign-dark.png", "alt": "Dos números seleccionados con el desplegable masivo de Inbound Agent abierto", "caption": "Seleccione varios números y luego asigne o quite su agente entrante con un clic.", "theme": "dark" }
+      ]
     },
     {
       "id": "verify",
-      "title": "Probar y confirmar",
-      "content": "<ol><li>Llama al número desde tu teléfono: tu agente asignado debería contestar.</li><li>Revisa <strong>Call Center → Call Logs</strong> (Centro de llamadas → Registros de llamadas) para confirmar que la llamada se registró y fue atendida por el agente correcto.</li></ol>",
+      "title": "Pruebe su enrutamiento y confirme que funciona",
+      "content": "<p>Llegó la recompensa: escuche a su número responderse solo.</p><ol><li>En el panel de detalles del número, haga clic en <strong>Test Call</strong> (Llamada de prueba, abajo a la izquierda de la pestaña Settings). Esto abre el marcador web integrado, ya cargado con este número y su agente entrante, para hablar con su configuración sin levantar un teléfono.</li><li>Luego haga la prueba real: marque el número desde su móvil — el agente asignado (o el destino de desvío) debe contestar exactamente como lo configuró.</li><li>Abra la pestaña <strong>Inbound Calls</strong> en el mismo panel — cada llamada entrante a este número aparece aquí con su fecha, costo, motivo de finalización y duración. La pestaña <strong>Outbound Calls</strong> muestra las llamadas realizadas desde este número.</li><li>Para la vista completa entre números, vaya a <strong>Call Center → Call Logs</strong> (Registros de llamadas) y abra su llamada de prueba para revisar la grabación y la transcripción.</li></ol>",
       "images": [
-        { "src": "images/phone/call-logs-light.png", "alt": "Registros de llamadas confirmando una llamada enrutada", "caption": "Los Call Logs confirman qué agente atendió cada llamada.", "theme": "light" },
-        { "src": "images/phone/call-logs-dark.png", "alt": "Registros de llamadas confirmando una llamada enrutada", "caption": "Los Call Logs confirman qué agente atendió cada llamada.", "theme": "dark" }
+        { "src": "images/phone/call-routing-inbound-calls-light.png", "alt": "Pestaña Inbound Calls dentro del panel de detalles del número", "caption": "Cada número conserva su propio historial de llamadas entrantes y salientes.", "theme": "light" },
+        { "src": "images/phone/call-routing-inbound-calls-dark.png", "alt": "Pestaña Inbound Calls dentro del panel de detalles del número", "caption": "Cada número conserva su propio historial de llamadas entrantes y salientes.", "theme": "dark" }
       ]
     }
   ],
   "nextSteps": {
     "title": "¿Qué sigue?",
-    "description": "Confirma que tu enrutamiento funciona y perfecciona tus agentes.",
+    "description": "Su número sabe exactamente adónde enviar a cada llamante. Ahora afine el destino.",
     "cards": [
-      { "href": "/phone/call-logs", "title": "Revisar registros de llamadas", "description": "Ve cada llamada, quién la atendió y cómo terminó." },
-      { "href": "/agents/create-agent", "title": "Crear un agente de IA", "description": "Crea o ajusta el agente que responde las llamadas." },
-      { "href": "/phone/add-phone-number", "title": "Agregar otro número", "description": "Compra o importa más números para enrutar." }
+      { "href": "/contact-center/inbound-sip-routing", "title": "Enrutamiento SIP entrante a grupos", "description": "Haga sonar a todo un equipo de operadores en vivo desde un número de teléfono." },
+      { "href": "/agents/create-agent", "title": "Crear un agente de IA", "description": "Cree o ajuste el agente que responde sus llamadas." },
+      { "href": "/phone/call-logs", "title": "Revisar los registros de llamadas", "description": "Vea cada llamada, quién la atendió y cómo terminó." },
+      { "href": "/phone/add-phone-number", "title": "Agregar otro número", "description": "Compre o importe más números para enrutar." }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o alguna pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+    "title": "¿Necesita ayuda?",
+    "content": "<p>Si tiene algún problema o alguna pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
   },
-  "metaTitle": "Enrutar llamadas a un agente - Enrutamiento de llamadas entrantes | iMash Docs",
-  "metaDescription": "Asigna un agente de IA entrante a un número de teléfono para que responda las llamadas, establece un agente saliente, agrega alternativas de reenvío y asigna números de forma masiva.",
-  "metaKeywords": "enrutamiento de llamadas, agente entrante, agente saliente, reenvío de llamadas, asignar agente, enrutamiento de número de teléfono, sin respuesta, llamada perdida"
+  "metaTitle": "Enrutar llamadas a un agente - Enrutamiento de llamadas entrantes | iMash Documentation",
+  "metaDescription": "Asigne un agente de IA entrante a un número de teléfono, rote agentes con un horario para fuera de oficina, desvíe llamadas con transferencia asistida o directa, agregue respaldos de IA por ocupado/perdida/sin respuesta y asigne números en masa.",
+  "metaKeywords": "enrutamiento de llamadas, agente entrante, programador de asistentes, horario nocturno, transferencia asistida, transferencia directa, desvío de llamadas, tiempo sin respuesta, llamada perdida, asignación masiva, enrutamiento de número de teléfono"
 }

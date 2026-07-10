@@ -1,61 +1,212 @@
 {
-  "title": "Procesamiento posterior a la llamada y webhooks",
-  "lede": "Convierte cada llamada en resultados estructurados: genera un resumen, califica el éxito, extrae datos JSON personalizados y envíalo todo por POST a tus sistemas, configurado en el panel Webhooks Post Processing (Procesamiento posterior de webhooks).",
+  "title": "Procesamiento Post-Llamada y Webhooks",
+  "lede": "Cada llamada que atiende su agente de IA está llena de datos valiosos: quién llamó, qué quería y si se cumplió el objetivo. El panel Webhooks Post Processing convierte cada llamada finalizada en un resumen, una puntuación de éxito y JSON estructurado limpio, y luego lo envía por POST al sistema que usted elija.",
   "timeToComplete": "10 minutos",
-  "videoUrl": "https://youtu.be/l7_wH8Bpsp0",
-  "videoLength": "3",
   "steps": [
     {
-      "id": "open-webhooks",
-      "title": "Abre Webhooks Post Processing",
-      "content": "<ol><li>Ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes) y abre tu agente.</li><li>Abre el panel <strong>Webhooks Post Processing</strong> (Procesamiento posterior de webhooks). Sus secciones son <strong>Server URL &amp; Events</strong> (URL del servidor y eventos), <strong>Summary</strong> (Resumen), <strong>Success Evaluation</strong> (Evaluación de éxito) y <strong>Structured Data</strong> (Datos estructurados).</li></ol>",
+      "id": "open-agent",
+      "title": "Abra su agente",
+      "content": "<p>El procesamiento post-llamada se configura por agente, así que comience abriendo el agente con el que quiere trabajar.</p><ol><li>En la barra lateral izquierda, bajo <strong>Intelligence Center</strong> (Centro de Inteligencia), haga clic en <strong>Smart Agents</strong> (Agentes Inteligentes).</li><li>En la lista de agentes, haga clic en el <strong>nombre</strong> del agente que quiere configurar (por ejemplo <strong>Agent_9278647</strong>). Se abrirá el editor del agente.</li></ol><blockquote>💡 Si su editor se abre en la vista visual <strong>Node</strong> (Nodos), haga clic en <strong>Form</strong> (Formulario) en la barra superior — esta guía sigue la vista Form.</blockquote>",
       "images": [
-        { "src": "images/agents/webhooks-post-light.png", "alt": "Panel de procesamiento posterior de webhooks", "caption": "El panel Webhooks Post Processing: URL del servidor, resumen, evaluación de éxito y datos estructurados.", "theme": "light" },
-        { "src": "images/agents/webhooks-post-dark.png", "alt": "Panel de procesamiento posterior de webhooks", "caption": "El panel Webhooks Post Processing: URL del servidor, resumen, evaluación de éxito y datos estructurados.", "theme": "dark" }
+        {
+          "src": "images/agents/advanced-settings-agents-list-light.png",
+          "alt": "Lista de Smart Agents bajo Intelligence Center",
+          "caption": "Intelligence Center → Smart Agents — haga clic en el nombre de un agente para abrir su editor.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/advanced-settings-agents-list-dark.png",
+          "alt": "Lista de Smart Agents bajo Intelligence Center",
+          "caption": "Intelligence Center → Smart Agents — haga clic en el nombre de un agente para abrir su editor.",
+          "theme": "dark"
+        }
       ]
     },
     {
-      "id": "server-url",
-      "title": "Configura la URL del servidor y los eventos",
-      "content": "<ol><li>En <strong>Server URL &amp; Events</strong>, ingresa la URL que debe recibir los datos de la llamada mediante HTTP POST.</li><li>Marca los eventos que quieres enviar; por ejemplo resumen, transcripción, actualizaciones de estado, llamadas a herramientas, datos estructurados y evaluación de éxito.</li></ol>",
+      "id": "find-the-panel",
+      "title": "Localice la fila Webhooks Post Processing",
+      "content": "<p>La columna central del editor del agente lista todas las capacidades de su agente: Knowledge Base, Voice, Brains y más.</p><ol><li>Localice la fila <strong>Webhooks Post Processing</strong> (Procesamiento Post-Llamada por Webhooks) en esa lista.</li><li>Observe el indicador <strong>ON / OFF</strong> en el borde derecho de la fila — se ilumina en verde cuando hay al menos un evento post-llamada habilitado, para que vea de un vistazo si este agente reporta sus llamadas.</li><li>Haga clic en cualquier parte de la fila <strong>Webhooks Post Processing</strong> para abrir su ventana de configuración.</li></ol>",
       "images": [
-        { "src": "images/agents/assistant-editor-light.png", "alt": "Editor del agente", "caption": "Los resultados posteriores a la llamada se envían automáticamente cuando la llamada termina.", "theme": "light" },
-        { "src": "images/agents/assistant-editor-dark.png", "alt": "Editor del agente", "caption": "Los resultados posteriores a la llamada se envían automáticamente cuando la llamada termina.", "theme": "dark" }
+        {
+          "src": "images/agents/advanced-settings-open-row-light.png",
+          "alt": "Lista de capacidades del agente con la fila Webhooks Post Processing",
+          "caption": "La lista de capacidades del agente — haga clic en la fila Webhooks Post Processing para abrir el panel.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/advanced-settings-open-row-dark.png",
+          "alt": "Lista de capacidades del agente con la fila Webhooks Post Processing",
+          "caption": "La lista de capacidades del agente — haga clic en la fila Webhooks Post Processing para abrir el panel.",
+          "theme": "dark"
+        }
       ]
     },
     {
-      "id": "summary-eval",
-      "title": "Resumen y evaluación de éxito",
-      "content": "<ul><li><strong>Summary</strong> (Resumen): escribe una indicación que describa cómo resumir cada llamada.</li><li><strong>Success Evaluation</strong> (Evaluación de éxito): escribe una indicación y elige una rúbrica, como una escala del 1 al 10, una lista de verificación o un simple aprobado/reprobado, para que cada llamada se califique de forma coherente.</li></ul>",
-      "images": []
+      "id": "tour-the-panel",
+      "title": "Recorra el panel",
+      "content": "<p>La ventana <strong>Webhooks Post Processing</strong> está dividida en dos: una lista de secciones a la izquierda y los ajustes de la sección activa a la derecha.</p><ul><li><strong>Server URL &amp; Events</strong> (URL del servidor y eventos) — a dónde enviar por POST los datos de la llamada y qué eventos enviar.</li><li><strong>Summary</strong> (Resumen) — el prompt que redacta un breve resumen de cada llamada.</li><li><strong>Success Evaluation</strong> (Evaluación de Éxito) — decide si la llamada cumplió su objetivo, con la rúbrica que usted elija.</li><li><strong>Structured Data</strong> (Datos Estructurados) — un esquema JSON personalizado extraído de la transcripción.</li></ul><p>Sobre las secciones está la fila <strong>Webhook Model</strong> (Modelo del Webhook), que aplica a todas ellas. Haga clic en cualquier sección de la izquierda para trabajar en ella y pulse <strong>Done</strong> (Listo) al terminar.</p>",
+      "images": [
+        {
+          "src": "images/agents/advanced-settings-modal-light.png",
+          "alt": "Vista general del panel Webhooks Post Processing",
+          "caption": "Cuatro secciones a la izquierda, ajustes a la derecha y el Webhook Model compartido arriba.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/advanced-settings-modal-dark.png",
+          "alt": "Vista general del panel Webhooks Post Processing",
+          "caption": "Cuatro secciones a la izquierda, ajustes a la derecha y el Webhook Model compartido arriba.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "webhook-model",
+      "title": "Elija el Webhook Model",
+      "content": "<p>Después de cada llamada, un LLM lee la transcripción y produce su resumen, la puntuación de éxito y los datos estructurados. Usted controla qué modelo hace ese trabajo.</p><ol><li>En la fila <strong>Webhook Model</strong> en la parte superior, elija un modelo del menú desplegable — o déjelo vacío para usar el predeterminado de la plataforma (<strong>gpt-5-mini</strong>).</li><li>Si elige un modelo de razonamiento de OpenAI (gpt-5.x o serie o), se desbloquea el desplegable <strong>Reasoning Effort</strong> (Esfuerzo de Razonamiento): elija <strong>None (use plugin default)</strong>, <strong>Low</strong>, <strong>Medium</strong> o <strong>High</strong>. Los demás proveedores simplemente ignoran este ajuste.</li></ol><blockquote>💡 El modelo predeterminado es rápido y económico — cámbielo solo si necesita un razonamiento más profundo para extracciones complejas.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/advanced-settings-webhook-model-light.png",
+          "alt": "Selectores de Webhook Model y Reasoning Effort",
+          "caption": "Un solo modelo genera el resumen, la evaluación y la extracción de datos estructurados.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/advanced-settings-webhook-model-dark.png",
+          "alt": "Selectores de Webhook Model y Reasoning Effort",
+          "caption": "Un solo modelo genera el resumen, la evaluación y la extracción de datos estructurados.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "server-url-events",
+      "title": "Configure el Server URL y elija los eventos",
+      "content": "<p>Esta es la dirección de entrega de los datos de sus llamadas. iMash los envía como solicitudes HTTP POST en cuanto termina cada llamada.</p><ol><li>Abra la sección <strong>Server URL &amp; Events</strong>.</li><li>En <strong>Server URL</strong>, pegue el endpoint que debe recibir los datos (su backend, un hook de Zapier/Make o un webhook de una Automatización de iMash — vea el último paso).</li><li>Bajo <strong>Enabled Settings → Webhook Events</strong> (Ajustes habilitados → Eventos de Webhook), marque cada evento que quiera recibir:</li></ol><ul><li><strong>Summary</strong> — el resumen de la llamada redactado por su prompt de Summary.</li><li><strong>Success Evaluation</strong> — el resultado de aprobado/reprobado o la puntuación.</li><li><strong>Structured Data</strong> — los campos JSON extraídos.</li><li><strong>Transcript</strong> (Transcripción) — la transcripción completa de la llamada.</li><li><strong>Status Updates</strong> (Actualizaciones de Estado) — eventos en tiempo real como llamada iniciada y llamada finalizada.</li><li><strong>Tool Calls</strong> (Llamadas a Herramientas) — detalles de las herramientas que el agente usó durante la conversación.</li></ul><blockquote>⚠️ Marcar un evento sin un Server URL significa que no se entrega nada externamente — pero los resúmenes, evaluaciones y datos estructurados igualmente se generan y se guardan en el registro de la llamada, así que puede habilitarlos aunque no tenga un endpoint.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/advanced-settings-events-light.png",
+          "alt": "Campo Server URL y las seis casillas de eventos de webhook",
+          "caption": "Pegue su endpoint y marque exactamente los eventos que quiere recibir por POST.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/advanced-settings-events-dark.png",
+          "alt": "Campo Server URL y las seis casillas de eventos de webhook",
+          "caption": "Pegue su endpoint y marque exactamente los eventos que quiere recibir por POST.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "Escriba el prompt de Summary",
+      "content": "<p>No vuelva a escuchar una llamada completa — el resumen le entrega toda la conversación en dos o tres frases.</p><ol><li>Haga clic en <strong>Summary</strong> en la lista de secciones de la izquierda.</li><li>En <strong>Prompt</strong>, describa cómo debe resumirse cada llamada. Un buen punto de partida: <em>\"Eres un experto tomando notas. Recibirás la transcripción de una llamada. Resume la llamada en 2-3 frases, si aplica.\"</em></li></ol><p>El resultado se guarda con la llamada y se muestra en la página <strong>Call Logs</strong> (Registros de Llamadas), para que su equipo vea la esencia de cada conversación sin abrir la transcripción.</p>",
+      "images": [
+        {
+          "src": "images/agents/advanced-settings-summary-light.png",
+          "alt": "Editor del prompt de Summary",
+          "caption": "Indíquele al modelo cómo resumir — corto y factual funciona mejor.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/advanced-settings-summary-dark.png",
+          "alt": "Editor del prompt de Summary",
+          "caption": "Indíquele al modelo cómo resumir — corto y factual funciona mejor.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "success-evaluation",
+      "title": "Puntúe cada llamada con Success Evaluation",
+      "content": "<p>¿El agente realmente agendó la cita? ¿Cerró la venta? Success Evaluation lo responde automáticamente, en cada llamada.</p><ol><li>Haga clic en <strong>Success Evaluation</strong> en la lista de secciones de la izquierda.</li><li>En <strong>Prompt</strong>, describa qué significa \"éxito\" para este agente — por ejemplo: <em>\"Eres un evaluador experto de llamadas. Determina si la llamada fue exitosa según si el cliente agendó una cita.\"</em> Si lo deja vacío, el modelo infiere el objetivo a partir del propio prompt de sistema del agente.</li></ol><p>Puede usar el prompt solo, la rúbrica sola (siguiente paso) o ambos juntos — cuando se proporcionan ambos, se combinan en un único conjunto de instrucciones.</p>",
+      "images": [
+        {
+          "src": "images/agents/advanced-settings-evaluation-light.png",
+          "alt": "Prompt y rúbrica de Success Evaluation",
+          "caption": "Defina el éxito en lenguaje sencillo; el modelo puntúa cada llamada contra esa definición.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/advanced-settings-evaluation-dark.png",
+          "alt": "Prompt y rúbrica de Success Evaluation",
+          "caption": "Defina el éxito en lenguaje sencillo; el modelo puntúa cada llamada contra esa definición.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "choose-rubric",
+      "title": "Elija una rúbrica de puntuación",
+      "content": "<p>La rúbrica fija la evaluación en un formato consistente, de modo que las puntuaciones sean comparables entre miles de llamadas.</p><ol><li>Debajo del prompt, abra el desplegable <strong>Success Evaluation Rubric</strong> (Rúbrica de Evaluación de Éxito).</li><li>Elija la escala que se ajuste a sus reportes:</li></ol><ul><li><strong>A scale of 1 to 10</strong> — una puntuación numérica simple.</li><li><strong>A scale of Excellent, Good, Fair, Poor</strong> — calificaciones descriptivas.</li><li><strong>A checklist of criteria and their status</strong> — verificación punto por punto.</li><li><strong>A grid that evaluates multiple criteria across different performance levels</strong> — una matriz de puntuación completa.</li><li><strong>A scale of 0% to 100%</strong> — puntuación porcentual.</li><li><strong>A scale of Strongly Agree … Strongly Disagree</strong> — escala tipo Likert.</li><li><strong>Automatically break down evaluation into several criteria</strong> — el modelo genera criterios razonables y puntúa cada uno.</li><li><strong>A simple 'true' if call passed, 'false' if not</strong> — aprobado/reprobado limpio, perfecto para dashboards y automatizaciones.</li></ul><blockquote>💡 ¿Recién comienza? Elija <strong>aprobado/reprobado</strong> — es el resultado más fácil de filtrar y de usar para ramificar una automatización.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/advanced-settings-rubric-light.png",
+          "alt": "Desplegable Success Evaluation Rubric con todas las opciones de escala",
+          "caption": "Ocho estilos de rúbrica — desde una escala de 1 a 10 hasta un simple aprobado/reprobado.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/advanced-settings-rubric-dark.png",
+          "alt": "Desplegable Success Evaluation Rubric con todas las opciones de escala",
+          "caption": "Ocho estilos de rúbrica — desde una escala de 1 a 10 hasta un simple aprobado/reprobado.",
+          "theme": "dark"
+        }
+      ]
     },
     {
       "id": "structured-data",
-      "title": "Extrae datos estructurados",
-      "content": "<ol><li>En <strong>Structured Data</strong> (Datos estructurados), agrega una indicación y crea un <strong>Data Schema</strong> (Esquema de datos) con las propiedades que quieres capturar (por ejemplo nombre, número de pedido o intención).</li><li>iMash extrae esos campos de la transcripción y los incluye en el POST a tu URL del servidor.</li></ol>",
-      "images": []
+      "title": "Extraiga datos estructurados",
+      "content": "<p>Aquí es donde el post-procesamiento se vuelve realmente potente: defina los campos exactos que le interesan y el modelo los completa a partir de la transcripción — JSON limpio, en cada llamada.</p><ol><li>Haga clic en <strong>Structured Data</strong> en la lista de secciones de la izquierda.</li><li>(Opcional) En <strong>Prompt</strong>, dé indicaciones de extracción — p. ej. <em>\"Extrae los datos del cliente exactamente como los dijo; deja los campos vacíos si no se mencionaron.\"</em></li><li>Bajo <strong>Data Schema</strong> (Esquema de Datos), haga clic en <strong>+ Add Property</strong> (Agregar Propiedad) por cada campo que quiera.</li><li>Para cada propiedad, complete:<ul><li><strong>Property Name</strong> (Nombre de la Propiedad) — la clave JSON, p. ej. <code>customer_name</code>.</li><li><strong>Description</strong> (Descripción) — dígale al modelo qué capturar, p. ej. <em>\"El nombre completo del cliente, exactamente como lo dijo.\"</em></li><li><strong>Type</strong> (Tipo) — <strong>string</strong>, <strong>number</strong>, <strong>boolean</strong>, <strong>object</strong> (anida sus propias propiedades) o <strong>array</strong> (usted define el tipo de los elementos).</li></ul></li><li>Elimine una propiedad en cualquier momento con el botón rojo de <strong>papelera</strong> junto a ella.</li></ol><blockquote>💡 Escriba las descripciones como instrucciones para un asistente nuevo — cuanto más clara la descripción, más precisa la extracción. Puede usar el esquema solo o combinarlo con el prompt; ambos se fusionan en un único conjunto de instrucciones.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/advanced-settings-structured-light.png",
+          "alt": "Prompt de Structured Data y constructor de Data Schema con una propiedad customer_name",
+          "caption": "Cada propiedad = un campo JSON: nombre, descripción y tipo.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/advanced-settings-structured-dark.png",
+          "alt": "Prompt de Structured Data y constructor de Data Schema con una propiedad customer_name",
+          "caption": "Cada propiedad = un campo JSON: nombre, descripción y tipo.",
+          "theme": "dark"
+        }
+      ]
     },
     {
       "id": "connect-automation",
-      "title": "Envíalo a una automatización",
-      "content": "<ol><li>En <strong>Intelligence Center → Automation</strong> (Centro de inteligencia → Automatización), crea un flujo que comience con un disparador <strong>Catch Webhook</strong> (Capturar webhook) y copia su URL.</li><li>Pega esa URL como la URL del servidor de arriba.</li><li>Ahora los resultados de las llamadas pueden fluir directamente a una automatización: enviar un resumen por correo, actualizar una hoja de cálculo o llamar a otra API.</li></ol>",
+      "title": "Canalice los resultados a una Automatización",
+      "content": "<p>La forma más rápida de actuar sobre los datos de las llamadas — sin código — es apuntar el webhook a una Automatización de iMash.</p><ol><li>En la barra lateral izquierda, haga clic en <strong>Automation</strong> (Automatización, bajo Intelligence Center) y cree un flujo nuevo.</li><li>Inicie el flujo con un disparador <strong>Catch Webhook</strong> (Capturar Webhook) y copie la URL que genera.</li><li>De vuelta en <strong>Webhooks Post Processing → Server URL &amp; Events</strong> de su agente, pegue esa URL como <strong>Server URL</strong> y marque los eventos que necesita.</li><li>Pulse <strong>Done</strong> (Listo), haga una llamada de prueba y vea el flujo dispararse — envíe el resumen por correo a su equipo, registre los datos estructurados en una hoja de cálculo o ramifique según una evaluación fallida para disparar un seguimiento.</li></ol><p>Ese es el ciclo completo: su agente habla, iMash analiza y sus sistemas reaccionan — automáticamente, en cada llamada.</p>",
       "images": []
     }
   ],
   "nextSteps": {
     "title": "¿Qué sigue?",
-    "description": "Haz más con los datos de tus llamadas:",
+    "description": "Sus llamadas ahora producen datos — póngalos a trabajar:",
     "cards": [
-      { "href": "/automations/webhooks", "title": "Crea un flujo de webhook", "description": "Captura el POST y enrútalo a donde quieras con automatizaciones." },
-      { "href": "/agents/observer-agent", "title": "Agente observador", "description": "Marca momentos importantes en vivo, durante la llamada." },
-      { "href": "/agents/agent-privacy", "title": "Privacidad y grabación", "description": "Controla qué transcripción y audio se almacenan." }
+      {
+        "href": "/automations/webhooks",
+        "title": "Cree un flujo de Webhook",
+        "description": "Capture el POST y dirija los datos de las llamadas a cualquier destino con automatizaciones."
+      },
+      {
+        "href": "/phone/call-logs",
+        "title": "Registros de Llamadas",
+        "description": "Vea resúmenes, evaluaciones y transcripciones en cada registro de llamada."
+      },
+      {
+        "href": "/agents/observer-agent",
+        "title": "Agente Observador",
+        "description": "Marque los momentos importantes en vivo, mientras la llamada aún está en curso."
+      }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+    "title": "¿Necesita ayuda?",
+    "content": "<p>Si tiene algún problema o alguna pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
   },
-  "metaTitle": "Procesamiento posterior a la llamada y webhooks | Documentación de iMash",
-  "metaDescription": "Configura iMash Webhooks Post Processing: resume llamadas, califica el éxito, extrae datos JSON estructurados y envía todo por POST a tu servidor o a una automatización.",
-  "metaKeywords": "webhooks, procesamiento posterior, imash, agente inteligente, datos estructurados, evaluación de éxito, resumen de llamada, automatización"
+  "metaTitle": "Procesamiento Post-Llamada y Webhooks | Documentación de iMash",
+  "metaDescription": "Configure Webhooks Post Processing de iMash paso a paso: elija el modelo del webhook, defina un Server URL, seleccione eventos, escriba prompts de resumen y evaluación de éxito, construya un esquema de datos estructurados y canalice los resultados a automatizaciones.",
+  "metaKeywords": "webhooks, post procesamiento, imash, agente inteligente, datos estructurados, evaluación de éxito, resumen de llamada, modelo de webhook, esquema de datos, automatización"
 }

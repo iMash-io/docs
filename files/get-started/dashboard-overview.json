@@ -1,23 +1,80 @@
 {
-  "title": "Dashboard Overview - Reading Your iMash Home Page",
-  "lede": "The Overview page is the first thing you see when you log in. It gives you an at-a-glance snapshot of your whole account: total records, call performance, and a filterable list of every call.",
-  "timeToComplete": "5 minutes",
+  "title": "Dashboard Overview - Finding Your Way Around iMash",
+  "lede": "You just logged in — now let's turn that wall of tiles, tabs, and tables into a map you know by heart. In ten minutes you'll know exactly where every part of the platform lives and how to read your home page like a pro.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
-      "id": "open-overview",
-      "title": "Open the Overview",
-      "content": "<ol><li>Log in to iMash. You land on the <strong>Overview</strong> page automatically.</li><li>To return here any time, click <strong>Overview</strong> at the top of the left-hand navigation.</li><li>The page is read-only reporting &mdash; nothing you click here changes your data, so it is safe to explore.</li></ol>",
+      "id": "meet-your-home-page",
+      "title": "Meet your home page",
+      "content": "<p>iMash packs an AI call center, a full CRM, dispatch, messaging, and marketing into one screen — and it all starts here. When you log in, you land on the <strong>Overview</strong> page.</p><ol><li>Log in to your iMash dashboard. The <strong>Overview</strong> page loads automatically.</li><li>To come back here at any time, click <strong>Overview</strong> at the very top of the left sidebar.</li><li>Notice the three zones of every iMash screen:<ul><li><strong>Left sidebar</strong> — every page of the platform, grouped by area (Intelligence Center, Messages, Call Center, CRM, and more). It scrolls, and the <strong>&lt;</strong> arrow at the bottom collapses it when you want more room.</li><li><strong>Header</strong> — the search bar, notifications, and the big section tabs you'll use to jump between areas.</li><li><strong>Main area</strong> — the content of whatever page you're on. Right now, that's your account snapshot.</li></ul></li></ol><blockquote>💡 The Overview page is read-only reporting — nothing you click here edits your data, so explore freely.</blockquote>",
       "images": [
         {
           "src": "images/get-started/dashboard-overview-main-light.png",
-          "alt": "iMash Overview page",
-          "caption": "The Overview page: Total Statistics tiles, performance cards, filters, and the Calls table.",
+          "alt": "The iMash Overview home page with sidebar, header, statistics tiles and calls table",
+          "caption": "Your home base: left sidebar, header navigation, and the Overview snapshot of your whole account.",
           "theme": "light"
         },
         {
           "src": "images/get-started/dashboard-overview-main-dark.png",
-          "alt": "iMash Overview page",
-          "caption": "The Overview page: Total Statistics tiles, performance cards, filters, and the Calls table.",
+          "alt": "The iMash Overview home page with sidebar, header, statistics tiles and calls table",
+          "caption": "Your home base: left sidebar, header navigation, and the Overview snapshot of your whole account.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "header-toolbar",
+      "title": "Get to know the header toolbar",
+      "content": "<p>The card at the very top of the screen is your command strip — it follows you to every page. From left to right:</p><ul><li><strong>Search …</strong> — a global search across your contacts, leads, jobs, agents, phone numbers, calendar events, and call logs. Click it (or press <strong>/</strong>), type a name, and jump straight to the record.</li><li><strong>🔔 Notification bell</strong> — opens your in-app notification feed. You can create your own alert rules (for example, \"notify me when an invoice is paid\") and even enable browser push notifications from here.</li><li><strong>Live:</strong> — a live counter of calls in progress right now. Click it to open the <strong>Live Calls</strong> monitor.</li><li><strong>Role tag</strong> — the green (owner) or orange (sub-user) pill showing your role and login email. Click it to see exactly which permissions your account has.</li><li><strong>Language</strong> — switch the dashboard language (English, Spanish, and more).</li><li><strong>Theme toggle</strong> — the moon/sun switch flips the entire app between light and dark mode. Try it — every screenshot in these docs exists in both.</li><li><strong>Account menu</strong> — hover over the logo icon to see your email, with <strong>Account Settings</strong> (profile, password, branding) and <strong>Logout</strong>.</li><li><strong>📞 Phone button</strong> — opens the built-in web dialer so you can place and receive calls right from your browser, on any page.</li></ul>",
+      "images": [
+        {
+          "src": "images/get-started/dashboard-overview-header-tools-light.png",
+          "alt": "iMash header toolbar with search, notification bell, live counter, role tag, language, theme toggle, account menu and phone button",
+          "caption": "The header toolbar: search, notifications, live-call counter, role tag, language, theme toggle, account menu, and the web dialer.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/dashboard-overview-header-tools-dark.png",
+          "alt": "iMash header toolbar with search, notification bell, live counter, role tag, language, theme toggle, account menu and phone button",
+          "caption": "The header toolbar: search, notifications, live-call counter, role tag, language, theme toggle, account menu, and the web dialer.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "section-tabs",
+      "title": "Navigate with the section tabs",
+      "content": "<p>Right below the toolbar sits the section tab strip — the fastest way to move between the big areas of the platform. Click a tab and both the page and the left sidebar switch to that world. If your screen is narrow, the strip scrolls sideways — drag it to reveal the rest.</p><ul><li><strong>Automation</strong> — your Intelligence Center: build AI voice &amp; text agents, visual automation flows, and chat in Smart Studio. Start with <a data-href=\"/agents/create-agent\">Create Agent</a> and <a data-href=\"/automations/smart-flows\">Smart Flows</a>.</li><li><strong>Contact Center</strong> — live calls, human agent groups, phone numbers, PBX extensions, SIP providers, call logs, and your knowledge base. See the <a data-href=\"/contact-center/overview\">Contact Center overview</a>.</li><li><strong>CRM</strong> — accounts, contacts, leads, deals, quotes, invoices, tasks, products, and your calendar. Begin with <a data-href=\"/crm/contacts\">Contacts</a>.</li><li><strong>Dispatch</strong> — field-service jobs, technicians, and automatic tech dispatch. See the <a data-href=\"/dispatch/overview\">Dispatch overview</a>.</li><li><strong>Messages</strong> — two-way <a data-href=\"/messages/sms\">SMS</a>, <a data-href=\"/messages/whatsapp\">WhatsApp</a>, and <a data-href=\"/messages/email\">Email</a> conversations, all in one place.</li><li><strong>Campaigns</strong> — outbound AI calling campaigns, dial lists, and the human predictive dialer. Start at <a data-href=\"/campaigns/create-campaign\">Create Campaign</a>.</li><li><strong>Marketing</strong> — build lead lists: import contacts, scrape businesses, and mine LinkedIn.</li><li><strong>User Management</strong> — invite teammates, assign roles and permission groups, and review the audit log. See <a data-href=\"/settings/team-management\">Team Management</a>.</li><li><strong>Billing</strong> — your balance, plans, payment methods, and usage. See <a data-href=\"/settings/billing\">Billing</a>.</li><li><strong>Credentials</strong> — API keys for connecting your own systems. See <a data-href=\"/get-started/api-keys\">API Keys</a>.</li></ul><blockquote>💡 Don't see one of these tabs? Your administrator may have hidden that area for your role — tabs only appear for sections you're allowed to use.</blockquote>",
+      "images": [
+        {
+          "src": "images/get-started/dashboard-overview-header-nav-light.png",
+          "alt": "iMash header with the section tab strip: Automation, Contact Center, CRM, Dispatch, Messages, Campaigns, User Management and more",
+          "caption": "The section tabs, with the active section highlighted and its sub-tabs docked underneath.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/dashboard-overview-header-nav-dark.png",
+          "alt": "iMash header with the section tab strip: Automation, Contact Center, CRM, Dispatch, Messages, Campaigns, User Management and more",
+          "caption": "The section tabs, with the active section highlighted and its sub-tabs docked underneath.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "sub-tab-strip",
+      "title": "Drill in with the sub-tab strip",
+      "content": "<p>When you click a section tab, a second row of smaller chips docks underneath it — the section's own pages, each with a live record count. It's a mini table of contents for wherever you are.</p><ol><li>Click <strong>CRM</strong> in the section tab strip.</li><li>Look at the docked chips: <strong>Overview</strong>, <strong>Accounts</strong>, <strong>Contacts</strong>, <strong>Leads</strong>, <strong>Deals</strong>, <strong>Invoices</strong>, <strong>Quotes</strong>, <strong>Tasks</strong>, <strong>Products</strong>, <strong>Services</strong>, and more — the number under each label is how many records you have.</li><li>Click any chip to open that page. The highlighted chip always tells you where you are.</li><li>If there are more chips than fit, use the <strong>›</strong> arrow (or swipe) to scroll the strip.</li></ol>",
+      "images": [
+        {
+          "src": "images/get-started/dashboard-overview-subtabs-light.png",
+          "alt": "The CRM section selected with its sub-tab strip showing Overview, Accounts, Contacts, Leads, Deals, Invoices, Quotes and Tasks chips with record counts",
+          "caption": "The CRM sub-tab strip: one chip per page, each with a live record count.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/dashboard-overview-subtabs-dark.png",
+          "alt": "The CRM section selected with its sub-tab strip showing Overview, Accounts, Contacts, Leads, Deals, Invoices, Quotes and Tasks chips with record counts",
+          "caption": "The CRM sub-tab strip: one chip per page, each with a live record count.",
           "theme": "dark"
         }
       ]
@@ -25,59 +82,117 @@
     {
       "id": "total-statistics",
       "title": "Read the Total Statistics tiles",
-      "content": "<p>The top section, <strong>Total Statistics</strong>, shows all-time counts across your account. These numbers are independent of the date filter below them.</p><ul><li><strong>Contacts</strong>, <strong>Leads</strong>, and <strong>Accounts</strong> &mdash; how many CRM records you have.</li><li><strong>Notes</strong> and <strong>Calendar entries</strong> &mdash; activity logged against your records.</li><li><strong>AI agents</strong>, <strong>Campaigns</strong>, <strong>Phone numbers</strong>, and <strong>SIP providers</strong> &mdash; your calling setup.</li><li><strong>Knowledge base</strong>, <strong>Sub accounts</strong>, and <strong>Custom tools</strong> &mdash; the rest of your workspace.</li></ul><p>If you have sub-accounts, use the <strong>All owners</strong> dropdown in the top-right of this section to narrow the totals to one owner.</p>",
+      "content": "<p>Back on the <strong>Overview</strong> page, the first card is <strong>Total Statistics</strong> — all-time counts across your whole account. These numbers ignore the date filter further down; they are your account at a glance.</p><ul><li><strong>Contacts</strong>, <strong>Leads</strong>, and <strong>Accounts</strong> — how many CRM records you have.</li><li><strong>Notes</strong> and <strong>Calendar entries</strong> — activity logged against those records.</li><li><strong>AI agents</strong>, <strong>Campaigns</strong>, <strong>Phone numbers</strong>, and <strong>SIP providers</strong> — your calling setup.</li><li><strong>Knowledge base</strong> — documents your AI agents can search during calls.</li><li><strong>Sub accounts</strong> — teammates you've invited.</li><li><strong>Custom tools</strong> — custom actions your agents can trigger.</li></ul><p>If you have sub-accounts, use the <strong>All owners</strong> dropdown in the card's top-right corner to narrow every tile to a single owner.</p>",
       "images": [
         {
-          "src": "images/analytics/overview-stats-light.png",
-          "alt": "Total Statistics tiles",
-          "caption": "All-time totals for contacts, leads, agents, phone numbers, and more.",
+          "src": "images/get-started/dashboard-overview-stats-light.png",
+          "alt": "Total Statistics tiles showing counts for contacts, leads, accounts, notes, calendar entries, AI agents, campaigns, phone numbers, SIP providers, knowledge base, sub accounts and custom tools",
+          "caption": "All-time totals for every kind of record in your account.",
           "theme": "light"
         },
         {
-          "src": "images/analytics/overview-stats-dark.png",
-          "alt": "Total Statistics tiles",
-          "caption": "All-time totals for contacts, leads, agents, phone numbers, and more.",
+          "src": "images/get-started/dashboard-overview-stats-dark.png",
+          "alt": "Total Statistics tiles showing counts for contacts, leads, accounts, notes, calendar entries, AI agents, campaigns, phone numbers, SIP providers, knowledge base, sub accounts and custom tools",
+          "caption": "All-time totals for every kind of record in your account.",
           "theme": "dark"
         }
       ]
     },
     {
-      "id": "performance-cards",
-      "title": "Check your call performance",
-      "content": "<p>Below the statistics is a strip of four performance cards. Unlike the tiles above, these <em>do</em> respect the date filter, so they always reflect the window you have selected.</p><ul><li><strong>Total calls</strong> &mdash; number of calls in the window, with average duration.</li><li><strong>Total minutes</strong> &mdash; total talk time, with your success rate.</li><li><strong>Total spent</strong> &mdash; your call spend, with cost per minute.</li><li><strong>Avg cost / call</strong> &mdash; average price per call, with a daily spend estimate.</li></ul>",
-      "images": []
+      "id": "performance-kpis",
+      "title": "Check your call performance cards",
+      "content": "<p>Below the tiles is a strip of four performance cards. Unlike Total Statistics, these <em>do</em> follow the date filter — they always describe the time window you've selected.</p><ul><li><strong>Total calls</strong> — how many calls happened in the window, with the average duration underneath.</li><li><strong>Total minutes</strong> — total talk time, with your success rate.</li><li><strong>Total spent</strong> — what those calls cost, with the per-minute rate.</li><li><strong>Avg cost / call</strong> — the average price of one call, with an estimated daily spend.</li></ul><blockquote>💡 These four numbers are the pulse of your AI call center. Glance at them each morning — a sudden change in success rate or cost per call is your earliest signal that something needs attention.</blockquote>",
+      "images": [
+        {
+          "src": "images/get-started/dashboard-overview-kpis-light.png",
+          "alt": "Four performance cards showing Total calls, Total minutes, Total spent and Avg cost per call",
+          "caption": "The date-scoped performance strip: calls, minutes, spend, and cost per call.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/dashboard-overview-kpis-dark.png",
+          "alt": "Four performance cards showing Total calls, Total minutes, Total spent and Avg cost per call",
+          "caption": "The date-scoped performance strip: calls, minutes, spend, and cost per call.",
+          "theme": "dark"
+        }
+      ]
     },
     {
       "id": "filters",
       "title": "Filter what you see",
-      "content": "<p>The <strong>Filters</strong> bar controls both the performance cards and the Calls table below.</p><ol><li>Pick a <strong>date range</strong>: Today, Yesterday, This Week, This Month, Last 30 Days, or a <strong>Custom Range</strong>.</li><li>Narrow by <strong>Phone number</strong>, <strong>Agent</strong>, or <strong>Tags</strong> (for example Voicemail, Transfer, or No Answer).</li><li>If you have sub-accounts, filter by <strong>Owner</strong>.</li><li>Type a name into the <strong>Search customer</strong> box to find a specific caller.</li></ol>",
-      "images": []
+      "content": "<p>The <strong>Filters</strong> bar controls the performance cards, the Calls table, and the charts below it. The card's subtitle always shows the active window (for example, <em>Last 30 Days · Jun 9 – Jul 9</em>).</p><ol><li>Click the <strong>date button</strong> (it shows <strong>Last 30 Days</strong> by default) and pick <strong>Today</strong>, <strong>Yesterday</strong>, <strong>This Week</strong>, <strong>This Month</strong>, <strong>Last 30 Days</strong>, or <strong>Custom Range</strong>. Choosing <strong>Custom Range</strong> reveals a start–end date picker.</li><li>Narrow by <strong>Phone numbers</strong> — only calls on a specific line.</li><li>Narrow by <strong>Agent</strong> — one AI agent, or <strong>Web Dialer</strong> for calls placed by humans from the browser dialer.</li><li>Narrow by <strong>Tags</strong> — pick one or more outcomes such as <strong>Voicemail</strong>, <strong>Transfer</strong>, <strong>No Answer</strong>, <strong>Agent Ended Call</strong>, or <strong>Customer Ended</strong>.</li><li>If you have sub-accounts, filter by <strong>Owner</strong> to see one teammate's calls.</li><li>Type a name in <strong>Search customer…</strong> to find calls with a specific person.</li></ol>",
+      "images": [
+        {
+          "src": "images/get-started/dashboard-overview-filters-light.png",
+          "alt": "The Filters bar with date range, phone numbers, agent, tags, owner and customer search controls",
+          "caption": "The Filters bar — everything below it obeys these controls.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/dashboard-overview-filters-dark.png",
+          "alt": "The Filters bar with date range, phone numbers, agent, tags, owner and customer search controls",
+          "caption": "The Filters bar — everything below it obeys these controls.",
+          "theme": "dark"
+        }
+      ]
     },
     {
       "id": "calls-table",
       "title": "Explore the Calls table",
-      "content": "<p>The <strong>Calls</strong> table lists every call that matches your filters. Each row shows the contact or lead, the agent or campaign that handled it, date and time, duration, type, tags, and owner.</p><ol><li>Click a caller's name to open their <strong>Contact</strong> or <strong>Lead</strong> details in a side drawer.</li><li>Use the <strong>eye</strong> icon in the Actions column to open the full call log, including the transcript and analysis.</li><li>Page through results using the controls at the bottom of the table.</li></ol>",
-      "images": []
+      "content": "<p>The <strong>Calls</strong> card lists every call that matches your filters — your account's story, one row at a time.</p><ul><li><strong>Contact / Lead</strong> — who was on the call. Click the name to open the full contact or lead record in a side drawer without leaving the page.</li><li><strong>Agent / Campaign</strong> — the AI agent that handled the call (with its campaign underneath), or <strong>Web Dialer</strong> for human browser calls.</li><li><strong>Date &amp; Time</strong> — when it happened; the small arrow shows the direction (outbound ↗ in green, inbound ↙ in blue) and the number underneath is your line that carried the call.</li><li><strong>Duration</strong> — call length as hh:mm:ss.</li><li><strong>Type</strong> — <strong>Phone</strong> for regular calls, <strong>web</strong> for browser calls.</li><li><strong>Tags</strong> — the outcome (Completed, Voicemail, No Answer…) plus tags your AI extracted; hover over the <strong>+N</strong> pill to see the rest. Scroll the table sideways to also see the <strong>Owner</strong> column.</li><li><strong>Actions</strong> — the <strong>▶ play</strong> icon for the recording and the <strong>👁 eye</strong> icon to open the complete call log with transcript and AI analysis.</li></ul><ol><li>Use the pagination controls at the bottom-right to page through results, change the page size, or jump straight to a page.</li></ol>",
+      "images": [
+        {
+          "src": "images/get-started/dashboard-overview-calls-light.png",
+          "alt": "The Calls table listing calls with contact, agent, date and time, duration, type, tags and action icons",
+          "caption": "Every call in your selected window — click a row's eye icon for the full transcript.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/dashboard-overview-calls-dark.png",
+          "alt": "The Calls table listing calls with contact, agent, date and time, duration, type, tags and action icons",
+          "caption": "Every call in your selected window — click a row's eye icon for the full transcript.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "analytics-charts",
+      "title": "Scan the analytics charts",
+      "content": "<p>The bottom row turns the calls on the current page into three quick charts:</p><ul><li><strong>Reason call ended</strong> — a bar per outcome (agent ended, customer ended, voicemail…). Hover over a bar for the exact count.</li><li><strong>Avg duration by agent</strong> — the mean call length per AI agent, in minutes. Great for spotting an agent whose conversations run long or get cut short.</li><li><strong>Call volume by hour</strong> — when your calls happen across the day, so you can schedule campaigns and staff for the peaks.</li></ul><p>That's the whole dashboard — you now know where everything lives. Time to put something on it!</p>",
+      "images": [
+        {
+          "src": "images/get-started/dashboard-overview-charts-light.png",
+          "alt": "Three analytics charts: reason call ended, average duration by agent, and call volume by hour",
+          "caption": "The analytics row: outcomes, average duration per agent, and hourly call volume.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/dashboard-overview-charts-dark.png",
+          "alt": "Three analytics charts: reason call ended, average duration by agent, and call volume by hour",
+          "caption": "The analytics row: outcomes, average duration per agent, and hourly call volume.",
+          "theme": "dark"
+        }
+      ]
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Now that you can read the dashboard, dig into the detail behind each call.",
+    "description": "You can read the map — now make it light up. Give your account a voice and watch this dashboard fill with real calls.",
     "cards": [
+      {
+        "href": "/agents/create-agent",
+        "title": "Create Your First AI Agent",
+        "description": "Build an AI agent that answers and places calls for you, 24/7."
+      },
+      {
+        "href": "/phone/add-phone-number",
+        "title": "Add a Phone Number",
+        "description": "Get a number so your agent can start talking to real customers."
+      },
       {
         "href": "/phone/call-logs",
         "title": "Review Call Logs",
         "description": "Open any call to hear the recording, read the transcript, and see extracted data."
-      },
-      {
-        "href": "/crm/contacts",
-        "title": "Manage Contacts & Leads",
-        "description": "Work the CRM records that feed the totals on your dashboard."
-      },
-      {
-        "href": "/get-started/api-keys",
-        "title": "Generate API Keys",
-        "description": "Pull the same data into your own systems over the REST API."
       }
     ]
   },
@@ -85,7 +200,7 @@
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Dashboard Overview | iMash Docs",
-  "metaDescription": "Learn to read the iMash Overview page: all-time Total Statistics, date-scoped call performance cards, the Filters bar, and the Calls table.",
-  "metaKeywords": "iMash dashboard, overview page, call analytics, total statistics, call performance, filters, calls table, reporting"
+  "metaTitle": "Dashboard Overview | iMash Documentation",
+  "metaDescription": "A guided tour of the iMash dashboard: the Overview home page, the header section tabs and sub-tabs, the toolbar (search, notifications, theme, account menu), statistics tiles, performance cards, filters, the Calls table, and analytics charts.",
+  "metaKeywords": "iMash dashboard, overview page, navigation, section tabs, header toolbar, total statistics, call performance, filters, calls table, analytics charts, dark mode, notifications"
 }

@@ -1,56 +1,100 @@
 {
   "title": "Add a Phone Number",
-  "lede": "Get a phone number so your AI agents can make and take calls. You can buy a new number through iMash or import one you already own from another provider.",
-  "timeToComplete": "5 minutes",
+  "lede": "Give your AI agents a real phone number and they can answer and place calls 24/7. This guide walks you through both paths — buying a fresh number through iMash in under a minute, or importing a number you already own from your own carrier.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
       "id": "open-phone-numbers",
-      "title": "Open Phone numbers",
-      "content": "<ol><li>In the left menu, go to <strong>Call Center → Phone numbers</strong>.</li><li>This page lists every number on your account with its label, capabilities, assigned agent, and status.</li></ol><p>You have two ways to add one: <strong>Buy New Number</strong> (rented through iMash) or <strong>Import Number</strong> (a number you already own on your own carrier).</p>",
+      "title": "Open the Phone Numbers page",
+      "content": "<ol><li>In the left sidebar, under <strong>Call Center</strong>, click <strong>Phone numbers</strong>.</li><li>The <strong>Phone Numbers</strong> page opens, listing every number on your account.</li></ol><p>In the top-right you'll see the three header buttons you'll use most:</p><ul><li><strong>Buy New Number</strong> — rent a brand-new number through iMash (billed monthly to a saved card).</li><li><strong>Import Number</strong> — bring a number you already own on your own SIP carrier.</li><li><strong>API Info</strong> — shows the API endpoints for managing numbers programmatically.</li></ul><blockquote>💡 No carrier? No problem. Buying through iMash is the fastest path — the number is purchased, provisioned, and wired for calls automatically. Importing is for teams that already have a carrier contract and want to keep it.</blockquote>",
       "images": [
-        { "src": "images/phone/phone-numbers-light.png", "alt": "Phone numbers page", "caption": "Call Center → Phone numbers lists your numbers with Buy and Import buttons.", "theme": "light" },
-        { "src": "images/phone/phone-numbers-dark.png", "alt": "Phone numbers page", "caption": "Call Center → Phone numbers lists your numbers with Buy and Import buttons.", "theme": "dark" }
+        { "src": "images/phone/phone-numbers-light.png", "alt": "Phone Numbers page with the numbers list and Buy New Number, Import Number, and API Info buttons", "caption": "Call Center → Phone numbers — every number on your account, with Buy and Import in the top-right.", "theme": "light" },
+        { "src": "images/phone/phone-numbers-dark.png", "alt": "Phone Numbers page with the numbers list and Buy New Number, Import Number, and API Info buttons", "caption": "Call Center → Phone numbers — every number on your account, with Buy and Import in the top-right.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "understand-list",
+      "title": "Understand the numbers list",
+      "content": "<p>Before adding a number, it helps to know what each column tells you:</p><ul><li><strong>Phone Number</strong> — the number itself. Click it to open its details.</li><li><strong>Label</strong> — a friendly name you choose (e.g. \"Main line\", \"Support\"). Click the pencil icon to rename it.</li><li><strong>Capabilities</strong> — colored pills showing what the number can do: <strong>Voice</strong> (always on — required for AI calls), <strong>SMS</strong> or <strong>SMS off</strong> (texting enabled or not yet configured), <strong>iMash</strong> (purchased through iMash) or <strong>Custom</strong> (your own carrier), and <strong>WhatsApp</strong> when a WhatsApp Business account is connected to that number. Hover any pill for an explanation.</li><li><strong>Inbound Agent</strong> — the AI agent that answers incoming calls. <strong>None</strong> means calls are not answered yet.</li><li><strong>Outgoing / Incoming</strong> — call counters for the number.</li><li><strong>Provider</strong> — <strong>iMash</strong> for purchased numbers, or the name of your connected SIP provider for imported ones.</li><li><strong>Status</strong> — <strong>Active</strong> (renewing normally), <strong>Cancelling — X days left</strong> (subscription cancelled, number stays live until the period ends), <strong>Active (imported)</strong> (no subscription — you pay your own carrier), or <strong>Released</strong> (removed).</li><li><strong>Routing</strong> — assign a messaging profile or a 10DLC campaign to enable SMS on US numbers.</li><li><strong>Actions</strong> — the eye icon opens the number's settings; the red icons cancel or delete it.</li></ul><p>Above the table, use <strong>Filter by label</strong> and <strong>Filter by owner</strong> to narrow long lists. The tabs across the top (<strong>Documents</strong>, <strong>Customer Profiles</strong>, <strong>Messaging Profiles</strong>, <strong>10DLC Brands</strong>, <strong>10DLC Campaigns</strong>) hold the compliance paperwork used for SMS and regulated countries — you won't need them for a basic voice number.</p>",
+      "images": [
+        { "src": "images/phone/add-phone-number-list-columns-light.png", "alt": "Zoomed view of the phone numbers table showing the Label, Capabilities, Inbound Agent, and Actions columns", "caption": "Each row shows the number's label, capability pills, assigned inbound agent, and actions.", "theme": "light" },
+        { "src": "images/phone/add-phone-number-list-columns-dark.png", "alt": "Zoomed view of the phone numbers table showing the Label, Capabilities, Inbound Agent, and Actions columns", "caption": "Each row shows the number's label, capability pills, assigned inbound agent, and actions.", "theme": "dark" }
       ]
     },
     {
       "id": "buy-search",
-      "title": "Buy a new number — search",
-      "content": "<ol><li>Click <strong>Buy New Number</strong>.</li><li>Choose a <strong>Country</strong>.</li><li>Pick the capabilities you need — <strong>Voice</strong> is on by default (required for AI agent calls); add <strong>SMS</strong>, <strong>MMS</strong>, or <strong>Fax</strong> only if you need them (leaving them off gives the broadest results).</li><li>In the search box, type an <strong>area code</strong> (e.g. 212), a <strong>city</strong> (e.g. London), or a <strong>prefix</strong>, then click <strong>Search</strong>.</li></ol>",
+      "title": "Buy a new number — search the inventory",
+      "content": "<ol><li>Click <strong>Buy New Number</strong> in the top-right.</li><li>Pick a <strong>Country</strong> — type to search by country name or dial code.</li><li>Under <strong>Required capabilities</strong>, tick what the number must support:<ul><li><strong>Voice</strong> — on by default and required for AI agent calls.</li><li><strong>SMS</strong> / <strong>MMS</strong> / <strong>Fax</strong> — tick these only if you specifically need them. Every extra checkbox narrows the results, and many countries offer voice-only numbers.</li></ul></li><li>In <strong>Area code, locality, or prefix</strong>, type what you want the number to look like — a US area code like <code>212</code>, a city like <code>London</code>, or a digit prefix like <code>4433</code>. You can also leave it empty to browse everything available.</li><li>Click <strong>Search</strong>.</li></ol><blockquote>💡 Not seeing results for your country? Untick <strong>SMS</strong> — several countries (Israel, for example) only stock voice-only numbers, and the SMS filter hides all of them.</blockquote>",
       "images": [
-        { "src": "images/phone/add-phone-number-light.png", "alt": "Buy a number dialog", "caption": "Search available numbers by country, capability, and area code or city.", "theme": "light" },
-        { "src": "images/phone/add-phone-number-dark.png", "alt": "Buy a number dialog", "caption": "Search available numbers by country, capability, and area code or city.", "theme": "dark" }
+        { "src": "images/phone/add-phone-number-light.png", "alt": "Buy New Number dialog with Country selector, Required capabilities checkboxes, and search field", "caption": "The Buy New Number dialog — choose country and capabilities, then search by area code, city, or prefix.", "theme": "light" },
+        { "src": "images/phone/add-phone-number-dark.png", "alt": "Buy New Number dialog with Country selector, Required capabilities checkboxes, and search field", "caption": "The Buy New Number dialog — choose country and capabilities, then search by area code, city, or prefix.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "buy-results",
+      "title": "Browse the results",
+      "content": "<p>Matching numbers appear in the <strong>Phone Numbers</strong> box, each with its monthly price on the right.</p><ul><li>Click a number to select it — click again to deselect. You can select several and buy them all at once.</li><li>A <strong>Verification required</strong> tag means that country requires regulatory information (identity documents, a local address, and so on). A <strong>Regulatory information</strong> form appears below the results — fill it in to unlock those numbers. One form covers all selected numbers in that country.</li><li>A <strong>Not orderable</strong> tag means the number can't be purchased today — pick another.</li></ul>",
+      "images": [
+        { "src": "images/phone/add-phone-number-search-results-light.png", "alt": "Buy New Number dialog showing a list of available numbers with monthly prices", "caption": "Search results — every available number with its monthly price.", "theme": "light" },
+        { "src": "images/phone/add-phone-number-search-results-dark.png", "alt": "Buy New Number dialog showing a list of available numbers with monthly prices", "caption": "Search results — every available number with its monthly price.", "theme": "dark" }
       ]
     },
     {
       "id": "buy-purchase",
-      "title": "Buy a new number — select and pay",
-      "content": "<ol><li>Tick one or more numbers from the results (each row shows its monthly price).</li><li>Choose a <strong>saved card</strong> to pay with. If you have no card yet, add one under <strong>Billing</strong> first.</li><li>Some countries require identity documents — if a regulatory form appears, fill it in before buying.</li><li>Click <strong>Buy Numbers</strong>. iMash purchases the number and sets up call routing automatically.</li></ol>"
+      "title": "Select, pay, and buy",
+      "content": "<ol><li>Click the number(s) you want — selected rows turn blue, and the <strong>Total</strong> at the bottom updates with the combined monthly price and the selection count.</li><li>Under <strong>Payment Method</strong>, choose a saved card. Each number is billed as its own monthly subscription to that card.</li><li>Click <strong>Buy Numbers</strong>.</li></ol><p>That's it — iMash purchases the number, provisions it, and wires up call routing automatically. It appears in your list within seconds, ready for an agent.</p><blockquote>⚠️ If you see the <strong>Add a payment method first</strong> banner, you have no saved card yet. Click <strong>Add a payment method →</strong> (it takes you to Billing), save a card, then come back — the <strong>Buy Numbers</strong> button stays disabled until a card is selected.</blockquote>",
+      "images": [
+        { "src": "images/phone/add-phone-number-select-light.png", "alt": "Buy New Number dialog with one number selected and the monthly total updated", "caption": "Selected numbers highlight in blue and the monthly Total updates instantly.", "theme": "light" },
+        { "src": "images/phone/add-phone-number-select-dark.png", "alt": "Buy New Number dialog with one number selected and the monthly total updated", "caption": "Selected numbers highlight in blue and the monthly Total updates instantly.", "theme": "dark" }
+      ]
     },
     {
       "id": "import",
-      "title": "Or import a number you own",
-      "content": "<ol><li>Click <strong>Import Number</strong>.</li><li>Select the <strong>Provider</strong> (your connected SIP carrier) — or click <strong>Add Provider</strong> to connect one first.</li><li>Enter a <strong>Label</strong> and the <strong>phone number</strong> in E.164 form (for example <code>+14155551234</code>).</li><li>Save. The number joins your list and routes through your provider's trunk.</li></ol>"
+      "title": "Or import a number you already own",
+      "content": "<p>Already have numbers with your own carrier? Connect the carrier once, then import as many numbers as you like — you keep your carrier contract and rates.</p><ol><li>Click <strong>Import Number</strong> in the top-right.</li><li>Under <strong>SIP Phone Provider</strong>, select your connected carrier. Don't have one yet? Click <strong>Add Provider</strong> at the bottom of the dropdown and set it up first (see the Connect a SIP Provider guide).</li><li>Enter a <strong>Label</strong> so you can recognize the number later.</li><li>Enter the <strong>Phone Number</strong> exactly as your SIP provider sends it — with or without the <code>+</code> prefix, e.g. <code>+14155551234</code>, <code>14155551234</code>, or with an extension like <code>14155551234#001</code>. Keep <strong>Use country selector</strong> ticked for a guided country-code input, or untick it to paste the raw value.</li><li>iMash checks availability as you type — wait for <strong>Phone number is available!</strong>, then click <strong>Import Phone Number</strong>.</li></ol><blockquote>💡 Imported numbers show as <strong>Active (imported)</strong> with a <strong>Custom</strong> capability pill — iMash routes their calls through your provider's trunk, and your carrier keeps billing you for the number itself.</blockquote>",
+      "images": [
+        { "src": "images/phone/add-phone-number-import-light.png", "alt": "Import Phone Number dialog with SIP Phone Provider, Label, and Phone Number fields", "caption": "Import Phone Number — pick your SIP provider, label the number, and enter it exactly as the provider sends it.", "theme": "light" },
+        { "src": "images/phone/add-phone-number-import-dark.png", "alt": "Import Phone Number dialog with SIP Phone Provider, Label, and Phone Number fields", "caption": "Import Phone Number — pick your SIP provider, label the number, and enter it exactly as the provider sends it.", "theme": "dark" }
+      ]
     },
     {
-      "id": "next",
-      "title": "Point the number at an agent",
-      "content": "<p>A new number won't answer calls until you assign an agent to it. Open the number (click it in the list) or select it and use the bulk action to set an <strong>Inbound Agent</strong> — see the Call Routing guide next.</p>"
+      "id": "assign-agent",
+      "title": "Assign an AI agent to answer calls",
+      "content": "<p>A new number won't answer calls until an agent is pointed at it. The fastest way is the bulk action bar:</p><ol><li>Tick the checkbox at the start of one or more rows — a <strong>1 selected</strong> counter and an action bar appear above the table.</li><li>Click <strong>Inbound Agent</strong> and pick the AI agent that should answer calls to those numbers. Choose <strong>Clear Inbound Agent</strong> to unassign instead.</li></ol><p>The same bar also offers:</p><ul><li><strong>Edit Label</strong> — rename all selected numbers at once.</li><li><strong>Delete Selected</strong> — remove the selected numbers (see the last step before you do this on a purchased number).</li></ul>",
+      "images": [
+        { "src": "images/phone/add-phone-number-bulk-assign-light.png", "alt": "Phone numbers list with one row selected and the Inbound Agent dropdown open showing available agents", "caption": "Select rows, click Inbound Agent, and pick the agent that should answer.", "theme": "light" },
+        { "src": "images/phone/add-phone-number-bulk-assign-dark.png", "alt": "Phone numbers list with one row selected and the Inbound Agent dropdown open showing available agents", "caption": "Select rows, click Inbound Agent, and pick the agent that should answer.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "number-settings",
+      "title": "Open a number's settings",
+      "content": "<p>For per-number control, open the details drawer:</p><ol><li>Click the green eye icon in the <strong>Actions</strong> column (or click the number itself).</li><li>The <strong>Phone Number Details</strong> drawer opens on the <strong>Settings</strong> tab, where <strong>Inbound Settings</strong> decides what happens when someone calls:<ul><li><strong>Call Handling</strong> — <strong>Enable Agents</strong> (an AI agent answers), <strong>Warm Transfer</strong>, or <strong>Cold Transfer</strong> (forward the call to a phone number instead).</li><li><strong>Inbound Agent</strong> — the agent that answers this specific number.</li><li><strong>Assistant Scheduler</strong> — flip <strong>Enable Scheduler</strong> to answer with different agents by day and time (e.g. a day-shift agent and an after-hours agent).</li></ul></li><li>Click <strong>Save Settings</strong> to apply, or <strong>Test Call</strong> to hear the agent right away.</li></ol><p>The <strong>Inbound Calls</strong> and <strong>Outbound Calls</strong> tabs list this number's call history. Forwarding rules, busy handling, and scheduling are covered in depth in the Inbound Call Routing guide.</p>",
+      "images": [
+        { "src": "images/phone/add-phone-number-drawer-light.png", "alt": "Phone Number Details drawer showing Inbound Settings with Call Handling options and Inbound Agent selector", "caption": "Phone Number Details — choose Call Handling, pick the Inbound Agent, and Save Settings.", "theme": "light" },
+        { "src": "images/phone/add-phone-number-drawer-dark.png", "alt": "Phone Number Details drawer showing Inbound Settings with Call Handling options and Inbound Agent selector", "caption": "Phone Number Details — choose Call Handling, pick the Inbound Agent, and Save Settings.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "lifecycle",
+      "title": "Renewals, cancelling, and releasing a number",
+      "content": "<p>Numbers bought through iMash renew monthly on your saved card. When you no longer need one:</p><ul><li>Click <strong>Cancel</strong> in the row's <strong>Actions</strong> — the subscription stops renewing, and the status changes to <strong>Cancelling — X days left</strong>. The number keeps working until the end of the paid period.</li><li>Changed your mind? Click <strong>Undo Cancel</strong> while it's still in the cancelling window to keep the number.</li><li>To release it immediately instead of waiting, click <strong>Delete</strong> on the cancelling row.</li></ul><blockquote>⚠️ A released number goes back to the carrier pool and may not be recoverable — anyone can rent it next. Cancel only when you're sure, and port or update anything that publishes that number first.</blockquote><p>Imported numbers have no iMash subscription — deleting one simply removes it from iMash; the number stays yours at your carrier.</p><p>You're all set — your number is live, an agent is answering, and every call lands in your Call Logs. Time to make it smart.</p>"
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Now decide what happens when someone calls the number.",
+    "description": "Your number is live — now shape what happens on every call.",
     "cards": [
-      { "href": "/phone/call-routing", "title": "Route Calls to an Agent", "description": "Assign an inbound agent so the number answers calls." },
+      { "href": "/phone/call-routing", "title": "Inbound Call Routing", "description": "Forwarding, transfers, schedules, and after-hours behavior for your numbers." },
       { "href": "/agents/create-agent", "title": "Create an AI Agent", "description": "Build the agent that handles the conversation." },
-      { "href": "/phone/add-sip-provider", "title": "Add a SIP Provider", "description": "Connect your own carrier before importing a number." }
+      { "href": "/phone/add-sip-provider", "title": "Connect a SIP Provider", "description": "Bring your own carrier before importing numbers." }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Add a Phone Number - Buy or Import a Number | iMash Docs",
-  "metaDescription": "Buy a new local, toll-free, or international number through iMash, or import a number you already own. Then assign it to an AI agent.",
-  "metaKeywords": "phone number, buy number, import number, DID, toll-free, local number, area code, voice, SMS, provisioning"
+  "metaTitle": "Add a Phone Number - Buy or Import a Number | iMash Documentation",
+  "metaDescription": "Buy a new local or international phone number through iMash, or import a number from your own SIP carrier. Then assign an AI agent so it answers every call.",
+  "metaKeywords": "phone number, buy number, import number, DID, area code, voice, SMS, inbound agent, number settings, provisioning, cancel number"
 }

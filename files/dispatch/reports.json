@@ -1,0 +1,148 @@
+{
+  "title": "Dispatch Reports & Statistics",
+  "lede": "Know exactly how your field business is doing — revenue, profit, technician payouts, and close rates — without touching a spreadsheet. This guide walks the three reporting views inside Dispatch: the Statistics dashboard, the Finance Report, and the Team Member Report.",
+  "timeToComplete": "12 minutes",
+  "steps": [
+    {
+      "id": "open-reports",
+      "title": "Find the three reporting views in Dispatch",
+      "content": "<p>Every job your team runs generates money data — and iMash turns it into three ready-made reports, each answering a different question:</p><ul><li><strong>Statistics</strong> — \"How is the business doing?\" KPI cards and charts for the owner's daily glance.</li><li><strong>Finance Reports</strong> — \"Where did every dollar go?\" A job-by-job financial ledger with exports.</li><li><strong>Team Reports</strong> — \"Who do I owe, and who owes me?\" Technician settlement, payroll, and commissions.</li></ul><ol><li>In the top navigation bar, click <strong>Dispatch</strong>. You land on the <strong>Statistics</strong> view — the section's home.</li><li>Look at the colorful chip strip right below the navigation bar. Scroll it sideways to find the <strong>Statistics</strong>, <strong>Finance Reports</strong>, and <strong>Team Reports</strong> chips — those are the three views this guide covers.</li></ol><blockquote>💡 Each view is deep-linkable: the address bar updates as you switch chips, so you can bookmark your favorite report and jump straight to it every morning.</blockquote>",
+      "images": [
+        { "src": "images/dispatch/reports-stats-overview-light.png", "alt": "The Dispatch section open on the Statistics view with the chip strip visible", "caption": "Dispatch home: the Statistics view, with the chip strip on top — Finance Reports and Team Reports live a few chips to the right.", "theme": "light" },
+        { "src": "images/dispatch/reports-stats-overview-dark.png", "alt": "The Dispatch section open on the Statistics view with the chip strip visible", "caption": "Dispatch home: the Statistics view, with the chip strip on top — Finance Reports and Team Reports live a few chips to the right.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "stats-date-and-kpis",
+      "title": "Statistics: set the period and read the KPI cards",
+      "content": "<p>The <strong>Statistics</strong> view opens with a date toolbar and a row of KPI cards. Set the period first — everything on the page recomputes instantly:</p><ol><li>Pick a preset from the first dropdown — <strong>Today</strong>, <strong>Yesterday</strong>, <strong>This Week (Mon–Today)</strong>, <strong>Last Week (Mon–Sun)</strong>, <strong>Last 7 days</strong>, <strong>This month</strong>, <strong>Last month</strong>, <strong>Last 30 days</strong> — or click the date range field to set exact <strong>Custom range</strong> dates.</li><li>Check <strong>Filter By</strong>. It defaults to <strong>Completion Date</strong>, which means revenue is counted in the period the work was <em>finished</em> — the number a business owner actually wants. Click the small arrow to reveal <strong>Added Date</strong>, <strong>Scheduled Start</strong>, and <strong>Scheduled End</strong> if you prefer a different basis.</li><li>Click the refresh icon any time to recompute with fresh data.</li></ol><p>The KPI cards then tell the story:</p><ul><li><strong>Jobs</strong> — how many jobs fall in the period.</li><li><strong>Total</strong> — the actual amount charged on paid invoices (including tax, net of refunds). Tips are excluded on purpose.</li><li><strong>Tips</strong> — customer tips collected in the period. Tips go 100% to the technician, so they get their own card instead of inflating revenue.</li><li><strong>Company's Cut</strong> — your share after technician commissions.</li><li><strong>Cancelled</strong> and <strong>Completed</strong> — counts plus each one's percentage of all <em>resolved</em> jobs, so the two always add up to 100%. This is your close rate.</li><li><strong>Calls</strong> — calls linked to dispatch activity in the period.</li></ul>",
+      "images": [
+        { "src": "images/dispatch/reports-stats-kpis-light.png", "alt": "The Statistics KPI cards: Jobs, Total, Tips, Company's Cut, Cancelled, Completed, and Calls", "caption": "The Statistics KPI row — Jobs, Total, Tips, Company's Cut, Cancelled, Completed, and Calls.", "theme": "light" },
+        { "src": "images/dispatch/reports-stats-kpis-dark.png", "alt": "The Statistics KPI cards: Jobs, Total, Tips, Company's Cut, Cancelled, Completed, and Calls", "caption": "The Statistics KPI row — Jobs, Total, Tips, Company's Cut, Cancelled, Completed, and Calls.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "stats-charts",
+      "title": "Statistics: explore the leaderboards and breakdown charts",
+      "content": "<p>Below the KPI cards, six chart cards break the same period down from every angle:</p><ul><li><strong>Top Team Members</strong> — a revenue leaderboard for your technicians. Each row shows the tech's revenue, a green/red completion bar with their completion percentage, a completed/total job count, and their average sale per job. Hover the bar for the exact numbers.</li><li><strong>Top Performance By</strong> — the same leaderboard idea, but grouped by <strong>Job Source</strong> or <strong>Job Type</strong>. Use the small dropdown in the card title to switch between the two.</li><li><strong>Tickets by Status</strong> — a donut of every job in the period by its current status (scheduled, dispatched, completed, cancelled, and so on), with the total in the corner.</li><li><strong>Jobs by Area</strong> — where your work is coming from geographically, grouped by city/area.</li><li><strong>Job Sources by Sales Amount</strong> — which lead sources actually turn into money. Each legend row shows the dollars, the total vs. completed job counts, and the average sale for that source.</li><li><strong>Job Sources by Done Jobs</strong> — the same sources ranked purely by completed-job volume.</li></ul><blockquote>💡 Use <strong>Job Sources by Sales Amount</strong> when deciding where to spend marketing budget — a source that sends lots of jobs but few dollars will be obvious at a glance.</blockquote>",
+      "images": [
+        { "src": "images/dispatch/reports-stats-status-donut-light.png", "alt": "The Tickets by Status donut chart with a per-status legend", "caption": "Tickets by Status: every job in the period, split by its current status.", "theme": "light" },
+        { "src": "images/dispatch/reports-stats-status-donut-dark.png", "alt": "The Tickets by Status donut chart with a per-status legend", "caption": "Tickets by Status: every job in the period, split by its current status.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "stats-earnings-breakdown",
+      "title": "Statistics: track a year of earnings in one chart",
+      "content": "<p>At the bottom of Statistics sits the <strong>Earnings Breakdown (Last 12 Months)</strong> card — your year at a glance, from completed jobs only:</p><ul><li><strong>Total</strong> — everything charged to customers each month (including tax and card surcharge, excluding tips).</li><li><strong>Company's Cut</strong> — the company's share, shown with its percentage of Total.</li><li><strong>Tech's Cut</strong> — what your technicians earned, also as a percentage of Total.</li><li><strong>Team Cut</strong> — commissions paid to additional team members (helpers, salespeople, managers on a cut). This chip appears only once you actually pay team commissions.</li></ul><p>The summary chips on top give the 12-month grand totals; the grouped columns below show the same split month by month, so seasonality and margin trends jump out immediately. Hover any column for the exact dollar amounts.</p>",
+      "images": [
+        { "src": "images/dispatch/reports-stats-earnings-light.png", "alt": "The Earnings Breakdown card with Total, Company's Cut and Tech's Cut summary chips above a monthly column chart", "caption": "Earnings Breakdown: 12-month totals on top, the month-by-month split below.", "theme": "light" },
+        { "src": "images/dispatch/reports-stats-earnings-dark.png", "alt": "The Earnings Breakdown card with Total, Company's Cut and Tech's Cut summary chips above a monthly column chart", "caption": "Earnings Breakdown: 12-month totals on top, the month-by-month split below.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "finance-open",
+      "title": "Open the Finance Report — your job-by-job ledger",
+      "content": "<p>When you need the receipts behind the pretty charts, the Finance Report is a full financial ledger — one row per job, every dollar accounted for:</p><ol><li>In the Dispatch chip strip, click <strong>Finance Reports</strong>.</li><li>The table lists every job in the selected period. Swipe or scroll it horizontally — the columns run: <strong>#</strong>, <strong>Ticket</strong> (click the job number to open the job), <strong>Address</strong>, <strong>Job Source</strong>, <strong>Team Member</strong>, <strong>Job Type</strong>, <strong>Start Date</strong>, <strong>Scheduled</strong>, <strong>Closed</strong>, then the money columns — <strong>Total</strong>, <strong>Tips</strong>, <strong>Company Parts</strong>, <strong>Tech Parts</strong>, <strong>Company Total</strong>, <strong>Tech Total</strong>, <strong>Fees</strong>, and a column per payment method.</li></ol><blockquote>💡 Every <strong>Ticket</strong> number is a link — spot a weird amount, click it, and you're inside that job's Financials tab in one click.</blockquote>",
+      "images": [
+        { "src": "images/dispatch/reports-finance-overview-light.png", "alt": "The Finance Reports view with the date toolbar, money tiles and the jobs ledger table", "caption": "Finance Reports: toolbar on top, money tiles in the middle, and the job-by-job ledger below.", "theme": "light" },
+        { "src": "images/dispatch/reports-finance-overview-dark.png", "alt": "The Finance Reports view with the date toolbar, money tiles and the jobs ledger table", "caption": "Finance Reports: toolbar on top, money tiles in the middle, and the job-by-job ledger below.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "finance-toolbar",
+      "title": "Finance Report: dates, date basis, and one-click exports",
+      "content": "<p>The Finance Report toolbar works like the Statistics one, with two extras — exports:</p><ol><li>Pick a date preset or a <strong>Custom range</strong>, exactly as in Statistics.</li><li>Choose the <strong>Filter By</strong> basis. The Finance Report defaults to <strong>Added Date</strong> (the day the job was created); click the arrow to switch to <strong>Completion Date</strong>, <strong>Scheduled Start</strong>, or <strong>Scheduled End</strong>.</li><li>Click <strong>CSV</strong> to download the ledger as a spreadsheet, or <strong>PDF</strong> for a polished, branded report you can hand to an accountant or partner.</li><li>Click the refresh icon to re-run the report after changing anything.</li></ol><blockquote>⚠️ Date basis matters. A job added in June but completed in July counts in June under <strong>Added Date</strong> and in July under <strong>Completion Date</strong>. Pick one basis and stick to it when comparing periods, or your month-over-month numbers won't line up.</blockquote>",
+      "images": [
+        { "src": "images/dispatch/reports-finance-toolbar-light.png", "alt": "The Finance Report toolbar with the date preset, range picker, Filter By buttons, CSV and PDF export buttons", "caption": "The Finance Report toolbar: presets, exact dates, the Filter By basis, and CSV / PDF exports.", "theme": "light" },
+        { "src": "images/dispatch/reports-finance-toolbar-dark.png", "alt": "The Finance Report toolbar with the date preset, range picker, Filter By buttons, CSV and PDF export buttons", "caption": "The Finance Report toolbar: presets, exact dates, the Filter By basis, and CSV / PDF exports.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "finance-tiles",
+      "title": "Finance Report: read the money tiles",
+      "content": "<p>Between the toolbar and the table, a scrollable strip of tiles totals the filtered jobs. Hover any tile for a plain-language explanation of exactly what's inside the number:</p><ul><li><strong>Total (charged, incl. tax)</strong> — the real amount charged on paid invoices: including tax, net of refunds, tips excluded. On multi-invoice jobs, every invoice is counted.</li><li><strong>Tips</strong> — customer tips (100% to technicians). Kept out of Total so revenue stays honest.</li><li><strong>Tax</strong> — sales tax collected (a government pass-through, already inside Total).</li><li><strong>Company Gross</strong> / <strong>Technician Gross</strong> — how the work value splits between the company and the techs, before parts and fees.</li><li><strong>Jobs</strong> — the row count behind all these totals.</li><li><strong>Company Total</strong> / <strong>Tech Total</strong> — each side's take-home after parts and commissions.</li><li><strong>Technician Cut</strong> — total commissions earned by technicians.</li><li><strong>Company Parts</strong> — parts cost the company covered.</li><li><strong>Fees</strong> — card/processing costs actually paid to the payment processor.</li><li><strong>Per-payment-method tiles</strong> — Cash, Credit, Card, Check, Zelle, Venmo and friends, each totaling what came in through that method. Methods with zero activity hide automatically.</li></ul>",
+      "images": [
+        { "src": "images/dispatch/reports-finance-kpis-light.png", "alt": "The Finance Report money tiles: Total, Tips, Tax, Company Gross, Technician Gross and Jobs", "caption": "The first tiles in the strip — scroll right for take-home totals, parts, fees, and per-payment-method tiles.", "theme": "light" },
+        { "src": "images/dispatch/reports-finance-kpis-dark.png", "alt": "The Finance Report money tiles: Total, Tips, Tax, Company Gross, Technician Gross and Jobs", "caption": "The first tiles in the strip — scroll right for take-home totals, parts, fees, and per-payment-method tiles.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "finance-filters",
+      "title": "Finance Report: slice the ledger with filters",
+      "content": "<p>Want the numbers for one lead source, one tech, or one type of work? The filter drawer slices the whole report:</p><ol><li>Click the blue filter (funnel) button at the right end of the toolbar. The <strong>Report Filters</strong> drawer opens.</li><li>Fill in any combination of: <strong>Job Sources</strong> (one or more lead sources), <strong>Team Members</strong> (one or more technicians), <strong>Job Types</strong>, and <strong>Job Status</strong> (Draft, Scheduled, Dispatched, In Progress, On Hold, Completed, Cancelled, Spam).</li><li>Click <strong>Apply Filters</strong>. Every tile and every table row recomputes to the filtered set — and the CSV / PDF exports honor the filters too.</li></ol><blockquote>💡 Month-end routine worth stealing: filter to one <strong>Job Source</strong>, set the month, and export the PDF — that's a ready-made statement for your lead-source partner.</blockquote>",
+      "images": [
+        { "src": "images/dispatch/reports-finance-filters-light.png", "alt": "The Report Filters drawer with Job Sources, Team Members, Job Types and Job Status fields", "caption": "The Finance Report filter drawer — combine any filters, then click Apply Filters.", "theme": "light" },
+        { "src": "images/dispatch/reports-finance-filters-dark.png", "alt": "The Report Filters drawer with Job Sources, Team Members, Job Types and Job Status fields", "caption": "The Finance Report filter drawer — combine any filters, then click Apply Filters.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "team-open",
+      "title": "Open the Team Report — settlement and payroll central",
+      "content": "<p>The Team Report answers the question every field-service owner asks on payday: <em>\"who owes whom, and how much?\"</em></p><ol><li>In the Dispatch chip strip, click <strong>Team Reports</strong>.</li><li>The toolbar on top mirrors the Finance Report — date presets, a custom range, the <strong>Filter By</strong> basis (here it defaults to <strong>Completion Date</strong>, since you settle on finished work), <strong>CSV</strong> and <strong>PDF</strong> exports, and the filter drawer button.</li><li>Below it: a strip of settlement tiles, then the <strong>Team Member Report</strong> card with its three views (next steps).</li></ol>",
+      "images": [
+        { "src": "images/dispatch/reports-team-overview-light.png", "alt": "The Team Reports view with the date toolbar, settlement tiles and the Team Member Report card", "caption": "Team Reports: toolbar, settlement tiles, and the Team Member Report card with its View By switcher.", "theme": "light" },
+        { "src": "images/dispatch/reports-team-overview-dark.png", "alt": "The Team Reports view with the date toolbar, settlement tiles and the Team Member Report card", "caption": "Team Reports: toolbar, settlement tiles, and the Team Member Report card with its View By switcher.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "team-tiles",
+      "title": "Team Report: understand the settlement tiles",
+      "content": "<p>The tile strip is the settlement summary — scroll it sideways, and hover any tile for its exact definition:</p><ul><li><strong>Balance</strong> — the headline number. A red <strong>We owe tech</strong> badge means the company owes the technicians; a green <strong>Tech owes us</strong> badge means techs collected cash and owe the company; <strong>Settled</strong> means you're even.</li><li><strong>Completed Jobs</strong> / <strong>Canceled Jobs</strong> — the period's job outcome counts.</li><li><strong>Avg Ticket</strong> — the average sale per completed job, with the customer's grand total in parentheses.</li><li><strong>Grand Total</strong> — everything customers actually paid: work + tax + tips + card fees.</li><li><strong>Job Gross</strong> — the sale for the work only (no tax, tips, or fees) — the cleanest \"how much did we sell\" number.</li><li><strong>Tips</strong>, <strong>Tax</strong>, <strong>Processing Fees</strong> — the pass-through amounts, separated out.</li><li><strong>Company Gross / Company Profit</strong> and <strong>Technician Cut / Profit / Gross / Parts</strong> — each side of the split, before and after parts.</li><li><strong>Company Parts</strong> and <strong>Card Cost</strong> — the company's parts spend and what the card processor actually charged you.</li><li><strong>Payment totals show</strong> — a small control tile with <strong>Tax</strong>/<strong>Tip</strong>/<strong>Fee</strong> toggles that switch what every per-payment-method tile (Cash, Credit, Card, Check…) includes. Toggle a part on or off and all payment tiles recompute.</li></ul>",
+      "images": [
+        { "src": "images/dispatch/reports-team-kpis-light.png", "alt": "The Team Report settlement tiles: Balance, Completed Jobs, Canceled Jobs, Avg Ticket, Grand Total and Job Gross", "caption": "The start of the settlement strip — Balance first, then the money breakdown; scroll right for the full set.", "theme": "light" },
+        { "src": "images/dispatch/reports-team-kpis-dark.png", "alt": "The Team Report settlement tiles: Balance, Completed Jobs, Canceled Jobs, Avg Ticket, Grand Total and Job Gross", "caption": "The start of the settlement strip — Balance first, then the money breakdown; scroll right for the full set.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "team-balance-list",
+      "title": "Team Report: settle jobs in the Jobs Balance List",
+      "content": "<p>The <strong>Team Member Report</strong> card has a <strong>View By</strong> switcher with three views. The first, <strong>Jobs Balance List</strong>, is the working view — one row per job with a checkbox, the client info, dates, status, the money split (<strong>Total</strong>, <strong>Payment</strong>, <strong>Company Parts</strong>, <strong>Technician Parts</strong>), and the two columns that matter on payday: <strong>Settlement</strong> (who owes whom on this job) and <strong>Balance</strong>. A bold totals row is pinned to the top of the table.</p><ol><li>Tick the checkboxes of the jobs you're settling with a technician.</li><li>Click <strong>Mark Paid</strong> when you've paid out (or collected) — the rows flip to paid and drop out of the open balance. Made a mistake? Select them again and click <strong>Mark Unpaid</strong>.</li><li>Click <strong>Email Reports</strong> to generate a personal PDF statement per technician from the selected rows and email it to them — no more screenshots in group chats.</li><li>The green <strong>Results</strong> badge on the right always shows how many rows the current filters produced.</li></ol><blockquote>⚠️ The Team Report only lists jobs that have a team member assigned — a job with no technician can't owe anyone anything. If the list looks empty, check your date basis (<strong>Completion Date</strong> is the default) and that the jobs in the period actually have techs assigned.</blockquote>",
+      "images": [
+        { "src": "images/dispatch/reports-team-jobs-table-light.png", "alt": "The Team Member Report card in the Jobs Balance List view with Mark Paid, Mark Unpaid and Email Reports buttons", "caption": "Jobs Balance List: the View By switcher, the Mark Paid / Mark Unpaid settlement buttons, and Email Reports.", "theme": "light" },
+        { "src": "images/dispatch/reports-team-jobs-table-dark.png", "alt": "The Team Member Report card in the Jobs Balance List view with Mark Paid, Mark Unpaid and Email Reports buttons", "caption": "Jobs Balance List: the View By switcher, the Mark Paid / Mark Unpaid settlement buttons, and Email Reports.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "team-summary-and-commissions",
+      "title": "Team Report: Summary and Team Commissions views",
+      "content": "<p>The other two <strong>View By</strong> options roll the same data up per person:</p><ul><li><strong>Summary</strong> — one row per team member with their <strong>Email</strong>, their net <strong>Balance</strong> for the period, and an <strong>Action</strong> column. Select members here and <strong>Email Reports</strong> sends each one their own statement.</li><li><strong>Team Commissions</strong> — commissions earned by <em>additional</em> team members beyond the assigned technician: helpers, salespeople, or managers on a recurring cut. Each row shows the member (with their role tag), how many <strong>Jobs</strong> contributed, the <strong>Total</strong>, and the <strong>Unpaid</strong> / <strong>Paid</strong> split, with actions to mark commissions paid. Expand a row to see the per-job breakdown — the job, the assigned tech, the commission <strong>Rule</strong> that generated it, the <strong>Amount</strong>, and its <strong>Status</strong>.</li></ul><blockquote>💡 Team members earn commissions in two ways: a <strong>Recurring Commission</strong> rule in the member's settings (Rates &amp; Fees), or a one-off addition on a specific job's Financials tab. If the Team Commissions view is empty, that's where to set them up.</blockquote>",
+      "images": [
+        { "src": "images/dispatch/reports-team-summary-light.png", "alt": "The Team Member Report card switched to the Summary view", "caption": "Summary view: one balance row per team member, ready for Email Reports.", "theme": "light" },
+        { "src": "images/dispatch/reports-team-summary-dark.png", "alt": "The Team Member Report card switched to the Summary view", "caption": "Summary view: one balance row per team member, ready for Email Reports.", "theme": "dark" },
+        { "src": "images/dispatch/reports-team-commissions-light.png", "alt": "The Team Member Report card switched to the Team Commissions view", "caption": "Team Commissions view: extra team members' earnings, with the built-in hint on how commissions are configured.", "theme": "light" },
+        { "src": "images/dispatch/reports-team-commissions-dark.png", "alt": "The Team Member Report card switched to the Team Commissions view", "caption": "Team Commissions view: extra team members' earnings, with the built-in hint on how commissions are configured.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "team-filters",
+      "title": "Team Report: filter to the jobs you're settling",
+      "content": "<p>The Team Report's filter drawer is tuned for payroll runs:</p><ol><li>Click the blue filter (funnel) button in the toolbar to open <strong>Report Filters</strong>.</li><li>Set any of: <strong>Team Members</strong> (settle one tech at a time), <strong>Job Status</strong> (defaults to <strong>Completed</strong> — you normally only settle finished work), <strong>Payment Status</strong> (<strong>All</strong>, <strong>Paid</strong>, or <strong>Unpaid</strong> — pick Unpaid to see only what's still open), and <strong>Payment Type</strong> (for example only cash jobs, where the tech is holding your money).</li><li>Click <strong>Apply Filters</strong>.</li></ol><blockquote>💡 The classic payday combo: one <strong>Team Member</strong> + Payment Status <strong>Unpaid</strong> + this week. What's left on screen is exactly the settlement conversation — then select all, <strong>Mark Paid</strong>, and <strong>Email Reports</strong>.</blockquote>",
+      "images": [
+        { "src": "images/dispatch/reports-team-filters-light.png", "alt": "The Team Report filter drawer with Team Members, Job Status, Payment Status and Payment Type fields", "caption": "The Team Report filters — note Job Status defaults to Completed.", "theme": "light" },
+        { "src": "images/dispatch/reports-team-filters-dark.png", "alt": "The Team Report filter drawer with Team Members, Job Status, Payment Status and Payment Type fields", "caption": "The Team Report filters — note Job Status defaults to Completed.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "pick-the-right-report",
+      "title": "Which report do I open? (cheat sheet)",
+      "content": "<p>All three views read from the same job data — they just answer different questions. Bookmark the one that matches yours:</p><ul><li><em>\"How did we do this week?\"</em> → <strong>Statistics</strong> — KPIs, close rate, leaderboards, source performance.</li><li><em>\"I need the numbers for my accountant / a lead-source partner.\"</em> → <strong>Finance Reports</strong> — filter, then <strong>CSV</strong> or <strong>PDF</strong>.</li><li><em>\"It's payday — what do I owe my techs?\"</em> → <strong>Team Reports</strong> — Balance tile, Jobs Balance List, <strong>Mark Paid</strong>, <strong>Email Reports</strong>.</li></ul><p>One thing to keep straight across all three: the <strong>Filter By</strong> date basis. Statistics and Team Reports default to <strong>Completion Date</strong>; the Finance Report defaults to <strong>Added Date</strong>. If two views ever \"disagree,\" this is almost always why — switch them to the same basis and the numbers reconcile.</p><p>That's it — you now have a live P&amp;L, a full ledger, and a payroll desk built into Dispatch. No spreadsheet required.</p>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "The reports are only as good as the data flowing into them — set up your jobs, team, and sources so every dollar lands in the right bucket.",
+    "cards": [
+      { "href": "/dispatch/jobs", "title": "Jobs & the Dispatch Dashboard", "description": "Create and manage the jobs whose money these reports track." },
+      { "href": "/dispatch/technicians", "title": "Technicians & Team Members", "description": "Set each member's commission rates and fees — the source of every cut you saw here." },
+      { "href": "/dispatch/job-sources-types", "title": "Job Sources, Types & Payment Types", "description": "Clean source/type/payment lists make the breakdowns in these reports meaningful." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>Numbers not adding up, or a report not showing what you expect? Email <a href=\"mailto:support@imash.io\">support@imash.io</a> and the iMash team will help you reconcile it.</p>"
+  },
+  "metaTitle": "Dispatch Reports & Statistics | iMash Documentation",
+  "metaDescription": "Master iMash's three Dispatch reporting views: the Statistics dashboard, the job-by-job Finance Report with CSV/PDF exports, and the Team Member Report for technician settlement, payroll, and team commissions.",
+  "metaKeywords": "dispatch reports, statistics, finance report, technician report, team commissions, settlement, payroll, job revenue, company cut, tech cut, CSV export, PDF report, iMash"
+}

@@ -1,49 +1,204 @@
 {
   "title": "Configuración de privacidad y grabación",
-  "lede": "Controla lo que conserva tu Smart Agent (Agente inteligente): activa o desactiva el almacenamiento de la transcripción y la grabación de la llamada, y elige si quieres guardar el audio de la llamada.",
-  "timeToComplete": "4 minutos",
-  "videoUrl": "https://youtu.be/5tPDfE9WJlI",
-  "videoLength": "1",
+  "lede": "Decida exactamente qué conserva su Smart Agent de cada conversación: transcripciones completas y grabaciones de audio, o absolutamente nada. Dos interruptores le dan control total sobre los datos de las llamadas, para cumplir la normativa sin renunciar a la información que hace más inteligente a su agente.",
+  "timeToComplete": "6 minutos",
   "steps": [
     {
-      "id": "open-privacy",
-      "title": "Abre Privacy & Recording",
-      "content": "<ol><li>Ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes) y abre tu agente.</li><li>Haz clic en <strong>Settings</strong> (Configuración) y luego selecciona la sección <strong>Privacy &amp; Recording</strong> (Privacidad y grabación) en el panel izquierdo.</li></ol>",
+      "id": "open-agent",
+      "title": "Abra su Smart Agent",
+      "content": "<p>La privacidad se configura por agente, de modo que cada agente puede tener su propia política de grabación: grabe su línea de ventas y mantenga sin almacenamiento su línea de admisión médica.</p><ol><li>En la barra lateral izquierda, haga clic en <strong>Smart Agents</strong> (Agentes inteligentes), bajo <strong>Intelligence Center</strong> (Centro de inteligencia). También puede llegar a la misma lista desde la navegación superior mediante <strong>Automation → Smart Agents</strong>.</li><li>En la lista de agentes, haga clic en el <strong>nombre</strong> del agente que desea configurar. Se abrirá el editor del agente.</li></ol>",
       "images": [
-        { "src": "images/agents/agent-settings-panel-light.png", "alt": "Panel de configuración", "caption": "Privacy & Recording es una sección dentro del panel Settings del agente.", "theme": "light" },
-        { "src": "images/agents/agent-settings-panel-dark.png", "alt": "Panel de configuración", "caption": "Privacy & Recording es una sección dentro del panel Settings del agente.", "theme": "dark" }
+        {
+          "src": "images/agents/agent-privacy-agents-list-light.png",
+          "alt": "Lista de Smart Agents con los nombres de los agentes en la primera columna",
+          "caption": "Haga clic en el nombre de un agente para abrir su editor.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-privacy-agents-list-dark.png",
+          "alt": "Lista de Smart Agents con los nombres de los agentes en la primera columna",
+          "caption": "Haga clic en el nombre de un agente para abrir su editor.",
+          "theme": "dark"
+        }
       ]
     },
     {
-      "id": "data-storage",
-      "title": "Elige si almacenar datos sensibles",
-      "content": "<ul><li><strong>Disable Sensitive Data Storage</strong> (Desactivar almacenamiento de datos sensibles): cuando está activado, iMash no almacenará ni registrará la transcripción ni la grabación de la llamada para este agente.</li><li>Déjalo desactivado si quieres guardar las transcripciones para revisarlas y analizarlas más adelante.</li></ul>",
+      "id": "open-settings",
+      "title": "Abra el panel de configuración",
+      "content": "<ol><li>En el editor del agente, mire la parte inferior de la tarjeta grande del prompt, a la izquierda.</li><li>Haga clic en el botón <strong>Settings</strong> (Configuración), con icono de engranaje; está junto a <strong>Sub Agents / Tasks / Handoffs</strong> y <strong>Tools / MCP</strong>.</li><li>Se abre la ventana <strong>Settings</strong> con una lista de secciones en el lado izquierdo: General, Idle Messages, Voicemail, Speech, Voice Activity Detection, Audio Quality, Background Audio, Interruptions, User Turn Limits, Turn Detection y Privacy &amp; Recording.</li></ol>",
       "images": [
-        { "src": "images/agents/assistant-editor-light.png", "alt": "Editor del agente", "caption": "Las opciones de privacidad aplican a todas las llamadas que atiende este agente.", "theme": "light" },
-        { "src": "images/agents/assistant-editor-dark.png", "alt": "Editor del agente", "caption": "Las opciones de privacidad aplican a todas las llamadas que atiende este agente.", "theme": "dark" }
+        {
+          "src": "images/agents/agent-privacy-open-settings-light.png",
+          "alt": "Editor del agente con el botón Settings en la parte inferior de la tarjeta del prompt",
+          "caption": "El botón Settings está en la parte inferior de la tarjeta del prompt en el editor del agente.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-privacy-open-settings-dark.png",
+          "alt": "Editor del agente con el botón Settings en la parte inferior de la tarjeta del prompt",
+          "caption": "El botón Settings está en la parte inferior de la tarjeta del prompt en el editor del agente.",
+          "theme": "dark"
+        }
       ]
     },
     {
-      "id": "audio-recording",
-      "title": "Activa o desactiva la grabación de audio",
-      "content": "<ul><li>Usa el interruptor <strong>Audio Recording</strong> (Grabación de audio) para grabar (o no grabar) el audio de la conversación.</li><li>Esta opción solo está disponible mientras el almacenamiento de datos sensibles esté activado; si desactivas el almacenamiento, la grabación también se apaga.</li></ul>",
+      "id": "open-privacy-section",
+      "title": "Seleccione Privacy & Recording",
+      "content": "<ol><li>En la ventana Settings, desplace el panel izquierdo hasta el final y haga clic en <strong>Privacy &amp; Recording</strong> (Privacidad y grabación), con icono de candado y el texto \"Data storage and audio recording\".</li><li>El lado derecho muestra ahora la tarjeta Privacy &amp; Recording con dos controles: <strong>Disable Sensitive Data Storage</strong> (Desactivar almacenamiento de datos sensibles) y <strong>Audio Recording</strong> (Grabación de audio).</li></ol><blockquote>💡 Los cambios aquí se guardan al instante: no hay botón de guardar. Haga clic en <strong>Done</strong> (Listo) o en la <strong>×</strong> cuando termine; simplemente cierra la ventana.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/agent-privacy-section-light.png",
+          "alt": "Ventana Settings con Privacy & Recording seleccionado en el panel izquierdo",
+          "caption": "Privacy & Recording es la última sección del panel de Settings.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-privacy-section-dark.png",
+          "alt": "Ventana Settings con Privacy & Recording seleccionado en el panel izquierdo",
+          "caption": "Privacy & Recording es la última sección del panel de Settings.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "understand-toggles",
+      "title": "Entienda los dos controles",
+      "content": "<p>Esto es lo que hace cada interruptor tipo píldora:</p><ul><li><strong>Disable Sensitive Data Storage</strong> (Desactivar almacenamiento de datos sensibles): el interruptor maestro de privacidad. Cuando muestra <strong>ON</strong>, iMash <em>no</em> almacenará ni registrará la transcripción ni la grabación de las llamadas de este agente. Cuando muestra <strong>OFF</strong> (el valor predeterminado), las transcripciones se guardan y la grabación depende del interruptor de abajo.</li><li><strong>Audio Recording</strong> (Grabación de audio): cuando está en <strong>ON</strong> (el valor predeterminado), el audio completo de la conversación se graba y se adjunta al registro de la llamada para poder reproducirlo después. Póngalo en <strong>OFF</strong> para conservar las transcripciones pero sin el archivo de audio.</li></ul><p>Esta configuración se aplica a <strong>todas las llamadas que atiende este agente</strong>: llamadas telefónicas, llamadas web y llamadas de prueba por igual.</p>",
+      "images": [
+        {
+          "src": "images/agents/agent-privacy-toggles-light.png",
+          "alt": "Tarjeta Privacy & Recording con Disable Sensitive Data Storage en OFF y Audio Recording en ON",
+          "caption": "El estado predeterminado: almacenamiento habilitado (interruptor en OFF) y Audio Recording en ON.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-privacy-toggles-dark.png",
+          "alt": "Tarjeta Privacy & Recording con Disable Sensitive Data Storage en OFF y Audio Recording en ON",
+          "caption": "El estado predeterminado: almacenamiento habilitado (interruptor en OFF) y Audio Recording en ON.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "disable-storage",
+      "title": "Trabaje sin almacenamiento (opcional)",
+      "content": "<p>¿Gestiona conversaciones médicas, legales o de pagos? Active el interruptor maestro y iMash no conservará nada sensible:</p><ol><li>Haga clic en la píldora junto a <strong>Disable Sensitive Data Storage</strong> para que muestre <strong>ON</strong>.</li><li>Observe que la fila <strong>Audio Recording</strong> se atenúa de inmediato: la grabación depende del almacenamiento, así que no se conserva ningún audio mientras el almacenamiento esté desactivado, sin importar lo que mostrara antes la píldora de grabación.</li></ol><blockquote>⚠️ Compensación que debe conocer antes de activarlo: con el almacenamiento desactivado no habrá transcripción que revisar en Call Logs, el análisis y los resúmenes posteriores a la llamada no tendrán datos con los que trabajar, y no habrá grabación para resolver disputas sobre \"quién dijo qué\". Actívelo solo cuando una normativa o política lo exija de verdad.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/agent-privacy-storage-off-light.png",
+          "alt": "Disable Sensitive Data Storage en ON con la fila Audio Recording atenuada",
+          "caption": "Con el almacenamiento desactivado, el control Audio Recording queda bloqueado: no se conserva nada.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-privacy-storage-off-dark.png",
+          "alt": "Disable Sensitive Data Storage en ON con la fila Audio Recording atenuada",
+          "caption": "Con el almacenamiento desactivado, el control Audio Recording queda bloqueado: no se conserva nada.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "video-recording-node-view",
+      "title": "Grabación de video en llamadas web (vista Node)",
+      "content": "<p>Si su agente atiende <strong>llamadas web con video</strong> (por ejemplo, a través del widget del sitio web), existe un tercer control que solo aparece en el editor avanzado:</p><ol><li>En la parte superior del editor del agente, cambie el conmutador <strong>Form / Node</strong> a <strong>Node</strong>.</li><li>Busque el nodo <strong>Privacy</strong> (Privacidad) en el lienzo y haga clic en él. Su inspector muestra los mismos dos interruptores más <strong>Video Recording</strong> (Grabación de video): \"Record the user's video during a web call\".</li><li>La línea de resumen del nodo Privacy le indica la política actual de un vistazo: <em>Default recording + storage</em>, <em>audio off</em>, <em>video off</em> o <em>PII redacted</em>.</li></ol><p>Al igual que Audio Recording, Video Recording queda bloqueado automáticamente mientras <strong>Disable Sensitive Data Storage</strong> esté activado.</p>",
+      "images": []
+    },
+    {
+      "id": "recording-disclosure",
+      "title": "Avise a quienes llaman de que se les graba",
+      "content": "<p>Las leyes de grabación de muchos lugares exigen informar a quien llama; algunas jurisdicciones requieren el consentimiento de <em>todas las partes</em>. La forma más sencilla de estar protegido es que su agente lo diga desde el principio:</p><ol><li>De vuelta en el editor del agente (vista Form), mire la fila superior de la tarjeta del prompt. Ponga el primer desplegable en <strong>Defined Message</strong> (Mensaje definido) para que el agente hable primero con su redacción exacta.</li><li>En el campo de mensaje contiguo, incluya un aviso breve, por ejemplo: <em>\"¡Hola! Esta llamada puede ser grabada con fines de calidad y formación. ¿En qué puedo ayudarle hoy?\"</em></li><li>Para mayor cobertura, añada una línea al system prompt indicando al agente que confirme con honestidad el estado de la grabación si quien llama pregunta si la llamada se está grabando.</li></ol><blockquote>⚠️ Las normas de consentimiento varían según el país y el estado (consentimiento de una parte frente a todas las partes). Esta guía no constituye asesoramiento legal: confirme la redacción de su aviso con su asesoría jurídica, especialmente si opera en varios países.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/agent-privacy-greeting-light.png",
+          "alt": "Selector Defined Message y campo de saludo en la parte superior del editor del agente",
+          "caption": "Ponga su aviso de grabación en el saludo Defined Message para que se pronuncie en cada llamada.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-privacy-greeting-dark.png",
+          "alt": "Selector Defined Message y campo de saludo en la parte superior del editor del agente",
+          "caption": "Ponga su aviso de grabación en el saludo Defined Message para que se pronuncie en cada llamada.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "verify-call-logs",
+      "title": "Vea lo que realmente se almacena en Call Logs",
+      "content": "<p>Confíe, pero verifique: Call Logs (Registros de llamadas) es donde viven todas las transcripciones y grabaciones almacenadas:</p><ol><li>En la barra lateral izquierda, haga clic en <strong>Call Logs</strong>, bajo <strong>Call Center</strong> (Centro de llamadas).</li><li>Use el filtro <strong>AI Agent</strong> (Agente de IA) de la parte superior para acotar la lista al agente que acaba de configurar.</li><li>Cada fila es una llamada. Esta lista (fecha, dirección, duración, costo) se conserva siempre para facturación e informes: los interruptores de privacidad controlan el <em>contenido sensible</em> de la llamada (transcripción y audio), no el hecho de que la llamada ocurrió.</li></ol>",
+      "images": [
+        {
+          "src": "images/agents/agent-privacy-call-logs-light.png",
+          "alt": "Página Call Logs con filtros y una lista de llamadas recientes",
+          "caption": "Call Logs lista todas las llamadas; los interruptores de privacidad deciden si se adjuntan transcripción y audio.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-privacy-call-logs-dark.png",
+          "alt": "Página Call Logs con filtros y una lista de llamadas recientes",
+          "caption": "Call Logs lista todas las llamadas; los interruptores de privacidad deciden si se adjuntan transcripción y audio.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "check-call-detail",
+      "title": "Abra una llamada para confirmar que su política funciona",
+      "content": "<ol><li>Haga clic en cualquier fila de llamada para abrir el panel <strong>Call Details</strong> (Detalles de la llamada).</li><li>Con la grabación en <strong>ON</strong>, aparece un reproductor de audio en la parte superior para reproducir la llamada, y la pestaña <strong>Transcripts</strong> (Transcripciones) muestra la conversación completa.</li><li>Con la grabación en <strong>OFF</strong> (o el almacenamiento desactivado), el aviso superior dice <strong>\"Recording not enabled for this call\"</strong> (Grabación no habilitada para esta llamada): exactamente lo que quiere ver después de restringirlo todo.</li></ol><p>Eso es todo: su agente ahora conserva exactamente tanto (o tan poco) como exigen su negocio y sus reguladores. 🎉</p>",
+      "images": [
+        {
+          "src": "images/agents/agent-privacy-call-detail-light.png",
+          "alt": "Panel Call Details mostrando el aviso Recording not enabled for this call",
+          "caption": "El panel Call Details confirma su política: no se conservó ninguna grabación de esta llamada.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-privacy-call-detail-dark.png",
+          "alt": "Panel Call Details mostrando el aviso Recording not enabled for this call",
+          "caption": "El panel Call Details confirma su política: no se conservó ninguna grabación de esta llamada.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "compliance-tips",
+      "title": "Lista rápida de cumplimiento",
+      "content": "<p>Una lista breve para mantener limpio su programa de llamadas:</p><ul><li><strong>Informe de la grabación</strong> en el saludo del agente allí donde apliquen las leyes de consentimiento (vea el paso anterior).</li><li><strong>Adapte la política a cada línea</strong>: es normal grabar los agentes de ventas y soporte mientras los agentes de admisión de datos regulados (salud, pagos) funcionan sin almacenamiento.</li><li><strong>Revise antes de lanzar</strong>: haga una llamada de prueba y luego compruebe en Call Logs que el comportamiento de transcripción/grabación coincide con su intención.</li><li><strong>Limite quién puede escuchar</strong>: las grabaciones y transcripciones son visibles para los compañeros con acceso a Call Logs; combine su política de privacidad con permisos de equipo sensatos.</li><li><strong>Audite los cambios</strong>: los interruptores de privacidad son cambios de configuración; vigile su registro de auditoría para saber quién cambió una política de grabación y cuándo.</li></ul>",
       "images": []
     }
   ],
   "nextSteps": {
     "title": "¿Qué sigue?",
-    "description": "Con la privacidad configurada, continúa ajustando tu agente:",
+    "description": "Su política de datos ya está definida: ahora afine el resto de su agente y saque partido a los datos almacenados:",
     "cards": [
-      { "href": "/agents/agent-settings", "title": "Configuración del agente", "description": "Ajusta los tiempos de espera, mensajes de inactividad y manejo de buzón de voz." },
-      { "href": "/agents/advanced-settings", "title": "Procesamiento posterior a la llamada", "description": "Extrae datos estructurados y envía los resultados de la llamada a tus sistemas." },
-      { "href": "/phone/call-logs", "title": "Revisa los registros de llamadas", "description": "Consulta transcripciones, grabaciones y resúmenes de llamadas almacenados." }
+      {
+        "href": "/agents/agent-settings",
+        "title": "Configuración del agente",
+        "description": "Tiempos de espera, mensajes de inactividad, gestión del buzón de voz y turnos de conversación."
+      },
+      {
+        "href": "/agents/advanced-settings",
+        "title": "Procesamiento posterior a la llamada",
+        "description": "Extraiga datos estructurados de las transcripciones almacenadas y envíe los resultados a sus sistemas."
+      },
+      {
+        "href": "/phone/call-logs",
+        "title": "Registros de llamadas",
+        "description": "Explore transcripciones, grabaciones, costos y analítica de llamadas."
+      },
+      {
+        "href": "/settings/audit-log",
+        "title": "Registro de auditoría",
+        "description": "Vea quién cambió la configuración —incluida la de privacidad— y cuándo."
+      }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+    "title": "¿Necesita ayuda?",
+    "content": "<p>Si tiene algún problema o alguna pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Configuración de privacidad y grabación | Documentación de iMash",
-  "metaDescription": "Controla la privacidad de datos de tu iMash Smart Agent: activa o desactiva el almacenamiento de transcripciones y grabaciones con Disable Sensitive Data Storage, y activa la grabación de audio.",
-  "metaKeywords": "configuración de privacidad, imash, agente inteligente, almacenamiento de datos, grabación de audio, transcripción, datos sensibles"
+  "metaTitle": "Configuración de privacidad y grabación | iMash Documentation",
+  "metaDescription": "Controle lo que almacena su Smart Agent de iMash: active o desactive la grabación de llamadas, trabaje sin almacenamiento con Disable Sensitive Data Storage, añada avisos de grabación y verifique su política en Call Logs.",
+  "metaKeywords": "configuración de privacidad, grabación de llamadas, imash, smart agent, almacenamiento de datos sensibles, transcripción, grabación de audio, grabación de video, cumplimiento, consentimiento"
 }

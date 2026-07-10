@@ -1,0 +1,147 @@
+{
+  "title": "Team Members (Technicians)",
+  "lede": "Your team members are the people who actually show up and do the work — and iMash turns each one into a fully-automated profile: dispatch rules, pay structure, working hours, tipping, and a mobile dashboard of their own. This guide walks you A-to-Z through adding a team member and configuring every tab of their settings.",
+  "timeToComplete": "15 minutes",
+  "steps": [
+    {
+      "id": "open-team-members",
+      "title": "Open the Team Members tab",
+      "content": "<p>Everything about your field team lives in one place — who's active, who's available right now, what they earn, and how the auto-dispatcher reaches them.</p><ol><li>In the top navigation, click <strong>Dispatch</strong>.</li><li>In the tab strip below it, click <strong>Team Members</strong> (or go directly to <code>/pipeline/jobs?tab=technicians</code>).</li></ol><p>At the top you'll see four live stat tiles:</p><ul><li><strong>Total Team Members</strong> — everyone you've added, regardless of status.</li><li><strong>Active Team Members</strong> — members whose Status is <strong>Active</strong> (only these are eligible for auto-dispatch).</li><li><strong>Available Now</strong> — members currently inside their configured working hours.</li><li><strong>On Assignment</strong> — members with at least one open (not completed) job assigned.</li></ul>",
+      "images": [
+        { "src": "images/dispatch/technicians-tab-light.png", "alt": "Team Members tab with stat tiles and the team list", "caption": "Dispatch → Team Members — stat tiles, the Add Team Member button, and the full team list", "theme": "light" },
+        { "src": "images/dispatch/technicians-tab-dark.png", "alt": "Team Members tab with stat tiles and the team list", "caption": "Dispatch → Team Members — stat tiles, the Add Team Member button, and the full team list", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "read-the-list",
+      "title": "Read the team list — statuses, priority, and quick actions",
+      "content": "<p>Each row in the table gives you a live snapshot of one team member:</p><ul><li><strong>Team Member</strong> — avatar, name, email, and Employee ID pill.</li><li><strong>Contact</strong> — phone number and city/state.</li><li><strong>Status</strong> — <strong>ACTIVE</strong> (green), <strong>INACTIVE</strong>, <strong>ON LEAVE</strong> (orange), or <strong>TERMINATED</strong> (red).</li><li><strong>Tag</strong> — the role label (Tech, Manager, Owner, Partner, or your own text).</li><li><strong>Priority</strong> — the dispatch ranking. Lower number = contacted first. Use the <strong>↑</strong> / <strong>↓</strong> arrows, or grab the dotted handle on the far left and drag the whole row to reorder.</li><li><strong>Availability</strong> — <strong>AVAILABLE</strong>, <strong>OFF HOURS</strong> (outside working hours), <strong>ON BREAK</strong>, <strong>OFF DUTY</strong>, or <strong>BUSY (n)</strong> with their open-job count.</li><li><strong>Performance</strong> — completed-job count.</li><li><strong>Commission</strong> — a compact summary of their pay structure.</li><li><strong>Devices</strong> — how many phones/browsers are registered for push notifications and GPS.</li><li><strong>ACK Timeout</strong> — the per-member override of how long they get to accept a dispatched job (editable right in the cell).</li><li><strong>Actions</strong> — the blue pencil opens <strong>Team Member Settings</strong>; the red trash deletes the member (with confirmation).</li></ul><blockquote>💡 Priority matters: in sequential auto-dispatch mode, the dispatcher texts your team in priority order. Keep your best closers at #1 and #2.</blockquote>",
+      "images": [
+        { "src": "images/dispatch/technicians-tab-light.png", "alt": "Team list columns showing status, priority arrows, availability and commission", "caption": "Every column is live — reorder priority with the arrows or by dragging the row handle", "theme": "light" },
+        { "src": "images/dispatch/technicians-tab-dark.png", "alt": "Team list columns showing status, priority arrows, availability and commission", "caption": "Every column is live — reorder priority with the arrows or by dragging the row handle", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "add-team-member",
+      "title": "Add a team member",
+      "content": "<ol><li>Click <strong>+ Add Team Member</strong> in the top-right (on mobile the button just says <strong>Add</strong>).</li><li>The <strong>Add Team Member</strong> window opens with five tabs on the left: <strong>Profile</strong>, <strong>Rates &amp; Fees</strong>, <strong>Tipping</strong>, <strong>Simulate Pay</strong>, and <strong>Devices &amp; Permissions</strong>.</li><li>Already have a configured member? Use the blue <strong>Copy settings from an existing technician</strong> bar at the top — pick a member and iMash copies their compensation, fees, tax, rate overrides, tipping, schedule, and dispatch settings. Personal details (name, email, phone, password, Employee ID, priority) are never copied.</li><li>Fill in at least <strong>Full name</strong> and <strong>Email</strong> (both required), then click <strong>Add Technician</strong> at the bottom-right.</li></ol><blockquote>💡 Onboarding tech #5? The copy bar turns a 15-minute setup into a 30-second one — copy from your best-configured member, then just change the personal details.</blockquote>",
+      "images": [
+        { "src": "images/dispatch/technicians-add-copy-light.png", "alt": "Add Team Member window with the copy-settings bar and Profile tab", "caption": "The Add Team Member window — note the Copy settings bar at the top", "theme": "light" },
+        { "src": "images/dispatch/technicians-add-copy-dark.png", "alt": "Add Team Member window with the copy-settings bar and Profile tab", "caption": "The Add Team Member window — note the Copy settings bar at the top", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "profile-identity",
+      "title": "Profile tab — identity and login",
+      "content": "<p>The <strong>Profile</strong> tab starts with the <strong>Identity</strong> card:</p><ul><li><strong>Full name</strong> and <strong>Email</strong> — required. The email doubles as the member's login for their own dashboard.</li><li><strong>Phone</strong> — the number the auto-dispatcher texts and calls. If this member will receive dispatched jobs by SMS, fill it in.</li><li><strong>Employee ID</strong> — optional internal reference, shown as a pill on the list.</li><li><strong>Tag</strong> — a role label (pick <strong>Tech</strong>, <strong>Manager</strong>, <strong>Owner</strong>, <strong>Partner</strong>, or type your own). It appears on the Team Members list and in reports.</li><li><strong>Password</strong> — the password the member uses to sign in to their mobile Tech Dashboard.</li><li><strong>Link to workspace user (optional)</strong> — connect this team member to one of your iMash workspace users. Linked members sign in with that user's workspace email and password (the Email and Password fields lock), and get one-tap switching between the main app and the tech dashboard.</li></ul><blockquote>💡 Every team member gets their own mobile-friendly <strong>Tech Dashboard</strong> — they sign in at <code>your-domain/tech/dashboard</code> (or the iMash Tech app) with the email and password you set here, and can view their jobs, accept work, upload photos, collect payments, and get paid — without ever touching your admin account.</blockquote>",
+      "images": [
+        { "src": "images/dispatch/technicians-modal-profile-light.png", "alt": "Team Member Settings Profile tab showing the Identity card", "caption": "Profile → Identity — name, email, phone, tag, and the tech-dashboard password", "theme": "light" },
+        { "src": "images/dispatch/technicians-modal-profile-dark.png", "alt": "Team Member Settings Profile tab showing the Identity card", "caption": "Profile → Identity — name, email, phone, tag, and the tech-dashboard password", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "role-dispatch",
+      "title": "Profile tab — role, status, and dispatch behavior",
+      "content": "<p>Scroll to the <strong>Role &amp; dispatch</strong> card — this is where you control how the auto-dispatcher treats this member:</p><ul><li><strong>Status</strong> — <strong>Active</strong>, <strong>Inactive</strong>, <strong>On leave</strong>, or <strong>Terminated</strong>. Only Active members receive dispatched jobs.</li><li><strong>Availability</strong> — <strong>Available</strong>, <strong>Busy</strong>, <strong>Off duty</strong>, or <strong>On break</strong>. A quick manual override without changing their status.</li><li><strong>Hire date</strong> — optional, for your records.</li><li><strong>Dispatch priority</strong> — the member's rank in sequential dispatch. Lower number = higher priority, and it must be unique across your team.</li><li><strong>Max open jobs</strong> — the auto-dispatcher skips this member once they hit this many open jobs. Blank or 0 = no limit.</li><li><strong>ACK timeout (sec)</strong> — how long this member has to reply and accept a dispatched job before it escalates to the next tech. Blank = use your account default; <strong>0 = the timer never expires</strong>.</li><li><strong>Timezone</strong> — required if you use working hours or schedule-based rate overrides. Times are wall-clock in the member's own timezone.</li><li><strong>ACK reminder calls</strong> — flip this on and an AI assistant will phone the member with the job details while they haven't accepted yet. Pick the <strong>Assistant to call with</strong>, how many <strong>Reminder calls</strong> to place (1–10), and <strong>Every (sec)</strong> between calls.</li></ul><blockquote>⚠️ If you leave <strong>Timezone</strong> blank, schedule-based rate overrides and working-hours checks are silently skipped for this member. Set it whenever you use either feature.</blockquote>",
+      "images": [
+        { "src": "images/dispatch/technicians-modal-role-dispatch-light.png", "alt": "Role and dispatch card with status, priority, max open jobs and ACK timeout", "caption": "Role & dispatch — status, priority, capacity limits, ACK timeout, and AI reminder calls", "theme": "light" },
+        { "src": "images/dispatch/technicians-modal-role-dispatch-dark.png", "alt": "Role and dispatch card with status, priority, max open jobs and ACK timeout", "caption": "Role & dispatch — status, priority, capacity limits, ACK timeout, and AI reminder calls", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "assignments-service-area",
+      "title": "Profile tab — assignments, service area, and certifications",
+      "content": "<p>Keep scrolling — the next three cards decide <em>which</em> jobs this member can get:</p><ul><li><strong>Assignments</strong> — restrict the member to specific <strong>Job Types</strong> and <strong>Job Sources</strong>. Use the <strong>All</strong> / <strong>None</strong> shortcuts to bulk-select. Leave both empty to allow every job.</li><li><strong>Service area</strong> — set the <strong>Service state</strong>, <strong>Service ZIP</strong> (where the member is based), and <strong>Service radius</strong>. The auto-dispatcher excludes this member from jobs farther than the radius from their ZIP, and uses proximity as a scoring factor when ranking candidates.</li><li><strong>Certifications</strong> — free-form tags (type one and press <strong>Enter</strong>). Used for reporting; dispatch does not enforce them.</li></ul><blockquote>💡 The dispatcher also uses the member's <em>live GPS location</em> (from the tech app) when it's fresh — the closer the tech, the higher they score. The Service ZIP is the fallback when GPS isn't available.</blockquote>",
+      "images": [
+        { "src": "images/dispatch/technicians-modal-assignments-light.png", "alt": "Assignments, Service area and Certifications cards in the Profile tab", "caption": "Assignments + Service area — job-type/source filters, ZIP, and dispatch radius", "theme": "light" },
+        { "src": "images/dispatch/technicians-modal-assignments-dark.png", "alt": "Assignments, Service area and Certifications cards in the Profile tab", "caption": "Assignments + Service area — job-type/source filters, ZIP, and dispatch radius", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "working-hours-more",
+      "title": "Profile tab — working hours, sending permissions, and notes",
+      "content": "<p>The bottom of the Profile tab covers the member's schedule and field permissions:</p><ul><li><strong>Working hours</strong> — tick each working day and set start/end times. Use <strong>Set 24/7</strong> to open every day, <strong>Clear all</strong> to wipe the schedule, and the per-row copy icons to copy one day to the next day or to all days. Times are wall-clock in the member's timezone. Outside these hours the member shows as <strong>OFF HOURS</strong> and is skipped by dispatch.</li><li><strong>Emergency contact</strong> — optional name and phone, visible only to admins.</li><li><strong>Invoice &amp; Quote sending</strong> — control how this member can send documents to customers from the field: <strong>Allow texting (SMS)</strong> (on by default) and <strong>Allow emailing</strong> (off by default; requires your email sending to be configured).</li><li><strong>Notes</strong> — internal notes for dispatchers and admins. Never shown to the member.</li></ul><blockquote>💡 If End time is earlier than Start time, the window wraps past midnight — perfect for night shifts like 22:00 → 06:00.</blockquote>",
+      "images": [
+        { "src": "images/dispatch/technicians-modal-hours-light.png", "alt": "Working hours editor with per-day time windows", "caption": "Working hours — per-day windows, Set 24/7, Clear all, and copy-day shortcuts", "theme": "light" },
+        { "src": "images/dispatch/technicians-modal-hours-dark.png", "alt": "Working hours editor with per-day time windows", "caption": "Working hours — per-day windows, Set 24/7, Clear all, and copy-day shortcuts", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "rates-compensation",
+      "title": "Rates & Fees tab — compensation, recurring cuts, and sales tax",
+      "content": "<p>Click the <strong>Rates &amp; Fees</strong> tab — this is the member's entire pay structure in one place, and it powers the automatic commission math on every completed job.</p><ul><li><strong>Compensation → BASE RATE</strong> — what the member earns when no rate override matches. Choose the model on the right: <strong>Commission %</strong> (percent of the job), <strong>Commission $</strong> (fixed dollars per job), <strong>Per hour</strong>, or <strong>Per job</strong>, then set the amount (the % model has a handy slider).</li><li><strong>PARTS BASIS</strong> — how parts affect commission: <strong>Cost — tech earns on markup</strong> (the member is commissioned on the profit above part cost) or <strong>Price — parts pass through</strong> (parts are excluded from commission entirely).</li><li><strong>Recurring Commission → EVERY JOB</strong> — flip this on to give the member a cut of <em>every</em> completed job, not just their own — perfect for an Owner, Manager, or Partner override. Set the % or $ amount, then click <strong>Configure</strong> to choose what the % is computed against (<strong>Total</strong>, <strong>Tech</strong>, <strong>Company</strong>, or <strong>Split</strong>) and who funds the cut.</li><li><strong>Sales Tax</strong> — a per-member override of your global sales-tax rate. Leave it on <strong>Inherit (global)</strong> to use the account-wide rate, or set a rate and click <strong>Configure</strong> to choose who bears the tax: <strong>Total</strong> (off the top before commission), <strong>Tech</strong>, <strong>Company</strong>, or <strong>Split</strong> (50/50 after commission).</li></ul>",
+      "images": [
+        { "src": "images/dispatch/technicians-modal-rates-light.png", "alt": "Rates and Fees tab showing base rate, parts basis, recurring commission and sales tax", "caption": "Rates & Fees — base rate, parts basis, recurring commission, and the sales-tax override", "theme": "light" },
+        { "src": "images/dispatch/technicians-modal-rates-dark.png", "alt": "Rates and Fees tab showing base rate, parts basis, recurring commission and sales tax", "caption": "Rates & Fees — base rate, parts basis, recurring commission, and the sales-tax override", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "fees-payment-methods",
+      "title": "Rates & Fees tab — payment-method fees and custom fees",
+      "content": "<p>Scroll down to the <strong>Fees</strong> card:</p><ol><li><strong>Allowed Payment Methods</strong> — restrict which payment methods this member can record on a job. Methods you leave out won't appear in their dropdown. Leave empty to allow all.</li><li>Once you select methods, a fee bar appears for each one — set a <strong>%</strong> or <strong>$</strong> fee that's automatically deducted when the member collects with that method (e.g. a 3% card-processing fee). Click <strong>Configure</strong> on any fee to pick the mode (<strong>Manual</strong> rate, <strong>Actual</strong> processor cost, or <strong>Actual + margin</strong>) and who bears it (<strong>Total</strong>, <strong>Tech</strong>, <strong>Company</strong>, or <strong>Split</strong>).</li><li>Click <strong>+ Add Fee</strong> to add extra per-method fees or ad-hoc <strong>custom fees</strong> that apply to every job (e.g. a fuel surcharge or equipment fee).</li></ol>",
+      "images": [
+        { "src": "images/dispatch/technicians-modal-fees-light.png", "alt": "Fees card with Allowed Payment Methods selector and Add Fee button", "caption": "Fees — allowed payment methods, per-method fees, and custom fees", "theme": "light" },
+        { "src": "images/dispatch/technicians-modal-fees-dark.png", "alt": "Fees card with Allowed Payment Methods selector and Add Fee button", "caption": "Fees — allowed payment methods, per-method fees, and custom fees", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "rate-overrides",
+      "title": "Rates & Fees tab — rate overrides",
+      "content": "<p>The <strong>Rate Overrides</strong> card lets the base rate change automatically when conditions match — pay more for premium work without touching a calculator:</p><ul><li><strong>By Job Type</strong> — e.g. 60% commission on installations, 40% on repairs.</li><li><strong>By Job Source</strong> — e.g. a lower rate on jobs from an expensive lead source.</li><li><strong>By Schedule (time of day)</strong> — e.g. a night-shift or weekend premium (requires the member's <strong>Timezone</strong> to be set).</li><li><strong>By Job Amount (threshold)</strong> — e.g. a higher rate once the job total passes $1,000.</li></ul><p>Expand a panel and click its <strong>Add … Override</strong> button to create a rule. When several rules match the same job, the <strong>most-specific dimension wins</strong> — the precedence strip at the top shows the order: <strong>Job Amount → Schedule → Job Type → Job Source → Base</strong>.</p>",
+      "images": [
+        { "src": "images/dispatch/technicians-modal-overrides-light.png", "alt": "Rate Overrides card with the four override panels and precedence order", "caption": "Rate Overrides — four dimensions, with Job Amount taking the highest precedence", "theme": "light" },
+        { "src": "images/dispatch/technicians-modal-overrides-dark.png", "alt": "Rate Overrides card with the four override panels and precedence order", "caption": "Rate Overrides — four dimensions, with Job Amount taking the highest precedence", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "tipping",
+      "title": "Tipping tab — let customers tip your techs",
+      "content": "<p>Click the <strong>Tipping</strong> tab to enable customer tips at checkout — 100% of the tip goes to the tech, which your team will love.</p><ol><li>Flip <strong>Accept tips</strong> ON. Customers then see a tip selector at checkout, and Tap-to-Pay shows a tip prompt on the device.</li><li><strong>How tips interact with fees and commission</strong> — keep the default <strong>Tip on top — fees ignore the tip</strong>, or pick a mode where fees also apply to the tip or the tip folds into the job total.</li><li><strong>Tip preset percentages</strong> — the quick-pick buttons customers see (defaults: 15%, 20%, 25%). Add or remove any values.</li><li><strong>Default highlighted preset</strong> — which preset is pre-selected.</li></ol><p>Click <strong>Save Settings</strong> when you're done.</p>",
+      "images": [
+        { "src": "images/dispatch/technicians-modal-tipping-light.png", "alt": "Tipping tab with Accept tips enabled and preset percentages", "caption": "Tipping — enable tips, choose the tip mode, and set the preset percentages", "theme": "light" },
+        { "src": "images/dispatch/technicians-modal-tipping-dark.png", "alt": "Tipping tab with Accept tips enabled and preset percentages", "caption": "Tipping — enable tips, choose the tip mode, and set the preset percentages", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "simulate-pay",
+      "title": "Simulate Pay tab — preview the take-home before you save",
+      "content": "<p>Not sure what all those rates, fees, and overrides add up to? The <strong>Simulate Pay</strong> tab is a built-in payroll calculator that answers \"what would this tech earn on a $1,000 job?\" instantly.</p><ol><li>Click the <strong>Simulate Pay</strong> tab.</li><li>Under <strong>Job inputs</strong>, set a <strong>Subtotal (gross)</strong>, <strong>Sales tax</strong>, and <strong>Tip</strong>; optionally pick a <strong>Job type</strong>, <strong>Job source</strong>, <strong>Payment method</strong>, <strong>Who collects the money</strong> (Default / Company / Technician), a <strong>Scheduled start</strong>, and even add <strong>Parts used</strong> (Company part or Tech-supplied).</li><li>Watch the three cards on the right update live: <strong>CUSTOMER</strong> (what the customer pays), <strong>TECHNICIAN TAKE-HOME</strong> (commission and total pay), and <strong>COMPANY TAKE-HOME</strong> (your side of the split).</li></ol><blockquote>💡 The simulator reads the settings straight from the form — including <em>unsaved</em> edits. Tweak a rate on the Rates &amp; Fees tab, hop back here, and see the effect before committing.</blockquote>",
+      "images": [
+        { "src": "images/dispatch/technicians-modal-simulate-light.png", "alt": "Simulate Pay tab with job inputs and customer, technician, and company take-home cards", "caption": "Simulate Pay — a live preview of customer charge, tech take-home, and company take-home", "theme": "light" },
+        { "src": "images/dispatch/technicians-modal-simulate-dark.png", "alt": "Simulate Pay tab with job inputs and customer, technician, and company take-home cards", "caption": "Simulate Pay — a live preview of customer charge, tech take-home, and company take-home", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "devices-permissions",
+      "title": "Devices & Permissions tab — the tech's app, GPS, and push status",
+      "content": "<p>The <strong>Devices &amp; Permissions</strong> tab shows everything iMash knows about this member's installations of the iMash Tech app and web sessions — read-only.</p><ul><li><strong>Registered devices &amp; sessions</strong> — every phone or browser the member has registered, with the notification and location permissions they granted and the most recent push ping. Devices appear here after the tech taps <strong>Enable notifications</strong> in their app's Settings tab.</li><li><strong>GPS fix</strong> — the member's last known location and how fresh it is. Fresh GPS makes the auto-dispatcher's proximity scoring dramatically smarter.</li><li><strong>Request location now</strong> — ask the native app for an immediate GPS ping (browser sessions stream GPS automatically while the tab is open).</li><li><strong>Refresh</strong> — reload the panel.</li></ul><blockquote>💡 A tech with zero devices can still receive jobs by SMS — but they won't get push notifications or live GPS scoring. Encourage every tech to install the app and enable notifications on day one.</blockquote>",
+      "images": [
+        { "src": "images/dispatch/technicians-modal-devices-light.png", "alt": "Devices and Permissions tab showing registered devices and GPS status", "caption": "Devices & Permissions — registered devices, permission states, and the latest GPS fix", "theme": "light" },
+        { "src": "images/dispatch/technicians-modal-devices-dark.png", "alt": "Devices and Permissions tab showing registered devices and GPS status", "caption": "Devices & Permissions — registered devices, permission states, and the latest GPS fix", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "save-and-verify",
+      "title": "Save and verify",
+      "content": "<ol><li>Click <strong>Save Settings</strong> (or <strong>Add Technician</strong> for a new member) at the bottom-right. The footer always tells you where you stand: <strong>Unsaved changes</strong> in orange, <strong>All changes saved</strong> when you're safe.</li><li>Back on the list, confirm the member shows the right <strong>Status</strong>, <strong>Priority</strong>, and <strong>Commission</strong> summary.</li><li>Hand the member their login (email + the password you set) for <code>your-domain/tech/dashboard</code> or the iMash Tech app — from there they see assigned jobs, accept new dispatches, navigate to the customer, and collect payment.</li></ol><p>That's it — your team member is now a fully-wired part of the dispatch machine: the auto-dispatcher can find them, score them, text them, call them, and pay them correctly, all hands-free.</p>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Your team is set up — now put them to work. Turn on the auto-dispatcher, create jobs, and watch the commission math handle itself.",
+    "cards": [
+      { "href": "/dispatch/auto-dispatch", "title": "Auto Dispatch", "description": "Let iMash text, score, and assign your team automatically the moment a job comes in." },
+      { "href": "/dispatch/jobs", "title": "Jobs", "description": "Create and manage jobs — the work your team members get dispatched to." },
+      { "href": "/dispatch/reports", "title": "Dispatch Reports & Statistics", "description": "See per-tech revenue, commissions, and team cuts in the Finance and Team reports." },
+      { "href": "/dispatch/job-sources-types", "title": "Job Sources & Types", "description": "Configure the job types and lead sources you can filter team members by." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>Questions about team member setup, commissions, or the tech dashboard? Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a> and we'll walk you through it.</p>"
+  },
+  "metaTitle": "Team Members (Technicians) | iMash Documentation",
+  "metaDescription": "Add and configure team members in iMash: dispatch priority, working hours, service area, commission rates, fees, rate overrides, tipping, pay simulation, and the mobile tech dashboard.",
+  "metaKeywords": "technicians, team members, dispatch, commission, rate overrides, working hours, ACK timeout, tech dashboard, tipping, iMash"
+}

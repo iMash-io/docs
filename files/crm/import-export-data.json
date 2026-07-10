@@ -1,56 +1,190 @@
 {
   "title": "Import & Export Data",
-  "lede": "Bring contacts, leads, and accounts into iMash in bulk — either by uploading your own spreadsheet or by pulling from the built-in People Explorer directory.",
-  "timeToComplete": "8 minutes",
+  "lede": "Move your entire book of business into iMash in minutes. Upload a CSV of contacts, leads, or accounts, map the columns once, and let the built-in duplicate merging keep your CRM clean — then learn where to pull your data back out whenever you need it.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
-      "id": "csv-import",
-      "title": "Import your own list (CSV)",
-      "content": "<ol><li>Go to the list you want to add to — <strong>CRM → Contacts</strong>, <strong>Leads</strong>, or <strong>Accounts</strong>.</li><li>Click the <strong>Import</strong> button at the top of the list.</li><li>Upload your <strong>CSV</strong> file and follow the prompts to <strong>map your columns</strong> (name, email, phone, etc.) to the matching iMash fields.</li><li>Review the preview, then confirm to import. New records appear in the list right away.</li></ol><p>Tip: put one contact per row, and include a header row so the column mapping is easy.</p>"
-    },
-    {
-      "id": "open-people-import",
-      "title": "Import from People Explorer (Marketing)",
-      "content": "<ol><li>In the left navigation, open <strong>Marketing</strong> and click <strong>Import Contacts / Leads / Accounts</strong> (or go to <code>/marketing/import-people</code>).</li><li>This tool searches a large directory of people and companies so you can build a targeted list without a spreadsheet.</li><li>You'll move through three steps: <strong>Build filters</strong>, <strong>Preview &amp; select</strong>, and <strong>Map &amp; target</strong>.</li></ol>",
+      "id": "open-the-list",
+      "title": "Open the list you want to import into",
+      "content": "<p>Every CRM list — Contacts, Leads, and Accounts — has its own built-in CSV importer. You import directly into the list where you want the records to live.</p><ol><li>In the top navigation, click <strong>CRM</strong>.</li><li>In the sub-tab row, choose the list you want to add to: <strong>Contacts</strong>, <strong>Leads</strong>, or <strong>Accounts</strong>.</li><li>Look at the toolbar above the table — the importer, duplicate finder, and API tools all live here.</li></ol><blockquote>💡 Not sure which list to use? <strong>Leads</strong> are prospects you are still qualifying, <strong>Contacts</strong> are people you actively do business with, and <strong>Accounts</strong> are the companies they belong to. The import steps are identical for all three.</blockquote>",
       "images": [
-        { "src": "images/crm/import-people-light.png", "alt": "People Explorer import", "caption": "The Marketing import wizard: build filters, preview, then map and import", "theme": "light" },
-        { "src": "images/crm/import-people-dark.png", "alt": "People Explorer import", "caption": "The Marketing import wizard: build filters, preview, then map and import", "theme": "dark" }
+        {
+          "src": "images/crm/import-export-data-contacts-page-light.png",
+          "alt": "The CRM Contacts list with the import toolbar above the table",
+          "caption": "CRM → Contacts — the toolbar above the table holds the Import, Find Duplicates, and API Info buttons",
+          "theme": "light"
+        },
+        {
+          "src": "images/crm/import-export-data-contacts-page-dark.png",
+          "alt": "The CRM Contacts list with the import toolbar above the table",
+          "caption": "CRM → Contacts — the toolbar above the table holds the Import, Find Duplicates, and API Info buttons",
+          "theme": "dark"
+        }
       ]
     },
     {
-      "id": "filter-preview",
-      "title": "Build filters and preview",
-      "content": "<ol><li>On <strong>Build filters</strong>, narrow the directory by criteria such as job title, company, industry, or location.</li><li>Click through to <strong>Preview &amp; select</strong> to see matching people.</li><li>Tick the individuals you want, or select all matches. Click a row to inspect the full record before importing.</li></ol>",
+      "id": "prepare-your-csv",
+      "title": "Prepare your CSV file",
+      "content": "<p>A minute of spreadsheet prep saves you from a messy import. Export your data from your old system (or Excel / Google Sheets) as a <strong>.csv</strong> file, and make sure:</p><ul><li><strong>Row 1 is a header row</strong> — column names like <em>First Name</em>, <em>Email</em>, <em>Phone</em>. iMash reads these to auto-match your columns.</li><li><strong>One record per row</strong> — one person (or one company) per line.</li><li><strong>Required columns are present:</strong><ul><li><strong>Contacts &amp; Leads</strong>: First Name (or Last Name) <em>plus</em> an Email or a Phone number.</li><li><strong>Accounts</strong>: Name <em>plus</em> an Email or a Phone number.</li></ul></li><li><strong>Multiple values go in one cell, separated by commas</strong> — e.g. a Phone column can hold <code>+15551230001, +15551230002</code> and a Tags column can hold <code>vip, imported</code>.</li></ul><blockquote>⚠️ Only <strong>.csv</strong> files are accepted — if you are in Excel or Google Sheets, use <strong>File → Save As / Download → CSV</strong> first. Rows that are completely empty are skipped automatically.</blockquote>"
+    },
+    {
+      "id": "upload-your-file",
+      "title": "Upload the file",
+      "content": "<ol><li>In the list toolbar, click the <strong>Import</strong> button (the upload-arrow icon next to <strong>Add Contact</strong> / <strong>Add Lead</strong> / <strong>Add Account</strong>).</li><li>The <strong>Import from CSV</strong> wizard opens on its upload step. Click inside the dashed area (or drag your file onto it) where it says <strong>Click or drag CSV file to this area to upload</strong>.</li><li>Once the file is listed, click <strong>Next</strong>.</li></ol><blockquote>💡 If you see a <strong>CSV Parsing Error</strong>, the file is not a valid CSV — re-export it from your spreadsheet tool and try again.</blockquote>",
       "images": [
-        { "src": "images/crm/import-export-light.png", "alt": "Import preview and mapping", "caption": "Preview matches and map fields before importing", "theme": "light" },
-        { "src": "images/crm/import-export-dark.png", "alt": "Import preview and mapping", "caption": "Preview matches and map fields before importing", "theme": "dark" }
+        {
+          "src": "images/crm/import-export-data-toolbar-light.png",
+          "alt": "The list toolbar with the Import upload icon next to Add Contact",
+          "caption": "The Import button is the upload-arrow icon in the toolbar, just left of Add Contact",
+          "theme": "light"
+        },
+        {
+          "src": "images/crm/import-export-data-toolbar-dark.png",
+          "alt": "The list toolbar with the Import upload icon next to Add Contact",
+          "caption": "The Import button is the upload-arrow icon in the toolbar, just left of Add Contact",
+          "theme": "dark"
+        },
+        {
+          "src": "images/crm/import-export-data-upload-light.png",
+          "alt": "The Import Contacts from CSV upload step with a drag-and-drop area",
+          "caption": "Step 1 of the wizard — drop your CSV into the dashed upload area",
+          "theme": "light"
+        },
+        {
+          "src": "images/crm/import-export-data-upload-dark.png",
+          "alt": "The Import Contacts from CSV upload step with a drag-and-drop area",
+          "caption": "Step 1 of the wizard — drop your CSV into the dashed upload area",
+          "theme": "dark"
+        }
       ]
     },
     {
-      "id": "map-target",
-      "title": "Map fields and choose the target",
-      "content": "<ol><li>On <strong>Map &amp; target</strong>, pick <strong>Import as</strong>: <strong>Leads</strong>, <strong>Contacts</strong>, or <strong>Accounts (companies)</strong>.</li><li>Map each source field to a standard column, or store extra data in <strong>custom fields</strong>.</li><li>Turn on <strong>Also create companies as Accounts &amp; link</strong> to automatically build company accounts and connect each person to theirs.</li><li>Click to run the import — duplicates are merged, and a summary shows how many records were created.</li></ol>"
+      "id": "map-your-columns",
+      "title": "Map your columns to iMash fields",
+      "content": "<p>This is where the magic happens: each column from your file gets matched to an iMash field. iMash pre-fills its best guesses from your header names — you just review and adjust.</p><ol><li>For each CSV column on the left, pick the matching iMash field from the dropdown on the right — <strong>First Name *</strong>, <strong>Last Name *</strong>, <strong>Email</strong>, <strong>Phone Numbers</strong>, <strong>Lifecycle Stage</strong>, address fields, <strong>Tags</strong>, and more (Leads also get <strong>Source</strong>; Accounts get <strong>Name *</strong>, <strong>Website</strong>, and <strong>Industry</strong>).</li><li>Pick <strong>Do not import</strong> for any column you want to skip.</li><li>Pick <strong>Custom Variable (custom_vars JSONB)</strong> to keep extra data that has no standard field — a small <strong>Key</strong> box appears so you can name the variable (leave it blank to auto-generate a name from the header). Custom variables can later be used by your AI agents and templates.</li><li>Columns mapped to <strong>Phone Numbers</strong> reveal two clean-up boxes: <strong>Trim leading digits</strong> (cut N characters off the front of every number) and <strong>Prefix to add</strong> (e.g. add <code>+1</code>). A live <strong>Preview</strong> underneath shows a sample number before → after, so you can normalize formats without touching your spreadsheet.</li><li>(Contacts &amp; Leads only) Use <strong>Select Account for Imported Contacts/Leads</strong> at the top to attach every imported record to one existing company account — handy when importing one client's staff list.</li><li>Click <strong>Preview</strong>.</li></ol><blockquote>⚠️ If the <strong>Required Fields Missing</strong> warning appears, the <strong>Preview</strong> button stays disabled. Contacts/Leads need First Name (or Last Name) mapped together with Email or Phone Numbers; Accounts need Name plus Email or Phone Numbers.</blockquote>",
+      "images": [
+        {
+          "src": "images/crm/import-export-data-mapping-light.png",
+          "alt": "The column mapping step matching CSV headers to contact fields with phone transform options",
+          "caption": "Each CSV column maps to an iMash field — phone columns get trim/prefix clean-up with a live preview",
+          "theme": "light"
+        },
+        {
+          "src": "images/crm/import-export-data-mapping-dark.png",
+          "alt": "The column mapping step matching CSV headers to contact fields with phone transform options",
+          "caption": "Each CSV column maps to an iMash field — phone columns get trim/prefix clean-up with a live preview",
+          "theme": "dark"
+        }
+      ]
     },
     {
-      "id": "export",
+      "id": "preview-and-merge",
+      "title": "Preview, choose duplicate handling, and import",
+      "content": "<p>Before anything is written to your CRM, you get a final look at the data exactly as it will be imported.</p><ol><li>Review the sample table — it shows the first 5 rows with each column under the iMash field it will fill.</li><li>Decide how duplicates should be handled with the <strong>Merge duplicate contacts</strong> checkbox:<ul><li><strong>Checked</strong> — if an incoming row matches an existing record, any new phone numbers are added to the existing record, and its email is filled in if it was empty. No duplicate rows are created.</li><li><strong>Unchecked</strong> — duplicate rows are rejected and reported on the results screen, so nothing is silently overwritten.</li></ul></li><li>Confirm the <strong>Ready to Import</strong> banner shows the record count you expect, then click <strong>Import</strong>.</li><li>A circular progress indicator shows records being processed in batches — large files (tens of thousands of rows) are handled automatically; just leave the window open until it finishes.</li></ol>",
+      "images": [
+        {
+          "src": "images/crm/import-export-data-preview-light.png",
+          "alt": "The preview step showing sample rows, the merge duplicates checkbox and the Ready to Import banner",
+          "caption": "The preview step — check Merge duplicate contacts to enrich existing records instead of rejecting them",
+          "theme": "light"
+        },
+        {
+          "src": "images/crm/import-export-data-preview-dark.png",
+          "alt": "The preview step showing sample rows, the merge duplicates checkbox and the Ready to Import banner",
+          "caption": "The preview step — check Merge duplicate contacts to enrich existing records instead of rejecting them",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "review-results",
+      "title": "Review the import results",
+      "content": "<p>When the import finishes, the wizard shows a scorecard:</p><ul><li><strong>Total Records</strong> — how many rows were processed.</li><li><strong>Successful</strong> — records created (or merged) in your CRM.</li><li><strong>Failed</strong> — rows that could not be imported.</li></ul><p>If anything failed, an <strong>Error Details</strong> table lists each problem row with the reason. Rows rejected as duplicates can be <strong>expanded</strong> to see the existing record and the incoming record side by side, so you can decide what to fix.</p><ol><li>Click <strong>Close</strong> — your new records are already live in the list, ready to call, message, and automate.</li></ol>",
+      "images": [
+        {
+          "src": "images/crm/import-export-data-results-light.png",
+          "alt": "The import results screen with Total Records, Successful and Failed tiles",
+          "caption": "The results scorecard — failed rows are listed with the exact reason",
+          "theme": "light"
+        },
+        {
+          "src": "images/crm/import-export-data-results-dark.png",
+          "alt": "The import results screen with Total Records, Successful and Failed tiles",
+          "caption": "The results scorecard — failed rows are listed with the exact reason",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "find-duplicates",
+      "title": "Clean up duplicates any time",
+      "content": "<p>Already imported from several sources? The Contacts and Leads lists have a built-in de-duplicator.</p><ol><li>In the list toolbar, click the <strong>Find Duplicates</strong> button (the copy icon).</li><li>Choose a <strong>Duplicate scope</strong> — search across all records, or narrow the match rule.</li><li>Under <strong>Find duplicates by</strong>, click <strong>Phone Number</strong> or <strong>Email Address</strong> to scan.</li><li>Review each duplicate group and merge or remove the extras.</li></ol><blockquote>💡 Run this after every big import — clean data means your campaigns never call the same person twice.</blockquote>",
+      "images": [
+        {
+          "src": "images/crm/import-export-data-duplicates-light.png",
+          "alt": "The Find and Remove Duplicate Contacts dialog with scope and match-by options",
+          "caption": "Find & Remove Duplicate Contacts — scan by phone number or email address",
+          "theme": "light"
+        },
+        {
+          "src": "images/crm/import-export-data-duplicates-dark.png",
+          "alt": "The Find and Remove Duplicate Contacts dialog with scope and match-by options",
+          "caption": "Find & Remove Duplicate Contacts — scan by phone number or email address",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "people-explorer",
+      "title": "No list yet? Build one with People Explorer",
+      "content": "<p>You don't even need a spreadsheet to fill your CRM. The <strong>People Explorer</strong> in the Marketing section searches a huge directory of professionals and companies so you can build a targeted list from scratch:</p><ul><li>Filter by job title, company, industry, location, and more.</li><li>Preview the matches, hand-pick the people you want, and inspect any record before importing.</li><li>Import them as <strong>Leads</strong>, <strong>Contacts</strong>, or <strong>Accounts</strong> — with the option to auto-create company accounts and link each person to theirs.</li></ul><p>See the full walkthrough in Import People (People Explorer).</p>"
+    },
+    {
+      "id": "export-your-data",
       "title": "Export your data",
-      "content": "<ul><li>Open any CRM list (Contacts, Leads, or Accounts) and apply the filters you want to export.</li><li>Use the list's export option to download the filtered records for backup or use in another tool.</li><li>Exported records reflect the current filters and search, so narrow the list first to export only what you need.</li></ul>"
+      "content": "<p>Your data is never locked in. The richest exports live where the activity happens:</p><ul><li><strong>Call history</strong> — go to <strong>Call Logs</strong> (in the Call Center section of the sidebar) and click <strong>Export to CSV (Max 50,000)</strong> to download your filtered call history. Click <strong>Columns</strong> first to choose exactly which columns appear on screen and in the CSV. In summary view the button becomes <strong>Export Summary</strong>, with <strong>Summary as CSV</strong> or <strong>Summary as PDF</strong> options.</li><li><strong>Campaign results</strong> — open a campaign and use its <strong>Export</strong> buttons to download the call outcomes as CSV or PDF.</li><li><strong>Reports</strong> — the Analytics reports pages offer CSV downloads of their tables.</li><li><strong>CRM records via API</strong> — on any Contacts, Leads, or Accounts list, click the <strong>API Info</strong> button (the link icon in the toolbar) to get ready-made API examples for reading your records programmatically — perfect for syncing to another system. See <a data-href=\"/get-started/api-keys\">API Keys</a> to set up access.</li></ul><blockquote>💡 Exports respect the filters you have applied — narrow the list first (date range, agent, tags) and the file will contain only what you see.</blockquote>",
+      "images": [
+        {
+          "src": "images/crm/import-export-data-calllogs-export-light.png",
+          "alt": "The Call Logs header buttons: Columns, Export to CSV (Max 50,000) and API Info",
+          "caption": "Call Logs → Export to CSV — the Columns button controls which columns land in the file",
+          "theme": "light"
+        },
+        {
+          "src": "images/crm/import-export-data-calllogs-export-dark.png",
+          "alt": "The Call Logs header buttons: Columns, Export to CSV (Max 50,000) and API Info",
+          "caption": "Call Logs → Export to CSV — the Columns button controls which columns land in the file",
+          "theme": "dark"
+        }
+      ]
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Now that your data is in, put it to work.",
+    "description": "Your data is in — now unleash it. Put your imported list in front of your AI agents and watch the calls, texts, and bookings roll in.",
     "cards": [
-      { "href": "/crm/contacts", "title": "Contacts", "description": "Review and organize imported people." },
-      { "href": "/crm/leads", "title": "Leads", "description": "Work imported prospects through your pipeline." },
-      { "href": "/campaigns/create-campaign", "title": "Create a Campaign", "description": "Call or message your newly imported list." }
+      {
+        "href": "/campaigns/create-campaign",
+        "title": "Create a Campaign",
+        "description": "Call or message your newly imported list with an AI agent."
+      },
+      {
+        "href": "/crm/contacts",
+        "title": "Contacts",
+        "description": "Review, organize, and enrich your imported people."
+      },
+      {
+        "href": "/crm/leads",
+        "title": "Leads",
+        "description": "Work imported prospects through your pipeline stages."
+      }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Import & Export Data - CRM | iMash Docs",
-  "metaDescription": "Bulk-import contacts, leads, and accounts into iMash by CSV upload or the People Explorer directory. Map fields, auto-create company accounts, and export data.",
-  "metaKeywords": "import data, export data, CSV import, bulk import, people explorer, lead import, contact import, field mapping"
+  "metaTitle": "Import & Export Data - CRM | iMash Documentation",
+  "metaDescription": "Bulk-import contacts, leads, and accounts into iMash from CSV: column mapping, phone number clean-up, custom variables, and duplicate merging. Plus where to export call logs, campaign results, and CRM data.",
+  "metaKeywords": "import data, export data, CSV import, bulk import, column mapping, merge duplicates, find duplicates, people explorer, lead import, contact import, export call logs"
 }

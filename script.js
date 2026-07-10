@@ -56,6 +56,20 @@ const I18N = {
     'Analytics Dashboard': 'Panel de Analíticas', 'Reports': 'Informes', 'Cost Management': 'Gestión de Costos',
     'Team Management': 'Gestión de Equipo', 'Billing': 'Facturación', 'Security': 'Seguridad',
     'White Label': 'Marca Blanca',
+    // new sections/pages (docs expansion)
+    'Sub-Agents & Handoffs': 'Sub-Agentes y Transferencias', 'PBX Extensions': 'Extensiones PBX',
+    'Voicemail': 'Buzón de Voz', 'Human Dialer': 'Marcador Humano',
+    'Tasks & Kanban': 'Tareas y Kanban', 'Calendar': 'Calendario', 'Booking Forms': 'Formularios de Reserva',
+    'CRM Settings': 'Ajustes del CRM', 'Sales Pipeline': 'Pipeline de Ventas', 'Deals': 'Negocios',
+    'Quotes': 'Cotizaciones', 'Invoices': 'Facturas', 'Products & Services': 'Productos y Servicios',
+    'Subscriptions': 'Suscripciones', 'Payments (Stripe)': 'Pagos (Stripe)', 'Dispatch': 'Despacho',
+    'Jobs': 'Trabajos', 'Auto Tech Dispatch': 'Despacho Automático', 'Team Members': 'Miembros del Equipo',
+    'Sources & Job Types': 'Fuentes y Tipos de Trabajo', 'Dispatch Reports': 'Informes de Despacho',
+    'Messages': 'Mensajes', 'SMS Inbox': 'Bandeja SMS', 'WhatsApp': 'WhatsApp',
+    'WhatsApp Campaigns': 'Campañas de WhatsApp', 'Email': 'Correo', 'Email Marketing': 'Email Marketing',
+    'Marketing': 'Marketing', 'Import People': 'Importar Personas', 'Scrape Businesses': 'Extraer Negocios',
+    'LinkedIn': 'LinkedIn', 'MCP Servers': 'Servidores MCP', 'Smart Studio': 'Smart Studio',
+    'Audit Log & Notifications': 'Auditoría y Notificaciones', 'System Health': 'Estado del Sistema',
     // intro / home page
     'Introduction': 'Introducción',
     'Build, test, deploy, and monitor AI agents.': 'Crea, prueba, implementa y monitorea agentes de IA.',
@@ -631,7 +645,19 @@ const NAV_ICON_FOR = {
   '/crm/contacts': 'user', '/crm/leads': 'tag', '/crm/accounts': 'briefcase', '/crm/import-export': 'upload',
   '/automations/smart-flows': 'zap', '/automations/custom-tools': 'tool', '/automations/webhooks': 'link', '/automations/integrations': 'grid',
   '/analytics/dashboard': 'barChart', '/analytics/reports': 'fileText', '/analytics/costs': 'dollar',
-  '/settings/team-management': 'users', '/settings/billing': 'creditCard', '/settings/security': 'lock', '/settings/white-label': 'award'
+  '/settings/team-management': 'users', '/settings/billing': 'creditCard', '/settings/security': 'lock',
+  // docs expansion
+  '/agents/sub-agents': 'shuffle', '/phone/pbx-extensions': 'hash', '/phone/voicemail-settings': 'mic',
+  '/campaigns/human-dialer': 'headphones',
+  '/crm/tasks': 'list', '/crm/calendar': 'clock', '/crm/booking-forms': 'fileText', '/crm/crm-settings': 'settings',
+  '/pipeline/deals': 'briefcase', '/pipeline/quotes': 'fileText', '/pipeline/invoices': 'dollar',
+  '/pipeline/products-services': 'tag', '/pipeline/subscriptions': 'clock', '/pipeline/payments': 'creditCard',
+  '/dispatch/overview': 'grid', '/dispatch/jobs': 'briefcase', '/dispatch/auto-dispatch': 'zap',
+  '/dispatch/technicians': 'users', '/dispatch/job-sources-types': 'tag', '/dispatch/reports': 'barChart',
+  '/messages/sms': 'list', '/messages/whatsapp': 'phone', '/messages/whatsapp-campaigns': 'radio',
+  '/messages/email': 'fileText', '/messages/email-marketing': 'radio',
+  '/automations/mcp-servers': 'server', '/automations/smart-studio': 'cpu',
+  '/settings/audit-log': 'eye', '/settings/system-health': 'shield'
 };
 function injectSidebarIcons(container) {
   if (!container) return;
@@ -724,6 +750,7 @@ function updateSidebarForTab(route) {
             <li><a data-href="/agents/voice-configuration" class="nav-link ${route === '/agents/voice-configuration' ? 'active' : ''}">${tr('Voice Configuration')}</a></li>
             <li><a data-href="/agents/test-agent" class="nav-link ${route === '/agents/test-agent' || route === '/agents/test-your-agent' ? 'active' : ''}">${tr('Test Your Agent')}</a></li>
             <li><a data-href="/agents/agent-tools" class="nav-link ${route === '/agents/agent-tools' ? 'active' : ''}">${tr('Agent Tools')}</a></li>
+            <li><a data-href="/agents/sub-agents" class="nav-link ${route === '/agents/sub-agents' ? 'active' : ''}">${tr('Sub-Agents & Handoffs')}</a></li>
             <li><a data-href="/agents/agent-knowledge-base" class="nav-link ${route === '/agents/agent-knowledge-base' ? 'active' : ''}">${tr('Agent Knowledge Base')}</a></li>
             <li><a data-href="/agents/agent-mcp" class="nav-link ${route === '/agents/agent-mcp' ? 'active' : ''}">${tr('Agent MCP')}</a></li>
             <li><a data-href="/agents/agent-privacy" class="nav-link ${route === '/agents/agent-privacy' ? 'active' : ''}">${tr('Agent Privacy')}</a></li>
@@ -742,6 +769,8 @@ function updateSidebarForTab(route) {
             <li><a data-href="/phone/add-phone-number" class="nav-link ${route === '/phone/add-phone-number' || route === '/phone-system/add-phone-number' ? 'active' : ''}">${tr('Add Phone Number')}</a></li>
             <li><a data-href="/phone/call-routing" class="nav-link ${route === '/phone/call-routing' || route === '/phone-system/call-routing' ? 'active' : ''}">${tr('Call Routing')}</a></li>
             <li><a data-href="/phone/call-logs" class="nav-link ${route === '/phone/call-logs' || route === '/phone-system/call-logs' ? 'active' : ''}">${tr('Call Logs')}</a></li>
+            <li><a data-href="/phone/pbx-extensions" class="nav-link ${route === '/phone/pbx-extensions' ? 'active' : ''}">${tr('PBX Extensions')}</a></li>
+            <li><a data-href="/phone/voicemail-settings" class="nav-link ${route === '/phone/voicemail-settings' ? 'active' : ''}">${tr('Voicemail')}</a></li>
           </ul>
         </div>
 
@@ -766,6 +795,7 @@ function updateSidebarForTab(route) {
           <div class="sidebar-group-title">${tr('Campaigns')}</div>
           <ul>
             <li><a data-href="/campaigns/create-campaign" class="nav-link ${route === '/campaigns/create-campaign' ? 'active' : ''}">${tr('Create Campaign')}</a></li>
+            <li><a data-href="/campaigns/human-dialer" class="nav-link ${route === '/campaigns/human-dialer' ? 'active' : ''}">${tr('Human Dialer')}</a></li>
             <li><a data-href="/campaigns/dial-lists" class="nav-link ${route === '/campaigns/dial-lists' ? 'active' : ''}">${tr('Dial Lists')}</a></li>
             <li><a data-href="/campaigns/campaign-analytics" class="nav-link ${route === '/campaigns/campaign-analytics' ? 'active' : ''}">${tr('Campaign Analytics')}</a></li>
             <li><a data-href="/campaigns/do-not-call" class="nav-link ${route === '/campaigns/do-not-call' || route === '/campaigns/do-not-call-list' ? 'active' : ''}">${tr('Do Not Call List')}</a></li>
@@ -778,7 +808,46 @@ function updateSidebarForTab(route) {
             <li><a data-href="/crm/contacts" class="nav-link ${route === '/crm/contacts' ? 'active' : ''}">${tr('Contacts')}</a></li>
             <li><a data-href="/crm/leads" class="nav-link ${route === '/crm/leads' ? 'active' : ''}">${tr('Leads')}</a></li>
             <li><a data-href="/crm/accounts" class="nav-link ${route === '/crm/accounts' ? 'active' : ''}">${tr('Accounts')}</a></li>
+            <li><a data-href="/crm/tasks" class="nav-link ${route === '/crm/tasks' ? 'active' : ''}">${tr('Tasks & Kanban')}</a></li>
+            <li><a data-href="/crm/calendar" class="nav-link ${route === '/crm/calendar' ? 'active' : ''}">${tr('Calendar')}</a></li>
+            <li><a data-href="/crm/booking-forms" class="nav-link ${route === '/crm/booking-forms' ? 'active' : ''}">${tr('Booking Forms')}</a></li>
             <li><a data-href="/crm/import-export" class="nav-link ${route === '/crm/import-export' || route === '/crm/import-export-data' ? 'active' : ''}">${tr('Import/Export Data')}</a></li>
+            <li><a data-href="/crm/crm-settings" class="nav-link ${route === '/crm/crm-settings' ? 'active' : ''}">${tr('CRM Settings')}</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">${tr('Sales Pipeline')}</div>
+          <ul>
+            <li><a data-href="/pipeline/deals" class="nav-link ${route === '/pipeline/deals' ? 'active' : ''}">${tr('Deals')}</a></li>
+            <li><a data-href="/pipeline/quotes" class="nav-link ${route === '/pipeline/quotes' ? 'active' : ''}">${tr('Quotes')}</a></li>
+            <li><a data-href="/pipeline/invoices" class="nav-link ${route === '/pipeline/invoices' ? 'active' : ''}">${tr('Invoices')}</a></li>
+            <li><a data-href="/pipeline/products-services" class="nav-link ${route === '/pipeline/products-services' ? 'active' : ''}">${tr('Products & Services')}</a></li>
+            <li><a data-href="/pipeline/subscriptions" class="nav-link ${route === '/pipeline/subscriptions' ? 'active' : ''}">${tr('Subscriptions')}</a></li>
+            <li><a data-href="/pipeline/payments" class="nav-link ${route === '/pipeline/payments' ? 'active' : ''}">${tr('Payments (Stripe)')}</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">${tr('Dispatch')}</div>
+          <ul>
+            <li><a data-href="/dispatch/overview" class="nav-link ${route === '/dispatch/overview' ? 'active' : ''}">${tr('Overview')}</a></li>
+            <li><a data-href="/dispatch/jobs" class="nav-link ${route === '/dispatch/jobs' ? 'active' : ''}">${tr('Jobs')}</a></li>
+            <li><a data-href="/dispatch/auto-dispatch" class="nav-link ${route === '/dispatch/auto-dispatch' ? 'active' : ''}">${tr('Auto Tech Dispatch')}</a></li>
+            <li><a data-href="/dispatch/technicians" class="nav-link ${route === '/dispatch/technicians' ? 'active' : ''}">${tr('Team Members')}</a></li>
+            <li><a data-href="/dispatch/job-sources-types" class="nav-link ${route === '/dispatch/job-sources-types' ? 'active' : ''}">${tr('Sources & Job Types')}</a></li>
+            <li><a data-href="/dispatch/reports" class="nav-link ${route === '/dispatch/reports' ? 'active' : ''}">${tr('Dispatch Reports')}</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">${tr('Messages')}</div>
+          <ul>
+            <li><a data-href="/messages/sms" class="nav-link ${route === '/messages/sms' ? 'active' : ''}">${tr('SMS Inbox')}</a></li>
+            <li><a data-href="/messages/whatsapp" class="nav-link ${route === '/messages/whatsapp' ? 'active' : ''}">${tr('WhatsApp')}</a></li>
+            <li><a data-href="/messages/whatsapp-campaigns" class="nav-link ${route === '/messages/whatsapp-campaigns' ? 'active' : ''}">${tr('WhatsApp Campaigns')}</a></li>
+            <li><a data-href="/messages/email" class="nav-link ${route === '/messages/email' ? 'active' : ''}">${tr('Email')}</a></li>
+            <li><a data-href="/messages/email-marketing" class="nav-link ${route === '/messages/email-marketing' ? 'active' : ''}">${tr('Email Marketing')}</a></li>
           </ul>
         </div>
 
@@ -789,6 +858,8 @@ function updateSidebarForTab(route) {
             <li><a data-href="/automations/custom-tools" class="nav-link ${route === '/automations/custom-tools' ? 'active' : ''}">${tr('Custom Tools')}</a></li>
             <li><a data-href="/automations/webhooks" class="nav-link ${route === '/automations/webhooks' ? 'active' : ''}">${tr('Webhooks')}</a></li>
             <li><a data-href="/automations/integrations" class="nav-link ${route === '/automations/integrations' ? 'active' : ''}">${tr('Integrations')}</a></li>
+            <li><a data-href="/automations/mcp-servers" class="nav-link ${route === '/automations/mcp-servers' ? 'active' : ''}">${tr('MCP Servers')}</a></li>
+            <li><a data-href="/automations/smart-studio" class="nav-link ${route === '/automations/smart-studio' ? 'active' : ''}">${tr('Smart Studio')}</a></li>
           </ul>
         </div>
 
@@ -807,7 +878,8 @@ function updateSidebarForTab(route) {
             <li><a data-href="/settings/team-management" class="nav-link ${route === '/settings/team-management' ? 'active' : ''}">${tr('Team Management')}</a></li>
             <li><a data-href="/settings/billing" class="nav-link ${route === '/settings/billing' ? 'active' : ''}">${tr('Billing')}</a></li>
             <li><a data-href="/settings/security" class="nav-link ${route === '/settings/security' ? 'active' : ''}">${tr('Security')}</a></li>
-            <li><a data-href="/settings/white-label" class="nav-link ${route === '/settings/white-label' ? 'active' : ''}">${tr('White Label')}</a></li>
+            <li><a data-href="/settings/audit-log" class="nav-link ${route === '/settings/audit-log' ? 'active' : ''}">${tr('Audit Log & Notifications')}</a></li>
+            <li><a data-href="/settings/system-health" class="nav-link ${route === '/settings/system-health' ? 'active' : ''}">${tr('System Health')}</a></li>
           </ul>
         </div>
       </div>
@@ -1934,7 +2006,6 @@ function updateMobileMenuContent() {
           <li><a data-href="/settings/team-management" class="nav-link">Team Management</a></li>
           <li><a data-href="/settings/billing" class="nav-link">Billing</a></li>
           <li><a data-href="/settings/security" class="nav-link">Security</a></li>
-          <li><a data-href="/settings/white-label" class="nav-link">White Label</a></li>
         </ul>
       </div>`;
   }
@@ -2253,7 +2324,6 @@ async function loadDynamicContent(route) {
     '/settings/team-management': `${basePath}/settings/team-management.json`,
     '/settings/billing': `${basePath}/settings/billing.json`,
     '/settings/security': `${basePath}/settings/security.json`,
-    '/settings/white-label': `${basePath}/settings/white-label.json`,
     // Aliases: sidebar links use shorter route forms — map them to the same files
     '/analytics/dashboard': `${basePath}/analytics/analytics-dashboard.json`,
     '/analytics/costs': `${basePath}/analytics/cost-management.json`,
@@ -2270,7 +2340,37 @@ async function loadDynamicContent(route) {
     '/contact-center/wait-hold': `${basePath}/contact-center/wait-hold.json`,
     '/contact-center/queue-settings': `${basePath}/contact-center/queue-settings.json`,
     '/contact-center/reporting': `${basePath}/contact-center/reporting.json`,
-    '/contact-center/call-transfer': `${basePath}/contact-center/call-transfer.json`
+    '/contact-center/call-transfer': `${basePath}/contact-center/call-transfer.json`,
+    // Docs expansion (A-Z platform coverage)
+    '/agents/sub-agents': `${basePath}/agents/sub-agents.json`,
+    '/phone/pbx-extensions': `${basePath}/phone/pbx-extensions.json`,
+    '/phone/voicemail-settings': `${basePath}/phone/voicemail-settings.json`,
+    '/campaigns/human-dialer': `${basePath}/campaigns/human-dialer.json`,
+    '/crm/tasks': `${basePath}/crm/tasks.json`,
+    '/crm/calendar': `${basePath}/crm/calendar.json`,
+    '/crm/booking-forms': `${basePath}/crm/booking-forms.json`,
+    '/crm/crm-settings': `${basePath}/crm/crm-settings.json`,
+    '/pipeline/deals': `${basePath}/pipeline/deals.json`,
+    '/pipeline/quotes': `${basePath}/pipeline/quotes.json`,
+    '/pipeline/invoices': `${basePath}/pipeline/invoices.json`,
+    '/pipeline/products-services': `${basePath}/pipeline/products-services.json`,
+    '/pipeline/subscriptions': `${basePath}/pipeline/subscriptions.json`,
+    '/pipeline/payments': `${basePath}/pipeline/payments.json`,
+    '/dispatch/overview': `${basePath}/dispatch/overview.json`,
+    '/dispatch/jobs': `${basePath}/dispatch/jobs.json`,
+    '/dispatch/auto-dispatch': `${basePath}/dispatch/auto-dispatch.json`,
+    '/dispatch/technicians': `${basePath}/dispatch/technicians.json`,
+    '/dispatch/job-sources-types': `${basePath}/dispatch/job-sources-types.json`,
+    '/dispatch/reports': `${basePath}/dispatch/reports.json`,
+    '/messages/sms': `${basePath}/messages/sms.json`,
+    '/messages/whatsapp': `${basePath}/messages/whatsapp.json`,
+    '/messages/whatsapp-campaigns': `${basePath}/messages/whatsapp-campaigns.json`,
+    '/messages/email': `${basePath}/messages/email.json`,
+    '/messages/email-marketing': `${basePath}/messages/email-marketing.json`,
+    '/automations/mcp-servers': `${basePath}/automations/mcp-servers.json`,
+    '/automations/smart-studio': `${basePath}/automations/smart-studio.json`,
+    '/settings/audit-log': `${basePath}/settings/audit-log.json`,
+    '/settings/system-health': `${basePath}/settings/system-health.json`
   };
 
   const jsonPath = contentMap[route];
@@ -2383,32 +2483,8 @@ function renderQuickstartContent(content) {
     html += `<div class="time-to-complete">⏱️ ${tr('Time to complete')}: ${content.timeToComplete}</div>`;
   }
   
-  // Add embedded YouTube video if available
-  if (content.videoUrl) {
-    // Convert YouTube URL to embed format
-    let embedUrl = content.videoUrl;
-    
-    // Handle different YouTube URL formats
-    if (embedUrl.includes('youtu.be/')) {
-      const videoId = embedUrl.split('youtu.be/')[1].split('?')[0];
-      embedUrl = `https://www.youtube.com/embed/${videoId}`;
-    } else if (embedUrl.includes('youtube.com/watch?v=')) {
-      const videoId = embedUrl.split('v=')[1].split('&')[0];
-      embedUrl = `https://www.youtube.com/embed/${videoId}`;
-    }
-    
-    html += `
-      <div class="video-container">
-        <iframe 
-          src="${embedUrl}" 
-          title="YouTube video player" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen>
-        </iframe>
-      </div>
-    `;
-  }
+  // Videos are NOT embedded on guide pages — they live on /videos only
+  // (catalog: files/videos.json). Page-level videoUrl is intentionally ignored.
   
   // Add what you will learn section if available
   if (content.whatYouWillLearn && content.whatYouWillLearn.length > 0) {
@@ -2661,60 +2737,20 @@ async function loadVideoContent() {
 }
 
 async function getVideoGuides() {
-  const videoGuides = [];
-  
-  // Define all guides that might have videos
-  const guideRoutes = [
-    '/get-started/quick-start',
-    '/agents/test-agent',
-    '/agents/agent-privacy',
-    '/agents/agent-tools',
-    '/agents/agent-knowledge-base',
-    '/agents/agent-mcp',
-    '/agents/voice-configuration',
-    '/agents/agent-settings',
-    '/agents/costum-variables'
-  ];
-
-  // Load each guide and check for video URL
-  for (const route of guideRoutes) {
+  // The video catalog is a standalone file (files/videos.json) — guide pages no
+  // longer carry videoUrl. The /es mirror provides translated titles/ledes.
+  const lang = (typeof getLang === 'function') ? getLang() : 'en';
+  const paths = lang === 'es' ? ['/files/es/videos.json', '/files/videos.json'] : ['/files/videos.json'];
+  for (const p of paths) {
     try {
-      const basePath = getBasePath();
-      const contentMap = {
-        '/get-started/quick-start': `${basePath}/get-started/quick-start.json`,
-        '/agents/test-agent': `${basePath}/agents/test-your-agent.json`,
-        '/agents/agent-privacy': `${basePath}/agents/agent-privacy.json`,
-        '/agents/agent-tools': `${basePath}/agents/agent-tools.json`,
-        '/agents/agent-knowledge-base': `${basePath}/agents/agent-knowledge-base.json`,
-        '/agents/agent-mcp': `${basePath}/agents/agent-mcp.json`,
-        '/agents/voice-configuration': `${basePath}/agents/voice-configuration.json`,
-        '/agents/agent-settings': `${basePath}/agents/agent-settings.json`,
-        '/agents/costum-variables': `${basePath}/agents/costum-variables.json`
-      };
-
-      const jsonPath = contentMap[route];
-      if (jsonPath) {
-        const response = await fetch(jsonPath);
-        if (response.ok) {
-          const content = await response.json();
-          if (content.videoUrl) {
-            videoGuides.push({
-              route,
-              title: content.title,
-              lede: content.lede,
-              videoUrl: content.videoUrl,
-              timeToComplete: content.timeToComplete,
-              videoLength: content.videoLength
-            });
-          }
-        }
+      const response = await fetch(p);
+      if (response.ok) {
+        const data = await response.json();
+        if (Array.isArray(data.videos)) return data.videos;
       }
-    } catch (error) {
-      console.log(`Could not load ${route}:`, error);
-    }
+    } catch (e) { /* fall through to next path */ }
   }
-
-  return videoGuides;
+  return [];
 }
 
 function createVideoCard(video) {

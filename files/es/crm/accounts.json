@@ -1,47 +1,129 @@
 {
   "title": "Cuentas",
-  "lede": "Las cuentas son las empresas y organizaciones con las que trabajas. Agrupa bajo una misma cuenta los contactos y leads que pertenecen a un negocio para verlo todo en un solo lugar.",
-  "timeToComplete": "5 minutos",
+  "lede": "Las cuentas son las empresas con las que hace negocios. Agrupe cada contacto, lead, llamada, correo y archivo que pertenece a una organización bajo un único perfil de empresa — así, la próxima vez que ese negocio llame, todo su equipo (y sus agentes de IA) verán el panorama completo al instante.",
+  "timeToComplete": "10 minutos",
   "steps": [
     {
       "id": "open-accounts",
-      "title": "Abre la lista de Cuentas",
-      "content": "<ol><li>En la navegación de la izquierda, abre <strong>CRM</strong> y haz clic en <strong>Accounts</strong> (Cuentas) (o ve a <code>/crm/accounts</code>).</li><li>Cada fila es una empresa, y muestra su <strong>Name</strong> (Nombre), su <strong>Stage</strong> (Etapa) y sus datos.</li><li>Haz clic en el nombre de una empresa para abrir su perfil y ver los contactos y leads vinculados a ella.</li></ol><p>Usa las cuentas cuando vendes a empresas: una cuenta (la empresa) puede tener muchos contactos (las personas que trabajan allí).</p>",
+      "title": "Abra la lista de Cuentas",
+      "content": "<p>Si vende a empresas, las Cuentas son su base de operaciones: una cuenta (la empresa) contiene muchos contactos (las personas que trabajan allí) y todos los leads, llamadas y mensajes vinculados a ella.</p><ol><li>En el encabezado, haga clic en la sección <strong>CRM</strong> y luego en la sub-pestaña <strong>Accounts</strong> (Cuentas), o vaya directamente a <code>/crm/accounts</code>. El contador de la pestaña muestra su número total de cuentas.</li><li>Cada fila es una empresa. Las columnas son:<ul><li><strong>Logo</strong> — el logotipo de la empresa (un monograma de color hasta que suba uno).</li><li><strong>Name</strong> (Nombre) — haga clic para abrir el perfil de la empresa.</li><li><strong>Contacts</strong> (Contactos) / <strong>Leads</strong> — cuántas personas y prospectos están vinculados a esta cuenta.</li><li><strong>Phone</strong> (Teléfono) — el primer número de la cuenta; haga clic para llamar con el marcador web. Una etiqueta <strong>+N more</strong> muestra los números adicionales.</li><li><strong>Stage</strong> (Etapa) — la etapa del ciclo de vida (las etapas provienen de la Configuración del CRM).</li><li><strong>Last Updated</strong> (Última actualización) — cuándo cambió el registro por última vez.</li><li><strong>Actions</strong> (Acciones) — 👁 ver el perfil, 📞 llamar a la cuenta, 🗑 eliminarla.</li></ul></li></ol><blockquote>⚠️ <strong>Cuidado al eliminar:</strong> eliminar una cuenta también elimina los contactos y leads asociados a ella. iMash le pedirá confirmación primero.</blockquote>",
       "images": [
-        { "src": "images/crm/accounts-light.png", "alt": "Lista de cuentas", "caption": "La lista de Cuentas de empresas con búsqueda y filtros", "theme": "light" },
-        { "src": "images/crm/accounts-dark.png", "alt": "Lista de cuentas", "caption": "La lista de Cuentas de empresas con búsqueda y filtros", "theme": "dark" }
+        { "src": "images/crm/accounts-light.png", "alt": "Lista de cuentas con columnas de contactos, leads, teléfono y etapa", "caption": "La lista de Cuentas — cada empresa con sus contactos, leads, teléfono y etapa vinculados", "theme": "light" },
+        { "src": "images/crm/accounts-dark.png", "alt": "Lista de cuentas con columnas de contactos, leads, teléfono y etapa", "caption": "La lista de Cuentas — cada empresa con sus contactos, leads, teléfono y etapa vinculados", "theme": "dark" }
       ]
     },
     {
       "id": "add-account",
-      "title": "Agrega una nueva cuenta",
-      "content": "<ol><li>Haz clic en <strong>Create</strong> (Crear) (New Account / Nueva cuenta) en la parte superior de la lista.</li><li>Ingresa el <strong>Name</strong> (Nombre) de la empresa.</li><li>Completa datos opcionales como la dirección, la <strong>Stage</strong> (Etapa) y cualquier campo personalizado.</li><li>Haz clic en <strong>Save</strong> (Guardar).</li></ol>"
+      "title": "Cree una cuenta nueva",
+      "content": "<ol><li>Haga clic en <strong>+ Add Account</strong> (Agregar cuenta) en la parte superior derecha de la lista. Se abre el panel <strong>Create Company</strong> (Crear empresa).</li><li>Escriba el <strong>Company Name</strong> (Nombre de la empresa) — es el único campo obligatorio.</li><li>Complete los datos opcionales:<ul><li><strong>Website</strong> (Sitio web) — la URL del sitio de la empresa.</li><li><strong>Phone Numbers</strong> (Números de teléfono) — haga clic en <strong>Add Phone Number</strong> (Agregar número), escriba el número y elija una etiqueta (<strong>Office</strong>, <strong>Main</strong>, <strong>Headquarters</strong>, <strong>Branch</strong>, <strong>Fax</strong>, <strong>Support</strong>, <strong>Sales</strong> u <strong>Other</strong>). Agregue tantos como necesite.</li><li><strong>Industry</strong> (Industria) — elija de la lista de industrias.</li><li><strong>Emails</strong> (Correos) — haga clic en <strong>Add Email</strong> (Agregar correo); puede guardar varias direcciones y la primera será el correo principal de la cuenta.</li><li><strong>Street Address</strong> (Dirección), <strong>Apartment/Suite</strong>, <strong>City</strong> (Ciudad), <strong>State/Province</strong> (Estado/Provincia), <strong>Postal Code</strong> (Código postal), <strong>Country</strong> (País) — la dirección de la empresa. Si elige <strong>United States</strong> como país, el campo Estado/Provincia se convierte en un selector de estados.</li></ul></li><li>Haga clic en <strong>Save</strong> (Guardar). El panel se cierra y su nueva empresa aparece en la lista.</li></ol><blockquote>💡 No se preocupe por completar todo ahora — cada campo (y más) se puede editar después, directamente en el perfil de la cuenta.</blockquote>",
+      "images": [
+        { "src": "images/crm/accounts-create-light.png", "alt": "Panel Crear empresa con campos de nombre, sitio web, teléfonos, industria, correos y dirección", "caption": "El panel Create Company — solo el nombre de la empresa es obligatorio", "theme": "light" },
+        { "src": "images/crm/accounts-create-dark.png", "alt": "Panel Crear empresa con campos de nombre, sitio web, teléfonos, industria, correos y dirección", "caption": "El panel Create Company — solo el nombre de la empresa es obligatorio", "theme": "dark" }
+      ]
     },
     {
-      "id": "link-contacts",
-      "title": "Vincula contactos y leads a una cuenta",
-      "content": "<ul><li>Cuando creas o editas un <strong>Contact</strong> (Contacto) o un <strong>Lead</strong>, elige la empresa en el campo <strong>Account</strong> (Cuenta).</li><li>Desde la lista de Leads o Contactos, selecciona registros y usa <strong>Assign to an Account</strong> (Asignar a una cuenta) para vincular varios a la vez.</li><li>Abre una cuenta para ver a todas sus personas juntas, y salta a los leads de esa empresa haciendo clic desde la cuenta.</li></ul>"
+      "id": "search-sort",
+      "title": "Busque y ordene la lista",
+      "content": "<ol><li>Use el menú desplegable a la izquierda del cuadro de búsqueda para elegir el criterio: <strong>Name</strong> (Nombre), <strong>Email</strong> (Correo), <strong>Phone</strong> (Teléfono) o <strong>Address</strong> (Dirección).</li><li>Escriba en el cuadro <strong>Search Accounts</strong> (Buscar cuentas) — los resultados se actualizan mientras escribe. La búsqueda por teléfono es inteligente: encuentra los dígitos aunque el número guardado tenga otro formato.</li><li>Haga clic en el encabezado de una columna (<strong>Name</strong>, <strong>Stage</strong>, <strong>Last Updated</strong> y más) para ordenar por ella; haga clic de nuevo para alternar entre ascendente ↑ y descendente ↓.</li><li>Use los controles de paginación bajo la tabla para cambiar de página y de tamaño de página.</li></ol>",
+      "images": [
+        { "src": "images/crm/accounts-toolbar-light.png", "alt": "Barra de herramientas de cuentas con selector de búsqueda, cuadro de búsqueda, filtro y botones de importar y agregar", "caption": "La barra de herramientas: selector de búsqueda, cuadro de búsqueda, Filter By, importar, Add Account y API", "theme": "light" },
+        { "src": "images/crm/accounts-toolbar-dark.png", "alt": "Barra de herramientas de cuentas con selector de búsqueda, cuadro de búsqueda, filtro y botones de importar y agregar", "caption": "La barra de herramientas: selector de búsqueda, cuadro de búsqueda, Filter By, importar, Add Account y API", "theme": "dark" }
+      ]
     },
     {
-      "id": "search-filter",
-      "title": "Busca, filtra y etiqueta",
-      "content": "<ul><li>Usa el <strong>cuadro de búsqueda</strong> para encontrar una empresa por nombre, correo o teléfono.</li><li>Agrega filtros por <strong>Stage</strong> (Etapa), <strong>Tags</strong> (Etiquetas), <strong>Address</strong> (Dirección), <strong>City</strong> (Ciudad) u <strong>Owner</strong> (Propietario).</li><li>Agrega <strong>tags</strong> (etiquetas) para agrupar empresas (por ejemplo por territorio o industria) y luego filtra por ellas.</li></ul>"
+      "id": "filter",
+      "title": "Filtre por etapa, etiquetas, dirección, ciudad o propietario",
+      "content": "<ol><li>Haga clic en el desplegable <strong>Filter By</strong> (Filtrar por) y marque uno o más tipos de filtro:<ul><li><strong>Stage</strong> (Etapa) — agrega un desplegable <strong>Select Stage</strong> con sus etapas del ciclo de vida.</li><li><strong>Tags</strong> (Etiquetas) — agrega un desplegable <strong>Select Tag</strong> con búsqueda que lista todas las etiquetas usadas en sus cuentas. Ideal para agrupar empresas por territorio, industria o prioridad.</li><li><strong>Address</strong> (Dirección) — agrega un cuadro de texto libre que busca en calle, ciudad, estado, código postal o país.</li><li><strong>City</strong> (Ciudad) — agrega un cuadro de búsqueda por ciudad.</li><li><strong>Owner</strong> (Propietario) — filtra por el miembro del equipo dueño del registro.</li></ul></li><li>Cada filtro que activa también agrega su columna correspondiente a la tabla (Tags, Address, City), para ver los valores de un vistazo.</li><li>Desactive un filtro desmarcándolo en <strong>Filter By</strong>, o borre su valor con la ✕ de su control.</li></ol>",
+      "images": [
+        { "src": "images/crm/accounts-filters-light.png", "alt": "Barra de herramientas con los filtros de etapa y etiquetas activados", "caption": "Active Stage y Tags en Filter By y sus desplegables aparecen junto al cuadro de búsqueda", "theme": "light" },
+        { "src": "images/crm/accounts-filters-dark.png", "alt": "Barra de herramientas con los filtros de etapa y etiquetas activados", "caption": "Active Stage y Tags en Filter By y sus desplegables aparecen junto al cuadro de búsqueda", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "open-profile",
+      "title": "Abra el perfil de la cuenta",
+      "content": "<p>El perfil de la cuenta es el centro de control de una empresa — todo lo que su equipo sabe del negocio en una sola pantalla.</p><ol><li>Haga clic en el <strong>Name</strong> (Nombre) de la cuenta (o en el icono 👁 de ver) en la lista.</li><li>En la parte superior verá el logotipo y el nombre de la empresa:<ul><li>Pase el cursor sobre el logotipo y haga clic en el icono de cámara para <strong>subir un logotipo</strong> (podrá quitarlo después).</li><li>Haga clic en el lápiz ✏️ junto al nombre para <strong>renombrar</strong> la cuenta y confirme con <strong>Save</strong> (Guardar).</li></ul></li><li>La página se divide en dos: <strong>pestañas a la izquierda</strong> (Call Logs, Contacts, Leads, Email, Files, Payment Methods) con una tarjeta de Notas debajo, y <strong>tarjetas de información a la derecha</strong> (Custom Fields, Contact Information, Address, Sales Tax, Account Details).</li></ol>",
+      "images": [
+        { "src": "images/crm/accounts-detail-light.png", "alt": "Perfil de cuenta con pestañas a la izquierda y tarjetas de información a la derecha", "caption": "El perfil de la cuenta: pestañas de actividad a la izquierda, tarjetas de la empresa a la derecha", "theme": "light" },
+        { "src": "images/crm/accounts-detail-dark.png", "alt": "Perfil de cuenta con pestañas a la izquierda y tarjetas de información a la derecha", "caption": "El perfil de la cuenta: pestañas de actividad a la izquierda, tarjetas de la empresa a la derecha", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "link-contacts-leads",
+      "title": "Vincule contactos y leads a la cuenta",
+      "content": "<p>Aquí es donde las cuentas demuestran su valor — todas las personas y prospectos de una empresa, juntos.</p><ol><li>Abra la pestaña <strong>Contacts</strong> (Contactos) y haga clic en <strong>Add Contact</strong> (Agregar contacto) para vincular una persona a esta empresa. Cada fila muestra su nombre, teléfono (clic para llamar) y etapa, con un botón <strong>View</strong> (Ver) que abre su perfil de contacto. <strong>View All Contacts for this Account</strong> abre la lista de Contactos filtrada.</li><li>La pestaña <strong>Leads</strong> funciona exactamente igual — haga clic en <strong>Add Lead</strong> (Agregar lead) para adjuntar prospectos y abra cualquier lead con <strong>View</strong>.</li><li>También puede vincular desde el otro lado: al crear o editar un <strong>Contacto</strong> o <strong>Lead</strong>, elija la empresa en su campo <strong>Account</strong> (Cuenta) — o seleccione varios registros en la lista de Leads/Contactos y asígnelos a una cuenta en bloque.</li></ol><blockquote>💡 Los contadores de <strong>Contacts</strong> y <strong>Leads</strong> en la lista de Cuentas se actualizan automáticamente al vincular personas — un chequeo rápido de qué tan bien mapeada está cada empresa.</blockquote>",
+      "images": [
+        { "src": "images/crm/accounts-detail-contacts-light.png", "alt": "Pestaña de contactos de una cuenta con un contacto vinculado, teléfono, etapa y botón Ver", "caption": "La pestaña Contacts: todas las personas de esta empresa, a un clic de su perfil", "theme": "light" },
+        { "src": "images/crm/accounts-detail-contacts-dark.png", "alt": "Pestaña de contactos de una cuenta con un contacto vinculado, teléfono, etapa y botón Ver", "caption": "La pestaña Contacts: todas las personas de esta empresa, a un clic de su perfil", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "activity-tabs",
+      "title": "Revise llamadas, correos, archivos y métodos de pago",
+      "content": "<p>Las demás pestañas recopilan automáticamente cada interacción con la empresa:</p><ul><li><strong>Call Logs</strong> (Registros de llamadas) — cada llamada de IA o humana con cualquier persona de esta cuenta: fecha, quién llamó, número, transición de etapa, duración y estado. Haga clic en el icono de actualizar para traer las llamadas más recientes.</li><li><strong>Email</strong> (Correo) — el historial de correos con esta cuenta. Una insignia azul muestra el total de mensajes y una verde resalta los no leídos.</li><li><strong>Files</strong> (Archivos) — documentos adjuntos a la cuenta (contratos, propuestas, fotos). Súbalos aquí y quedarán con el registro de la empresa.</li><li><strong>Payment Methods</strong> (Métodos de pago) — tarjetas guardadas de esta cuenta, usadas para facturas y suscripciones.</li></ul>",
+      "images": [
+        { "src": "images/crm/accounts-detail-tabs-light.png", "alt": "Franja de pestañas del perfil de cuenta: registros de llamadas, contactos, leads, correo, archivos y métodos de pago", "caption": "Una franja de pestañas, toda la relación: llamadas, personas, correos, archivos y métodos de pago", "theme": "light" },
+        { "src": "images/crm/accounts-detail-tabs-dark.png", "alt": "Franja de pestañas del perfil de cuenta: registros de llamadas, contactos, leads, correo, archivos y métodos de pago", "caption": "Una franja de pestañas, toda la relación: llamadas, personas, correos, archivos y métodos de pago", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "contact-info-address",
+      "title": "Edite la información de contacto y la dirección",
+      "content": "<p>Las tarjetas de la derecha se editan en el lugar — haga clic en el lápiz ✏️ de cualquier fila, cambie el valor y confirme con el botón ✓.</p><ol><li>En la tarjeta <strong>Contact Information</strong> (Información de contacto):<ul><li><strong>Phone Numbers</strong> (Números de teléfono) — elija una etiqueta, escriba el número y haga clic en <strong>Add</strong> (Agregar). Cada número guardado aparece como una etiqueta con su rótulo; haga clic en el icono 🗑 para eliminarlo.</li><li><strong>Emails</strong> (Correos) — haga clic en <strong>Add Email</strong> para guardar direcciones; la primera es la principal.</li><li><strong>Industry</strong> (Industria) y <strong>Website</strong> (Sitio web) — haga clic en el lápiz para editar.</li></ul></li><li>En la tarjeta <strong>Address</strong> (Dirección), edite de la misma forma <strong>Street Address</strong>, <strong>Apartment Suite</strong>, <strong>City</strong>, <strong>State Province</strong>, <strong>Postal Code</strong> y <strong>Country</strong>.</li></ol>",
+      "images": [
+        { "src": "images/crm/accounts-detail-info-light.png", "alt": "Tarjeta de información de contacto con teléfonos, correos, industria y sitio web", "caption": "Contact Information: teléfonos con etiquetas, correos, industria y sitio web", "theme": "light" },
+        { "src": "images/crm/accounts-detail-info-dark.png", "alt": "Tarjeta de información de contacto con teléfonos, correos, industria y sitio web", "caption": "Contact Information: teléfonos con etiquetas, correos, industria y sitio web", "theme": "dark" },
+        { "src": "images/crm/accounts-detail-address-light.png", "alt": "Tarjeta de dirección con calle, ciudad, estado, código postal y país", "caption": "La tarjeta Address — cada campo se edita en el lugar", "theme": "light" },
+        { "src": "images/crm/accounts-detail-address-dark.png", "alt": "Tarjeta de dirección con calle, ciudad, estado, código postal y país", "caption": "La tarjeta Address — cada campo se edita en el lugar", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "account-details-tax",
+      "title": "Complete los detalles de la empresa y el impuesto de ventas",
+      "content": "<ol><li>La tarjeta <strong>Account Details</strong> (Detalles de la cuenta) contiene el perfil del negocio — haga clic en el lápiz de cualquier fila para definirlo:<ul><li><strong>Company Size</strong> (Tamaño de la empresa) — rango de empleados.</li><li><strong>Total Revenue</strong> (Ingresos totales) — ingresos anuales.</li><li><strong>Primary Contact</strong> (Contacto principal) — su punto de contacto principal.</li><li><strong>Year Founded</strong> (Año de fundación), <strong>Tax Registration</strong> (Registro fiscal), <strong>Lead Source</strong> (Origen del lead), <strong>Tags</strong> (Etiquetas), <strong>Social Media</strong> (Redes sociales).</li></ul></li><li>En la tarjeta <strong>Sales Tax</strong> (Impuesto de ventas), active <strong>Tax-exempt customer</strong> (Cliente exento de impuestos) si a esta empresa no se le debe cobrar impuesto de ventas — las cotizaciones y facturas de esta cuenta lo respetarán automáticamente.</li></ol><blockquote>💡 Agregue <strong>Tags</strong> aquí (por ejemplo <em>VIP</em>, <em>Costa Oeste</em>, <em>Distribuidor</em>) y podrá filtrarlas desde la lista de Cuentas con <strong>Filter By → Tags</strong>.</blockquote>",
+      "images": [
+        { "src": "images/crm/accounts-detail-company-light.png", "alt": "Tarjeta de detalles de la cuenta con tamaño, ingresos, contacto principal, año de fundación, registro fiscal, origen, etiquetas y redes sociales", "caption": "Account Details: el perfil completo del negocio, editable en el lugar", "theme": "light" },
+        { "src": "images/crm/accounts-detail-company-dark.png", "alt": "Tarjeta de detalles de la cuenta con tamaño, ingresos, contacto principal, año de fundación, registro fiscal, origen, etiquetas y redes sociales", "caption": "Account Details: el perfil completo del negocio, editable en el lugar", "theme": "dark" },
+        { "src": "images/crm/accounts-detail-tax-light.png", "alt": "Tarjeta de impuesto de ventas con el interruptor de cliente exento", "caption": "Active Tax-exempt customer y los documentos de facturación de esta cuenta omiten el impuesto de ventas", "theme": "light" },
+        { "src": "images/crm/accounts-detail-tax-dark.png", "alt": "Tarjeta de impuesto de ventas con el interruptor de cliente exento", "caption": "Active Tax-exempt customer y los documentos de facturación de esta cuenta omiten el impuesto de ventas", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "notes-custom-fields",
+      "title": "Agregue notas y campos personalizados",
+      "content": "<ol><li>Debajo de las pestañas, escriba en el cuadro <strong>Add your note</strong> (Agregue su nota) y presione Enter para registrar una nota en la cuenta. Las notas son la bitácora del equipo — cada entrada muestra quién la escribió y cuándo, y puede editarse o eliminarse después.</li><li>En la tarjeta <strong>Custom Fields</strong> (Campos personalizados), arriba a la derecha, haga clic en <strong>Add Field</strong> (Agregar campo), asigne un <strong>Field Name</strong> (Nombre del campo) y un <strong>Field Value</strong> (Valor del campo) y confirme. Use campos personalizados para todo lo que iMash no tenga como campo integrado — fechas de renovación de contrato, niveles de cuenta, identificadores internos.</li><li>Edite o elimine un campo personalizado con los iconos ✏️ y 🗑 de su fila.</li></ol>",
+      "images": [
+        { "src": "images/crm/accounts-detail-notes-light.png", "alt": "Tarjeta de notas con el cuadro para agregar una nota", "caption": "La tarjeta Notes — una bitácora continua sobre la empresa", "theme": "light" },
+        { "src": "images/crm/accounts-detail-notes-dark.png", "alt": "Tarjeta de notas con el cuadro para agregar una nota", "caption": "La tarjeta Notes — una bitácora continua sobre la empresa", "theme": "dark" },
+        { "src": "images/crm/accounts-detail-custom-fields-light.png", "alt": "Tarjeta de campos personalizados con el botón Agregar campo y campos existentes", "caption": "Custom Fields: guarde cualquier dato que importe a su negocio", "theme": "light" },
+        { "src": "images/crm/accounts-detail-custom-fields-dark.png", "alt": "Tarjeta de campos personalizados con el botón Agregar campo y campos existentes", "caption": "Custom Fields: guarde cualquier dato que importe a su negocio", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "import-bulk-api",
+      "title": "Importe cuentas en bloque, depure y use la API",
+      "content": "<ol><li>Para traer toda su cartera de una vez, haga clic en el botón <strong>⬆ importar</strong> (junto a <strong>+ Add Account</strong>). Se abre el modal <strong>Import Accounts from CSV</strong> (Importar cuentas desde CSV) — arrastre un CSV con encabezados en la primera fila. Campos obligatorios: <strong>Name</strong> (Nombre) más <strong>Email</strong> (Correo) o <strong>Phone</strong> (Teléfono). Haga clic en <strong>Next</strong> (Siguiente) para mapear sus columnas y terminar la importación.</li><li>Para eliminar varias cuentas, marque sus casillas en la lista y haga clic en <strong>Delete Selected</strong> (Eliminar seleccionadas). Recuerde: esto también elimina sus contactos y leads vinculados.</li><li>Desarrolladores: hagan clic en el botón 🔗 <strong>API Info</strong> para ver ejemplos de API listos para leer y escribir cuentas por programación.</li></ol><p>Eso es todo — sus empresas ahora viven en un CRM organizado y listo para llamar. Cada nueva llamada, mensaje y negocio se adjuntará a la cuenta correcta de aquí en adelante.</p>",
+      "images": [
+        { "src": "images/crm/accounts-import-light.png", "alt": "Modal de importar cuentas desde CSV con área de arrastrar y soltar", "caption": "Import Accounts from CSV — a cada fila le basta el nombre más correo o teléfono", "theme": "light" },
+        { "src": "images/crm/accounts-import-dark.png", "alt": "Modal de importar cuentas desde CSV con área de arrastrar y soltar", "caption": "Import Accounts from CSV — a cada fila le basta el nombre más correo o teléfono", "theme": "dark" }
+      ]
     }
   ],
   "nextSteps": {
     "title": "¿Qué sigue?",
-    "description": "Llena tus cuentas con personas y ponte en contacto.",
+    "description": "Sus empresas ya están en su lugar — ahora llénelas de personas, prospectos e ingresos.",
     "cards": [
-      { "href": "/crm/contacts", "title": "Contactos", "description": "Agrega a las personas que trabajan en cada empresa." },
-      { "href": "/crm/leads", "title": "Leads", "description": "Da seguimiento a prospectos vinculados a una cuenta." },
-      { "href": "/campaigns/create-campaign", "title": "Crear una campaña", "description": "Dirígete a los contactos de una cuenta con llamadas o mensajes." }
+      { "href": "/crm/contacts", "title": "Contactos", "description": "Agregue a las personas que trabajan en cada empresa y vincúlelas a su cuenta." },
+      { "href": "/crm/leads", "title": "Leads", "description": "Haga seguimiento de prospectos ligados a una cuenta y deje que las llamadas de IA los actualicen." },
+      { "href": "/pipeline/deals", "title": "Negocios", "description": "Abra negocios contra una cuenta y muévalos por su pipeline." },
+      { "href": "/crm/import-export-data", "title": "Importar y exportar datos", "description": "Importe en bloque los datos de su CRM actual con mapeo de campos y deduplicación." }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Revisa nuestra <a data-href=\"/api-reference\">referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+    "title": "¿Necesita ayuda?",
+    "content": "<p>Si tiene algún problema o pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Cuentas - CRM | iMash Docs",
-  "metaDescription": "Crea cuentas de empresa en el CRM de iMash y vincula contactos y leads a ellas. Busca, filtra, etiqueta y gestiona relaciones B2B en un solo lugar.",
-  "metaKeywords": "cuentas, empresas, organizaciones, CRM B2B, gestión de cuentas, vincular contactos, relaciones comerciales"
+  "metaTitle": "Cuentas - CRM | Documentación de iMash",
+  "metaDescription": "Cree cuentas de empresa en el CRM de iMash, vincule contactos y leads, siga llamadas y correos por empresa, edite los datos de la empresa en el lugar e importe cuentas desde CSV.",
+  "metaKeywords": "cuentas, empresas, organizaciones, CRM B2B, gestión de cuentas, vincular contactos, vincular leads, importar CSV, campos personalizados, exento de impuestos, perfil de cuenta"
 }

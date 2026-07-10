@@ -1,0 +1,111 @@
+{
+  "title": "Products & Services",
+  "lede": "Build your catalog once and quote in seconds forever after. Products and Services are the reusable building blocks behind every quote, invoice, and job in iMash — complete with prices, costs, live profit margins, and automatic inventory tracking.",
+  "timeToComplete": "12 minutes",
+  "steps": [
+    {
+      "id": "open-products",
+      "title": "Open the Products catalog",
+      "content": "<p>Everything you sell that has a price tag — parts, equipment, plans, digital goods — lives in the Products catalog.</p><ol><li>In the top navigation, click <strong>CRM</strong>, then click the <strong>Products</strong> tab (or go directly to <code>/pipeline/products</code>).</li><li>You'll see your full catalog in a table. Each row shows the essentials at a glance:</li></ol><ul><li><strong>Product Name</strong> — click it to open the product.</li><li><strong>SKU</strong> — your internal code, shown in monospace so it's easy to copy.</li><li><strong>Type</strong> — a colored pill: <strong>physical</strong>, <strong>digital</strong>, <strong>service</strong>, or <strong>subscription</strong>.</li><li><strong>Category</strong> and <strong>Tags</strong> — how you organize the catalog.</li><li><strong>Price</strong> and <strong>Cost</strong> — what you charge and what it costs you.</li><li><strong>Margin</strong> — calculated automatically from Price and Cost, color-coded: green for 50%+, blue for 30%+, amber below that. Instant profit visibility on every item.</li><li><strong>Stock</strong> — the live quantity for inventory-tracked products, with <strong>Low Stock</strong> and <strong>Out of Stock</strong> warnings (products without tracking show <strong>N/A</strong>).</li><li><strong>Status</strong> — <strong>Active</strong> or <strong>Inactive</strong>.</li><li><strong>Actions</strong> — the eye icon (<strong>View</strong>) opens the product, the pencil icon (<strong>Edit</strong>) opens the edit form.</li></ul>",
+      "images": [
+        { "src": "images/pipeline/products-services-products-list-light.png", "alt": "Products list showing the catalog table with type pills, prices and action icons", "caption": "The Products catalog — every item with its type, price, and per-row View / Edit actions", "theme": "light" },
+        { "src": "images/pipeline/products-services-products-list-dark.png", "alt": "Products list showing the catalog table with type pills, prices and action icons", "caption": "The Products catalog — every item with its type, price, and per-row View / Edit actions", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "search-filter-products",
+      "title": "Search and filter the catalog",
+      "content": "<p>Even a catalog with thousands of items stays searchable:</p><ol><li>Click <strong>Show Filters</strong> in the top-right (next to <strong>Create Product</strong>). A filter bar appears above the table.</li><li>Type in <strong>Search products...</strong> and press Enter — the search covers name, SKU, category, and description across the whole catalog, not just the visible page.</li><li>Narrow further with the dropdowns: <strong>Filter by category</strong>, <strong>Filter by type</strong>, <strong>Filter by status</strong> (Active/Inactive), and <strong>Filter by owner</strong> (which team member owns the record).</li></ol><ul><li><strong>Column filters</strong> — the small funnel icons on the <strong>Type</strong> and <strong>Status</strong> column headers filter right from the table.</li><li><strong>Sorting</strong> — click the <strong>Price</strong> column header to sort by price; click again to flip the direction.</li><li><strong>Pagination</strong> — the footer shows <em>Total N products</em>; use the page-size selector to show more rows per page.</li></ul><blockquote>💡 The category dropdowns are only as good as your category list — define your product and service categories in <a data-href=\"/crm/crm-settings\">CRM Settings</a> first, and picking the right one at creation time takes one click.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/products-services-products-filters-light.png", "alt": "Products page with the filter bar open showing search, category, type, status and owner filters", "caption": "Click Show Filters to reveal search plus category, type, status, and owner filters", "theme": "light" },
+        { "src": "images/pipeline/products-services-products-filters-dark.png", "alt": "Products page with the filter bar open showing search, category, type, status and owner filters", "caption": "Click Show Filters to reveal search plus category, type, status, and owner filters", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "create-product",
+      "title": "Create your first product",
+      "content": "<ol><li>Click <strong>Create Product</strong> in the top-right of the Products list. The <strong>Create New Product</strong> form opens.</li><li>Enter the <strong>Product Name</strong> — the only required field.</li><li>Fill in the rest to make the product truly useful:</li></ol><ul><li><strong>SKU/Code</strong> — your internal part number or code, searchable everywhere.</li><li><strong>Category</strong> — pick from the categories you defined in CRM Settings.</li><li><strong>Description</strong> — shown when browsing the catalog and useful on documents.</li><li><strong>Product Type</strong> — <strong>Physical Product</strong>, <strong>Digital Product</strong>, <strong>Service</strong>, or <strong>Subscription</strong>. The type changes which extra fields appear (see the next two steps).</li><li><strong>Status</strong> — the <strong>Active</strong>/<strong>Inactive</strong> switch. Inactive products stay in your records but stop appearing as choices.</li><li><strong>Base Price</strong> — what you charge. The currency selector (default <strong>USD</strong>) sits right beside it.</li><li><strong>Cost</strong> — what it costs you. Optional, but fill it in: it powers the automatic <strong>Margin</strong> column so you always know which items make you money.</li><li><strong>Tags</strong> — type a tag and press Enter; add as many as you like.</li><li><strong>Product Image</strong> — click <strong>Upload</strong> to attach a photo.</li></ul><ol start=\"4\"><li>Click <strong>Create Product</strong> in the top-right of the form. To back out without saving, click <strong>Cancel</strong>.</li></ol>",
+      "images": [
+        { "src": "images/pipeline/products-services-product-create-light.png", "alt": "Create New Product form with name, SKU, category, description, type, status, price, cost, tags and image fields", "caption": "The Create New Product form — only Product Name is required", "theme": "light" },
+        { "src": "images/pipeline/products-services-product-create-dark.png", "alt": "Create New Product form with name, SKU, category, description, type, status, price, cost, tags and image fields", "caption": "The Create New Product form — only Product Name is required", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "track-inventory",
+      "title": "Turn on inventory tracking",
+      "content": "<p>For <strong>Physical</strong> and <strong>Digital</strong> products, iMash can count your stock for you.</p><ol><li>In the product form, switch on <strong>Track Inventory</strong>. Two new fields appear.</li><li>Enter the <strong>Quantity Available</strong> — how many units you have right now.</li><li>Set a <strong>Low Stock Threshold</strong> — when the quantity drops to this number or below, the product's <strong>Stock</strong> pill in the list turns into an amber <strong>Low Stock</strong> warning; at zero it becomes a red <strong>Out of Stock</strong> pill.</li></ol><blockquote>💡 Here's the magic: when an invoice that includes this product is <strong>paid</strong>, the quantity decreases automatically. Your stock count keeps itself honest — no manual bookkeeping after every sale.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/products-services-product-inventory-light.png", "alt": "Product form with Track Inventory enabled showing Quantity Available and Low Stock Threshold fields", "caption": "Track Inventory on — set the current quantity and a low-stock warning threshold", "theme": "light" },
+        { "src": "images/pipeline/products-services-product-inventory-dark.png", "alt": "Product form with Track Inventory enabled showing Quantity Available and Low Stock Threshold fields", "caption": "Track Inventory on — set the current quantity and a low-stock warning threshold", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "subscription-products",
+      "title": "Sell recurring plans with subscription products",
+      "content": "<p>Maintenance plans, memberships, monthly retainers on autopilot — set the <strong>Product Type</strong> to <strong>Subscription</strong> and two recurring-billing fields appear:</p><ul><li><strong>Billing Cycle</strong> — how often the customer is charged: <strong>Weekly</strong>, <strong>Monthly</strong>, <strong>Quarterly</strong>, <strong>Semi-Annual</strong>, <strong>Annual</strong>, or <strong>Biennial</strong>.</li><li><strong>Trial Period (Days)</strong> — an optional free trial before the first charge.</li></ul><p>The <strong>Base Price</strong> becomes the per-cycle amount (for example $29 per month). Manage the customers signed up to these plans on the <a data-href=\"/pipeline/subscriptions\">Subscriptions</a> page.</p>",
+      "images": [
+        { "src": "images/pipeline/products-services-product-subscription-light.png", "alt": "Product form with type set to Subscription showing Billing Cycle and Trial Period fields", "caption": "Subscription type — pick a Billing Cycle and an optional Trial Period", "theme": "light" },
+        { "src": "images/pipeline/products-services-product-subscription-dark.png", "alt": "Product form with type set to Subscription showing Billing Cycle and Trial Period fields", "caption": "Subscription type — pick a Billing Cycle and an optional Trial Period", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "open-services",
+      "title": "Open the Services catalog",
+      "content": "<p>Products are things; <strong>Services</strong> are work — tune-ups, installations, consulting hours, monthly retainers. They get their own catalog built for how work is priced.</p><ol><li>In the top navigation, click <strong>CRM</strong>, then the <strong>Services</strong> tab (or go to <code>/pipeline/services</code>).</li><li>The table mirrors the Products list with service-specific columns:</li></ol><ul><li><strong>Service Name</strong> and <strong>Code</strong> — the display name and your internal code.</li><li><strong>Pricing Model</strong> — a colored pill: <strong>Hourly</strong>, <strong>Fixed</strong>, <strong>Retainer</strong>, <strong>Value-Based</strong>, or <strong>Tiered</strong>.</li><li><strong>Base Rate</strong> — the price (sortable by clicking the header).</li><li><strong>Est. Hours</strong> and <strong>Est. Duration</strong> — how long the work takes, in hours and calendar days.</li><li><strong>Deliverables</strong> — a count of what the customer receives.</li><li><strong>Status</strong>, <strong>Tags</strong>, <strong>Owner</strong>, and the <strong>View</strong> / <strong>Edit</strong> action icons — just like Products.</li></ul><p>The <strong>Show Filters</strong> bar works the same way too: search by name, code, category, or description, and filter by <strong>category</strong>, <strong>status</strong>, and <strong>owner</strong>. The <strong>Pricing Model</strong> column has its own funnel filter.</p>",
+      "images": [
+        { "src": "images/pipeline/products-services-services-list-light.png", "alt": "Services list showing services with pricing model pills, base rates and estimated hours", "caption": "The Services catalog — pricing models, rates, and time estimates at a glance", "theme": "light" },
+        { "src": "images/pipeline/products-services-services-list-dark.png", "alt": "Services list showing services with pricing model pills, base rates and estimated hours", "caption": "The Services catalog — pricing models, rates, and time estimates at a glance", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "create-service",
+      "title": "Create a service",
+      "content": "<ol><li>Click <strong>Create Service</strong> in the top-right of the Services list. The <strong>Create New Service</strong> form opens.</li><li>Enter the <strong>Service Name</strong> — the only required field.</li><li>Complete the profile:</li></ol><ul><li><strong>Service Code</strong> — your internal code or SKU.</li><li><strong>Category</strong> — from your service categories in CRM Settings.</li><li><strong>Description</strong> — what the service includes.</li><li><strong>Pricing Model</strong> — see the next step for choosing the right one.</li><li><strong>Status</strong> — the <strong>Active</strong>/<strong>Inactive</strong> switch.</li><li><strong>Hourly Rate / Monthly Fee / Base Rate</strong> — the price field, with a currency selector. Its label changes with the pricing model you picked.</li><li><strong>Estimated Hours</strong> — labor time (supports half hours, e.g. 1.5).</li><li><strong>Estimated Duration (Days)</strong> — calendar time from start to finish.</li><li><strong>Tags</strong> — type and press Enter.</li><li><strong>Deliverables</strong> — what the customer gets (e.g. <em>21-point inspection report</em>, <em>Filter replacement</em>). Type each item and press Enter.</li><li><strong>Requirements</strong> — what you need from the customer before work starts (e.g. <em>Clear access to outdoor unit</em>).</li></ul><ol start=\"4\"><li>Click <strong>Create Service</strong> to save.</li></ol><blockquote>💡 Deliverables and Requirements turn a vague \"service\" into a crystal-clear promise — they set expectations before the job starts and prevent \"I thought that was included\" conversations after.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/products-services-service-create-light.png", "alt": "Create New Service form with name, code, category, pricing model, rate, time estimates, deliverables and requirements", "caption": "The Create New Service form — pricing, time estimates, deliverables and requirements", "theme": "light" },
+        { "src": "images/pipeline/products-services-service-create-dark.png", "alt": "Create New Service form with name, code, category, pricing model, rate, time estimates, deliverables and requirements", "caption": "The Create New Service form — pricing, time estimates, deliverables and requirements", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "pricing-models",
+      "title": "Choose the right pricing model",
+      "content": "<p>Click the <strong>Pricing Model</strong> dropdown to see all five ways to price a service:</p><ul><li><strong>Hourly Rate</strong> — you bill per hour; the price field becomes <strong>Hourly Rate</strong>. Great for repairs and consulting.</li><li><strong>Fixed Price</strong> — one flat price for the whole job (e.g. a $129 tune-up). The customer knows the total up front.</li><li><strong>Monthly Retainer</strong> — a recurring monthly engagement; the price field becomes <strong>Monthly Fee</strong>.</li><li><strong>Value-Based</strong> — priced by the outcome delivered rather than time spent.</li><li><strong>Tiered Pricing</strong> — different levels at different price points (e.g. Basic / Pro / Premium packages).</li></ul><p>The model shows as a colored pill in the Services list, so your team can tell at a glance how each service is billed.</p>",
+      "images": [
+        { "src": "images/pipeline/products-services-service-pricing-light.png", "alt": "Pricing Model dropdown open showing Hourly Rate, Fixed Price, Monthly Retainer, Value-Based and Tiered Pricing options", "caption": "The five pricing models — the price field's label adapts to your choice", "theme": "light" },
+        { "src": "images/pipeline/products-services-service-pricing-dark.png", "alt": "Pricing Model dropdown open showing Hourly Rate, Fixed Price, Monthly Retainer, Value-Based and Tiered Pricing options", "caption": "The five pricing models — the price field's label adapts to your choice", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "use-in-documents",
+      "title": "Use your catalog in quotes, invoices, and jobs",
+      "content": "<p>This is where the catalog pays off — no more retyping names and prices on every document:</p><ol><li>When building a <a data-href=\"/pipeline/quotes\">quote</a> or editing an <a data-href=\"/pipeline/invoices\">invoice</a>, go to the line-items section and click <strong>Select from Catalog</strong> (next to <strong>Add Line Item</strong>).</li><li>The <strong>Select Products/Services</strong> window opens with two tabs — <strong>Products</strong> and <strong>Services</strong> — and a search box that matches by <strong>name, SKU, or code</strong>.</li><li>Tick the checkbox on every item you want; your picks stack up as removable chips under the search box, and you can mix products and services in one go.</li><li>Click <strong>Add N Items</strong>. Each item lands as a line item with its name and price pre-filled — then adjust quantities, discounts, and tax per line as needed.</li></ol><p>The same catalog also feeds job line items in <a data-href=\"/dispatch/jobs\">Jobs</a>, so a technician's work order, the quote, and the final invoice all speak the same language.</p><blockquote>⚠️ Only <strong>Active</strong> items are offered in the picker. Don't delete a discontinued product — flip its <strong>Status</strong> to <strong>Inactive</strong> instead, and your historical quotes and invoices keep their records intact.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/products-services-catalog-picker-light.png", "alt": "Select Products/Services window with Products and Services tabs, search box and selectable rows", "caption": "Select from Catalog — search, tick multiple items across both tabs, then Add Items", "theme": "light" },
+        { "src": "images/pipeline/products-services-catalog-picker-dark.png", "alt": "Select Products/Services window with Products and Services tabs, search box and selectable rows", "caption": "Select from Catalog — search, tick multiple items across both tabs, then Add Items", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "maintain-catalog",
+      "title": "Keep the catalog healthy",
+      "content": "<p>A five-minute monthly habit keeps everything downstream accurate:</p><ul><li><strong>Update prices in one place</strong> — edit the product or service (pencil icon) and every future quote and invoice picks up the new price. Documents you already sent keep the price they were created with.</li><li><strong>Watch the Margin column</strong> — amber margins are your cue to raise a price or renegotiate a supplier cost.</li><li><strong>Trust the Stock pills</strong> — <strong>Low Stock</strong> warnings tell you what to reorder before you have to tell a customer \"it's on backorder\".</li><li><strong>Retire with Inactive, not delete</strong> — deactivated items disappear from pickers but preserve your history.</li><li><strong>Curate categories and tags</strong> — manage the category lists in <a data-href=\"/crm/crm-settings\">CRM Settings</a> so filtering stays fast as the catalog grows.</li></ul><p>That's it — your catalog is now the single source of truth for everything you sell. Quote faster, invoice cleaner, and never guess a price again.</p>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Your catalog is loaded — now put it to work generating revenue.",
+    "cards": [
+      { "href": "/pipeline/quotes", "title": "Quotes", "description": "Build professional quotes in seconds using your catalog items." },
+      { "href": "/pipeline/invoices", "title": "Invoices", "description": "Invoice with catalog line items and get paid online." },
+      { "href": "/pipeline/subscriptions", "title": "Subscriptions", "description": "Manage the recurring plans built from your subscription products." },
+      { "href": "/crm/crm-settings", "title": "CRM Settings", "description": "Define the product and service categories your catalog filters use." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>Questions about products, services, or inventory tracking? Reach us any time at <a href=\"mailto:support@imash.io\">support@imash.io</a> — we're happy to help you structure your catalog.</p>"
+  },
+  "metaTitle": "Products & Services Catalog | iMash Documentation",
+  "metaDescription": "Create products with prices, costs, SKUs and automatic inventory tracking, build a services catalog with five pricing models, and reuse everything as line items in quotes, invoices, and jobs.",
+  "metaKeywords": "products, services, catalog, SKU, inventory tracking, low stock, pricing model, hourly rate, fixed price, retainer, subscription product, line items, quotes, invoices, margin"
+}

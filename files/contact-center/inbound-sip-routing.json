@@ -1,47 +1,82 @@
 {
-  "title": "Inbound SIP Routing",
-  "lede": "Point one or more of your phone numbers at a group so that incoming calls to those numbers ring the group's online members. This is how a team starts receiving live inbound calls.",
-  "timeToComplete": "4 minutes",
+  "title": "Inbound SIP Routing (to Humans)",
+  "lede": "Point any of your phone numbers straight at a team of human agents — callers ring your people first, and your AI agent only steps in when you want it to. Set it up in under five minutes.",
+  "timeToComplete": "5 minutes",
   "steps": [
     {
-      "id": "open-inbound",
-      "title": "Open the Inbound SIP Routing tab",
-      "content": "<ol><li>Go to <strong>Call Center &rarr; Contact Center &rarr; Groups</strong> and select a group.</li><li>Open the <strong>Inbound SIP Routing</strong> tab.</li></ol>",
+      "id": "understand",
+      "title": "Understand how inbound routing to humans works",
+      "content": "<p>Normally, a call to one of your iMash numbers is answered by the AI agent assigned to that number. <strong>Inbound SIP Routing</strong> flips that priority for the numbers you choose: the call rings the <em>human members</em> of a Contact Center group first, and the AI becomes the backup.</p><ul><li><strong>The number</strong> — any phone number on your account can be pointed at a group.</li><li><strong>The group</strong> — a Contact Center group (your team of agents). Every member who is currently <strong>Online</strong> gets the ring.</li><li><strong>The fallback</strong> — if nobody answers (or nobody is online), you decide what happens: the number's AI agent takes over, a different AI agent takes over, or the call hangs up.</li></ul><blockquote>💡 You don't have to choose between humans and AI. The same number can ring your team during the day and hand unanswered calls to your AI agent — so no call ever goes unanswered.</blockquote>"
+    },
+    {
+      "id": "open-groups",
+      "title": "Open your group in the Contact Center",
+      "content": "<ol><li>In the left sidebar, click <strong>Contact Center</strong> (under the <strong>Call Center</strong> section).</li><li>Open the <strong>Groups</strong> tab at the top of the page.</li><li>In the <strong>Groups</strong> list on the left, click the group that should receive the calls.</li></ol><p>Don't have a group yet? Click <strong>New Group</strong> in the top-right and add your agents as members first — see the <a data-href=\"/contact-center/groups\">Permission Groups</a> guide.</p>",
       "images": [
-        { "src": "images/contact-center/cc-group-inbound-sip-routing-light.png", "alt": "Inbound SIP Routing tab", "caption": "Inbound SIP Routing: turn it on and pick the numbers that ring this group.", "theme": "light" },
-        { "src": "images/contact-center/cc-group-inbound-sip-routing-dark.png", "alt": "Inbound SIP Routing tab", "caption": "Inbound SIP Routing: turn it on and pick the numbers that ring this group.", "theme": "dark" }
+        { "src": "images/contact-center/inbound-sip-routing-groups-tab-light.png", "alt": "Contact Center Groups tab with the groups list", "caption": "Contact Center → Groups: pick the team that should answer incoming calls.", "theme": "light" },
+        { "src": "images/contact-center/inbound-sip-routing-groups-tab-dark.png", "alt": "Contact Center Groups tab with the groups list", "caption": "Contact Center → Groups: pick the team that should answer incoming calls.", "theme": "dark" }
       ]
     },
     {
-      "id": "enable",
+      "id": "open-inbound-tab",
+      "title": "Open the Inbound SIP Routing tab",
+      "content": "<p>With your group selected, a row of settings tabs appears on the right: <strong>Members</strong>, <strong>Members Roles</strong>, <strong>Role Mapping</strong>, <strong>Inbound SIP Routing</strong>, <strong>Ring strategy</strong>, <strong>Wait &amp; Hold experience</strong> and <strong>Queue Settings</strong>.</p><ol><li>Click the <strong>Inbound SIP Routing</strong> tab.</li><li>You'll see one card: <strong>Inbound SIP calls to this group</strong>, with an on/off switch in its top-right corner. It's off by default.</li></ol>",
+      "images": [
+        { "src": "images/contact-center/inbound-sip-routing-tab-light.png", "alt": "Inbound SIP Routing tab with the routing switch off", "caption": "The Inbound SIP Routing tab — the switch in the card's corner turns routing on and off.", "theme": "light" },
+        { "src": "images/contact-center/inbound-sip-routing-tab-dark.png", "alt": "Inbound SIP Routing tab with the routing switch off", "caption": "The Inbound SIP Routing tab — the switch in the card's corner turns routing on and off.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "enable-routing",
       "title": "Turn inbound routing on",
-      "content": "<p>Toggle the switch in the <strong>Inbound SIP calls to this group</strong> card to <strong>on</strong>. When on, calls to the numbers you choose ring every online member at once (first to answer wins). When off, this group ignores those numbers and your AI answers as usual.</p>"
+      "content": "<p>Click the switch on the <strong>Inbound SIP calls to this group</strong> card so it turns <strong>on</strong> (blue).</p><ul><li><strong>On</strong> — calls to the numbers you pick below ring <em>every online member at once</em>; the first agent to answer takes the call and everyone else stops ringing.</li><li><strong>Off</strong> — this group ignores those numbers entirely and your AI agent answers them as usual.</li></ul><p>Turning the switch on reveals the <strong>Associated inbound numbers</strong> field — that's your next step.</p>"
     },
     {
       "id": "pick-numbers",
-      "title": "Choose the phone numbers",
-      "content": "<ol><li>In <strong>Associated inbound numbers</strong>, select one or more of your account's phone numbers.</li><li>Incoming calls to any of these numbers will ring this group's online members.</li></ol><p>If the list is empty, you don't have any phone numbers yet — add one first (see below).</p>"
+      "title": "Choose which phone numbers ring this group",
+      "content": "<ol><li>Click into <strong>Associated inbound numbers</strong>.</li><li>Select one or more of your account's phone numbers — this is a multi-select, so a group can own several lines (for example, your main line and a local number).</li><li>Every incoming call to any of these numbers will now ring this group's online members.</li></ol><blockquote>⚠️ If the dropdown says <strong>No phone numbers found for this account</strong>, you don't have any numbers yet — grab one first in <a data-href=\"/phone/add-phone-number\">Add a Phone Number</a>, then come back.</blockquote><p>This is also how you give each team its own line: assign your sales number to the Sales group and your support number to the Support group — each group only rings for its own numbers.</p>",
+      "images": [
+        { "src": "images/contact-center/inbound-sip-routing-card-on-light.png", "alt": "Inbound SIP Routing card turned on showing the Associated inbound numbers field", "caption": "Routing on: pick the numbers that should ring this group, then Save.", "theme": "light" },
+        { "src": "images/contact-center/inbound-sip-routing-card-on-dark.png", "alt": "Inbound SIP Routing card turned on showing the Associated inbound numbers field", "caption": "Routing on: pick the numbers that should ring this group, then Save.", "theme": "dark" }
+      ]
     },
     {
-      "id": "save",
-      "title": "Save",
-      "content": "<p>Click <strong>Save</strong>. Test by calling one of the assigned numbers — online members' web dialers should ring. If nobody answers within the ring window, the call follows the fallback you set on the <strong>Ring strategy</strong> tab.</p>"
+      "id": "save-and-test",
+      "title": "Save and place a test call",
+      "content": "<ol><li>Click <strong>Save</strong> in the bottom-right corner. One Save commits every tab of the group's settings.</li><li>Have at least one group member go <strong>Online</strong> in their web dialer (see the <a data-href=\"/contact-center/agent-guide\">Human Agent Guide</a>).</li><li>Call one of the assigned numbers from your cell phone — every online member's dialer should ring at the same time; the first to click <strong>Accept</strong> wins the call.</li></ol><blockquote>⚠️ <strong>Only online members ring.</strong> If nobody in the group is online, the call skips straight to the fallback you set in the next step. Agents control their own availability with the status toggle in their dialer.</blockquote>"
+    },
+    {
+      "id": "choose-fallback",
+      "title": "Decide what happens when no one answers (the AI handoff)",
+      "content": "<p>This is where inbound routing meets your AI agent routing. Open the group's <strong>Ring strategy</strong> tab and find the <strong>When no one answers</strong> card — it controls the call's fate after the ring window runs out, or when no member is online at all.</p><ol><li>Click the <strong>Ring strategy</strong> tab.</li><li>In <strong>When no one answers</strong>, pick one of three options:<ul><li><strong>Route to the number's assigned AI agent</strong> (default) — the AI agent already attached to that phone number picks up, exactly as if routing were off. Perfect \"humans first, AI backup\" behavior.</li><li><strong>Route to a different AI agent</strong> — choose any assistant in <strong>AI assistant to take the call</strong>; great for a dedicated after-hours or overflow agent.</li><li><strong>Hang up the call</strong> — the call simply ends. Use with care.</li></ul></li><li>While you're here, you can also set <strong>Ring the group for (seconds) before routing to AI</strong> — the ring window that decides how long humans get to answer. Details in <a data-href=\"/contact-center/ring-strategy\">Ring Strategy</a>.</li><li>Click <strong>Save</strong>.</li></ol><blockquote>💡 The phone number keeps its AI agent assignment the whole time — inbound routing just puts your humans in front of it. Turn the group's switch off and the number instantly goes back to pure AI answering.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/inbound-sip-routing-fallback-light.png", "alt": "When no one answers card on the Ring strategy tab", "caption": "The 'When no one answers' card decides the AI handoff for group-routed calls.", "theme": "light" },
+        { "src": "images/contact-center/inbound-sip-routing-fallback-dark.png", "alt": "When no one answers card on the Ring strategy tab", "caption": "The 'When no one answers' card decides the AI handoff for group-routed calls.", "theme": "dark" },
+        { "src": "images/contact-center/inbound-sip-routing-fallback-options-light.png", "alt": "The three fallback options: number's assigned AI agent, a different AI agent, or hang up", "caption": "Three fallbacks: the number's own AI agent, a different agent, or hang up.", "theme": "light" },
+        { "src": "images/contact-center/inbound-sip-routing-fallback-options-dark.png", "alt": "The three fallback options: number's assigned AI agent, a different AI agent, or hang up", "caption": "Three fallbacks: the number's own AI agent, a different agent, or hang up.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "polish-the-experience",
+      "title": "Polish the caller experience (optional but recommended)",
+      "content": "<p>Your number now rings real people with an AI safety net — the remaining tabs let you fine-tune what callers hear and what happens under load:</p><ul><li><strong>Ring strategy</strong> — ring everyone at once or one agent at a time, force auto-answer, auto-open the caller's lead/contact on your agents' screens. See <a data-href=\"/contact-center/ring-strategy\">Ring Strategy</a>.</li><li><strong>Wait &amp; Hold</strong> — hold music and periodic announcements callers hear while waiting. See <a data-href=\"/contact-center/wait-hold\">Wait &amp; Hold Experience</a>.</li><li><strong>Queue Settings</strong> — when every agent is busy, callers can hold in a queue and ring the moment someone frees up, with a max wait before the fallback runs. See <a data-href=\"/contact-center/queue-settings\">Queue Settings</a>.</li></ul><p>That's it — your callers now reach a live human whenever one is available, and your AI catches everything else. Best of both worlds.</p>"
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Control how the group rings and what happens when no one answers.",
+    "description": "Your numbers ring humans first — now shape how the ring behaves and what callers experience while they wait.",
     "cards": [
-      { "href": "/contact-center/ring-strategy", "title": "Ring Strategy", "description": "Ring all at once or one at a time, then fall back to AI." },
-      { "href": "/phone/add-phone-number", "title": "Add a Phone Number", "description": "Get a number to route to this group." },
-      { "href": "/contact-center/queue-settings", "title": "Queue Settings", "description": "Hold callers when no agent is free." }
+      { "href": "/contact-center/ring-strategy", "title": "Ring Strategy", "description": "All-at-once vs sequential ringing, ring window, and the AI fallback." },
+      { "href": "/contact-center/queue-settings", "title": "Queue Settings", "description": "Hold callers in a queue when every agent is busy." },
+      { "href": "/contact-center/agent-guide", "title": "Human Agent Guide", "description": "Show your agents how to go Online and take calls." },
+      { "href": "/phone/add-phone-number", "title": "Add a Phone Number", "description": "Get another number to route to a team." }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Inbound SIP Routing | iMash Docs",
-  "metaDescription": "Point a phone number or DID at a Contact Center group in iMash so inbound calls ring the group's online members, with an AI fallback when no one answers.",
-  "metaKeywords": "inbound sip routing, phone number, did, ring group, contact center, permission group, inbound calls"
+  "metaTitle": "Inbound SIP Routing to Human Agents | iMash Documentation",
+  "metaDescription": "Route a phone number or DID straight to a human Contact Center group in iMash — online agents ring first, with a configurable AI-agent fallback when no one answers.",
+  "metaKeywords": "inbound sip routing, route calls to humans, did routing, ring group, contact center, permission group, inbound calls, ai fallback, human agents"
 }

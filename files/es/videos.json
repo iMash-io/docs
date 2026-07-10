@@ -1,0 +1,95 @@
+{
+  "videos": [
+    {
+      "route": "/agents/advanced-settings",
+      "title": "Procesamiento posterior a la llamada y webhooks",
+      "lede": "Convierte cada llamada en resultados estructurados: genera un resumen, califica el éxito, extrae datos JSON personalizados y envíalo todo por POST a tus sistemas, configurado en el panel Webhooks Post Processing (Procesamiento posterior de webhooks).",
+      "videoUrl": "https://youtu.be/l7_wH8Bpsp0",
+      "videoLength": "3"
+    },
+    {
+      "route": "/agents/agent-knowledge-base",
+      "title": "Agrega una base de conocimiento a tu agente",
+      "lede": "Sube tus preguntas frecuentes, políticas y documentos de soporte para que tu Smart Agent (Agente inteligente) responda preguntas con información precisa y actualizada.",
+      "videoUrl": "https://youtu.be/XvZsh6jPuLg",
+      "videoLength": "2"
+    },
+    {
+      "route": "/agents/agent-mcp",
+      "title": "Conecta un servidor MCP a tu agente",
+      "lede": "Agrupa tus flujos de automatización y herramientas en un servidor MCP y luego adjúntalo a un Smart Agent (Agente inteligente) para que pueda invocarlos en vivo durante una conversación.",
+      "videoUrl": "https://youtu.be/0VZbWIhMBck",
+      "videoLength": "4"
+    },
+    {
+      "route": "/agents/agent-privacy",
+      "title": "Configuración de privacidad y grabación",
+      "lede": "Controla lo que conserva tu Smart Agent (Agente inteligente): activa o desactiva el almacenamiento de la transcripción y la grabación de la llamada, y elige si quieres guardar el audio de la llamada.",
+      "videoUrl": "https://youtu.be/5tPDfE9WJlI",
+      "videoLength": "1"
+    },
+    {
+      "route": "/agents/agent-settings",
+      "title": "Configuración del agente: tiempos de espera, mensajes de inactividad y buzón de voz",
+      "lede": "Ajusta con precisión cómo se comporta tu Smart Agent (Agente inteligente) en una llamada: duración máxima, manejo de silencios e inactividad, detección de buzón de voz (AMD), backchannel, interrupciones y detección de turnos.",
+      "videoUrl": "https://youtu.be/7C-N_RWwPFI",
+      "videoLength": "5"
+    },
+    {
+      "route": "/agents/agent-tools",
+      "title": "Agrega herramientas a tu agente",
+      "lede": "Dale a tu Smart Agent (Agente inteligente) la capacidad de realizar acciones: finalizar llamadas, agendar citas, transferir o llamar a tus propias API, usando herramientas predefinidas y herramientas HTTP personalizadas.",
+      "videoUrl": "https://youtu.be/Gmo7CE-XORY",
+      "videoLength": "3"
+    },
+    {
+      "route": "/agents/costum-variables",
+      "title": "Personaliza los agentes con variables personalizadas",
+      "lede": "Alimenta a tu Smart Agent (Agente inteligente) con contexto en vivo: el nombre, la dirección y cualquier campo personalizado de quien llama, para que salude a las personas por su nombre y adapte cada conversación.",
+      "videoUrl": "https://youtu.be/mR9rNHDWJJ8",
+      "videoLength": "2"
+    },
+    {
+      "route": "/agents/embed-agent",
+      "title": "Incrusta tu agente en tu sitio web",
+      "lede": "Convierte un Smart Agent (Agente inteligente) en un widget o popup para sitios web con texto, voz y un avatar opcional, y luego pega un solo fragmento de código para ponerlo en marcha.",
+      "videoUrl": "https://youtu.be/3JS-ncMsZ7s",
+      "videoLength": "4"
+    },
+    {
+      "route": "/agents/llm-settings",
+      "title": "Elige el cerebro (LLM) de tu agente",
+      "lede": "Elige el modelo que impulsa las respuestas de tu Smart Agent (Agente inteligente). Conoce la diferencia entre los modelos realtime (voz a voz) y los modelos de texto (LLM + transcriptor), y cómo configurar cada uno.",
+      "videoUrl": "https://youtu.be/bDy0w1hEz7I",
+      "videoLength": "2"
+    },
+    {
+      "route": "/agents/observer-agent",
+      "title": "Configura el Observer Agent",
+      "lede": "Ejecuta una segunda IA en segundo plano que observa cada llamada en vivo, marca los momentos importantes como eventos y puede activar herramientas de forma silenciosa, sin ralentizar la conversación principal.",
+      "videoUrl": "https://youtu.be/-cgpNKzS6FY",
+      "videoLength": "3"
+    },
+    {
+      "route": "/agents/test-your-agent",
+      "title": "Prueba tu agente",
+      "lede": "Prueba tu Smart Agent (Agente inteligente) antes de ponerlo en producción. Habla con él directamente en el navegador con Test Agent (Probar agente) o haz una llamada telefónica real para escucharlo de principio a fin.",
+      "videoUrl": "https://youtu.be/_Baz0eFGyLI",
+      "videoLength": "1"
+    },
+    {
+      "route": "/agents/voice-configuration",
+      "title": "Configura la voz (TTS) de tu agente",
+      "lede": "Elige la voz con la que habla tu Smart Agent (Agente inteligente). Selecciona un proveedor de texto a voz (TTS), escucha las voces, filtra por género, acento y edad, y define una voz de respaldo.",
+      "videoUrl": "https://youtu.be/C3Rkclp_KKQ",
+      "videoLength": "2"
+    },
+    {
+      "route": "/get-started/quick-start",
+      "title": "Guía de inicio rápido: cómo crear tu primer agente de voz con iMash",
+      "lede": "Esta guía ofrece instrucciones paso a paso sobre cómo crear, configurar y conectar un agente de voz con IA en iMash, incluyendo la integración con números de teléfono, la gestión de llamadas y las funciones del sistema.",
+      "videoUrl": "https://youtu.be/YG6rAxWvW18",
+      "videoLength": "13"
+    }
+  ]
+}

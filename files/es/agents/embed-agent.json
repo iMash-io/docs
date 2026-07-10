@@ -1,55 +1,244 @@
 {
-  "title": "Incrusta tu agente en tu sitio web",
-  "lede": "Convierte un Smart Agent (Agente inteligente) en un widget o popup para sitios web con texto, voz y un avatar opcional, y luego pega un solo fragmento de código para ponerlo en marcha.",
-  "timeToComplete": "8 minutos",
-  "videoUrl": "https://youtu.be/3JS-ncMsZ7s",
-  "videoLength": "4",
+  "title": "Integre su Agente en su Sitio Web",
+  "lede": "Su Smart Agent no tiene por qué esperar junto al teléfono: colóquelo directamente en su sitio web como un widget de chat y voz. Un interruptor, unas cuantas opciones de estilo, un fragmento de código copiado y pegado, y cada visitante obtiene una recepcionista de IA instantánea, 24/7.",
+  "timeToComplete": "10 minutos",
   "steps": [
     {
-      "id": "prepare-agent",
-      "title": "Prepara el agente",
-      "content": "<ol><li>Ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes) y abre (o crea) el agente que quieres en tu sitio.</li><li>Escribe un prompt adaptado a tu producto y, opcionalmente, adjunta una <strong>Knowledge Base</strong> (Base de conocimiento) para que responda con precisión.</li><li>Elige el cerebro (LLM) y una voz si quieres respuestas por voz.</li></ol>",
+      "id": "open-your-agent",
+      "title": "Abra el Agente que Quiere Publicar en su Sitio",
+      "content": "<p>Todo comienza en el editor del agente. El agente que integre usa el mismo prompt, base de conocimiento, voz y herramientas que ya configuró: el widget del sitio web es simplemente otra puerta de entrada.</p><ol><li>En la barra lateral izquierda, bajo <strong>Intelligence Center</strong> (Centro de Inteligencia), haga clic en <strong>Smart Agents</strong> (Agentes Inteligentes).</li><li>Haga clic en el <strong>nombre</strong> del agente que quiere publicar en su sitio web. Se abre el editor del agente.</li><li>Si todavía no ha creado un agente, haga clic primero en <strong>Create New Agent</strong> (Crear Nuevo Agente) y dele un prompt adaptado a su producto — vea <a data-href=\"/agents/create-agent\">Cree su Primer Agente</a>.</li></ol><blockquote>💡 <strong>Consejo:</strong> Adjunte una <strong>Knowledge Base</strong> (Base de Conocimiento) con la documentación y preguntas frecuentes de su producto antes de integrarlo — un widget que responde con precisión preguntas reales sobre el producto es lo que convierte visitantes en clientes potenciales.</blockquote>",
       "images": [
-        { "src": "images/agents/assistant-editor-light.png", "alt": "Editor de agentes", "caption": "Configura primero el agente y luego publícalo como un widget para sitios web.", "theme": "light" },
-        { "src": "images/agents/assistant-editor-dark.png", "alt": "Editor de agentes", "caption": "Configura primero el agente y luego publícalo como un widget para sitios web.", "theme": "dark" }
+        {
+          "src": "images/agents/embed-agent-list-light.png",
+          "alt": "Lista de Smart Agents bajo Intelligence Center",
+          "caption": "Intelligence Center → Smart Agents: haga clic en el nombre de un agente para abrir su editor.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/embed-agent-list-dark.png",
+          "alt": "Lista de Smart Agents bajo Intelligence Center",
+          "caption": "Intelligence Center → Smart Agents: haga clic en el nombre de un agente para abrir su editor.",
+          "theme": "dark"
+        }
       ]
     },
     {
       "id": "enable-widget",
-      "title": "Activa el widget del sitio web",
-      "content": "<ol><li>Abre el panel <strong>Website Widget</strong> (Widget del sitio web) y activa <strong>Enable Website Widget</strong> (Activar widget del sitio web).</li><li>En <strong>Capabilities</strong> (Capacidades), elige cómo interactúan los visitantes: <strong>Text</strong> (Texto), <strong>Voice</strong> (Voz) y, opcionalmente, un <strong>Avatar</strong> (el avatar requiere voz).</li></ol>",
+      "title": "Active el Widget del Sitio Web",
+      "content": "<p>En la vista <strong>Form</strong> (Formulario) del editor del agente, la columna central lista todos los complementos del agente (Knowledge Base, Webhooks, Observer Agent, etcétera).</p><ol><li>Localice la fila <strong>Website Widget</strong> (Widget de Sitio Web) en esa lista.</li><li>Cambie su interruptor de píldora a <strong>ON</strong> (Activado).</li><li>Haga clic en cualquier parte de la fila <strong>Website Widget</strong> (no en el interruptor) para abrir la ventana de configuración completa.</li></ol><p>La ventana que se abre tiene un menú de secciones a la izquierda — <strong>Capabilities</strong> (Capacidades), <strong>Avatar</strong>, <strong>Theme &amp; Header</strong> (Tema y Encabezado), <strong>Layout &amp; Position</strong> (Diseño y Posición), <strong>Launch Button</strong> (Botón de Inicio), <strong>Behavior</strong> (Comportamiento), <strong>Page Access</strong> (Acceso a la Página) y <strong>Embed Code &amp; Preview</strong> (Código de Integración y Vista Previa) — y dos interruptores maestros fijados en la parte superior:</p><ul><li><strong>Enable Website Widget</strong> (Habilitar Widget de Sitio Web) — el mismo interruptor maestro que el de la fila. Nada se muestra en su sitio mientras esté apagado.</li><li><strong>Collect web visitor data</strong> (Recopilar datos de visitantes web) — guarda una pequeña cookie y la URL de referencia/página del visitante para reconocer visitantes recurrentes y atribuir las llamadas web al lead correcto del CRM. Desactívelo si su política de privacidad exige cero seguimiento de visitantes.</li></ul><blockquote>💡 <strong>Consejo:</strong> Cada cambio en esta ventana se guarda automáticamente en el momento en que lo hace — no hay un botón de guardar aparte. Si usa la vista de lienzo <strong>Node</strong> (Nodos) en lugar de la vista Form, la misma ventana se abre desde el chip <strong>Widget</strong> de la barra de herramientas superior.</blockquote>",
       "images": [
-        { "src": "images/agents/website-widget-light.png", "alt": "Configuración del widget del sitio web", "caption": "El panel Website Widget: capacidades, avatar, tema, diseño y código de incrustación.", "theme": "light" },
-        { "src": "images/agents/website-widget-dark.png", "alt": "Configuración del widget del sitio web", "caption": "El panel Website Widget: capacidades, avatar, tema, diseño y código de incrustación.", "theme": "dark" }
+        {
+          "src": "images/agents/embed-agent-widget-row-light.png",
+          "alt": "Fila Website Widget con su interruptor activado",
+          "caption": "La fila Website Widget en el editor del agente — actívela y luego haga clic en la fila para configurar.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/embed-agent-widget-row-dark.png",
+          "alt": "Fila Website Widget con su interruptor activado",
+          "caption": "La fila Website Widget en el editor del agente — actívela y luego haga clic en la fila para configurar.",
+          "theme": "dark"
+        }
       ]
     },
     {
-      "id": "design",
-      "title": "Dale estilo al widget",
-      "content": "<ul><li><strong>Avatar</strong>: elige un modo de visualización (<em>Avatar Only</em> [Solo avatar] o <em>Side by Side</em> [Lado a lado]) y elige o sube una imagen de avatar.</li><li><strong>Theme &amp; Header</strong> (Tema y encabezado): configura colores Light (Claro), Dark (Oscuro), Auto o Custom (Personalizados) y un título de encabezado.</li><li><strong>Layout &amp; Position</strong> (Diseño y posición): elige <em>Widget</em> (anclado a una esquina) o <em>Popup</em>, y define su posición o tamaño en pantalla.</li><li><strong>Behavior</strong> (Comportamiento): decide si se abre automáticamente y si el agente empieza a hablar al abrirse.</li></ul>",
-      "images": []
+      "id": "capabilities",
+      "title": "Capabilities — Elija Cómo Interactúan los Visitantes",
+      "content": "<p>La sección <strong>Capabilities</strong> (Capacidades) decide qué puede hacer el widget. Active cualquier combinación de las cuatro tarjetas:</p><ul><li><strong>Text</strong> (Texto) — los visitantes pueden escribir mensajes y leer las respuestas del agente en una transcripción de chat. La experiencia clásica de burbuja de chat.</li><li><strong>Voice</strong> (Voz) — los visitantes pueden hablar con el agente por su micrófono y escucharlo responder con su voz configurada. Una barra de voz en vivo visualiza quién está hablando.</li><li><strong>Avatar</strong> — el agente aparece como un avatar de video parlante en lugar de una ventana de chat simple. Se configura en la siguiente sección.</li><li><strong>Transcriber</strong> (Transcriptor) — la conversión de voz a texto del micrófono del visitante. Déjelo activado siempre que Voice esté activado para que el agente entienda lo que se dice.</li></ul><blockquote>⚠️ <strong>El Avatar requiere Voz.</strong> Activar <strong>Avatar</strong> habilita automáticamente <strong>Voice</strong>; desactivar <strong>Voice</strong> deshabilita automáticamente <strong>Avatar</strong>. Si desactiva tanto Text como Voice, el widget mostrará un aviso de \"Interaction Disabled\" (Interacción Deshabilitada) — mantenga siempre al menos uno activado.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/embed-agent-capabilities-light.png",
+          "alt": "Sección Capabilities con los interruptores Text, Voice, Avatar y Transcriber",
+          "caption": "Capabilities: combine Text, Voice, Avatar y Transcriber a su gusto.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/embed-agent-capabilities-dark.png",
+          "alt": "Sección Capabilities con los interruptores Text, Voice, Avatar y Transcriber",
+          "caption": "Capabilities: combine Text, Voice, Avatar y Transcriber a su gusto.",
+          "theme": "dark"
+        }
+      ]
     },
     {
-      "id": "embed",
-      "title": "Previsualiza e incrusta",
-      "content": "<ol><li>Abre la sección <strong>Embed Code &amp; Preview</strong> (Código de incrustación y vista previa) para ver una vista previa en vivo.</li><li>Copia el fragmento <code>&lt;script&gt;</code> generado.</li><li>Pégalo en el HTML de tu sitio donde quieras que aparezca el agente, luego recarga la página y pruébalo.</li></ol>",
-      "images": []
+      "id": "avatar",
+      "title": "Avatar — Dele una Cara a su Agente (Opcional)",
+      "content": "<p>¿Quiere un factor sorpresa? Haga clic en <strong>Avatar</strong> en el menú izquierdo para convertir su agente en una presencia de video parlante.</p><ol><li>Elija un <strong>Display mode</strong> (Modo de visualización):<ul><li><strong>Avatar Only</strong> (Solo Avatar) — el video del avatar del agente aparece sobre la conversación. Compacto; funciona con cualquier tamaño de widget.</li><li><strong>Side by Side</strong> (Lado a Lado) — el video del agente y la cámara del propio visitante aparecen uno junto al otro, como una videollamada. Requiere un widget de al menos <strong>650&nbsp;px</strong> de ancho (el ancho se aumenta automáticamente al elegirlo).</li></ul></li><li>Bajo <strong>Avatar Selection</strong> (Selección de Avatar), haga clic en un <strong>System avatar</strong> (avatar del sistema) para usar una cara predefinida, o haga clic en <strong>Upload New Avatar</strong> (Subir Nuevo Avatar) para añadir su propia imagen (sus cargas aparecen bajo \"Your avatars\").</li></ol><blockquote>💡 <strong>Consejo:</strong> Si esta sección muestra \"Avatar is currently off\" (El avatar está desactivado), haga clic en <strong>Enable Avatar</strong> (Habilitar Avatar) ahí mismo — activa la capacidad (y habilita Voice con ella) sin volver a Capabilities.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/embed-agent-avatar-light.png",
+          "alt": "Sección Avatar con los modos de visualización y la galería de avatares",
+          "caption": "Avatar: elija Avatar Only o Side by Side y luego seleccione o suba una cara.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/embed-agent-avatar-dark.png",
+          "alt": "Sección Avatar con los modos de visualización y la galería de avatares",
+          "caption": "Avatar: elija Avatar Only o Side by Side y luego seleccione o suba una cara.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "theme-header",
+      "title": "Theme & Header — Alinéelo con su Marca",
+      "content": "<p>Haga clic en <strong>Theme &amp; Header</strong> (Tema y Encabezado) para controlar la apariencia del widget:</p><ul><li><strong>Theme</strong> (Tema) — elija una de cuatro opciones:<ul><li><strong>Light</strong> (Claro) — superficie de chat blanca, texto oscuro.</li><li><strong>Dark</strong> (Oscuro) — superficie casi negra, texto blanco.</li><li><strong>Auto</strong> — sigue automáticamente la preferencia del sistema operativo de cada visitante.</li><li><strong>Custom</strong> (Personalizado) — desbloquea tres selectores de color: <strong>Primary</strong> (Primario: botones, encabezado, sus burbujas de mensaje), <strong>Background</strong> (Fondo) y <strong>Text</strong> (Texto). Use los colores exactos de su marca.</li></ul></li><li><strong>Show title</strong> (Mostrar título) — activa o desactiva la barra de encabezado en la parte superior de la ventana de chat.</li><li><strong>Header title</strong> (Título del encabezado) — el nombre que ven los visitantes, p. ej. \"Soporte Acme\". Si lo deja vacío, se usa el nombre del agente.</li></ul>",
+      "images": [
+        {
+          "src": "images/agents/embed-agent-theme-light.png",
+          "alt": "Sección Theme y Header con el selector de tema y el campo de título",
+          "caption": "Theme & Header: Light, Dark, Auto o colores de marca totalmente personalizados, más el título del encabezado.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/embed-agent-theme-dark.png",
+          "alt": "Sección Theme y Header con el selector de tema y el campo de título",
+          "caption": "Theme & Header: Light, Dark, Auto o colores de marca totalmente personalizados, más el título del encabezado.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "layout-position",
+      "title": "Layout & Position — Widget o Popup, y Dónde Aparece",
+      "content": "<p>Haga clic en <strong>Layout &amp; Position</strong> (Diseño y Posición) para decidir cómo aparece la ventana de chat en su página:</p><ul><li><strong>Display mode</strong> (Modo de visualización):<ul><li><strong>Widget</strong> — un panel de chat anclado que se abre desde un botón de inicio flotante. La experiencia estándar de burbuja de soporte.</li><li><strong>Pop Up</strong> — un modal de pantalla completa que se abre centrado sobre la página oscurecida. Inmersivo; ideal para agentes con avatar y páginas de aterrizaje.</li></ul></li><li><strong>Width (px)</strong> / <strong>Height (px)</strong> (Ancho/Alto en píxeles) — el tamaño del panel de chat en modo Widget (por defecto 375 × 600; el avatar Side-by-Side necesita ≥ 650 de ancho).</li><li><strong>Widget position</strong> (Posición del widget) — dónde se ubica el panel (o, en modo Pop Up, el icono de inicio): <strong>Bottom Right</strong> (Abajo a la Derecha), <strong>Bottom Left</strong> (Abajo a la Izquierda), <strong>Top Right</strong> (Arriba a la Derecha), <strong>Top Left</strong> (Arriba a la Izquierda), <strong>Center</strong> (Centro), <strong>Inline</strong> (se renderiza dentro del flujo de su página en lugar de flotar) o <strong>Manual</strong> (usted lo posiciona con su propio CSS).</li></ul><blockquote>💡 <strong>Consejo:</strong> Bottom Right es donde los usuarios web buscan instintivamente. Muévalo solo si algo más ya ocupa esa esquina de su sitio.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/embed-agent-layout-light.png",
+          "alt": "Sección Layout y Position con Widget vs Pop Up, campos de tamaño y selector de posición",
+          "caption": "Layout & Position: Widget o Pop Up, tamaño exacto y la posición en pantalla.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/embed-agent-layout-dark.png",
+          "alt": "Sección Layout y Position con Widget vs Pop Up, campos de tamaño y selector de posición",
+          "caption": "Layout & Position: Widget o Pop Up, tamaño exacto y la posición en pantalla.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "launch-button",
+      "title": "Launch Button — La Pequeña Burbuja que lo Inicia Todo",
+      "content": "<p>El botón de inicio es el icono flotante en el que los visitantes hacen clic para abrir el widget — hágalo inconfundiblemente suyo. Haga clic en <strong>Launch Button</strong> (Botón de Inicio):</p><ul><li><strong>Upload custom icon</strong> (Subir icono personalizado) — haga clic en <strong>Upload New Icon</strong> (Subir Nuevo Icono) y añada su logotipo o cualquier <strong>PNG, JPG o SVG</strong>. Los iconos subidos aparecen bajo \"Your custom icons\" para poder alternar entre ellos.</li><li><strong>System icon</strong> (Icono del sistema) — haga clic en el icono predeterminado de iMash para usar el aspecto integrado.</li><li><strong>Icon size</strong> (Tamaño del icono) — arrastre el deslizador para escalar el botón de inicio (75&nbsp;px por defecto).</li></ul>",
+      "images": [
+        {
+          "src": "images/agents/embed-agent-launch-light.png",
+          "alt": "Sección Launch Button con la carga de icono y el deslizador de tamaño",
+          "caption": "Launch Button: suba su propio icono y defina su tamaño.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/embed-agent-launch-dark.png",
+          "alt": "Sección Launch Button con la carga de icono y el deslizador de tamaño",
+          "caption": "Launch Button: suba su propio icono y defina su tamaño.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "behavior",
+      "title": "Behavior — Apertura y Arranque Automáticos",
+      "content": "<p>Haga clic en <strong>Behavior</strong> (Comportamiento) para controlar qué tan proactivo es el widget:</p><ul><li><strong>Auto-open on page load</strong> (Apertura automática al cargar la página) — la ventana de chat se abre sola cuando la página carga, sin esperar un clic en el botón de inicio.</li><li><strong>Delay before opening (sec)</strong> (Retraso antes de abrir, en segundos) — cuántos segundos esperar antes de la apertura automática (0–60). Un retraso de 5–10 segundos se siente útil; 0 puede resultar invasivo.</li><li><strong>Auto-start when opened</strong> (Arranque automático al abrir) — la conversación se conecta inmediatamente cuando el widget se abre, de modo que el agente saluda al visitante sin que nadie presione <strong>Start</strong> (Iniciar).</li></ul><blockquote>⚠️ <strong>Atención:</strong> los navegadores requieren una interacción del usuario antes de permitir la reproducción de audio. Con la voz habilitada, una conversación autoiniciada puede permanecer en silencio hasta que el visitante haga clic o el navegador solicite acceso al micrófono — pruebe la combinación en su propio sitio antes de lanzarla.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/embed-agent-behavior-light.png",
+          "alt": "Sección Behavior con apertura automática, retraso y arranque automático",
+          "caption": "Behavior: apertura automática al cargar la página, un retraso opcional y el arranque automático.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/embed-agent-behavior-dark.png",
+          "alt": "Sección Behavior con apertura automática, retraso y arranque automático",
+          "caption": "Behavior: apertura automática al cargar la página, un retraso opcional y el arranque automático.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "page-access",
+      "title": "Page Access — Deje que el Agente Vea y Maneje su Página (Avanzado)",
+      "content": "<p>Aquí es donde el widget pasa de chatbot a copiloto. <strong>Page Access</strong> (Acceso a la Página) permite que el agente interactúe con la misma página en la que está el visitante — \"Yo le lleno ese formulario\" se vuelve literal. Los tres interruptores están <strong>desactivados por defecto</strong>:</p><ul><li><strong>Page Viewing</strong> (Visualización de la Página) — el agente puede leer la página actual: su URL, el texto visible, un esquema de los elementos interactivos, los registros recientes de la consola, y puede tomar una captura de pantalla visual. (Las capturas requieren un LLM que admita entrada de imágenes.)</li><li><strong>Page Control</strong> (Control de la Página) — el agente puede actuar: hacer clic en botones, llenar campos, desplazarse, enviar formularios y navegar en la página del visitante.</li><li><strong>Allow Raw JavaScript</strong> (Permitir JavaScript sin Restricciones) — solo disponible cuando Page Control está activado. Permite al agente ejecutar JavaScript arbitrario en el contexto de su página, con acceso completo al DOM y a las cookies.</li></ul><blockquote>⚠️ <strong>Advertencia:</strong> Page Control actúa sobre la página en vivo del visitante, y Raw JavaScript es acceso programático total — habilítelos solo para agentes que haya probado a fondo, en sitios que usted controle y en los que confíe. Page Access funciona únicamente cuando el widget se instala con el fragmento de código del siguiente paso (se comunica a través del cargador en su página).</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/embed-agent-page-access-light.png",
+          "alt": "Sección Page Access con los interruptores Page Viewing, Page Control y Raw JavaScript",
+          "caption": "Page Access: niveles opcionales para leer la página, controlarla y ejecutar JavaScript sin restricciones.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/embed-agent-page-access-dark.png",
+          "alt": "Sección Page Access con los interruptores Page Viewing, Page Control y Raw JavaScript",
+          "caption": "Page Access: niveles opcionales para leer la página, controlarla y ejecutar JavaScript sin restricciones.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "embed-code",
+      "title": "Copie el Fragmento y Publique",
+      "content": "<p>El momento que estaba esperando. Haga clic en <strong>Embed Code &amp; Preview</strong> (Código de Integración y Vista Previa):</p><ol><li>Haga clic en el botón de <strong>copiar</strong> en la esquina superior derecha del cuadro de código para copiar el fragmento <code>&lt;script&gt;</code> generado.</li><li>Péguelo en el HTML de su sitio web — idealmente justo antes de la etiqueta de cierre <code>&lt;/body&gt;</code>. Funciona en cualquier plataforma que acepte HTML personalizado: WordPress, Shopify, Webflow, Wix o páginas escritas a mano.</li><li>Publique su sitio, recargue la página, y su botón de inicio aparecerá en la posición que eligió.</li></ol><p>Dos botones auxiliares debajo del cuadro de código:</p><ul><li><strong>Preview Widget</strong> (Vista Previa del Widget) — inyecta el widget en la página del panel en la que está ahora mismo, para que pueda ver el botón de inicio y abrir una conversación real sin tocar su sitio web. Después de cambiar ajustes, haga clic de nuevo (<strong>Update Preview</strong>) para refrescar.</li><li><strong>Reset to Defaults</strong> (Restablecer Valores Predeterminados) — revierte todos los ajustes de diseño y comportamiento de esta ventana a los valores de fábrica.</li></ul><blockquote>💡 <strong>Pegue una vez, rediseñe para siempre.</strong> El fragmento solo contiene el ID de su agente — cada ajuste de diseño, capacidad y comportamiento se carga en vivo desde iMash cada vez que la página se abre. Cambie el tema o el saludo el mes que viene y su sitio web se actualiza al instante, sin volver a pegar nada.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/embed-agent-embed-code-light.png",
+          "alt": "Sección Embed Code y Preview con el fragmento de script generado",
+          "caption": "Embed Code & Preview: copie el fragmento y pruébelo con Preview Widget.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/embed-agent-embed-code-dark.png",
+          "alt": "Sección Embed Code y Preview con el fragmento de script generado",
+          "caption": "Embed Code & Preview: copie el fragmento y pruébelo con Preview Widget.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "visitor-view",
+      "title": "Lo que Ven sus Visitantes",
+      "content": "<p>Aquí está la recompensa. Cuando un visitante hace clic en su botón de inicio, la ventana de chat se abre con el título de encabezado y el tema que usted eligió:</p><ul><li>Hacen clic en <strong>Start</strong> (Iniciar) para comenzar la conversación (el navegador puede pedir permiso para el audio o el micrófono si la voz está activada).</li><li>Con <strong>Text</strong> habilitado, escriben en el cuadro <strong>Type a message...</strong> (Escriba un mensaje...) y ven la transcripción completa — incluida la transcripción en vivo de lo que dicen en voz alta.</li><li>Con <strong>Voice</strong> habilitado, simplemente hablan; una barra de voz animada muestra cuándo habla el agente, y un botón de silencio está junto al cuadro de mensaje.</li><li>Con un <strong>Avatar</strong>, el video del agente aparece en la parte superior y habla cara a cara.</li><li>Cuando terminan, <strong>End</strong> (Finalizar) cierra la conversación.</li></ul><p>Cada conversación del widget queda registrada en sus <a data-href=\"/phone/call-logs\">Registros de Llamadas</a> con una transcripción, y — con la recopilación de datos de visitantes activada — se asocia automáticamente a un lead nuevo o recurrente en su CRM. Su sitio web acaba de convertirse en su empleado más trabajador.</p>",
+      "images": [
+        {
+          "src": "images/agents/embed-agent-visitor-view-light.png",
+          "alt": "El widget de chat integrado tal como lo ve un visitante del sitio",
+          "caption": "La vista del visitante: título del encabezado, botón Start y el cuadro de mensaje (tema claro del widget).",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/embed-agent-visitor-view-dark.png",
+          "alt": "El widget de chat integrado tal como lo ve un visitante con tema oscuro",
+          "caption": "La vista del visitante con el tema Dark del widget seleccionado.",
+          "theme": "dark"
+        }
+      ]
     }
   ],
   "nextSteps": {
-    "title": "¿Qué sigue?",
-    "description": "Mejora la experiencia en el sitio:",
+    "title": "¿Qué Sigue?",
+    "description": "Su agente ya está en vivo en su sitio — ahora haga que cada conversación cuente:",
     "cards": [
-      { "href": "/agents/agent-knowledge-base", "title": "Agrega una base de conocimiento", "description": "Ayuda al widget a responder con precisión las preguntas sobre el producto." },
-      { "href": "/agents/agent-tools", "title": "Agrega herramientas", "description": "Permite que el widget agende reuniones o llame a tus API." },
-      { "href": "/agents/agent-privacy", "title": "Privacidad y grabación", "description": "Decide qué datos de la conversación se almacenan." }
+      {
+        "href": "/agents/agent-knowledge-base",
+        "title": "Añada una Base de Conocimiento",
+        "description": "Aliméntelo con su documentación y preguntas frecuentes para que el widget responda con precisión."
+      },
+      {
+        "href": "/agents/agent-tools",
+        "title": "Añada Herramientas",
+        "description": "Permita que el widget agende reuniones, cree leads o llame a sus APIs en plena conversación."
+      },
+      {
+        "href": "/agents/agent-privacy",
+        "title": "Privacidad y Grabación",
+        "description": "Decida qué datos de conversaciones y visitantes se almacenan."
+      }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+    "title": "¿Necesita Ayuda?",
+    "content": "<p>Si tiene algún problema o pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Incrusta tu agente en tu sitio web | iMash Docs",
-  "metaDescription": "Publica un Smart Agent de iMash como un widget o popup para sitios web con texto, voz y avatar. Configura las capacidades, el tema y el diseño, y luego pega el código de incrustación para ponerlo en marcha.",
-  "metaKeywords": "incrustar agente, widget de sitio web, imash, smart agent, popup, avatar, widget de voz, código de incrustación"
+  "metaTitle": "Integre su Agente en su Sitio Web | Documentación de iMash",
+  "metaDescription": "Publique un Smart Agent de iMash como widget de chat y voz en su sitio web: actívelo, elija capacidades y un avatar, personalice el tema y el botón de inicio, configure la apertura automática, otorgue acceso opcional a la página y publique con un solo fragmento de código.",
+  "metaKeywords": "integrar agente, widget de sitio web, imash, smart agent, chat web, widget de voz, avatar, código de integración, acceso a la página, botón de inicio, widget emergente"
 }

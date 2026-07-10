@@ -1,55 +1,108 @@
 {
   "title": "Add Tools to Your Agent",
-  "lede": "Give your Smart Agent the ability to take actions - end calls, book appointments, transfer, or call your own APIs - using predefined tools and custom HTTP tools.",
-  "timeToComplete": "7 minutes",
-  "videoUrl": "https://youtu.be/Gmo7CE-XORY",
-  "videoLength": "3",
+  "lede": "Tools turn your Smart Agent from a talker into a doer — it can end calls gracefully, transfer angry callers to a human, book appointments on your calendar, press IVR digits, and even call your own APIs mid-conversation. This guide walks the whole Tools & MCP panel, tool by tool.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
-      "id": "open-tools",
-      "title": "Open the Tools / MCP Panel",
-      "content": "<ol><li>Go to <strong>Intelligence Center → Smart Agents</strong> and open your agent.</li><li>Click <strong>Tools / MCP</strong> in the editor.</li><li>The panel has three areas in the left rail: <strong>Predefined</strong>, <strong>Custom</strong>, and <strong>MCP Servers</strong>.</li></ol>",
+      "id": "open-agent",
+      "title": "Open Your Agent",
+      "content": "<p>Everything in this guide happens inside the agent editor, so first open the agent you want to power up.</p><ol><li>In the left sidebar, under <strong>Intelligence Center</strong>, click <strong>Smart Agents</strong>.</li><li>Click the <strong>name</strong> of the agent you want to edit. The agent editor opens.</li></ol>",
       "images": [
-        { "src": "images/agents/tools-mcp-light.png", "alt": "Tools and MCP panel", "caption": "The Tools / MCP panel with Predefined, Custom, and MCP Servers.", "theme": "light" },
-        { "src": "images/agents/tools-mcp-dark.png", "alt": "Tools and MCP panel", "caption": "The Tools / MCP panel with Predefined, Custom, and MCP Servers.", "theme": "dark" }
+        {"src": "images/agents/agent-tools-list-light.png", "alt": "Smart Agents list with agents to open", "caption": "Intelligence Center → Smart Agents — click an agent's name to open the editor.", "theme": "light"},
+        {"src": "images/agents/agent-tools-list-dark.png", "alt": "Smart Agents list with agents to open", "caption": "Intelligence Center → Smart Agents — click an agent's name to open the editor.", "theme": "dark"}
       ]
     },
     {
-      "id": "add-predefined",
-      "title": "Attach Predefined Tools",
-      "content": "<ol><li>Open the <strong>Predefined</strong> section to see the built-in tools (for example an end-call tool, a calendar/booking tool, and call-transfer tools).</li><li>Click a tool to attach it. Attached tools show an <strong>Added</strong> / <strong>Attached</strong> badge.</li><li>Some tools have inline settings (such as a transfer number or calendar category) you can fill in after attaching.</li></ol>",
+      "id": "switch-to-form-view",
+      "title": "Switch to Form View",
+      "content": "<p>The agent editor has two views — a visual <strong>Node</strong> canvas and a classic <strong>Form</strong> view. The Tools panel described here lives in the Form view.</p><ol><li>In the top toolbar, click <strong>Form</strong> on the <strong>Form / Node</strong> switch (if the editor opened on the node canvas).</li><li>Look at the bottom of the prompt card on the left — you'll see three buttons: <strong>Sub Agents / Tasks / Handoffs</strong>, <strong>Tools / MCP</strong>, and <strong>Settings</strong>.</li></ol><blockquote>💡 <strong>Tip:</strong> The <strong>Tools / MCP</strong> button shows a live counter — for example <strong>(3)</strong> — so you can see at a glance how many tools this agent already has. In the Node view the same tools appear under the Agent node's <strong>Tools</strong> capability row, so nothing is lost when you switch views.</blockquote>",
       "images": [
-        { "src": "images/agents/assistant-editor-light.png", "alt": "Agent editor", "caption": "Attached tools appear on the agent and are usable during calls.", "theme": "light" },
-        { "src": "images/agents/assistant-editor-dark.png", "alt": "Agent editor", "caption": "Attached tools appear on the agent and are usable during calls.", "theme": "dark" }
+        {"src": "images/agents/agent-tools-form-view-light.png", "alt": "Agent editor Form view with the Tools / MCP button at the bottom of the prompt card", "caption": "The Form view — the Tools / MCP button sits at the bottom of the prompt card.", "theme": "light"},
+        {"src": "images/agents/agent-tools-form-view-dark.png", "alt": "Agent editor Form view with the Tools / MCP button at the bottom of the prompt card", "caption": "The Form view — the Tools / MCP button sits at the bottom of the prompt card.", "theme": "dark"}
       ]
     },
     {
-      "id": "add-custom",
-      "title": "Add a Custom Tool",
-      "content": "<ol><li>Open the <strong>Custom</strong> section and click <strong>Add Custom Tool</strong>.</li><li>Give the tool a clear name and description so the AI knows when to call it.</li><li>Provide the endpoint URL and any parameters. Save the tool.</li><li>During a call the agent can now hit that endpoint live to fetch or send information.</li></ol>",
+      "id": "open-tools-panel",
+      "title": "Open the Tools & MCP Panel",
+      "content": "<ol><li>Click <strong>Tools / MCP</strong>. The <strong>Tools &amp; MCP</strong> panel opens.</li><li>Get oriented — the panel has two halves:<ul><li><strong>Left rail (the catalog):</strong> three sections — <strong>Predefined</strong> (built-in actions), <strong>Custom</strong> (your reusable HTTP tools), and <strong>MCP Servers</strong>. Click any item to attach it.</li><li><strong>Right panel (what's attached):</strong> every tool and MCP server this agent can use, newest first, with an <strong>items attached</strong> counter at the top. Click a card's header to expand its settings; click the <strong>trash</strong> icon to detach it.</li></ul></li><li>Each attached card is tagged so you always know what you're looking at: <strong>PREBUILT</strong> / <strong>CUSTOM</strong> / <strong>MCP</strong> type tags, plus a <strong>Main</strong> tag (and a gold tag per sub-agent Task that also uses the tool).</li></ol><blockquote>💡 <strong>Tip:</strong> Changes are saved as you make them — attaching, detaching, and editing settings all persist immediately. The <strong>Save</strong> button in the footer simply lights up to confirm you changed something.</blockquote>",
+      "images": [
+        {"src": "images/agents/agent-tools-panel-light.png", "alt": "Tools and MCP panel with the catalog on the left and attached tools on the right", "caption": "The Tools & MCP panel — catalog on the left, attached tools (with type tags) on the right.", "theme": "light"},
+        {"src": "images/agents/agent-tools-panel-dark.png", "alt": "Tools and MCP panel with the catalog on the left and attached tools on the right", "caption": "The Tools & MCP panel — catalog on the left, attached tools (with type tags) on the right.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "meet-predefined-tools",
+      "title": "Meet the Predefined Tools",
+      "content": "<p>The <strong>Predefined</strong> section is your built-in action library — one click each to attach:</p><ul><li><strong>End Call</strong> — lets the agent hang up politely when the caller says goodbye (instead of talking forever).</li><li><strong>SIP Transfer</strong> — hands the call off to an outside phone number (a human agent, another department, an answering service).</li><li><strong>Press Digit (IVR Navigation)</strong> — the agent presses phone-menu digits, perfect for outbound calls that hit \"press 1 for sales\" menus.</li><li><strong>Calendar</strong> — books real appointments straight into your CRM calendar, with conflict handling and optional job dispatch.</li><li><strong>Internal Transfer</strong> — rings a team of your own users (a permission group) inside iMash; the first person to answer takes the call.</li></ul><ol><li>Click a tool in the rail to attach it. A blue <strong>count badge</strong> appears next to it, and the new card pops open on the right, ready to configure.</li><li>Click the same rail item again if you want a second instance (for example two SIP Transfers to different departments) — each instance gets a unique name like <code>transfer_call_1</code>, <code>transfer_call_2</code>.</li></ol><blockquote>⚠️ <strong>Heads-up:</strong> Every tool's <strong>name must be unique</strong> for the AI — iMash numbers them automatically, so don't rename two tools to the same thing.</blockquote>",
+      "images": [
+        {"src": "images/agents/agent-tools-rail-light.png", "alt": "Catalog rail with Predefined and Custom tool sections", "caption": "The catalog rail — Predefined actions on top, your Custom tools below. Blue badges show how many instances are attached.", "theme": "light"},
+        {"src": "images/agents/agent-tools-rail-dark.png", "alt": "Catalog rail with Predefined and Custom tool sections", "caption": "The catalog rail — Predefined actions on top, your Custom tools below. Blue badges show how many instances are attached.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "configure-a-transfer",
+      "title": "Configure a Transfer (Example: SIP Transfer)",
+      "content": "<p>Expand an attached tool's card to reveal its settings. Here's every field on the <strong>SIP Transfer</strong> card:</p><ul><li><strong>Description</strong> — the most important field on any tool: it tells the AI <em>when</em> to use it (e.g. \"When the user is angry or requests a human agent, transfer the call\").</li><li><strong>Select Phone Number</strong> — which of your iMash numbers places the transfer leg (search by number or label).</li><li><strong>Play Ringtone During Transfer</strong> — the caller hears ringing instead of silence while the transfer connects.</li><li><strong>Use SIP REFER (Cold Transfer)</strong> — hands the call fully to the carrier and drops the AI off the line.</li><li><strong>Transfer to</strong> — the destination phone number.</li><li><strong>Post-Transfer Monitoring Settings</strong> — after a warm transfer the AI stays on the line: <strong>Disable STT After Transfer</strong> stops transcription to save cost, and <strong>Dual-Party Transcription</strong> transcribes both sides separately (higher STT cost).</li><li><strong>Agent To Speaks Before Transfering The Call</strong> — toggle on and write a <strong>Say</strong> line (e.g. \"One moment, connecting you now…\") so the caller is never left hanging.</li></ul><p>The <strong>Internal Transfer</strong> tool is configured the same way, but instead of a phone number you pick a <strong>Permission Group</strong> (plus optional <strong>Skills</strong> filters), choose <strong>Ring</strong> or <strong>Queue</strong> mode, set a <strong>No-Answer Timeout</strong>, and choose what the caller hears while waiting — ringtone, hold music, or silence.</p>",
+      "images": [
+        {"src": "images/agents/agent-tools-transfer-config-light.png", "alt": "SIP Transfer tool card expanded showing all transfer settings", "caption": "The SIP Transfer card expanded — description, destination, ringtone, cold transfer, and monitoring options.", "theme": "light"},
+        {"src": "images/agents/agent-tools-transfer-config-dark.png", "alt": "SIP Transfer tool card expanded showing all transfer settings", "caption": "The SIP Transfer card expanded — description, destination, ringtone, cold transfer, and monitoring options.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "configure-calendar-booking",
+      "title": "Turn On Appointment Booking (Calendar Tool)",
+      "content": "<p>The <strong>Calendar</strong> tool is a favorite: your agent checks the calendar and books real appointments while the caller is still on the line.</p><ol><li>Attach <strong>Calendar</strong> from the Predefined rail and expand its card.</li><li>Under <strong>Enabled Calendar Categories</strong>, select which calendar categories the agent may book into.</li><li>Open <strong>Booking Behavior</strong> and tune:<ul><li><strong>Booking Duration (mins)</strong> — default appointment length.</li><li><strong>Allow Double Booking</strong> — leave <strong>ON</strong> to allow overlapping slots, or turn <strong>OFF</strong> to reveal conflict handling: what to say when a time is taken, whether to let the caller try another time, and whether to <strong>Offer close available time slots</strong> (with a suggestion window and max suggestions).</li></ul></li><li>Open <strong>Agent Speech Overrides</strong> to script exactly what the agent says <strong>before/after</strong> a <strong>successful</strong> or <strong>failed</strong> booking.</li><li>Open <strong>Dispatch</strong> and toggle <strong>Create Job on Booking</strong> if every booked appointment should also create a scheduled job (optionally pre-setting job type, priority, country, and estimated cost).</li></ol>",
+      "images": [
+        {"src": "images/agents/agent-tools-calendar-config-light.png", "alt": "Calendar tool card expanded showing categories and booking behavior", "caption": "The Calendar tool — categories, booking duration, double-booking rules, speech overrides, and job dispatch.", "theme": "light"},
+        {"src": "images/agents/agent-tools-calendar-config-dark.png", "alt": "Calendar tool card expanded showing categories and booking behavior", "caption": "The Calendar tool — categories, booking duration, double-booking rules, speech overrides, and job dispatch.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "attach-custom-tools",
+      "title": "Attach Your Own API Tools (Custom)",
+      "content": "<p>Custom tools are HTTP calls to <em>your</em> systems — check an order status, look up a warranty, create a ticket — and the agent can fire them live, mid-conversation.</p><ol><li>In the <strong>Custom</strong> section of the rail, click any tool from your library to attach it. Attached tools show a green <strong>Added</strong> badge (each custom tool can be attached once per agent).</li><li>The attached card shows a quick preview — <strong>Description</strong>, <strong>Method</strong> (GET/POST), and <strong>Endpoint</strong> URL.</li><li>Click <strong>Edit Tool</strong> on the card to open the full editor and set the name, description, URL, parameters schema, and test the call.</li><li>Need a brand-new one? Click <strong>Add Custom Tool</strong> at the bottom of the Custom section — iMash creates it, attaches it, and you can build it out from there.</li></ol><blockquote>💡 <strong>Tip:</strong> Ownership tags (<strong>Main Account</strong> / <strong>Sub User</strong>) show who created each tool in the library, which is handy on accounts with many sub-users. Full build instructions live in the Custom Tools guide (linked below).</blockquote>",
+      "images": [
+        {"src": "images/agents/agent-tools-custom-card-light.png", "alt": "Attached custom tool card with method, endpoint, and Edit Tool button", "caption": "An attached custom tool — preview of method and endpoint, with Edit Tool for the full editor.", "theme": "light"},
+        {"src": "images/agents/agent-tools-custom-card-dark.png", "alt": "Attached custom tool card with method, endpoint, and Edit Tool button", "caption": "An attached custom tool — preview of method and endpoint, with Edit Tool for the full editor.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "connect-mcp-servers",
+      "title": "Connect an MCP Server (Optional)",
+      "content": "<p>MCP (Model Context Protocol) servers bundle whole toolboxes your agent can discover on its own — one connection can add dozens of abilities.</p><ol><li>Scroll to the <strong>MCP Servers</strong> section of the rail. Any servers you registered under Automation appear here — click one to attach it (it shows an <strong>Attached</strong> badge).</li><li>Or click <strong>Add custom MCP server</strong> and fill in:<ul><li><strong>Name</strong> — a label for your team.</li><li><strong>Server URL</strong> — the endpoint; URLs ending in <code>/sse</code> use SSE transport, <code>/mcp</code> use streamable HTTP (detected automatically).</li><li><strong>Auth header (optional)</strong> — header name (defaults to <strong>Authorization</strong>) and value, e.g. <code>Bearer &lt;token&gt;</code>.</li></ul></li><li>Click <strong>Attach</strong>. The server appears as a card on the right; expand it to review the URL, or hit the trash icon and confirm <strong>Detach</strong> to remove it.</li></ol>",
+      "images": [
+        {"src": "images/agents/agent-tools-mcp-add-light.png", "alt": "Add custom MCP server dialog with name, URL, and auth header fields", "caption": "Add custom MCP server — name, server URL, and an optional auth header.", "theme": "light"},
+        {"src": "images/agents/agent-tools-mcp-add-dark.png", "alt": "Add custom MCP server dialog with name, URL, and auth header fields", "caption": "Add custom MCP server — name, server URL, and an optional auth header.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "how-the-agent-decides",
+      "title": "How the Agent Decides to Use a Tool",
+      "content": "<p>You never script \"call tool X at minute 2.\" Instead, the AI reads each tool's <strong>name</strong> and <strong>Description</strong> during the conversation and decides on its own when a tool fits — exactly like a human agent deciding when to transfer a call. That makes descriptions your steering wheel:</p><ul><li><strong>Describe the trigger, not the mechanics.</strong> \"When the caller confirms they want an appointment, book it\" beats \"books calendar events.\"</li><li><strong>Be specific about conditions.</strong> \"Only transfer if the caller explicitly asks for a human or becomes upset\" prevents trigger-happy transfers.</li><li><strong>Mention the tool in your prompt when it matters.</strong> If the agent's main job is booking, tell it so in the system prompt — the tool description and prompt work together.</li><li><strong>Use the speak toggles to cover silence.</strong> Tools take a second or two to run; \"Agent speaks before/during execution\" lines (\"Let me check that for you…\") keep the call feeling alive.</li></ul>",
       "images": []
     },
     {
-      "id": "test-tools",
-      "title": "Test the Tools",
-      "content": "<ol><li>Open <strong>Test Agent</strong> and connect.</li><li>Try prompts that should trigger a tool, such as <em>\"Book a demo for tomorrow at 1 PM\"</em> or <em>\"End the call.\"</em></li><li>Confirm the action happens - for example a new entry in the CRM calendar.</li></ol>",
+      "id": "test-your-tools",
+      "title": "Test Every Tool Before Going Live",
+      "content": "<p>The payoff moment — hear your agent actually <em>do</em> things.</p><ol><li>Click <strong>Test Agent</strong> in the editor's top toolbar (or use the chat panel on the right of the Form view) and click <strong>Connect</strong>.</li><li>Say things that should trigger each tool, one at a time:<ul><li><em>\"I'd like to book an appointment tomorrow at 2 PM\"</em> → Calendar (then check the CRM calendar for the event).</li><li><em>\"I want to speak to a real person\"</em> → SIP / Internal Transfer.</li><li><em>\"That's all, goodbye!\"</em> → End Call.</li></ul></li><li>If a tool fires too eagerly (or never fires), sharpen its <strong>Description</strong> and test again — small wording changes make a big difference.</li></ol><blockquote>⚠️ <strong>Warning:</strong> Transfer tools place real calls during tests — point <strong>Transfer to</strong> at your own phone while testing, not at a live queue.</blockquote>",
       "images": []
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Extend your agent beyond built-in tools:",
+    "description": "Your agent can act — now expand its powers and put it to work:",
     "cards": [
-      { "href": "/agents/agent-mcp", "title": "Connect an MCP Server", "description": "Bundle flows and tools into one server your agent can call." },
-      { "href": "/automations/custom-tools", "title": "Build Custom Tools", "description": "Create reusable HTTP tools in the Custom Tools library." },
-      { "href": "/agents/test-agent", "title": "Test Your Agent", "description": "Verify each tool fires correctly during a conversation." }
+      {"href": "/automations/custom-tools", "title": "Build Custom Tools", "description": "Create the reusable HTTP tools (URL, parameters, auth) you attach here."},
+      {"href": "/agents/agent-mcp", "title": "Connect MCP to Your Agent", "description": "A deeper look at attaching MCP servers and how tool discovery works."},
+      {"href": "/agents/test-your-agent", "title": "Test Your Agent", "description": "Full guide to live-testing conversations, tools included."},
+      {"href": "/agents/sub-agents", "title": "Sub-Agents, Tasks & Handoffs", "description": "Give each task its own scoped toolset in a multi-agent flow."}
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Add Tools to Your Agent | iMash Docs",
-  "metaDescription": "Give your iMash Smart Agent actions with predefined tools (end call, booking, transfer) and custom HTTP tools. Attach, configure, and test tools step by step.",
-  "metaKeywords": "agent tools, imash, smart agent, custom tools, end call tool, calendar booking, mcp, function calling"
+  "metaTitle": "Add Tools to Your Agent | iMash Documentation",
+  "metaDescription": "Give your iMash Smart Agent real actions: end call, SIP and internal transfers, IVR digit pressing, calendar booking, custom HTTP tools, and MCP servers — attach, configure, and test each one step by step.",
+  "metaKeywords": "agent tools, imash, smart agent, custom tools, end call tool, call transfer, internal transfer, calendar booking, press digit, ivr, mcp server, function calling"
 }

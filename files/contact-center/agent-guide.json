@@ -1,123 +1,134 @@
 {
   "title": "Human Agent Guide — Handling Calls in the Contact Center",
-  "lede": "A complete, step-by-step guide for a human agent who answers and makes calls in iMash. No technical knowledge needed — just follow along. You'll learn how to log in, go online, answer and place calls, read the caller's record, transfer calls to a teammate or team, update the lead, add notes, and wrap up.",
+  "lede": "Your complete day-one guide as a human agent in iMash. In about 12 minutes you'll know how to log in, go Online, answer and place calls, watch the queue, read the caller's record while you talk, transfer to a teammate, a queue, or an AI agent, update the lead, and leave notes that make you look like a pro.",
   "timeToComplete": "12 minutes",
   "steps": [
     {
       "id": "log-in",
       "title": "Step 1 — Log in to your account",
-      "content": "<ol><li>Open the link your company gave you in your web browser (Chrome works best) — this is your login page.</li><li>Type the <strong>email</strong> and <strong>password</strong> your manager sent you.</li><li>Tick <strong>Remember me</strong> so you don't have to sign in every time on your own computer.</li><li>Click <strong>Sign in</strong>.</li></ol><p>Tip: if you forget your password, use <strong>Forgot password</strong> or ask your manager to reset it — don't create a second account.</p>",
+      "content": "<p>Everything starts at your company's login page — one browser tab is your entire phone system.</p><ol><li>Open the link your company gave you in your web browser (Chrome works best) — this is your login page.</li><li>Type the <strong>Email</strong> and <strong>Password</strong> your manager sent you.</li><li>Tick <strong>Remember me</strong> so you don't have to sign in every time on your own computer.</li><li>Click <strong>Sign in</strong>.</li></ol><blockquote>💡 Forgot your password? Click <strong>Forgot password?</strong> on the login page or ask your manager to reset it — never create a second account with <strong>Sign up</strong>.</blockquote>",
       "images": [
-        { "src": "images/contact-center/agent-login-light.png", "alt": "iMash login page", "caption": "Your login page — enter the email and password your manager gave you.", "theme": "light" },
-        { "src": "images/contact-center/agent-login-dark.png", "alt": "iMash login page", "caption": "Your login page — enter the email and password your manager gave you.", "theme": "dark" }
+        { "src": "images/contact-center/agent-login-light.png", "alt": "iMash login page with email and password fields", "caption": "Your login page — enter the email and password your manager gave you, then click Sign in.", "theme": "light" },
+        { "src": "images/contact-center/agent-login-dark.png", "alt": "iMash login page with email and password fields", "caption": "Your login page — enter the email and password your manager gave you, then click Sign in.", "theme": "dark" }
       ]
     },
     {
       "id": "your-home",
       "title": "Step 2 — Get to know your home screen",
-      "content": "<p>After you log in you land on the <strong>Contact Center</strong> — this is your home base all day. Here's what you see:</p><ul><li><strong>Left menu</strong> — Contact Center, Do Not Call, and your CRM (Accounts, Contacts, Leads). At the bottom are Account Settings and Logout.</li><li><strong>On Queue</strong> (middle) — customers waiting to be connected to an agent show up here.</li><li><strong>Web dialer</strong> (right side) — your phone. It stays open all the time so you never miss a call.</li></ul>",
+      "content": "<p>After you log in you land on the <strong>Contact Center</strong> — your home base all day. Here's the layout:</p><ul><li><strong>Left menu</strong> — everything you can open: <strong>Messages</strong> (SMS Messages, WhatsApp, Email), <strong>Call Center</strong> (Contact Center, Call Logs, Do Not Call), and your <strong>CRM</strong> (Accounts, Contacts, Leads). At the bottom: <strong>Account Settings</strong> and <strong>Logout</strong>.</li><li><strong>Top tabs</strong> — quick switches between <strong>Contact Center</strong>, <strong>CRM</strong> and <strong>Messages</strong>, with sub-tabs like <strong>Overview</strong>, <strong>Call Logs</strong> and <strong>Do Not Call</strong>.</li><li><strong>Live Monitor → On Queue</strong> (middle) — customers waiting to be connected to an agent show up here in real time.</li><li><strong>Web dialer</strong> (right side) — your phone. It stays pinned open all day so you never miss a call.</li></ul>",
       "images": [
-        { "src": "images/contact-center/agent-home-light.png", "alt": "Agent home screen with the web dialer open", "caption": "Your home screen: the Contact Center on the left, the queue in the middle, and your always-on web dialer on the right.", "theme": "light" },
-        { "src": "images/contact-center/agent-home-dark.png", "alt": "Agent home screen with the web dialer open", "caption": "Your home screen: the Contact Center on the left, the queue in the middle, and your always-on web dialer on the right.", "theme": "dark" }
+        { "src": "images/contact-center/agent-home-light.png", "alt": "Agent home screen with the left menu, On Queue panel, and web dialer", "caption": "Your home screen: the menu on the left, the On Queue panel in the middle, and your always-on web dialer on the right.", "theme": "light" },
+        { "src": "images/contact-center/agent-home-dark.png", "alt": "Agent home screen with the left menu, On Queue panel, and web dialer", "caption": "Your home screen: the menu on the left, the On Queue panel in the middle, and your always-on web dialer on the right.", "theme": "dark" }
       ]
     },
     {
       "id": "the-dialer",
       "title": "Step 3 — Meet your web dialer",
-      "content": "<p>The <strong>web dialer</strong> on the right is your phone. From top to bottom:</p><ul><li>A <strong>number field</strong> and a <strong>keypad</strong> to dial a phone number.</li><li><strong>Call</strong> — place a phone call to the number you typed.</li><li><strong>Text</strong> — send an SMS instead of calling.</li><li><strong>AI Agent</strong> — hand the call to an AI assistant.</li><li><strong>Teammate</strong> — call another agent on your team (their dialer rings).</li><li><strong>My status</strong> — set yourself Online / On Break / Offline.</li></ul>",
+      "content": "<p>The <strong>web dialer</strong> on the right is your phone — no headset software, no desk phone. From top to bottom:</p><ul><li>A <strong>search bar</strong> (<strong>Search by name, email, or phone</strong>) — type at least two characters to find a customer in your CRM and call them straight from the result, no number-typing needed.</li><li>A <strong>number field</strong> and a <strong>keypad</strong> to type a phone number.</li><li><strong>Call</strong> — place a phone call to the number you typed.</li><li><strong>Text</strong> — send an SMS to that number instead of calling (opens a prefilled message window).</li><li><strong>AI Agent</strong> — start a voice call with one of your company's AI assistants (great for testing or letting the AI handle something).</li><li><strong>Teammate</strong> — call a colleague; their web dialer rings wherever they're logged in.</li><li><strong>My status</strong> card — set yourself <strong>Online</strong>, <strong>On Break</strong> or <strong>Offline</strong>, with a <strong>gear</strong> icon for personal settings (next steps).</li></ul>",
       "images": [
-        { "src": "images/contact-center/agent-dialer-light.png", "alt": "Web dialer keypad and buttons", "caption": "Your web dialer: keypad, Call, Text, AI Agent, and Teammate.", "theme": "light" },
-        { "src": "images/contact-center/agent-dialer-dark.png", "alt": "Web dialer keypad and buttons", "caption": "Your web dialer: keypad, Call, Text, AI Agent, and Teammate.", "theme": "dark" }
+        { "src": "images/contact-center/agent-dialer-light.png", "alt": "Web dialer keypad with Call, Text, AI Agent and Teammate buttons", "caption": "Your web dialer: keypad on top, then Call, Text, AI Agent and Teammate.", "theme": "light" },
+        { "src": "images/contact-center/agent-dialer-dark.png", "alt": "Web dialer keypad with Call, Text, AI Agent and Teammate buttons", "caption": "Your web dialer: keypad on top, then Call, Text, AI Agent and Teammate.", "theme": "dark" }
       ]
     },
     {
       "id": "go-online",
       "title": "Step 4 — Go Online so calls reach you",
-      "content": "<ol><li>Find <strong>My status</strong> at the bottom of the dialer.</li><li>Set it to <strong>Online</strong> — now you'll be rung for inbound calls to your team's numbers and for calls the AI hands to your team.</li><li>Use <strong>On Break</strong> when you step away, and <strong>Offline</strong> at the end of your shift.</li></ol><p><strong>Important:</strong> if your status is On Break or Offline, calls will NOT ring you. Set yourself <strong>Online</strong> at the start of every shift.</p>",
+      "content": "<p>Your status decides whether the system rings you. Set it right and calls flow to you automatically.</p><ol><li>Find the <strong>My status</strong> card at the bottom of the dialer.</li><li>Open the dropdown and pick <strong>Online</strong> — you'll now be rung for inbound calls to your groups' numbers and for calls the AI transfers to your group.</li><li>Pick <strong>On Break</strong> when you step away, and <strong>Offline</strong> at the end of your shift.</li></ol><p>You'll also see a fourth status, <strong>Busy</strong> — you can't select it yourself. The system sets it automatically while you're on a live call (<strong>Busy on a Call</strong>) or logging a call outcome afterwards (<strong>Busy — Wrap-up</strong>), so no new call rings you until you're free.</p><blockquote>⚠️ If your status is On Break or Offline, calls will <strong>not</strong> ring you. Make going <strong>Online</strong> the first thing you do every shift.</blockquote>",
       "images": [
-        { "src": "images/contact-center/agent-status-light.png", "alt": "My status set to Online", "caption": "Set My status to Online to start receiving calls. Use On Break / Offline when you step away.", "theme": "light" },
-        { "src": "images/contact-center/agent-status-dark.png", "alt": "My status set to Online", "caption": "Set My status to Online to start receiving calls. Use On Break / Offline when you step away.", "theme": "dark" }
+        { "src": "images/contact-center/agent-status-light.png", "alt": "My status dropdown open showing Online, On Break, Offline and Busy", "caption": "Open My status and pick Online. Busy is set automatically while you're on a call or wrapping one up.", "theme": "light" },
+        { "src": "images/contact-center/agent-status-dark.png", "alt": "My status dropdown open showing Online, On Break, Offline and Busy", "caption": "Open My status and pick Online. Busy is set automatically while you're on a call or wrapping one up.", "theme": "dark" }
       ]
     },
     {
       "id": "dialer-settings",
       "title": "Step 5 — Set two handy options (gear icon)",
-      "content": "<p>Click the <strong>gear</strong> next to My status to open <strong>Web dialer settings</strong>:</p><ul><li><strong>Auto-answer</strong> — connects group calls automatically, so you don't have to click Accept every time. Great for busy queues.</li><li><strong>Auto-open lead/contact</strong> — automatically opens the caller's record when an incoming call matches a lead or contact, so their details are on screen before you say hello.</li></ul><p>Ask your manager which options they'd like you to turn on.</p>",
+      "content": "<p>Click the <strong>gear</strong> icon next to <strong>My status</strong> to open <strong>Web dialer settings</strong>:</p><ul><li><strong>Auto-answer</strong> — connects group calls automatically, without clicking Accept. Great for busy queues where every second counts.</li><li><strong>Auto-open lead/contact</strong> — opens the caller's record the moment an incoming call matches a lead or contact, so their details are on screen before you say hello.</li></ul><p>If you also use the iMash mobile app, the status card shows extra options: <strong>Ring my phone when the app is closed</strong> (group calls ring your phone like a normal call) and a <strong>My devices</strong> list where you can unregister old browsers or phones.</p><blockquote>💡 Ask your manager which options they'd like your team to turn on — some groups force Auto-answer on for everyone.</blockquote>",
       "images": [
-        { "src": "images/contact-center/agent-dialer-settings-light.png", "alt": "Web dialer settings popover", "caption": "Web dialer settings: Auto-answer and Auto-open lead/contact.", "theme": "light" },
-        { "src": "images/contact-center/agent-dialer-settings-dark.png", "alt": "Web dialer settings popover", "caption": "Web dialer settings: Auto-answer and Auto-open lead/contact.", "theme": "dark" }
+        { "src": "images/contact-center/agent-dialer-settings-light.png", "alt": "Web dialer settings popover with Auto-answer and Auto-open lead/contact switches", "caption": "Web dialer settings: Auto-answer and Auto-open lead/contact.", "theme": "light" },
+        { "src": "images/contact-center/agent-dialer-settings-dark.png", "alt": "Web dialer settings popover with Auto-answer and Auto-open lead/contact switches", "caption": "Web dialer settings: Auto-answer and Auto-open lead/contact.", "theme": "dark" }
       ]
     },
     {
       "id": "answer-incoming",
       "title": "Step 6 — Answer an incoming call",
-      "content": "<p>When a call comes to you, a small <strong>incoming-call card</strong> pops up in the dialer showing who's calling.</p><ol><li>Click <strong>Accept</strong> (the green button) to take the call — or <strong>Decline</strong> if you can't.</li><li>If <strong>Auto-answer</strong> is on, the call connects on its own — just start talking.</li><li>For a team (group) call, the <strong>first agent to Accept wins</strong> the call; the others are released automatically, so answer quickly.</li></ol><p>Once connected, the caller's record opens on screen (see the next step).</p>",
+      "content": "<p>When a call comes to you, a green <strong>incoming-call card</strong> pops up at the top of the dialer showing who's calling. The label tells you the type: <strong>Incoming call</strong> (a customer dialing in), <strong>AI transfer — caller waiting</strong> (the AI is handing you a live customer), <strong>Incoming transfer</strong> or <strong>Conference invite</strong> (a teammate is sending you a call or pulling you in).</p><ol><li>Click <strong>Accept</strong> (green) to take the call — or <strong>Decline</strong> if you can't.</li><li>If <strong>Auto-answer</strong> is on, the call connects on its own — a chime tells you you're live, so just start talking.</li><li>For a team (group) call, the <strong>first agent to Accept wins</strong> the call; everyone else's ring stops and shows \"Answered by teammate\". Answer quickly!</li></ol><p>Once connected, the caller's record can open automatically on screen (see Step 8).</p>",
       "images": [
-        { "src": "images/contact-center/agent-dialer-light.png", "alt": "Answering a call in the dialer", "caption": "When a call rings you, click Accept in the dialer (or it auto-connects if Auto-answer is on).", "theme": "light" },
-        { "src": "images/contact-center/agent-dialer-dark.png", "alt": "Answering a call in the dialer", "caption": "When a call rings you, click Accept in the dialer (or it auto-connects if Auto-answer is on).", "theme": "dark" }
+        { "src": "images/contact-center/agent-dialer-light.png", "alt": "The web dialer where the incoming-call card appears", "caption": "Incoming calls pop up as a green card at the top of this dialer — click Accept to connect.", "theme": "light" },
+        { "src": "images/contact-center/agent-dialer-dark.png", "alt": "The web dialer where the incoming-call card appears", "caption": "Incoming calls pop up as a green card at the top of this dialer — click Accept to connect.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "watch-queue",
+      "title": "Step 7 — Keep an eye on the queue",
+      "content": "<p>The <strong>On Queue</strong> panel in the middle of your home screen shows customers who are waiting for an agent right now — for example callers the AI parked in your group's queue, listening to hold music while the system rings the team.</p><ul><li>The number next to <strong>On Queue</strong> is how many customers are waiting.</li><li>While you're <strong>Online</strong>, queued calls ring your dialer automatically — you don't \"pick\" from the queue, the system brings the next customer to you.</li><li>When nobody is waiting you'll see <strong>No customers on queue</strong> — that's a good thing!</li></ul><blockquote>💡 A growing queue count is your cue to wrap up politely and get back Online — every name on that list is a real customer holding.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/agent-guide-queue-light.png", "alt": "On Queue panel showing no customers waiting", "caption": "The On Queue panel — customers waiting for an agent appear here in real time.", "theme": "light" },
+        { "src": "images/contact-center/agent-guide-queue-dark.png", "alt": "On Queue panel showing no customers waiting", "caption": "The On Queue panel — customers waiting for an agent appear here in real time.", "theme": "dark" }
       ]
     },
     {
       "id": "caller-record",
-      "title": "Step 7 — Read the caller's record while you talk",
-      "content": "<p>When a call connects, the caller's <strong>Lead Details</strong> open so you can see who you're talking to. Look at:</p><ul><li>The <strong>name</strong>, <strong>phone number</strong> and <strong>email</strong> at the top.</li><li>The <strong>Lead Information</strong> tab — company (Account), tags, and fields.</li><li>The <strong>Additional Information</strong> and <strong>Call Logs</strong> tabs for history and past calls.</li></ul><p>Use this to greet the customer by name and pick up where the last conversation left off.</p>",
+      "title": "Step 8 — Read the caller's record while you talk",
+      "content": "<p>When a call connects (or when you open a lead yourself), the caller's <strong>Lead Details</strong> open so you always know who you're talking to. Look at:</p><ul><li>The <strong>name</strong>, <strong>phone number</strong> and <strong>email</strong> at the top.</li><li>The <strong>Lead Information</strong> tab — emails, company (<strong>Account</strong>), <strong>Tags</strong>, phone numbers and timezone.</li><li>The other tabs — <strong>Additional Information</strong>, <strong>Call Logs</strong>, <strong>Files</strong>, <strong>Custom Data</strong>, <strong>Calendar</strong>, <strong>Email</strong> and <strong>Deals</strong> — for the full history.</li></ul><p>Use this to greet the customer by name and pick up exactly where the last conversation left off — it feels like magic to the caller.</p>",
       "images": [
-        { "src": "images/contact-center/agent-lead-detail-light.png", "alt": "Lead Details panel", "caption": "The caller's Lead Details — name, phone, email, and tabs with their full history.", "theme": "light" },
-        { "src": "images/contact-center/agent-lead-detail-dark.png", "alt": "Lead Details panel", "caption": "The caller's Lead Details — name, phone, email, and tabs with their full history.", "theme": "dark" }
+        { "src": "images/contact-center/agent-lead-detail-light.png", "alt": "Lead Details panel with tabs and contact info", "caption": "The caller's Lead Details — name, contact info, and tabs with their full history.", "theme": "light" },
+        { "src": "images/contact-center/agent-lead-detail-dark.png", "alt": "Lead Details panel with tabs and contact info", "caption": "The caller's Lead Details — name, contact info, and tabs with their full history.", "theme": "dark" }
       ]
     },
     {
       "id": "update-stage",
-      "title": "Step 8 — Update the customer's stage",
-      "content": "<p>Scroll to the <strong>Lifecycle</strong> bar on the lead and click the stage that matches where the customer is now:</p><ul><li><strong>New → Contacted → Interested → Qualified → Negotiation → Won</strong>.</li><li>Some stages have a small arrow — click it to pick a more specific sub-stage (for example \"No Answer\" or \"Interested\").</li></ul><p>Keeping the stage up to date tells your team and your manager exactly where each customer stands.</p>",
+      "title": "Step 9 — Update the customer's stage",
+      "content": "<p>Scroll to the <strong>Lifecycle</strong> bar on the lead and click the stage that matches where the customer is now:</p><ul><li><strong>New → Contacted → Interested → Qualified → Negotiation → Won</strong>.</li><li>Some stages have a small arrow — click it to pick a more specific sub-stage (for example \"No Answer\" under Contacted).</li></ul><p>Keeping the stage up to date tells your whole team — and your manager's reports — exactly where each customer stands.</p>",
       "images": [
-        { "src": "images/contact-center/agent-lifecycle-light.png", "alt": "Lifecycle stage bar", "caption": "The Lifecycle bar — click the stage that matches the customer after your call.", "theme": "light" },
-        { "src": "images/contact-center/agent-lifecycle-dark.png", "alt": "Lifecycle stage bar", "caption": "The Lifecycle bar — click the stage that matches the customer after your call.", "theme": "dark" }
+        { "src": "images/contact-center/agent-lifecycle-light.png", "alt": "Lifecycle stage bar from New to Won", "caption": "The Lifecycle bar — click the stage that matches the customer after your call.", "theme": "light" },
+        { "src": "images/contact-center/agent-lifecycle-dark.png", "alt": "Lifecycle stage bar from New to Won", "caption": "The Lifecycle bar — click the stage that matches the customer after your call.", "theme": "dark" }
       ]
     },
     {
       "id": "add-notes",
-      "title": "Step 9 — Write a note about the call",
-      "content": "<ol><li>On the lead, find the <strong>Notes</strong> box (\"Add your note\").</li><li>Type a short, clear note about what happened — for example \"Called back, wants a quote for 2 doors, follow up Friday.\"</li><li>Press Enter / Save. Your note is stamped with your name and the time, so anyone who talks to this customer next knows the story.</li></ol><p>Good notes are the #1 thing that makes you look professional to the next agent and to your manager.</p>",
+      "title": "Step 10 — Write a note about the call",
+      "content": "<ol><li>On the lead, find the <strong>Notes</strong> box (<strong>Add your note</strong>).</li><li>Type a short, clear note about what happened — for example \"Called back, wants a quote for 2 doors, follow up Friday.\"</li><li>Press Enter to save. Your note is stamped with your name and the time, so whoever talks to this customer next knows the whole story.</li></ol><p>On some teams, a <strong>How did the call go?</strong> window also pops up by itself right after a call ends — pick the outcome that fits, add an optional note, or click <strong>Skip</strong>. While it's open your status shows <strong>Busy — Wrap-up</strong>, so no new call rings you until you've logged the result.</p><blockquote>💡 Good notes are the #1 thing that makes you look professional to the next agent — and to your manager.</blockquote>",
       "images": [
-        { "src": "images/contact-center/agent-notes-light.png", "alt": "Add a note on the lead", "caption": "Add a short note about the call so the next person knows what happened.", "theme": "light" },
-        { "src": "images/contact-center/agent-notes-dark.png", "alt": "Add a note on the lead", "caption": "Add a short note about the call so the next person knows what happened.", "theme": "dark" }
+        { "src": "images/contact-center/agent-notes-light.png", "alt": "Notes box on the lead with Add your note field", "caption": "Add a short note about the call so the next person knows what happened.", "theme": "light" },
+        { "src": "images/contact-center/agent-notes-dark.png", "alt": "Notes box on the lead with Add your note field", "caption": "Add a short note about the call so the next person knows what happened.", "theme": "dark" }
       ]
     },
     {
       "id": "transfer-call",
-      "title": "Step 10 — Transfer the call to a teammate or team",
-      "content": "<p>If someone else should handle the call, transfer it instead of hanging up:</p><ul><li><strong>Teammate</strong> — click Teammate, pick a colleague, and their dialer rings. (Only teammates who are Online with their dialer open appear in the list.)</li><li><strong>To a team / skill (queue)</strong> — send the customer to the right team so the next available specialist answers.</li><li><strong>AI Agent</strong> — hand the call to the AI assistant.</li></ul><p>You can add the other person <strong>while staying on the line</strong> (a warm transfer / conference — you introduce them), or transfer and drop off. If you leave a queued call, the AI keeps the customer company until someone picks up.</p>",
+      "title": "Step 11 — Call or transfer to a teammate, a queue, a number, or an AI",
+      "content": "<p>The <strong>Teammate</strong> button does double duty:</p><ul><li><strong>With no call active</strong> — it opens <strong>Call a teammate</strong>: pick a colleague and click <strong>Call teammate</strong>; their web dialer rings. Only teammates with their web dialer open are shown, and you can narrow the list by group or with <strong>Filter by skill…</strong> — typing in the search box matches names, skills and groups alike.</li><li><strong>During a live call</strong> — the same button opens <strong>Conference / Transfer</strong> with four tabs:<ul><li><strong>A teammate</strong> — ring a colleague to join your call or take it over.</li><li><strong>A queue</strong> — park the customer in a team's queue; they hear the group's hold music while the system rings that team's online agents until one answers.</li><li><strong>A number</strong> — dial any outside phone number into the call (pick the <strong>Call from</strong> caller ID it should show).</li><li><strong>AI Agent</strong> — click <strong>Add AI to call</strong> to bring an AI assistant in as another participant; hang up whenever you like to leave the AI with the customer.</li></ul></li></ul><p>For a teammate or a number, the default <strong>Add to call</strong> keeps you on the line so you can introduce everyone — a warm transfer / conference, and you can keep adding parties. Flip on <strong>Hand off &amp; drop when they join (blind transfer)</strong> and the button becomes <strong>Transfer &amp; leave</strong>: you drop off the moment they join. On the queue tab, <strong>Place in queue</strong> keeps you on while the queue rings; turn on <strong>Leave the call after placing in queue</strong> (the button becomes <strong>Queue &amp; leave</strong>) to drop off right away — the AI keeps the customer company until an agent answers, so nobody is ever left in silence.</p>",
       "images": [
-        { "src": "images/contact-center/agent-transfer-light.png", "alt": "Call a teammate popup", "caption": "Transferring to a teammate — pick who should take the call; their web dialer rings.", "theme": "light" },
-        { "src": "images/contact-center/agent-transfer-dark.png", "alt": "Call a teammate popup", "caption": "Transferring to a teammate — pick who should take the call; their web dialer rings.", "theme": "dark" }
+        { "src": "images/contact-center/agent-transfer-light.png", "alt": "Call a teammate popup with teammate picker", "caption": "Call a teammate — pick who should take the call; their web dialer rings. During a live call this popup adds A queue, A number and AI Agent tabs.", "theme": "light" },
+        { "src": "images/contact-center/agent-transfer-dark.png", "alt": "Call a teammate popup with teammate picker", "caption": "Call a teammate — pick who should take the call; their web dialer rings. During a live call this popup adds A queue, A number and AI Agent tabs.", "theme": "dark" }
       ]
     },
     {
       "id": "place-outbound",
-      "title": "Step 11 — Make an outbound call",
-      "content": "<ol><li>Type the phone number on the keypad (or open a lead and click its phone number).</li><li>Click <strong>Call</strong>.</li><li>In the <strong>Start Call</strong> window, pick the <strong>Caller ID</strong> (the number the customer will see) and, if asked, an <strong>AI Agent</strong> to join the call.</li><li>Click <strong>Call</strong> to place it. Talk when the customer answers.</li></ol>",
+      "title": "Step 12 — Make an outbound call",
+      "content": "<ol><li>Type the phone number on the keypad (or open a lead and click its phone number).</li><li>Click <strong>Call</strong>.</li><li>In the <strong>Start Call</strong> window, pick:<ul><li><strong>Caller ID (dial-out number)</strong> — the number the call is placed from; it's what the person you're calling sees.</li><li><strong>AI Agent</strong> — an assistant that joins the call: it quietly transcribes the conversation in Human Mode, or handles the call itself in AI Mode.</li></ul></li><li>Click <strong>Call</strong> to place it — and start talking when the customer answers.</li></ol>",
       "images": [
-        { "src": "images/contact-center/agent-start-call-light.png", "alt": "Start Call window", "caption": "Placing an outbound call — choose the Caller ID the customer will see, then Call.", "theme": "both" }
+        { "src": "images/contact-center/agent-start-call-light.png", "alt": "Start Call window with Caller ID and AI Agent pickers", "caption": "Placing an outbound call — choose the Caller ID the customer will see and an AI agent, then Call.", "theme": "light" },
+        { "src": "images/contact-center/agent-start-call-dark.png", "alt": "Start Call window with Caller ID and AI Agent pickers", "caption": "Placing an outbound call — choose the Caller ID the customer will see and an AI agent, then Call.", "theme": "dark" }
       ]
     },
     {
       "id": "review-history",
-      "title": "Step 12 — Review a call afterwards",
-      "content": "<p>Every call you handle is saved under the customer's <strong>Call Logs</strong> tab, with the date, direction, duration and (if enabled) the recording and transcript. Open it any time to remind yourself what was said, or to show your manager how a call went.</p>",
+      "title": "Step 13 — Review a call afterwards",
+      "content": "<p>Every call you handle is saved under the customer's <strong>Call Logs</strong> tab in their Lead Details — date, type, number and duration, plus the recording and transcript when enabled. Open it any time to remind yourself what was said, or to show your manager how a call went.</p><p>That's the full loop: go <strong>Online</strong>, take the call, help the customer, update the stage, leave a note — and iMash keeps a perfect record of all of it. Welcome to the team!</p>",
       "images": [
-        { "src": "images/contact-center/agent-lead-calllogs-light.png", "alt": "Call Logs tab on the lead", "caption": "The Call Logs tab keeps a record of every call with this customer.", "theme": "light" },
-        { "src": "images/contact-center/agent-lead-calllogs-dark.png", "alt": "Call Logs tab on the lead", "caption": "The Call Logs tab keeps a record of every call with this customer.", "theme": "dark" }
+        { "src": "images/contact-center/agent-lead-calllogs-light.png", "alt": "Call Logs tab on the lead showing the call history table", "caption": "The Call Logs tab keeps a record of every call with this customer.", "theme": "light" },
+        { "src": "images/contact-center/agent-lead-calllogs-dark.png", "alt": "Call Logs tab on the lead showing the call history table", "caption": "The Call Logs tab keeps a record of every call with this customer.", "theme": "dark" }
       ]
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "You now know the full day-to-day flow. A few things to explore next:",
+    "description": "You now know the full day-to-day flow of a human agent. Here's where to go deeper:",
     "cards": [
       { "href": "/contact-center/overview", "title": "Contact Center Overview", "description": "See how the queue, live monitor and reporting fit together." },
       { "href": "/crm/leads", "title": "Working with Leads", "description": "Add, search and organize the customers you talk to." },
-      { "href": "/contact-center/members-roles", "title": "Roles & the Web Dialer", "description": "Understand agent roles and why your dialer stays open." }
+      { "href": "/contact-center/call-transfer", "title": "Call Transfer Settings", "description": "How AI-to-human and human-to-human transfers are configured." },
+      { "href": "/contact-center/members-roles", "title": "Members & Roles", "description": "Understand agent roles and why your dialer stays open." }
     ]
   },
   "support": {
@@ -125,6 +136,6 @@
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
   "metaTitle": "Human Agent Guide — Handling Calls in the iMash Contact Center",
-  "metaDescription": "Step-by-step guide for human agents: log in, go online, answer and place calls, read the caller's record, transfer to a teammate or team, update the lead stage, add notes, and review calls.",
-  "metaKeywords": "human agent, contact center, web dialer, answer calls, transfer call, lifecycle stage, notes, call center agent guide, iMash"
+  "metaDescription": "Step-by-step guide for human agents: log in, go Online, answer and place calls, watch the queue, read the caller's record, transfer to a teammate, queue or AI, update the lead stage, add notes, and review calls.",
+  "metaKeywords": "human agent, contact center, web dialer, answer calls, transfer call, queue, teammate call, lifecycle stage, notes, call center agent guide, iMash"
 }

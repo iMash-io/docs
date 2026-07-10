@@ -1,156 +1,172 @@
 {
-  "title": "Guía de inicio rápido: cómo crear tu primer agente de voz con iMash",
-  "lede": "Esta guía ofrece instrucciones paso a paso sobre cómo crear, configurar y conectar un agente de voz con IA en iMash, incluyendo la integración con números de teléfono, la gestión de llamadas y las funciones del sistema.",
-  "timeToComplete": "10 minutos",
-  "videoUrl": "https://youtu.be/YG6rAxWvW18",
-  "videoLength": "13",
+  "title": "Bienvenido a iMash",
+  "lede": "iMash reúne en una sola plataforma un centro de llamadas impulsado por IA, un CRM completo y un motor de automatización de flujos de trabajo. En los próximos 15 minutos creará su primer agente de voz con IA, hablará con él en vivo y le asignará un número de teléfono real.",
+  "timeToComplete": "15 minutos",
   "steps": [
     {
-      "id": "create-agent",
-      "title": "Crear un nuevo agente",
-      "content": "<ol><li>Ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes).</li><li>Haz clic en <strong>Create New Agent</strong> (Crear nuevo agente).</li><li>Asigna un nombre de agente significativo (por ejemplo, ‘Ben’).</li><li>Selecciona un modelo:<ul><li><strong>Real-time model</strong> (modelo en tiempo real) (recomendado): el más rápido y con el sonido más natural.</li><li><strong>LLM + STT/TTS integration</strong> (integración LLM + STT/TTS): totalmente personalizable, pero puede implicar costos adicionales.</li></ul>El precio varía según el modelo que elijas. </li><li>Selecciona un proveedor de voz:<ul><li>Voces nativas (recomendadas al usar modelos en tiempo real; se incluyen con el modelo y no agregan costos adicionales).</li><li>Los proveedores alternativos pueden generar costos adicionales.</li></ul></li><li>Configura:<ul><li><strong>Opening Message</strong> (Mensaje de apertura): el saludo que se muestra a los usuarios.</li><li><strong>Manual Prompt / Instructions</strong> (Instrucciones manuales): define el estilo, el comportamiento y las respuestas de reserva.</li><li><strong>Conversation Starter</strong> (Inicio de conversación): elige si habla primero el agente o el usuario.</li><li><strong>Temperature</strong> (Temperatura):<ul><li>Valores más bajos = respuestas consistentes y predecibles.</li><li>Valores más altos = respuestas más creativas y aleatorias. (Valor inicial recomendado: 0.7).</li></ul></li></ul></li></ol>",
+      "id": "what-is-imash",
+      "title": "¿Qué es iMash?",
+      "content": "<p>iMash es la plataforma donde su negocio contesta cada llamada, da seguimiento a cada lead y nunca duerme. En su núcleo están los <strong>agentes de voz con IA</strong>: asistentes de sonido natural que contestan y realizan llamadas telefónicas 24/7, agendan citas, califican leads y transfieren a su equipo humano cuando hace falta. Alrededor de ellos, iMash le da la operación completa: <strong>campañas salientes inteligentes y marcadores predictivos</strong>, un <strong>CRM completo con pipeline de ventas</strong> (cotizaciones, facturas y pagos incluidos), <strong>despacho de servicio en campo</strong> que envía trabajos por SMS a los técnicos automáticamente, <strong>mensajería omnicanal</strong> por SMS, WhatsApp y Email, un <strong>contact center para equipos humanos</strong>, <strong>automatizaciones</strong> de arrastrar y soltar, y <strong>analíticas en tiempo real</strong> de todo. Un solo inicio de sesión, un solo lugar, todo conectado con todo.</p><p>La forma más rápida de sentir la magia es crear un agente y escucharlo hablar — así que hagamos exactamente eso.</p>",
       "images": [
         {
-          "src": "images/agents/create-agent-modal-light.png",
-          "alt": "Constructor de nuevo agente",
-          "caption": "Un agente completamente nuevo se abre en el constructor, listo para configurar",
+          "src": "images/get-started/quick-start-home-light.png",
+          "alt": "El panel Overview de iMash con estadísticas en vivo",
+          "caption": "Su base de operaciones: el panel Overview muestra contactos, agentes, llamadas y gasto en tiempo real",
           "theme": "light"
         },
         {
-          "src": "images/agents/create-agent-modal-dark.png",
-          "alt": "Constructor de nuevo agente",
-          "caption": "Un agente completamente nuevo se abre en el constructor, listo para configurar",
+          "src": "images/get-started/quick-start-home-dark.png",
+          "alt": "El panel Overview de iMash con estadísticas en vivo",
+          "caption": "Su base de operaciones: el panel Overview muestra contactos, agentes, llamadas y gasto en tiempo real",
           "theme": "dark"
         }
       ]
     },
     {
-      "id": "test-agent",
-      "title": "Probar el agente",
-      "content": "<ol><li>Abre la <strong>Test Window</strong> (Ventana de prueba) → haz clic en <strong>Test Agent</strong> (Probar agente) → <strong>Connect</strong> (Conectar).</li><li>Verifica la interacción de audio (tanto la voz del agente como la del usuario).</li></ol>",
+      "id": "create-your-first-agent",
+      "title": "Sus primeros 15 minutos — Cree un agente de IA",
+      "content": "<p>Toda gran configuración empieza con un agente. Así se le da vida al suyo:</p><ol><li>En la barra lateral izquierda, bajo <strong>Intelligence Center</strong> (Centro de Inteligencia), haga clic en <strong>Smart Agents</strong> (Agentes Inteligentes).</li><li>Haga clic en el botón azul <strong>Create New Agent</strong> (Crear Nuevo Agente) en la parte superior derecha de la lista.</li><li>Su nuevo agente se crea al instante con un nombre provisional (como <em>Agent_1234567</em>) y se abre directamente en el editor visual.</li></ol><p>¿Prefiere una ventaja inicial? Haga clic en la flecha junto a <strong>Create New Agent</strong> y elija <strong>Browse Templates</strong> (Explorar Plantillas) para partir de un agente ya construido.</p><blockquote>💡 <strong>Consejo:</strong> No se complique con el primer agente — puede renombrarlo, cambiarle la voz y reescribir sus instrucciones en cualquier momento. La meta ahora es escucharlo hablar.</blockquote>",
       "images": [
         {
-          "src": "images/agents/test-agent-light.png",
-          "alt": "Prueba tu agente",
-          "caption": "Prueba el agente en vivo en tu navegador antes de publicarlo",
+          "src": "images/get-started/quick-start-agents-list-light.png",
+          "alt": "Lista de Smart Agents con el botón Create New Agent",
+          "caption": "Smart Agents es su plantilla de agentes — haga clic en Create New Agent para añadir uno",
           "theme": "light"
         },
         {
-          "src": "images/agents/test-agent-dark.png",
-          "alt": "Prueba tu agente",
-          "caption": "Prueba el agente en vivo en tu navegador antes de publicarlo",
+          "src": "images/get-started/quick-start-agents-list-dark.png",
+          "alt": "Lista de Smart Agents con el botón Create New Agent",
+          "caption": "Smart Agents es su plantilla de agentes — haga clic en Create New Agent para añadir uno",
           "theme": "dark"
         }
       ]
     },
     {
-      "id": "agent-features",
-      "title": "Configurar las funciones del agente",
-      "content": "<ul><li><strong>Knowledge Base</strong> (Base de conocimiento): sube archivos para ampliar el conocimiento del agente.</li><li><strong>Tools</strong> (Herramientas): agrega funciones (por ejemplo, la herramienta End Call, para finalizar la llamada). Los agentes pueden activar herramientas de forma autónoma.</li><li><strong>Settings</strong> (Configuración): define umbrales, como los mensajes de seguimiento automáticos tras la inactividad del usuario (por ejemplo, 8 segundos).</li><li><strong>Privacy</strong> (Privacidad): elige si conservar o descartar las grabaciones de las llamadas.</li><li><strong>Advanced</strong> (Avanzado): configura acciones posteriores a la llamada, como el resumen y la recopilación de datos estructurados (por ejemplo, el nombre y la edad del usuario). <br><strong>Al finalizar una llamada:</strong> accede a <strong>Call Logs</strong> (Registros de llamadas) para revisar las conversaciones. En la <strong>Analysis Tab</strong> (pestaña Análisis), consulta los resúmenes de llamadas y los datos estructurados recopilados por el agente para obtener información más profunda.</li><li><strong>Observer Agent</strong> (Agente observador): ofrece indicaciones y monitoreo en vivo durante las conversaciones.</li><li><strong>Embedding Agents</strong> (Incrustar agentes): los agentes pueden incrustarse en sitios web para la interacción directa.</li><li><strong>MCP Automation</strong> (Automatización MCP): configura automatizaciones a través de la Automation Tab (pestaña Automatización). Las automatizaciones pueden vincularse a los agentes mediante un servidor MCP.</li></ul>",
+      "id": "shape-your-agent",
+      "title": "Dele un cerebro, una voz y una personalidad",
+      "content": "<p>Los agentes nuevos se abren en el editor visual: toda la mente de su agente en un solo lienzo. Las tres tarjetas que alimentan el nodo <strong>Agent</strong> (Agente) son sus sentidos:</p><ul><li><strong>Tarjeta LLM</strong> — el modelo de lenguaje que piensa. Haga clic en <strong>Model</strong> (Modelo) para elegir uno, y deslice <strong>Temperature</strong> (Temperatura) entre <em>Precise</em> (Preciso) y <em>Creative</em> (Creativo); 0.7 es un excelente punto de partida.</li><li><strong>Tarjeta TTS</strong> — la voz de texto a voz que escuchan quienes llaman. Haga clic en <strong>Voice</strong> (Voz) para explorar y escuchar voces.</li><li><strong>Tarjeta STT</strong> — voz a texto, cómo escucha el agente. El modelo multilingüe predeterminado funciona de inmediato.</li></ul><p>En el propio nodo <strong>Agent</strong>, defina la identidad:</p><ul><li><strong>Name</strong> (Nombre) — haga clic para renombrar su agente (p. ej. \"Ben de Soporte\").</li><li><strong>Persona</strong> — las instrucciones que definen quién es el agente, qué sabe y cómo se comporta.</li><li><strong>Begins</strong> (Inicia) — la frase de apertura que el agente dice al comenzar la llamada.</li><li><strong>Allow interruptions</strong> (Permitir interrupciones) — déjelo activado para que las personas puedan interrumpir al agente con naturalidad.</li></ul><p>En la parte superior verá interruptores de capacidades — <strong>Knowledge Base</strong> (Base de Conocimiento), <strong>Webhooks</strong>, <strong>Observer Agent</strong> (Agente Observador), <strong>IVR</strong>, <strong>CRM</strong>, <strong>Dispatch</strong> (Despacho), <strong>Messages</strong> (Mensajes) y <strong>Widget</strong> — cada uno desbloquea un superpoder que podrá explorar después.</p><blockquote>💡 <strong>Consejo:</strong> ¿Con ganas de más? Escriba lo que quiere en la barra <strong>AI Builder</strong> (Constructor IA) en la parte inferior (p. ej. \"Agrega un If/Else que bifurque según la intención del cliente\") y iMash construirá el flujo por usted.</blockquote>",
       "images": [
         {
-          "src": "images/agents/assistant-editor-light.png",
-          "alt": "Paneles de funciones del agente",
-          "caption": "Activa la Base de conocimiento, la Voz, el LLM, las herramientas y más",
+          "src": "images/get-started/quick-start-agent-editor-light.png",
+          "alt": "El editor visual de agentes con las tarjetas LLM, TTS y STT conectadas al nodo Agent",
+          "caption": "El editor visual: LLM, voz y reconocimiento de voz conectados a su agente en un solo lienzo",
           "theme": "light"
         },
         {
-          "src": "images/agents/assistant-editor-dark.png",
-          "alt": "Paneles de funciones del agente",
-          "caption": "Activa la Base de conocimiento, la Voz, el LLM, las herramientas y más",
+          "src": "images/get-started/quick-start-agent-editor-dark.png",
+          "alt": "El editor visual de agentes con las tarjetas LLM, TTS y STT conectadas al nodo Agent",
+          "caption": "El editor visual: LLM, voz y reconocimiento de voz conectados a su agente en un solo lienzo",
           "theme": "dark"
         }
       ]
     },
     {
-      "id": "connect-phone",
-      "title": "Conectar un número de teléfono",
-      "content": "<ol><li>Ve a <strong>Phone Numbers → Buy New Number</strong> (Números de teléfono → Comprar nuevo número).</li><li>Selecciona el país y el código de área.</li><li>Elige y compra los números disponibles.</li><li>Alternativamente, importa un número de un proveedor SIP agregando los datos del proveedor en la sección SIP Providers (Proveedores SIP).</li></ol>",
+      "id": "test-your-agent",
+      "title": "Hable con su agente — directamente en el navegador",
+      "content": "<p>Este es el momento. Todavía no necesita número de teléfono: puede tener una conversación de voz en vivo con su agente desde el propio editor:</p><ol><li>En la barra inferior del lienzo, haga clic en <strong>Live Test</strong> (Prueba en Vivo).</li><li>Haga clic en el botón <strong>Start</strong> (Iniciar).</li><li>Cuando el navegador pida acceso al micrófono, haga clic en <strong>Allow</strong> (Permitir).</li><li>¡Salude! El agente responde con su frase de apertura y mantiene una conversación real. También puede escribir en el cuadro <strong>Talk to your agent</strong> (Habla con tu agente) para chatear por texto.</li></ol><blockquote>⚠️ <strong>Atención:</strong> Si no escucha nada, verifique que el navegador tenga permiso de micrófono y que sus altavoces no estén silenciados — el aviso de micrófono del navegador solo aparece la primera vez.</blockquote><p>¿No le convence una respuesta? Vuelva a <strong>AI Builder</strong>, ajuste la persona o la frase de apertura y pruebe de nuevo. Iterar toma segundos.</p>",
       "images": [
         {
-          "src": "images/phone/phone-numbers-light.png",
-          "alt": "Números de teléfono",
-          "caption": "Conecta un número de teléfono para que tu agente pueda recibir llamadas",
+          "src": "images/get-started/quick-start-live-test-light.png",
+          "alt": "La barra Live Test con el botón Start en el editor de agentes",
+          "caption": "Cambie a Live Test y presione Start para hablar con su agente al instante",
           "theme": "light"
         },
         {
-          "src": "images/phone/phone-numbers-dark.png",
-          "alt": "Números de teléfono",
-          "caption": "Conecta un número de teléfono para que tu agente pueda recibir llamadas",
+          "src": "images/get-started/quick-start-live-test-dark.png",
+          "alt": "La barra Live Test con el botón Start en el editor de agentes",
+          "caption": "Cambie a Live Test y presione Start para hablar con su agente al instante",
           "theme": "dark"
         }
       ]
     },
     {
-      "id": "live-calls",
-      "title": "Realizar llamadas en vivo",
-      "content": "<ol><li>Abre el <strong>Live Calls Panel</strong> (Panel de llamadas en vivo).</li><li>Haz clic en el <strong>Telephone Icon</strong> (ícono de teléfono) (arriba a la derecha).</li><li>Selecciona el modo <strong>AI Agent Call</strong> (Llamada con agente de IA).</li><li>Elige:<ul><li>El número desde el cual llamar.</li><li>El agente que gestionará la llamada.</li><li>El número de destino que se marcará.</li></ul></li><li>Únete o monitorea la llamada en vivo si es necesario. Observa las interacciones en tiempo real e interviene manualmente cuando se requiera.</li></ol>",
+      "id": "give-it-a-phone-number",
+      "title": "Dele a su agente un número de teléfono real",
+      "content": "<p>Un agente con número de teléfono es un empleado que nunca toma un día libre. Consigamos uno:</p><ol><li>En la barra lateral izquierda, bajo <strong>Call Center</strong> (Centro de Llamadas), haga clic en <strong>Phone numbers</strong> (Números de teléfono).</li><li>Haga clic en <strong>Buy New Number</strong> (Comprar Nuevo Número) en la parte superior derecha.</li><li>En la ventana, elija su <strong>Country</strong> (País).</li><li>Bajo <strong>Required capabilities</strong> (Capacidades requeridas), mantenga marcado <strong>Voice</strong> (Voz) — agregue <strong>SMS</strong> si también quiere mensajes de texto en este número.</li><li>Escriba un <strong>Area code, locality, or prefix</strong> (código de área, localidad o prefijo, p. ej. 212) y haga clic en <strong>Search</strong> (Buscar).</li><li>Seleccione los números que le gusten de la lista — el <strong>Total</strong> muestra el precio mensual — y luego haga clic en <strong>Buy Numbers</strong> (Comprar Números).</li></ol><blockquote>💡 <strong>Consejo:</strong> Si la ventana muestra el aviso <strong>Add a payment method first</strong> (Agregue primero un método de pago), haga clic en el enlace dentro del aviso para guardar una tarjeta — y luego regrese a comprar su número.</blockquote><p>¿Ya tiene números con otro operador? Use <strong>Import Number</strong> (Importar Número), o conecte su propia troncal en <strong>SIP Providers</strong> (Proveedores SIP) en la barra lateral — iMash se integra sin problemas con el sistema telefónico que ya posee.</p>",
       "images": [
         {
-          "src": "images/contact-center/cc-live-monitor-light.png",
-          "alt": "Llamadas en vivo",
-          "caption": "Observa las llamadas en vivo en el Contact Center (Centro de contacto)",
+          "src": "images/get-started/quick-start-phone-numbers-light.png",
+          "alt": "La página Phone Numbers con los botones Buy New Number e Import Number",
+          "caption": "La página Phone Numbers — compre números nuevos o importe los que ya posee",
           "theme": "light"
         },
         {
-          "src": "images/contact-center/cc-live-monitor-dark.png",
-          "alt": "Llamadas en vivo",
-          "caption": "Observa las llamadas en vivo en el Contact Center (Centro de contacto)",
+          "src": "images/get-started/quick-start-phone-numbers-dark.png",
+          "alt": "La página Phone Numbers con los botones Buy New Number e Import Number",
+          "caption": "La página Phone Numbers — compre números nuevos o importe los que ya posee",
+          "theme": "dark"
+        },
+        {
+          "src": "images/get-started/quick-start-buy-number-light.png",
+          "alt": "La ventana Buy New Number con país, capacidades y búsqueda por código de área",
+          "caption": "Elija país, seleccione capacidades, busque un código de área — listo",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/quick-start-buy-number-dark.png",
+          "alt": "La ventana Buy New Number con país, capacidades y búsqueda por código de área",
+          "caption": "Elija país, seleccione capacidades, busque un código de área — listo",
           "theme": "dark"
         }
       ]
     },
     {
-      "id": "additional-features",
-      "title": "Funciones adicionales en iMash",
-      "content": "<ul><li><strong>Overview Page</strong> (Página de resumen): panel de análisis en vivo.</li><li><strong>Automation Tab</strong> (Pestaña de automatización): crea flujos de trabajo y servidores.</li><li><strong>Call Center</strong> (Centro de llamadas): gestiona agentes, registros, números de teléfono y proveedores SIP.</li><li><strong>Campaigns</strong> (Campañas): crea y gestiona campañas salientes.</li><li><strong>CRM</strong>: gestiona cuentas, contactos y prospectos con seguimiento del ciclo de vida.</li><li><strong>Calendar</strong> (Calendario): programa reuniones y asigna llamadas a los agentes.</li><li><strong>API Keys</strong> (Claves de API): genera claves para usar iMash como infraestructura (sin la interfaz).</li><li><strong>Credentials</strong> (Credenciales): conéctate directamente con proveedores externos de voz y LLM.</li><li><strong>Account Settings</strong> (Configuración de la cuenta): gestiona el perfil del usuario.</li><li><strong>Billing</strong> (Facturación): gestiona los métodos de pago y el saldo de la cuenta.</li><li><strong>Demo Data</strong> (Datos de demostración): instala agentes, prospectos y registros predefinidos para explorar las funciones rápidamente.</li></ul>",
+      "id": "connect-agent-to-number",
+      "title": "Conecte el agente al número — y haga la primera llamada",
+      "content": "<p>Último paso de conexión: dígale al número quién debe contestar:</p><ol><li>En la página <strong>Phone Numbers</strong>, haga clic en el número que acaba de comprar. Se abre el panel <strong>Phone Number Details</strong> (Detalles del Número).</li><li>En la pestaña <strong>Settings</strong> (Configuración), bajo <strong>Inbound Settings</strong> (Configuración de Entrada), ponga <strong>Call Handling</strong> (Manejo de Llamadas) en <strong>Enable Agents</strong> (Habilitar Agentes).</li><li>En el menú <strong>Inbound Agent</strong> (Agente de Entrada), seleccione el agente que creó.</li><li>Haga clic en <strong>Save Settings</strong> (Guardar Configuración).</li><li>Ahora la recompensa: <strong>llame al número desde su propio teléfono</strong>. Su agente contesta, lo saluda con su frase de apertura y maneja la conversación — también puede hacer clic en <strong>Test Call</strong> (Llamada de Prueba) en el panel para lanzar una prueba.</li></ol><p>Eso es todo — ya tiene un empleado de IA con su propia línea telefónica. Cada llamada que atiende aparece en <strong>Call Logs</strong> (Registros de Llamadas) con transcripción completa, grabación y resumen generado por IA.</p><blockquote>💡 <strong>Consejo:</strong> Las opciones <strong>Warm Transfer</strong> (Transferencia Asistida) y <strong>Cold Transfer</strong> (Transferencia Directa) permiten que un número desvíe llamadas a un humano u otra línea en lugar de (o después de) la IA — perfecto cuando quiera combinar IA con equipos humanos.</blockquote>",
       "images": [
         {
-          "src": "images/agents/tools-mcp-light.png",
-          "alt": "Herramientas y MCP",
-          "caption": "Dale a tu agente herramientas e integraciones para tener más potencia",
+          "src": "images/get-started/quick-start-assign-agent-light.png",
+          "alt": "Panel Phone Number Details con la configuración de Call Handling e Inbound Agent",
+          "caption": "Ponga Call Handling en Enable Agents y elija su agente como Inbound Agent",
           "theme": "light"
         },
         {
-          "src": "images/agents/tools-mcp-dark.png",
-          "alt": "Herramientas y MCP",
-          "caption": "Dale a tu agente herramientas e integraciones para tener más potencia",
+          "src": "images/get-started/quick-start-assign-agent-dark.png",
+          "alt": "Panel Phone Number Details con la configuración de Call Handling e Inbound Agent",
+          "caption": "Ponga Call Handling en Enable Agents y elija su agente como Inbound Agent",
           "theme": "dark"
         }
       ]
+    },
+    {
+      "id": "explore-the-platform",
+      "title": "Explore la plataforma",
+      "content": "<p>Su agente ya está en vivo — y apenas ha rascado la superficie. Aquí está el resto del universo iMash, a un clic de distancia:</p><ul><li><strong>Agentes de Voz IA</strong> — bases de conocimiento, herramientas, sub-agentes, variables personalizadas e incrustación en sitios web convierten un agente simple en un equipo de especialistas. <a data-href=\"/agents/create-agent\">Construya agentes más inteligentes →</a></li><li><strong>Sistema Telefónico</strong> — números, proveedores SIP, enrutamiento de llamadas, extensiones PBX y buzón de voz, todo administrado en un solo lugar. <a data-href=\"/phone/add-phone-number\">Configure su sistema telefónico →</a></li><li><strong>Contact Center</strong> — un espacio completo para equipos humanos: grupos de habilidades, colas, estrategias de timbrado, monitoreo en vivo, susurro e intervención. <a data-href=\"/contact-center/overview\">Recorra el Contact Center →</a></li><li><strong>Campañas y Marcadores</strong> — cargue una lista de marcación y deje que agentes de IA (o un marcador predictivo que alimenta a sus representantes humanos) la trabajen automáticamente. <a data-href=\"/campaigns/create-campaign\">Lance una campaña →</a></li><li><strong>CRM</strong> — leads, contactos, cuentas, tareas, calendario y formularios de reserva en línea, todo conectado con cada llamada y mensaje. <a data-href=\"/crm/leads\">Organice su CRM →</a></li><li><strong>Pipeline de Ventas</strong> — negocios, cotizaciones, facturas, suscripciones y pagos con tarjeta, del primer contacto al pago completo. <a data-href=\"/pipeline/deals\">Trabaje su pipeline →</a></li><li><strong>Despacho de Servicio en Campo</strong> — trabajos enviados por SMS a los técnicos automáticamente, gana el primero en aceptar, con notificaciones al cliente en el camino. <a data-href=\"/dispatch/overview\">Automatice el despacho →</a></li><li><strong>Mensajes</strong> — SMS, WhatsApp y Email en bandejas unificadas, con agentes de texto IA que responden en cada canal. <a data-href=\"/messages/sms\">Domine la mensajería →</a></li><li><strong>Marketing</strong> — importe bases de contactos, extraiga negocios locales y construya listas de leads listas para marcar. Encuentre nuevos leads →</li><li><strong>Automatizaciones</strong> — flujos inteligentes visuales, herramientas personalizadas, webhooks y servidores MCP que conectan iMash con todo lo demás. <a data-href=\"/automations/smart-flows\">Automatice sus procesos →</a></li><li><strong>Analíticas</strong> — paneles, reportes y desgloses de costo por llamada para saber siempre qué está funcionando. <a data-href=\"/analytics/analytics-dashboard\">Mida todo →</a></li><li><strong>Configuración</strong> — miembros del equipo y roles, facturación, seguridad, registro de auditoría y marca blanca completa. <a data-href=\"/settings/team-management\">Configure su espacio de trabajo →</a></li></ul>",
+      "images": []
     }
   ],
   "nextSteps": {
     "title": "¿Qué sigue?",
-    "description": "¡Felicitaciones! 🎉 Configuraste con éxito tu primer agente de IA y realizaste tus primeras llamadas a la API. Esto es lo que puedes explorar a continuación:",
+    "description": "Acaba de crear un empleado de IA con su propia línea telefónica — en minutos. 🎉 Ahora oriéntese y empiece a escalar:",
     "cards": [
       {
-        "href": "/agents/agent-settings",
-        "title": "Configuración avanzada del agente",
-        "description": "Aprende sobre herramientas personalizadas, webhooks y técnicas avanzadas de prompting."
+        "href": "/get-started/dashboard-overview",
+        "title": "Recorra el Panel",
+        "description": "Conozca el panel Overview — estadísticas, filtros, llamadas en vivo y acciones rápidas."
+      },
+      {
+        "href": "/agents/create-agent",
+        "title": "Construya un agente más inteligente",
+        "description": "Profundice en prompts, modelos, voces y todo lo que el editor de agentes puede hacer."
       },
       {
         "href": "/phone/add-phone-number",
-        "title": "Configurar números de teléfono",
-        "description": "Conecta tus propios números de teléfono para llamadas entrantes y salientes."
+        "title": "Domine los números telefónicos",
+        "description": "Compre, importe y configure números — además de enrutamiento, capacidades y 10DLC."
       },
       {
         "href": "/campaigns/create-campaign",
-        "title": "Crear campañas",
-        "description": "Configura campañas de llamadas automatizadas con listas de marcado y programación."
-      },
-      {
-        "href": "/automations/smart-flows",
-        "title": "Crear Smart Flows",
-        "description": "Crea flujos de conversación complejos con lógica de ramificación."
+        "title": "Lance su primera campaña",
+        "description": "Ponga a su agente a trabajar en una lista de marcación saliente con programación y reintentos."
       }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a> para obtener documentación detallada</li><li>🎥 Mira nuestros <a data-href=\"/videos\">videotutoriales</a> para ver guías paso a paso</li></ul>"
+    "title": "¿Necesita ayuda?",
+    "content": "<p>Si tiene algún problema o pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a> para documentación detallada</li><li>🎥 Vea nuestros <a data-href=\"/videos\">videotutoriales</a> con guías paso a paso</li></ul>"
   },
-  "metaTitle": "Guía de inicio rápido: comienza con iMash en 10 minutos",
-  "metaDescription": "Crea tu primer agente de voz con IA, genera claves de API y realiza tu primera llamada a la API. Guía paso a paso para comenzar con la plataforma iMash.",
-  "metaKeywords": "inicio rápido, primeros pasos, tutorial de iMash, configuración de agente de IA, generación de clave de API, primera llamada a la API, creación de agente de voz"
+  "metaTitle": "Bienvenido a iMash — Guía de Inicio Rápido | iMash Documentation",
+  "metaDescription": "Descubra lo que iMash puede hacer y cree su primer agente de voz con IA en 15 minutos: cree un agente, pruébelo en vivo en el navegador y conéctelo a un número de teléfono real.",
+  "metaKeywords": "inicio rápido, primeros pasos, tutorial iMash, agente de voz IA, call center IA, CRM, configuración de número telefónico, probar agente, recorrido de la plataforma"
 }

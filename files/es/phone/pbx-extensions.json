@@ -1,0 +1,86 @@
+{
+  "title": "Extensiones PBX",
+  "lede": "Asigne a cada escritorio, departamento o agente de IA su propio número interno corto — como 101 o 202 — en su propia troncal SIP. Importe una extensión en menos de un minuto, diríjala a un agente de IA o desvíela a donde quiera, y marque entre extensiones como en una centralita de oficina completa.",
+  "timeToComplete": "10 minutos",
+  "steps": [
+    {
+      "id": "open-pbx-extensions",
+      "title": "Abra PBX Extensions",
+      "content": "<p>Una extensión PBX es un número interno corto (por ejemplo <strong>101</strong>) que vive en <em>su propio</em> proveedor SIP o PBX de oficina y se importa a iMash. Una vez importada, se comporta como cualquier otro número de la plataforma: puede contestarla un agente de IA, puede desviarse a una persona, y cada llamada que realiza o recibe queda registrada.</p><ol><li>En la barra lateral izquierda, bajo <strong>Call Center</strong> (Centro de llamadas), haga clic en <strong>PBX Extensions</strong> (Extensiones PBX). (También puede usar la tarjeta <strong>PBX Extensions</strong> en la franja de pestañas de Contact Center en la parte superior.)</li></ol><p>La lista muestra una fila por extensión con estas columnas:</p><ul><li><strong>Extension</strong> (Extensión) — el número completo almacenado (por ejemplo <code>+0012101</code>). Haga clic en él para abrir los detalles de la extensión.</li><li><strong>Label</strong> (Etiqueta) — un nombre descriptivo como \"Recepción\"; haga clic en el lápiz para editarlo en línea.</li><li><strong>Inbound Agent</strong> (Agente entrante) — el agente de IA que contesta las llamadas a esta extensión.</li><li><strong>Outgoing</strong> / <strong>Incoming</strong> (Salientes / Entrantes) — contadores de llamadas de la extensión.</li><li><strong>Provider</strong> (Proveedor) — en qué troncal SIP vive la extensión.</li><li><strong>Owner</strong> (Propietario) — el miembro del equipo al que pertenece la extensión.</li><li><strong>Actions</strong> (Acciones) — el icono de ojo abre los detalles; el icono de papelera elimina la extensión.</li></ul>",
+      "images": [
+        { "src": "images/phone/pbx-extensions-list-light.png", "alt": "Página de lista de Extensiones PBX", "caption": "Call Center → PBX Extensions — todos sus números internos en un solo lugar.", "theme": "light" },
+        { "src": "images/phone/pbx-extensions-list-dark.png", "alt": "Página de lista de Extensiones PBX", "caption": "Call Center → PBX Extensions — todos sus números internos en un solo lugar.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "connect-provider-first",
+      "title": "Antes de empezar: conecte un proveedor SIP",
+      "content": "<p>Las extensiones siempre viven en una troncal SIP que usted aporta — no son números comprados en iMash. Así que el único requisito previo es un proveedor SIP <strong>Custom</strong> (Personalizado) conectado.</p><ol><li>En la barra lateral izquierda, haga clic en <strong>SIP Providers</strong> (Proveedores SIP) y compruebe que su troncal o PBX aparece en la lista.</li><li>Si todavía no está, siga primero la guía <em>Añadir un proveedor SIP</em> (unos 10 minutos) y luego vuelva aquí.</li></ol><blockquote>💡 <strong>Consejo:</strong> No hace falta un viaje aparte — también puede añadir el proveedor sobre la marcha desde la propia ventana de Import Extension (hay un atajo <strong>Add Provider</strong> (Añadir proveedor) justo en el desplegable de proveedores).</blockquote>"
+    },
+    {
+      "id": "open-import-modal",
+      "title": "Haga clic en Import Extension y elija su proveedor",
+      "content": "<ol><li>En la esquina superior derecha de la página PBX Extensions, haga clic en <strong>Import Extension</strong> (Importar extensión).</li><li>En el desplegable <strong>SIP Phone Provider</strong> (Proveedor telefónico SIP), seleccione la troncal que aloja esta extensión.</li><li>¿No ve su troncal? Haga clic en <strong>+ Add Provider</strong> (Añadir proveedor) al final del desplegable para crear una sin salir de la página.</li></ol><p>El resto del formulario permanece deshabilitado hasta que se selecciona un proveedor — esa es la señal de que este campo va primero.</p>",
+      "images": [
+        { "src": "images/phone/pbx-extensions-provider-select-light.png", "alt": "Ventana Import Extension con el desplegable SIP Phone Provider abierto", "caption": "Elija la troncal SIP donde vive la extensión — o añada una directamente desde el desplegable.", "theme": "light" },
+        { "src": "images/phone/pbx-extensions-provider-select-dark.png", "alt": "Ventana Import Extension con el desplegable SIP Phone Provider abierto", "caption": "Elija la troncal SIP donde vive la extensión — o añada una directamente desde el desplegable.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "fill-extension-details",
+      "title": "Complete los datos de la extensión",
+      "content": "<p>Tres campos rápidos y habrá terminado:</p><ol><li><strong>Label</strong> (Etiqueta) — un nombre descriptivo que reconocerá en la lista, como \"Recepción\" o \"Línea de soporte\".</li><li><strong>Include \"+\" prefix</strong> (Incluir prefijo \"+\") — déjelo marcado salvo que su proveedor SIP envíe los números de extensión <em>sin</em> el <code>+</code> inicial. En cualquier caso, iMash trata <code>+0012101</code> y <code>0012101</code> como la misma extensión.</li><li><strong>Extension Number</strong> (Número de extensión) — escriba solo el número corto, de 1 a 10 dígitos (por ejemplo <code>101</code>). El prefijo <code>0012</code> que aparece delante del campo se añade automáticamente — es la forma en que iMash almacena las extensiones para que nunca choquen con números de teléfono reales. La extensión 101 se guarda como <code>+0012101</code>.</li></ol><p>Mientras escribe, iMash comprueba la disponibilidad en tiempo real:</p><ul><li>✅ <strong>\"Extension is available!\"</strong> (¡La extensión está disponible!) — todo listo.</li><li>❌ <strong>\"Extension is taken\"</strong> (La extensión está ocupada) — iMash sugiere números libres cercanos; haga clic en una etiqueta de sugerencia para usarla al instante.</li></ul><blockquote>💡 <strong>Avanzado:</strong> Si su proveedor direcciona una subextensión con <code>#</code>, puede añadirla — por ejemplo, <code>101#999</code> se importa como <code>+0012101#999</code>. Después del <code>#</code> solo se permiten dígitos.</blockquote>",
+      "images": [
+        { "src": "images/phone/pbx-extensions-import-modal-light.png", "alt": "Ventana Import Extension con proveedor seleccionado", "caption": "Etiqueta, elección de prefijo y el número corto de extensión — el prefijo 0012 se añade por usted.", "theme": "light" },
+        { "src": "images/phone/pbx-extensions-import-modal-dark.png", "alt": "Ventana Import Extension con proveedor seleccionado", "caption": "Etiqueta, elección de prefijo y el número corto de extensión — el prefijo 0012 se añade por usted.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "import-and-provision",
+      "title": "Importe — el enrutamiento se aprovisiona automáticamente",
+      "content": "<ol><li>Haga clic en <strong>Import Extension</strong> (Importar extensión) en la parte inferior de la ventana. (El botón permanece deshabilitado hasta que el número sea válido y haya un proveedor seleccionado.)</li><li>iMash guarda la extensión <em>y</em> configura el enrutamiento SIP de llamadas en el mismo paso — sin configuración manual de la troncal.</li><li>Cuando vea <strong>\"Your Extension has been imported successfully\"</strong> (Su extensión se ha importado correctamente), la nueva fila aparece en la lista, lista para recibir llamadas.</li></ol><blockquote>⚠️ <strong>Bueno saberlo:</strong> Si el enrutamiento SIP no se puede configurar, la extensión <em>no</em> se guarda — verá un mensaje \"Extension not added\" (Extensión no añadida) con el motivo, y la ventana permanece abierta para que corrija el problema (normalmente los datos del gateway del proveedor) y vuelva a hacer clic en <strong>Import Extension</strong>. Nunca quedará una extensión muerta que parezca activa pero no pueda enrutar llamadas.</blockquote>"
+    },
+    {
+      "id": "configure-call-handling",
+      "title": "Elija cómo contesta la extensión: agente de IA o desvío",
+      "content": "<p>Ahora la parte divertida — decidir qué ocurre cuando alguien marca la extensión.</p><ol><li>En la lista, haga clic en el número de la extensión (o en el icono de ojo bajo <strong>Actions</strong>). Se abre el panel <strong>Extension Details</strong> (Detalles de la extensión) en la pestaña <strong>Settings</strong> (Configuración).</li><li>Bajo <strong>Inbound Settings</strong> (Configuración de entrada), use el selector <strong>Call Handling</strong> (Gestión de llamadas) para elegir un modo:<ul><li><strong>Enable Agents</strong> (Habilitar agentes) — un agente de IA contesta la extensión. Elíjalo en el desplegable <strong>Inbound Agent</strong> (Agente entrante).</li><li><strong>Enable Forward</strong> (Habilitar desvío) — las llamadas se transfieren. Complete <strong>Forward Calls To:</strong> (Desviar llamadas a:) con otra extensión o un número de teléfono completo y, opcionalmente, elija un <strong>Forwarding Agent</strong> (Agente de desvío) para atender la llamada cuando el desvío entra en juego.</li></ul></li><li>Haga clic en <strong>Save Settings</strong> (Guardar configuración) — se ilumina en azul cuando hay cambios sin guardar.</li><li>¿Quiere oírlo en vivo? Haga clic en <strong>Test Call</strong> (Llamada de prueba) para abrir el marcador web y hablar con el agente de la extensión directamente desde su navegador.</li></ol><p>Las otras dos pestañas del panel — <strong>Inbound Calls</strong> (Llamadas entrantes) y <strong>Outbound Calls</strong> (Llamadas salientes) — listan cada llamada que ha gestionado esta extensión. Haga clic en cualquier fila para abrir el detalle completo de la llamada con grabación y transcripción.</p>",
+      "images": [
+        { "src": "images/phone/pbx-extensions-details-drawer-light.png", "alt": "Panel Extension Details en la pestaña Settings en modo Enable Agents", "caption": "Extension Details → Settings — modo Enable Agents: elija el agente de IA que contesta la extensión.", "theme": "light" },
+        { "src": "images/phone/pbx-extensions-details-drawer-dark.png", "alt": "Panel Extension Details en la pestaña Settings en modo Enable Agents", "caption": "Extension Details → Settings — modo Enable Agents: elija el agente de IA que contesta la extensión.", "theme": "dark" },
+        { "src": "images/phone/pbx-extensions-forward-mode-light.png", "alt": "Panel Extension Details con Call Handling cambiado a Enable Forward", "caption": "Cambie Call Handling a Enable Forward y aparecen los campos de desvío — Save Settings se ilumina en azul.", "theme": "light" },
+        { "src": "images/phone/pbx-extensions-forward-mode-dark.png", "alt": "Panel Extension Details con Call Handling cambiado a Enable Forward", "caption": "Cambie Call Handling a Enable Forward y aparecen los campos de desvío — Save Settings se ilumina en azul.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "dial-between-extensions",
+      "title": "Marque entre extensiones",
+      "content": "<p>Las extensiones convierten iMash en su sistema telefónico interno:</p><ul><li><strong>Desde sus teléfonos SIP / PBX:</strong> marque el número corto (por ejemplo <code>101</code>) y su proveedor entrega la llamada a iMash en el formato <code>0012</code> (<code>+0012101</code>). iMash reconoce la extensión importada y ejecuta su gestión de llamadas — agente de IA o desvío.</li><li><strong>De extensión a extensión:</strong> configure el campo <strong>Forward Calls To:</strong> de una extensión con el número de otra y las llamadas saltan directamente entre ellas.</li><li><strong>Desde un número de teléfono principal:</strong> cualquier número de la plataforma puede desviar sus llamadas a una extensión — abra el número en <strong>Phone numbers</strong> (Números de teléfono), cambie Call Handling a <strong>Enable Forward</strong> e introduzca la extensión. Su línea principal hace sonar la recepción; la recepción es una extensión. Listo.</li></ul><blockquote>💡 <strong>Consejo:</strong> Como cada extensión puede llevar su propio agente de IA, puede dar a cada departamento un agente especialista — marque 101 para el asistente de reservas, 102 para soporte — todo en una sola troncal.</blockquote>"
+    },
+    {
+      "id": "manage-extensions",
+      "title": "Gestione extensiones en bloque: etiquetas, filtros y limpieza",
+      "content": "<p>A medida que su lista de extensiones crece, la página de lista la mantiene ordenada:</p><ul><li><strong>Filter by label</strong> / <strong>Filter by owner</strong> (Filtrar por etiqueta / por propietario) — los dos desplegables encima de la tabla acotan la lista al instante; sus filtros se recuerdan entre visitas.</li><li><strong>Renombrar en línea</strong> — haga clic en el lápiz junto a cualquier etiqueta, escriba o elija una nueva y confirme con la marca de verificación.</li><li><strong>Acciones en bloque</strong> — marque las casillas de varias filas y aparecen tres botones: <strong>Inbound Agent</strong> (asignar o quitar el agente que contesta para toda la selección de una vez), <strong>Edit Label</strong> (Editar etiqueta — reetiquetar toda la selección) y <strong>Delete Selected</strong> (Eliminar seleccionadas).</li><li><strong>Eliminar una</strong> — haga clic en el icono de papelera de una fila y confirme. Eliminar una extensión detiene su enrutamiento; siempre puede volver a importar el mismo número más adelante.</li><li><strong>API Info</strong> (Información de API) — el botón de la esquina superior derecha abre ejemplos de código listos para listar y añadir extensiones de forma programática con su clave de API.</li></ul><blockquote>⚠️ <strong>Cuidado con la eliminación en bloque:</strong> la confirmación se aplica a todas las filas seleccionadas — compruebe el contador \"X selected\" (X seleccionadas) antes de confirmar.</blockquote>",
+      "images": [
+        { "src": "images/phone/pbx-extensions-list-light.png", "alt": "Lista de Extensiones PBX con filtros y acciones en bloque", "caption": "Los filtros de etiqueta y propietario están encima de la tabla; seleccione filas para desbloquear las acciones en bloque.", "theme": "light" },
+        { "src": "images/phone/pbx-extensions-list-dark.png", "alt": "Lista de Extensiones PBX con filtros y acciones en bloque", "caption": "Los filtros de etiqueta y propietario están encima de la tabla; seleccione filas para desbloquear las acciones en bloque.", "theme": "dark" }
+      ]
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Su sistema telefónico interno ya está en marcha — ahora conéctelo con el resto de su centro de llamadas.",
+    "cards": [
+      { "href": "/phone/add-sip-provider", "title": "Añadir un proveedor SIP", "description": "Conecte la troncal o PBX donde viven sus extensiones." },
+      { "href": "/agents/create-agent", "title": "Crear un agente de IA", "description": "Cree el agente que contesta sus extensiones 24/7." },
+      { "href": "/phone/call-routing", "title": "Enrutar llamadas a un agente", "description": "Dirija sus números principales a agentes — o a sus nuevas extensiones." },
+      { "href": "/phone/call-logs", "title": "Revisar los registros de llamadas", "description": "Escuche grabaciones y transcripciones de cada llamada de extensión." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesita ayuda?",
+    "content": "<p>Si tiene algún problema o alguna pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en vídeo</a></li></ul>"
+  },
+  "metaTitle": "Extensiones PBX - Números internos en su propia troncal | iMash Documentation",
+  "metaDescription": "Importe extensiones PBX de su propio proveedor SIP a iMash. Asigne agentes de IA o desvíos por extensión, marque entre extensiones y gestione etiquetas, filtros y acciones en bloque.",
+  "metaKeywords": "extensiones PBX, números internos, troncal SIP, marcación de extensiones, prefijo 0012, agente entrante, desvío de llamadas, centralita, VoIP, centro de llamadas"
+}

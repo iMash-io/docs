@@ -1,47 +1,88 @@
 {
   "title": "Queue Settings",
-  "lede": "When an agent transfers a call to this group as a queue, the customer is held while the group's online members are rung until one answers. Set the maximum wait, what happens on timeout, and the on-hold audio.",
-  "timeToComplete": "5 minutes",
+  "lede": "Never lose a caller to a busy team again. Queues hold your customers with music, live place-in-line updates, and a guaranteed safety net — this guide walks you through every queue setting, from max wait to the AI fallback, plus what your agents see on their side.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
-      "id": "open-queue",
-      "title": "Open the Queue Settings tab",
-      "content": "<ol><li>Go to <strong>Call Center &rarr; Contact Center &rarr; Groups</strong> and select a group.</li><li>Open the <strong>Queue Settings</strong> tab.</li></ol>",
+      "id": "understand-queues",
+      "title": "Understand how queues work in iMash",
+      "content": "<p>A queue is a polite holding room: the caller hears music and spoken updates while iMash keeps ringing your team's <strong>Online</strong> members — the moment an agent frees up, the call connects. A caller lands in a queue in two ways:</p><ul><li><strong>Someone parks them there on purpose.</strong> During a live call, an agent (or an AI assistant) transfers the customer to a group <em>as a queue</em> — for example, handing a billing question to the Billing team's queue.</li><li><strong>Inbound overflow.</strong> A call rings the group but every member is busy — with the overflow toggle on (it is by default), the caller is held in the queue instead of being bounced straight to the fallback.</li></ul><p>Callers are answered in the order they arrived, and the queue can even tell each caller their live place in line. Everything on this page is configured <strong>per group</strong>, so Sales and Support can each have their own wait limits, sounds, and fallbacks.</p>"
+    },
+    {
+      "id": "open-queue-settings",
+      "title": "Open the Queue Settings tab for a group",
+      "content": "<ol><li>In the left sidebar, under <strong>Call Center</strong>, click <strong>Contact Center</strong>.</li><li>Open the <strong>Groups</strong> tab at the top of the page.</li><li>In the <strong>Groups</strong> list on the left, click the group you want to configure.</li><li>In the group panel, open the <strong>Queue Settings</strong> tab (you may need to scroll the tab strip to the right).</li></ol><p>You'll see one card — <strong>Queue (transfer to this group as a queue)</strong> — with the wait limit, the timeout action, and the on-hold audio for this group's queue.</p>",
       "images": [
-        { "src": "images/contact-center/cc-group-queue-settings-light.png", "alt": "Queue Settings tab", "caption": "Queue Settings: max wait, timeout action, and queue hold audio.", "theme": "light" },
-        { "src": "images/contact-center/cc-group-queue-settings-dark.png", "alt": "Queue Settings tab", "caption": "Queue Settings: max wait, timeout action, and queue hold audio.", "theme": "dark" }
+        { "src": "images/contact-center/cc-group-queue-settings-light.png", "alt": "Contact Center Groups tab with a group selected and the Queue Settings tab open", "caption": "Groups → select a group → Queue Settings: max wait, timeout action, and queue audio in one card.", "theme": "light" },
+        { "src": "images/contact-center/cc-group-queue-settings-dark.png", "alt": "Contact Center Groups tab with a group selected and the Queue Settings tab open", "caption": "Groups → select a group → Queue Settings: max wait, timeout action, and queue audio in one card.", "theme": "dark" }
       ]
     },
     {
       "id": "max-wait",
-      "title": "Set the maximum wait",
-      "content": "<p>In <strong>Max wait in queue (seconds)</strong>, enter how long a queued customer waits before the timeout action fires. Enter <strong>0</strong> to use the system default (30 minutes).</p>"
+      "title": "Set the maximum wait time",
+      "content": "<p>In <strong>Max wait in queue (seconds)</strong>, enter how long a queued customer can wait before the timeout action (next step) fires.</p><ul><li><strong>300</strong> (5 minutes) is a solid starting point for most teams.</li><li>Enter <strong>0</strong> to use the system default — 30 minutes.</li><li>The maximum you can set is <strong>14400</strong> seconds (4 hours).</li></ul><blockquote>💡 Think of this as your customer-patience budget. Long enough that a briefly busy team can still catch the call, short enough that nobody stews on hold — 300–600 seconds works well for most support and sales teams.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/queue-settings-card-light.png", "alt": "Queue Settings card showing Max wait in queue, timeout action, and audio toggles", "caption": "The queue card: Max wait in queue (seconds), the timeout action, and the audio toggles.", "theme": "light" },
+        { "src": "images/contact-center/queue-settings-card-dark.png", "alt": "Queue Settings card showing Max wait in queue, timeout action, and audio toggles", "caption": "The queue card: Max wait in queue (seconds), the timeout action, and the audio toggles.", "theme": "dark" }
+      ]
     },
     {
       "id": "on-timeout",
-      "title": "Choose the on-timeout action",
-      "content": "<p>Under <strong>When the max wait is reached</strong>, choose what happens if nobody answers in time:</p><ul><li><strong>Hang up the call.</strong></li><li><strong>Transfer to an AI assistant</strong> — then pick the assistant that takes the call.</li></ul><p>This is the safety net so a waiting customer is never stranded.</p>"
+      "title": "Choose what happens when the max wait is reached",
+      "content": "<p>Under <strong>When the max wait is reached</strong>, pick the safety net for a caller nobody managed to answer in time:</p><ul><li><strong>Hang up the call</strong> — the call simply ends after the max wait.</li><li><strong>Transfer to an AI assistant</strong> — the customer is handed to an AI agent instead of being dropped. A new field appears: <strong>AI assistant to take the call</strong> — pick the assistant (this field is required when this option is selected).</li></ul><blockquote>💡 The AI handoff is the difference between \"we missed a call\" and \"we captured a lead\": the assistant can apologize for the wait, answer questions, take a detailed message, or book a callback — 24/7, even when the whole team is slammed.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/queue-settings-timeout-ai-light.png", "alt": "When the max wait is reached set to Transfer to an AI assistant with the assistant picker visible", "caption": "Choose Transfer to an AI assistant and the required assistant picker appears.", "theme": "light" },
+        { "src": "images/contact-center/queue-settings-timeout-ai-dark.png", "alt": "When the max wait is reached set to Transfer to an AI assistant with the assistant picker visible", "caption": "Choose Transfer to an AI assistant and the required assistant picker appears.", "theme": "dark" }
+      ]
     },
     {
       "id": "queue-audio",
-      "title": "Set the queue hold audio",
-      "content": "<p>Toggle <strong>Play hold music while queued</strong> to play your configured hold or wait music while the caller is in this queue. Optionally add <strong>Queue periodic messages</strong> — spoken lines that loop while the caller is held. You can use tokens like {first_name} and {callers_queue_position}, which updates live with the caller's place in line. Click <strong>Save</strong>.</p>"
+      "title": "Shape what callers hear while they wait",
+      "content": "<p>Two controls decide the on-hold soundtrack for <em>this</em> queue:</p><ul><li><strong>Play hold music while queued</strong> — plays the <strong>Hold music</strong> (or Wait music) you configured on the <strong>Wait &amp; Hold experience</strong> tab. Turn it off for silence between the spoken messages.</li><li><strong>Queue periodic messages</strong> — spoken lines that loop while the caller is held in this queue, separate from the wait messages. Leave the list empty to reuse the wait messages instead.</li></ul><p>With <strong>Queue periodic messages</strong> switched on:</p><ol><li>Tick <strong>Play the first message once before the hold music starts</strong> if you want message 1 to act as a one-time greeting (it's tagged <strong>Before music</strong>).</li><li>Type each message — for example, <em>\"Thanks for waiting, {first_name}.\"</em></li><li>Next to each message, set the wait before it plays: a single number of seconds (e.g. <strong>30</strong>) or a range like <strong>15-45</strong> for a random wait each time.</li><li>Click <strong>Add message</strong> for more lines; the trash icon removes one.</li></ol><blockquote>💡 Personalization tokens work here: <code>{first_name}</code> greets the caller by name, and <code>{callers_queue_position}</code> updates <em>live</em> with their place in line — \"You're number 2 in line\" beats generic hold music every single time.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/queue-settings-periodic-light.png", "alt": "Queue periodic messages enabled with the message list, interval field, and Add message button", "caption": "Queue periodic messages: intro-before-music checkbox, message rows with per-message wait, and Add message.", "theme": "light" },
+        { "src": "images/contact-center/queue-settings-periodic-dark.png", "alt": "Queue periodic messages enabled with the message list, interval field, and Add message button", "caption": "Queue periodic messages: intro-before-music checkbox, message rows with per-message wait, and Add message.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "inbound-overflow-queue",
+      "title": "Decide if busy inbound calls queue automatically",
+      "content": "<p>There's one more queue switch, and it lives on a different tab: open the group's <strong>Ring strategy</strong> tab and find the <strong>Call handling</strong> card.</p><ul><li><strong>Hold callers in a queue when no agent is free</strong> — <strong>On (default)</strong>: if every member is busy, the inbound caller is held in the queue (hold music + place in line) and rings the moment an agent frees up, up to the queue max-wait — then the <strong>When no one answers</strong> fallback runs. <strong>Off</strong>: the call rings the online members once; if nobody answers, the fallback runs immediately — callers are never queued.</li></ul><blockquote>⚠️ Turning this off means a busy moment sends callers straight to the fallback (AI agent or hang-up). Keep it on unless you specifically want a \"ring once, then AI\" flow.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/queue-settings-inbound-queue-light.png", "alt": "Call handling card on the Ring strategy tab with the Hold callers in a queue toggle enabled", "caption": "Ring strategy → Call handling: 'Hold callers in a queue when no agent is free' controls inbound overflow queuing.", "theme": "light" },
+        { "src": "images/contact-center/queue-settings-inbound-queue-dark.png", "alt": "Call handling card on the Ring strategy tab with the Hold callers in a queue toggle enabled", "caption": "Ring strategy → Call handling: 'Hold callers in a queue when no agent is free' controls inbound overflow queuing.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "save-and-test",
+      "title": "Save and test your queue",
+      "content": "<ol><li>Click <strong>Save</strong> at the bottom right of the group panel — one save commits every tab's settings for the group.</li><li>To test: make sure at least one member is <strong>Online</strong>, then have an agent transfer a live call to this group as a queue (or call one of the group's inbound numbers while everyone is busy).</li><li>Watch the <strong>Live Monitor</strong> tab — queued customers appear in the <strong>On Queue</strong> panel in real time, so you can see the queue working the moment you set it up.</li></ol><blockquote>💡 How members are rung out of the queue follows the group's <strong>Ring strategy</strong> — ring all at once, round-robin, linear, or longest idle. Tune it on the Ring strategy tab.</blockquote>"
+    },
+    {
+      "id": "agent-experience",
+      "title": "Know what your agents see",
+      "content": "<p>Here's the queue from your team's side of the glass:</p><ul><li>The <strong>On Queue</strong> panel in the middle of the agent home screen shows every customer currently waiting, with a live count.</li><li>Agents don't \"pick\" from the queue — while they're <strong>Online</strong>, the system automatically rings the next queued customer to them. When nobody is waiting, the panel shows <strong>No customers on queue</strong>.</li><li>To park a customer in a queue, an agent on a live call clicks <strong>Teammate</strong> in the web dialer, which opens <strong>Conference / Transfer</strong>, and picks <strong>A queue</strong> — then chooses the group. The customer hears that group's hold music and messages while its online members are rung.</li></ul><p>That's it — your queue now catches every caller, entertains them by name, and always has an AI backstop. For the full day-in-the-life walkthrough your reps should read, see the Agent Guide below.</p>",
+      "images": [
+        { "src": "images/contact-center/queue-settings-agent-view-light.png", "alt": "Agent home screen with the On Queue panel, web dialer, and Online status", "caption": "The agent view: On Queue panel in the middle, web dialer with the Teammate button on the right, and the Online status card.", "theme": "light" },
+        { "src": "images/contact-center/queue-settings-agent-view-dark.png", "alt": "Agent home screen with the On Queue panel, web dialer, and Online status", "caption": "The agent view: On Queue panel in the middle, web dialer with the Teammate button on the right, and the Online status card.", "theme": "dark" }
+      ]
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Round out how the group rings and sounds.",
+    "description": "Your queue is live — now perfect the rest of the caller's journey, from the first ring to the hold music.",
     "cards": [
-      { "href": "/contact-center/wait-hold", "title": "Wait & Hold Experience", "description": "Music and messages while callers wait." },
-      { "href": "/contact-center/ring-strategy", "title": "Ring Strategy", "description": "How members are rung before queuing." },
-      { "href": "/agents/create-agent", "title": "Create an AI Agent", "description": "Build the assistant for the timeout fallback." }
+      { "href": "/contact-center/ring-strategy", "title": "Ring Strategy", "description": "Choose how members are rung — all at once, round-robin, linear, or longest idle." },
+      { "href": "/contact-center/wait-hold", "title": "Wait & Hold Experience", "description": "Pick the music and messages callers hear while waiting or on hold." },
+      { "href": "/contact-center/agent-guide", "title": "Agent Guide", "description": "The day-one walkthrough for your reps — going Online, the On Queue panel, and transfers." },
+      { "href": "/agents/create-agent", "title": "Create an AI Agent", "description": "Build the assistant that catches queue timeouts 24/7." }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Queue Settings | iMash Docs",
-  "metaDescription": "Configure Contact Center queue settings in iMash: max wait time, on-timeout action (hang up or hand to AI), queue size, and on-hold audio.",
-  "metaKeywords": "queue settings, max wait, timeout, voicemail, ai fallback, hold music, contact center, permission group"
+  "metaTitle": "Queue Settings | iMash Documentation",
+  "metaDescription": "Configure Contact Center queue settings in iMash: max wait time, hang up or AI-assistant timeout action, hold music, live place-in-line periodic messages, inbound overflow queuing, and the agent-side On Queue experience.",
+  "metaKeywords": "queue settings, call queue, max wait, timeout, ai fallback, hold music, periodic messages, queue position, inbound overflow, contact center, permission group, iMash"
 }

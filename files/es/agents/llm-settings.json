@@ -1,55 +1,205 @@
 {
-  "title": "Elige el cerebro (LLM) de tu agente",
-  "lede": "Elige el modelo que impulsa las respuestas de tu Smart Agent (Agente inteligente). Conoce la diferencia entre los modelos realtime (voz a voz) y los modelos de texto (LLM + transcriptor), y cómo configurar cada uno.",
-  "timeToComplete": "6 minutos",
-  "videoUrl": "https://youtu.be/bDy0w1hEz7I",
-  "videoLength": "2",
+  "title": "Elija el Cerebro (LLM) de su Agente",
+  "lede": "El modelo que elija es el cerebro de su agente: decide qué tan inteligente, rápida y natural se siente cada conversación. Esta guía le acompaña por el selector Brains (LLM), los modelos realtime vs. de texto, la temperatura, los modelos de respaldo y el Transcriber (STT) que convierte la voz de quien llama en texto.",
+  "timeToComplete": "8 minutos",
   "steps": [
     {
-      "id": "open-brains",
-      "title": "Abre el panel Brains (LLM)",
-      "content": "<ol><li>Ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes) y abre tu agente.</li><li>En la columna central, haz clic en el panel <strong>Brains (LLM)</strong> (Cerebro). La etiqueta muestra el proveedor y el modelo actuales.</li></ol>",
+      "id": "open-agent",
+      "title": "Abra su Agente",
+      "content": "<p>Toda la configuración de modelos vive dentro de cada agente individual, así que empiece por abrir uno:</p><ol><li>En la barra lateral izquierda, haga clic en <strong>Intelligence Center → Smart Agents</strong> (Centro de Inteligencia → Agentes Inteligentes).</li><li>Observe la lista: las columnas <strong>LLM</strong>, <strong>STT</strong> y <strong>TTS</strong> muestran de un vistazo qué cerebro, transcriptor y voz usa cada agente.</li><li>Haga clic en el <strong>nombre</strong> del agente que quiere configurar. Se abre el editor del agente.</li></ol>",
       "images": [
-        { "src": "images/agents/llm-settings-light.png", "alt": "Selector de modelo LLM", "caption": "El panel Brains (LLM): elige el modelo que impulsa las respuestas.", "theme": "light" },
-        { "src": "images/agents/llm-settings-dark.png", "alt": "Selector de modelo LLM", "caption": "El panel Brains (LLM): elige el modelo que impulsa las respuestas.", "theme": "dark" }
+        {
+          "src": "images/agents/llm-settings-agents-list-light.png",
+          "alt": "Lista de Smart Agents con columnas LLM, STT y TTS",
+          "caption": "La lista de Smart Agents — la columna LLM muestra el cerebro actual de cada agente.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/llm-settings-agents-list-dark.png",
+          "alt": "Lista de Smart Agents con columnas LLM, STT y TTS",
+          "caption": "La lista de Smart Agents — la columna LLM muestra el cerebro actual de cada agente.",
+          "theme": "dark"
+        }
       ]
     },
     {
-      "id": "model-types",
-      "title": "Comprende los dos tipos de modelo",
-      "content": "<ul><li><strong>Modelos realtime</strong> (agrupados en <em>Realtime Agent</em>): un solo modelo procesa el audio de entrada y el audio de salida (voz a voz). La detección de turnos y la transcripción vienen integradas.</li><li><strong>Modelos de texto (LLM)</strong>: el flujo es Voz → Texto → LLM → Voz. Estos se combinan con un <strong>Transcriber (STT)</strong> (Transcriptor) aparte para el reconocimiento de voz y una <strong>Voice (TTS)</strong> (Voz) para la respuesta.</li></ul>",
+      "id": "find-panels",
+      "title": "Localice los Tres Paneles de Motor",
+      "content": "<p>En la columna central del editor, tres paneles impulsan juntos cada conversación:</p><ul><li><strong>Transcriber (STT)</strong> (Transcriptor) — convierte la voz de quien llama en texto (voz a texto).</li><li><strong>Brains (LLM)</strong> (Cerebro) — el modelo de lenguaje que lee la conversación y decide qué responder.</li><li><strong>Voice (TTS)</strong> (Voz) — pronuncia la respuesta en voz alta (texto a voz).</li></ul><p>Cada fila muestra una etiqueta verde con el proveedor y modelo actuales (por ejemplo <strong>google / gemini-3.1-flash-lite</strong>), una nota gris <em>Backup:</em> si hay un respaldo configurado, y un interruptor <strong>ON/OFF</strong>.</p><blockquote>⚠️ Voice, Transcriber y LLM son críticos para las llamadas de voz — deje sus interruptores en <strong>ON</strong>. Si alguno está apagado, su indicador en el encabezado de la página se vuelve rojo y el agente no puede atender llamadas correctamente.</blockquote>",
       "images": [
-        { "src": "images/agents/assistant-editor-light.png", "alt": "Paneles del editor de agentes", "caption": "Los modelos de texto usan paneles separados de Transcriber (STT) y Voice (TTS).", "theme": "light" },
-        { "src": "images/agents/assistant-editor-dark.png", "alt": "Paneles del editor de agentes", "caption": "Los modelos de texto usan paneles separados de Transcriber (STT) y Voice (TTS).", "theme": "dark" }
+        {
+          "src": "images/agents/llm-settings-editor-light.png",
+          "alt": "Editor del agente con los paneles Transcriber, Voice y Brains en la columna central",
+          "caption": "El editor del agente — Transcriber (STT), Voice (TTS) y Brains (LLM) están en la columna central.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/llm-settings-editor-dark.png",
+          "alt": "Editor del agente con los paneles Transcriber, Voice y Brains en la columna central",
+          "caption": "El editor del agente — Transcriber (STT), Voice (TTS) y Brains (LLM) están en la columna central.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "open-brains",
+      "title": "Abra el Selector Brains (LLM)",
+      "content": "<ol><li>Haga clic en la fila <strong>Brains (LLM)</strong>. Se abre el selector de modelos.</li><li>En el <strong>panel izquierdo</strong> verá los grupos de proveedores disponibles en su cuenta — por ejemplo <strong>Realtime Agent</strong> (Agente en Tiempo Real), <strong>Google</strong> (familia Gemini), <strong>OpenAI</strong> (familia GPT) y <strong>Anthropic</strong> (familia Claude). Cada grupo indica cuántos modelos incluye y su especialidad en una línea.</li><li>Haga clic en un grupo de proveedor para explorar sus modelos en la cuadrícula <strong>Model</strong> (Modelo) de la derecha. Explorar grupos nunca cambia nada — solo hacer clic en una tarjeta de modelo aplica el cambio.</li><li>Cuando termine, haga clic en <strong>Done</strong> (Listo) para cerrar el selector.</li></ol><blockquote>💡 Cada selección se guarda al instante — no hay botón de guardar aparte. <strong>Done</strong> simplemente cierra la ventana.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/llm-settings-light.png",
+          "alt": "Selector Brains (LLM) con grupos de proveedores a la izquierda y cuadrícula de modelos a la derecha",
+          "caption": "El selector Brains (LLM) — grupos de proveedores a la izquierda, tarjetas de modelos y Temperature a la derecha.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/llm-settings-dark.png",
+          "alt": "Selector Brains (LLM) con grupos de proveedores a la izquierda y cuadrícula de modelos a la derecha",
+          "caption": "El selector Brains (LLM) — grupos de proveedores a la izquierda, tarjetas de modelos y Temperature a la derecha.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "realtime-vs-text",
+      "title": "Realtime vs. Texto — Elija el Tipo Correcto",
+      "content": "<p>El selector ofrece dos tipos de cerebro fundamentalmente distintos:</p><ul><li><strong>Modelos realtime</strong> (el grupo <strong>Realtime Agent</strong> — p. ej. <strong>gpt-realtime-1.5</strong> o <strong>gemini-2.5-flash-native-audio</strong>): un único modelo escucha el audio y responde hablando directamente (voz a voz). La transcripción y la detección de turnos vienen integradas, así que el panel <strong>Transcriber (STT)</strong> desaparece del editor. Ideal para: las conversaciones más naturales y de menor latencia.</li><li><strong>Modelos de texto (LLM)</strong> (todos los demás grupos): la tubería clásica — <em>Voz → Transcriber (STT) → LLM → Voice (TTS)</em>. Usted elige cada etapa, incluida cualquier voz TTS de la plataforma. Ideal para: control total, clonación de voz, mayor variedad de modelos y costos predecibles.</li></ul><blockquote>💡 Al elegir un modelo realtime de Google, su agente cambia automáticamente a una voz integrada de Google compatible — y al volver a un modelo de texto se restaura su voz anterior. iMash gestiona el cambio por usted.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/llm-settings-realtime-light.png",
+          "alt": "Grupo Realtime Agent con modelos de voz a voz",
+          "caption": "El grupo Realtime Agent — modelos de voz a voz de flujo único.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/llm-settings-realtime-dark.png",
+          "alt": "Grupo Realtime Agent con modelos de voz a voz",
+          "caption": "El grupo Realtime Agent — modelos de voz a voz de flujo único.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "pick-model",
+      "title": "Seleccione un Modelo",
+      "content": "<ol><li>Haga clic en el grupo de proveedor que desee en el panel izquierdo.</li><li>Haga clic en una <strong>tarjeta de modelo</strong> en la cuadrícula. La tarjeta se resalta con una marca azul y el cambio se guarda de inmediato.</li><li>Cierre el selector con <strong>Done</strong> (Listo) — la fila <strong>Brains (LLM)</strong> muestra ahora su nueva selección en la etiqueta verde.</li></ol><p>Guía rápida para elegir:</p><ul><li><strong>Rápido y económico</strong> (alto volumen de llamadas): modelos ligeros como <strong>gemini-3.1-flash-lite</strong> o <strong>gpt-5-mini</strong>.</li><li><strong>Razonamiento potente</strong> (guiones complejos, muchas herramientas): modelos grandes como <strong>gpt-5</strong> o los modelos Claude de <strong>Anthropic</strong>.</li><li><strong>Sensación más humana</strong>: un modelo de <strong>Realtime Agent</strong>.</li></ul>",
+      "images": [
+        {
+          "src": "images/agents/llm-settings-panels-light.png",
+          "alt": "Paneles de motor mostrando las etiquetas del proveedor y modelo seleccionados",
+          "caption": "Tras seleccionar, las etiquetas de los paneles reflejan su proveedor y modelo elegidos.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/llm-settings-panels-dark.png",
+          "alt": "Paneles de motor mostrando las etiquetas del proveedor y modelo seleccionados",
+          "caption": "Tras seleccionar, las etiquetas de los paneles reflejan su proveedor y modelo elegidos.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "set-temperature",
+      "title": "Ajuste la Temperatura",
+      "content": "<p>Debajo de la cuadrícula de modelos está el deslizador <strong>Temperature</strong> (Temperatura, de 0 a 2). Controla qué tan atrevidas son las respuestas del modelo:</p><ul><li><strong>Baja (0 – 0.4)</strong> — determinista y fiel al guion. Ideal para agentes de soporte, despachadores y todo lo que deba seguir reglas con precisión.</li><li><strong>Media (0.4 – 0.8)</strong> — el punto óptimo para la mayoría de los agentes de voz: variedad natural sin descarrilarse.</li><li><strong>Alta (0.8 – 2)</strong> — creativa e impredecible. Rara vez es lo que quiere en una llamada telefónica.</li></ul><ol><li>Arrastre el deslizador a su valor — se guarda al soltarlo.</li></ol>",
+      "images": [
+        {
+          "src": "images/agents/llm-settings-temperature-light.png",
+          "alt": "Deslizador de temperatura en el selector Brains",
+          "caption": "Temperature: más baja = más determinista, más alta = más creativa.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/llm-settings-temperature-dark.png",
+          "alt": "Deslizador de temperatura en el selector Brains",
+          "caption": "Temperature: más baja = más determinista, más alta = más creativa.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "configure-backup",
+      "title": "Configure un Modelo de Respaldo (Recomendado)",
+      "content": "<p>Los proveedores tienen caídas ocasionales. Un modelo de respaldo mantiene a su agente hablando cuando el principal falla:</p><ol><li>En el encabezado del selector Brains (LLM), cambie el conmutador de <strong>Production</strong> (Producción) a <strong>Backup</strong> (Respaldo). Un aviso amarillo lo confirma: <em>\"You're configuring the Backup LLM\"</em> (Está configurando el LLM de respaldo).</li><li>Elija proveedor y modelo igual que antes — pero seleccione un <strong>proveedor distinto</strong> al de su modelo de producción, para que la caída de un proveedor no afecte a ambos.</li><li>Vuelva a <strong>Production</strong> y haga clic en <strong>Done</strong>.</li></ol><p>Durante las llamadas, el agente siempre usa primero el modelo de Producción y solo pasa al Respaldo si el principal da error o se agota el tiempo de espera. La fila del panel muestra una nota gris <em>Backup:</em> una vez configurado.</p><blockquote>💡 El mismo conmutador Production/Backup existe en los selectores de <strong>Transcriber (STT)</strong> y <strong>Voice (TTS)</strong> — configure los tres para un agente totalmente a prueba de fallos.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/llm-settings-backup-light.png",
+          "alt": "Vista del LLM de respaldo con aviso de advertencia y selección de modelo",
+          "caption": "Vista Backup — las selecciones aquí solo aplican cuando el modelo de producción falla.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/llm-settings-backup-dark.png",
+          "alt": "Vista del LLM de respaldo con aviso de advertencia y selección de modelo",
+          "caption": "Vista Backup — las selecciones aquí solo aplican cuando el modelo de producción falla.",
+          "theme": "dark"
+        }
       ]
     },
     {
       "id": "configure-transcriber",
-      "title": "Configura el transcriptor (modelos de texto)",
-      "content": "<ol><li>Cuando elijas un LLM de texto, abre el panel <strong>Transcriber (STT)</strong>.</li><li>Elige el proveedor de transcripción y define el idioma de entrada para un reconocimiento preciso.</li><li>También puedes definir un transcriptor de respaldo que toma el relevo si el principal no está disponible.</li></ol>",
-      "images": []
+      "title": "Configure el Transcriptor (Solo Modelos de Texto)",
+      "content": "<p>Si eligió un LLM de texto, el agente necesita un motor de voz a texto para escuchar a quien llama. Haga clic en la fila <strong>Transcriber (STT)</strong> para abrir su selector:</p><ol><li>Elija un proveedor en el panel izquierdo. Cada tarjeta muestra su especialidad y un <strong>indicador de latencia</strong> (cuanto más baja, más ágil):<ul><li><strong>Deepgram</strong> — multilingüe, modelo configurable, baja latencia. El predeterminado y el mejor todoterreno.</li><li><strong>Speechmatics</strong> — tiempo real con <strong>Speaker Diarization</strong> (un conmutador que separa a los hablantes en la transcripción); requiere un idioma explícito.</li><li><strong>AssemblyAI</strong> — transcripción solo en inglés.</li><li><strong>Groq</strong> — inferencia rápida; requiere un código de idioma ISO-639-1 explícito (p. ej. <em>en</em>, <em>es</em>).</li></ul></li><li>Configure el <strong>Language</strong> (Idioma) que hablará quien llama — elija <strong>Multilingual</strong> (Deepgram) si las llamadas llegan en idiomas mixtos, o un idioma específico para la mejor precisión.</li><li>Con Deepgram, elija también el <strong>Model</strong> (p. ej. <strong>Flux (Multilingual)</strong> o un modelo Nova) y añada opcionalmente términos de <strong>Keyword Boost</strong> — palabras específicas de su sector, como nombres de productos o números de modelo, que el transcriptor debe reconocer con mayor fiabilidad.</li><li>Haga clic en <strong>Done</strong> al terminar.</li></ol><blockquote>⚠️ ¿Usa un modelo de <strong>Realtime Agent</strong>? El panel Transcriber está oculto — los modelos realtime transcriben por sí mismos, así que aquí no hay nada que configurar.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/llm-settings-transcriber-light.png",
+          "alt": "Selector Transcriber Provider con lista de proveedores y ajustes",
+          "caption": "El selector Transcriber Provider — proveedores a la izquierda, ajustes de idioma y modelo a la derecha.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/llm-settings-transcriber-dark.png",
+          "alt": "Selector Transcriber Provider con lista de proveedores y ajustes",
+          "caption": "El selector Transcriber Provider — proveedores a la izquierda, ajustes de idioma y modelo a la derecha.",
+          "theme": "dark"
+        },
+        {
+          "src": "images/agents/llm-settings-transcriber-settings-light.png",
+          "alt": "Ajustes del transcriptor Deepgram: idioma, modelo y keyword boost",
+          "caption": "Ajustes de Deepgram — Language, Model y Keyword Boost para términos de su sector.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/llm-settings-transcriber-settings-dark.png",
+          "alt": "Ajustes del transcriptor Deepgram: idioma, modelo y keyword boost",
+          "caption": "Ajustes de Deepgram — Language, Model y Keyword Boost para términos de su sector.",
+          "theme": "dark"
+        }
+      ]
     },
     {
-      "id": "advanced",
-      "title": "Parámetros avanzados del LLM (opcional)",
-      "content": "<ul><li>Abre <strong>Advanced LLM Parameters</strong> (Parámetros avanzados del LLM) para ajustar el comportamiento: <strong>Max Tool Steps</strong>, <strong>Parallel Tool Calls</strong>, <strong>Top-P</strong>, <strong>Max Output Tokens</strong> y penalizaciones.</li><li>Nota: con un modelo realtime, algunos ajustes avanzados de interrupción se ignoran, ya que el modelo gestiona los turnos por sí mismo.</li></ul>",
+      "id": "test-and-compare",
+      "title": "Pruebe su Nuevo Cerebro",
+      "content": "<p>Los modelos se sienten distintos en conversación — una ficha técnica nunca cuenta toda la historia. Compárelos en vivo:</p><ol><li>Haga clic en <strong>Connect</strong> (Conectar) en el panel de prueba a la derecha del editor (o en <strong>Test Agent</strong> en el encabezado) y mantenga una conversación breve.</li><li>Cambie el modelo en <strong>Brains (LLM)</strong>, reconéctese y haga las mismas preguntas.</li><li>Evalúe la latencia, el tono y qué tan bien sigue su prompt — y quédese con el ganador.</li></ol><p>Eso es todo — su agente ahora piensa exactamente con el cerebro que usted eligió, y con una red de seguridad detrás. 🚀</p><blockquote>💡 ¿Trabaja en la vista <strong>Node</strong> (Nodos)? Los nodos de LLM y Transcriber del lienzo abren estos mismos selectores — todo lo de esta guía aplica igual allí.</blockquote>",
       "images": []
     }
   ],
   "nextSteps": {
-    "title": "¿Qué sigue?",
-    "description": "Ajusta la voz y el comportamiento al modelo que elegiste:",
+    "title": "¿Qué Sigue?",
+    "description": "Su agente ya tiene cerebro — ahora elija la voz a juego y afine la conversación:",
     "cards": [
-      { "href": "/agents/voice-configuration", "title": "Configura la voz", "description": "Elige una voz TTS para modelos de texto o la voz integrada del modelo." },
-      { "href": "/agents/agent-settings", "title": "Ajustes del agente", "description": "Ajusta interrupciones, detección de turnos y tiempos de espera." },
-      { "href": "/agents/test-agent", "title": "Prueba tu agente", "description": "Compara modelos en vivo para encontrar el mejor." }
+      {
+        "href": "/agents/voice-configuration",
+        "title": "Configure la Voz",
+        "description": "Elija una voz TTS para modelos de texto — o clone la suya propia."
+      },
+      {
+        "href": "/agents/agent-settings",
+        "title": "Configuración del Agente",
+        "description": "Ajuste interrupciones, detección de turnos y tiempos de espera."
+      },
+      {
+        "href": "/agents/test-your-agent",
+        "title": "Pruebe su Agente",
+        "description": "Compare modelos en vivo para encontrar el mejor."
+      }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o alguna pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">referencia de la API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+    "title": "¿Necesita Ayuda?",
+    "content": "<p>Si tiene algún problema o pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Elige el cerebro (LLM) de tu agente | iMash Docs",
-  "metaDescription": "Elige el modelo de tu Smart Agent de iMash. Conoce los modelos realtime (voz a voz) frente a los de texto (LLM + transcriptor), configura el transcriptor y ajusta los parámetros avanzados del LLM.",
-  "metaKeywords": "ajustes de llm, imash, smart agent, modelo realtime, transcriptor, stt, voz a voz, selección de modelo"
+  "metaTitle": "Elija el Cerebro (LLM) de su Agente | iMash Documentation",
+  "metaDescription": "Elija el modelo de su Smart Agent de iMash: modelos realtime de voz a voz vs. LLM de texto, grupos de proveedores (OpenAI, Google, Anthropic), temperatura, modelos de respaldo y los ajustes del Transcriber (STT).",
+  "metaKeywords": "configuración llm, imash, smart agent, modelo realtime, transcriptor, stt, voz a voz, selección de modelo, temperatura, modelo de respaldo, deepgram, gemini, gpt, claude"
 }

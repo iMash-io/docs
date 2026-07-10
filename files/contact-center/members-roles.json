@@ -1,47 +1,94 @@
 {
   "title": "Members Roles",
-  "lede": "Give each group member a Contact Center role that controls what they can see and do. This guide explains the four roles, how the effective role is decided, and the option to keep the web dialer always open.",
-  "timeToComplete": "5 minutes",
+  "lede": "Turn a flat list of teammates into a real contact-center org chart. Give each group member one of four Contact Center roles — Agent, Monitor / QA, Supervisor, Admin — and the console instantly reshapes itself around what each person should see and do.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
       "id": "open-members-roles",
       "title": "Open the Members Roles tab",
-      "content": "<ol><li>Go to <strong>Call Center &rarr; Contact Center &rarr; Groups</strong>.</li><li>Select a group, then open its <strong>Members Roles</strong> tab.</li><li>Each member appears with a <strong>Contact Center role</strong> dropdown.</li></ol>",
+      "content": "<p>Roles live inside a group's settings, so start at your group:</p><ol><li>In the left sidebar, go to <strong>Call Center &rarr; Contact Center</strong>.</li><li>Click the <strong>Groups</strong> tab (visible to Contact Center admins and the main account).</li><li>In the <strong>Groups</strong> list on the left, click the group whose members you want to configure.</li><li>In the panel on the right, open the <strong>Members Roles</strong> tab.</li></ol><p>You'll see three cards stacked on this tab: <strong>Contact Center Roles</strong> (with the <strong>Keep the web dialer always open for</strong> section), <strong>Skills</strong>, and <strong>Post-call dispositions</strong>. This guide walks through all of them.</p><blockquote>💡 No members listed? Add people on the <strong>Members</strong> tab first — see the <em>Create a Permission Group</em> guide.</blockquote>",
       "images": [
-        { "src": "images/contact-center/cc-group-members-roles-light.png", "alt": "Members Roles tab", "caption": "Members Roles: pick a Contact Center role per member.", "theme": "light" },
-        { "src": "images/contact-center/cc-group-members-roles-dark.png", "alt": "Members Roles tab", "caption": "Members Roles: pick a Contact Center role per member.", "theme": "dark" }
+        { "src": "images/contact-center/cc-group-members-roles-light.png", "alt": "Members Roles tab inside a group's settings", "caption": "The Members Roles tab: one Contact Center role dropdown per member.", "theme": "light" },
+        { "src": "images/contact-center/cc-group-members-roles-dark.png", "alt": "Members Roles tab inside a group's settings", "caption": "The Members Roles tab: one Contact Center role dropdown per member.", "theme": "dark" }
       ]
     },
     {
-      "id": "pick-role",
-      "title": "Understand the four roles",
-      "content": "<ul><li><strong>Agent</strong> — a regular rep who makes and receives calls and handles customers. Sees only their own queue.</li><li><strong>Monitor / QA</strong> — can listen to calls and review reporting and recordings, but cannot manage agents or change settings.</li><li><strong>Supervisor</strong> — manages agents: listen, whisper, barge, force status, and review performance.</li><li><strong>Admin</strong> — full Contact Center access including the Groups and Call Transfer settings.</li></ul><p>Pick a role from each member's dropdown.</p>"
+      "id": "meet-the-roles",
+      "title": "Meet the four roles",
+      "content": "<p>Every member gets exactly one Contact Center role per group. From least to most privileged:</p><ul><li><strong>Agent</strong> — a regular rep who makes and receives calls and handles customers. In the Contact Center they see only their own queue.</li><li><strong>Monitor / QA</strong> — quality assurance. Can silently listen to calls and review Reporting and recordings, but cannot manage agents or change any settings.</li><li><strong>Supervisor</strong> — manages the floor: everything Monitor / QA can do, plus <strong>Whisper</strong> (coach the agent without the customer hearing), <strong>Barge</strong> (join the call), mute or terminate calls, and force an agent's status (Ready / Not Ready / Logout).</li><li><strong>Admin</strong> — full Contact Center control, including the <strong>Groups</strong> and <strong>Call Transfer</strong> tabs where all of these settings live.</li></ul><p>The four color-coded tags at the top of the card are a quick legend — hover any tag for its description.</p>",
+      "images": [
+        { "src": "images/contact-center/members-roles-roles-card-light.png", "alt": "Contact Center Roles card with the four role tags and per-member dropdowns", "caption": "The Contact Center Roles card: role legend, one dropdown per member, and the mapped Access role / View profile columns.", "theme": "light" },
+        { "src": "images/contact-center/members-roles-roles-card-dark.png", "alt": "Contact Center Roles card with the four role tags and per-member dropdowns", "caption": "The Contact Center Roles card: role legend, one dropdown per member, and the mapped Access role / View profile columns.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "assign-roles",
+      "title": "Assign a role to each member",
+      "content": "<ol><li>Find the member in the <strong>Contact Center role</strong> column.</li><li>Open their dropdown and pick <strong>Agent</strong>, <strong>Monitor / QA</strong>, <strong>Supervisor</strong>, or <strong>Admin</strong> — each option shows a one-line description of what it grants.</li><li>Repeat for every member, then click <strong>Save</strong> (bottom-right).</li></ol><p>Two read-only columns may appear next to the role dropdown:</p><ul><li><strong>Access role (by role)</strong> — the platform access role the member will receive.</li><li><strong>View profile (by role)</strong> — the view profile the member will receive.</li></ul><p>You don't edit these here — they follow the member's Contact Center role automatically via the <strong>Role Mapping</strong> tab and are applied when you click <strong>Save</strong>. A member showing <strong>Not mapped</strong> simply keeps their current access unchanged.</p><blockquote>💡 New members default to <strong>Agent</strong> — the safest role. Promote people deliberately, not by accident.</blockquote>"
     },
     {
       "id": "effective-role",
       "title": "How the effective role is decided",
-      "content": "<p>A person can belong to several groups. Their <strong>effective role</strong> is the <strong>highest</strong> role across all their groups. For example, an Agent in one group who is a Supervisor in another is treated as a Supervisor everywhere.</p><p>The tenant <strong>main account is always Admin</strong> and cannot be downgraded here.</p>"
+      "content": "<p>People can belong to several groups, so iMash resolves one <strong>effective role</strong> per person: the <strong>highest</strong> role they hold across all of their groups. Someone set as an Agent in the Sales group but a Supervisor in the Support group is treated as a <strong>Supervisor everywhere</strong> in the Contact Center.</p><p>Two rules to remember:</p><ul><li>The tenant <strong>main account is always Admin</strong> — you can't downgrade it here, and its Access role / View profile are never remapped.</li><li>If nobody ever set a role for a member, they count as <strong>Agent</strong>.</li></ul><blockquote>⚠️ If a member sees more than you expect, check their role in <em>every</em> group they belong to — one forgotten Supervisor assignment in an old group raises their effective role across the whole Contact Center.</blockquote>"
+    },
+    {
+      "id": "roles-console",
+      "title": "See how roles reshape the console",
+      "content": "<p>The payoff: the <strong>Contact Center</strong> page rebuilds itself around each person's effective role.</p><ul><li><strong>Tabs</strong> — everyone gets <strong>Live Monitor</strong>; <strong>Reporting</strong> appears for Monitor / QA and up; <strong>Groups</strong> and <strong>Call Transfer</strong> appear only for Admins.</li><li><strong>Live Monitor for an Agent</strong> — a focused queue-only view (<strong>On Queue</strong>) plus their web dialer. No roster, no controls over teammates.</li><li><strong>Live Monitor for Monitor / QA</strong> — the full queue and agent roster (read-only) plus <strong>Monitor</strong> (listen) on live calls.</li><li><strong>Live Monitor for Supervisor / Admin</strong> — everything above plus <strong>Whisper</strong>, <strong>Barge</strong>, mute, terminate, and force-status controls on the roster.</li></ul>",
+      "images": [
+        { "src": "images/contact-center/members-roles-admin-tabs-light.png", "alt": "Contact Center tab bar as seen by an Admin", "caption": "An Admin sees all four tabs: Live Monitor, Reporting, Groups, and Call Transfer.", "theme": "light" },
+        { "src": "images/contact-center/members-roles-admin-tabs-dark.png", "alt": "Contact Center tab bar as seen by an Admin", "caption": "An Admin sees all four tabs: Live Monitor, Reporting, Groups, and Call Transfer.", "theme": "dark" },
+        { "src": "images/contact-center/members-roles-agent-view-light.png", "alt": "Contact Center as seen by an Agent: only the Live Monitor queue view and the pinned web dialer", "caption": "The same page for an Agent: just the Live Monitor queue — with the web dialer pinned open on the right.", "theme": "light" },
+        { "src": "images/contact-center/members-roles-agent-view-dark.png", "alt": "Contact Center as seen by an Agent: only the Live Monitor queue view and the pinned web dialer", "caption": "The same page for an Agent: just the Live Monitor queue — with the web dialer pinned open on the right.", "theme": "dark" }
+      ]
     },
     {
       "id": "keep-dialer-open",
       "title": "Keep the web dialer always open",
-      "content": "<p>Under <strong>Keep the web dialer always open for</strong>, check the roles that should have the web dialer auto-opened and pinned. Members with a checked effective role can't close the dialer, so they never miss a queued call.</p><p>Leave all boxes unchecked for the normal behavior (the dialer opens only when they click the phone button). This isn't enforced on phones or small tablets. Click <strong>Save</strong> when done.</p>"
+      "content": "<p>Never let a rep miss a queued call because their dialer was closed. At the bottom of the Contact Center Roles card, under <strong>Keep the web dialer always open for</strong>:</p><ol><li>Check each role — <strong>Agent</strong>, <strong>Monitor / QA</strong>, <strong>Supervisor</strong>, <strong>Admin</strong> — whose members should have the web dialer auto-opened and pinned.</li><li>Click <strong>Save</strong>.</li></ol><p>Members whose <strong>effective</strong> role is checked get the dialer opened for them and <strong>can't close it</strong>. Leave all boxes unchecked for the normal behavior — the dialer opens only when they click the phone button in the header.</p><blockquote>💡 This isn't enforced on phones or small tablets (screens narrower than 992px) — a pinned dialer would cover most of the app there, so those members can open and close it normally.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/members-roles-dialer-pin-light.png", "alt": "Keep the web dialer always open for — role checkboxes", "caption": "Check the roles that should have the web dialer pinned open.", "theme": "light" },
+        { "src": "images/contact-center/members-roles-dialer-pin-dark.png", "alt": "Keep the web dialer always open for — role checkboxes", "caption": "Check the roles that should have the web dialer pinned open.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "skills",
+      "title": "Tag members with Skills (optional)",
+      "content": "<p>The <strong>Skills</strong> card on the same tab lets teammates find the right expert in one search:</p><ol><li>In <strong>Skill catalog</strong>, type a skill label (e.g. <em>Spanish</em>, <em>Billing</em>, <em>Tier 2</em>, <em>Sales</em>) and press <strong>Enter</strong>. Add as many as you like.</li><li>Once the catalog has at least one skill, an <strong>Assign skills to members</strong> list appears — pick each member's skills from the catalog.</li><li>Click <strong>Save</strong>.</li></ol><p>Agents can then search and filter teammates <strong>by skill</strong> in the web dialer's Conference / Transfer picker — \"transfer to someone who speaks Spanish\" becomes a two-second lookup.</p>",
+      "images": [
+        { "src": "images/contact-center/members-roles-skills-light.png", "alt": "Skills card with the skill catalog input", "caption": "Type skill labels into the catalog, then assign them to members below.", "theme": "light" },
+        { "src": "images/contact-center/members-roles-skills-dark.png", "alt": "Skills card with the skill catalog input", "caption": "Type skill labels into the catalog, then assign them to members below.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "dispositions",
+      "title": "Turn on Post-call dispositions (optional)",
+      "content": "<p>Want a wrap-up code on every call? The <strong>Post-call dispositions</strong> card prompts members to label each group call the moment it ends:</p><ol><li>Flip the switch in the card's top-right corner to turn dispositions on.</li><li>In <strong>Fallback dispositions</strong>, type each label (e.g. <em>Interested</em>, <em>Not Interested</em>, <em>Callback</em>, <em>Wrong Number</em>) and press <strong>Enter</strong>.</li><li>Click <strong>Save</strong>.</li></ol><p>The choices a member sees adapt to the call: calls tied to a lead or contact show that record's <strong>lifecycle stages</strong>; campaign calls show the <strong>campaign's stages</strong>; everything else uses your fallback labels.</p>",
+      "images": [
+        { "src": "images/contact-center/members-roles-dispositions-light.png", "alt": "Post-call dispositions card with its on/off switch", "caption": "Enable dispositions and define the fallback labels members pick from.", "theme": "light" },
+        { "src": "images/contact-center/members-roles-dispositions-dark.png", "alt": "Post-call dispositions card with its on/off switch", "caption": "Enable dispositions and define the fallback labels members pick from.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "save-and-verify",
+      "title": "Save and verify",
+      "content": "<p>One <strong>Save</strong> button (bottom-right) commits everything on this tab — roles, the dialer pin, skills, and dispositions — and applies the Role Mapping to every member based on their just-saved Contact Center role.</p><p>To verify, ask a member to open <strong>Call Center &rarr; Contact Center</strong> (or log in as a test user): an Agent should land on the queue-only Live Monitor, and a Supervisor should see the roster controls. That's it — your contact center now runs on roles, not tribal knowledge.</p><blockquote>⚠️ Members who are already logged in may need to refresh the page before a role change takes effect.</blockquote>"
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Map roles to access levels and route calls to the group.",
+    "description": "Roles assigned — now wire them to platform access and put them to work on live calls.",
     "cards": [
-      { "href": "/contact-center/role-mapping", "title": "Role Mapping", "description": "Map each role to an Access role and View profile." },
-      { "href": "/contact-center/ring-strategy", "title": "Ring Strategy", "description": "Choose how online members are rung." },
-      { "href": "/contact-center/agent-guide", "title": "The Agent Experience", "description": "See what agents do with these roles." }
+      { "href": "/contact-center/role-mapping", "title": "Role Mapping", "description": "Map each Contact Center role to an Access role and View profile." },
+      { "href": "/contact-center/ring-strategy", "title": "Ring Strategy", "description": "Choose how online members are rung for inbound calls." },
+      { "href": "/contact-center/agent-guide", "title": "The Agent Experience", "description": "See exactly what your Agents do day-to-day with these roles." }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Members Roles | iMash Docs",
-  "metaDescription": "Assign Contact Center roles — Agent, Monitor/QA, Supervisor, Admin — to group members in iMash, understand effective role, and pin the web dialer open.",
-  "metaKeywords": "contact center roles, agent, supervisor, monitor, admin, effective role, web dialer, permission group"
+  "metaTitle": "Members Roles | iMash Documentation",
+  "metaDescription": "Assign Contact Center roles — Agent, Monitor/QA, Supervisor, Admin — to group members in iMash, understand the effective role, pin the web dialer open, and set up skills and post-call dispositions.",
+  "metaKeywords": "contact center roles, agent, supervisor, monitor, qa, admin, effective role, web dialer, permission group, skills, dispositions"
 }

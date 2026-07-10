@@ -1,50 +1,101 @@
 {
   "title": "Connect Integrations",
-  "lede": "Link iMash to the outside apps you already use. The Automation builder connects to external services, and its System Tables actions let a flow read and write your iMash CRM data.",
-  "timeToComplete": "6 minutes",
+  "lede": "Plug iMash into the tools your business already runs on — Google Sheets, Slack, Gmail, OpenAI, Airtable and hundreds more. Connect an account once, then let your automation flows read and write data across all of them, including your iMash CRM itself.",
+  "timeToComplete": "8 minutes",
   "steps": [
     {
       "id": "open-automation",
-      "title": "Open Automation",
-      "content": "<ol><li>Go to <strong>Intelligence Center → Automation</strong>.</li><li>Create or open a flow - integrations are added as steps inside a flow.</li></ol>",
+      "title": "Open the Automation Dashboard",
+      "content": "<p>Every integration in iMash lives inside the Automation builder — connect an app once and every flow you build can use it.</p><ol><li>In the left sidebar, under <strong>Intelligence Center</strong>, click <strong>Automation</strong>.</li><li>The Automation dashboard opens with its own mini-sidebar: <strong>Flows</strong> (your automations), <strong>Custom Tables</strong>, <strong>System Tables</strong> (your iMash CRM data), <strong>MCP</strong>, <strong>Todos</strong>, and <strong>Connections</strong> (your linked app accounts).</li></ol>",
       "images": [
-        { "src": "images/automations/automation-overview-light.png", "alt": "Automation dashboard", "caption": "Integrations live inside your automation flows.", "theme": "light" },
-        { "src": "images/automations/automation-overview-dark.png", "alt": "Automation dashboard", "caption": "Integrations live inside your automation flows.", "theme": "dark" }
+        { "src": "images/automations/automation-overview-light.png", "alt": "Automation dashboard with Flows list and mini-sidebar", "caption": "The Automation dashboard — integrations are managed under Connections and used inside Flows.", "theme": "light" },
+        { "src": "images/automations/automation-overview-dark.png", "alt": "Automation dashboard with Flows list and mini-sidebar", "caption": "The Automation dashboard — integrations are managed under Connections and used inside Flows.", "theme": "dark" }
       ]
     },
     {
-      "id": "add-app-step",
-      "title": "Add an App Step",
-      "content": "<ol><li>Click the <strong>+</strong> to add a step and search for the app you want to connect.</li><li>Pick the action that app should perform (for example send a message or create a record).</li></ol>",
-      "images": []
+      "id": "connections-page",
+      "title": "See All Your Connected Apps in One Place",
+      "content": "<p>The Connections page is your integration control room — every external account you've linked shows up here.</p><ol><li>In the Automation mini-sidebar, click <strong>Connections</strong>.</li><li>The table lists each connection with its <strong>App</strong>, <strong>Name</strong>, <strong>Status</strong>, <strong>Connected At</strong> date, <strong>Owner</strong>, and the <strong>Flows</strong> that use it.</li><li>Use the <strong>Status</strong>, <strong>Pieces</strong>, <strong>Name</strong>, and <strong>Owner</strong> filters to find a connection quickly once you have several.</li><li><strong>Replace</strong> lets you swap one connection for another across every flow that uses it — handy when a team member leaves or you rotate an API key.</li></ol><blockquote>💡 A connection is saved once and reused everywhere. You never have to re-authorize an app for each new flow.</blockquote>",
+      "images": [
+        { "src": "images/automations/integrations-connections-light.png", "alt": "Connections page listing linked app accounts", "caption": "Connections — manage every linked external account from one table.", "theme": "light" },
+        { "src": "images/automations/integrations-connections-dark.png", "alt": "Connections page listing linked app accounts", "caption": "Connections — manage every linked external account from one table.", "theme": "dark" }
+      ]
     },
     {
-      "id": "connect-credentials",
-      "title": "Connect Your Account",
-      "content": "<ol><li>The first time you use an app, you'll be asked to <strong>connect</strong> it - usually by signing in or pasting an API key.</li><li>iMash saves that connection so you can reuse it in future flows.</li><li>Choose the saved connection whenever you add that app again.</li></ol>",
-      "images": []
+      "id": "new-connection",
+      "title": "Browse the App Catalog and Pick Your Tool",
+      "content": "<p>Hundreds of ready-made integrations are one click away.</p><ol><li>On the Connections page, click <strong>New Connection</strong> (top-right).</li><li>A catalog dialog opens with tiles for every available app — CRMs, spreadsheets, messaging tools, AI models, payment platforms, databases and more.</li><li>Type the app's name in the <strong>Search</strong> box (for example <em>Google Sheets</em>, <em>Slack</em>, or <em>Airtable</em>) and click its tile.</li></ol>",
+      "images": [
+        { "src": "images/automations/integrations-new-connection-light.png", "alt": "New Connection dialog showing the searchable app catalog", "caption": "The New Connection catalog — search across hundreds of apps.", "theme": "light" },
+        { "src": "images/automations/integrations-new-connection-dark.png", "alt": "New Connection dialog showing the searchable app catalog", "caption": "The New Connection catalog — search across hundreds of apps.", "theme": "dark" }
+      ]
     },
     {
-      "id": "map-and-test",
-      "title": "Map Fields and Test",
-      "content": "<ol><li>Fill in the step's fields, pulling values from earlier steps where needed.</li><li>Use <strong>System Tables</strong> actions to move data in and out of your iMash CRM (leads, contacts, accounts, calls).</li><li><strong>Test</strong> the step, then <strong>Publish</strong> the flow so the integration runs automatically.</li></ol>",
+      "id": "connection-modal",
+      "title": "Authorize the App",
+      "content": "<p>Each app asks for credentials once — after that, iMash stores the connection securely for reuse.</p><ol><li>In the <strong>Connect to …</strong> dialog, keep or edit the <strong>Connection Name</strong> (useful when you'll connect more than one account of the same app).</li><li>Click <strong>Connect</strong>. For Google, Slack and similar apps a sign-in window opens — approve access with the account you want to use. Other apps ask you to paste an <strong>API key</strong> instead; you'll find it in that app's own settings page.</li><li>Advanced: click <strong>I would like to use my own App Credentials</strong> if your company runs its own OAuth app and you want the consent screen to show your brand.</li><li>Click <strong>Save</strong>. The new connection appears in the Connections table, ready to use in any flow.</li></ol><blockquote>⚠️ Connect with a dedicated company account rather than a personal one. If a personal account is deactivated later, every flow using that connection stops working.</blockquote>",
+      "images": [
+        { "src": "images/automations/integrations-connection-modal-light.png", "alt": "Connect to Google Sheets dialog with Connection Name and Connect button", "caption": "Authorizing Google Sheets — name the connection, click Connect, then Save.", "theme": "light" },
+        { "src": "images/automations/integrations-connection-modal-dark.png", "alt": "Connect to Google Sheets dialog with Connection Name and Connect button", "caption": "Authorizing Google Sheets — name the connection, click Connect, then Save.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "action-picker",
+      "title": "Add an App Step Inside a Flow",
+      "content": "<p>Now for the fun part — putting your integration to work inside an automation.</p><ol><li>Go to <strong>Flows</strong> and open a flow (or click <strong>Create flow</strong> → <strong>From scratch</strong> and pick a trigger first — see the Smart Flows guide).</li><li>Click the small <strong>+</strong> button on the line between two steps in the canvas.</li><li>The step picker opens with a <strong>Search</strong> box and four category tabs:<ul><li><strong>All</strong> — everything at once, with a <strong>Popular</strong> shortlist (Gmail, Google Sheets, HTTP, Human Input, OpenAI…).</li><li><strong>AI</strong> — AI model pieces like OpenAI, Anthropic Claude and Azure OpenAI.</li><li><strong>Core</strong> — built-in logic: HTTP requests, code, branches, loops, delays.</li><li><strong>Apps</strong> — the full third-party integration catalog.</li></ul></li></ol>",
+      "images": [
+        { "src": "images/automations/integrations-action-picker-light.png", "alt": "Flow builder with the step picker open showing category tabs and popular pieces", "caption": "Click + on the canvas to open the step picker.", "theme": "light" },
+        { "src": "images/automations/integrations-action-picker-dark.png", "alt": "Flow builder with the step picker open showing category tabs and popular pieces", "caption": "Click + on the canvas to open the step picker.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "pick-action",
+      "title": "Choose What the App Should Do",
+      "content": "<p>Every integration exposes a menu of ready-made actions — no code required.</p><ol><li>Type the app's name in the picker's <strong>Search</strong> box, for example <em>google sheets</em>.</li><li>Click the app and its action list appears: for Google Sheets that includes <strong>Insert Row</strong>, <strong>Insert Multiple Rows</strong>, <strong>Update Row</strong>, <strong>Find Rows</strong>, <strong>Delete Row</strong>, <strong>Create Spreadsheet</strong> and more.</li><li>Click the action you want — it's added to the canvas as the next step in your flow.</li></ol><blockquote>💡 Most apps also offer a <strong>Custom API Call</strong> action — a power tool that lets you hit any endpoint of that app's API using the same saved connection.</blockquote>",
+      "images": [
+        { "src": "images/automations/integrations-piece-actions-light.png", "alt": "Step picker filtered to Google Sheets showing its available actions", "caption": "Search for the app, then pick one of its actions.", "theme": "light" },
+        { "src": "images/automations/integrations-piece-actions-dark.png", "alt": "Step picker filtered to Google Sheets showing its available actions", "caption": "Search for the app, then pick one of its actions.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "step-connection",
+      "title": "Select Your Connection and Map the Fields",
+      "content": "<p>Each app step needs to know which account to use and what data to send.</p><ol><li>With the step selected, its settings panel opens on the right. Under <strong>Connection</strong>, pick the account you connected earlier — or create one right here from the same dropdown, without leaving the builder.</li><li>Fill in the step's fields. For Google Sheets Insert Row that's the <strong>Spreadsheet</strong>, the <strong>Sheet</strong>, and the values for each column — dropdowns load your real spreadsheets automatically once a connection is selected.</li><li>Click any field and use the <strong>Data Selector</strong> to insert dynamic values from earlier steps — for example the caller's name captured by your trigger.</li><li>Click <strong>Test Step</strong> (under Generate Sample Data) to run just this step and confirm the data lands where you expect.</li></ol>",
+      "images": [
+        { "src": "images/automations/integrations-step-connection-light.png", "alt": "Google Sheets Insert Row step settings with the Connection dropdown", "caption": "Pick the saved connection, map the fields, then Test Step.", "theme": "light" },
+        { "src": "images/automations/integrations-step-connection-dark.png", "alt": "Google Sheets Insert Row step settings with the Connection dropdown", "caption": "Pick the saved connection, map the fields, then Test Step.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "imash-piece",
+      "title": "Move CRM Data with the iMash Piece",
+      "content": "<p>The most powerful integration in the catalog is iMash itself — your flows can read and write your own CRM data and even launch calls.</p><ol><li>In the step picker, search for <strong>imash</strong> and click the <strong>iMash</strong> piece.</li><li>Choose one of its actions:<ul><li><strong>Find System Table Rows</strong> — look up leads, contacts, accounts, call logs and more.</li><li><strong>Create System Table Record(s)</strong> — add new CRM records from any trigger (a form, a webhook, a spreadsheet…).</li><li><strong>Update System Table Row</strong> — change a record, e.g. move a lead's status after a call.</li><li><strong>Delete System Table Row(s)</strong> — remove records that match your filters.</li><li><strong>Create Outbound Call</strong> — have one of your AI agents place a phone call as a flow step.</li></ul></li><li>No connection setup is needed — the iMash piece is already authorized for your own account's data.</li></ol><blockquote>💡 Combine both worlds: trigger on a new row in Google Sheets, then <strong>Create System Table Record(s)</strong> to turn each row into an iMash lead — and finish with <strong>Create Outbound Call</strong> so your AI agent dials them within seconds.</blockquote>",
+      "images": [
+        { "src": "images/automations/integrations-imash-piece-light.png", "alt": "Step picker showing the iMash piece with its System Table and outbound call actions", "caption": "The iMash piece — read and write CRM data, or launch an AI call, from any flow.", "theme": "light" },
+        { "src": "images/automations/integrations-imash-piece-dark.png", "alt": "Step picker showing the iMash piece with its System Table and outbound call actions", "caption": "The iMash piece — read and write CRM data, or launch an AI call, from any flow.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "test-and-publish",
+      "title": "Test the Flow and Publish",
+      "content": "<p>One click separates your draft from a live automation.</p><ol><li>Click <strong>Test Flow</strong> at the top of the canvas to run the whole flow end-to-end with sample data and watch each step's output.</li><li>When every step passes, click <strong>Publish</strong> (top-right). From now on the flow runs automatically whenever its trigger fires.</li><li>Monitor executions any time under <strong>Runs</strong>, and check <strong>Issues</strong> on the Flows page if a step ever fails — a failing connection (expired token, revoked access) is the most common cause, and reconnecting it from the Connections page fixes it.</li></ol><p>That's it — your favorite tools now talk to each other, and to your CRM, around the clock. 🎉</p>",
       "images": []
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Build the flow around your integration:",
+    "description": "Your apps are connected — now build the automations that put them to work:",
     "cards": [
-      { "href": "/automations/smart-flows", "title": "Build an Automation", "description": "Combine triggers and actions into a full workflow." },
-      { "href": "/automations/webhooks", "title": "Receive Data with Webhooks", "description": "Accept data from systems that don't have a ready-made app." },
-      { "href": "/automations/custom-tools", "title": "Build Custom Tools", "description": "Reach any API your agent needs mid-call." }
+      { "href": "/automations/smart-flows", "title": "Build an Automation Flow", "description": "Combine triggers, logic and your new integrations into a full workflow." },
+      { "href": "/automations/webhooks", "title": "Receive Data with Webhooks", "description": "Accept data from systems that don't have a ready-made app tile." },
+      { "href": "/automations/custom-tools", "title": "Build Custom Tools", "description": "Let your AI agent reach any API mid-call." }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Connect Integrations | iMash Docs",
-  "metaDescription": "Link iMash to external apps inside the Automation builder: add an app step, connect your account, map fields, and use System Tables to sync CRM data.",
-  "metaKeywords": "integrations, automation, connect apps, system tables, crm sync, credentials, imash"
+  "metaTitle": "Connect Integrations | iMash Documentation",
+  "metaDescription": "Connect Google Sheets, Slack, OpenAI and hundreds of other apps to iMash: create connections, add app steps to automation flows, and sync CRM data with the iMash piece.",
+  "metaKeywords": "integrations, connections, automation, connect apps, google sheets, slack, system tables, crm sync, api key, oauth, imash"
 }

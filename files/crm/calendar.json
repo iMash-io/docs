@@ -1,0 +1,109 @@
+{
+  "title": "Calendar & Scheduling",
+  "lede": "One shared calendar for your whole business — appointments, follow-up calls, site visits, and events, color-coded by category and linked directly to your leads and contacts. Your AI agents can even book into it for you, 24/7.",
+  "timeToComplete": "10 minutes",
+  "steps": [
+    {
+      "id": "open-calendar",
+      "title": "Open the Calendar",
+      "content": "<ol><li>In the left sidebar, open <strong>CRM</strong> and click <strong>Calendar</strong> (or go to <code>/crm/calendar</code>).</li><li>The page has three areas:</li></ol><ul><li><strong>Left column</strong> — a blue <strong>Create Event</strong> button and an <strong>Upcoming Events</strong> card with your next appointments.</li><li><strong>Main calendar</strong> — a full month grid with every event drawn on its date, in its category color. Click any event to open its details.</li><li><strong>Categories</strong> card (below the calendar) — checkboxes to filter the calendar by category, plus a <strong>Settings</strong> button to manage your categories.</li></ul><blockquote>💡 The little number badge on the <strong>Calendar</strong> tab in the CRM bar shows your live event count — you always know how busy the schedule is before you even open it.</blockquote>",
+      "images": [
+        { "src": "images/crm/calendar-light.png", "alt": "The CRM Calendar page in month view", "caption": "The Calendar page — Create Event and Upcoming Events on the left, the month grid with color-coded events on the right", "theme": "light" },
+        { "src": "images/crm/calendar-dark.png", "alt": "The CRM Calendar page in month view", "caption": "The Calendar page — Create Event and Upcoming Events on the left, the month grid with color-coded events on the right", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "views-navigation",
+      "title": "Switch views and move through time",
+      "content": "<p>The toolbar above the grid controls what you're looking at:</p><ol><li>Use the <strong>←</strong> and <strong>→</strong> circle buttons to jump to the previous or next month (or week/day, depending on the view). The title next to them always tells you which period you're on.</li><li>Pick a view on the right:</li></ol><ul><li><strong>Month</strong> — the classic grid; best for planning ahead.</li><li><strong>Week</strong> — an hour-by-hour grid of the current week; best for spotting free slots.</li><li><strong>Day</strong> — a single day, hour by hour.</li><li><strong>List</strong> — a clean agenda of the month's events, grouped by date, with times, category dots, and participants. Perfect for a morning run-through.</li></ul><ol start=\"3\"><li>Use the <strong>All Statuses</strong> dropdown to filter events by outcome: <strong>No Answer</strong>, <strong>Rescheduled</strong>, <strong>Not Interested</strong>, <strong>Interested</strong>, or <strong>No Status</strong>. Status-colored events make it easy to see at a glance which appointments still need attention.</li></ol><blockquote>💡 On a phone, the calendar automatically switches to the list-style agenda so nothing gets squeezed off screen.</blockquote>",
+      "images": [
+        { "src": "images/crm/calendar-toolbar-light.png", "alt": "Calendar toolbar with view switcher and status filter", "caption": "The calendar toolbar — navigation arrows, period title, Month/Week/Day/List switcher, and the status filter", "theme": "light" },
+        { "src": "images/crm/calendar-toolbar-dark.png", "alt": "Calendar toolbar with view switcher and status filter", "caption": "The calendar toolbar — navigation arrows, period title, Month/Week/Day/List switcher, and the status filter", "theme": "dark" },
+        { "src": "images/crm/calendar-list-view-light.png", "alt": "Calendar List view showing events grouped by date", "caption": "List view — the month as an agenda, with times, category dots, and participant chips", "theme": "light" },
+        { "src": "images/crm/calendar-list-view-dark.png", "alt": "Calendar List view showing events grouped by date", "caption": "List view — the month as an agenda, with times, category dots, and participant chips", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "upcoming-events",
+      "title": "Check the Upcoming Events card",
+      "content": "<p>The <strong>Upcoming Events</strong> card in the left column is your \"what's next\" feed — it always shows the next few events from today onward, soonest first.</p><ul><li>Each entry shows the event <strong>title</strong>, the <strong>date and time</strong> (or an <strong>All day</strong> tag), the <strong>category</strong> tag in its color, and the participants.</li><li>Click an entry to open the full event details.</li></ul><blockquote>💡 Make this the first thing you glance at every morning — if a customer appointment is coming up today, it's right here without any clicking around.</blockquote>",
+      "images": [
+        { "src": "images/crm/calendar-upcoming-light.png", "alt": "Upcoming Events card", "caption": "Upcoming Events — your next appointments with date, time, and category at a glance", "theme": "light" },
+        { "src": "images/crm/calendar-upcoming-dark.png", "alt": "Upcoming Events card", "caption": "Upcoming Events — your next appointments with date, time, and category at a glance", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "create-event",
+      "title": "Create an event",
+      "content": "<ol><li>Click the blue <strong>Create Event</strong> button at the top of the left column.</li><li>Fill in the <strong>Create Event</strong> form:</li></ol><ul><li><strong>Title</strong> (required) — what the event is, e.g. \"Kitchen sink estimate — Sarah Mitchell\".</li><li><strong>Description</strong> (required) — details, address notes, anything the person attending should know.</li><li><strong>All Day</strong> — tick this for full-day events (trade shows, days off). The time pickers switch to a <strong>Start date / End date</strong> range so an all-day event can span several days.</li><li><strong>Select date</strong> + <strong>Start time / End time</strong> — for regular timed appointments. Times snap to 5-minute steps.</li><li><strong>Category</strong> (required) — pick a category like <em>Appointments</em> or <em>Follow-ups</em>. The event automatically takes the category's color on the calendar.</li><li><strong>Invite participants</strong> (required) — search and attach the leads and contacts this event is about (next step explains why this is so useful).</li></ul><ol start=\"3\"><li>Click <strong>Save</strong>. The event appears on the calendar instantly, in its category color.</li></ol><blockquote>💡 Times are saved in your account's timezone (set in Settings), so a \"10:00 AM\" appointment stays 10:00 AM for everyone on the team — no timezone surprises.</blockquote>",
+      "images": [
+        { "src": "images/crm/calendar-create-event-light.png", "alt": "Create Event modal", "caption": "The Create Event form — title, description, date & time (or All Day), category, and participants", "theme": "light" },
+        { "src": "images/crm/calendar-create-event-dark.png", "alt": "Create Event modal", "caption": "The Create Event form — title, description, date & time (or All Day), category, and participants", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "link-participants",
+      "title": "Link events to leads and contacts",
+      "content": "<p>This is what makes the iMash calendar a CRM calendar and not just a grid of boxes: every event can be attached to the actual people in your pipeline.</p><ul><li>In the <strong>Invite participants</strong> field, start typing a name — matching records appear with a blue <strong>Contact</strong> or green <strong>Lead</strong> tag so you always know which kind of record you're attaching. Scroll the dropdown to load more.</li><li>You can attach several participants to one event (e.g. both spouses for an in-home estimate).</li><li>It works the other way too: open any lead or contact and create an event from their page — the person is pre-attached automatically, and their profile shows their scheduled events.</li></ul><blockquote>💡 Always attach the lead or contact. When the appointment day comes, one click takes you from the event straight to their full record — phone number, history, notes — instead of hunting through the CRM.</blockquote>",
+      "images": []
+    },
+    {
+      "id": "manage-categories",
+      "title": "Organize with color-coded categories",
+      "content": "<p>Categories give every event type its own color — appointments in blue, site visits in purple, follow-ups in green — so the month view reads like a heat map of your week.</p><ol><li>To filter the calendar, tick one or more category checkboxes in the <strong>Categories</strong> card below the grid. Only events in the ticked categories stay visible; untick everything to see all events again.</li><li>To edit your category list, click <strong>Settings</strong> in the corner of the Categories card. In the <strong>Manage Categories</strong> window you can:</li></ol><ul><li><strong>Rename</strong> a category — just edit its text box.</li><li><strong>Recolor</strong> it — click the color swatch and pick from the palette.</li><li><strong>Delete</strong> it — click the red trash icon.</li><li><strong>Add category</strong> — click the dashed button at the bottom, type a name, and pick a color.</li></ul><ol start=\"3\"><li>Click <strong>Save</strong> to apply your changes (or <strong>Cancel</strong> to discard).</li></ol><blockquote>⚠️ Category is a required field when creating an event, so set up your category list before the team starts booking. A short list (Appointments, Follow-ups, Site Visits, Internal) beats twenty overlapping ones.</blockquote>",
+      "images": [
+        { "src": "images/crm/calendar-categories-light.png", "alt": "Categories filter card", "caption": "The Categories card — tick a category to filter the calendar; Settings opens the manager", "theme": "light" },
+        { "src": "images/crm/calendar-categories-dark.png", "alt": "Categories filter card", "caption": "The Categories card — tick a category to filter the calendar; Settings opens the manager", "theme": "dark" },
+        { "src": "images/crm/calendar-manage-categories-light.png", "alt": "Manage Categories modal", "caption": "Manage Categories — rename, recolor, delete, or add categories", "theme": "light" },
+        { "src": "images/crm/calendar-manage-categories-dark.png", "alt": "Manage Categories modal", "caption": "Manage Categories — rename, recolor, delete, or add categories", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "event-details",
+      "title": "Open, edit, or delete an event",
+      "content": "<ol><li>Click any event on the calendar (or in Upcoming Events / List view). The <strong>Event Details</strong> drawer slides in from the right with:</li></ol><ul><li><strong>Description</strong> — the full event notes.</li><li><strong>Time</strong> — date and start–end time, or the date with <em>(All Day)</em>.</li><li><strong>Category</strong> — the category tag in its color.</li><li><strong>Participants</strong> — every attached lead and contact, each with a <strong>Contact</strong>/<strong>Lead</strong> tag. Click a participant's name (or the eye icon) to open their full record in a side panel — without leaving the calendar.</li><li><strong>Actions</strong> — the <strong>Reschedule Event</strong> button (next step).</li></ul><ol start=\"2\"><li>To change anything, click the <strong>pencil (Edit)</strong> icon in the drawer header — the same form as Create Event opens with everything pre-filled. Make your changes and click <strong>Save</strong>.</li><li>To remove the event, click the red <strong>trash (Delete)</strong> icon and confirm with <strong>Yes, Delete</strong>.</li></ol><blockquote>⚠️ Deleting an event is permanent — it cannot be undone. If the appointment just moved, use <strong>Reschedule Event</strong> instead so you keep the history.</blockquote>",
+      "images": [
+        { "src": "images/crm/calendar-event-drawer-light.png", "alt": "Event Details drawer", "caption": "The Event Details drawer — description, time, category, clickable participants, and the Reschedule action", "theme": "light" },
+        { "src": "images/crm/calendar-event-drawer-dark.png", "alt": "Event Details drawer", "caption": "The Event Details drawer — description, time, category, clickable participants, and the Reschedule action", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "reschedule-event",
+      "title": "Reschedule an appointment the smart way",
+      "content": "<p>Customer can't make it? Don't edit the date and lose the trail — reschedule.</p><ol><li>In the Event Details drawer, click <strong>Reschedule Event</strong>.</li><li>The <strong>Reschedule Event</strong> window shows the <strong>Original Event</strong> and <strong>Original Time</strong> for reference, and pre-fills tomorrow at the same time.</li><li>Pick the <strong>New Date</strong>, <strong>Start Time</strong>, and <strong>End Time</strong>, then click <strong>Reschedule</strong>.</li></ol><p>iMash then does two things automatically:</p><ul><li>Creates a fresh copy of the event at the new time — same participants, titled \"<em>… (Rescheduled)</em>\" with a note of the original date.</li><li>Marks the original event with a blue <strong>Rescheduled</strong> status, so your history shows exactly what was planned and what actually moved.</li></ul><blockquote>💡 Combine this with the <strong>All Statuses</strong> filter from earlier: filter by <strong>Rescheduled</strong> at the end of the week to see how many appointments slipped — a great early-warning metric for your sales process.</blockquote>",
+      "images": [
+        { "src": "images/crm/calendar-reschedule-light.png", "alt": "Reschedule Event modal", "caption": "Reschedule Event — pick the new date and time; iMash copies the event and flags the original as Rescheduled", "theme": "light" },
+        { "src": "images/crm/calendar-reschedule-dark.png", "alt": "Reschedule Event modal", "caption": "Reschedule Event — pick the new date and time; iMash copies the event and flags the original as Rescheduled", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "automate-your-calendar",
+      "title": "Let AI and automations fill your calendar",
+      "content": "<p>Here's where it gets exciting — you don't have to be the only one booking into this calendar:</p><ul><li><strong>AI agents can book appointments during calls.</strong> Give your Smart Agent the prebuilt <strong>Calendar</strong> tool in the agent editor and choose which <strong>Calendar Categories</strong> it's allowed to book into. From then on, when a caller says \"can someone come by Tuesday afternoon?\", the agent schedules the event itself — title, time, category and all — while it's still on the phone. See <a href=\"/agents/agent-tools\">Agent Tools</a>.</li><li><strong>Online booking forms feed the calendar too.</strong> Publish a public booking page and every submission lands as a calendar entry alongside the new lead and job. See <a href=\"/crm/booking-forms\">Booking Forms</a>.</li><li><strong>Automatic SMS appointment reminders.</strong> For scheduled jobs, iMash can text the customer or technician before the appointment (\"your technician arrives in 60 minutes\") and flag overdue ones after — configure these reminder rules in your Dispatch message settings. See <a href=\"/dispatch/overview\">Dispatch</a>.</li></ul><p>Set these up once, and the calendar keeps itself full while you sleep.</p>",
+      "images": []
+    },
+    {
+      "id": "api-access",
+      "title": "For developers: calendar API access",
+      "content": "<p>Building your own integration? The two buttons in the top-right of the Calendar page have you covered:</p><ul><li><strong>API Info (Events)</strong> — ready-to-copy endpoint details and examples for reading and creating calendar events programmatically.</li><li><strong>API Info (Participants)</strong> — the same for attaching leads and contacts to events.</li></ul><p>Pair them with your API key — see <a href=\"/get-started/api-keys\">API Keys</a> — and you can sync the iMash calendar with anything.</p>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Your calendar is live — now connect it to the rest of your growth engine so appointments book themselves.",
+    "cards": [
+      { "href": "/crm/booking-forms", "title": "Booking Forms", "description": "Publish a public booking page that drops appointments straight onto your calendar." },
+      { "href": "/agents/agent-tools", "title": "Agent Tools", "description": "Give your AI agent the Calendar tool so it books appointments during live calls." },
+      { "href": "/crm/leads", "title": "Leads", "description": "Manage the leads you'll be attaching to your calendar events." },
+      { "href": "/crm/tasks", "title": "Tasks & Kanban", "description": "Track the to-dos around every appointment with checklists and time tracking." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>Questions about the calendar, categories, or AI booking? Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a> — we're happy to help you set up the perfect scheduling flow.</p>"
+  },
+  "metaTitle": "Calendar & Scheduling | iMash Documentation",
+  "metaDescription": "Learn how to use the iMash CRM calendar: create and reschedule events, color-code categories, link appointments to leads and contacts, and let AI agents book for you.",
+  "metaKeywords": "calendar, scheduling, appointments, events, calendar categories, reschedule, CRM calendar, AI booking, upcoming events"
+}

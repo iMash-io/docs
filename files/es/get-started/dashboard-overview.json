@@ -1,91 +1,206 @@
 {
-  "title": "Resumen del panel: cómo leer tu página de inicio de iMash",
-  "lede": "La página Overview (Resumen) es lo primero que ves al iniciar sesión. Te ofrece una vista rápida de toda tu cuenta: el total de registros, el rendimiento de las llamadas y una lista filtrable de cada llamada.",
-  "timeToComplete": "5 minutos",
+  "title": "Resumen del panel: oriéntese en iMash",
+  "lede": "Acaba de iniciar sesión — ahora convirtamos ese muro de mosaicos, pestañas y tablas en un mapa que conozca de memoria. En diez minutos sabrá exactamente dónde vive cada parte de la plataforma y cómo leer su página de inicio como un profesional.",
+  "timeToComplete": "10 minutos",
   "steps": [
     {
-      "id": "open-overview",
-      "title": "Abrir el resumen",
-      "content": "<ol><li>Inicia sesión en iMash. Llegas automáticamente a la página <strong>Overview</strong> (Resumen).</li><li>Para volver aquí en cualquier momento, haz clic en <strong>Overview</strong> (Resumen) en la parte superior de la navegación de la izquierda.</li><li>La página es de reportes de solo lectura &mdash; nada de lo que hagas clic aquí cambia tus datos, así que es seguro explorarla.</li></ol>",
+      "id": "meet-your-home-page",
+      "title": "Conozca su página de inicio",
+      "content": "<p>iMash reúne un call center con IA, un CRM completo, despacho de técnicos, mensajería y marketing en una sola pantalla — y todo empieza aquí. Al iniciar sesión, llega a la página <strong>Overview</strong> (Resumen).</p><ol><li>Inicie sesión en su panel de iMash. La página <strong>Overview</strong> se carga automáticamente.</li><li>Para volver aquí en cualquier momento, haga clic en <strong>Overview</strong> en la parte superior de la barra lateral izquierda.</li><li>Observe las tres zonas de cada pantalla de iMash:<ul><li><strong>Barra lateral izquierda</strong> — todas las páginas de la plataforma, agrupadas por área (Intelligence Center, Messages, Call Center, CRM y más). Se desplaza, y la flecha <strong>&lt;</strong> de la parte inferior la contrae cuando necesita más espacio.</li><li><strong>Encabezado</strong> — la barra de búsqueda, las notificaciones y las grandes pestañas de sección que usará para saltar entre áreas.</li><li><strong>Área principal</strong> — el contenido de la página en la que esté. Ahora mismo, la instantánea de su cuenta.</li></ul></li></ol><blockquote>💡 La página Overview es de reportes de solo lectura — nada de lo que haga clic aquí modifica sus datos, así que explore con libertad.</blockquote>",
       "images": [
         {
           "src": "images/get-started/dashboard-overview-main-light.png",
-          "alt": "Página de resumen de iMash",
-          "caption": "La página Overview (Resumen): mosaicos de Total Statistics, tarjetas de rendimiento, filtros y la tabla de llamadas.",
+          "alt": "La página de inicio Overview de iMash con barra lateral, encabezado, mosaicos de estadísticas y tabla de llamadas",
+          "caption": "Su base de operaciones: barra lateral izquierda, navegación del encabezado y la instantánea Overview de toda su cuenta.",
           "theme": "light"
         },
         {
           "src": "images/get-started/dashboard-overview-main-dark.png",
-          "alt": "Página de resumen de iMash",
-          "caption": "La página Overview (Resumen): mosaicos de Total Statistics, tarjetas de rendimiento, filtros y la tabla de llamadas.",
+          "alt": "La página de inicio Overview de iMash con barra lateral, encabezado, mosaicos de estadísticas y tabla de llamadas",
+          "caption": "Su base de operaciones: barra lateral izquierda, navegación del encabezado y la instantánea Overview de toda su cuenta.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "header-toolbar",
+      "title": "Conozca la barra de herramientas del encabezado",
+      "content": "<p>La tarjeta en la parte superior de la pantalla es su franja de mando — le acompaña a todas las páginas. De izquierda a derecha:</p><ul><li><strong>Search …</strong> (Buscar) — una búsqueda global en sus contactos, leads, trabajos, agentes, números de teléfono, eventos de calendario y registros de llamadas. Haga clic (o pulse <strong>/</strong>), escriba un nombre y salte directo al registro.</li><li><strong>🔔 Campana de notificaciones</strong> — abre su bandeja de notificaciones en la app. Puede crear sus propias reglas de alerta (por ejemplo, \"avísame cuando se pague una factura\") e incluso activar notificaciones push del navegador desde aquí.</li><li><strong>Live:</strong> (En vivo) — un contador en vivo de las llamadas en curso en este momento. Haga clic para abrir el monitor <strong>Live Calls</strong> (Llamadas en vivo).</li><li><strong>Etiqueta de rol</strong> — la píldora verde (propietario) o naranja (subusuario) que muestra su rol y su correo de acceso. Haga clic para ver exactamente qué permisos tiene su cuenta.</li><li><strong>Language</strong> (Idioma) — cambia el idioma del panel (inglés, español y más).</li><li><strong>Interruptor de tema</strong> — el conmutador luna/sol cambia toda la aplicación entre modo claro y oscuro. Pruébelo — cada captura de estas guías existe en ambos.</li><li><strong>Menú de cuenta</strong> — pase el cursor sobre el icono del logotipo para ver su correo, con <strong>Account Settings</strong> (Configuración de la cuenta: perfil, contraseña, marca) y <strong>Logout</strong> (Cerrar sesión).</li><li><strong>📞 Botón de teléfono</strong> — abre el marcador web integrado para hacer y recibir llamadas directamente desde el navegador, en cualquier página.</li></ul>",
+      "images": [
+        {
+          "src": "images/get-started/dashboard-overview-header-tools-light.png",
+          "alt": "Barra de herramientas del encabezado de iMash con búsqueda, campana de notificaciones, contador en vivo, etiqueta de rol, idioma, interruptor de tema, menú de cuenta y botón de teléfono",
+          "caption": "La barra del encabezado: búsqueda, notificaciones, contador de llamadas en vivo, etiqueta de rol, idioma, interruptor de tema, menú de cuenta y el marcador web.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/dashboard-overview-header-tools-dark.png",
+          "alt": "Barra de herramientas del encabezado de iMash con búsqueda, campana de notificaciones, contador en vivo, etiqueta de rol, idioma, interruptor de tema, menú de cuenta y botón de teléfono",
+          "caption": "La barra del encabezado: búsqueda, notificaciones, contador de llamadas en vivo, etiqueta de rol, idioma, interruptor de tema, menú de cuenta y el marcador web.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "section-tabs",
+      "title": "Navegue con las pestañas de sección",
+      "content": "<p>Justo debajo de la barra de herramientas está la franja de pestañas de sección — la forma más rápida de moverse entre las grandes áreas de la plataforma. Haga clic en una pestaña y tanto la página como la barra lateral izquierda cambian a ese mundo. Si su pantalla es estrecha, la franja se desplaza lateralmente — arrástrela para ver el resto.</p><ul><li><strong>Automation</strong> (Automatización) — su Intelligence Center: cree agentes de IA de voz y texto, flujos de automatización visuales y converse en Smart Studio. Empiece con <a data-href=\"/agents/create-agent\">Crear agente</a> y <a data-href=\"/automations/smart-flows\">Smart Flows</a>.</li><li><strong>Contact Center</strong> (Centro de contacto) — llamadas en vivo, grupos de agentes humanos, números de teléfono, extensiones PBX, proveedores SIP, registros de llamadas y su base de conocimiento. Vea el <a data-href=\"/contact-center/overview\">resumen del Contact Center</a>.</li><li><strong>CRM</strong> — cuentas, contactos, leads, negocios, cotizaciones, facturas, tareas, productos y su calendario. Empiece con <a data-href=\"/crm/contacts\">Contactos</a>.</li><li><strong>Dispatch</strong> (Despacho) — trabajos de servicio en campo, técnicos y despacho automático de técnicos. Vea el <a data-href=\"/dispatch/overview\">resumen de Dispatch</a>.</li><li><strong>Messages</strong> (Mensajes) — conversaciones bidireccionales de <a data-href=\"/messages/sms\">SMS</a>, <a data-href=\"/messages/whatsapp\">WhatsApp</a> y <a data-href=\"/messages/email\">Email</a>, todo en un solo lugar.</li><li><strong>Campaigns</strong> (Campañas) — campañas de llamadas salientes con IA, listas de marcación y el marcador predictivo humano. Empiece en <a data-href=\"/campaigns/create-campaign\">Crear campaña</a>.</li><li><strong>Marketing</strong> — construya listas de leads: importe contactos, extraiga negocios y explote LinkedIn.</li><li><strong>User Management</strong> (Gestión de usuarios) — invite a su equipo, asigne roles y grupos de permisos, y revise el registro de auditoría. Vea <a data-href=\"/settings/team-management\">Gestión del equipo</a>.</li><li><strong>Billing</strong> (Facturación) — su saldo, planes, métodos de pago y consumo. Vea <a data-href=\"/settings/billing\">Facturación</a>.</li><li><strong>Credentials</strong> (Credenciales) — claves API para conectar sus propios sistemas. Vea <a data-href=\"/get-started/api-keys\">Claves API</a>.</li></ul><blockquote>💡 ¿No ve alguna de estas pestañas? Puede que su administrador haya ocultado esa área para su rol — las pestañas solo aparecen para las secciones que tiene permitido usar.</blockquote>",
+      "images": [
+        {
+          "src": "images/get-started/dashboard-overview-header-nav-light.png",
+          "alt": "Encabezado de iMash con la franja de pestañas de sección: Automation, Contact Center, CRM, Dispatch, Messages, Campaigns, User Management y más",
+          "caption": "Las pestañas de sección, con la sección activa resaltada y sus subpestañas acopladas debajo.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/dashboard-overview-header-nav-dark.png",
+          "alt": "Encabezado de iMash con la franja de pestañas de sección: Automation, Contact Center, CRM, Dispatch, Messages, Campaigns, User Management y más",
+          "caption": "Las pestañas de sección, con la sección activa resaltada y sus subpestañas acopladas debajo.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "sub-tab-strip",
+      "title": "Profundice con la franja de subpestañas",
+      "content": "<p>Al hacer clic en una pestaña de sección, una segunda fila de chips más pequeños se acopla debajo — las páginas propias de la sección, cada una con un contador de registros en vivo. Es un mini índice de dondequiera que esté.</p><ol><li>Haga clic en <strong>CRM</strong> en la franja de pestañas de sección.</li><li>Observe los chips acoplados: <strong>Overview</strong>, <strong>Accounts</strong> (Cuentas), <strong>Contacts</strong> (Contactos), <strong>Leads</strong>, <strong>Deals</strong> (Negocios), <strong>Invoices</strong> (Facturas), <strong>Quotes</strong> (Cotizaciones), <strong>Tasks</strong> (Tareas), <strong>Products</strong> (Productos), <strong>Services</strong> (Servicios) y más — el número bajo cada etiqueta es cuántos registros tiene.</li><li>Haga clic en cualquier chip para abrir esa página. El chip resaltado siempre le dice dónde está.</li><li>Si hay más chips de los que caben, use la flecha <strong>›</strong> (o deslice) para desplazar la franja.</li></ol>",
+      "images": [
+        {
+          "src": "images/get-started/dashboard-overview-subtabs-light.png",
+          "alt": "La sección CRM seleccionada con su franja de subpestañas mostrando los chips Overview, Accounts, Contacts, Leads, Deals, Invoices, Quotes y Tasks con contadores de registros",
+          "caption": "La franja de subpestañas de CRM: un chip por página, cada uno con su contador de registros en vivo.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/dashboard-overview-subtabs-dark.png",
+          "alt": "La sección CRM seleccionada con su franja de subpestañas mostrando los chips Overview, Accounts, Contacts, Leads, Deals, Invoices, Quotes y Tasks con contadores de registros",
+          "caption": "La franja de subpestañas de CRM: un chip por página, cada uno con su contador de registros en vivo.",
           "theme": "dark"
         }
       ]
     },
     {
       "id": "total-statistics",
-      "title": "Leer los mosaicos de Total Statistics",
-      "content": "<p>La sección superior, <strong>Total Statistics</strong> (Estadísticas totales), muestra los conteos históricos de toda tu cuenta. Estos números son independientes del filtro de fecha que está debajo de ellos.</p><ul><li><strong>Contacts</strong> (Contactos), <strong>Leads</strong> (Prospectos) y <strong>Accounts</strong> (Cuentas) &mdash; cuántos registros de CRM tienes.</li><li><strong>Notes</strong> (Notas) y <strong>Calendar entries</strong> (Entradas del calendario) &mdash; la actividad registrada en tus registros.</li><li><strong>AI agents</strong> (Agentes de IA), <strong>Campaigns</strong> (Campañas), <strong>Phone numbers</strong> (Números de teléfono) y <strong>SIP providers</strong> (Proveedores SIP) &mdash; tu configuración de llamadas.</li><li><strong>Knowledge base</strong> (Base de conocimiento), <strong>Sub accounts</strong> (Subcuentas) y <strong>Custom tools</strong> (Herramientas personalizadas) &mdash; el resto de tu espacio de trabajo.</li></ul><p>Si tienes subcuentas, usa el menú desplegable <strong>All owners</strong> (Todos los propietarios) en la parte superior derecha de esta sección para limitar los totales a un solo propietario.</p>",
+      "title": "Lea los mosaicos de Total Statistics",
+      "content": "<p>De vuelta en la página <strong>Overview</strong>, la primera tarjeta es <strong>Total Statistics</strong> (Estadísticas totales) — recuentos históricos de toda su cuenta. Estos números ignoran el filtro de fecha de más abajo; son su cuenta de un vistazo.</p><ul><li><strong>Contacts</strong>, <strong>Leads</strong> y <strong>Accounts</strong> — cuántos registros de CRM tiene.</li><li><strong>Notes</strong> (Notas) y <strong>Calendar entries</strong> (Entradas de calendario) — actividad registrada sobre esos registros.</li><li><strong>AI agents</strong> (Agentes IA), <strong>Campaigns</strong>, <strong>Phone numbers</strong> (Números de teléfono) y <strong>SIP providers</strong> (Proveedores SIP) — su configuración de llamadas.</li><li><strong>Knowledge base</strong> (Base de conocimiento) — documentos que sus agentes de IA pueden consultar durante las llamadas.</li><li><strong>Sub accounts</strong> (Subcuentas) — los compañeros de equipo que ha invitado.</li><li><strong>Custom tools</strong> (Herramientas personalizadas) — acciones a medida que sus agentes pueden ejecutar.</li></ul><p>Si tiene subcuentas, use el menú <strong>All owners</strong> (Todos los propietarios) en la esquina superior derecha de la tarjeta para acotar todos los mosaicos a un solo propietario.</p>",
       "images": [
         {
-          "src": "images/analytics/overview-stats-light.png",
-          "alt": "Mosaicos de Total Statistics",
-          "caption": "Totales históricos de contactos, prospectos, agentes, números de teléfono y más.",
+          "src": "images/get-started/dashboard-overview-stats-light.png",
+          "alt": "Mosaicos de Total Statistics con recuentos de contactos, leads, cuentas, notas, entradas de calendario, agentes IA, campañas, números de teléfono, proveedores SIP, base de conocimiento, subcuentas y herramientas personalizadas",
+          "caption": "Totales históricos de cada tipo de registro de su cuenta.",
           "theme": "light"
         },
         {
-          "src": "images/analytics/overview-stats-dark.png",
-          "alt": "Mosaicos de Total Statistics",
-          "caption": "Totales históricos de contactos, prospectos, agentes, números de teléfono y más.",
+          "src": "images/get-started/dashboard-overview-stats-dark.png",
+          "alt": "Mosaicos de Total Statistics con recuentos de contactos, leads, cuentas, notas, entradas de calendario, agentes IA, campañas, números de teléfono, proveedores SIP, base de conocimiento, subcuentas y herramientas personalizadas",
+          "caption": "Totales históricos de cada tipo de registro de su cuenta.",
           "theme": "dark"
         }
       ]
     },
     {
-      "id": "performance-cards",
-      "title": "Revisar el rendimiento de tus llamadas",
-      "content": "<p>Debajo de las estadísticas hay una franja de cuatro tarjetas de rendimiento. A diferencia de los mosaicos de arriba, estas <em>sí</em> respetan el filtro de fecha, por lo que siempre reflejan el período que hayas seleccionado.</p><ul><li><strong>Total calls</strong> (Total de llamadas) &mdash; número de llamadas en el período, con la duración promedio.</li><li><strong>Total minutes</strong> (Total de minutos) &mdash; tiempo total de conversación, con tu tasa de éxito.</li><li><strong>Total spent</strong> (Gasto total) &mdash; tu gasto en llamadas, con el costo por minuto.</li><li><strong>Avg cost / call</strong> (Costo promedio por llamada) &mdash; precio promedio por llamada, con una estimación del gasto diario.</li></ul>",
-      "images": []
+      "id": "performance-kpis",
+      "title": "Revise sus tarjetas de rendimiento de llamadas",
+      "content": "<p>Debajo de los mosaicos hay una franja de cuatro tarjetas de rendimiento. A diferencia de Total Statistics, estas <em>sí</em> obedecen el filtro de fecha — siempre describen la ventana de tiempo que haya seleccionado.</p><ul><li><strong>Total calls</strong> (Total de llamadas) — cuántas llamadas hubo en la ventana, con la duración media debajo.</li><li><strong>Total minutes</strong> (Total de minutos) — el tiempo total de conversación, con su tasa de éxito.</li><li><strong>Total spent</strong> (Total gastado) — lo que costaron esas llamadas, con la tarifa por minuto.</li><li><strong>Avg cost / call</strong> (Costo medio por llamada) — el precio medio de una llamada, con una estimación de gasto diario.</li></ul><blockquote>💡 Estos cuatro números son el pulso de su call center con IA. Mírelos cada mañana — un cambio repentino en la tasa de éxito o en el costo por llamada es su primera señal de que algo necesita atención.</blockquote>",
+      "images": [
+        {
+          "src": "images/get-started/dashboard-overview-kpis-light.png",
+          "alt": "Cuatro tarjetas de rendimiento con Total calls, Total minutes, Total spent y Avg cost per call",
+          "caption": "La franja de rendimiento acotada por fecha: llamadas, minutos, gasto y costo por llamada.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/dashboard-overview-kpis-dark.png",
+          "alt": "Cuatro tarjetas de rendimiento con Total calls, Total minutes, Total spent y Avg cost per call",
+          "caption": "La franja de rendimiento acotada por fecha: llamadas, minutos, gasto y costo por llamada.",
+          "theme": "dark"
+        }
+      ]
     },
     {
       "id": "filters",
-      "title": "Filtrar lo que ves",
-      "content": "<p>La barra de <strong>Filters</strong> (Filtros) controla tanto las tarjetas de rendimiento como la tabla de llamadas que está debajo.</p><ol><li>Elige un <strong>rango de fechas</strong>: Today (Hoy), Yesterday (Ayer), This Week (Esta semana), This Month (Este mes), Last 30 Days (Últimos 30 días) o un <strong>Custom Range</strong> (Rango personalizado).</li><li>Acota por <strong>Phone number</strong> (Número de teléfono), <strong>Agent</strong> (Agente) o <strong>Tags</strong> (Etiquetas) (por ejemplo, Voicemail (Buzón de voz), Transfer (Transferencia) o No Answer (Sin respuesta)).</li><li>Si tienes subcuentas, filtra por <strong>Owner</strong> (Propietario).</li><li>Escribe un nombre en el cuadro <strong>Search customer</strong> (Buscar cliente) para encontrar a una persona que haya llamado.</li></ol>",
-      "images": []
+      "title": "Filtre lo que ve",
+      "content": "<p>La barra <strong>Filters</strong> (Filtros) controla las tarjetas de rendimiento, la tabla de llamadas y los gráficos de más abajo. El subtítulo de la tarjeta siempre muestra la ventana activa (por ejemplo, <em>Last 30 Days · Jun 9 – Jul 9</em>).</p><ol><li>Haga clic en el <strong>botón de fecha</strong> (muestra <strong>Last 30 Days</strong> por defecto) y elija <strong>Today</strong> (Hoy), <strong>Yesterday</strong> (Ayer), <strong>This Week</strong> (Esta semana), <strong>This Month</strong> (Este mes), <strong>Last 30 Days</strong> (Últimos 30 días) o <strong>Custom Range</strong> (Rango personalizado). Al elegir <strong>Custom Range</strong> aparece un selector de fecha inicio–fin.</li><li>Acote por <strong>Phone numbers</strong> — solo llamadas en una línea concreta.</li><li>Acote por <strong>Agent</strong> — un agente de IA, o <strong>Web Dialer</strong> para llamadas hechas por humanos desde el marcador del navegador.</li><li>Acote por <strong>Tags</strong> (Etiquetas) — elija uno o más resultados como <strong>Voicemail</strong> (Buzón de voz), <strong>Transfer</strong> (Transferencia), <strong>No Answer</strong> (Sin respuesta), <strong>Agent Ended Call</strong> (El agente finalizó) o <strong>Customer Ended</strong> (El cliente finalizó).</li><li>Si tiene subcuentas, filtre por <strong>Owner</strong> (Propietario) para ver las llamadas de un compañero.</li><li>Escriba un nombre en <strong>Search customer…</strong> (Buscar cliente) para encontrar las llamadas con una persona concreta.</li></ol>",
+      "images": [
+        {
+          "src": "images/get-started/dashboard-overview-filters-light.png",
+          "alt": "La barra de filtros con rango de fechas, números de teléfono, agente, etiquetas, propietario y búsqueda de cliente",
+          "caption": "La barra Filters — todo lo que está debajo obedece a estos controles.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/dashboard-overview-filters-dark.png",
+          "alt": "La barra de filtros con rango de fechas, números de teléfono, agente, etiquetas, propietario y búsqueda de cliente",
+          "caption": "La barra Filters — todo lo que está debajo obedece a estos controles.",
+          "theme": "dark"
+        }
+      ]
     },
     {
       "id": "calls-table",
-      "title": "Explorar la tabla de llamadas",
-      "content": "<p>La tabla <strong>Calls</strong> (Llamadas) muestra cada llamada que coincide con tus filtros. Cada fila muestra el contacto o prospecto, el agente o la campaña que la gestionó, la fecha y hora, la duración, el tipo, las etiquetas y el propietario.</p><ol><li>Haz clic en el nombre de quien llamó para abrir sus datos de <strong>Contact</strong> (Contacto) o <strong>Lead</strong> (Prospecto) en un panel lateral.</li><li>Usa el ícono de <strong>ojo</strong> en la columna Actions (Acciones) para abrir el registro completo de la llamada, incluyendo la transcripción y el análisis.</li><li>Navega por los resultados usando los controles en la parte inferior de la tabla.</li></ol>",
-      "images": []
+      "title": "Explore la tabla de llamadas",
+      "content": "<p>La tarjeta <strong>Calls</strong> (Llamadas) lista cada llamada que coincide con sus filtros — la historia de su cuenta, fila a fila.</p><ul><li><strong>Contact / Lead</strong> — quién estuvo en la llamada. Haga clic en el nombre para abrir la ficha completa del contacto o lead en un panel lateral sin salir de la página.</li><li><strong>Agent / Campaign</strong> — el agente de IA que atendió la llamada (con su campaña debajo), o <strong>Web Dialer</strong> para llamadas humanas desde el navegador.</li><li><strong>Date &amp; Time</strong> (Fecha y hora) — cuándo ocurrió; la flechita indica la dirección (saliente ↗ en verde, entrante ↙ en azul) y el número de debajo es la línea suya por la que pasó la llamada.</li><li><strong>Duration</strong> (Duración) — la duración en hh:mm:ss.</li><li><strong>Type</strong> (Tipo) — <strong>Phone</strong> para llamadas normales, <strong>web</strong> para llamadas de navegador.</li><li><strong>Tags</strong> — el resultado (Completed, Voicemail, No Answer…) más las etiquetas que extrajo su IA; pase el cursor sobre la píldora <strong>+N</strong> para ver el resto. Desplace la tabla lateralmente para ver también la columna <strong>Owner</strong>.</li><li><strong>Actions</strong> (Acciones) — el icono <strong>▶ reproducir</strong> para la grabación y el icono <strong>👁 ojo</strong> para abrir el registro completo de la llamada con la transcripción y el análisis de la IA.</li></ul><ol><li>Use los controles de paginación de la esquina inferior derecha para recorrer los resultados, cambiar el tamaño de página o saltar directamente a una página.</li></ol>",
+      "images": [
+        {
+          "src": "images/get-started/dashboard-overview-calls-light.png",
+          "alt": "La tabla de llamadas con contacto, agente, fecha y hora, duración, tipo, etiquetas e iconos de acción",
+          "caption": "Cada llamada de la ventana seleccionada — haga clic en el icono de ojo de una fila para ver la transcripción completa.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/dashboard-overview-calls-dark.png",
+          "alt": "La tabla de llamadas con contacto, agente, fecha y hora, duración, tipo, etiquetas e iconos de acción",
+          "caption": "Cada llamada de la ventana seleccionada — haga clic en el icono de ojo de una fila para ver la transcripción completa.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "analytics-charts",
+      "title": "Repase los gráficos de analítica",
+      "content": "<p>La fila inferior convierte las llamadas de la página actual en tres gráficos rápidos:</p><ul><li><strong>Reason call ended</strong> (Motivo de fin de llamada) — una barra por resultado (el agente finalizó, el cliente finalizó, buzón de voz…). Pase el cursor sobre una barra para ver el recuento exacto.</li><li><strong>Avg duration by agent</strong> (Duración media por agente) — la duración media de llamada por agente de IA, en minutos. Ideal para detectar un agente cuyas conversaciones se alargan o se cortan antes de tiempo.</li><li><strong>Call volume by hour</strong> (Volumen de llamadas por hora) — cuándo ocurren sus llamadas a lo largo del día, para programar campañas y personal en las horas pico.</li></ul><p>Ese es todo el panel — ya sabe dónde vive cada cosa. ¡Es hora de darle vida!</p>",
+      "images": [
+        {
+          "src": "images/get-started/dashboard-overview-charts-light.png",
+          "alt": "Tres gráficos de analítica: motivo de fin de llamada, duración media por agente y volumen de llamadas por hora",
+          "caption": "La fila de analítica: resultados, duración media por agente y volumen de llamadas por hora.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/dashboard-overview-charts-dark.png",
+          "alt": "Tres gráficos de analítica: motivo de fin de llamada, duración media por agente y volumen de llamadas por hora",
+          "caption": "La fila de analítica: resultados, duración media por agente y volumen de llamadas por hora.",
+          "theme": "dark"
+        }
+      ]
     }
   ],
   "nextSteps": {
     "title": "¿Qué sigue?",
-    "description": "Ahora que sabes leer el panel, profundiza en el detalle detrás de cada llamada.",
+    "description": "Ya sabe leer el mapa — ahora hágalo brillar. Dele una voz a su cuenta y vea cómo este panel se llena de llamadas reales.",
     "cards": [
       {
+        "href": "/agents/create-agent",
+        "title": "Cree su primer agente de IA",
+        "description": "Construya un agente de IA que conteste y haga llamadas por usted, 24/7."
+      },
+      {
+        "href": "/phone/add-phone-number",
+        "title": "Agregue un número de teléfono",
+        "description": "Consiga un número para que su agente empiece a hablar con clientes reales."
+      },
+      {
         "href": "/phone/call-logs",
-        "title": "Revisar los registros de llamadas",
-        "description": "Abre cualquier llamada para escuchar la grabación, leer la transcripción y ver los datos extraídos."
-      },
-      {
-        "href": "/crm/contacts",
-        "title": "Gestionar contactos y prospectos",
-        "description": "Trabaja los registros del CRM que alimentan los totales de tu panel."
-      },
-      {
-        "href": "/get-started/api-keys",
-        "title": "Generar claves de API",
-        "description": "Lleva los mismos datos a tus propios sistemas a través de la API REST."
+        "title": "Revise los registros de llamadas",
+        "description": "Abra cualquier llamada para escuchar la grabación, leer la transcripción y ver los datos extraídos."
       }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
+    "title": "¿Necesita ayuda?",
+    "content": "<p>Si tiene algún problema o alguna pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
   "metaTitle": "Resumen del panel | Documentación de iMash",
-  "metaDescription": "Aprende a leer la página Overview de iMash: las Total Statistics históricas, las tarjetas de rendimiento de llamadas por fecha, la barra de filtros y la tabla de llamadas.",
-  "metaKeywords": "panel de iMash, página de resumen, análisis de llamadas, estadísticas totales, rendimiento de llamadas, filtros, tabla de llamadas, reportes"
+  "metaDescription": "Un recorrido guiado por el panel de iMash: la página de inicio Overview, las pestañas de sección y subpestañas del encabezado, la barra de herramientas (búsqueda, notificaciones, tema, menú de cuenta), los mosaicos de estadísticas, las tarjetas de rendimiento, los filtros, la tabla de llamadas y los gráficos de analítica.",
+  "metaKeywords": "panel de iMash, página de resumen, navegación, pestañas de sección, barra de herramientas, estadísticas totales, rendimiento de llamadas, filtros, tabla de llamadas, gráficos de analítica, modo oscuro, notificaciones"
 }

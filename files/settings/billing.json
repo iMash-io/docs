@@ -1,52 +1,109 @@
 {
   "title": "Billing",
-  "lede": "iMash runs on a prepaid balance. This guide shows you how to check your balance, add a payment method, top up funds, and review your usage and transactions.",
-  "timeToComplete": "6 minutes",
+  "lede": "iMash runs on a prepaid balance — top it up once and every call, message, and AI action draws from it automatically. This guide walks you through adding a payment method, funding your balance, and tracing every cent in the Ledger.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
       "id": "open-billing",
       "title": "Open the Billing page",
-      "content": "<ol><li>In the left navigation, open the <strong>Account</strong> group and click <strong>Billing</strong> (or go to <code>/billing</code>).</li><li>The top of the page shows your <strong>Prepaid Balance</strong> — the credit that calls, messages, and other usage are drawn from.</li><li>Keep the balance topped up so your agents and campaigns never pause. (<em>Pay as you go</em> is shown as Coming Soon; today everything runs on prepaid balance.)</li></ol>",
+      "content": "<p>Everything money-related lives on one page: your balance, payment methods, top-ups, the full transaction ledger, and your phone-number subscriptions.</p><ol><li>In the top navigation bar, click <strong>Billing</strong> (or go directly to <code>/billing</code>).</li><li>The page title reads <strong>Billing &amp; Usage</strong> with a billing-mode selector next to it. Today everything runs on <strong>Prepaid Balance</strong>; <strong>Pay as you go</strong> is shown as <em>Coming Soon</em> and can't be selected yet.</li><li>The layout has three areas: the <strong>payment methods</strong> card on the left, the <strong>Prepaid Balance / Add Funds</strong> card on the right, and the <strong>Ledger</strong> / <strong>Phone Number Order</strong> tabs below.</li></ol><blockquote>💡 Your prepaid balance is what keeps agents answering and campaigns dialing — if it hits $0, usage-based services pause. Check it here whenever in doubt.</blockquote>",
       "images": [
-        { "src": "images/analytics/billing-light.png", "alt": "Billing page with balance", "caption": "The Billing page shows your prepaid balance, payment methods, and add-funds panel", "theme": "light" },
-        { "src": "images/analytics/billing-dark.png", "alt": "Billing page with balance", "caption": "The Billing page shows your prepaid balance, payment methods, and add-funds panel", "theme": "dark" }
+        { "src": "images/settings/billing-overview-light.png", "alt": "Billing & Usage page showing payment method form, prepaid balance and ledger", "caption": "The Billing page: payment methods on the left, balance and Add Funds on the right, Ledger below", "theme": "light" },
+        { "src": "images/settings/billing-overview-dark.png", "alt": "Billing & Usage page showing payment method form, prepaid balance and ledger", "caption": "The Billing page: payment methods on the left, balance and Add Funds on the right, Ledger below", "theme": "dark" }
       ]
     },
     {
       "id": "add-payment-method",
       "title": "Add a payment method",
-      "content": "<ol><li>Open the <strong>Add Payment Method</strong> panel.</li><li>Enter a <strong>credit/debit card</strong>, or connect a <strong>US bank account (ACH)</strong>.</li><li>Save it. You can add more than one method and remove any you no longer use.</li></ol><p>Your card details are stored securely by our payment processor (Stripe) — iMash never sees your full card number.</p>"
+      "content": "<p>Before you can add funds you need at least one saved payment method. If you have none yet, the form opens automatically.</p><ol><li>In the left card, choose <strong>Card</strong> or <strong>US bank account</strong>.</li><li>For a card, fill in <strong>Card number</strong>, <strong>Expiration date</strong>, <strong>Security code</strong>, <strong>Country</strong>, and <strong>ZIP code</strong>. For a bank account, follow the on-screen bank-connection flow instead.</li><li>Click <strong>Add Payment Method</strong>. The saved method appears in the <strong>Existing Payment Methods</strong> list.</li><li>To save more methods later, click <strong>Add Another Payment Method</strong>; use <strong>Cancel</strong> to close the form without saving.</li><li>In the list, tick the <strong>checkbox</strong> next to a method to select it for top-ups (it shows <strong>(Selected)</strong>), or click the <strong>trash icon</strong> to remove a method you no longer use.</li></ol><p>Your card details are stored securely by our payment processor (Stripe) — iMash never sees your full card number.</p><blockquote>⚠️ If you select a <strong>US bank account</strong>, a note reminds you that bank payments may take a few days to process — plan top-ups ahead so your balance never runs dry mid-campaign.</blockquote>",
+      "images": [
+        { "src": "images/settings/billing-payment-method-light.png", "alt": "Add Payment Method form with Card and US bank account options", "caption": "Choose Card or US bank account, fill in the details, then click Add Payment Method", "theme": "light" },
+        { "src": "images/settings/billing-payment-method-dark.png", "alt": "Add Payment Method form with Card and US bank account options", "caption": "Choose Card or US bank account, fill in the details, then click Add Payment Method", "theme": "dark" }
+      ]
     },
     {
       "id": "add-funds",
       "title": "Add funds to your balance",
-      "content": "<ol><li>In the <strong>Add Funds</strong> area, type the dollar amount you want to add.</li><li>Choose which saved <strong>payment method</strong> to charge.</li><li>Click to confirm. Your balance updates once the payment is confirmed.</li></ol><p><strong>Good to know:</strong> card top-ups carry a small <strong>3% processing fee</strong> — you're charged the full amount you entered and the balance is credited 3% less. <strong>Bank (ACH)</strong> top-ups have no processing fee.</p>"
+      "content": "<p>The right-hand card shows your live <strong>Prepaid Balance</strong> and the <strong>Add Funds</strong> controls beneath it.</p><ol><li>Make sure the payment method you want to charge is <strong>selected</strong> (checkbox in the left card).</li><li>In the <strong>Add Funds</strong> field, type the dollar amount you want to add.</li><li>Click <strong>Add Funds</strong>. Once the payment is confirmed, your balance updates on the spot.</li></ol><p><strong>Processing fees, in plain terms:</strong></p><ul><li><strong>Credit/debit card</strong> top-ups carry a <strong>3% processing fee</strong> — your card is charged the full amount you entered and your balance is credited 3% less. As soon as you type an amount, the page spells it out: \"You'll be charged $X and $Y will be credited to your balance.\"</li><li><strong>Bank account (ACH)</strong> top-ups have <strong>no fee</strong> — the full amount is credited.</li></ul><blockquote>💡 Topping up larger amounts less often means fewer card fees — or use a bank account and skip the fee entirely.</blockquote>",
+      "images": [
+        { "src": "images/settings/billing-add-funds-light.png", "alt": "Prepaid Balance card with Add Funds amount field and buttons", "caption": "Type an amount and click Add Funds — the fee note above explains exactly what will be credited", "theme": "light" },
+        { "src": "images/settings/billing-add-funds-dark.png", "alt": "Prepaid Balance card with Add Funds amount field and buttons", "caption": "Type an amount and click Add Funds — the fee note above explains exactly what will be credited", "theme": "dark" }
+      ]
     },
     {
-      "id": "usage-ledger",
-      "title": "Review usage and transactions",
-      "content": "<ul><li>Open the <strong>Ledger</strong> tab to see every credit and debit — money you added, usage drawn down, and any transfers or adjustments.</li><li>Filter by <strong>service type</strong> and expand a row to see the balance before and after, so you can trace exactly where spend went.</li><li>Use the <strong>transactions</strong> history to review your past card and bank payments.</li></ul>"
+      "id": "view-transactions",
+      "title": "Review your card and bank payments",
+      "content": "<p>Every top-up you've ever made is one click away.</p><ol><li>Next to the Add Funds button, click <strong>View Transactions</strong>.</li><li>The <strong>Transaction History</strong> window lists each payment with its <strong>Date</strong>, <strong>Amount</strong>, <strong>Status</strong> (e.g. SUCCEEDED), and <strong>Description</strong>.</li><li>Close the window when you're done — nothing here is editable, it's your payment receipt trail.</li></ol><p>This list shows the money you paid in through Stripe. For how the balance was <em>spent</em>, use the Ledger tab (next step).</p>",
+      "images": [
+        { "src": "images/settings/billing-transactions-light.png", "alt": "Transaction History modal with Date, Amount, Status and Description columns", "caption": "Transaction History — every card and bank payment with its status", "theme": "light" },
+        { "src": "images/settings/billing-transactions-dark.png", "alt": "Transaction History modal with Date, Amount, Status and Description columns", "caption": "Transaction History — every card and bank payment with its status", "theme": "dark" }
+      ]
     },
     {
-      "id": "team-billing",
+      "id": "ledger-filters",
+      "title": "Open the Ledger and set your filters",
+      "content": "<p>The <strong>Ledger</strong> tab is your money microscope — every credit and debit on the account, filterable from every angle. Scroll down and make sure the <strong>Ledger</strong> tab is active (it is by default).</p><p>The filter card at the top controls everything below it:</p><ul><li><strong>View</strong> — <strong>Single user</strong> shows one account's ledger; <strong>All users combined</strong> merges every account you can see (you, your team's sub-accounts, and referred accounts if you're an affiliate).</li><li><strong>Combined view</strong> — with \"All users combined\" selected, switch between <strong>Summary &amp; per-user</strong> (totals and a per-user table) and <strong>Activity feed</strong> (a live stream of every entry).</li><li><strong>Date range</strong> — limit everything to a start/end date.</li><li><strong>Show</strong> — filter by entry type: <strong>All</strong>, <strong>Deposits</strong>, <strong>Transfers</strong>, <strong>Usage</strong>, or <strong>Commission</strong>.</li><li><strong>Service type</strong> — narrow usage rows to specific services (Inbound Calls, Outbound Calls, Web Calls, SMS Inbound/Outbound, AI Email Writer, and more). You can pick several at once.</li></ul>",
+      "images": [
+        { "src": "images/settings/billing-ledger-filters-light.png", "alt": "Ledger filter card with View, Combined view, Date range, Show and Service type filters", "caption": "The Ledger filter card — view mode, date range, entry type, and service type", "theme": "light" },
+        { "src": "images/settings/billing-ledger-filters-dark.png", "alt": "Ledger filter card with View, Combined view, Date range, Show and Service type filters", "caption": "The Ledger filter card — view mode, date range, entry type, and service type", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "ledger-activity-feed",
+      "title": "Read the Activity feed",
+      "content": "<p>The <strong>Activity feed</strong> (the default view) is a newest-first stream of every billing event across all users in your scope. Each row shows:</p><ul><li><strong>When</strong> — date and exact time; hover for the full timestamp with timezone.</li><li><strong>Type</strong> — a colored pill: <strong>Deposit</strong> (money you paid in), <strong>Admin credit</strong> (credit granted by an administrator), <strong>Transfer</strong> (balance moved between accounts), <strong>Usage</strong> (spend on calls, messages, AI), <strong>Commission</strong> (margin or affiliate earnings credited to you), and <strong>Manual Transfer</strong> (an off-ledger balance adjustment the system detected and labeled for you).</li><li><strong>User</strong> — whose balance moved, with a <strong>View ledger</strong> shortcut that jumps straight to that user's single-user ledger.</li><li><strong>Description</strong> — what happened: the service and call duration for usage, the counterparty for transfers, the payment reference for deposits.</li><li><strong>Service</strong> — the service type pill for usage and commission rows.</li><li><strong>Amount</strong> — green with an up arrow for money in, red with a down arrow for money out.</li></ul><p>Use the <strong>Prev</strong> / <strong>Next</strong> buttons under the table to walk further back in time, and <strong>Refresh</strong> to pull the latest entries.</p><blockquote>💡 When a call generates both a usage debit and a commission credit, a small blue timeline rail on the left edge visually connects the related rows — so you can see exactly which call fed which commission.</blockquote>",
+      "images": [
+        { "src": "images/settings/billing-ledger-feed-light.png", "alt": "Activity feed table with Deposit, Admin credit, Commission and Usage rows", "caption": "The Activity feed — deposits, credits, commissions and usage in one stream", "theme": "light" },
+        { "src": "images/settings/billing-ledger-feed-dark.png", "alt": "Activity feed table with Deposit, Admin credit, Commission and Usage rows", "caption": "The Activity feed — deposits, credits, commissions and usage in one stream", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "ledger-summary",
+      "title": "See totals with Summary & per-user",
+      "content": "<p>Want the big picture instead of a stream? Switch <strong>Combined view</strong> to <strong>Summary &amp; per-user</strong>.</p><ol><li>The summary card draws proportional bars for <strong>Usage by service</strong>, <strong>Earnings by service</strong>, <strong>Earnings by role</strong>, and <strong>Paid Deposits</strong> — each with its total for the selected date range.</li><li>Below it, the <strong>Per-user breakdown</strong> table lists every account you can see with its <strong>Balance</strong>, <strong>Paid Deposits</strong> (real money in via Stripe), <strong>Commission</strong> (what that account earned you), <strong>Usage</strong> (what it spent), and <strong>Last activity</strong>.</li><li>Sub-accounts are nested under their main account — click the <strong>+</strong> on a main's row to expand its subs. A collapsed main also rolls its subs' commission up into a \"Subs\" line.</li><li>Click <strong>View ledger</strong> on any row to jump into that user's full single-user ledger.</li></ol>",
+      "images": [
+        { "src": "images/settings/billing-ledger-summary-light.png", "alt": "Summary breakdown bars and per-user breakdown table", "caption": "Summary & per-user — service breakdowns on top, one row per account below", "theme": "light" },
+        { "src": "images/settings/billing-ledger-summary-dark.png", "alt": "Summary breakdown bars and per-user breakdown table", "caption": "Summary & per-user — service breakdowns on top, one row per account below", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "ledger-single-user",
+      "title": "Drill into one account with Single user view",
+      "content": "<p>The <strong>Single user</strong> view is where you audit one account cent by cent.</p><ol><li>Set <strong>View</strong> to <strong>Single user</strong>.</li><li>Pick the account in the <strong>User</strong> dropdown — it's searchable and grouped by scope: <strong>You</strong>, your <strong>Tenant</strong> (mains and subs listed separately), and <strong>Referred</strong> accounts if you're an affiliate. Each option shows the account's current balance.</li><li>The summary card shows that user's own <strong>Usage by service</strong>, <strong>Earnings by service</strong>, <strong>Earnings by role</strong>, and <strong>Paid Deposits</strong> bars.</li><li>The <strong>Ledger</strong> table below lists every entry for that account. The <strong>Show</strong> and <strong>Service type</strong> filters apply here too.</li></ol><blockquote>💡 In single-user view the ledger validates the balance chain: if the balance ever moved outside the normal entries, a gold <strong>Manual Transfer</strong> row is inserted to explain the gap — so the numbers always add up in front of you.</blockquote>",
+      "images": [
+        { "src": "images/settings/billing-ledger-single-light.png", "alt": "Single user ledger with user picker, summary bars and full entry list", "caption": "Single user view — pick an account, see its breakdowns and its complete ledger", "theme": "light" },
+        { "src": "images/settings/billing-ledger-single-dark.png", "alt": "Single user ledger with user picker, summary bars and full entry list", "caption": "Single user view — pick an account, see its breakdowns and its complete ledger", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "phone-number-order",
+      "title": "Manage phone-number subscriptions",
+      "content": "<p>The <strong>Phone Number Order</strong> tab lists every phone number you rent through iMash, each with its own monthly subscription.</p><ul><li><strong>Columns</strong>: <strong>Phone Number</strong> (with country tag), <strong>Owner</strong> (which main or sub bought it), <strong>Status</strong> (Active, Trial, Payment Due, Past Due, Cancelling with days left, or Released), <strong>Next Billing</strong> date, <strong>Price</strong> per month, <strong>Purchased</strong> date, <strong>Last Used</strong> (when a call last used the number — \"Never\" flags idle numbers worth releasing), and <strong>Action</strong>.</li><li>The <strong>Active</strong> / <strong>All</strong> toggle above the table hides or shows released (historical) numbers.</li></ul><p>To stop paying for a number:</p><ol><li>Click <strong>Cancel</strong> on its row and confirm with <strong>Cancel Subscription</strong>. The number stays active until the end of the paid billing period — the Status column counts down the days.</li><li>Changed your mind? Click <strong>Undo</strong> before the period ends and the subscription keeps renewing.</li><li>Need it gone now? On a cancelling row, click <strong>Delete</strong> — the number is released immediately, with no refund for the remaining period.</li></ol><blockquote>⚠️ Releasing a number is permanent — once released it goes back to the carrier pool and may not be available to re-buy. You can also tick several rows and use the bulk <strong>Cancel</strong> / <strong>Undo</strong> / <strong>Delete</strong> buttons that appear above the table.</blockquote>",
+      "images": [
+        { "src": "images/settings/billing-phone-orders-light.png", "alt": "Phone Number Order tab with Active/All toggle and subscription columns", "caption": "Phone Number Order — every rented number with its status, price, and next billing date", "theme": "light" },
+        { "src": "images/settings/billing-phone-orders-dark.png", "alt": "Phone Number Order tab with Active/All toggle and subscription columns", "caption": "Phone Number Order — every rented number with its status, price, and next billing date", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "team-and-affiliates",
       "title": "Billing for team members and affiliates",
-      "content": "<ul><li>Team members you invite don't get billing access by default. You can grant it, set a per-member per-minute price, or transfer balance to a member from <strong>Team</strong> (User Management).</li><li>If you're an <strong>affiliate</strong>, an extra <strong>Withdrawals</strong> tab appears here so you can cash out your commission balance.</li></ul>"
+      "content": "<p>A few billing abilities live outside this page but connect straight to it:</p><ul><li><strong>Team members</strong> you invite don't get billing access by default. From <strong>User Management</strong> you can grant a member billing access, set a per-member per-minute price, or transfer balance from your account to theirs — every transfer shows up in the Ledger as a <strong>Transfer</strong> row on both sides.</li><li><strong>Affiliates</strong> get an extra <strong>Withdrawals</strong> tab on this page (between Ledger and Phone Number Order) where you can request a cash-out of your accumulated commission balance and track each request's status.</li><li>The <strong>Commission</strong> entries in your Ledger show exactly where affiliate and sub-account earnings came from — down to the specific call.</li></ul><p>That's the whole money loop: fund it once, and iMash accounts for every cent in the open.</p>"
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Keep an eye on spend and manage your team.",
+    "description": "Your balance is loaded — now put it to work and keep an eye on where it goes.",
     "cards": [
-      { "href": "/analytics/cost-management", "title": "Cost Management", "description": "Break down usage and cost by service." },
-      { "href": "/settings/team-management", "title": "Team Management", "description": "Grant billing access or transfer balance to staff." },
-      { "href": "/agents/create-agent", "title": "Create an Agent", "description": "Put your balance to work with an AI voice agent." }
+      { "href": "/analytics/cost-management", "title": "Cost Management", "description": "Break down usage and cost by service, agent, and time period." },
+      { "href": "/settings/team-management", "title": "Team Management", "description": "Grant billing access or transfer balance to team members." },
+      { "href": "/phone/add-phone-number", "title": "Add a Phone Number", "description": "Buy a number — its subscription appears right here under Phone Number Order." }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Billing - Prepaid Balance & Payment Methods | iMash Docs",
-  "metaDescription": "Check your prepaid balance, add a card or bank account, top up funds, and review usage and transactions on the iMash Billing page.",
-  "metaKeywords": "billing, prepaid balance, add funds, payment methods, ACH, credit card, usage ledger, transactions"
+  "metaTitle": "Billing - Prepaid Balance, Payment Methods & Ledger | iMash Documentation",
+  "metaDescription": "Add a card or bank account, top up your prepaid balance, trace every credit and debit in the Ledger, and manage phone-number subscriptions on the iMash Billing page.",
+  "metaKeywords": "billing, prepaid balance, add funds, payment methods, ACH, credit card, ledger, transactions, commission, phone number subscription, withdrawals"
 }

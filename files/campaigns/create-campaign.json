@@ -1,60 +1,116 @@
 {
-  "title": "Create a Calling Campaign",
-  "lede": "Build an automated outbound calling campaign: create it, attach an AI agent and phone numbers, load the contacts to call, set your dialing pace, and start it.",
-  "timeToComplete": "10 minutes",
+  "title": "Create a Smart Dialer Campaign",
+  "lede": "Launch an AI-powered outbound calling machine: create a campaign, give it an AI agent and phone numbers, load the people to call, tune the pacing and schedule, and press Start. Your agent does the rest — around the clock, within the hours you allow.",
+  "timeToComplete": "15 minutes",
   "steps": [
     {
-      "id": "create-campaign",
-      "title": "Create a new campaign",
-      "content": "<ol><li>In the left menu open <strong>Campaigns</strong> to see your campaign list.</li><li>Click <strong>Create New Campaign</strong> in the top right.</li><li>A new draft campaign is created and opens automatically. It starts in <strong>Draft</strong> status, so nothing is dialed yet.</li></ol>",
+      "id": "open-campaigns",
+      "title": "Open the Campaigns list",
+      "content": "<p>Everything starts on the Smart Dialer list — your command center for every AI calling campaign you run.</p><ol><li>In the top navigation bar, click <strong>Campaigns</strong>.</li><li>In the row of sub-tabs that appears, make sure <strong>Smart Dialer</strong> is selected (it is the default).</li></ol><p>The table shows one row per campaign with these columns:</p><ul><li><strong>Status</strong> — <em>Draft</em> (never started), <em>Running</em>, <em>After hours</em> (waiting for your working-hours window), <em>Cooling down</em> (waiting out the retry delay), <em>Paused</em>, <em>Stopped</em>, <em>Completed</em>, or <em>Archived</em>. Use the filter icon on the column header to filter by status.</li><li><strong>Contacts</strong> — how many people are queued in the campaign's dial list.</li><li><strong>CPS</strong> — the campaign's Max Concurrent Calls setting (calls placed simultaneously).</li><li><strong>Progress</strong> — dial attempts made vs. total attempts available (hover the bar for exact numbers).</li><li><strong>Total Cost</strong> — all-time call spend for the campaign.</li><li><strong>Actions</strong> — 👁 view, ▶ start / ⏸ pause, and 🗑 delete shortcuts.</li></ul><p>Above the table you can <strong>Filter by label</strong>, <strong>Filter by owner</strong>, and switch between <strong>List</strong> and <strong>Folders</strong> view — Folders groups campaigns by the labels you assign them, which is a lifesaver once you run dozens.</p>",
       "images": [
-        { "src": "images/campaigns/campaigns-list-light.png", "alt": "Campaigns list", "caption": "The Campaigns list with the Create New Campaign button", "theme": "light" },
-        { "src": "images/campaigns/campaigns-list-dark.png", "alt": "Campaigns list", "caption": "The Campaigns list with the Create New Campaign button", "theme": "dark" }
+        { "src": "images/campaigns/create-campaign-list-light.png", "alt": "Smart Dialer campaigns list with status, contacts, CPS, progress and actions columns", "caption": "The Smart Dialer list — Create New Campaign lives in the top-right", "theme": "light" },
+        { "src": "images/campaigns/create-campaign-list-dark.png", "alt": "Smart Dialer campaigns list with status, contacts, CPS, progress and actions columns", "caption": "The Smart Dialer list — Create New Campaign lives in the top-right", "theme": "dark" }
       ]
     },
     {
-      "id": "campaign-settings",
-      "title": "Name it and attach an AI agent + phone numbers",
-      "content": "<p>Open the <strong>Settings</strong> tab inside the campaign and fill in:</p><ul><li><strong>Name</strong> and <strong>Description</strong> so you can find it later.</li><li><strong>Phone Numbers</strong> &mdash; pick one or more of your numbers to dial out from. You can select whole groups at once.</li><li><strong>AI Agents</strong> &mdash; choose the AI agent that will handle each answered call. Don't have one yet? Create it first under Intelligence Center &rarr; Smart Agents.</li></ul><p>Changes on this tab save automatically.</p>",
+      "id": "create-new-campaign",
+      "title": "Create the campaign and name it",
+      "content": "<ol><li>Click <strong>Create New Campaign</strong> in the top-right of the list.</li><li>A new campaign is created instantly and opens in a side panel. It starts in <strong>Draft</strong> status — nothing dials until you press Start, so you can configure everything at your own pace.</li><li>Click the campaign's title at the top of the panel (e.g. \"Campaign #238\") to rename it. Type the new name and press <strong>Enter</strong>.</li></ol><p>The panel opens on the <strong>Overview</strong> tab: live tiles for <strong>Contacts</strong>, <strong>Attempts Made</strong>, <strong>Attempts Left</strong>, <strong>Finished</strong>, <strong>Progress</strong> and <strong>Live Calls</strong>, plus <strong>All-Time Call History</strong>, <strong>Next Scheduled Calls</strong> and <strong>Recent Activity</strong>. It's empty now — by the end of this guide it will be alive with data.</p><blockquote>💡 The header also holds your controls for later: <strong>Start</strong> / <strong>Pause</strong>, <strong>Export CSV</strong>, <strong>Export PDF</strong>, and the red trash icon to delete the campaign.</blockquote>",
       "images": [
-        { "src": "images/campaigns/campaign-detail-light.png", "alt": "Campaign detail and settings", "caption": "The campaign Settings tab where you pick the AI agent and phone numbers", "theme": "light" },
-        { "src": "images/campaigns/campaign-detail-dark.png", "alt": "Campaign detail and settings", "caption": "The campaign Settings tab where you pick the AI agent and phone numbers", "theme": "dark" }
+        { "src": "images/campaigns/create-campaign-overview-light.png", "alt": "New draft campaign open on the Overview tab with stat tiles and the Start button", "caption": "A fresh draft campaign — the Overview tab and the Start button in the header", "theme": "light" },
+        { "src": "images/campaigns/create-campaign-overview-dark.png", "alt": "New draft campaign open on the Overview tab with stat tiles and the Start button", "caption": "A fresh draft campaign — the Overview tab and the Start button in the header", "theme": "dark" }
       ]
     },
     {
-      "id": "add-dial-list",
-      "title": "Add people to call (the dial list)",
-      "content": "<ol><li>Open the <strong>Add Leads</strong> or <strong>Add Contacts</strong> tab.</li><li>Search your CRM and add the people you want to call &mdash; they get queued into this campaign's dial list.</li><li>Switch to the <strong>Dial List</strong> tab to review everyone queued and their attempt status.</li></ol>",
+      "id": "attach-agent-and-numbers",
+      "title": "Attach an AI agent and caller numbers (Settings tab)",
+      "content": "<p>Open the <strong>Settings</strong> tab. Every change here <strong>saves automatically</strong> — there is no Save button to forget.</p><p>Under <strong>Basic Information</strong>:</p><ul><li><strong>Name</strong> / <strong>Description</strong> — keep these meaningful so you can tell campaigns apart later.</li></ul><p>Under <strong>Call Settings</strong>:</p><ul><li><strong>Phone Numbers</strong> — the numbers your campaign dials <em>from</em>. Numbers are grouped by label; expand a group with the arrow to pick individual numbers, or hit <strong>Select all</strong> next to a group to grab the whole set. Selecting several numbers spreads your outbound volume across them.</li><li><strong>AI Agents</strong> — the Smart Agent that speaks to every person who answers. You can search the dropdown by name. No agent yet? Build one first — see the Create an AI Agent guide, then come back.</li><li><strong>Max Concurrent Calls</strong> — how many calls run at the same time (this is the CPS column on the list). Up to <strong>10</strong>; if you need more, contact support.</li><li><strong>User Do Not Call List</strong> — toggle ON to automatically apply your account-wide Do Not Call list to this campaign, so blocked numbers are never dialed.</li><li><strong>Local Presence Dialing</strong> — toggle ON and the campaign automatically dials each contact from the outbound number whose area code best matches theirs. Familiar-looking numbers get answered dramatically more often. When enabled, a <strong>Country Code Hint</strong> field appears to help match numbers correctly for your market.</li></ul>",
       "images": [
-        { "src": "images/campaigns/new-campaign-light.png", "alt": "Adding contacts to a campaign", "caption": "Add Leads / Add Contacts pull people from your CRM into the dial list", "theme": "light" },
-        { "src": "images/campaigns/new-campaign-dark.png", "alt": "Adding contacts to a campaign", "caption": "Add Leads / Add Contacts pull people from your CRM into the dial list", "theme": "dark" }
+        { "src": "images/campaigns/create-campaign-settings-light.png", "alt": "Campaign Settings tab showing Basic Information and Call Settings with phone number groups and AI agent picker", "caption": "Settings tab — pick caller numbers by group and attach your AI agent", "theme": "light" },
+        { "src": "images/campaigns/create-campaign-settings-dark.png", "alt": "Campaign Settings tab showing Basic Information and Call Settings with phone number groups and AI agent picker", "caption": "Settings tab — pick caller numbers by group and attach your AI agent", "theme": "dark" }
       ]
     },
     {
-      "id": "pacing",
-      "title": "Set the dialing pace and hours",
-      "content": "<p>Still on the <strong>Settings</strong> tab, control how fast the campaign dials:</p><ul><li><strong>Max Concurrent Calls</strong> &mdash; how many calls run at the same time.</li><li><strong>Working hours</strong> and <strong>working days</strong> &mdash; the campaign only dials inside this window.</li><li><strong>Time zone</strong> &mdash; keep the default to respect each contact's local time, or pin one zone.</li><li>Optionally enable <strong>Inbound Callbacks</strong> so people who call your number back are routed to an AI agent or a team group.</li></ul>"
+      "id": "retry-settings",
+      "title": "Decide how persistent the dialer should be (Retry Settings)",
+      "content": "<p>Scroll down the <strong>Settings</strong> tab to the <strong>Retry Settings</strong> card. This is where you control follow-up attempts for people who don't answer:</p><ul><li><strong>Max Dials Per Phone Number</strong> — the maximum times each phone number is attempted (e.g. 3 means one call plus up to two retries).</li><li><strong>Retry Delay (minutes)</strong> — how long the dialer waits between attempts to the same number. While it waits, the campaign shows the <em>Cooling down</em> status.</li><li><strong>All Numbers for Lead/Contact Stop After</strong> — pick one or more stages; when a lead or contact reaches any of them (for example <em>Interested</em> or <em>Do Not Call</em>), the campaign stops calling <strong>every</strong> number that person has.</li><li><strong>Individual Number Stop Retrying</strong> — same idea, but only stops the specific phone number that hit the stage; the person's other numbers stay in the queue.</li></ul><blockquote>💡 Stage-based stops are what make the dialer feel smart: your AI agent updates a person's stage during the call, and the campaign instantly stops chasing people who already said yes — or no.</blockquote>",
+      "images": [
+        { "src": "images/campaigns/create-campaign-retry-light.png", "alt": "Retry Settings card with max dials per phone number, retry delay and stage-based stop rules", "caption": "Retry Settings — attempts, delay between retries, and stage-based stop rules", "theme": "light" },
+        { "src": "images/campaigns/create-campaign-retry-dark.png", "alt": "Retry Settings card with max dials per phone number, retry delay and stage-based stop rules", "caption": "Retry Settings — attempts, delay between retries, and stage-based stop rules", "theme": "dark" }
+      ]
     },
     {
-      "id": "start",
-      "title": "Start the campaign",
-      "content": "<ol><li>Go back to the <strong>Campaigns</strong> list (or use the campaign's own controls).</li><li>Click the <strong>Start</strong> (play) icon on the campaign row.</li><li>The status changes to <strong>Running</strong> and calls begin within your working hours. Use the <strong>Pause</strong> icon any time to stop dialing.</li></ol><p>When every contact has been fully attempted, the campaign automatically moves to <strong>Completed</strong> and its dial list is archived.</p>"
+      "id": "working-hours",
+      "title": "Set the calling window (Working Hours)",
+      "content": "<p>Still on the <strong>Settings</strong> tab, find the <strong>Working Hours</strong> card. The campaign only places calls inside this window — outside it, the status shows <em>After hours</em> and dialing resumes automatically the next window.</p><ul><li><strong>Start Time</strong> / <strong>End Time</strong> — e.g. 09:00 to 17:00.</li><li><strong>Timezone</strong> — leave it on <strong>Use Contacts/Leads Timezones</strong> and each person is called in <em>their own</em> local window (the polite, high-connect-rate choice). Or pin a specific zone (Eastern, Pacific, London, Sydney, …) to run the whole campaign on one clock.</li><li><strong>Working Days</strong> — check the days calls are allowed. Weekdays are checked by default; add Sat/Sun only if your audience expects it.</li></ul><blockquote>⚠️ Know your local telemarketing rules — many regions restrict cold-calling hours. The default 09:00–17:00, Monday–Friday window is a safe starting point.</blockquote>",
+      "images": [
+        { "src": "images/campaigns/create-campaign-hours-light.png", "alt": "Working Hours card with start and end time, timezone selector and working day checkboxes", "caption": "Working Hours — the campaign dials only inside this window", "theme": "light" },
+        { "src": "images/campaigns/create-campaign-hours-dark.png", "alt": "Working Hours card with start and end time, timezone selector and working day checkboxes", "caption": "Working Hours — the campaign dials only inside this window", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "inbound-callbacks",
+      "title": "Catch the callbacks (Inbound Callbacks)",
+      "content": "<p>People you missed will often call your number back — don't let those hot returns go to a generic greeting. The <strong>Inbound Callbacks</strong> card (on the <strong>Settings</strong> tab) routes them intelligently while the campaign is running, and it even works when several campaigns share the same number: the callback is matched to the campaign that actually dialed that person.</p><ol><li>Toggle <strong>Handle callbacks while running</strong> ON. Two more options appear:</li></ol><ul><li><strong>Ring a team group (humans)</strong> — toggle ON to ring the online members of a permission group first (first to accept wins). A <strong>Group to ring</strong> dropdown appears — pick the team. Leave it OFF to have an AI agent answer directly.</li><li><strong>When a customer calls back</strong> (labelled <strong>If nobody's available</strong> when a group is ringing) — choose what happens: <ul><li><strong>The campaign's AI agent answers</strong> — the same agent that made the original call picks up.</li><li><strong>A specific AI agent answers</strong> — an <strong>AI agent for callbacks</strong> dropdown appears; pick any agent (great for a dedicated \"callback\" persona).</li><li><strong>Let the number's default AI agent answer</strong> — falls through to the number's normal inbound routing.</li><li><strong>Drop the call</strong> — decline the callback (only available when no group is ringing).</li></ul></li></ul>",
+      "images": [
+        { "src": "images/campaigns/create-campaign-callbacks-light.png", "alt": "Inbound Callbacks card expanded showing the handle callbacks toggle, ring a team group option and callback policy dropdown", "caption": "Inbound Callbacks — route returned calls to your team or an AI agent", "theme": "light" },
+        { "src": "images/campaigns/create-campaign-callbacks-dark.png", "alt": "Inbound Callbacks card expanded showing the handle callbacks toggle, ring a team group option and callback policy dropdown", "caption": "Inbound Callbacks — route returned calls to your team or an AI agent", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "add-people",
+      "title": "Load the people to call (Add Leads / Add Contacts)",
+      "content": "<p>Time to fuel the machine. Campaigns pull straight from your CRM — no CSV gymnastics required.</p><ol><li>Open the <strong>Add Leads</strong> tab (for CRM leads) or the <strong>Add Contacts</strong> tab (for CRM contacts). Both work identically.</li><li>Click <strong>Filters</strong> to find exactly who you want: search by <strong>Name</strong>, <strong>Phone</strong> or <strong>Email</strong>, or filter by <strong>Lifecycle Stage</strong>, <strong>Source</strong>, <strong>Account</strong>, <strong>City</strong>, <strong>Tags</strong>, <strong>State/Province</strong>, <strong>Country</strong> or <strong>Zip/Postal Code</strong>. Combine as many as you like.</li><li>Tick the checkbox next to each person, or use the header checkbox to select the whole page. When a full page is selected you'll be offered <strong>Select all entries</strong> to grab every match across all pages.</li><li>Click <strong>Add Selected Leads (n)</strong> (or <strong>Add Selected Contacts (n)</strong>). Everyone is queued into the campaign's dial list.</li></ol><p>Use <strong>Refresh</strong> to reload the table, and click any name or <strong>View</strong> to peek at the full CRM record without leaving the campaign.</p><blockquote>💡 Only people with a phone number can be dialed — records without one are skipped. If your list lives outside iMash, import it into the CRM first (see Import &amp; Export Data), then add it here with one filtered select-all.</blockquote>",
+      "images": [
+        { "src": "images/campaigns/create-campaign-add-leads-light.png", "alt": "Add Leads tab with lead rows, checkboxes and the Add Selected Leads button", "caption": "Add Leads — tick people and click Add Selected Leads to queue them", "theme": "light" },
+        { "src": "images/campaigns/create-campaign-add-leads-dark.png", "alt": "Add Leads tab with lead rows, checkboxes and the Add Selected Leads button", "caption": "Add Leads — tick people and click Add Selected Leads to queue them", "theme": "dark" },
+        { "src": "images/campaigns/create-campaign-add-leads-filters-light.png", "alt": "Filters dropdown on the Add Leads tab showing search by name, lifecycle stage, source, account, city, tags, state, country and zip filters", "caption": "The Filters dropdown — slice your CRM by stage, source, tags, geography and more", "theme": "light" },
+        { "src": "images/campaigns/create-campaign-add-leads-filters-dark.png", "alt": "Filters dropdown on the Add Leads tab showing search by name, lifecycle stage, source, account, city, tags, state, country and zip filters", "caption": "The Filters dropdown — slice your CRM by stage, source, tags, geography and more", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "review-dial-list",
+      "title": "Review the queue (Dial List tab)",
+      "content": "<p>Open the <strong>Dial List</strong> tab to see everyone queued, one row per phone number:</p><ul><li><strong>Entity Name</strong> — click it to open the full lead/contact record.</li><li><strong>Status</strong> — <em>Pending</em> (still to be dialed) or completed.</li><li><strong>Global Stage</strong> — the person's current lifecycle stage.</li><li><strong>Attempts</strong> — dials made vs. your Max Dials setting (e.g. 0/3).</li><li><strong>Target Phone</strong>, <strong>Call Stage</strong> and <strong>Scheduled At</strong> — which number will be dialed and when the next attempt is due.</li></ul><p>Tools above the table:</p><ul><li><strong>Show All</strong> / <strong>Show Pending</strong> / <strong>Show Completed</strong> — quick status filters.</li><li><strong>Search by name or phone number</strong> and <strong>Filter by lifecycle stages</strong> — find specific entries; <strong>Clear Filters</strong> resets both.</li><li><strong>Delete Selected (n)</strong> — tick rows (or select all across pages) and remove them from the queue. This only removes them from the campaign — the CRM records are untouched.</li><li><strong>Refresh</strong> — reload the list.</li></ul>",
+      "images": [
+        { "src": "images/campaigns/create-campaign-dial-list-light.png", "alt": "Dial List tab showing queued entries with status, stage, attempts, target phone and scheduled time", "caption": "The Dial List — every queued number with its attempt count and schedule", "theme": "light" },
+        { "src": "images/campaigns/create-campaign-dial-list-dark.png", "alt": "Dial List tab showing queued entries with status, stage, attempts, target phone and scheduled time", "caption": "The Dial List — every queued number with its attempt count and schedule", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "custom-stages",
+      "title": "Optional: give the campaign its own stages (Stages tab)",
+      "content": "<p>By default the campaign uses your global CRM lifecycle stages. If this campaign needs its own outcome labels (say, <em>Booked Demo</em> or <em>Wrong Number</em>):</p><ol><li>Open the <strong>Stages</strong> tab.</li><li>Toggle <strong>Use custom stages for this campaign</strong> ON. The editor pre-fills with a copy of your global stages.</li><li>Add, rename, or remove stages, then click <strong>Save Campaign Stages</strong>.</li></ol><p>Your AI agent will classify calls into these stages, they'll appear across the campaign's tables and reports, and they become the options in the Retry Settings stop rules. Toggle the switch OFF at any time to revert to the global stages.</p>",
+      "images": [
+        { "src": "images/campaigns/create-campaign-stages-light.png", "alt": "Stages tab with the use custom stages toggle and info banner about global CRM stages", "caption": "Stages tab — flip the toggle to define campaign-specific stages", "theme": "light" },
+        { "src": "images/campaigns/create-campaign-stages-dark.png", "alt": "Stages tab with the use custom stages toggle and info banner about global CRM stages", "caption": "Stages tab — flip the toggle to define campaign-specific stages", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "start-and-monitor",
+      "title": "Press Start — and watch it work",
+      "content": "<p>This is the moment. Double-check your agent, numbers, hours and list, then:</p><ol><li>Click <strong>Start</strong> in the campaign header (or the ▶ icon on the campaign's row in the list).</li><li>The status flips to <strong>Running</strong> and dialing begins — immediately if you're inside the working-hours window, otherwise at the next window (<em>After hours</em>).</li><li>Watch it live: the <strong>Overview</strong> tab updates in real time, and the <strong>Campaign Logs</strong> tab streams every call as it ends — date, ended reason, duration, who was called, cost, and any stage transition the AI made. Click a row for the full call detail, transcript and recording.</li><li>Click <strong>Pause</strong> any time to stop dialing; calls already in progress finish gracefully. Press <strong>Start</strong> again to resume.</li></ol><p>Need the data elsewhere? <strong>Export CSV</strong> / <strong>Export PDF</strong> in the header download the full campaign log.</p><p>When every number has been fully attempted, the campaign flips to <strong>Completed</strong> automatically and its dial list becomes a read-only archive.</p><blockquote>⚠️ Housekeeping: paused campaigns idle for ~30 days (drafts ~15) get flagged with a yellow <strong>Will archive</strong> warning, then auto-archived a few days later. Open the campaign and click <strong>Resume</strong> to keep it going, or <strong>Pin (don't auto-archive)</strong> to keep it parked indefinitely.</blockquote>",
+      "images": [
+        { "src": "images/campaigns/create-campaign-logs-light.png", "alt": "Campaign Logs tab with real-time call log columns for date, ended reason, duration, cost and stage transition", "caption": "Campaign Logs — every call streams in here in real time once you hit Start", "theme": "light" },
+        { "src": "images/campaigns/create-campaign-logs-dark.png", "alt": "Campaign Logs tab with real-time call log columns for date, ended reason, duration, cost and stage transition", "caption": "Campaign Logs — every call streams in here in real time once you hit Start", "theme": "dark" }
+      ]
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Fine-tune your list, watch the results, and stay compliant.",
+    "description": "Your campaign is dialing — now sharpen the list, read the results, and stay compliant.",
     "cards": [
-      { "href": "/campaigns/dial-lists", "title": "Manage the Dial List", "description": "Add, review, and clean up who gets called." },
-      { "href": "/campaigns/campaign-analytics", "title": "Campaign Analytics", "description": "Track progress, connect rate, and cost." },
-      { "href": "/agents/create-agent", "title": "Create an AI Agent", "description": "Build the agent that answers your calls." }
+      { "href": "/campaigns/dial-lists", "title": "Manage Dial Lists", "description": "Add, review, and clean up exactly who gets called." },
+      { "href": "/campaigns/campaign-analytics", "title": "Campaign Analytics", "description": "Track connect rates, outcomes, and cost per call." },
+      { "href": "/campaigns/do-not-call-list", "title": "Do Not Call List", "description": "Keep blocked numbers out of every campaign." },
+      { "href": "/agents/create-agent", "title": "Create an AI Agent", "description": "Build or refine the agent that handles your calls." }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Create a Calling Campaign | iMash Docs",
-  "metaDescription": "Step-by-step guide to creating an automated outbound calling campaign in iMash: attach an AI agent and phone numbers, build a dial list, set pacing, and start.",
-  "metaKeywords": "create campaign, outbound calling, ai agent campaign, dial list, campaign pacing, smart dialer, imash campaigns"
+  "metaTitle": "Create a Smart Dialer Campaign | iMash Documentation",
+  "metaDescription": "Step-by-step guide to launching an AI outbound calling campaign in iMash: attach an AI agent and caller numbers, load leads and contacts, set retries, working hours and inbound callbacks, then start and monitor it live.",
+  "metaKeywords": "create campaign, smart dialer, ai outbound calls, dial list, campaign pacing, concurrent calls, working hours, retry settings, inbound callbacks, local presence dialing, imash campaigns"
 }

@@ -1,55 +1,115 @@
 {
-  "title": "Add a Knowledge Base to Your Agent",
-  "lede": "Upload your FAQs, policies, and support documents so your Smart Agent answers questions with accurate, up-to-date information.",
-  "timeToComplete": "5 minutes",
-  "videoUrl": "https://youtu.be/XvZsh6jPuLg",
-  "videoLength": "2",
+  "title": "Knowledge Base (RAG): Teach Your Agent Your Business",
+  "lede": "Upload your FAQs, price lists, policies, and manuals once — and your AI agent will pull accurate answers from them on every call, chat, and message. This guide walks you from your first upload to a fully knowledge-powered agent.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
-      "id": "open-kb",
-      "title": "Open the Knowledge Base Panel",
-      "content": "<ol><li>Go to <strong>Intelligence Center → Smart Agents</strong> and open your agent.</li><li>In the middle column, click the <strong>Knowledge Base</strong> panel.</li></ol>",
+      "id": "open-files",
+      "title": "Open the Knowledge Base Page",
+      "content": "<p>The Knowledge Base is your company's document library. Every file you upload here can be attached to any of your agents.</p><ol><li>In the top navigation, click the <strong>Contact Center</strong> section.</li><li>In the sub-tab slider below it, click <strong>Knowledge Base</strong>. (You can also use the left sidebar: under <strong>Call Center</strong>, click <strong>KnowledgeBase</strong>.)</li><li>You land on the <strong>Knowledge Base</strong> page with a search bar, a <strong>Supported File Types</strong> panel, and a table of all uploaded files.</li></ol><blockquote>💡 The Knowledge Base is shared across your whole account — upload a file once and attach it to as many agents as you like.</blockquote>",
       "images": [
-        { "src": "images/agents/knowledge-base-light.png", "alt": "Knowledge Base panel", "caption": "The Knowledge Base panel lists the files attached to your agent.", "theme": "light" },
-        { "src": "images/agents/knowledge-base-dark.png", "alt": "Knowledge Base panel", "caption": "The Knowledge Base panel lists the files attached to your agent.", "theme": "dark" }
+        {"src": "images/agents/agent-knowledge-base-files-light.png", "alt": "Knowledge Base page with the Add Files button, supported file types panel, and files table", "caption": "The Knowledge Base page — your document library for all agents.", "theme": "light"},
+        {"src": "images/agents/agent-knowledge-base-files-dark.png", "alt": "Knowledge Base page with the Add Files button, supported file types panel, and files table", "caption": "The Knowledge Base page — your document library for all agents.", "theme": "dark"}
       ]
     },
     {
-      "id": "upload",
-      "title": "Upload Your Documents",
-      "content": "<ol><li>Click to upload a file (for example PDF or TXT).</li><li>Wait while iMash processes and embeds it so the agent can search its contents. If a file was already uploaded, you will be told.</li><li>The Knowledge Base panel turns on automatically once at least one file is attached.</li></ol>",
+      "id": "supported-types",
+      "title": "Know What You Can Upload",
+      "content": "<p>iMash accepts far more than PDFs. The <strong>Supported File Types</strong> panel on the page lists every accepted format:</p><ul><li><strong>Documents</strong> — <code>.pdf</code>, <code>.txt</code>, <code>.docx</code>, <code>.doc</code>, <code>.rtf</code> (up to 50 MB)</li><li><strong>Spreadsheets</strong> — <code>.xlsx</code>, <code>.xls</code>, <code>.csv</code> (up to 25 MB)</li><li><strong>Presentations</strong> — <code>.pptx</code>, <code>.ppt</code> (up to 100 MB)</li><li><strong>Images</strong> — <code>.jpg</code>, <code>.png</code>, <code>.gif</code>, <code>.webp</code> and more (up to 20 MB) — text is extracted automatically with OCR, so even a photographed menu or flyer works</li><li><strong>Web &amp; Markup</strong> — <code>.html</code>, <code>.xml</code>, <code>.md</code> (up to 5 MB)</li><li><strong>Data</strong> — <code>.json</code>, <code>.jsonl</code> (up to 10 MB)</li><li><strong>eBooks</strong> — <code>.epub</code> (up to 50 MB)</li><li><strong>Code</strong> — <code>.py</code>, <code>.js</code>, <code>.ts</code>, <code>.sql</code>, <code>.yaml</code> and a dozen more</li></ul><blockquote>⚠️ Files above the size limit for their category are rejected during validation — split very large documents into smaller topic files (which also improves answer quality).</blockquote>",
       "images": [
-        { "src": "images/agents/assistant-editor-light.png", "alt": "Agent editor with knowledge base", "caption": "An attached knowledge base becomes searchable during conversations.", "theme": "light" },
-        { "src": "images/agents/assistant-editor-dark.png", "alt": "Agent editor with knowledge base", "caption": "An attached knowledge base becomes searchable during conversations.", "theme": "dark" }
+        {"src": "images/agents/agent-knowledge-base-types-light.png", "alt": "Supported File Types panel listing documents, spreadsheets, presentations, images, web, data, ebooks and code formats", "caption": "Every format the Knowledge Base accepts, grouped by category.", "theme": "light"},
+        {"src": "images/agents/agent-knowledge-base-types-dark.png", "alt": "Supported File Types panel listing documents, spreadsheets, presentations, images, web, data, ebooks and code formats", "caption": "Every format the Knowledge Base accepts, grouped by category.", "theme": "dark"}
       ]
     },
     {
-      "id": "verify",
-      "title": "Verify the Answers",
-      "content": "<ol><li>Open <strong>Test Agent</strong> and connect.</li><li>Ask questions your document answers (for example business hours or the support email).</li><li>Confirm the agent replies using facts from your file.</li></ol>",
+      "id": "upload-files",
+      "title": "Upload Your First File",
+      "content": "<ol><li>Click <strong>Add Files</strong> in the top-right corner of the page.</li><li>Pick one or more files from your computer (you can select several at once).</li><li>iMash validates each file, uploads it, and shows <em>\"Embedding started in background\"</em> — that means the platform is reading your document and indexing its contents so your agent can search it.</li><li>Watch the <strong>Status</strong> column on the file's row:<ul><li><strong>Started</strong> (blue, spinning) — the file is being processed. Small files take seconds; large ones a few minutes.</li><li><strong>Enabled</strong> (green) — the file is fully indexed and ready to attach to agents.</li><li><strong>Disabled</strong> (gray) — the file is stored but not indexed. Click <strong>Enable</strong> in the Actions column to index it.</li></ul></li></ol><blockquote>💡 The page refreshes the status automatically every few seconds while a file is processing — no need to reload.</blockquote>",
+      "images": [
+        {"src": "images/agents/agent-knowledge-base-row-light.png", "alt": "A file row showing size, created date, owner pill, green Enabled status and the Preview, Enable/Disable and Delete actions", "caption": "A processed file: green Enabled status means it is ready for your agents.", "theme": "light"},
+        {"src": "images/agents/agent-knowledge-base-row-dark.png", "alt": "A file row showing size, created date, owner pill, green Enabled status and the Preview, Enable/Disable and Delete actions", "caption": "A processed file: green Enabled status means it is ready for your agents.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "manage-files",
+      "title": "Understand the Files Table",
+      "content": "<p>Each row in the table tells you everything about a file at a glance:</p><ul><li><strong>File</strong> — name and type icon. Use the <strong>Search</strong> bar above the table to filter by name.</li><li><strong>Size</strong> and <strong>Created</strong> — upload size and date.</li><li><strong>Owner</strong> — who uploaded it: <strong>Main Account</strong> (shared tenant file), <strong>Sub …</strong> (uploaded by a specific sub-account), or <strong>Own</strong> (your personal upload when signed in as a sub-account).</li><li><strong>Status</strong> — <strong>Enabled</strong>, <strong>Started</strong>, or <strong>Disabled</strong> (see the previous step).</li><li><strong>Assistants</strong> — pills naming every agent currently using this file, so you always know what a change will affect.</li><li><strong>Actions</strong> — <strong>Preview</strong>, a download icon, <strong>Enable</strong>/<strong>Disable</strong>, and a red delete icon.</li></ul><blockquote>⚠️ <strong>Disable</strong> removes the file's search index AND detaches it from every agent listed in the Assistants column (a confirmation asks first). <strong>Delete</strong> removes the file entirely. If you only want to swap a document for a newer version, delete the old file, upload the new one, and re-attach it to your agents.</blockquote>",
       "images": []
     },
     {
-      "id": "improve",
-      "title": "Improve Accuracy",
-      "content": "<ul><li>If the agent does not pull from the file, add guidance to the prompt - for example: <em>\"When asked a question, answer from the FAQ in your knowledge base.\"</em></li><li>Use clear, well-structured documents and keep them current.</li><li>Split large topics into separate files so retrieval stays focused.</li></ul>",
+      "id": "preview-files",
+      "title": "Preview and Download Files",
+      "content": "<p>Not sure what's inside a file you uploaded months ago? Check it without leaving the page:</p><ol><li>Click <strong>Preview</strong> in the file's Actions column.</li><li>A <strong>File Preview</strong> drawer opens showing the document's contents, its type, size, and owner.</li><li>From here you can click <strong>Download</strong> to save a copy, <strong>Copy Link</strong> to copy a temporary signed link to the file, or <strong>Delete</strong> to remove it.</li><li>Close the drawer with the <strong>X</strong> in the top-left corner.</li></ol>",
+      "images": [
+        {"src": "images/agents/agent-knowledge-base-preview-light.png", "alt": "File Preview drawer showing the contents of an FAQ text file with Download, Copy Link and Delete buttons", "caption": "The File Preview drawer — read, download, or share any file in place.", "theme": "light"},
+        {"src": "images/agents/agent-knowledge-base-preview-dark.png", "alt": "File Preview drawer showing the contents of an FAQ text file with Download, Copy Link and Delete buttons", "caption": "The File Preview drawer — read, download, or share any file in place.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "open-agent-editor",
+      "title": "Open Your Agent's Knowledge Base Panel",
+      "content": "<p>Files don't help until an agent can use them. Time to connect the two:</p><ol><li>In the top navigation, click <strong>Automation</strong>, then the <strong>Smart Agents</strong> sub-tab (or click <strong>Smart Agents</strong> in the left sidebar under Intelligence Center).</li><li>Click your agent's name to open the agent editor.</li><li>In the middle column, find <strong>Knowledge Base</strong> — it is the very first panel, with an <strong>ON/OFF</strong> toggle on the right showing whether any files are attached.</li></ol><blockquote>💡 Working in the <strong>Node</strong> editor view instead? The Knowledge Base lives there too, as a panel with an <strong>Open knowledge base</strong> button — the file picker that opens is identical.</blockquote>",
+      "images": [
+        {"src": "images/agents/agent-knowledge-base-editor-light.png", "alt": "Agent editor form view with the Knowledge Base panel at the top of the middle column", "caption": "The agent editor — Knowledge Base sits at the top of the middle column.", "theme": "light"},
+        {"src": "images/agents/agent-knowledge-base-editor-dark.png", "alt": "Agent editor form view with the Knowledge Base panel at the top of the middle column", "caption": "The agent editor — Knowledge Base sits at the top of the middle column.", "theme": "dark"},
+        {"src": "images/agents/agent-knowledge-base-panel-light.png", "alt": "Knowledge Base panel header with its OFF toggle", "caption": "Click this header to choose which files the agent can search.", "theme": "light"},
+        {"src": "images/agents/agent-knowledge-base-panel-dark.png", "alt": "Knowledge Base panel header with its OFF toggle", "caption": "Click this header to choose which files the agent can search.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "select-files",
+      "title": "Attach Files to the Agent",
+      "content": "<ol><li>Click the <strong>Knowledge Base</strong> panel header. The <strong>Select Knowledge Base Files</strong> window opens with the same files table you saw on the Knowledge Base page.</li><li>Tick the checkbox next to each file this agent should know. Only files with an <strong>Enabled</strong> status can be selected — a grayed-out checkbox means the file still needs to be enabled (hover it to see the hint <em>\"Enable this file first\"</em>).</li><li>Click <strong>Save Selection</strong>. The panel toggle flips to <strong>ON</strong> and the header shows how many files are attached, e.g. <em>(2 selected)</em>.</li><li>To detach files later, reopen the picker and untick them, or switch the panel toggle to <strong>OFF</strong> to clear the whole selection at once.</li></ol><blockquote>💡 Each agent gets its own selection. Give your sales agent the price list and your support agent the troubleshooting manual — from the same shared library.</blockquote>",
+      "images": [
+        {"src": "images/agents/agent-knowledge-base-picker-light.png", "alt": "Select Knowledge Base Files window with a file checked and the Save Selection button", "caption": "Tick the files your agent should know, then click Save Selection.", "theme": "light"},
+        {"src": "images/agents/agent-knowledge-base-picker-dark.png", "alt": "Select Knowledge Base Files window with a file checked and the Save Selection button", "caption": "Tick the files your agent should know, then click Save Selection.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "how-it-works",
+      "title": "How the Agent Uses It Mid-Call",
+      "content": "<p>This is where the magic happens. Attached files power <strong>Retrieval-Augmented Generation (RAG)</strong>:</p><ul><li>When a caller asks something — \"What are your hours?\", \"Do you service my zip code?\" — the agent instantly searches its attached files for the most relevant passages.</li><li>It weaves what it finds into a natural spoken answer, in real time, without the caller noticing any lookup.</li><li>Only the relevant snippets are used, so the agent stays fast and accurate even with large documents attached.</li></ul><p>This also keeps your system prompt lean: instead of pasting your entire FAQ into the prompt, keep the prompt short (the editor recommends staying under ~3,000 tokens) and let the Knowledge Base carry the reference material.</p>",
+      "images": []
+    },
+    {
+      "id": "verify-test",
+      "title": "Test That It Works",
+      "content": "<ol><li>In the agent editor, click <strong>Test Agent</strong> (top-right) or <strong>Connect</strong> in the chat panel on the right.</li><li>Ask questions your document answers — business hours, prices, warranty terms, service area.</li><li>Confirm the agent replies with the facts from your file, not generic guesses.</li><li>If it doesn't pull from the file, add a nudge to the prompt, for example: <em>\"When asked a question, answer using the FAQ in your knowledge base.\"</em></li></ol>",
+      "images": []
+    },
+    {
+      "id": "best-practices",
+      "title": "Write Documents Your Agent Will Love",
+      "content": "<p>Great source documents make the difference between a good agent and a great one:</p><ul><li><strong>Question &amp; answer format wins.</strong> An FAQ file (\"Q: … A: …\") maps perfectly to how callers actually ask.</li><li><strong>One topic per file.</strong> Split \"Everything.pdf\" into \"Pricing\", \"Service Areas\", and \"Warranty\" — retrieval stays focused and answers get sharper.</li><li><strong>Be explicit and self-contained.</strong> Write \"The diagnostic visit costs $89\" rather than \"see table above\" — the agent retrieves passages, not whole pages.</li><li><strong>Keep it current.</strong> When prices or hours change, delete the outdated file, upload the new version, and re-attach it — an agent quoting last year's prices is worse than one that says \"let me check\".</li><li><strong>Prune ruthlessly.</strong> Remove marketing fluff and internal notes; every irrelevant paragraph competes with the facts you want retrieved.</li></ul><p>That's it — your agent now answers with <em>your</em> knowledge, on every channel, around the clock. 🎉</p>",
       "images": []
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Round out your agent's abilities:",
+    "description": "Your agent knows your business — now give it more superpowers:",
     "cards": [
-      { "href": "/agents/agent-tools", "title": "Add Tools", "description": "Let the agent take actions like booking and transfers." },
-      { "href": "/agents/costum-variables", "title": "Use Custom Variables", "description": "Personalize responses with CRM data and API variables." },
-      { "href": "/agents/test-agent", "title": "Test Your Agent", "description": "Confirm answers come from your uploaded documents." }
+      {
+        "href": "/agents/test-your-agent",
+        "title": "Test Your Agent",
+        "description": "Run a live web call and confirm answers come from your documents."
+      },
+      {
+        "href": "/agents/agent-tools",
+        "title": "Add Tools",
+        "description": "Let the agent take actions like booking appointments and transferring calls."
+      },
+      {
+        "href": "/agents/costum-variables",
+        "title": "Use Custom Variables",
+        "description": "Personalize responses with CRM data and API variables."
+      }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Add a Knowledge Base to Your Agent | iMash Docs",
-  "metaDescription": "Upload FAQs and support documents to your iMash Smart Agent so it answers with accurate information. Learn to upload, verify, and improve knowledge-base accuracy.",
-  "metaKeywords": "knowledge base, imash, smart agent, faq, document upload, rag, retrieval, ai answers"
+  "metaTitle": "Knowledge Base (RAG) — Teach Your Agent Your Business | iMash Documentation",
+  "metaDescription": "Upload FAQs, price lists, and manuals to the iMash Knowledge Base and attach them to your AI agents. Learn supported file types, embedding statuses, the file picker, and best practices for accurate RAG answers.",
+  "metaKeywords": "knowledge base, rag, retrieval augmented generation, imash, smart agent, upload files, faq, document embedding, ai answers, file types"
 }

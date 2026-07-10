@@ -1,55 +1,161 @@
 {
   "title": "Set Up the Observer Agent",
-  "lede": "Run a second AI in the background that watches every live call, flags important moments as events, and can silently trigger tools - without slowing the main conversation.",
-  "timeToComplete": "7 minutes",
-  "videoUrl": "https://youtu.be/-cgpNKzS6FY",
-  "videoLength": "3",
+  "lede": "Give every call a silent supervisor: the Observer Agent is a second AI that watches the conversation in real time, flags critical moments the instant they happen, and can even trigger background tools — all without slowing down the main agent by a single millisecond.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
-      "id": "enable",
-      "title": "Enable the Observer Agent",
-      "content": "<ol><li>Go to <strong>Intelligence Center → Smart Agents</strong> and open your agent.</li><li>Open the <strong>Observer Agent</strong> panel and turn it on (it is off by default).</li><li>The panel has two areas: <strong>Configuration</strong> and <strong>Events</strong>.</li></ol>",
+      "id": "open-agent",
+      "title": "Open the Agent You Want to Monitor",
+      "content": "<p>The Observer Agent is configured per agent, so each of your Smart Agents can watch for different things — your sales agent can flag buying signals while your support agent flags frustration.</p><ol><li>In the left sidebar, click <strong>Intelligence Center → Smart Agents</strong>.</li><li>Click the <strong>name</strong> of the agent you want to add an observer to. The agent editor opens.</li></ol>",
       "images": [
-        { "src": "images/agents/observer-light.png", "alt": "Observer Agent panel", "caption": "The Observer Agent panel with Configuration and Events.", "theme": "light" },
-        { "src": "images/agents/observer-dark.png", "alt": "Observer Agent panel", "caption": "The Observer Agent panel with Configuration and Events.", "theme": "dark" }
+        {
+          "src": "images/agents/observer-agent-open-light.png",
+          "alt": "Smart Agents list under Intelligence Center",
+          "caption": "Open Intelligence Center → Smart Agents and click an agent's name.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/observer-agent-open-dark.png",
+          "alt": "Smart Agents list under Intelligence Center",
+          "caption": "Open Intelligence Center → Smart Agents and click an agent's name.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "enable",
+      "title": "Turn On the Observer Agent",
+      "content": "<p>In the agent editor (Form view), the middle column lists every capability your agent can have — <strong>Knowledge Base</strong>, <strong>Voice (TTS)</strong>, <strong>Webhooks Post Processing</strong>, and more.</p><ol><li>Find the <strong>Observer Agent</strong> row (bell icon).</li><li>Click the <strong>OFF</strong> pill on the right to flip it to <strong>ON</strong>. A default model is selected for you automatically.</li><li>Click anywhere on the <strong>Observer Agent</strong> row label to open its configuration window.</li></ol><blockquote>💡 Using the <strong>Node</strong> view instead? The same Observer Agent card lives in the capabilities bar there — click it to open the identical configuration window. The <strong>Observer</strong> chip under the agent's name at the top of the editor also lights up whenever the observer is active.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/observer-agent-editor-row-light.png",
+          "alt": "Agent editor with the Observer Agent row toggled ON",
+          "caption": "The Observer Agent row in the capability list — toggle it ON, then click the row to configure.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/observer-agent-editor-row-dark.png",
+          "alt": "Agent editor with the Observer Agent row toggled ON",
+          "caption": "The Observer Agent row in the capability list — toggle it ON, then click the row to configure.",
+          "theme": "dark"
+        }
       ]
     },
     {
       "id": "configure",
       "title": "Configure the Model and Tools",
-      "content": "<ol><li>Under <strong>Configuration</strong>, pick an <strong>LLM Model</strong> to power the observer. Because it runs in the background, you can use a slower, more thorough model without affecting call latency.</li><li>Optionally choose an <strong>MCP Server</strong> so the observer can trigger background tools when conditions are met - without making the main agent wait.</li></ol>",
+      "content": "<p>The Observer Agent window opens with a <strong>Configuration</strong> card across the top and your event list on the left. The Configuration card has three controls:</p><ul><li><strong>LLM Model</strong> — the language model that powers the observer. Because it listens in the background and never speaks, you can afford a slower, more thorough model here without adding any latency to the live conversation. A fast, cost-efficient default is pre-selected when you enable the observer.</li><li><strong>MCP Server (optional)</strong> — connect an MCP server and the observer can silently trigger external tools when an event fires (log a ticket, post to Slack, update a record) while the main agent keeps talking. Leave it empty if you only want event flags.</li><li><strong>ON / OFF pill</strong> — the master switch. When it's OFF, everything below is grayed out and the observer never joins a call.</li></ul><blockquote>💡 No MCP servers in the list yet? Create one first under <strong>Intelligence Center → Automation</strong>, then come back and pick it here.</blockquote>",
       "images": [
-        { "src": "images/agents/assistant-editor-light.png", "alt": "Agent editor", "caption": "The observer runs alongside the main agent during every call.", "theme": "light" },
-        { "src": "images/agents/assistant-editor-dark.png", "alt": "Agent editor", "caption": "The observer runs alongside the main agent during every call.", "theme": "dark" }
+        {
+          "src": "images/agents/observer-agent-modal-light.png",
+          "alt": "Observer Agent configuration window with model picker, MCP picker, and events list",
+          "caption": "The Configuration card on top, the Events rail on the left, and the editor pane on the right.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/observer-agent-modal-dark.png",
+          "alt": "Observer Agent configuration window with model picker, MCP picker, and events list",
+          "caption": "The Configuration card on top, the Events rail on the left, and the editor pane on the right.",
+          "theme": "dark"
+        }
       ]
     },
     {
-      "id": "events",
-      "title": "Set Up Events",
-      "content": "<ul><li>Open <strong>Events</strong> to see the defaults, including <em>Call Quality Issues</em>, <em>Customer Frustration Detected</em>, <em>Escalation Request</em>, <em>Payment Information Discussed</em>, <em>High-Value Opportunity</em>, and more.</li><li>Click <strong>Add Custom Event</strong> to create your own with a name, description, and color. You can disable events you don't need or use <strong>Reset to Defaults</strong>.</li></ul>",
+      "id": "default-events",
+      "title": "Review the 10 Built-In Events",
+      "content": "<p>Events are the moments the observer watches for. The <strong>Events</strong> rail on the left comes pre-loaded with 10 battle-tested defaults, each with its own color and an individual <strong>ON / OFF</strong> pill:</p><ul><li><strong>Call Quality Issues</strong> — audio degrades, the connection drops, or technical problems occur.</li><li><strong>Customer Frustration Detected</strong> — signs of anger or dissatisfaction.</li><li><strong>Escalation Request</strong> — the caller asks for a human agent or supervisor.</li><li><strong>Payment Information Discussed</strong> — sensitive financial details are being shared.</li><li><strong>Compliance Violation Risk</strong> — the conversation nears regulated or policy-restricted topics.</li><li><strong>High-Value Opportunity</strong> — strong interest in premium products or large purchases.</li><li><strong>Competitor Mention</strong> — the caller names a competing product or company.</li><li><strong>Confusion or Misunderstanding</strong> — the caller seems lost on pricing, details, or next steps.</li><li><strong>Objection Handling Needed</strong> — concerns or objections that need a specialized response.</li><li><strong>Call Duration Exceeded</strong> — the call runs past optimal length.</li></ul><p>Turn off any event you don't need with its pill, or remove it entirely with the <strong>trash icon</strong> (a confirmation asks first). The counter at the top of the rail (e.g. <em>10/10</em>) shows how many events are active. Deleted or mangled the defaults? Click <strong>Reset to Defaults</strong> at the bottom of the rail to restore all 10.</p>",
       "images": []
     },
     {
-      "id": "monitor",
-      "title": "Watch It on Live Calls",
-      "content": "<ol><li>Open the <strong>Live Calls</strong> screen while a call is active.</li><li>When the observer detects an event (for example the caller says \"I can't hear you\"), the call is tagged and moved to the matching column.</li><li>Filter by event to focus on the conversations that need attention.</li></ol>",
+      "id": "edit-event",
+      "title": "Fine-Tune an Event",
+      "content": "<p>Click any event in the left rail to open its editor on the right. Three fields define how it behaves:</p><ol><li><strong>Event Name</strong> — the label shown on Live Calls and in reports. Keep it short and scannable.</li><li><strong>Description</strong> — this is the important one: it's the instruction the observer's AI actually follows. Describe exactly <em>when</em> the event should fire, e.g. \"Triggered when customer explicitly asks to speak with a human agent or supervisor\".</li><li><strong>Color</strong> — pick from the color swatch or the <strong>Quick select</strong> palette. This color tints the call's card and column on the Live Calls board, so choose red/orange tones for urgent events and green/blue for positive ones.</li></ol><p>Changes save automatically as you type. The header of the editor also shows a <strong>DEFAULT</strong> badge for built-in events, plus the event's own <strong>ON / OFF</strong> pill.</p><blockquote>⚠️ Vague descriptions produce noisy flags. \"Customer is unhappy\" fires constantly; \"Customer uses angry language, threatens to cancel, or says they want a refund\" fires exactly when you need it.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/observer-agent-event-editor-light.png",
+          "alt": "Event editor showing name, description, and color for the Escalation Request event",
+          "caption": "Select an event on the left to edit its name, trigger description, and color.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/observer-agent-event-editor-dark.png",
+          "alt": "Event editor showing name, description, and color for the Escalation Request event",
+          "caption": "Select an event on the left to edit its name, trigger description, and color.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "add-custom-event",
+      "title": "Add Your Own Custom Events",
+      "content": "<p>The defaults are just the start — the real power is teaching the observer to watch for the moments that matter to <em>your</em> business.</p><ol><li>Click <strong>+ Add Event</strong> at the bottom of the Events rail.</li><li>Enter an <strong>Event Name</strong> (e.g. \"Warranty Claim Mentioned\").</li><li>Write a precise <strong>Description</strong> of when it should trigger.</li><li>Pick an <strong>Event Color</strong> and click <strong>Add</strong>.</li></ol><p>The new event appears in the rail, enabled and selected, ready for further edits. When you're done with everything, click <strong>Done</strong> to close the window — all changes are already saved.</p>",
+      "images": [
+        {
+          "src": "images/agents/observer-agent-add-event-light.png",
+          "alt": "Add New Event dialog with name, description, and color fields",
+          "caption": "Create a custom event with its own trigger description and color.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/observer-agent-add-event-dark.png",
+          "alt": "Add New Event dialog with name, description, and color fields",
+          "caption": "Create a custom event with its own trigger description and color.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "watch-live",
+      "title": "Watch It Work on Live Calls",
+      "content": "<p>This is the payoff: a live wallboard where flagged conversations jump out at you the moment something happens.</p><ol><li>In the top navigation, click <strong>Contact Center</strong>, then open the <strong>Live Calls</strong> tab (or click <strong>Call Logs → Live Calls</strong> from the sidebar's Call Center section).</li><li>The stat strip at the top shows <strong>Live Calls</strong>, <strong>Dialing</strong>, <strong>Ongoing</strong>, <strong>Transferred</strong>, <strong>Events Flagged</strong>, and <strong>Finished</strong> — the <strong>Events Flagged</strong> tile counts every observer detection across your active calls.</li><li>When the observer fires an event mid-call, the call's card is tinted with the event's color and tagged with the event name. Hover the tag to see the observer's <strong>reasoning</strong> and its <strong>confidence score</strong>.</li></ol><ul><li>In <strong>Tabs</strong> layout, each active event gets its own tab (matching the kanban columns), so all \"Escalation Request\" calls line up together.</li><li>In the table view, the <strong>Observer Event</strong> column shows the latest flag per call, and flagged rows get a light tint in the event's color.</li><li>Use the <strong>observer event filter</strong> above the board to show only calls with specific events — perfect for a supervisor triaging frustration flags.</li></ul>",
+      "images": [
+        {
+          "src": "images/agents/observer-agent-live-calls-light.png",
+          "alt": "Live Calls page with the Events Flagged tile and Observer Event column",
+          "caption": "Live Calls: the Events Flagged tile and the Observer Event column light up as the observer detects events.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/observer-agent-live-calls-dark.png",
+          "alt": "Live Calls page with the Events Flagged tile and Observer Event column",
+          "caption": "Live Calls: the Events Flagged tile and the Observer Event column light up as the observer detects events.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "how-it-behaves",
+      "title": "Good to Know: How the Observer Behaves",
+      "content": "<ul><li><strong>It never speaks.</strong> The observer is invisible to the caller — it only watches, flags, and (if you connected an MCP server) acts in the background.</li><li><strong>Zero latency added.</strong> It runs in parallel with the main agent, so even a heavyweight model won't slow down responses.</li><li><strong>Flags persist after the call.</strong> Detected events are stored with the call record, so you can review them later in your call history.</li><li><strong>Per-agent setup.</strong> Enabling the observer on one agent doesn't affect the others — configure each with the events that fit its job.</li></ul><p>That's it — from now on, no critical moment slips by unnoticed. Your team sees escalations, frustration, and hot opportunities the second they happen, on every single call.</p>",
       "images": []
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Pair background monitoring with more automation:",
+    "description": "Pair background monitoring with more automation muscle:",
     "cards": [
-      { "href": "/agents/agent-mcp", "title": "Connect an MCP Server", "description": "Give the observer background tools to trigger." },
-      { "href": "/agents/advanced-settings", "title": "Post-Call Processing", "description": "Summarize and score calls after they end." },
-      { "href": "/phone/call-logs", "title": "Review Call Logs", "description": "See event tags and summaries for past calls." }
+      {
+        "href": "/agents/agent-mcp",
+        "title": "Connect an MCP Server",
+        "description": "Give the observer background tools to trigger when events fire."
+      },
+      {
+        "href": "/agents/advanced-settings",
+        "title": "Post-Call Processing",
+        "description": "Summarize, score, and extract data from calls after they end."
+      },
+      {
+        "href": "/phone/call-logs",
+        "title": "Review Call Logs",
+        "description": "Dig into event tags, transcripts, and summaries for past calls."
+      }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Set Up the Observer Agent | iMash Docs",
-  "metaDescription": "Run a background AI that monitors live iMash calls, flags events like customer frustration and escalation requests, and silently triggers tools. Enable, configure, and monitor.",
-  "metaKeywords": "observer agent, imash, smart agent, live calls, call monitoring, events, customer frustration, escalation"
+  "metaTitle": "Set Up the Observer Agent | iMash Documentation",
+  "metaDescription": "Run a background AI that monitors live iMash calls, flags events like customer frustration and escalation requests, and silently triggers tools. Enable it, tune its events, and watch flags appear on Live Calls.",
+  "metaKeywords": "observer agent, imash, smart agent, live calls, call monitoring, events, customer frustration, escalation, MCP, real-time call flags"
 }

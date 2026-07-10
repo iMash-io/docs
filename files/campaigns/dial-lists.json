@@ -1,52 +1,103 @@
 {
-  "title": "Manage a Campaign Dial List",
-  "lede": "The dial list is the queue of leads and contacts a campaign will call. Learn how to add people, review their attempt status, and clean up the list.",
-  "timeToComplete": "6 minutes",
+  "title": "Build & Manage a Campaign Dial List",
+  "lede": "The dial list is your campaign's calling queue — the exact people your AI agent will call, in what order, and how many times. Learn how to load the right audience, read every column, control retries, and keep the list clean from first dial to finished campaign.",
+  "timeToComplete": "8 minutes",
   "steps": [
     {
       "id": "open-campaign",
-      "title": "Open the campaign",
-      "content": "<ol><li>Go to <strong>Campaigns</strong> in the left menu.</li><li>Click a campaign's name to open it.</li><li>Inside, use the tabs at the top: <strong>Overview</strong>, <strong>Settings</strong>, <strong>Dial List</strong>, <strong>Add Leads</strong>, <strong>Add Contacts</strong>, and <strong>Stages</strong>.</li></ol>",
+      "title": "Open your campaign",
+      "content": "<p>Every campaign has its own dial list, so the first stop is the campaign itself.</p><ol><li>In the top navigation, click <strong>Campaigns</strong>. The <strong>Smart Dialer</strong> sub-tab opens with your list of AI campaigns.</li><li>Find your campaign in the table — the <strong>Contacts</strong> column already tells you how many people are queued, and <strong>Progress</strong> shows how far along the calling is.</li><li>Click the campaign's <strong>name</strong> to open it.</li></ol><blockquote>💡 Don't have a campaign yet? Create one first — see <em>Create a Campaign</em> in the What's Next section below. You can build the dial list before or after configuring the agent and phone numbers.</blockquote>",
       "images": [
-        { "src": "images/campaigns/campaign-detail-light.png", "alt": "Campaign detail tabs", "caption": "The tabs inside a campaign, including Dial List, Add Leads, and Add Contacts", "theme": "light" },
-        { "src": "images/campaigns/campaign-detail-dark.png", "alt": "Campaign detail tabs", "caption": "The tabs inside a campaign, including Dial List, Add Leads, and Add Contacts", "theme": "dark" }
+        { "src": "images/campaigns/dial-lists-campaigns-light.png", "alt": "Campaigns list with the Smart Dialer tab active", "caption": "Campaigns → Smart Dialer: the Contacts column shows how many people each campaign will call", "theme": "light" },
+        { "src": "images/campaigns/dial-lists-campaigns-dark.png", "alt": "Campaigns list with the Smart Dialer tab active", "caption": "Campaigns → Smart Dialer: the Contacts column shows how many people each campaign will call", "theme": "dark" }
       ]
     },
     {
-      "id": "add-people",
-      "title": "Add leads and contacts",
-      "content": "<ol><li>Open the <strong>Add Leads</strong> or <strong>Add Contacts</strong> tab.</li><li>Search your CRM by name, phone, or other fields.</li><li>Select the people you want and add them &mdash; they are queued into this campaign's dial list.</li></ol><p>Tip: keep your CRM lists tidy so it's easy to pull the right audience. New leads live under CRM &rarr; Leads.</p>"
+      "id": "know-your-tabs",
+      "title": "Know your way around the campaign tabs",
+      "content": "<p>Inside a campaign, everything dial-list related lives in four of the tabs across the top:</p><ul><li><strong>Dial List</strong> — the queue itself: who's waiting, who's been called, and each person's status.</li><li><strong>Add Leads</strong> — pull leads from your CRM into the queue.</li><li><strong>Add Contacts</strong> — same thing, but for CRM contacts.</li><li><strong>Overview</strong> — live progress numbers for the whole list.</li></ul><p>The other tabs — <strong>Settings</strong> (retry rules, working hours, pacing), <strong>Campaign Logs</strong> (every call placed), and <strong>Stages</strong> (custom lifecycle stages for this campaign) — shape <em>how</em> the list gets dialed.</p>",
+      "images": [
+        { "src": "images/campaigns/dial-lists-tabs-light.png", "alt": "Campaign tab bar with Overview, Settings, Dial List, Add Leads, Add Contacts, Campaign Logs, and Stages", "caption": "The campaign tabs — Dial List, Add Leads, and Add Contacts are where the queue is built", "theme": "light" },
+        { "src": "images/campaigns/dial-lists-tabs-dark.png", "alt": "Campaign tab bar with Overview, Settings, Dial List, Add Leads, Add Contacts, Campaign Logs, and Stages", "caption": "The campaign tabs — Dial List, Add Leads, and Add Contacts are where the queue is built", "theme": "dark" }
+      ]
     },
     {
-      "id": "review",
-      "title": "Review the dial list",
-      "content": "<p>Open the <strong>Dial List</strong> tab to see everyone queued. For each row you can see:</p><ul><li>The contact or lead and their phone number.</li><li>Attempts made and attempts left.</li><li>The current lifecycle stage or last outcome.</li></ul><p>Use the search and filters to narrow the list by stage or status.</p>"
+      "id": "add-leads-contacts",
+      "title": "Add leads and contacts to the queue",
+      "content": "<p>Your dial list is built from the leads and contacts already in your CRM — no re-typing, no copy-paste. And everything on each record travels with it: name, phone, stage, and any custom variables, so your AI agent can personalize every single call automatically.</p><ol><li>Open the <strong>Add Leads</strong> tab (or <strong>Add Contacts</strong> — they work identically).</li><li>The table shows every CRM record that is <em>not yet</em> in this campaign, with their <strong>Name</strong>, <strong>Phone</strong>, and <strong>Stage</strong>. Click <strong>View</strong> on any row to peek at the full record before committing.</li><li>Tick the checkbox next to each person you want, then click <strong>Add Selected Leads</strong> (the button shows a live count of your selection).</li><li>Adding a whole page? Tick the header checkbox — a prompt appears letting you <strong>Select all</strong> matching records across every page in one click.</li><li>Click <strong>Refresh</strong> any time to re-pull the latest CRM data.</li></ol><blockquote>💡 Starting from a spreadsheet? Import your CSV into the CRM first (CRM → Leads or Contacts), then come back here and add them — see <em>Import &amp; Export Data</em> below. Once imported, they show up in this tab instantly.</blockquote>",
+      "images": [
+        { "src": "images/campaigns/dial-lists-add-leads-light.png", "alt": "Add Leads tab showing available CRM leads with checkboxes and the Add Selected Leads button", "caption": "The Add Leads tab — select people from your CRM and queue them with one click", "theme": "light" },
+        { "src": "images/campaigns/dial-lists-add-leads-dark.png", "alt": "Add Leads tab showing available CRM leads with checkboxes and the Add Selected Leads button", "caption": "The Add Leads tab — select people from your CRM and queue them with one click", "theme": "dark" }
+      ]
     },
     {
-      "id": "cleanup",
-      "title": "Remove or clean up entries",
-      "content": "<ul><li>Select rows and use the bulk <strong>Delete</strong> action to remove people you no longer want to call.</li><li>The <strong>Overview</strong> tab shows live progress: contacts, attempts made, attempts left, and finished counts.</li></ul><p>Numbers on your Do Not Call list are automatically skipped &mdash; you never have to remove them by hand.</p>"
+      "id": "filter-your-audience",
+      "title": "Target the exact audience with filters",
+      "content": "<p>Calling the <em>right</em> people beats calling <em>more</em> people. The <strong>Filters</strong> button on the Add Leads / Add Contacts tab lets you slice your CRM before you add anyone:</p><ol><li>Click <strong>Filters</strong> in the top-left of the tab.</li><li>Use the search box at the top — switch the field selector between <strong>Name</strong>, <strong>Phone</strong>, and <strong>Email</strong>.</li><li>Tick any combination of filter types and pick values for each:</li></ol><ul><li><strong>Lifecycle Stage</strong> — e.g. only \"New\" or only \"Interested\" records.</li><li><strong>Source</strong> — where the lead came from (Website, Referral, Social Media…).</li><li><strong>Account</strong> — contacts belonging to a specific company account.</li><li><strong>City</strong>, <strong>State/Province</strong>, <strong>Country</strong>, <strong>Zip/Postal Code</strong> — geographic targeting.</li><li><strong>Tags</strong> — any tags you've applied in the CRM.</li></ul><p>Active filters appear as removable chips next to the button. Combine filters, then <strong>Select all</strong> — that's how you queue \"every New lead in Texas tagged spring-promo\" in three clicks.</p>",
+      "images": [
+        { "src": "images/campaigns/dial-lists-add-filters-light.png", "alt": "Filters dropdown with search field and filter options for stage, source, account, city, tags, state, country, and zip", "caption": "The Filters menu — stack stage, source, geography, and tag filters to zero in on your audience", "theme": "light" },
+        { "src": "images/campaigns/dial-lists-add-filters-dark.png", "alt": "Filters dropdown with search field and filter options for stage, source, account, city, tags, state, country, and zip", "caption": "The Filters menu — stack stage, source, geography, and tag filters to zero in on your audience", "theme": "dark" }
+      ]
     },
     {
-      "id": "completed",
-      "title": "What happens when it's done",
-      "content": "<p>When every contact has been fully attempted, the campaign moves to <strong>Completed</strong> and its dial list becomes a read-only archive (you'll see an \"Archive view\" banner). Completed campaigns can't be edited &mdash; to run the same audience again, create a fresh campaign and add them to its dial list.</p>"
+      "id": "review-the-dial-list",
+      "title": "Read the Dial List — every column explained",
+      "content": "<p>Open the <strong>Dial List</strong> tab to see your queue. Each row is one phone number the campaign will call:</p><ul><li><strong>Entity Name</strong> — the lead or contact. Click the name to open their full CRM record in a side drawer without leaving the page.</li><li><strong>Status</strong> — where this entry is in its journey: <em>Pending</em> (waiting to be dialed), <em>Completed</em> (all attempts used), or a stage-met completion shown in green.</li><li><strong>Global Stage</strong> — the person's overall lifecycle stage in your CRM (New, Contacted, Interested…).</li><li><strong>Attempts</strong> — dials made vs. allowed, e.g. <em>0/3</em> means three tries remain.</li><li><strong>Target Phone</strong> — the exact number that will be dialed.</li><li><strong>Call Stage</strong> — the stage recorded on this number's most recent call, so you can see the latest outcome at a glance.</li><li><strong>Scheduled At</strong> — when the next attempt is due (shown in the campaign's timezone).</li></ul><p>The header buttons matter too: <strong>Start</strong> launches the campaign, <strong>Export CSV</strong> / <strong>Export PDF</strong> download the campaign's call logs, and <strong>Refresh</strong> re-loads the table.</p>",
+      "images": [
+        { "src": "images/campaigns/dial-lists-table-light.png", "alt": "Dial List tab showing queued entries with status, stage, attempts, phone, and schedule columns", "caption": "The Dial List: every queued person with their status, attempts used, and next scheduled call", "theme": "light" },
+        { "src": "images/campaigns/dial-lists-table-dark.png", "alt": "Dial List tab showing queued entries with status, stage, attempts, phone, and schedule columns", "caption": "The Dial List: every queued person with their status, attempts used, and next scheduled call", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "search-and-filter",
+      "title": "Search and filter the queue",
+      "content": "<p>On a list with thousands of entries, the toolbar keeps you oriented:</p><ol><li>Use the quick-view buttons at the top: <strong>Show All</strong>, <strong>Show Pending</strong> (not yet fully dialed), or <strong>Show Completed</strong> (all attempts used or stage met).</li><li>Type in <strong>Search by name or phone number…</strong> to jump straight to one person.</li><li>Use <strong>Filter by lifecycle stages…</strong> to show only entries in specific stages — pick several at once; each appears as a colored chip.</li><li>Click <strong>Clear Filters</strong> to reset the view.</li></ol>",
+      "images": [
+        { "src": "images/campaigns/dial-lists-toolbar-light.png", "alt": "Dial List Entries toolbar with Show All, Show Pending, Show Completed, Delete Selected, and Refresh buttons", "caption": "The Dial List toolbar — flip between All, Pending, and Completed views", "theme": "light" },
+        { "src": "images/campaigns/dial-lists-toolbar-dark.png", "alt": "Dial List Entries toolbar with Show All, Show Pending, Show Completed, Delete Selected, and Refresh buttons", "caption": "The Dial List toolbar — flip between All, Pending, and Completed views", "theme": "dark" },
+        { "src": "images/campaigns/dial-lists-filters-light.png", "alt": "Search box and lifecycle stage filter above the dial list table", "caption": "Search by name or phone, or narrow the list to specific lifecycle stages", "theme": "light" },
+        { "src": "images/campaigns/dial-lists-filters-dark.png", "alt": "Search box and lifecycle stage filter above the dial list table", "caption": "Search by name or phone, or narrow the list to specific lifecycle stages", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "control-retries",
+      "title": "Control retries — how many times each number gets called",
+      "content": "<p>No-answers happen. The campaign automatically re-queues them so real prospects don't slip away — and you decide exactly how persistent to be, in the <strong>Settings</strong> tab under <strong>Retry Settings</strong>:</p><ul><li><strong>Max Dials Per Phone Number</strong> — how many total attempts each number gets (0–5). This is the second half of the <em>Attempts</em> column: with a value of 3, ten people means up to 30 total attempts.</li><li><strong>Retry Delay (minutes)</strong> — how long to wait before calling the same number again.</li><li><strong>All Numbers for Lead/Contact Stop After</strong> — pick stages that stop <em>every</em> number for that person. If the AI marks someone \"Qualified\" on their mobile, their office line won't be dialed either.</li><li><strong>Individual Number Stop Retrying</strong> — pick stages that stop retries for just <em>that one number</em> while other numbers for the same person keep going.</li></ul><blockquote>⚠️ Retries only fire inside the campaign's <strong>Working Hours</strong> (also on the Settings tab), and numbers on your Do Not Call list are skipped automatically — you never have to prune them by hand.</blockquote>",
+      "images": [
+        { "src": "images/campaigns/dial-lists-retry-light.png", "alt": "Retry Settings card with Max Dials Per Phone Number, Retry Delay, and stage-based stop rules", "caption": "Retry Settings: attempts per number, delay between tries, and stages that stop retrying", "theme": "light" },
+        { "src": "images/campaigns/dial-lists-retry-dark.png", "alt": "Retry Settings card with Max Dials Per Phone Number, Retry Delay, and stage-based stop rules", "caption": "Retry Settings: attempts per number, delay between tries, and stages that stop retrying", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "track-progress",
+      "title": "Track progress on the Overview tab",
+      "content": "<p>Once the campaign is running, the <strong>Overview</strong> tab turns your dial list into a live scoreboard:</p><ul><li><strong>Contacts</strong> — unique people in the queue.</li><li><strong>Attempts Made</strong> — dials placed vs. the total possible (contacts × max dials).</li><li><strong>Attempts Left</strong> — how much runway remains.</li><li><strong>Finished</strong> — entries fully dialed, including how many completed <em>early</em> because they hit a stop stage.</li><li><strong>Progress</strong> — percentage complete, with a progress bar.</li><li><strong>Live Calls</strong> — calls happening right now.</li></ul><p>Below the tiles, <strong>Next Scheduled Calls</strong> lists exactly who is up next and when — click any name to open their record.</p>",
+      "images": [
+        { "src": "images/campaigns/dial-lists-overview-light.png", "alt": "Current Dial List stats: Contacts, Attempts Made, Attempts Left, Finished, Progress, and Live Calls", "caption": "The Overview scoreboard — 10 contacts × 3 max dials = 30 possible attempts", "theme": "light" },
+        { "src": "images/campaigns/dial-lists-overview-dark.png", "alt": "Current Dial List stats: Contacts, Attempts Made, Attempts Left, Finished, Progress, and Live Calls", "caption": "The Overview scoreboard — 10 contacts × 3 max dials = 30 possible attempts", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "clean-up-and-archive",
+      "title": "Clean up entries — and what happens when it's done",
+      "content": "<p>Keep the queue lean while the campaign is live:</p><ol><li>On the <strong>Dial List</strong> tab, tick the entries you no longer want to call.</li><li>Click <strong>Delete Selected</strong>. Selecting every row on a page offers a one-click <strong>Select all entries</strong> across all pages for bulk cleanup.</li></ol><p>When every entry has been fully attempted, the campaign flips to <strong>Completed</strong> and the dial list becomes a read-only archive — you'll see an <strong>Archive view</strong> banner, checkboxes are disabled, and no new people can be added. Campaigns left paused or in draft for a long time are auto-archived the same way (you'll get an on-screen warning first, with <strong>Resume</strong> and <strong>Pin</strong> buttons to keep them active).</p><blockquote>💡 Want to run the same audience again? Open a completed campaign's <strong>Add Leads</strong> or <strong>Add Contacts</strong> tab and click <strong>Clone Campaign</strong> — you get a fresh copy ready for a new run, while the archived original stays untouched as your permanent record. Your list, your rules, zero wasted dials — that's how winning call campaigns are run.</blockquote>"
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Wire up the rest of your campaign and keep an eye on results.",
+    "description": "Your queue is loaded — now perfect the campaign around it and watch the results roll in.",
     "cards": [
-      { "href": "/campaigns/create-campaign", "title": "Create a Campaign", "description": "Attach an AI agent, phone numbers, and pacing." },
-      { "href": "/crm/leads", "title": "Manage Leads", "description": "Build and organize the audience you'll call." },
-      { "href": "/campaigns/campaign-analytics", "title": "Campaign Analytics", "description": "See connect rate, progress, and cost." }
+      { "href": "/campaigns/create-campaign", "title": "Create a Campaign", "description": "Attach an AI agent, phone numbers, working hours, and pacing." },
+      { "href": "/crm/import-export-data", "title": "Import & Export Data", "description": "Bring in a CSV of leads or contacts, then queue them here." },
+      { "href": "/campaigns/do-not-call-list", "title": "Do Not Call List", "description": "Numbers on the DNC list are skipped automatically — manage it here." },
+      { "href": "/campaigns/campaign-analytics", "title": "Campaign Reports & Stats", "description": "Connect rates, outcomes, and cost for every campaign." }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Manage a Campaign Dial List | iMash Docs",
-  "metaDescription": "How to build and manage a campaign dial list in iMash: add leads and contacts, review attempts and stages, clean up entries, and understand archiving.",
-  "metaKeywords": "dial list, campaign contacts, add leads, add contacts, call queue, campaign audience, imash campaigns"
+  "metaTitle": "Build & Manage a Campaign Dial List | iMash Documentation",
+  "metaDescription": "How to build and manage a campaign dial list in iMash: add leads and contacts from your CRM, target with filters, read every column, control retries, track progress, and understand the completed-campaign archive.",
+  "metaKeywords": "dial list, campaign contacts, add leads, add contacts, call queue, campaign audience, retry settings, max dials, lifecycle stages, imash campaigns"
 }

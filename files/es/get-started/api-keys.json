@@ -1,78 +1,223 @@
 {
-  "title": "Claves de API: accede a iMash de forma programática",
-  "lede": "Las claves de API permiten que tu propio software se comunique con iMash a través de la API REST &mdash; iniciar llamadas, leer registros de llamadas, sincronizar registros del CRM y más &mdash; sin iniciar sesión en el panel. Esta guía cubre cómo generar, almacenar y revocar claves.",
-  "timeToComplete": "5 minutos",
+  "title": "Claves API y Credenciales",
+  "lede": "Dos páginas convierten iMash de un panel en un centro de operaciones: las Claves API permiten que su propio software controle iMash a través de la API REST, y Credenciales permite que iMash funcione con sus propias cuentas de proveedores de IA — sus claves de OpenAI, ElevenLabs o Deepgram, e incluso su propio bucket S3 para las grabaciones. Esta guía le acompaña por ambas, de principio a fin.",
+  "timeToComplete": "10 minutos",
   "steps": [
     {
-      "id": "what-are-keys",
-      "title": "Para qué sirven las claves de API",
-      "content": "<p>Una clave de API es un token secreto que identifica tu cuenta cuando llamas a la API REST de iMash. En lugar de un nombre de usuario y una contraseña, tu código envía la clave con cada solicitud.</p><ul><li>Úsalas para automatizar iMash desde tu propio backend, scripts o herramientas de terceros.</li><li>Cada clave actúa en nombre de tu cuenta, así que trátala como una contraseña.</li><li>Una clave se muestra completa <strong>solo una vez</strong>, en el momento en que la creas. Después de eso, iMash almacena únicamente una versión cifrada (hash) y puede mostrarte el prefijo.</li></ul>",
+      "id": "what-you-will-set-up",
+      "title": "Conozca la diferencia: Claves API vs. Credenciales",
+      "content": "<p>iMash tiene dos páginas relacionadas con claves, y apuntan en direcciones opuestas:</p><ul><li><strong>API Keys</strong> (Claves API) (<em>su código &rarr; iMash</em>): tokens secretos que identifican su cuenta cuando su propio backend, scripts o herramientas de terceros llaman a la API REST de iMash — iniciar llamadas, leer registros de llamadas, sincronizar registros del CRM y más, sin necesidad de iniciar sesión en el panel.</li><li><strong>Credentials</strong> (Credenciales) (<em>iMash &rarr; sus proveedores</em>): una bóveda segura donde guarda las claves de sus <em>propias</em> cuentas de proveedores de voz (TTS), LLM y transcripción, además de almacenamiento en la nube opcional. Cuando un proveedor tiene clave aquí, sus agentes funcionan con su cuenta y su facturación en lugar de las de iMash.</li></ul><blockquote>💡 No necesita ninguna de las dos páginas para empezar a usar iMash — los agentes funcionan desde el primer momento con los proveedores gestionados por la plataforma. Venga aquí cuando quiera integrarse por código o usar sus propias cuentas de proveedores.</blockquote>",
+      "images": []
+    },
+    {
+      "id": "open-api-keys",
+      "title": "Abra la página de Claves API",
+      "content": "<ol><li>En la barra de navegación superior, haga clic en la sección <strong>Credentials</strong> (Credenciales) (en el extremo derecho, con el icono de llave).</li><li>En la barra lateral izquierda, desplácese hasta el grupo <strong>Account</strong> (Cuenta) y haga clic en <strong>API Keys</strong> (Claves API).</li></ol><p>Verá una tabla con todas las claves de su cuenta, una fila por clave:</p><ul><li><strong>Name</strong> (Nombre) — la etiqueta que asignó a la clave al crearla.</li><li><strong>Key Prefix</strong> (Prefijo de la clave) — los primeros caracteres de la clave, para que pueda identificarla con la copia en su código. El secreto completo nunca vuelve a mostrarse después de la creación.</li><li><strong>Created At</strong> (Fecha de creación) — cuándo se generó la clave.</li><li><strong>Last Used</strong> (Último uso) — la última vez que esta clave autenticó una solicitud a la API (<strong>Never</strong> — Nunca — si aún no se ha usado). Perfecto para detectar claves inactivas.</li><li><strong>Actions</strong> (Acciones) — el icono rojo de papelera revoca la clave.</li></ul>",
       "images": [
         {
           "src": "images/get-started/api-keys-light.png",
-          "alt": "Página de claves de API",
-          "caption": "La página API Keys enumera tus claves con su nombre, prefijo, fecha de creación y hora de último uso.",
+          "alt": "Página de Claves API con nombre, prefijo, fecha de creación y último uso de cada clave",
+          "caption": "La página de Claves API: cada clave con su nombre, prefijo, fecha de creación y último uso.",
           "theme": "light"
         },
         {
           "src": "images/get-started/api-keys-dark.png",
-          "alt": "Página de claves de API",
-          "caption": "La página API Keys enumera tus claves con su nombre, prefijo, fecha de creación y hora de último uso.",
+          "alt": "Página de Claves API con nombre, prefijo, fecha de creación y último uso de cada clave",
+          "caption": "La página de Claves API: cada clave con su nombre, prefijo, fecha de creación y último uso.",
           "theme": "dark"
         }
       ]
     },
     {
-      "id": "open-page",
-      "title": "Abrir la página de claves de API",
-      "content": "<ol><li>En la navegación de la izquierda, abre <strong>Account</strong> (Cuenta).</li><li>Haz clic en <strong>API Keys</strong> (Claves de API).</li><li>Verás una tabla con tus claves existentes, cada una mostrando su <strong>Name</strong> (Nombre), <strong>Key Prefix</strong> (Prefijo de la clave), <strong>Created At</strong> (Fecha de creación) y <strong>Last Used</strong> (Último uso).</li></ol>",
+      "id": "generate-key",
+      "title": "Genere una nueva clave API",
+      "content": "<ol><li>Haga clic en <strong>+ Generate New API Key</strong> (Generar nueva clave API) en la esquina superior derecha.</li><li>En la ventana modal, escriba un nombre claro y descriptivo — por ejemplo <em>\"Integración con Zapier\"</em> o <em>\"Sincronización nocturna del CRM\"</em> — para poder distinguir sus claves dentro de unos meses.</li><li>Haga clic en <strong>Generate New API Key</strong>. (El botón permanece deshabilitado hasta que introduzca un nombre.)</li></ol><blockquote>💡 Cree una clave por integración. Cuando retire o rote una herramienta, podrá revocar solo su clave sin romper todo lo demás.</blockquote>",
+      "images": [
+        {
+          "src": "images/get-started/api-keys-generate-modal-light.png",
+          "alt": "Modal Generate New API Key pidiendo un nombre descriptivo para la clave",
+          "caption": "Nombre su clave según la integración que la usará.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/api-keys-generate-modal-dark.png",
+          "alt": "Modal Generate New API Key pidiendo un nombre descriptivo para la clave",
+          "caption": "Nombre su clave según la integración que la usará.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "copy-secret",
+      "title": "Copie la clave secreta — es su única oportunidad",
+      "content": "<p>En el momento en que se genera la clave, iMash la muestra una sola vez:</p><ul><li><strong>Key Name</strong> (Nombre de la clave) — el nombre que eligió.</li><li><strong>Key Prefix (for identification)</strong> (Prefijo para identificación) — el prefijo público corto que aparecerá en la tabla de claves.</li><li><strong>Secret Key (copy this!)</strong> (Clave secreta — ¡cópiela!) — el secreto completo, oculto por defecto. Haga clic en el icono del <strong>ojo</strong> para revelarlo y en <strong>Copy</strong> (Copiar) para copiarlo al portapapeles.</li></ul><ol><li>Haga clic en <strong>Copy</strong> y pegue la clave directamente en el almacén de secretos de su integración o en una variable de entorno.</li><li>Haga clic en <strong>Close</strong> (Cerrar).</li></ol><blockquote>⚠️ <strong>La clave completa se muestra solo una vez.</strong> iMash guarda únicamente una versión cifrada con hash — si pierde la clave, no podrá recuperarla; tendrá que generar una nueva. Nunca la pegue en documentos compartidos, chats, código de front-end ni aplicaciones móviles.</blockquote>",
+      "images": [
+        {
+          "src": "images/get-started/api-keys-generated-key-light.png",
+          "alt": "Modal API Key Generated mostrando el nombre, prefijo y clave secreta enmascarada con botones de ojo y Copy",
+          "caption": "La revelación única: use el icono del ojo para mostrar el secreto y Copy para copiarlo.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/api-keys-generated-key-dark.png",
+          "alt": "Modal API Key Generated mostrando el nombre, prefijo y clave secreta enmascarada con botones de ojo y Copy",
+          "caption": "La revelación única: use el icono del ojo para mostrar el secreto y Copy para copiarlo.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "use-key",
+      "title": "Use la clave en su código",
+      "content": "<p>Envíe la clave con cada solicitud a la API REST de iMash — sustituye a su usuario y contraseña:</p><ul><li>Inclúyala en el encabezado <strong>Authorization</strong> de sus solicitudes HTTP, exactamente como se muestra en la <a data-href=\"/api-reference\">Referencia de la API</a> para cada endpoint.</li><li>Cada clave actúa con todos los permisos de su cuenta, así que trátela como una contraseña.</li><li>Guárdela solo en el servidor — variables de entorno o un gestor de secretos, nunca en código del lado del cliente.</li></ul><p>En cuanto llegue su primera solicitud, la columna <strong>Last Used</strong> (Último uso) de la clave empezará a actualizarse — una forma rápida de confirmar que su integración está viva.</p>",
       "images": []
     },
     {
-      "id": "generate",
-      "title": "Generar una nueva clave",
-      "content": "<ol><li>Haz clic en <strong>Generate New API Key</strong> (Generar nueva clave de API) en la parte superior derecha.</li><li>Ingresa un <strong>nombre</strong> claro y descriptivo (por ejemplo, \"Zapier integration\" o \"Nightly CRM sync\") para poder distinguir tus claves más adelante.</li><li>Haz clic en <strong>Generate</strong> (Generar).</li><li>iMash muestra la clave secreta completa. Usa el ícono de ojo para revelarla y el botón <strong>Copy</strong> (Copiar) para copiarla.</li></ol>",
-      "images": []
+      "id": "revoke-key",
+      "title": "Revoque una clave que ya no necesite",
+      "content": "<ol><li>Localice la fila de la clave en la tabla (revise primero <strong>Last Used</strong> — <strong>Never</strong> o una fecha antigua suele indicar que es seguro eliminarla).</li><li>Haga clic en el icono rojo de <strong>papelera</strong> bajo <strong>Actions</strong> (Acciones).</li><li>En la confirmación <strong>Delete API Key?</strong> (¿Eliminar clave API?), haga clic en <strong>Delete</strong> (Eliminar).</li></ol><blockquote>⚠️ La revocación es instantánea y permanente — cualquier integración que aún use la clave pierde el acceso de inmediato. Cambie la integración a una clave nueva <em>antes</em> de eliminar la antigua.</blockquote>",
+      "images": [
+        {
+          "src": "images/get-started/api-keys-revoke-confirm-light.png",
+          "alt": "Diálogo de confirmación Delete API Key con botones Cancel y Delete",
+          "caption": "La confirmación de eliminación — esta acción no se puede deshacer.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/api-keys-revoke-confirm-dark.png",
+          "alt": "Diálogo de confirmación Delete API Key con botones Cancel y Delete",
+          "caption": "La confirmación de eliminación — esta acción no se puede deshacer.",
+          "theme": "dark"
+        }
+      ]
     },
     {
-      "id": "store-securely",
-      "title": "Cópiala y guárdala de forma segura",
-      "content": "<p>La clave completa se muestra una sola vez y no se puede recuperar de nuevo. Si la pierdes, deberás generar una nueva.</p><ul><li>Pégala directamente en el almacén de secretos de tu integración o en una variable de entorno &mdash; nunca en documentos compartidos ni en chats.</li><li><strong>No</strong> incrustes la clave en código de front-end, aplicaciones móviles ni en nada que un usuario pueda ver.</li><li>Dale a cada integración su propia clave para que puedas revocar una sin afectar a las demás.</li></ul>",
-      "images": []
+      "id": "open-credentials",
+      "title": "Abra la página de Credenciales (use sus propios proveedores)",
+      "content": "<p>Ahora la otra dirección: darle a iMash <em>sus</em> cuentas de proveedores. Así es como los usuarios avanzados controlan costes y capacidad — sus agentes pueden funcionar con sus propios planes de OpenAI, ElevenLabs o Deepgram.</p><ol><li>En la barra de navegación superior, haga clic en <strong>Credentials</strong> (Credenciales).</li><li>Llegará a <strong>Service Providers Credentials</strong> (Credenciales de proveedores de servicios), también accesible desde la barra lateral en <strong>Account &rarr; Credentials</strong>.</li></ol><p>La página se organiza en secciones, cada una con una cuadrícula de tarjetas de proveedores:</p><ul><li><strong>Voice Providers</strong> (Proveedores de voz) — cuentas de texto a voz (PlayHT, RimeAI, ElevenLabs, Deepgram, Cartesia, Azure, OpenAI, IBM Watson, MiniMax).</li><li><strong>LLM Providers</strong> (Proveedores de LLM) — el cerebro del agente (OpenAI, Anthropic, Groq, Google).</li><li><strong>Custom LLM Models</strong> (Modelos LLM personalizados) — cualquier endpoint compatible con OpenAI que aloje o contrate.</li><li><strong>Transcriber Providers</strong> (Proveedores de transcripción) — voz a texto (Deepgram, Speechmatics, AssemblyAI, Groq STT).</li><li><strong>Webhooks Providers</strong> (Proveedores para webhooks) — claves LLM opcionales dedicadas al procesamiento posterior a la llamada.</li><li><strong>Cloud Storage</strong> (Almacenamiento en la nube) — su propio bucket compatible con S3 para las grabaciones de llamadas.</li></ul>",
+      "images": [
+        {
+          "src": "images/get-started/api-keys-credentials-page-light.png",
+          "alt": "Página Service Providers Credentials mostrando la sección Voice Providers con tarjetas de proveedores",
+          "caption": "La página de Credenciales: tarjetas de proveedores agrupadas por sección, empezando por Voice Providers.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/api-keys-credentials-page-dark.png",
+          "alt": "Página Service Providers Credentials mostrando la sección Voice Providers con tarjetas de proveedores",
+          "caption": "La página de Credenciales: tarjetas de proveedores agrupadas por sección, empezando por Voice Providers.",
+          "theme": "dark"
+        }
+      ]
     },
     {
-      "id": "revoke",
-      "title": "Revocar una clave que ya no necesitas",
-      "content": "<ol><li>Encuentra la clave en la tabla de la página <strong>API Keys</strong> (Claves de API).</li><li>Haz clic en el ícono de <strong>eliminar</strong> (papelera) en su fila.</li><li>Confirma. La clave deja de funcionar de inmediato &mdash; cualquier integración que aún la use perderá el acceso, así que actualízala primero.</li></ol><p>Revisa la columna <strong>Last Used</strong> (Último uso) para detectar las claves que ya no están activas antes de eliminarlas.</p>",
-      "images": []
+      "id": "add-provider-key",
+      "title": "Añada la clave de un proveedor",
+      "content": "<p>Todas las tarjetas de proveedor funcionan igual:</p><ol><li>Localice la tarjeta del proveedor (por ejemplo <strong>ElevenLabs</strong> en <strong>Voice Providers</strong>).</li><li>Pegue su clave en el campo <strong>API Key</strong> (Clave API). Algunos proveedores piden un campo adicional — PlayHT requiere un <strong>User ID</strong>, Deepgram una <strong>API Url</strong> opcional y Azure una <strong>Region</strong> (región).</li><li>Haga clic en <strong>Save</strong> (Guardar). El botón solo se activa cuando ha cambiado algo.</li></ol><p>Tras guardar, la tarjeta se bloquea: los valores se muestran como puntos ocultos y los botones cambian a <strong>Edit</strong> (Editar — introducir una clave nueva) y <strong>Delete</strong> (Eliminar — quitar la credencial tras una confirmación). Nadie — ni siquiera usted — puede volver a leer una clave guardada desde la pantalla.</p><blockquote>💡 El icono de enlace 🔗 en la esquina de cada tarjeta abre la documentación del propio proveedor, muy útil cuando busca dónde crear la clave en su plataforma.</blockquote>",
+      "images": [
+        {
+          "src": "images/get-started/api-keys-credentials-card-light.png",
+          "alt": "Tarjeta de credenciales de ElevenLabs con campo API Key y botón Save",
+          "caption": "Una tarjeta de proveedor: pegue su clave, haga clic en Save y el valor queda oculto desde ese momento.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/api-keys-credentials-card-dark.png",
+          "alt": "Tarjeta de credenciales de ElevenLabs con campo API Key y botón Save",
+          "caption": "Una tarjeta de proveedor: pegue su clave, haga clic en Save y el valor queda oculto desde ese momento.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "custom-llm-models",
+      "title": "Añada un modelo LLM personalizado (opcional)",
+      "content": "<p>Más allá de los grandes proveedores, la sección <strong>Custom LLM Models</strong> (Modelos LLM personalizados) le permite conectar <em>cualquier</em> endpoint compatible con OpenAI — DeepSeek, Together, OpenRouter o un servidor vLLM autoalojado:</p><ol><li>Desplácese hasta <strong>Custom LLM Models</strong> y haga clic en <strong>+ Add Custom LLM</strong> (Añadir LLM personalizado).</li><li>Complete el formulario: <ul><li><strong>Name</strong> (Nombre) — la etiqueta que aparece en los selectores de modelos (p. ej. <em>DeepSeek V3</em>).</li><li><strong>Model code</strong> (Código del modelo) — el identificador exacto que espera el endpoint (p. ej. <em>deepseek-chat</em>).</li><li><strong>Base URL</strong> (URL base) — la raíz del endpoint (p. ej. <em>https://api.deepseek.com/v1</em>).</li><li><strong>API key</strong> — su clave para ese endpoint.</li><li><strong>Use for</strong> (Usar para) — dónde estará disponible el modelo: el agente en vivo, los webhooks posteriores a la llamada y/o el agente observador.</li></ul></li><li>Guarde en la ventana modal — el modelo aparecerá como una tarjeta y estará disponible en el selector de modelos del editor de asistentes.</li></ol><p>Las tarjetas con la etiqueta <strong>Global (provided by iMash admin)</strong> son modelos compartidos por la plataforma que puede usar pero no editar.</p>",
+      "images": [
+        {
+          "src": "images/get-started/api-keys-credentials-custom-llm-light.png",
+          "alt": "Sección Custom LLM Models con botón Add Custom LLM y una tarjeta de modelo con URL base, código y etiquetas de uso",
+          "caption": "Custom LLM Models: incorpore cualquier endpoint compatible con OpenAI a sus selectores de modelos.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/api-keys-credentials-custom-llm-dark.png",
+          "alt": "Sección Custom LLM Models con botón Add Custom LLM y una tarjeta de modelo con URL base, código y etiquetas de uso",
+          "caption": "Custom LLM Models: incorpore cualquier endpoint compatible con OpenAI a sus selectores de modelos.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "webhook-llm-keys",
+      "title": "Webhooks Providers: claves separadas para la IA post-llamada (opcional)",
+      "content": "<p>Después de cada llamada, iMash ejecuta tareas con LLM: el resumen, la evaluación de éxito, la extracción de datos estructurados, la etapa del ciclo de vida, la creación de trabajos y más. La sección <strong>Webhooks Providers</strong> le permite asignar claves independientes a ese trabajo, separadas de sus agentes en vivo:</p><ul><li><strong>Deje un proveedor en blanco</strong> y el procesamiento post-llamada usará la clave de su sección <strong>LLM Providers</strong> de arriba — el comportamiento por defecto más sencillo.</li><li><strong>Añada una clave aquí</strong> para dirigir el trabajo de webhooks a otra cuenta — un plan más económico o un límite de velocidad separado, de modo que el tráfico intenso post-llamada nunca frene a sus agentes en vivo. Cuando un proveedor tiene clave aquí, iMash le factura $0 por los webhooks de ese proveedor.</li></ul>",
+      "images": [
+        {
+          "src": "images/get-started/api-keys-credentials-webhooks-light.png",
+          "alt": "Sección Webhooks Providers con tarjetas de OpenAI, Anthropic, Groq y Google para claves LLM post-llamada",
+          "caption": "Claves dedicadas opcionales para el procesamiento post-llamada — las tarjetas vacías usan sus claves LLM principales.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/api-keys-credentials-webhooks-dark.png",
+          "alt": "Sección Webhooks Providers con tarjetas de OpenAI, Anthropic, Groq y Google para claves LLM post-llamada",
+          "caption": "Claves dedicadas opcionales para el procesamiento post-llamada — las tarjetas vacías usan sus claves LLM principales.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "s3-storage",
+      "title": "Cloud Storage: guarde las grabaciones en su propio bucket S3 (opcional)",
+      "content": "<p>Por defecto, las grabaciones de llamadas se almacenan en iMash. La sección <strong>Cloud Storage</strong> (Almacenamiento en la nube) le permite dirigirlas a su propio bucket compatible con S3 — ideal para cumplimiento normativo, políticas de retención o simplemente para ser dueño de sus datos:</p><ol><li>Elija su <strong>S3 Provider</strong> (proveedor S3): Amazon S3, MinIO, Cloudflare R2, DigitalOcean Spaces, Backblaze B2, Wasabi o Custom S3-Compatible.</li><li>Complete los campos obligatorios: <strong>Access Key ID</strong>, <strong>Secret Access Key</strong>, <strong>Region</strong> (p. ej. <em>us-east-1</em>) y <strong>Bucket Name</strong> (nombre del bucket). Los proveedores distintos de AWS también requieren la <strong>Endpoint URL</strong> (cada proveedor muestra un formato de ejemplo).</li><li>Opcionalmente defina un <strong>Bucket Prefix</strong> (p. ej. <em>recordings/</em>) para mantener los archivos en una carpeta, y active <strong>Force Path Style</strong> para MinIO y algunos servicios compatibles con S3.</li><li>Haga clic en <strong>Test Connection</strong> (Probar conexión) para verificar sus datos y luego en <strong>Save</strong> (Guardar). Al guardar se vuelve a probar la conexión y se configura automáticamente el CORS de su bucket para que las grabaciones se reproduzcan en el navegador — no se guarda nada si la prueba falla.</li><li>Ponga <strong>Enable Custom S3 Storage</strong> (Habilitar almacenamiento S3 propio) en <strong>ON</strong> para enviar las nuevas grabaciones a su bucket. Opcionalmente active <strong>Also Store Call Data</strong> (Almacenar también datos de llamadas) para guardar allí transcripciones y resultados de análisis.</li></ol><blockquote>💡 El interruptor de habilitación permanece bloqueado hasta que todos los campos obligatorios estén completos — si no se activa, busque el campo vacío.</blockquote>",
+      "images": [
+        {
+          "src": "images/get-started/api-keys-credentials-s3-light.png",
+          "alt": "Tarjeta S3-Compatible Storage con selector de proveedor, claves de acceso, región, campos de bucket y botón Test Connection",
+          "caption": "La tarjeta S3-Compatible Storage: conecte su propio bucket para las grabaciones de llamadas.",
+          "theme": "light"
+        },
+        {
+          "src": "images/get-started/api-keys-credentials-s3-dark.png",
+          "alt": "Tarjeta S3-Compatible Storage con selector de proveedor, claves de acceso, región, campos de bucket y botón Test Connection",
+          "caption": "La tarjeta S3-Compatible Storage: conecte su propio bucket para las grabaciones de llamadas.",
+          "theme": "dark"
+        }
+      ]
     }
   ],
   "nextSteps": {
     "title": "¿Qué sigue?",
-    "description": "Con una clave en mano, conecta iMash con tus otros sistemas.",
+    "description": "Claves listas — ahora póngalas a trabajar. Integre iMash en su infraestructura o asigne sus nuevas credenciales de proveedor a un agente.",
     "cards": [
       {
         "href": "/api-reference",
-        "title": "Referencia de API",
-        "description": "Consulta cada endpoint, parámetro y solicitud de ejemplo de la API REST de iMash."
+        "title": "Referencia de la API",
+        "description": "Cada endpoint, parámetro y ejemplo de solicitud de la API REST de iMash."
       },
       {
-        "href": "/get-started/dashboard-overview",
-        "title": "Resumen del panel",
-        "description": "Comprende los mismos datos de llamadas y CRM que puedes extraer a través de la API."
+        "href": "/agents/llm-settings",
+        "title": "Elija el cerebro (LLM)",
+        "description": "Seleccione el modelo con el que piensa su agente — incluidos los proveedores que acaba de configurar."
       },
       {
-        "href": "/automations/smart-flows",
-        "title": "Crear automatizaciones",
-        "description": "Activa flujos de trabajo y conecta herramientas externas sin escribir código."
+        "href": "/agents/voice-configuration",
+        "title": "Configuración de voz (TTS)",
+        "description": "Dele voz a su agente con las voces de la plataforma o con su propia cuenta de proveedor."
+      },
+      {
+        "href": "/automations/webhooks",
+        "title": "Webhooks",
+        "description": "Envíe los resultados de las llamadas a sus propios sistemas en cuanto termina cada llamada."
       }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
+    "title": "¿Necesita ayuda?",
+    "content": "<p>Si tiene algún problema o pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de la API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Claves de API | Documentación de iMash",
-  "metaDescription": "Genera, nombra, almacena y revoca claves de API de iMash para el acceso programático a la API REST desde Account → API Keys. Las claves se muestran completas solo una vez.",
-  "metaKeywords": "claves de API de iMash, API REST, acceso programático, generar clave de API, revocar clave de API, autenticación de API, integraciones"
+  "metaTitle": "Claves API y Credenciales | Documentación de iMash",
+  "metaDescription": "Genere, copie y revoque claves API de iMash para acceder a la API REST, y guarde sus propias credenciales de proveedores — TTS, LLM, transcripción, endpoints LLM personalizados, claves para webhooks y almacenamiento S3 de grabaciones.",
+  "metaKeywords": "claves API iMash, API REST, credenciales, traiga su propia clave, BYOK, clave OpenAI, clave ElevenLabs, Deepgram, LLM personalizado, grabaciones S3, LLM webhooks, autenticación api"
 }

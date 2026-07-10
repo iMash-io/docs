@@ -1,130 +1,126 @@
 {
   "title": "Create Your First Agent",
-  "lede": "Build a Smart Agent from scratch: name it, write its prompt and greeting, pick a model and voice, then test it - all from one editor.",
-  "timeToComplete": "6 minutes",
+  "lede": "In the next few minutes you'll build an AI voice agent that can answer calls, hold natural conversations, and work for you 24/7 — no code, no waiting. Here's the full journey, from a blank list to a talking agent.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
-      "id": "open-list",
+      "id": "open-smart-agents",
       "title": "Open Smart Agents",
-      "content": "<ol><li>In the left navigation, go to <strong>Intelligence Center → Smart Agents</strong>.</li><li>You will see the list of your existing agents.</li><li>Click <strong>Create</strong> (the new-agent button) to start a fresh agent.</li></ol>",
+      "content": "<p>Every agent you build lives in one place: the <strong>Smart Agents</strong> list.</p><ol><li>In the header, click the <strong>Automation</strong> section (it's usually the first tab).</li><li>Click the <strong>Smart Agents</strong> sub-tab — or use the left sidebar: under <strong>Intelligence Center</strong>, click <strong>Smart Agents</strong>.</li><li>You'll see a table of your agents with their <strong>Voice</strong>, <strong>LLM</strong>, <strong>STT</strong> (transcriber), <strong>TTS</strong> (voice engine), and <strong>Label</strong> columns.</li></ol><p>The toolbar above the table gives you:</p><ul><li><strong>Label</strong> filter — narrow the list to agents tagged with a label.</li><li><strong>Owner</strong> filter — filter by main account or a sub-account owner.</li><li><strong>List / Folders</strong> — switch between a flat table and a folder (label-grouped) view.</li><li><strong>Create New Agent</strong> — the blue button we're about to press.</li><li><strong>API Info</strong> — shows how to create and manage agents programmatically via the API.</li></ul>",
       "images": [
-        {
-          "src": "images/agents/assistants-list-light.png",
-          "alt": "Smart Agents list",
-          "caption": "The Smart Agents list - create a new agent from here.",
-          "theme": "light"
-        },
-        {
-          "src": "images/agents/assistants-list-dark.png",
-          "alt": "Smart Agents list",
-          "caption": "The Smart Agents list - create a new agent from here.",
-          "theme": "dark"
-        }
+        {"src": "images/agents/create-agent-list-light.png", "alt": "Smart Agents list with the Create New Agent button", "caption": "The Smart Agents list — every agent you build lives here.", "theme": "light"},
+        {"src": "images/agents/create-agent-list-dark.png", "alt": "Smart Agents list with the Create New Agent button", "caption": "The Smart Agents list — every agent you build lives here.", "theme": "dark"}
       ]
     },
     {
-      "id": "name-and-prompt",
-      "title": "Name It and Write the Prompt",
-      "content": "<ol><li>Give the agent a clear <strong>name</strong> so you can find it later.</li><li>In the prompt column on the left, describe the agent's role, personality, and rules - what it should do and how it should speak.</li><li>Set the <strong>first message</strong> the agent says when a call connects.</li></ol>",
+      "id": "create-new-agent",
+      "title": "Click Create New Agent",
+      "content": "<ol><li>Click <strong>Create New Agent</strong> in the top-right of the toolbar.</li><li>That's it — iMash instantly creates a ready-to-run agent (named something like <em>Agent_1234567</em>) with a working default brain, voice, and transcriber, and opens it in the editor.</li></ol><p>You never start from a broken blank slate: a brand-new agent can already talk. Everything you do from here is customization.</p><blockquote>💡 <strong>Tip:</strong> The small arrow next to <strong>Create New Agent</strong> opens a menu with <strong>Browse Templates</strong> — a faster start if a pre-built agent fits your use case (next step).</blockquote>",
       "images": [
-        {
-          "src": "images/agents/assistant-editor-light.png",
-          "alt": "Agent editor",
-          "caption": "The editor: prompt on the left, feature panels in the middle.",
-          "theme": "light"
-        },
-        {
-          "src": "images/agents/assistant-editor-dark.png",
-          "alt": "Agent editor",
-          "caption": "The editor: prompt on the left, feature panels in the middle.",
-          "theme": "dark"
-        }
+        {"src": "images/agents/create-agent-new-button-light.png", "alt": "Toolbar with the Create New Agent button", "caption": "The toolbar: filters, view toggle, and the Create New Agent button.", "theme": "light"},
+        {"src": "images/agents/create-agent-new-button-dark.png", "alt": "Toolbar with the Create New Agent button", "caption": "The toolbar: filters, view toggle, and the Create New Agent button.", "theme": "dark"}
       ]
     },
     {
-      "id": "model-and-voice",
-      "title": "Pick the Brain and Voice",
-      "content": "<ol><li>Open the <strong>Brains (LLM)</strong> panel and choose the model that powers replies (a realtime speech-to-speech model, or a text model paired with a transcriber).</li><li>Open the <strong>Voice (TTS)</strong> panel and pick the voice your agent speaks with.</li></ol>",
+      "id": "start-from-template",
+      "title": "Optional: Start From a Template",
+      "content": "<p>Don't want to write a prompt from scratch? Click the arrow next to <strong>Create New Agent</strong> and choose <strong>Browse Templates</strong>.</p><ul><li><strong>System Templates</strong> — professionally written agents for common jobs: After-Hours Answering, FAQ &amp; Info Line, Lead Follow-Up, Appointment Reminder, Survey &amp; Feedback, Technical Support, and more.</li><li><strong>Organization Templates</strong> — templates shared inside your organization.</li><li><strong>My Templates</strong> — agents you've saved with <strong>Save As</strong> (covered later in this guide).</li></ul><ol><li>Use the search box or the category chips (<strong>Inbound</strong>, <strong>Outbound</strong>, <strong>Support</strong>, <strong>Sales</strong>, <strong>Scheduling</strong>, <strong>General</strong>) to find a fit.</li><li>Click <strong>Use Template</strong> on a card — a new agent is created from it and opens in the editor, ready to personalize.</li></ol>",
       "images": [
-        {
-          "src": "images/agents/voice-config-light.png",
-          "alt": "Voice and model",
-          "caption": "Pick the voice (TTS) and brain (LLM) for your agent",
-          "theme": "light"
-        },
-        {
-          "src": "images/agents/voice-config-dark.png",
-          "alt": "Voice and model",
-          "caption": "Pick the voice (TTS) and brain (LLM) for your agent",
-          "theme": "dark"
-        }
+        {"src": "images/agents/create-agent-templates-light.png", "alt": "Agent Templates gallery", "caption": "The Agent Templates gallery — one click creates a fully configured agent.", "theme": "light"},
+        {"src": "images/agents/create-agent-templates-dark.png", "alt": "Agent Templates gallery", "caption": "The Agent Templates gallery — one click creates a fully configured agent.", "theme": "dark"}
       ]
     },
     {
-      "id": "enhance",
-      "title": "Add Capabilities (Optional)",
-      "content": "<ul><li><strong>Knowledge Base</strong>: upload FAQs and documents to answer from.</li><li><strong>Tools / MCP</strong>: let the agent end calls, book appointments, or call your APIs.</li><li><strong>Settings</strong>: adjust timeouts, idle messages, voicemail, and privacy.</li></ul>",
+      "id": "meet-the-canvas",
+      "title": "Meet the Editor: the Node Canvas",
+      "content": "<p>New agents open in the <strong>Node</strong> view — a visual canvas where your agent is a living diagram. Everything on screen is real configuration, not decoration:</p><ul><li><strong>The Agent node</strong> (center-right) — your agent's heart: its inputs, identity, capabilities, and behavior.</li><li><strong>Provider nodes</strong> wired into it — an <strong>LLM</strong> node (the brain and its model + temperature), a <strong>TTS</strong> node (the voice it speaks with), and an <strong>STT</strong> node (how it transcribes what callers say). The animated dotted lines show what feeds what.</li><li><strong>Capabilities bar</strong> (top) — ON/OFF cards for Knowledge Base, Webhooks, Observer Agent, IVR, CRM, and more (step 7).</li><li><strong>Action rail</strong> (right edge) — Components palette, Call logs, Version history, Share, Editor settings, and theme toggle.</li><li><strong>Agent Builder bar</strong> (bottom) — talk to an AI that builds the canvas for you, or live-test your agent (step 9).</li><li><strong>Navigation pill</strong> (bottom-left) — Back, the <strong>Form / Node</strong> view toggle, owner switcher, and <strong>Save As</strong> (template).</li></ul><blockquote>💡 <strong>Tip:</strong> Everything autosaves. Watch the badge in the bottom-right corner next to the agent name — it flips to <strong>Saved · just now</strong> after each change. There is no Save button to forget.</blockquote>",
       "images": [
-        {
-          "src": "images/agents/tools-mcp-light.png",
-          "alt": "Add tools",
-          "caption": "Add tools, MCP servers and a knowledge base",
-          "theme": "light"
-        },
-        {
-          "src": "images/agents/tools-mcp-dark.png",
-          "alt": "Add tools",
-          "caption": "Add tools, MCP servers and a knowledge base",
-          "theme": "dark"
-        }
+        {"src": "images/agents/create-agent-canvas-light.png", "alt": "The node canvas editor with agent and provider nodes", "caption": "The Node view: your agent as a live diagram — brain, voice, and ears wired into the Agent node.", "theme": "light"},
+        {"src": "images/agents/create-agent-canvas-dark.png", "alt": "The node canvas editor with agent and provider nodes", "caption": "The Node view: your agent as a live diagram — brain, voice, and ears wired into the Agent node.", "theme": "dark"}
       ]
     },
     {
-      "id": "test",
-      "title": "Test and Save",
-      "content": "<ol><li>Click <strong>Test Agent</strong> and connect to talk to it live in the browser.</li><li>Refine the prompt, voice, and settings until it behaves the way you want.</li><li>Your changes save to the agent so it's ready to attach to a phone number or website.</li></ol>",
+      "id": "name-and-persona",
+      "title": "Name the Agent and Write Its Persona",
+      "content": "<p>Time to give your agent a personality. On the <strong>Agent</strong> node, click the <strong>gear icon</strong> (top-right corner of the node) to open the <strong>Agent Identity</strong> panel:</p><ul><li><strong>Agent name</strong> — replace the auto-generated name with something you'll recognize, e.g. <em>Acme Receptionist</em>.</li><li><strong>Persona</strong> — the system prompt. Describe in plain language who the agent is, what it must do, its tone, and its rules. This is the single most important field in the whole editor.</li><li><strong>Agent language</strong> — the language(s) the agent listens in (e.g. <em>Multilingual</em>, English, Spanish).</li><li><strong>Conversation → How the call opens</strong> — who speaks first and the exact greeting. Choose whether the caller speaks first, the AI improvises an opener, or the AI says a <strong>defined message</strong> you write word-for-word.</li></ul><blockquote>💡 <strong>Prompt tips:</strong> Write the persona like you'd brief a new employee — role, goal, tone, do's and don'ts. Keep it under ~3,000 tokens (the editor shows an estimate); move long reference material into the Knowledge Base instead.</blockquote>",
       "images": [
-        {
-          "src": "images/agents/test-agent-light.png",
-          "alt": "Test the agent",
-          "caption": "Click Test Agent to try it live before going live",
-          "theme": "light"
-        },
-        {
-          "src": "images/agents/test-agent-dark.png",
-          "alt": "Test the agent",
-          "caption": "Click Test Agent to try it live before going live",
-          "theme": "dark"
-        }
+        {"src": "images/agents/create-agent-agent-panel-light.png", "alt": "Agent Identity panel with name, persona, and language", "caption": "Agent Identity: name, persona (system prompt), language, and how the call opens.", "theme": "light"},
+        {"src": "images/agents/create-agent-agent-panel-dark.png", "alt": "Agent Identity panel with name, persona, and language", "caption": "Agent Identity: name, persona (system prompt), language, and how the call opens.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "brain-voice-ears",
+      "title": "Check the Brain, Voice, and Ears",
+      "content": "<p>Look at the <strong>Agent</strong> node's <strong>INPUTS</strong> section: <strong>LLM</strong>, <strong>TTS</strong>, and <strong>STT</strong> each connect to a provider node on the canvas.</p><ol><li>On the <strong>LLM</strong> node, click the <strong>Model</strong> field to pick the model that thinks up replies, and drag the <strong>Temperature</strong> slider (Precise ↔ Creative).</li><li>On the <strong>TTS</strong> node, click the <strong>Voice</strong> field to choose the voice your agent speaks with (expand <strong>Advanced</strong> for fine-tuning).</li><li>On the <strong>STT</strong> node, review the transcription <strong>Model</strong> and <strong>Language</strong>, and optionally add <strong>Keyword Boost</strong> terms (brand names the transcriber should recognize).</li><li>To swap a provider entirely, click the <strong>gear icon</strong> on any provider node.</li></ol><p>The defaults are production-ready, so you can skip this step on day one — deep dives live in the <em>Choose the Brain (LLM)</em> and <em>Voice Configuration</em> guides.</p>",
+      "images": [
+        {"src": "images/agents/create-agent-agent-node-light.png", "alt": "The Agent node with LLM, TTS, and STT inputs", "caption": "The Agent node: inputs (LLM, TTS, STT), identity, capabilities, and behavior at a glance.", "theme": "light"},
+        {"src": "images/agents/create-agent-agent-node-dark.png", "alt": "The Agent node with LLM, TTS, and STT inputs", "caption": "The Agent node: inputs (LLM, TTS, STT), identity, capabilities, and behavior at a glance.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "capabilities-bar",
+      "title": "Switch On Capabilities",
+      "content": "<p>The bar across the top of the canvas is your agent's superpower switchboard. Each card mirrors a full settings panel — click a card to configure it, or flip its <strong>ON/OFF</strong> pill to enable it. When a capability is ON, an animated line connects it to your agent.</p><ul><li><strong>Settings</strong> — call timeouts, idle messages, voicemail behavior, privacy &amp; recording.</li><li><strong>Knowledge Base</strong> — let the agent answer from your uploaded documents (RAG).</li><li><strong>Webhooks</strong> — post-call data extraction and webhook delivery.</li><li><strong>Observer Agent</strong> — a second AI that watches live calls and flags/extracts in real time.</li><li><strong>IVR</strong> — phone-menu navigation behavior.</li><li><strong>CRM</strong> / <strong>Dispatch</strong> — CRM intelligence and field-service dispatch powers.</li><li><strong>Messages</strong> — run this same agent over SMS, WhatsApp, Email, and web chat.</li><li><strong>Widget</strong> — embed the agent on your website.</li></ul><blockquote>💡 <strong>Tip:</strong> The leftmost fold button collapses the bar into a single gear icon when you want a clean canvas — a green badge shows how many capabilities are ON.</blockquote>",
+      "images": [
+        {"src": "images/agents/create-agent-capabilities-bar-light.png", "alt": "Capabilities bar with ON/OFF toggle cards", "caption": "The capabilities bar — every card opens a full settings panel; pills flip features ON/OFF.", "theme": "light"},
+        {"src": "images/agents/create-agent-capabilities-bar-dark.png", "alt": "Capabilities bar with ON/OFF toggle cards", "caption": "The capabilities bar — every card opens a full settings panel; pills flip features ON/OFF.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "components-palette",
+      "title": "Explore the Components Palette",
+      "content": "<p>Ready to go beyond a single agent? The action rail on the right edge of the canvas holds the power tools:</p><ol><li>Click the <strong>grid icon</strong> (top of the rail) to open the <strong>Components</strong> panel.</li><li>Drag any component onto the canvas to add it:</li></ol><ul><li><strong>Components</strong> — extra <strong>LLM</strong>, <strong>TTS</strong>, <strong>STT</strong>, or <strong>Agent</strong> nodes.</li><li><strong>Agents &amp; Transitions</strong> — <strong>Task</strong> (a scoped sub-call with its own prompt), <strong>If / Else</strong> and <strong>Category</strong> (decision nodes that branch the conversation), <strong>Instruction Agent</strong>, and <strong>Handoff</strong> (transfer to another agent). This is how one agent becomes a whole team — see the <em>Sub-Agents, Tasks &amp; Handoffs</em> guide.</li><li><strong>Tools</strong> — <strong>End Call</strong>, <strong>SIP Transfer</strong>, <strong>Internal Transfer</strong>, and more actions the agent can take mid-call.</li></ul><p>The rest of the rail: <strong>Call logs</strong> for this agent, <strong>Version history</strong> (restore any earlier canvas), <strong>Share</strong> (copy a deep link), <strong>Editor settings</strong> (grid, snap, auto-layout), and a <strong>theme toggle</strong>.</p>",
+      "images": [
+        {"src": "images/agents/create-agent-palette-light.png", "alt": "Components palette open over the canvas", "caption": "The Components palette: drag tasks, decision nodes, handoffs, and tools straight onto the canvas.", "theme": "light"},
+        {"src": "images/agents/create-agent-palette-dark.png", "alt": "Components palette open over the canvas", "caption": "The Components palette: drag tasks, decision nodes, handoffs, and tools straight onto the canvas.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "ai-builder-and-test",
+      "title": "Build With AI, Then Talk to Your Agent",
+      "content": "<p>The bar at the bottom of the canvas is where the magic happens — it has two modes:</p><ul><li><strong>AI Builder</strong> — press <strong>Start</strong> (or type in the box below) and literally tell the AI what to build: <em>\"Add an If/Else that branches on caller intent\"</em> or <em>\"Create a Categorize node for billing / support / sales\"</em>. It edits the canvas for you in real time.</li><li><strong>Live Test</strong> — switch the toggle and press <strong>Start</strong> to place a live voice call to the agent exactly as configured on the canvas. Your browser will ask for microphone permission — allow it, then just talk.</li></ul><ol><li>Click <strong>Live Test</strong>, then <strong>Start</strong>.</li><li>Say hello and check the greeting, the voice, and the persona.</li><li>Tweak, test again, repeat — changes autosave, so every test uses your latest edits.</li></ol><blockquote>⚠️ <strong>Heads up:</strong> Test calls use real speech providers, so make sure your account has credit. If the agent doesn't answer, check that the LLM, Voice, and Transcriber are all enabled (their pills show red when a critical piece is off).</blockquote>",
+      "images": [
+        {"src": "images/agents/create-agent-ai-builder-light.png", "alt": "AI Builder and Live Test bar with the composer input", "caption": "AI Builder edits the canvas from plain English; Live Test calls your agent right in the browser.", "theme": "light"},
+        {"src": "images/agents/create-agent-ai-builder-dark.png", "alt": "AI Builder and Live Test bar with the composer input", "caption": "AI Builder edits the canvas from plain English; Live Test calls your agent right in the browser.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "form-view-toggle",
+      "title": "Prefer Classic Forms? Toggle the Form View",
+      "content": "<p>The canvas and the classic form editor are two windows onto the same agent — switch any time, nothing is lost.</p><ol><li>In the bottom-left navigation pill, click <strong>Form</strong> on the <strong>Form / Node</strong> toggle.</li><li>The editor becomes a three-column layout: the <strong>system prompt</strong> and greeting on the left, the <strong>feature panels</strong> (Knowledge Base, Transcriber, Voice, Brains, Webhooks, Observer, IVR, CRM Intelligence, Messages, Website Widget, Templates &amp; Variables) in the middle, and the <strong>Test Agent</strong> chat on the right.</li><li>Click <strong>Node</strong> to jump back to the canvas.</li></ol><p>The form-view header also shows the agent's <strong>ID</strong> (one-click copy — you'll need it for API calls), an <strong>Est. tokens</strong> counter for your prompt, the <strong>Owner</strong> selector, and status pills that go green when Voice, Transcriber, and LLM are ready.</p>",
+      "images": [
+        {"src": "images/agents/create-agent-form-view-light.png", "alt": "Form view with prompt, feature panels, and test chat", "caption": "Form view: prompt on the left, feature panels in the middle, live test chat on the right.", "theme": "light"},
+        {"src": "images/agents/create-agent-form-view-dark.png", "alt": "Form view with prompt, feature panels, and test chat", "caption": "Form view: prompt on the left, feature panels in the middle, live test chat on the right.", "theme": "dark"},
+        {"src": "images/agents/create-agent-form-header-light.png", "alt": "Form view header toolbar", "caption": "The form-view header: name, ID, token estimate, owner, Form/Node toggle, Save As, and Test Agent.", "theme": "light"},
+        {"src": "images/agents/create-agent-form-header-dark.png", "alt": "Form view header toolbar", "caption": "The form-view header: name, ID, token estimate, owner, Form/Node toggle, Save As, and Test Agent.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "save-and-launch",
+      "title": "Save as a Template and Go Live",
+      "content": "<p>Your agent is alive — here's how to protect and launch it:</p><ul><li><strong>Autosave</strong> — every edit is already persisted; the bottom-right badge confirms it (<strong>Saved · just now</strong>).</li><li><strong>Save As</strong> (bottom-left pill in Node view, header button in Form view) — snapshot the agent as a reusable <strong>template</strong> so your team can spin up copies from <strong>Browse Templates → My Templates</strong>.</li><li><strong>Version history</strong> (clock icon on the action rail) — restore any earlier version if an experiment goes sideways.</li><li><strong>Go live</strong> — attach the agent to a phone number so it answers real calls, or embed it on your website. That's the payoff: a tireless agent that never misses a call.</li></ul>",
+      "images": [
+        {"src": "images/agents/create-agent-node-nav-light.png", "alt": "Bottom-left navigation pill with Form/Node toggle and Save As", "caption": "The navigation pill: Back, Form/Node toggle, owner switcher, and Save As (template).", "theme": "light"},
+        {"src": "images/agents/create-agent-node-nav-dark.png", "alt": "Bottom-left navigation pill with Form/Node toggle and Save As", "caption": "The navigation pill: Back, Form/Node toggle, owner switcher, and Save As (template).", "theme": "dark"}
       ]
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Now flesh out and launch your new agent:",
+    "description": "Your agent can talk — now make it unstoppable:",
     "cards": [
-      {
-        "href": "/agents/voice-configuration",
-        "title": "Configure the Voice",
-        "description": "Pick a TTS provider and preview voices."
-      },
-      {
-        "href": "/agents/agent-tools",
-        "title": "Add Tools",
-        "description": "Let the agent take actions during a call."
-      },
-      {
-        "href": "/agents/test-agent",
-        "title": "Test Your Agent",
-        "description": "Try it in the browser or over a real phone call."
-      }
+      {"href": "/phone/add-phone-number", "title": "Give It a Phone Number", "description": "Attach a number so your agent answers real calls."},
+      {"href": "/agents/test-your-agent", "title": "Test Your Agent", "description": "Web calls, phone tests, and reading the results."},
+      {"href": "/agents/llm-settings", "title": "Choose the Brain (LLM)", "description": "Models, temperature, and realtime vs pipeline modes."},
+      {"href": "/agents/voice-configuration", "title": "Configure the Voice", "description": "Pick, preview, and even clone the perfect voice."},
+      {"href": "/agents/sub-agents", "title": "Sub-Agents, Tasks & Handoffs", "description": "Turn one agent into a whole coordinated team."}
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Create Your First Agent | iMash Docs",
-  "metaDescription": "Step-by-step guide to creating an iMash Smart Agent: name it, write the prompt and greeting, choose a model and voice, add tools and a knowledge base, then test it.",
-  "metaKeywords": "create agent, imash, smart agent, voice agent, ai assistant, agent setup, system prompt, first message"
+  "metaTitle": "Create Your First Agent | iMash Documentation",
+  "metaDescription": "Step-by-step guide to creating an iMash Smart Agent: create it in one click or from a template, master the node canvas and form view, write the persona, pick the brain and voice, switch on capabilities, and live-test it in the browser.",
+  "metaKeywords": "create agent, imash, smart agent, voice agent, ai assistant, node editor, canvas, agent template, persona, system prompt, ai builder, live test"
 }

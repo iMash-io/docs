@@ -1,51 +1,91 @@
 {
   "title": "Create a Permission Group (Team)",
-  "lede": "A Permission Group is a team or skill of human agents. Create one, add members, then use its inner tabs to point phone numbers at it and control how it rings. This guide covers creating a group and adding people.",
-  "timeToComplete": "5 minutes",
+  "lede": "Permission Groups are the teams that power your human contact center — Sales, Support, Spanish line, VIP desk. Create a group, add your people, and every phone number, ring rule, and queue you set up later plugs straight into it. This guide takes you from an empty Groups tab to a fully staffed team.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
       "id": "open-groups",
       "title": "Open the Groups tab",
-      "content": "<ol><li>Go to <strong>Call Center &rarr; Contact Center</strong>.</li><li>Click the <strong>Groups</strong> tab (visible to Contact Center admins and the main account).</li><li>The left column lists your existing <strong>Permission Groups</strong>; the right panel shows the selected group's members and settings.</li></ol>",
+      "content": "<p>Everything about your human teams lives in one place:</p><ol><li>In the left sidebar, click <strong>Contact Center</strong> (under the <strong>Call Center</strong> section). You can also reach it from the top navigation: <strong>Contact Center</strong>.</li><li>Click the <strong>Groups</strong> tab at the top of the page.</li></ol><p>The screen splits in two:</p><ul><li><strong>Groups</strong> (left column) — the list of your Permission Groups, each showing its name, description, and a member count.</li><li><strong>Group</strong> (right panel) — the selected group's members and all of its call-center settings, organized as inner tabs.</li></ul><blockquote>⚠️ The <strong>Groups</strong> tab is only visible to the main account and members whose Contact Center role is <strong>Admin</strong>. If you don't see it, ask an Admin to raise your role — see <em>Members &amp; Roles</em>.</blockquote><blockquote>💡 Hover <strong>How does this work?</strong> next to the Permission Groups title for a quick reminder: besides call routing, groups also power data sharing — a sub-account with team-wide visibility sees records owned by anyone in their groups.</blockquote>",
       "images": [
-        { "src": "images/contact-center/cc-groups-overview-light.png", "alt": "Groups tab overview", "caption": "The Groups tab: group list on the left, member and settings panel on the right.", "theme": "light" },
-        { "src": "images/contact-center/cc-groups-overview-dark.png", "alt": "Groups tab overview", "caption": "The Groups tab: group list on the left, member and settings panel on the right.", "theme": "dark" }
+        { "src": "images/contact-center/cc-groups-overview-light.png", "alt": "Groups tab overview with the group list on the left and the group panel on the right", "caption": "The Groups tab: group list on the left, member and settings panel on the right.", "theme": "light" },
+        { "src": "images/contact-center/cc-groups-overview-dark.png", "alt": "Groups tab overview with the group list on the left and the group panel on the right", "caption": "The Groups tab: group list on the left, member and settings panel on the right.", "theme": "dark" }
       ]
     },
     {
       "id": "new-group",
       "title": "Create a new group",
-      "content": "<ol><li>Click <strong>New Group</strong> in the top-right.</li><li>Enter a <strong>Name</strong> (for example, <em>Sales Team</em> or <em>Spanish Support</em>).</li><li>Optionally add a <strong>Description</strong> of what the team represents.</li><li>Click <strong>Create</strong>. The new group is selected automatically.</li></ol>"
+      "content": "<ol><li>Click <strong>New Group</strong> in the top-right corner.</li><li>Enter a <strong>Name</strong> — pick something your team will instantly recognize, like <em>Sales Team</em> or <em>Spanish Support</em>.</li><li>Optionally fill in <strong>Description (optional)</strong> to note what the group represents.</li><li>Click <strong>Create</strong>. The group appears in the left list and is selected automatically, ready for members.</li></ol><blockquote>💡 Create one group per team or skill — for example separate <em>Sales</em> and <em>Support</em> groups — so each can get its own phone numbers, ring strategy, and hold experience later.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/groups-new-group-modal-light.png", "alt": "New Group modal with Name and Description fields", "caption": "The New Group modal — only a name is required.", "theme": "light" },
+        { "src": "images/contact-center/groups-new-group-modal-dark.png", "alt": "New Group modal with Name and Description fields", "caption": "The New Group modal — only a name is required.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "manage-groups",
+      "title": "Select, rename, or delete a group",
+      "content": "<p>The left <strong>Groups</strong> column is your control panel for existing teams:</p><ul><li><strong>Click a group</strong> to select it — its members and settings load in the right panel.</li><li><strong>Pencil icon</strong> — opens the <strong>Edit Group</strong> modal to rename the group or change its description, then click <strong>Save</strong>.</li><li><strong>Trash icon</strong> — deletes the group after you confirm <strong>Delete this group?</strong>.</li></ul><blockquote>💡 Deleting a group only unlinks its members — their user accounts, data, and roles are untouched. Any phone numbers routed to the group stop ringing it, though, so re-point those first.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/groups-list-panel-light.png", "alt": "Groups list with member counts and edit and delete icons", "caption": "Each group row shows its member count plus edit (pencil) and delete (trash) actions.", "theme": "light" },
+        { "src": "images/contact-center/groups-list-panel-dark.png", "alt": "Groups list with member counts and edit and delete icons", "caption": "Each group row shows its member count plus edit (pencil) and delete (trash) actions.", "theme": "dark" },
+        { "src": "images/contact-center/groups-edit-group-modal-light.png", "alt": "Edit Group modal with the Name and Description fields pre-filled", "caption": "Edit Group: rename the team or update its description, then click Save.", "theme": "light" },
+        { "src": "images/contact-center/groups-edit-group-modal-dark.png", "alt": "Edit Group modal with the Name and Description fields pre-filled", "caption": "Edit Group: rename the team or update its description, then click Save.", "theme": "dark" }
+      ]
     },
     {
       "id": "add-members",
-      "title": "Add members to the group",
-      "content": "<ol><li>With the group selected, open its <strong>Members</strong> tab.</li><li>Click <strong>Add Members</strong>.</li><li>Search users by name or email and pick one or more — both main and sub-accounts can be added.</li><li>Click <strong>Add</strong>. Members appear in the table, each tagged <strong>Main</strong> or <strong>Sub</strong>.</li></ol><p>To remove someone, click the delete icon on their row and confirm.</p>",
+      "title": "Add existing users as members",
+      "content": "<p>Now staff the team with people who already have an iMash login:</p><ol><li>With the group selected, make sure you're on its <strong>Members</strong> tab (the first inner tab).</li><li>Click <strong>Add Members</strong> in the top-right of the panel.</li><li>In the <strong>Add Members</strong> modal, search users by name or email and pick one or more — both the main account and sub-accounts can be added.</li><li>Click <strong>Add</strong>. Members appear in the table, each tagged <strong>Main</strong> or <strong>Sub</strong>.</li></ol><p>To remove someone later, click the red trash icon on their row and confirm <strong>Remove from group?</strong> — this only removes them from the team, it never deletes their account.</p><blockquote>💡 A user can belong to several groups at once — perfect for a bilingual rep who covers both the English and Spanish lines.</blockquote>",
       "images": [
-        { "src": "images/contact-center/cc-group-members-light.png", "alt": "Group members tab", "caption": "The Members tab with Add Members and the member list.", "theme": "light" },
-        { "src": "images/contact-center/cc-group-members-dark.png", "alt": "Group members tab", "caption": "The Members tab with Add Members and the member list.", "theme": "dark" }
+        { "src": "images/contact-center/groups-add-members-modal-light.png", "alt": "Add Members modal with a user search field", "caption": "Add Members: search by name or email and pick as many users as you need.", "theme": "light" },
+        { "src": "images/contact-center/groups-add-members-modal-dark.png", "alt": "Add Members modal with a user search field", "caption": "Add Members: search by name or email and pick as many users as you need.", "theme": "dark" },
+        { "src": "images/contact-center/cc-group-members-light.png", "alt": "Members tab showing the member table with Main and Sub tags", "caption": "The Members tab: every member is listed with a Main or Sub tag and a remove action.", "theme": "light" },
+        { "src": "images/contact-center/cc-group-members-dark.png", "alt": "Members tab showing the member table with Main and Sub tags", "caption": "The Members tab: every member is listed with a Main or Sub tag and a remove action.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "create-user",
+      "title": "Create a brand-new agent in one step",
+      "content": "<p>Hiring someone who doesn't have an iMash login yet? Skip User Management entirely — create them right inside the group:</p><ol><li>On the group's <strong>Members</strong> tab, click <strong>Create User</strong> (next to Add Members).</li><li>Fill in the new agent's details:<ul><li><strong>Email</strong> — their login email.</li><li><strong>Password</strong> — at least 8 characters; share it with them securely.</li><li><strong>First Name</strong> and <strong>Last Name</strong>.</li><li><strong>Contact Center role</strong> — <strong>Agent</strong>, <strong>Monitor / QA</strong>, <strong>Supervisor</strong>, or <strong>Admin</strong> (see <em>Members &amp; Roles</em> for what each can do).</li></ul></li><li>Click <strong>Create User</strong>.</li></ol><p>The account is created auto-approved — no email confirmation needed — and dropped straight into this group. Its data-access role and view profile follow the group's <strong>Role Mapping</strong> for the Contact Center role you picked, so the new agent lands with exactly the right permissions on day one.</p>",
+      "images": [
+        { "src": "images/contact-center/groups-create-user-modal-light.png", "alt": "Create User modal with email, password, name, and Contact Center role fields", "caption": "Create User: a ready-to-work agent account in one modal.", "theme": "light" },
+        { "src": "images/contact-center/groups-create-user-modal-dark.png", "alt": "Create User modal with email, password, name, and Contact Center role fields", "caption": "Create User: a ready-to-work agent account in one modal.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "online-offline",
+      "title": "Understand Online vs. Offline (who actually rings)",
+      "content": "<p>Being a member is only half the story — group calls ring <strong>online</strong> members only. Each member controls their own availability from the web dialer (the phone icon in the top-right of the app), under <strong>My status</strong>:</p><ul><li><strong>Online</strong> — they are rung for AI transfers to the group, inbound calls to the group's numbers, and queued callers.</li><li><strong>On Break</strong> — temporarily out of the ring rotation; the status sticks until they change it.</li><li><strong>Offline</strong> — not rung at all.</li><li><strong>Busy on a Call / Busy — Wrap-up</strong> — set automatically while a member is on a live call or logging the call outcome; you can't select it manually, and no new calls ring in during it.</li></ul><p>If <em>nobody</em> in the group is online, the group's fallback kicks in — typically the AI agent takes the call (configured on the <strong>Inbound SIP Routing</strong> tab).</p><blockquote>💡 Worried agents will close the dialer and miss calls? On the group's <strong>Members Roles</strong> tab, use <strong>Keep the web dialer always open for</strong> to pin the dialer open for chosen roles so they never miss a queued call.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/groups-online-status-light.png", "alt": "My status selector in the web dialer set to Online", "caption": "My status in the web dialer — Online members are the ones who ring.", "theme": "light" },
+        { "src": "images/contact-center/groups-online-status-dark.png", "alt": "My status selector in the web dialer set to Online", "caption": "My status in the web dialer — Online members are the ones who ring.", "theme": "dark" }
       ]
     },
     {
       "id": "next-tabs",
-      "title": "Configure the group's inner tabs",
-      "content": "<p>Once the group has members, its inner tabs let you finish setup: <strong>Members Roles</strong>, <strong>Role Mapping</strong>, <strong>Inbound SIP Routing</strong>, <strong>Ring strategy</strong>, <strong>Wait &amp; Hold experience</strong>, and <strong>Queue Settings</strong>. Each has its own Save button — start with Members Roles and Inbound SIP Routing.</p>"
+      "title": "Tour the group's inner tabs",
+      "content": "<p>With people on board, the group's inner tab bar is your setup checklist. Each tab has its own detailed guide:</p><ul><li><strong>Members</strong> — the roster you just built (this guide).</li><li><strong>Members Roles</strong> — set each member's Contact Center role (Agent, Monitor / QA, Supervisor, Admin), pin the dialer open per role, build the group's <strong>Skills</strong> catalog (tag members with skills like <em>Spanish</em> or <em>Billing</em> that agents can filter by when transferring), and manage post-call <strong>Dispositions</strong>. → <em>Members &amp; Roles</em></li><li><strong>Role Mapping</strong> — map each Contact Center role to a data-access role and view profile that apply automatically on save. This tab only appears for the main account and sub-accounts with User Management enabled. → <em>Role Mapping</em></li><li><strong>Inbound SIP Routing</strong> — point phone numbers straight at this group and choose the fallback when nobody answers. → <em>Inbound SIP Routing</em></li><li><strong>Ring strategy</strong> — ring everyone at once, round-robin, linear, or longest-idle, plus ring timeouts and per-call behavior like auto-answer. → <em>Ring Strategy</em></li><li><strong>Wait &amp; Hold experience</strong> — wait music, hold music, and periodic announcements callers hear. → <em>Wait &amp; Hold</em></li><li><strong>Queue Settings</strong> — max wait time and what happens when the queue times out. → <em>Queue Settings</em></li></ul><p>One <strong>Save</strong> button in the bottom-right commits every settings tab at once — you can adjust several tabs, then save a single time. (It's hidden on <strong>Members</strong>, where adding and removing members applies instantly.)</p><p>Start with <strong>Members Roles</strong>, then <strong>Inbound SIP Routing</strong> — the moment a number points at your group, your team is live and taking calls. 🎉</p>",
+      "images": [
+        { "src": "images/contact-center/groups-inner-tabs-light.png", "alt": "The group's inner tab bar: Members, Members Roles, Role Mapping, Inbound SIP Routing, Ring strategy, Wait and Hold experience, Queue Settings", "caption": "The group's inner tabs — each one is a step in your team's call setup.", "theme": "light" },
+        { "src": "images/contact-center/groups-inner-tabs-dark.png", "alt": "The group's inner tab bar: Members, Members Roles, Role Mapping, Inbound SIP Routing, Ring strategy, Wait and Hold experience, Queue Settings", "caption": "The group's inner tabs — each one is a step in your team's call setup.", "theme": "dark" }
+      ]
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Assign roles and route calls to your new group.",
+    "description": "Your team exists — now give it roles, a phone number, and a ring plan.",
     "cards": [
-      { "href": "/contact-center/members-roles", "title": "Members & Roles", "description": "Set each member's Contact Center role." },
+      { "href": "/contact-center/members-roles", "title": "Members & Roles", "description": "Set each member's Contact Center role and dialer behavior." },
+      { "href": "/contact-center/role-mapping", "title": "Role Mapping", "description": "Map Contact Center roles to data-access roles and view profiles." },
       { "href": "/contact-center/inbound-sip-routing", "title": "Inbound SIP Routing", "description": "Point a phone number at this group." },
-      { "href": "/contact-center/ring-strategy", "title": "Ring Strategy", "description": "Choose how members are rung." }
+      { "href": "/contact-center/ring-strategy", "title": "Ring Strategy", "description": "Choose how members are rung — all at once, round-robin, and more." }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Create a Permission Group | iMash Docs",
-  "metaDescription": "Create a Contact Center Permission Group in iMash, add members, and open its inner tabs to route calls and control ringing for your team.",
-  "metaKeywords": "permission group, team, skill group, add members, contact center, new group, agents"
+  "metaTitle": "Create a Permission Group | iMash Documentation",
+  "metaDescription": "Create a Contact Center Permission Group in iMash: add members, create new agents in one step, understand online/offline ringing, and tour the group's routing, ring, hold, and queue tabs.",
+  "metaKeywords": "permission group, team, skill group, add members, create user, contact center, new group, agents, online status, ring group"
 }

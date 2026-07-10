@@ -1,0 +1,115 @@
+{
+  "title": "Tasks & Kanban",
+  "lede": "Never let a follow-up slip through the cracks again. iMash Tasks gives your team a shared to-do list with priorities, due dates, checklists, time tracking, and comments — plus a drag-and-drop Project Kanban that shows your entire pipeline at a glance.",
+  "timeToComplete": "10 minutes",
+  "steps": [
+    {
+      "id": "open-tasks",
+      "title": "Open the Tasks list",
+      "content": "<ol><li>In the top navigation, click <strong>CRM</strong>, then click the <strong>Tasks</strong> tab (or go directly to <code>/crm/tasks</code>). The counter on the tab shows your total number of tasks.</li><li>Every task appears in a searchable table. The columns are:</li></ol><ul><li><strong>Task</strong> — the title (click it to open the task) plus a short description preview. A red clock icon means the task is <strong>overdue</strong>.</li><li><strong>Status</strong> — TODO, IN PROGRESS, BLOCKED, REVIEW, COMPLETED, or CANCELLED.</li><li><strong>Priority</strong> — LOW, MEDIUM, HIGH, or URGENT.</li><li><strong>Assigned To</strong> — the team member responsible (or <em>Unassigned</em>).</li><li><strong>Progress</strong> — a percentage bar that fills automatically as checklist items get checked off.</li><li><strong>Comments</strong> — how many comments the task has.</li><li><strong>Active</strong> — shows <em>Running · X min</em> when you have a live work timer on that task.</li><li><strong>Actions</strong> — View, Edit, Copy, and Delete buttons for each row.</li></ul>",
+      "images": [
+        { "src": "images/crm/tasks-list-light.png", "alt": "Tasks list in table view", "caption": "The Tasks list — status, priority, assignee, progress, and comments for every task", "theme": "light" },
+        { "src": "images/crm/tasks-list-dark.png", "alt": "Tasks list in table view", "caption": "The Tasks list — status, priority, assignee, progress, and comments for every task", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "create-task",
+      "title": "Create a task",
+      "content": "<ol><li>Click <strong>+ Add Task</strong> in the top-right of the list.</li><li>Fill in the form:</li></ol><ul><li><strong>Task Title</strong> (required) — a short, action-oriented name like \"Call back Sarah about the quote\".</li><li><strong>Description</strong> — details, context, links. Click <strong>Enhance Description</strong> and the built-in AI rewrites your rough notes into a clear, polished description.</li><li><strong>Priority</strong> — Low, Medium, High, or Urgent (defaults to Medium).</li><li><strong>Status</strong> — To Do, In Progress, Review, or Blocked (defaults to To Do).</li><li><strong>Assign To</strong> — pick the team member who owns this task.</li><li><strong>Category</strong> — Follow Up, Meeting, Call, Email, Research, Development, Review, or Other. Handy for filtering later.</li><li><strong>Start Date</strong> and <strong>Due Date</strong> — tasks past their due date are automatically flagged <strong>OVERDUE</strong>.</li><li><strong>Estimated Hours</strong> — your time budget; compared against actual tracked time.</li><li><strong>Tags</strong> — free-form labels to group related tasks.</li></ul>",
+      "images": [
+        { "src": "images/crm/tasks-create-form-light.png", "alt": "Create New Task form", "caption": "The Create New Task form — title, AI-enhanced description, priority, status, dates, and tags", "theme": "light" },
+        { "src": "images/crm/tasks-create-form-dark.png", "alt": "Create New Task form", "caption": "The Create New Task form — title, AI-enhanced description, priority, status, dates, and tags", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "checklist-related",
+      "title": "Add a checklist and link the task to a CRM record",
+      "content": "<p>Scroll down in the same form for two power features:</p><ol><li><strong>Checklist</strong> — break the task into sub-steps:<ul><li>Click <strong>Add Checklist Item</strong> and type each step (mark any as <strong>Done</strong> already, or <strong>Remove</strong> it).</li><li>Or click <strong>Generate with AI</strong> — iMash reads your title and description and drafts the checklist for you.</li><li>The task's <strong>Progress</strong> percentage is calculated automatically from completed checklist items.</li></ul></li><li><strong>Related To</strong> — attach the task to the record it's about:<ul><li><strong>Related To Type</strong> — Lead, Contact, Account, Campaign, Call, or Opportunity.</li><li><strong>Related Entity</strong> — search and pick the exact record.</li><li>On the task page you'll get a <strong>Related</strong> card with a one-click <strong>View Details</strong> jump to that lead, contact, account, campaign, or call.</li></ul></li><li>Click <strong>Create Task</strong> to save (or <strong>Cancel</strong> to discard).</li></ol><blockquote>💡 Linking a task to a lead or call keeps the full story in one place — anyone picking up the task sees exactly who it's about without hunting through the CRM.</blockquote>",
+      "images": [
+        { "src": "images/crm/tasks-create-checklist-light.png", "alt": "Checklist and Related To sections of the task form", "caption": "Checklist items (with AI generation) and the Related To link at the bottom of the form", "theme": "light" },
+        { "src": "images/crm/tasks-create-checklist-dark.png", "alt": "Checklist and Related To sections of the task form", "caption": "Checklist items (with AI generation) and the Related To link at the bottom of the form", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "search-filter",
+      "title": "Search, filter, and sort the list",
+      "content": "<ol><li>Type in the <strong>Search tasks...</strong> box to match against task titles and descriptions.</li><li>Open the <strong>Filter By</strong> dropdown and pick one or more filter types — a dedicated selector appears for each:</li></ol><ul><li><strong>Status</strong> — show only certain statuses (multi-select).</li><li><strong>Priority</strong> — e.g. only HIGH and URGENT (multi-select).</li><li><strong>Assigned</strong> — <em>Assigned to Me</em>, <em>Unassigned</em>, or a specific team member.</li><li><strong>Due Date</strong> — <em>Overdue</em>, <em>Due Today</em>, or <em>Due This Week</em>.</li><li><strong>Category</strong> — filter by the task category.</li><li><strong>Owner</strong> — filter by which account (main or sub-account) owns the task.</li></ul><blockquote>💡 Start every morning with <strong>Filter By → Assigned → Assigned to Me</strong> plus <strong>Due Date → Overdue</strong> — that's your instant \"what's on fire\" view.</blockquote>",
+      "images": [
+        { "src": "images/crm/tasks-toolbar-light.png", "alt": "Tasks toolbar", "caption": "The toolbar: search, Filter By, view switcher, and Add Task", "theme": "light" },
+        { "src": "images/crm/tasks-toolbar-dark.png", "alt": "Tasks toolbar", "caption": "The toolbar: search, Filter By, view switcher, and Add Task", "theme": "dark" },
+        { "src": "images/crm/tasks-filters-light.png", "alt": "Filter By dropdown open", "caption": "Filter By offers Status, Priority, Assigned, Due Date, Category, and Owner filters", "theme": "light" },
+        { "src": "images/crm/tasks-filters-dark.png", "alt": "Filter By dropdown open", "caption": "Filter By offers Status, Priority, Assigned, Due Date, Category, and Owner filters", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "board-view",
+      "title": "Switch to Board view",
+      "content": "<ol><li>In the toolbar, change the view selector from <strong>Table View</strong> to <strong>Board View</strong>.</li><li>Your tasks regroup into five status columns: <strong>TODO</strong>, <strong>IN PROGRESS</strong>, <strong>REVIEW</strong>, <strong>BLOCKED</strong>, and <strong>COMPLETED</strong>, each with a live count.</li><li>Every card shows the priority tag, an overdue clock icon when relevant, the checklist progress bar, the assignee's avatar, and how soon it's due.</li><li>Click any card to open the full task page.</li></ol><blockquote>💡 Board view is perfect for stand-ups — one glance tells you what's stuck in BLOCKED and what's waiting in REVIEW. To move a task to another column, open it and change its status (see the task page below).</blockquote>",
+      "images": [
+        { "src": "images/crm/tasks-board-light.png", "alt": "Tasks board view", "caption": "Board View groups tasks into TODO, IN PROGRESS, REVIEW, BLOCKED, and COMPLETED columns", "theme": "light" },
+        { "src": "images/crm/tasks-board-dark.png", "alt": "Tasks board view", "caption": "Board View groups tasks into TODO, IN PROGRESS, REVIEW, BLOCKED, and COMPLETED columns", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "task-page",
+      "title": "Open a task and track your time",
+      "content": "<ol><li>Click a task's title (or the green eye <strong>View</strong> button in the Actions column) to open its page.</li><li>The header shows the title, status / priority / OVERDUE tags, any tags you added, the description, and the checklist progress bar.</li><li>Click <strong>Start Timer</strong> to begin tracking work time — a live <em>Timer Running</em> stopwatch appears in the header, and the Tasks list shows <em>Running · X min</em> in the Active column.</li><li>Click <strong>Stop Timer</strong> when you're done. The session is saved to the <strong>Time Logs</strong> tab and added to the task's total <strong>Time Spent</strong>.</li><li>Click <strong>Edit Task</strong> to change any field from the create form.</li></ol>",
+      "images": [
+        { "src": "images/crm/tasks-detail-light.png", "alt": "Task detail page", "caption": "The task page — header with Start Timer and Edit Task, checklist tab, and the sidebar cards", "theme": "light" },
+        { "src": "images/crm/tasks-detail-dark.png", "alt": "Task detail page", "caption": "The task page — header with Start Timer and Edit Task, checklist tab, and the sidebar cards", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "work-tabs",
+      "title": "Work the tabs: Checklist, Comments, Activity, Files, Time Logs",
+      "content": "<p>The main panel of the task page has five tabs:</p><ul><li><strong>Checklist</strong> — tick items off as you complete them; the progress bar updates instantly. Each item has its own 💬 comment thread and 📄 file attachments, so evidence lives right next to the step it belongs to.</li><li><strong>Comments</strong> — type in <strong>Add a comment...</strong> and click <strong>Add Comment</strong>. You can edit or delete your own comments later.</li><li><strong>Activity</strong> — an automatic history of everything: status changes, timer starts, checklist toggles, comments.</li><li><strong>Files</strong> — upload documents to the task itself, and see which checklist items have files attached.</li><li><strong>Time Logs</strong> — every timer session with who worked, when, and for how long.</li></ul>",
+      "images": [
+        { "src": "images/crm/tasks-detail-comments-light.png", "alt": "Comments tab on a task", "caption": "The Comments tab — add, edit, and delete comments; the other tabs cover checklist, activity, files, and time logs", "theme": "light" },
+        { "src": "images/crm/tasks-detail-comments-dark.png", "alt": "Comments tab on a task", "caption": "The Comments tab — add, edit, and delete comments; the other tabs cover checklist, activity, files, and time logs", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "status-sidebar",
+      "title": "Update status and read the sidebar",
+      "content": "<p>The right-hand column of the task page keeps the vitals in view:</p><ul><li><strong>Status &amp; Actions</strong> — a dropdown to move the task through 📋 To Do → 🚀 In Progress → 👀 Review → 🚫 Blocked → ✅ Completed → ❌ Cancelled. Changing it here updates the list and board immediately.</li><li><strong>Task Details</strong> — Progress %, Assignee, Due Date (red if overdue), Time Spent vs. estimate, Owner, Created and Updated dates, and Category.</li><li><strong>Related</strong> — if the task is linked to a lead, contact, account, campaign, or call, this card names it and the <strong>View Details</strong> button jumps straight to it.</li></ul>",
+      "images": [
+        { "src": "images/crm/tasks-detail-sidebar-light.png", "alt": "Task Details sidebar card", "caption": "The Task Details card — progress, assignee, due date, time spent, and ownership at a glance", "theme": "light" },
+        { "src": "images/crm/tasks-detail-sidebar-dark.png", "alt": "Task Details sidebar card", "caption": "The Task Details card — progress, assignee, due date, time spent, and ownership at a glance", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "copy-delete-bulk",
+      "title": "Copy, delete, and bulk actions",
+      "content": "<ul><li><strong>Copy</strong> (the gray icon in the Actions column) duplicates a task as a fresh <em>To Do</em> — same title, description, checklist (all unchecked), and assignee, with progress and time logs reset. Perfect for recurring work like weekly reports.</li><li><strong>Delete</strong> (the red icon) removes a task after a confirmation prompt.</li><li><strong>Bulk delete</strong> — tick the checkboxes on multiple rows and a <strong>Delete Selected (N)</strong> button appears in the toolbar.</li></ul><blockquote>⚠️ Deleting is meant for tasks created by mistake. For finished work, set the status to <strong>Completed</strong> instead — you keep the history, time logs, and reporting trail.</blockquote>",
+      "images": [
+        { "src": "images/crm/tasks-row-actions-light.png", "alt": "Row action buttons: View, Edit, Copy, Delete", "caption": "The Actions column on every row — View (eye), Edit (pencil), Copy, and Delete", "theme": "light" },
+        { "src": "images/crm/tasks-row-actions-dark.png", "alt": "Row action buttons: View, Edit, Copy, Delete", "caption": "The Actions column on every row — View (eye), Edit (pencil), Copy, and Delete", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "project-kanban",
+      "title": "The Project Kanban: your pipeline on one board",
+      "content": "<p>Tasks aren't the only board in town. The <strong>Project Kanban</strong> turns your entire lead-and-contact pipeline into a drag-and-drop board.</p><ol><li>In the top navigation, click <strong>CRM</strong>, then click the <strong>Kanban</strong> tab at the far right of the tab strip (or go directly to <code>/crm/kanban</code>).</li><li>Each column is one of your CRM lifecycle stages (New, Contacted, No Answer, Voicemail, and any custom stages you've defined in CRM Settings), with a badge showing the total and separate lead / contact counts.</li><li>Every card is a <strong>lead</strong> (blue avatar) or <strong>contact</strong> (green avatar) with its creation date.</li><li><strong>Drag a card to another column</strong> to change that person's lifecycle stage — the CRM record updates instantly.</li><li>Click a card's name to open the full lead or contact details in a side panel.</li><li>Columns load more cards automatically as you scroll down.</li></ol><blockquote>💡 The columns come from your stage configuration in <strong>CRM Settings</strong> — rename, recolor, or add stages there and the board follows.</blockquote>",
+      "images": [
+        { "src": "images/crm/tasks-kanban-light.png", "alt": "Project Kanban board", "caption": "The Project Kanban — leads and contacts grouped by lifecycle stage; drag cards to move them between stages", "theme": "light" },
+        { "src": "images/crm/tasks-kanban-dark.png", "alt": "Project Kanban board", "caption": "The Project Kanban — leads and contacts grouped by lifecycle stage; drag cards to move them between stages", "theme": "dark" }
+      ]
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "You've got a team task engine and a live pipeline board. Now wire them into the rest of your CRM.",
+    "cards": [
+      { "href": "/crm/calendar", "title": "Calendar & Scheduling", "description": "Put due dates and appointments on a shared calendar with reminders." },
+      { "href": "/crm/crm-settings", "title": "CRM Settings", "description": "Customize the lifecycle stages that power your Project Kanban columns." },
+      { "href": "/crm/leads", "title": "Leads", "description": "Manage the leads whose cards you just dragged across the board." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Tasks & Kanban - CRM | iMash Documentation",
+  "metaDescription": "Create and assign tasks with priorities, due dates, AI-generated checklists, comments, files, and time tracking in iMash — plus the drag-and-drop Project Kanban for your lead and contact pipeline.",
+  "metaKeywords": "tasks, task management, kanban, project kanban, to-do, checklist, time tracking, task board, task assignment, CRM tasks, pipeline board"
+}

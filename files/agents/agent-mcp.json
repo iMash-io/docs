@@ -1,61 +1,113 @@
 {
   "title": "Connect an MCP Server to Your Agent",
-  "lede": "Bundle your automation flows and tools into an MCP server, then attach it to a Smart Agent so it can call them live during a conversation.",
-  "timeToComplete": "10 minutes",
-  "videoUrl": "https://youtu.be/0VZbWIhMBck",
-  "videoLength": "4",
+  "lede": "Plug an entire toolbox into your Smart Agent in a couple of clicks. Attach an MCP server and your agent instantly discovers every tool it exposes — and can call them live, mid-conversation.",
+  "timeToComplete": "8 minutes",
   "steps": [
     {
-      "id": "open-automation",
-      "title": "Open Automation",
-      "content": "<ol><li>In the left navigation, go to <strong>Intelligence Center → Automation</strong>.</li><li>This is where you build <strong>Flows</strong> (multi-step operations) and <strong>MCP Servers</strong> that expose them to agents.</li></ol>",
+      "id": "what-is-mcp",
+      "title": "What MCP Does for Your Agent",
+      "content": "<p>The <strong>Model Context Protocol (MCP)</strong> is an open standard that lets an AI agent connect to an external server full of tools and resources — weather lookups, order systems, internal APIs, automation flows — without you wiring each tool by hand. When you attach an MCP server to a Smart Agent, the agent <em>automatically discovers</em> every tool the server exposes and can call any of them during a live call or chat.</p><p>There are two related pages in iMash — this guide covers the second one:</p><ul><li><strong>Registering MCP servers</strong> — building your own MCP server from automation flows in <strong>Automation</strong>. That's covered in <a data-href=\"/automations/mcp-servers\">MCP Servers</a>.</li><li><strong>Attaching an MCP server to an agent</strong> — connecting a registered (or external) server to a specific Smart Agent so its tools become part of that agent's skill set. That's this page.</li></ul><blockquote>💡 You don't need a registered server to follow along — the agent editor also accepts any external MCP server by URL, which you'll see in the \"Add a Custom MCP Server\" step below.</blockquote>"
+    },
+    {
+      "id": "open-your-agent",
+      "title": "Open Your Agent",
+      "content": "<ol><li>In the left sidebar, under <strong>Intelligence Center</strong>, click <strong>Smart Agents</strong>.</li><li>Click the <strong>name</strong> of the agent you want to supercharge. The agent editor opens.</li></ol><p>If you don't have an agent yet, click <strong>Create New Agent</strong> first — see <a data-href=\"/agents/create-agent\">Create Your First Agent</a>.</p>",
       "images": [
-        { "src": "images/agents/assistant-editor-light.png", "alt": "Agent editor overview", "caption": "MCP servers built in Automation attach back to your agent in the editor.", "theme": "light" },
-        { "src": "images/agents/assistant-editor-dark.png", "alt": "Agent editor overview", "caption": "MCP servers built in Automation attach back to your agent in the editor.", "theme": "dark" }
+        {"src": "images/agents/agent-mcp-agents-list-light.png", "alt": "Smart Agents list with agent names as links", "caption": "Smart Agents list — click an agent's name to open the editor.", "theme": "light"},
+        {"src": "images/agents/agent-mcp-agents-list-dark.png", "alt": "Smart Agents list with agent names as links", "caption": "Smart Agents list — click an agent's name to open the editor.", "theme": "dark"}
       ]
     },
     {
-      "id": "build-flow",
-      "title": "Build and Publish a Flow",
-      "content": "<ol><li>Create a new flow and chain actions - for example: take a city as input, call a weather API over HTTP, extract the temperature, and return it.</li><li><strong>Publish</strong> the flow so it can be used inside an MCP server.</li></ol>",
-      "images": []
-    },
-    {
-      "id": "create-mcp",
-      "title": "Create an MCP Server",
-      "content": "<ol><li>In <strong>Automation</strong>, open <strong>MCP Servers</strong> and create a new MCP.</li><li>Give it a clear name.</li><li>Add tools to it - a predefined <strong>Piece</strong> or any published <strong>Flow</strong> (such as your Check Weather flow).</li></ol>",
-      "images": []
-    },
-    {
-      "id": "attach",
-      "title": "Attach the MCP to Your Agent",
-      "content": "<ol><li>Go to <strong>Intelligence Center → Smart Agents</strong> and open your agent.</li><li>Open <strong>Tools / MCP</strong> and switch to <strong>MCP Servers</strong>.</li><li>Attach the MCP you created. You can also click <strong>Add custom MCP server</strong> to connect an external MCP by URL (an <code>/sse</code> or <code>/mcp</code> endpoint) with an optional auth header.</li></ol>",
+      "id": "open-tools-mcp",
+      "title": "Open the Tools / MCP Panel",
+      "content": "<p>Make sure the editor is in <strong>Form</strong> view (the <strong>Form</strong> / <strong>Node</strong> toggle sits at the top of the editor).</p><ol><li>Under the system prompt, click the <strong>Tools / MCP</strong> button. The same panel also opens from the <strong>Tools / MCP</strong> row in the right-hand column.</li></ol><p>The number in parentheses on the button counts everything already attached — prebuilt tools, custom tools, <em>and</em> MCP servers.</p>",
       "images": [
-        { "src": "images/agents/tools-mcp-light.png", "alt": "MCP servers in the Tools panel", "caption": "Attach an MCP server under Tools / MCP → MCP Servers.", "theme": "light" },
-        { "src": "images/agents/tools-mcp-dark.png", "alt": "MCP servers in the Tools panel", "caption": "Attach an MCP server under Tools / MCP → MCP Servers.", "theme": "dark" }
+        {"src": "images/agents/agent-mcp-editor-light.png", "alt": "Agent editor form view with the Tools / MCP button under the prompt", "caption": "The Tools / MCP button sits right under the system prompt in Form view.", "theme": "light"},
+        {"src": "images/agents/agent-mcp-editor-dark.png", "alt": "Agent editor form view with the Tools / MCP button under the prompt", "caption": "The Tools / MCP button sits right under the system prompt in Form view.", "theme": "dark"}
       ]
     },
     {
-      "id": "test-mcp",
-      "title": "Test the Integration",
-      "content": "<ol><li>Open <strong>Test Agent</strong> and connect.</li><li>Ask something that should trigger the MCP tool (for example <em>\"What's the weather in Paris today?\"</em>).</li><li>Confirm the agent calls the flow and returns the right result. You can review each invocation and its inputs/outputs in the MCP's history in Automation.</li></ol>",
-      "images": []
+      "id": "meet-the-panel",
+      "title": "Meet the Tools & MCP Panel",
+      "content": "<p>The <strong>Tools &amp; MCP</strong> panel is your agent's capability store. It has two halves:</p><ul><li><strong>Left rail</strong> — everything you <em>can</em> attach, in three sections: <strong>Predefined</strong> (built-in actions like End Call and SIP Transfer), <strong>Custom</strong> (your own HTTP/API tools), and <strong>MCP Servers</strong> at the bottom.</li><li><strong>Right panel</strong> — everything <em>already attached</em> to this agent, newest first, each item tagged by type (<strong>PREBUILT</strong>, <strong>CUSTOM</strong>, <strong>MCP</strong>).</li></ul><ol><li>Scroll the left rail all the way down to the <strong>MCP Servers</strong> section.</li></ol><blockquote>💡 Changes you make in this panel save immediately — there's no separate publish step. <strong>Close</strong> just dismisses the panel.</blockquote>",
+      "images": [
+        {"src": "images/agents/agent-mcp-tools-modal-light.png", "alt": "Tools & MCP panel with the rail of available items on the left and attached items on the right", "caption": "Tools & MCP — available items on the left, attached items on the right.", "theme": "light"},
+        {"src": "images/agents/agent-mcp-tools-modal-dark.png", "alt": "Tools & MCP panel with the rail of available items on the left and attached items on the right", "caption": "Tools & MCP — available items on the left, attached items on the right.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "attach-saved-server",
+      "title": "Attach One of Your MCP Servers",
+      "content": "<p>Every MCP server you've registered in <strong>Automation → MCP</strong> shows up in the <strong>MCP Servers</strong> section automatically.</p><ol><li>Click a server in the list (the <strong>+</strong> on the right confirms it's attachable). It attaches instantly and its tag flips to <strong>Attached</strong>.</li><li>You can attach <strong>multiple</strong> MCP servers to the same agent — each becomes its own card in the right panel.</li></ol><p>Seeing <em>\"No built-in MCP servers configured\"</em> like in the screenshot? You haven't registered any servers yet. Click <strong>Set one up</strong> (it takes you to Automation), or continue with a custom URL in the next step. Registering your own server is covered in <a data-href=\"/automations/mcp-servers\">MCP Servers</a>.</p>",
+      "images": [
+        {"src": "images/agents/agent-mcp-rail-light.png", "alt": "MCP Servers section at the bottom of the rail with the Add custom MCP server button", "caption": "The MCP Servers section — registered servers list here; below it, Add custom MCP server.", "theme": "light"},
+        {"src": "images/agents/agent-mcp-rail-dark.png", "alt": "MCP Servers section at the bottom of the rail with the Add custom MCP server button", "caption": "The MCP Servers section — registered servers list here; below it, Add custom MCP server.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "add-custom-server",
+      "title": "Add a Custom MCP Server (Any URL)",
+      "content": "<p>Your agent isn't limited to servers built in iMash — it can connect to <em>any</em> MCP server on the internet.</p><ol><li>In the <strong>MCP Servers</strong> section, click <strong>Add custom MCP server</strong>.</li><li>Fill in the dialog:<ul><li><strong>Name</strong> — a label you'll recognize later (e.g. \"Weather MCP\").</li><li><strong>Server URL</strong> — the server's endpoint. URLs ending in <code>/sse</code> use SSE transport; <code>/mcp</code> use streamable HTTP — the right transport is auto-detected, so just paste the URL your provider gives you.</li><li><strong>Auth header (optional)</strong> — if the server requires authentication, enter the header name (defaults to <code>Authorization</code>) and its value (e.g. <code>Bearer &lt;token&gt;</code>). The value is masked as you type.</li></ul></li><li>Click <strong>Attach</strong>.</li></ol><blockquote>⚠️ Only attach MCP servers you trust. The agent will happily call any tool the server exposes — a malicious server could feed it bad data or instructions.</blockquote>",
+      "images": [
+        {"src": "images/agents/agent-mcp-custom-modal-light.png", "alt": "Add custom MCP server dialog with Name, Server URL and Auth header fields", "caption": "Add custom MCP server — name, URL, and an optional auth header.", "theme": "light"},
+        {"src": "images/agents/agent-mcp-custom-modal-dark.png", "alt": "Add custom MCP server dialog with Name, Server URL and Auth header fields", "caption": "Add custom MCP server — name, URL, and an optional auth header.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "review-and-detach",
+      "title": "Review the Connection — Tool Discovery Is Automatic",
+      "content": "<p>Every attached server appears as a card in the right panel. This is the magic of MCP: <strong>you never map individual tools</strong>. At the start of each conversation the agent connects to the server, discovers whatever tools and resources it currently exposes, and can call them on demand. Add a new tool on the server side and your agent picks it up on the next call — no edits needed in iMash.</p><ol><li>Click a card's header to expand it. Custom servers show their <strong>URL</strong> and whether an auth header is set; built-in servers show a <strong>Manage MCP servers</strong> link back to Automation.</li><li>To remove a server, click the <strong>trash</strong> icon on its card and confirm with <strong>Detach</strong>. Detaching only unlinks it from this agent — the server itself keeps existing.</li></ol>",
+      "images": [
+        {"src": "images/agents/agent-mcp-attached-card-light.png", "alt": "Attached MCP server card expanded showing the connection summary and server URL", "caption": "An attached custom MCP card — its tools and resources are available during conversations.", "theme": "light"},
+        {"src": "images/agents/agent-mcp-attached-card-dark.png", "alt": "Attached MCP server card expanded showing the connection summary and server URL", "caption": "An attached custom MCP card — its tools and resources are available during conversations.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "node-view-tasks",
+      "title": "Advanced: Give an MCP Server to One Task Only (Node View)",
+      "content": "<p>Attaching from the Tools &amp; MCP panel gives the server to your <em>main</em> agent. If you build multi-step agents with Tasks, you can also scope an MCP server to a single Task so only that part of the conversation can use it.</p><ol><li>At the top of the editor, switch the toggle from <strong>Form</strong> to <strong>Node</strong>.</li><li>On the right-hand rail, click the <strong>Components</strong> (grid) icon and search for <em>MCP</em>. You'll find two draggable nodes under <strong>Tools</strong>:<ul><li><strong>MCP Server</strong> — attach one of your registered servers.</li><li><strong>Custom MCP</strong> — attach an external server by URL.</li></ul></li><li>Drag one onto the canvas, pick the server (or enter the URL) in its side panel, then wire the node into the Task's <strong>Tools</strong> handle.</li></ol><p>New to Tasks? Start with <a data-href=\"/agents/sub-agents\">Sub Agents, Tasks &amp; Handoffs</a>.</p>",
+      "images": [
+        {"src": "images/agents/agent-mcp-node-palette-light.png", "alt": "Node view Components palette filtered to MCP showing MCP Server and Custom MCP nodes", "caption": "In Node view, the Components palette has MCP Server and Custom MCP nodes under Tools.", "theme": "light"},
+        {"src": "images/agents/agent-mcp-node-palette-dark.png", "alt": "Node view Components palette filtered to MCP showing MCP Server and Custom MCP nodes", "caption": "In Node view, the Components palette has MCP Server and Custom MCP nodes under Tools.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "test-the-integration",
+      "title": "Test It Live",
+      "content": "<p>Time for the payoff — watch your agent use tools it was never explicitly taught.</p><ol><li>In the editor's top bar, click <strong>Test Agent</strong>, then <strong>Connect</strong> in the test panel.</li><li>Ask something only the MCP server can answer — for example <em>\"What's the weather in Paris right now?\"</em> if you attached a weather server.</li><li>Confirm the agent calls the tool and answers with real data. For servers built from iMash flows, each invocation (with its inputs and outputs) is also logged in <strong>Automation</strong>, so you can audit exactly what ran.</li></ol><blockquote>💡 If the agent doesn't reach for the tool, mention the capability in its system prompt (e.g. \"You can look up live weather when asked\") — a small hint dramatically improves tool usage.</blockquote>"
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Keep building on your agent's capabilities:",
+    "description": "One connection down, a whole ecosystem to go — keep stacking capabilities onto your agent:",
     "cards": [
-      { "href": "/automations/smart-flows", "title": "Build Advanced Flows", "description": "Add branching logic and multiple inputs to your flows." },
-      { "href": "/agents/agent-tools", "title": "Add More Tools", "description": "Combine predefined and custom tools alongside your MCP." },
-      { "href": "/agents/observer-agent", "title": "Set Up the Observer Agent", "description": "Trigger background MCP tools while a call is in progress." }
+      {
+        "href": "/automations/mcp-servers",
+        "title": "Build Your Own MCP Server",
+        "description": "Turn your automation flows into an MCP server your agents can call."
+      },
+      {
+        "href": "/agents/agent-tools",
+        "title": "Add More Tools",
+        "description": "Combine prebuilt actions and custom HTTP tools alongside your MCP servers."
+      },
+      {
+        "href": "/agents/test-your-agent",
+        "title": "Test Your Agent",
+        "description": "Master the built-in test panel before your agent talks to real customers."
+      },
+      {
+        "href": "/agents/sub-agents",
+        "title": "Sub Agents, Tasks & Handoffs",
+        "description": "Split complex conversations into Tasks — each with its own tools and MCP servers."
+      }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Connect an MCP Server to Your Agent | iMash Docs",
-  "metaDescription": "Bundle iMash automation flows and tools into an MCP server and attach it to a Smart Agent. Build a flow, create the MCP, attach it, and test the integration.",
-  "metaKeywords": "MCP, mcp server, imash, smart agent, automation, flows, tools, model context protocol"
+  "metaTitle": "Connect an MCP Server to Your Agent | iMash Documentation",
+  "metaDescription": "Attach an MCP server to your iMash Smart Agent: pick a registered server or connect any external MCP by URL, let the agent auto-discover its tools, scope servers to Tasks, and test live.",
+  "metaKeywords": "MCP, MCP server, model context protocol, attach MCP, smart agent tools, custom MCP server, tool discovery, iMash agent"
 }

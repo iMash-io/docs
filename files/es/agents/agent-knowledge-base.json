@@ -1,55 +1,115 @@
 {
-  "title": "Agrega una base de conocimiento a tu agente",
-  "lede": "Sube tus preguntas frecuentes, políticas y documentos de soporte para que tu Smart Agent (Agente inteligente) responda preguntas con información precisa y actualizada.",
-  "timeToComplete": "5 minutos",
-  "videoUrl": "https://youtu.be/XvZsh6jPuLg",
-  "videoLength": "2",
+  "title": "Base de Conocimiento (RAG): Enséñele su Negocio a su Agente",
+  "lede": "Suba sus preguntas frecuentes, listas de precios, políticas y manuales una sola vez, y su agente de IA extraerá respuestas precisas de ellos en cada llamada, chat y mensaje. Esta guía lo acompaña desde su primera carga hasta un agente totalmente potenciado por conocimiento.",
+  "timeToComplete": "10 minutos",
   "steps": [
     {
-      "id": "open-kb",
-      "title": "Abre el panel Knowledge Base",
-      "content": "<ol><li>Ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes) y abre tu agente.</li><li>En la columna central, haz clic en el panel <strong>Knowledge Base</strong> (Base de conocimiento).</li></ol>",
+      "id": "open-files",
+      "title": "Abra la Página de Base de Conocimiento",
+      "content": "<p>La Base de Conocimiento es la biblioteca de documentos de su empresa. Cada archivo que suba aquí puede adjuntarse a cualquiera de sus agentes.</p><ol><li>En la navegación superior, haga clic en la sección <strong>Contact Center</strong> (Centro de Contacto).</li><li>En el deslizador de sub-pestañas debajo, haga clic en <strong>Knowledge Base</strong> (Base de Conocimiento). (También puede usar la barra lateral izquierda: bajo <strong>Call Center</strong>, haga clic en <strong>KnowledgeBase</strong>.)</li><li>Llegará a la página <strong>Knowledge Base</strong> con una barra de búsqueda, un panel de <strong>Supported File Types</strong> (Tipos de Archivo Compatibles) y una tabla con todos los archivos subidos.</li></ol><blockquote>💡 La Base de Conocimiento se comparte en toda su cuenta: suba un archivo una vez y adjúntelo a tantos agentes como desee.</blockquote>",
       "images": [
-        { "src": "images/agents/knowledge-base-light.png", "alt": "Panel de base de conocimiento", "caption": "El panel Knowledge Base muestra los archivos adjuntos a tu agente.", "theme": "light" },
-        { "src": "images/agents/knowledge-base-dark.png", "alt": "Panel de base de conocimiento", "caption": "El panel Knowledge Base muestra los archivos adjuntos a tu agente.", "theme": "dark" }
+        {"src": "images/agents/agent-knowledge-base-files-light.png", "alt": "Página de Base de Conocimiento con el botón Add Files, el panel de tipos de archivo compatibles y la tabla de archivos", "caption": "La página Knowledge Base: su biblioteca de documentos para todos los agentes.", "theme": "light"},
+        {"src": "images/agents/agent-knowledge-base-files-dark.png", "alt": "Página de Base de Conocimiento con el botón Add Files, el panel de tipos de archivo compatibles y la tabla de archivos", "caption": "La página Knowledge Base: su biblioteca de documentos para todos los agentes.", "theme": "dark"}
       ]
     },
     {
-      "id": "upload",
-      "title": "Sube tus documentos",
-      "content": "<ol><li>Haz clic para subir un archivo (por ejemplo PDF o TXT).</li><li>Espera mientras iMash lo procesa e incrusta para que el agente pueda buscar en su contenido. Si un archivo ya se había subido, se te avisará.</li><li>El panel Knowledge Base se activa automáticamente en cuanto hay al menos un archivo adjunto.</li></ol>",
+      "id": "supported-types",
+      "title": "Conozca Qué Puede Subir",
+      "content": "<p>iMash acepta mucho más que PDFs. El panel <strong>Supported File Types</strong> (Tipos de Archivo Compatibles) de la página enumera todos los formatos aceptados:</p><ul><li><strong>Documentos</strong> — <code>.pdf</code>, <code>.txt</code>, <code>.docx</code>, <code>.doc</code>, <code>.rtf</code> (hasta 50 MB)</li><li><strong>Hojas de cálculo</strong> — <code>.xlsx</code>, <code>.xls</code>, <code>.csv</code> (hasta 25 MB)</li><li><strong>Presentaciones</strong> — <code>.pptx</code>, <code>.ppt</code> (hasta 100 MB)</li><li><strong>Imágenes</strong> — <code>.jpg</code>, <code>.png</code>, <code>.gif</code>, <code>.webp</code> y más (hasta 20 MB): el texto se extrae automáticamente con OCR, así que incluso la foto de un menú o folleto funciona</li><li><strong>Web y marcado</strong> — <code>.html</code>, <code>.xml</code>, <code>.md</code> (hasta 5 MB)</li><li><strong>Datos</strong> — <code>.json</code>, <code>.jsonl</code> (hasta 10 MB)</li><li><strong>Libros electrónicos</strong> — <code>.epub</code> (hasta 50 MB)</li><li><strong>Código</strong> — <code>.py</code>, <code>.js</code>, <code>.ts</code>, <code>.sql</code>, <code>.yaml</code> y una docena más</li></ul><blockquote>⚠️ Los archivos que superan el límite de tamaño de su categoría se rechazan durante la validación: divida los documentos muy grandes en archivos más pequeños por tema (lo que además mejora la calidad de las respuestas).</blockquote>",
       "images": [
-        { "src": "images/agents/assistant-editor-light.png", "alt": "Editor del agente con base de conocimiento", "caption": "Una base de conocimiento adjunta se vuelve consultable durante las conversaciones.", "theme": "light" },
-        { "src": "images/agents/assistant-editor-dark.png", "alt": "Editor del agente con base de conocimiento", "caption": "Una base de conocimiento adjunta se vuelve consultable durante las conversaciones.", "theme": "dark" }
+        {"src": "images/agents/agent-knowledge-base-types-light.png", "alt": "Panel de tipos de archivo compatibles con documentos, hojas de cálculo, presentaciones, imágenes, web, datos, libros electrónicos y formatos de código", "caption": "Todos los formatos que acepta la Base de Conocimiento, agrupados por categoría.", "theme": "light"},
+        {"src": "images/agents/agent-knowledge-base-types-dark.png", "alt": "Panel de tipos de archivo compatibles con documentos, hojas de cálculo, presentaciones, imágenes, web, datos, libros electrónicos y formatos de código", "caption": "Todos los formatos que acepta la Base de Conocimiento, agrupados por categoría.", "theme": "dark"}
       ]
     },
     {
-      "id": "verify",
-      "title": "Verifica las respuestas",
-      "content": "<ol><li>Abre <strong>Test Agent</strong> (Probar agente) y conéctate.</li><li>Haz preguntas que tu documento responda (por ejemplo el horario de atención o el correo de soporte).</li><li>Confirma que el agente responde usando datos de tu archivo.</li></ol>",
+      "id": "upload-files",
+      "title": "Suba su Primer Archivo",
+      "content": "<ol><li>Haga clic en <strong>Add Files</strong> (Agregar Archivos) en la esquina superior derecha de la página.</li><li>Elija uno o más archivos de su computadora (puede seleccionar varios a la vez).</li><li>iMash valida cada archivo, lo sube y muestra <em>\"Embedding started in background\"</em> (la indexación comenzó en segundo plano): esto significa que la plataforma está leyendo su documento e indexando su contenido para que su agente pueda buscarlo.</li><li>Observe la columna <strong>Status</strong> (Estado) en la fila del archivo:<ul><li><strong>Started</strong> (azul, girando) — el archivo se está procesando. Los archivos pequeños tardan segundos; los grandes, unos minutos.</li><li><strong>Enabled</strong> (verde) — el archivo está totalmente indexado y listo para adjuntarse a agentes.</li><li><strong>Disabled</strong> (gris) — el archivo está almacenado pero no indexado. Haga clic en <strong>Enable</strong> (Habilitar) en la columna Actions para indexarlo.</li></ul></li></ol><blockquote>💡 La página actualiza el estado automáticamente cada pocos segundos mientras se procesa un archivo: no hace falta recargar.</blockquote>",
+      "images": [
+        {"src": "images/agents/agent-knowledge-base-row-light.png", "alt": "Fila de archivo que muestra tamaño, fecha de creación, propietario, estado Enabled en verde y las acciones Preview, Enable/Disable y Delete", "caption": "Un archivo procesado: el estado verde Enabled significa que está listo para sus agentes.", "theme": "light"},
+        {"src": "images/agents/agent-knowledge-base-row-dark.png", "alt": "Fila de archivo que muestra tamaño, fecha de creación, propietario, estado Enabled en verde y las acciones Preview, Enable/Disable y Delete", "caption": "Un archivo procesado: el estado verde Enabled significa que está listo para sus agentes.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "manage-files",
+      "title": "Entienda la Tabla de Archivos",
+      "content": "<p>Cada fila de la tabla le dice todo sobre un archivo de un vistazo:</p><ul><li><strong>File</strong> (Archivo) — nombre e ícono de tipo. Use la barra <strong>Search</strong> (Buscar) sobre la tabla para filtrar por nombre.</li><li><strong>Size</strong> (Tamaño) y <strong>Created</strong> (Creado) — tamaño de carga y fecha.</li><li><strong>Owner</strong> (Propietario) — quién lo subió: <strong>Main Account</strong> (archivo compartido de la cuenta principal), <strong>Sub …</strong> (subido por una subcuenta específica) u <strong>Own</strong> (Propio: su carga personal cuando inicia sesión como subcuenta).</li><li><strong>Status</strong> (Estado) — <strong>Enabled</strong>, <strong>Started</strong> o <strong>Disabled</strong> (vea el paso anterior).</li><li><strong>Assistants</strong> (Asistentes) — etiquetas con el nombre de cada agente que usa este archivo, para que siempre sepa a qué afectará un cambio.</li><li><strong>Actions</strong> (Acciones) — <strong>Preview</strong> (Vista Previa), un ícono de descarga, <strong>Enable</strong>/<strong>Disable</strong> y un ícono rojo de eliminar.</li></ul><blockquote>⚠️ <strong>Disable</strong> (Deshabilitar) elimina el índice de búsqueda del archivo Y lo desvincula de todos los agentes de la columna Assistants (primero se pide confirmación). <strong>Delete</strong> (Eliminar) borra el archivo por completo. Si solo quiere reemplazar un documento por una versión más reciente, elimine el archivo antiguo, suba el nuevo y vuelva a adjuntarlo a sus agentes.</blockquote>",
       "images": []
     },
     {
-      "id": "improve",
-      "title": "Mejora la precisión",
-      "content": "<ul><li>Si el agente no toma la información del archivo, agrega orientación a la indicación; por ejemplo: <em>\"Cuando te hagan una pregunta, responde con las preguntas frecuentes de tu base de conocimiento.\"</em></li><li>Usa documentos claros y bien estructurados, y mantenlos actualizados.</li><li>Divide los temas extensos en archivos separados para que la recuperación se mantenga enfocada.</li></ul>",
+      "id": "preview-files",
+      "title": "Previsualice y Descargue Archivos",
+      "content": "<p>¿No está seguro de qué contiene un archivo que subió hace meses? Revíselo sin salir de la página:</p><ol><li>Haga clic en <strong>Preview</strong> (Vista Previa) en la columna Actions del archivo.</li><li>Se abre un panel <strong>File Preview</strong> (Vista Previa del Archivo) que muestra el contenido del documento, su tipo, tamaño y propietario.</li><li>Desde aquí puede hacer clic en <strong>Download</strong> (Descargar) para guardar una copia, <strong>Copy Link</strong> (Copiar Enlace) para copiar un enlace firmado temporal al archivo, o <strong>Delete</strong> (Eliminar) para quitarlo.</li><li>Cierre el panel con la <strong>X</strong> en la esquina superior izquierda.</li></ol>",
+      "images": [
+        {"src": "images/agents/agent-knowledge-base-preview-light.png", "alt": "Panel File Preview mostrando el contenido de un archivo de texto de preguntas frecuentes con los botones Download, Copy Link y Delete", "caption": "El panel File Preview: lea, descargue o comparta cualquier archivo en el momento.", "theme": "light"},
+        {"src": "images/agents/agent-knowledge-base-preview-dark.png", "alt": "Panel File Preview mostrando el contenido de un archivo de texto de preguntas frecuentes con los botones Download, Copy Link y Delete", "caption": "El panel File Preview: lea, descargue o comparta cualquier archivo en el momento.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "open-agent-editor",
+      "title": "Abra el Panel de Base de Conocimiento de su Agente",
+      "content": "<p>Los archivos no sirven de nada hasta que un agente pueda usarlos. Es hora de conectar ambos:</p><ol><li>En la navegación superior, haga clic en <strong>Automation</strong> (Automatización) y luego en la sub-pestaña <strong>Smart Agents</strong> (Agentes Inteligentes) (o haga clic en <strong>Smart Agents</strong> en la barra lateral izquierda, bajo Intelligence Center).</li><li>Haga clic en el nombre de su agente para abrir el editor de agentes.</li><li>En la columna central, busque <strong>Knowledge Base</strong>: es el primer panel, con un interruptor <strong>ON/OFF</strong> a la derecha que indica si hay archivos adjuntos.</li></ol><blockquote>💡 ¿Trabaja en la vista de editor <strong>Node</strong> (Nodos)? La Base de Conocimiento también está ahí, como un panel con un botón <strong>Open knowledge base</strong> (Abrir base de conocimiento): el selector de archivos que se abre es idéntico.</blockquote>",
+      "images": [
+        {"src": "images/agents/agent-knowledge-base-editor-light.png", "alt": "Editor de agentes en vista de formulario con el panel Knowledge Base en la parte superior de la columna central", "caption": "El editor de agentes: Knowledge Base está en la parte superior de la columna central.", "theme": "light"},
+        {"src": "images/agents/agent-knowledge-base-editor-dark.png", "alt": "Editor de agentes en vista de formulario con el panel Knowledge Base en la parte superior de la columna central", "caption": "El editor de agentes: Knowledge Base está en la parte superior de la columna central.", "theme": "dark"},
+        {"src": "images/agents/agent-knowledge-base-panel-light.png", "alt": "Encabezado del panel Knowledge Base con su interruptor OFF", "caption": "Haga clic en este encabezado para elegir qué archivos puede buscar el agente.", "theme": "light"},
+        {"src": "images/agents/agent-knowledge-base-panel-dark.png", "alt": "Encabezado del panel Knowledge Base con su interruptor OFF", "caption": "Haga clic en este encabezado para elegir qué archivos puede buscar el agente.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "select-files",
+      "title": "Adjunte Archivos al Agente",
+      "content": "<ol><li>Haga clic en el encabezado del panel <strong>Knowledge Base</strong>. Se abre la ventana <strong>Select Knowledge Base Files</strong> (Seleccionar Archivos de la Base de Conocimiento) con la misma tabla de archivos que vio en la página Knowledge Base.</li><li>Marque la casilla junto a cada archivo que este agente deba conocer. Solo se pueden seleccionar archivos con estado <strong>Enabled</strong>: una casilla gris significa que el archivo aún debe habilitarse (pase el cursor para ver la pista <em>\"Enable this file first\"</em>, habilite este archivo primero).</li><li>Haga clic en <strong>Save Selection</strong> (Guardar Selección). El interruptor del panel cambia a <strong>ON</strong> y el encabezado muestra cuántos archivos hay adjuntos, p. ej. <em>(2 selected)</em>.</li><li>Para desvincular archivos más tarde, vuelva a abrir el selector y desmárquelos, o ponga el interruptor del panel en <strong>OFF</strong> para borrar toda la selección de una vez.</li></ol><blockquote>💡 Cada agente tiene su propia selección. Dele a su agente de ventas la lista de precios y a su agente de soporte el manual de solución de problemas, desde la misma biblioteca compartida.</blockquote>",
+      "images": [
+        {"src": "images/agents/agent-knowledge-base-picker-light.png", "alt": "Ventana Select Knowledge Base Files con un archivo marcado y el botón Save Selection", "caption": "Marque los archivos que su agente debe conocer y haga clic en Save Selection.", "theme": "light"},
+        {"src": "images/agents/agent-knowledge-base-picker-dark.png", "alt": "Ventana Select Knowledge Base Files con un archivo marcado y el botón Save Selection", "caption": "Marque los archivos que su agente debe conocer y haga clic en Save Selection.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "how-it-works",
+      "title": "Cómo lo Usa el Agente Durante la Llamada",
+      "content": "<p>Aquí es donde ocurre la magia. Los archivos adjuntos alimentan la <strong>Generación Aumentada por Recuperación (RAG)</strong>:</p><ul><li>Cuando una persona pregunta algo — \"¿Cuál es su horario?\", \"¿Atienden en mi código postal?\" — el agente busca al instante en sus archivos adjuntos los pasajes más relevantes.</li><li>Integra lo que encuentra en una respuesta hablada natural, en tiempo real, sin que quien llama note ninguna búsqueda.</li><li>Solo se usan los fragmentos relevantes, por lo que el agente se mantiene rápido y preciso incluso con documentos grandes adjuntos.</li></ul><p>Esto también mantiene su prompt de sistema ligero: en lugar de pegar todas sus preguntas frecuentes en el prompt, manténgalo corto (el editor recomienda no superar ~3,000 tokens) y deje que la Base de Conocimiento cargue con el material de referencia.</p>",
+      "images": []
+    },
+    {
+      "id": "verify-test",
+      "title": "Compruebe que Funciona",
+      "content": "<ol><li>En el editor de agentes, haga clic en <strong>Test Agent</strong> (Probar Agente, arriba a la derecha) o en <strong>Connect</strong> (Conectar) en el panel de chat de la derecha.</li><li>Haga preguntas que su documento responde: horarios, precios, condiciones de garantía, zona de servicio.</li><li>Confirme que el agente responde con los datos de su archivo y no con suposiciones genéricas.</li><li>Si no consulta el archivo, agregue una indicación al prompt, por ejemplo: <em>\"Cuando te hagan una pregunta, responde usando las preguntas frecuentes de tu base de conocimiento.\"</em></li></ol>",
+      "images": []
+    },
+    {
+      "id": "best-practices",
+      "title": "Escriba Documentos que su Agente Adorará",
+      "content": "<p>Los buenos documentos fuente marcan la diferencia entre un buen agente y uno excelente:</p><ul><li><strong>El formato de pregunta y respuesta gana.</strong> Un archivo de preguntas frecuentes (\"P: … R: …\") coincide perfectamente con cómo pregunta la gente en realidad.</li><li><strong>Un tema por archivo.</strong> Divida \"Todo.pdf\" en \"Precios\", \"Zonas de Servicio\" y \"Garantía\": la búsqueda se mantiene enfocada y las respuestas son más precisas.</li><li><strong>Sea explícito y autocontenido.</strong> Escriba \"La visita de diagnóstico cuesta $89\" en lugar de \"ver tabla anterior\": el agente recupera pasajes, no páginas completas.</li><li><strong>Manténgalo actualizado.</strong> Cuando cambien los precios o los horarios, elimine el archivo desactualizado, suba la nueva versión y vuelva a adjuntarla: un agente que cita los precios del año pasado es peor que uno que dice \"déjeme verificar\".</li><li><strong>Pode sin piedad.</strong> Elimine la palabrería de marketing y las notas internas; cada párrafo irrelevante compite con los datos que usted quiere que se recuperen.</li></ul><p>Eso es todo: su agente ahora responde con <em>su</em> conocimiento, en todos los canales, a toda hora. 🎉</p>",
       "images": []
     }
   ],
   "nextSteps": {
-    "title": "¿Qué sigue?",
-    "description": "Completa las capacidades de tu agente:",
+    "title": "¿Qué Sigue?",
+    "description": "Su agente conoce su negocio; ahora dele más superpoderes:",
     "cards": [
-      { "href": "/agents/agent-tools", "title": "Agrega herramientas", "description": "Permite que el agente realice acciones como reservas y transferencias." },
-      { "href": "/agents/costum-variables", "title": "Usa variables personalizadas", "description": "Personaliza las respuestas con datos del CRM y variables de API." },
-      { "href": "/agents/test-agent", "title": "Prueba tu agente", "description": "Confirma que las respuestas provienen de los documentos que subiste." }
+      {
+        "href": "/agents/test-your-agent",
+        "title": "Pruebe su Agente",
+        "description": "Realice una llamada web en vivo y confirme que las respuestas provienen de sus documentos."
+      },
+      {
+        "href": "/agents/agent-tools",
+        "title": "Agregue Herramientas",
+        "description": "Permita que el agente realice acciones como agendar citas y transferir llamadas."
+      },
+      {
+        "href": "/agents/costum-variables",
+        "title": "Use Variables Personalizadas",
+        "description": "Personalice las respuestas con datos del CRM y variables de API."
+      }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+    "title": "¿Necesita Ayuda?",
+    "content": "<p>Si tiene algún problema o pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Agrega una base de conocimiento a tu agente | Documentación de iMash",
-  "metaDescription": "Sube preguntas frecuentes y documentos de soporte a tu iMash Smart Agent para que responda con información precisa. Aprende a subir, verificar y mejorar la precisión de la base de conocimiento.",
-  "metaKeywords": "base de conocimiento, imash, agente inteligente, preguntas frecuentes, subida de documentos, rag, recuperación, respuestas de ia"
+  "metaTitle": "Base de Conocimiento (RAG) — Enséñele su Negocio a su Agente | iMash Documentation",
+  "metaDescription": "Suba preguntas frecuentes, listas de precios y manuales a la Base de Conocimiento de iMash y adjúntelos a sus agentes de IA. Conozca los tipos de archivo compatibles, los estados de indexación, el selector de archivos y las mejores prácticas para respuestas RAG precisas.",
+  "metaKeywords": "base de conocimiento, rag, generación aumentada por recuperación, imash, agente inteligente, subir archivos, preguntas frecuentes, indexación de documentos, respuestas de ia, tipos de archivo"
 }

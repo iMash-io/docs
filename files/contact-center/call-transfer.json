@@ -1,47 +1,102 @@
 {
   "title": "Call Transfer Settings",
-  "lede": "Call Transfer is a tenant-wide setting that lets operators move a live web-dialer call to a teammate or an outbound number. It is off by default. This guide covers enabling it and choosing who can transfer.",
-  "timeToComplete": "4 minutes",
+  "lede": "No caller should ever hit a dead end. iMash lets your AI agent hand a live call to your human team, lets teammates pass calls to each other (or conference everyone together), and can park callers in a skill-based queue with hold music. This guide walks you through enabling transfers, every transfer type, and exactly what each party hears along the way.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
       "id": "open-call-transfer",
       "title": "Open the Call Transfer tab",
-      "content": "<ol><li>Go to <strong>Call Center &rarr; Contact Center</strong>.</li><li>Click the <strong>Call Transfer</strong> tab (available to the main account or a Contact Center admin).</li></ol>",
+      "content": "<p>Call transfer is a tenant-wide switch — one setting that unlocks transfers for your whole team. Let's find it:</p><ol><li>In the left sidebar under <strong>Call Center</strong>, click <strong>Contact Center</strong>.</li><li>At the top of the page, click the <strong>Call Transfer</strong> tab (next to <strong>Live Monitor</strong>, <strong>Reporting</strong>, and <strong>Groups</strong>).</li></ol><blockquote>💡 This tab is visible to the <strong>main account</strong> and to any sub-account with the <strong>Contact Center admin</strong> role. Everyone else sees a \"Not available\" notice asking them to contact the account owner.</blockquote>",
       "images": [
-        { "src": "images/contact-center/cc-call-transfer-light.png", "alt": "Call Transfer settings", "caption": "Call Transfer: enable transfers and choose who can use them.", "theme": "light" },
-        { "src": "images/contact-center/cc-call-transfer-dark.png", "alt": "Call Transfer settings", "caption": "Call Transfer: enable transfers and choose who can use them.", "theme": "dark" }
+        { "src": "images/contact-center/cc-call-transfer-light.png", "alt": "The Call Transfer tab inside Contact Center", "caption": "Contact Center → Call Transfer — transfers are off by default until you flip the switch.", "theme": "light" },
+        { "src": "images/contact-center/cc-call-transfer-dark.png", "alt": "The Call Transfer tab inside Contact Center", "caption": "Contact Center → Call Transfer — transfers are off by default until you flip the switch.", "theme": "dark" }
       ]
     },
     {
       "id": "enable-transfer",
-      "title": "Allow operators to transfer live calls",
-      "content": "<p>Turn on <strong>Allow operators to transfer live calls</strong>. This lets users move a call from the web dialer to a teammate or an outbound number (including in the Human Dialer). It is off by default.</p>"
+      "title": "Turn on \"Allow operators to transfer live calls\"",
+      "content": "<p>Flip the switch at the top of the card:</p><ol><li>Turn on <strong>Allow operators to transfer live calls</strong>.</li><li>Two new sections appear below: <strong>Who can transfer</strong> and <strong>Internal teammate calls</strong> (we'll cover both next).</li></ol><p>With this on, your team can move a live web-dialer call to a teammate, a queue, an outside phone number, or even bring an AI agent into the call — and it works inside the Human Dialer too. It also unlocks the <strong>Teammate</strong> button on the web dialer for direct teammate-to-teammate calls.</p><blockquote>⚠️ The setting is <strong>off by default</strong>. Nothing here takes effect until you click <strong>Save</strong> in the top-right corner of the card.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/call-transfer-enabled-light.png", "alt": "Call Transfer card with the master switch enabled", "caption": "Enabling the switch reveals the scope and internal-call options.", "theme": "light" },
+        { "src": "images/contact-center/call-transfer-enabled-dark.png", "alt": "Call Transfer card with the master switch enabled", "caption": "Enabling the switch reveals the scope and internal-call options.", "theme": "dark" }
+      ]
     },
     {
       "id": "who-can-transfer",
       "title": "Choose who can transfer",
-      "content": "<p>Under <strong>Who can transfer</strong>, pick one:</p><ul><li><strong>All sub-accounts.</strong></li><li><strong>Only specific sub-accounts</strong> — then select the users allowed to transfer.</li></ul>"
+      "content": "<p>Under <strong>Who can transfer</strong>, pick the scope:</p><ul><li><strong>All sub-accounts</strong> — every user on your account can transfer live calls.</li><li><strong>Only specific sub-accounts</strong> — a picker appears; select exactly which users get the transfer controls. Everyone else keeps a normal dialer with no transfer buttons.</li></ul><ol><li>Select a scope.</li><li>If you chose <strong>Only specific sub-accounts</strong>, click <strong>Select sub-accounts allowed to transfer</strong> and pick your users.</li></ol>",
+      "images": [
+        { "src": "images/contact-center/call-transfer-specific-light.png", "alt": "Who can transfer set to only specific sub-accounts", "caption": "Limit transfers to a hand-picked list of users.", "theme": "light" },
+        { "src": "images/contact-center/call-transfer-specific-dark.png", "alt": "Who can transfer set to only specific sub-accounts", "caption": "Limit transfers to a hand-picked list of users.", "theme": "dark" }
+      ]
     },
     {
       "id": "internal-recording",
-      "title": "Optionally record internal calls",
-      "content": "<p>Teammate-to-teammate calls (\"Call a teammate\") are always logged with their outcome. In the <strong>Internal teammate calls</strong> box you can also switch on <strong>Record internal calls</strong> and <strong>Transcribe internal calls (multi-party)</strong> to capture them with a recorder agent that joins when the teammate answers. Click <strong>Save</strong>.</p>"
+      "title": "Optionally record internal teammate calls, then Save",
+      "content": "<p>The <strong>Internal teammate calls</strong> box controls what happens on teammate-to-teammate calls (the \"Call a teammate\" feature). These calls are <em>always</em> logged with their outcome — answered, missed, or declined — no matter what you choose here. The switches add richer capture:</p><ul><li><strong>Record internal calls</strong> — a recorder joins the moment the teammate answers and saves an audio recording to your call logs.</li><li><strong>Transcribe internal calls (multi-party)</strong> — the same recorder also produces a speaker-labeled transcript of the conversation.</li></ul><ol><li>Turn on either (or both) switches if you want internal calls captured.</li><li>Click <strong>Save</strong> in the top-right corner of the card. You'll see a \"Call transfer settings saved\" confirmation.</li></ol>",
+      "images": [
+        { "src": "images/contact-center/call-transfer-internal-light.png", "alt": "Internal teammate calls recording and transcription switches", "caption": "Internal calls are always logged; recording and transcription are opt-in.", "theme": "light" },
+        { "src": "images/contact-center/call-transfer-internal-dark.png", "alt": "Internal teammate calls recording and transcription switches", "caption": "Internal calls are always logged; recording and transcription are opt-in.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "dialer-button",
+      "title": "Where transfers live: the web dialer",
+      "content": "<p>Once saved, every allowed user gets new controls in their web dialer (the phone panel your team uses — see the <a data-href=\"/contact-center/agent-guide\">Human Agent Guide</a> for a full tour):</p><ul><li><strong>Teammate</strong> button (idle dialer) — start a direct internal call to a colleague.</li><li><strong>Conference/Transfer</strong> button (during a live call) — move or share the call: hand it to a teammate, park it in a queue, send it to an outside number, or add an AI agent.</li></ul><blockquote>💡 If a user doesn't see the <strong>Teammate</strong> button, check that transfers are enabled and that the user is included in the <strong>Who can transfer</strong> scope.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/call-transfer-dialer-button-light.png", "alt": "Web dialer keypad with the Teammate button", "caption": "The Teammate button appears on the dialer once transfers are enabled.", "theme": "light" },
+        { "src": "images/contact-center/call-transfer-dialer-button-dark.png", "alt": "Web dialer keypad with the Teammate button", "caption": "The Teammate button appears on the dialer once transfers are enabled.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "teammate-call",
+      "title": "Call a teammate directly (internal calls)",
+      "content": "<p>With no customer on the line, the <strong>Teammate</strong> button simply starts an internal call:</p><ol><li>In the web dialer, click <strong>Teammate</strong>.</li><li>In the <strong>Call a teammate</strong> window, pick a colleague from <strong>Select a teammate</strong>. Only teammates who currently have the web dialer open are listed.</li><li>Click <strong>Call teammate</strong> — their web dialer rings just like a regular incoming call.</li></ol><p>These calls appear in your call logs as internal calls, and are recorded/transcribed if you enabled that in the previous step.</p>",
+      "images": [
+        { "src": "images/contact-center/call-transfer-teammate-modal-light.png", "alt": "Call a teammate window with the teammate picker", "caption": "Pick any online teammate — their dialer rings instantly.", "theme": "light" },
+        { "src": "images/contact-center/call-transfer-teammate-modal-dark.png", "alt": "Call a teammate window with the teammate picker", "caption": "Pick any online teammate — their dialer rings instantly.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "live-transfer-options",
+      "title": "Transfer a live call: teammate, number, or conference",
+      "content": "<p>During a live call, the same button opens the <strong>Conference / Transfer</strong> window with four tabs. Here's what each one does:</p><ul><li><strong>A teammate</strong> — pick an online colleague. Filter the list by permission group (tags at the top) or by skill (<strong>Filter by skill…</strong>) — typing a name, skill, or group in the search box all work. Skills are set per member in <strong>User Management → Groups → ⚙️</strong>.</li><li><strong>A number</strong> — dial any outside phone number into the call. Choose your outgoing caller ID under <strong>Call from</strong>, then type the number.</li><li><strong>AI Agent</strong> — add one of your AI agents to the call as an extra participant. Everyone stays on, and you can hang up whenever you like to leave the AI with the caller.</li><li><strong>A queue</strong> — park the caller in a group's queue (next step).</li></ul><p><strong>Warm vs. blind — the key choice.</strong> For teammate and number transfers, a switch labeled <strong>Hand off &amp; drop when they join (blind transfer)</strong> decides your fate:</p><ul><li><strong>Off (conference, default)</strong> — the button reads <strong>Add to call</strong>. You stay on the line, everyone hears everyone, and you can keep adding parties. Perfect for warm introductions.</li><li><strong>On (blind transfer)</strong> — the button reads <strong>Transfer &amp; leave</strong>. The moment the new party joins, you drop off automatically — a clean one-way handoff.</li></ul><p>While a party is being added, a live status line shows <strong>Dialing…</strong>, <strong>Ringing…</strong>, then <strong>Joined</strong> (or <strong>No answer</strong> / <strong>Failed</strong>), so you're never guessing. The customer stays on the call and hears you throughout a warm add.</p><blockquote>💡 Transfers also work on calls handled through the <a data-href=\"/campaigns/human-dialer\">Human Dialer</a> — the same window, the same tabs.</blockquote>"
+    },
+    {
+      "id": "queue-transfers",
+      "title": "Park a caller in a queue",
+      "content": "<p>The <strong>A queue</strong> tab is your escape valve when the right person isn't free yet. It parks the customer in a permission group's queue: they hear the group's hold music while the system rings the group's online agents until one answers — even if nobody is online at that moment.</p><ol><li>In the <strong>Conference / Transfer</strong> window, click <strong>A queue</strong>.</li><li>Pick a group under <strong>Select a queue (group)</strong>.</li><li>Optionally narrow it with the skill filter — only members holding <em>all</em> selected skills will be rung.</li><li>Decide with <strong>Leave the call after placing in queue</strong>: on, you drop off immediately (<strong>Queue &amp; leave</strong>) and the system holds the customer; off, you stay on the line while the queue rings (<strong>Place in queue</strong>) and can hang up whenever.</li></ol><p>Maximum wait time, hold music, periodic \"thanks for waiting\" messages, and what happens on timeout (hang up or hand the caller to an AI agent) all come from the group's queue settings — see <a data-href=\"/contact-center/queue-settings\">Queue Settings</a> and <a data-href=\"/contact-center/wait-hold\">Wait &amp; Hold Audio</a>.</p>"
+    },
+    {
+      "id": "ai-transfer-tool",
+      "title": "Let your AI agent transfer callers to humans",
+      "content": "<p>This is where the magic happens: your AI answers 24/7, and the moment a caller asks for a human, it hands them to your team. That's the <strong>Internal Transfer</strong> tool:</p><ol><li>Go to <strong>Smart Agents</strong>, open your agent, and click the <strong>Tools / MCP</strong> row.</li><li>Click <strong>Add Tool</strong> and choose <strong>Internal Transfer</strong>.</li><li>Configure the tool:</li></ol><ul><li><strong>Description</strong> — tells the AI <em>when</em> to transfer (e.g. \"when the caller asks for a human or you can't help\"). Edit it to match your policy.</li><li><strong>Transfer mode</strong> — <strong>Ring the group (wait for an answer)</strong>: the AI rings the group and, if nobody picks up, seamlessly resumes the conversation. <strong>Send to queue &amp; leave</strong>: the caller is parked in the group's queue (hold music + ringing) and the AI leaves without waiting.</li><li><strong>Permission Group</strong> — the team to ring. Everyone in the group who is <strong>Online</strong> in the web dialer rings at once; the first to answer takes the call.</li><li><strong>Skills (optional)</strong> — only ring members who have <em>all</em> the selected skills.</li><li><strong>No-Answer Timeout (seconds)</strong> — how long to ring before the AI gives up and resumes (ring mode only; 5–600, default 25).</li><li><strong>What the caller hears while waiting</strong> — <strong>Ringtone</strong> (standard ringback), <strong>Hold music</strong> (this tool's override, the group's, or a built-in default), or <strong>No sound</strong>.</li><li><strong>Override group settings (optional)</strong> — upload custom hold music, set a periodic spoken message (\"Thanks for waiting — an agent will be with you shortly.\") and its interval, just for this tool.</li><li><strong>Agent Speaks While Connecting (hold message)</strong> — have the AI say a line like \"One moment while I connect you to our team…\" as it starts ringing.</li></ul><blockquote>💡 Need the AI to send callers to an <em>outside</em> phone number instead (an answering service, a manager's cell)? Add the <strong>SIP Transfer</strong> tool the same way — see <a data-href=\"/agents/agent-tools\">Agent Tools</a>.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/call-transfer-ai-tool-light.png", "alt": "Internal Transfer tool configuration form", "caption": "The Internal Transfer tool — pick a group, a mode, and what the caller hears.", "theme": "light" },
+        { "src": "images/contact-center/call-transfer-ai-tool-dark.png", "alt": "Internal Transfer tool configuration form", "caption": "The Internal Transfer tool — pick a group, a mode, and what the caller hears.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "what-each-party-hears",
+      "title": "What each party hears (quick reference)",
+      "content": "<p>A transfer feels professional when nobody hears dead air. Here's the sound map:</p><ul><li><strong>AI → human (ring mode):</strong> the caller hears your chosen wait audio (ringtone, hold music, or silence) — plus the AI's hold message if enabled. The agents' web dialers ring; the first to answer is bridged in. If nobody answers before the timeout, the AI smoothly picks the conversation back up.</li><li><strong>AI → queue / agent → queue:</strong> the caller hears the group's hold music with your periodic message on a loop, while online agents' dialers ring until someone answers. On timeout the group's queue settings decide: hang up or hand to an AI agent.</li><li><strong>Warm add (conference):</strong> the caller keeps hearing you while the new party's leg dials and rings — once they join, everyone is on the same line.</li><li><strong>Blind transfer:</strong> the caller is speaking with you until the new party joins; you drop off silently at that instant.</li><li><strong>Internal teammate call:</strong> the teammate's web dialer rings like any incoming call; no customer is involved.</li></ul><p>That's it — your callers can now always reach a human, and your team can pass calls around like a seasoned call center. 🎉</p>"
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Round out your Contact Center setup.",
+    "description": "Transfers shine brightest with well-built teams and queues behind them — set those up next.",
     "cards": [
-      { "href": "/contact-center/overview", "title": "Contact Center Overview", "description": "The Live Monitor and supervisor controls." },
-      { "href": "/contact-center/groups", "title": "Permission Groups", "description": "Create teams and route calls to them." },
-      { "href": "/contact-center/agent-guide", "title": "The Agent Experience", "description": "How agents transfer and handle calls." }
+      { "href": "/contact-center/groups", "title": "Permission Groups", "description": "Create the teams your transfers and queues ring." },
+      { "href": "/contact-center/queue-settings", "title": "Queue Settings", "description": "Max wait, timeout actions, and queue behavior per group." },
+      { "href": "/contact-center/wait-hold", "title": "Wait & Hold Audio", "description": "Hold music, ring audio, and periodic messages." },
+      { "href": "/contact-center/agent-guide", "title": "The Agent Experience", "description": "How your human agents answer, hold, and transfer day to day." }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Call Transfer Settings | iMash Docs",
-  "metaDescription": "Enable tenant-wide call transfer in the iMash Contact Center: let operators transfer live calls to teammates or outbound numbers, scope who can, and record internal calls.",
-  "metaKeywords": "call transfer, operator transfer, teammate, outbound, internal call recording, contact center, web dialer"
+  "metaTitle": "Call Transfer Settings | iMash Documentation",
+  "metaDescription": "Enable call transfers in iMash: AI-to-human handoffs with the Internal Transfer tool, teammate and conference transfers from the web dialer, queue parking with hold music, and internal call recording.",
+  "metaKeywords": "call transfer, AI to human transfer, transfer to group, conference call, blind transfer, warm transfer, queue transfer, hold music, internal calls, contact center, web dialer"
 }

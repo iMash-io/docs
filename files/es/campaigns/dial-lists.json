@@ -1,52 +1,103 @@
 {
-  "title": "Administra la lista de marcación de una campaña",
-  "lede": "La lista de marcación es la cola de prospectos y contactos que una campaña va a llamar. Aprende a agregar personas, revisar su estado de intentos y depurar la lista.",
-  "timeToComplete": "6 minutos",
+  "title": "Cree y gestione la lista de marcación de una campaña",
+  "lede": "La lista de marcación es la cola de llamadas de su campaña: exactamente a quién llamará su agente de IA, en qué orden y cuántas veces. Aprenda a cargar la audiencia correcta, leer cada columna, controlar los reintentos y mantener la lista limpia desde la primera llamada hasta el final de la campaña.",
+  "timeToComplete": "8 minutos",
   "steps": [
     {
       "id": "open-campaign",
-      "title": "Abre la campaña",
-      "content": "<ol><li>Ve a <strong>Campaigns</strong> (Campañas) en el menú de la izquierda.</li><li>Haz clic en el nombre de una campaña para abrirla.</li><li>Dentro, usa las pestañas de la parte superior: <strong>Overview</strong> (Resumen), <strong>Settings</strong> (Configuración), <strong>Dial List</strong> (Lista de marcación), <strong>Add Leads</strong> (Agregar prospectos), <strong>Add Contacts</strong> (Agregar contactos) y <strong>Stages</strong> (Etapas).</li></ol>",
+      "title": "Abra su campaña",
+      "content": "<p>Cada campaña tiene su propia lista de marcación, así que la primera parada es la campaña misma.</p><ol><li>En la navegación superior, haga clic en <strong>Campaigns</strong> (Campañas). Se abre la sub-pestaña <strong>Smart Dialer</strong> (Marcador Inteligente) con su lista de campañas de IA.</li><li>Localice su campaña en la tabla: la columna <strong>Contacts</strong> (Contactos) ya le indica cuántas personas están en cola, y <strong>Progress</strong> (Progreso) muestra cuánto se ha avanzado.</li><li>Haga clic en el <strong>nombre</strong> de la campaña para abrirla.</li></ol><blockquote>💡 ¿Aún no tiene una campaña? Cree una primero — consulte <em>Crear una campaña</em> en la sección Próximos pasos. Puede construir la lista de marcación antes o después de configurar el agente y los números de teléfono.</blockquote>",
       "images": [
-        { "src": "images/campaigns/campaign-detail-light.png", "alt": "Pestañas del detalle de la campaña", "caption": "Las pestañas dentro de una campaña, incluidas Dial List, Add Leads y Add Contacts", "theme": "light" },
-        { "src": "images/campaigns/campaign-detail-dark.png", "alt": "Pestañas del detalle de la campaña", "caption": "Las pestañas dentro de una campaña, incluidas Dial List, Add Leads y Add Contacts", "theme": "dark" }
+        { "src": "images/campaigns/dial-lists-campaigns-light.png", "alt": "Lista de campañas con la pestaña Smart Dialer activa", "caption": "Campaigns → Smart Dialer: la columna Contacts muestra a cuántas personas llamará cada campaña", "theme": "light" },
+        { "src": "images/campaigns/dial-lists-campaigns-dark.png", "alt": "Lista de campañas con la pestaña Smart Dialer activa", "caption": "Campaigns → Smart Dialer: la columna Contacts muestra a cuántas personas llamará cada campaña", "theme": "dark" }
       ]
     },
     {
-      "id": "add-people",
-      "title": "Agrega prospectos y contactos",
-      "content": "<ol><li>Abre la pestaña <strong>Add Leads</strong> (Agregar prospectos) o <strong>Add Contacts</strong> (Agregar contactos).</li><li>Busca en tu CRM por nombre, teléfono u otros campos.</li><li>Selecciona las personas que quieres y agrégalas &mdash; se añaden a la cola de la lista de marcación de esta campaña.</li></ol><p>Consejo: mantén ordenadas tus listas del CRM para que sea fácil traer la audiencia correcta. Los nuevos prospectos están en CRM &rarr; Leads.</p>"
+      "id": "know-your-tabs",
+      "title": "Oriéntese entre las pestañas de la campaña",
+      "content": "<p>Dentro de una campaña, todo lo relacionado con la lista de marcación vive en cuatro de las pestañas superiores:</p><ul><li><strong>Dial List</strong> (Lista de Marcación) — la cola en sí: quién espera, a quién ya se llamó y el estado de cada persona.</li><li><strong>Add Leads</strong> (Agregar Leads) — traiga leads de su CRM a la cola.</li><li><strong>Add Contacts</strong> (Agregar Contactos) — lo mismo, pero para contactos del CRM.</li><li><strong>Overview</strong> (Resumen) — cifras de progreso en vivo de toda la lista.</li></ul><p>Las demás pestañas — <strong>Settings</strong> (Configuración: reglas de reintento, horario laboral, ritmo), <strong>Campaign Logs</strong> (Registros de la Campaña: cada llamada realizada) y <strong>Stages</strong> (Etapas: etapas de ciclo de vida personalizadas para esta campaña) — determinan <em>cómo</em> se marca la lista.</p>",
+      "images": [
+        { "src": "images/campaigns/dial-lists-tabs-light.png", "alt": "Barra de pestañas de la campaña con Overview, Settings, Dial List, Add Leads, Add Contacts, Campaign Logs y Stages", "caption": "Las pestañas de la campaña — Dial List, Add Leads y Add Contacts son donde se construye la cola", "theme": "light" },
+        { "src": "images/campaigns/dial-lists-tabs-dark.png", "alt": "Barra de pestañas de la campaña con Overview, Settings, Dial List, Add Leads, Add Contacts, Campaign Logs y Stages", "caption": "Las pestañas de la campaña — Dial List, Add Leads y Add Contacts son donde se construye la cola", "theme": "dark" }
+      ]
     },
     {
-      "id": "review",
-      "title": "Revisa la lista de marcación",
-      "content": "<p>Abre la pestaña <strong>Dial List</strong> (Lista de marcación) para ver a todos los que están en cola. En cada fila puedes ver:</p><ul><li>El contacto o prospecto y su número de teléfono.</li><li>Los intentos realizados y los intentos restantes.</li><li>La etapa actual del ciclo de vida o el último resultado.</li></ul><p>Usa la búsqueda y los filtros para acotar la lista por etapa o estado.</p>"
+      "id": "add-leads-contacts",
+      "title": "Agregue leads y contactos a la cola",
+      "content": "<p>Su lista de marcación se construye con los leads y contactos que ya están en su CRM — sin volver a escribir nada, sin copiar y pegar. Y todo lo que hay en cada ficha viaja con ella: nombre, teléfono, etapa y cualquier variable personalizada, para que su agente de IA personalice cada llamada automáticamente.</p><ol><li>Abra la pestaña <strong>Add Leads</strong> (Agregar Leads) — o <strong>Add Contacts</strong> (Agregar Contactos); funcionan de forma idéntica.</li><li>La tabla muestra cada registro del CRM que <em>aún no</em> está en esta campaña, con su <strong>Name</strong> (Nombre), <strong>Phone</strong> (Teléfono) y <strong>Stage</strong> (Etapa). Haga clic en <strong>View</strong> (Ver) en cualquier fila para revisar el registro completo antes de decidir.</li><li>Marque la casilla junto a cada persona que quiera y haga clic en <strong>Add Selected Leads</strong> (Agregar Leads Seleccionados) — el botón muestra el conteo en vivo de su selección.</li><li>¿Quiere agregar una página entera? Marque la casilla del encabezado: aparece un aviso que le permite <strong>Select all</strong> (Seleccionar todos) los registros coincidentes de todas las páginas con un clic.</li><li>Haga clic en <strong>Refresh</strong> (Actualizar) en cualquier momento para recargar los datos más recientes del CRM.</li></ol><blockquote>💡 ¿Parte de una hoja de cálculo? Importe primero su CSV al CRM (CRM → Leads o Contactos) y luego vuelva aquí para agregarlos — consulte <em>Importar y exportar datos</em> más abajo. Una vez importados, aparecen en esta pestaña al instante.</blockquote>",
+      "images": [
+        { "src": "images/campaigns/dial-lists-add-leads-light.png", "alt": "Pestaña Add Leads mostrando leads del CRM disponibles con casillas y el botón Add Selected Leads", "caption": "La pestaña Add Leads — seleccione personas de su CRM y póngalas en cola con un clic", "theme": "light" },
+        { "src": "images/campaigns/dial-lists-add-leads-dark.png", "alt": "Pestaña Add Leads mostrando leads del CRM disponibles con casillas y el botón Add Selected Leads", "caption": "La pestaña Add Leads — seleccione personas de su CRM y póngalas en cola con un clic", "theme": "dark" }
+      ]
     },
     {
-      "id": "cleanup",
-      "title": "Elimina o depura entradas",
-      "content": "<ul><li>Selecciona filas y usa la acción masiva <strong>Delete</strong> (Eliminar) para quitar a personas que ya no quieres llamar.</li><li>La pestaña <strong>Overview</strong> (Resumen) muestra el progreso en vivo: contactos, intentos realizados, intentos restantes y conteos finalizados.</li></ul><p>Los números en tu lista Do Not Call (No llamar) se omiten automáticamente &mdash; nunca tienes que quitarlos a mano.</p>"
+      "id": "filter-your-audience",
+      "title": "Apunte a la audiencia exacta con filtros",
+      "content": "<p>Llamar a las personas <em>correctas</em> vale más que llamar a <em>más</em> personas. El botón <strong>Filters</strong> (Filtros) en la pestaña Add Leads / Add Contacts le permite segmentar su CRM antes de agregar a nadie:</p><ol><li>Haga clic en <strong>Filters</strong> (Filtros) en la parte superior izquierda de la pestaña.</li><li>Use el cuadro de búsqueda de arriba — cambie el selector de campo entre <strong>Name</strong> (Nombre), <strong>Phone</strong> (Teléfono) y <strong>Email</strong> (Correo).</li><li>Marque cualquier combinación de tipos de filtro y elija valores para cada uno:</li></ol><ul><li><strong>Lifecycle Stage</strong> (Etapa de ciclo de vida) — p. ej., solo registros \"New\" o solo \"Interested\".</li><li><strong>Source</strong> (Origen) — de dónde llegó el lead (Website, Referral, Social Media…).</li><li><strong>Account</strong> (Cuenta) — contactos que pertenecen a una cuenta de empresa específica.</li><li><strong>City</strong> (Ciudad), <strong>State/Province</strong> (Estado/Provincia), <strong>Country</strong> (País), <strong>Zip/Postal Code</strong> (Código Postal) — segmentación geográfica.</li><li><strong>Tags</strong> (Etiquetas) — cualquier etiqueta aplicada en el CRM.</li></ul><p>Los filtros activos aparecen como chips que puede quitar junto al botón. Combine filtros y luego <strong>Select all</strong> (Seleccionar todos): así pone en cola a \"todos los leads New de Texas etiquetados spring-promo\" en tres clics.</p>",
+      "images": [
+        { "src": "images/campaigns/dial-lists-add-filters-light.png", "alt": "Menú de filtros con campo de búsqueda y opciones de etapa, origen, cuenta, ciudad, etiquetas, estado, país y código postal", "caption": "El menú Filters — combine filtros de etapa, origen, geografía y etiquetas para afinar su audiencia", "theme": "light" },
+        { "src": "images/campaigns/dial-lists-add-filters-dark.png", "alt": "Menú de filtros con campo de búsqueda y opciones de etapa, origen, cuenta, ciudad, etiquetas, estado, país y código postal", "caption": "El menú Filters — combine filtros de etapa, origen, geografía y etiquetas para afinar su audiencia", "theme": "dark" }
+      ]
     },
     {
-      "id": "completed",
-      "title": "Qué pasa cuando termina",
-      "content": "<p>Cuando se hayan intentado por completo todos los contactos, la campaña pasa a <strong>Completed</strong> (Completada) y su lista de marcación se convierte en un archivo de solo lectura (verás un banner de \"Archive view\", vista de archivo). Las campañas completadas no se pueden editar &mdash; para volver a llamar a la misma audiencia, crea una campaña nueva y agrégalos a su lista de marcación.</p>"
+      "id": "review-the-dial-list",
+      "title": "Lea la Dial List — cada columna explicada",
+      "content": "<p>Abra la pestaña <strong>Dial List</strong> (Lista de Marcación) para ver su cola. Cada fila es un número de teléfono que la campaña llamará:</p><ul><li><strong>Entity Name</strong> (Nombre de la Entidad) — el lead o contacto. Haga clic en el nombre para abrir su ficha completa del CRM en un panel lateral sin salir de la página.</li><li><strong>Status</strong> (Estado) — en qué punto está la entrada: <em>Pending</em> (pendiente de marcar), <em>Completed</em> (todos los intentos usados) o una finalización por etapa alcanzada mostrada en verde.</li><li><strong>Global Stage</strong> (Etapa Global) — la etapa general del ciclo de vida de la persona en su CRM (New, Contacted, Interested…).</li><li><strong>Attempts</strong> (Intentos) — llamadas realizadas frente a las permitidas; p. ej., <em>0/3</em> significa que quedan tres intentos.</li><li><strong>Target Phone</strong> (Teléfono Objetivo) — el número exacto que se marcará.</li><li><strong>Call Stage</strong> (Etapa de Llamada) — la etapa registrada en la llamada más reciente a ese número, para ver el último resultado de un vistazo.</li><li><strong>Scheduled At</strong> (Programado Para) — cuándo toca el próximo intento (en la zona horaria de la campaña).</li></ul><p>Los botones del encabezado también importan: <strong>Start</strong> (Iniciar) lanza la campaña, <strong>Export CSV</strong> / <strong>Export PDF</strong> descargan los registros de llamadas de la campaña y <strong>Refresh</strong> (Actualizar) recarga la tabla.</p>",
+      "images": [
+        { "src": "images/campaigns/dial-lists-table-light.png", "alt": "Pestaña Dial List mostrando entradas en cola con columnas de estado, etapa, intentos, teléfono y programación", "caption": "La Dial List: cada persona en cola con su estado, intentos usados y próxima llamada programada", "theme": "light" },
+        { "src": "images/campaigns/dial-lists-table-dark.png", "alt": "Pestaña Dial List mostrando entradas en cola con columnas de estado, etapa, intentos, teléfono y programación", "caption": "La Dial List: cada persona en cola con su estado, intentos usados y próxima llamada programada", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "search-and-filter",
+      "title": "Busque y filtre la cola",
+      "content": "<p>En una lista con miles de entradas, la barra de herramientas le mantiene orientado:</p><ol><li>Use los botones de vista rápida de arriba: <strong>Show All</strong> (Mostrar Todos), <strong>Show Pending</strong> (Mostrar Pendientes — aún no marcados por completo) o <strong>Show Completed</strong> (Mostrar Completados — intentos agotados o etapa alcanzada).</li><li>Escriba en <strong>Search by name or phone number…</strong> (Buscar por nombre o número de teléfono) para saltar directamente a una persona.</li><li>Use <strong>Filter by lifecycle stages…</strong> (Filtrar por etapas de ciclo de vida) para mostrar solo entradas en etapas concretas — puede elegir varias a la vez; cada una aparece como un chip de color.</li><li>Haga clic en <strong>Clear Filters</strong> (Limpiar Filtros) para restablecer la vista.</li></ol>",
+      "images": [
+        { "src": "images/campaigns/dial-lists-toolbar-light.png", "alt": "Barra de herramientas de Dial List Entries con botones Show All, Show Pending, Show Completed, Delete Selected y Refresh", "caption": "La barra de la Dial List — alterne entre las vistas All, Pending y Completed", "theme": "light" },
+        { "src": "images/campaigns/dial-lists-toolbar-dark.png", "alt": "Barra de herramientas de Dial List Entries con botones Show All, Show Pending, Show Completed, Delete Selected y Refresh", "caption": "La barra de la Dial List — alterne entre las vistas All, Pending y Completed", "theme": "dark" },
+        { "src": "images/campaigns/dial-lists-filters-light.png", "alt": "Cuadro de búsqueda y filtro de etapas de ciclo de vida sobre la tabla de la lista de marcación", "caption": "Busque por nombre o teléfono, o acote la lista a etapas de ciclo de vida específicas", "theme": "light" },
+        { "src": "images/campaigns/dial-lists-filters-dark.png", "alt": "Cuadro de búsqueda y filtro de etapas de ciclo de vida sobre la tabla de la lista de marcación", "caption": "Busque por nombre o teléfono, o acote la lista a etapas de ciclo de vida específicas", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "control-retries",
+      "title": "Controle los reintentos — cuántas veces se llama a cada número",
+      "content": "<p>Las llamadas sin respuesta ocurren. La campaña las vuelve a poner en cola automáticamente para que los buenos prospectos no se pierdan — y usted decide exactamente cuán persistente ser, en la pestaña <strong>Settings</strong> (Configuración), sección <strong>Retry Settings</strong> (Configuración de Reintentos):</p><ul><li><strong>Max Dials Per Phone Number</strong> (Máximo de Llamadas por Número) — cuántos intentos totales recibe cada número (0–5). Es la segunda mitad de la columna <em>Attempts</em>: con un valor de 3, diez personas significan hasta 30 intentos totales.</li><li><strong>Retry Delay (minutes)</strong> (Retraso entre Reintentos, en minutos) — cuánto esperar antes de volver a llamar al mismo número.</li><li><strong>All Numbers for Lead/Contact Stop After</strong> (Detener Todos los Números del Lead/Contacto Tras) — elija etapas que detienen <em>todos</em> los números de esa persona. Si la IA marca a alguien como \"Qualified\" en su móvil, tampoco se marcará su línea de oficina.</li><li><strong>Individual Number Stop Retrying</strong> (Detener Reintentos del Número Individual) — elija etapas que detienen los reintentos solo para <em>ese número</em>, mientras los demás números de la misma persona continúan.</li></ul><blockquote>⚠️ Los reintentos solo se disparan dentro del <strong>Working Hours</strong> (Horario Laboral) de la campaña (también en la pestaña Settings), y los números de su lista de No Llamar se omiten automáticamente — nunca tendrá que depurarlos a mano.</blockquote>",
+      "images": [
+        { "src": "images/campaigns/dial-lists-retry-light.png", "alt": "Tarjeta Retry Settings con Max Dials Per Phone Number, Retry Delay y reglas de parada por etapa", "caption": "Retry Settings: intentos por número, retraso entre intentos y etapas que detienen los reintentos", "theme": "light" },
+        { "src": "images/campaigns/dial-lists-retry-dark.png", "alt": "Tarjeta Retry Settings con Max Dials Per Phone Number, Retry Delay y reglas de parada por etapa", "caption": "Retry Settings: intentos por número, retraso entre intentos y etapas que detienen los reintentos", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "track-progress",
+      "title": "Siga el progreso en la pestaña Overview",
+      "content": "<p>Con la campaña en marcha, la pestaña <strong>Overview</strong> (Resumen) convierte su lista de marcación en un marcador en vivo:</p><ul><li><strong>Contacts</strong> (Contactos) — personas únicas en la cola.</li><li><strong>Attempts Made</strong> (Intentos Realizados) — llamadas hechas frente al total posible (contactos × máximo de llamadas).</li><li><strong>Attempts Left</strong> (Intentos Restantes) — cuánto margen queda.</li><li><strong>Finished</strong> (Finalizados) — entradas completamente marcadas, incluyendo cuántas terminaron <em>antes de tiempo</em> por alcanzar una etapa de parada.</li><li><strong>Progress</strong> (Progreso) — porcentaje completado, con barra de progreso.</li><li><strong>Live Calls</strong> (Llamadas en Vivo) — llamadas en curso en este momento.</li></ul><p>Debajo de los indicadores, <strong>Next Scheduled Calls</strong> (Próximas Llamadas Programadas) muestra exactamente quién sigue y cuándo — haga clic en cualquier nombre para abrir su ficha.</p>",
+      "images": [
+        { "src": "images/campaigns/dial-lists-overview-light.png", "alt": "Estadísticas de Current Dial List: Contacts, Attempts Made, Attempts Left, Finished, Progress y Live Calls", "caption": "El marcador del Overview — 10 contactos × 3 llamadas máximas = 30 intentos posibles", "theme": "light" },
+        { "src": "images/campaigns/dial-lists-overview-dark.png", "alt": "Estadísticas de Current Dial List: Contacts, Attempts Made, Attempts Left, Finished, Progress y Live Calls", "caption": "El marcador del Overview — 10 contactos × 3 llamadas máximas = 30 intentos posibles", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "clean-up-and-archive",
+      "title": "Depure entradas — y qué ocurre cuando termina",
+      "content": "<p>Mantenga la cola ágil mientras la campaña está activa:</p><ol><li>En la pestaña <strong>Dial List</strong>, marque las entradas a las que ya no quiera llamar.</li><li>Haga clic en <strong>Delete Selected</strong> (Eliminar Seleccionados). Al seleccionar todas las filas de una página se le ofrece un <strong>Select all entries</strong> (Seleccionar todas las entradas) de todas las páginas para limpiar en masa.</li></ol><p>Cuando todas las entradas se han intentado por completo, la campaña pasa a <strong>Completed</strong> (Completada) y la lista de marcación se convierte en un archivo de solo lectura — verá un banner de <strong>Archive view</strong> (Vista de archivo), las casillas quedan deshabilitadas y no se pueden agregar personas nuevas. Las campañas que quedan pausadas o en borrador por mucho tiempo se archivan automáticamente de la misma forma (antes recibirá una advertencia en pantalla, con botones <strong>Resume</strong> (Reanudar) y <strong>Pin</strong> (Fijar) para mantenerlas activas).</p><blockquote>💡 ¿Quiere volver a llamar a la misma audiencia? Abra la pestaña <strong>Add Leads</strong> o <strong>Add Contacts</strong> de una campaña completada y haga clic en <strong>Clone Campaign</strong> (Clonar Campaña): obtendrá una copia nueva lista para otra ejecución, mientras el original archivado queda intacto como su registro permanente. Su lista, sus reglas, cero llamadas desperdiciadas: así se ejecutan las campañas ganadoras.</blockquote>"
     }
   ],
   "nextSteps": {
     "title": "¿Qué sigue?",
-    "description": "Conecta el resto de tu campaña y mantén un ojo en los resultados.",
+    "description": "Su cola está cargada — ahora perfeccione la campaña a su alrededor y vea llegar los resultados.",
     "cards": [
-      { "href": "/campaigns/create-campaign", "title": "Crea una campaña", "description": "Adjunta un agente de IA, números de teléfono y el ritmo de marcación." },
-      { "href": "/crm/leads", "title": "Administra prospectos", "description": "Arma y organiza la audiencia que vas a llamar." },
-      { "href": "/campaigns/campaign-analytics", "title": "Analítica de campañas", "description": "Consulta la tasa de conexión, el progreso y el costo." }
+      { "href": "/campaigns/create-campaign", "title": "Crear una campaña", "description": "Asigne un agente de IA, números de teléfono, horario laboral y ritmo de marcación." },
+      { "href": "/crm/import-export-data", "title": "Importar y exportar datos", "description": "Traiga un CSV de leads o contactos y luego póngalos en cola aquí." },
+      { "href": "/campaigns/do-not-call-list", "title": "Lista de No Llamar", "description": "Los números de la lista DNC se omiten automáticamente — gestiónela aquí." },
+      { "href": "/campaigns/campaign-analytics", "title": "Informes y estadísticas de campañas", "description": "Tasas de conexión, resultados y costo de cada campaña." }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+    "title": "¿Necesita ayuda?",
+    "content": "<p>Si tiene algún problema o pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Administra la lista de marcación de una campaña | Documentación de iMash",
-  "metaDescription": "Cómo armar y administrar la lista de marcación de una campaña en iMash: agrega prospectos y contactos, revisa intentos y etapas, depura entradas y entiende el archivado.",
-  "metaKeywords": "lista de marcación, contactos de campaña, agregar prospectos, agregar contactos, cola de llamadas, audiencia de campaña, campañas imash"
+  "metaTitle": "Cree y gestione la lista de marcación de una campaña | Documentación de iMash",
+  "metaDescription": "Cómo crear y gestionar la lista de marcación de una campaña en iMash: agregue leads y contactos desde su CRM, segmente con filtros, lea cada columna, controle los reintentos, siga el progreso y entienda el archivo de campañas completadas.",
+  "metaKeywords": "lista de marcación, contactos de campaña, agregar leads, agregar contactos, cola de llamadas, audiencia de campaña, reintentos, llamadas máximas, etapas de ciclo de vida, campañas imash"
 }

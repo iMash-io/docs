@@ -1,55 +1,198 @@
 {
-  "title": "Personaliza los agentes con variables personalizadas",
-  "lede": "Alimenta a tu Smart Agent (Agente inteligente) con contexto en vivo: el nombre, la dirección y cualquier campo personalizado de quien llama, para que salude a las personas por su nombre y adapte cada conversación.",
-  "timeToComplete": "6 minutos",
-  "videoUrl": "https://youtu.be/mR9rNHDWJJ8",
-  "videoLength": "2",
+  "title": "Personalice sus Agentes con Variables Personalizadas y Plantillas",
+  "lede": "Convierta un guion genérico en una conversación personal. Proporcione a su Smart Agent contexto en vivo — el nombre del cliente, su dirección, el código de la puerta, lo que sea — para que salude a cada cliente como si ya lo conociera, y guarde plantillas de prompts reutilizables para no tener que reconstruir un agente desde cero.",
+  "timeToComplete": "8 minutos",
   "steps": [
     {
-      "id": "insert-variable",
-      "title": "Inserta variables en el prompt",
-      "content": "<ol><li>Ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes) y abre tu agente.</li><li>Haz clic en un campo de texto como el system prompt (prompt del sistema) o el primer mensaje.</li><li>Escribe una llave de apertura <code>{</code> para abrir el menú de variables. Las variables integradas incluyen <code>{first_name}</code>, <code>{last_name}</code>, <code>{email}</code> y <code>{full_address}</code>.</li><li>Elige una para insertarla en el cursor; al momento de la llamada se reemplaza por el valor real.</li></ol>",
+      "id": "open-agent",
+      "title": "Abra el Agente que Desea Personalizar",
+      "content": "<p>Las variables y plantillas viven dentro del editor de cada agente, así que empiece abriendo uno:</p><ol><li>En la barra lateral izquierda, haga clic en <strong>Intelligence Center → Smart Agents</strong> (Centro de Inteligencia → Agentes Inteligentes).</li><li>Haga clic en el <strong>nombre</strong> del agente que desea personalizar. Se abre el editor del agente con el saludo y el prompt del sistema en la columna izquierda.</li></ol><blockquote>💡 ¿Aún no tiene un agente? Créelo primero con la guía <em>Cree su Primer Agente</em>. Todo lo que se explica en esta guía funciona igual en cualquier agente que construya.</blockquote>",
       "images": [
-        { "src": "images/agents/templates-variables-light.png", "alt": "Plantillas y variables", "caption": "Escribe { en un campo de prompt para insertar variables del CRM.", "theme": "light" },
-        { "src": "images/agents/templates-variables-dark.png", "alt": "Plantillas y variables", "caption": "Escribe { en un campo de prompt para insertar variables del CRM.", "theme": "dark" }
+        {
+          "src": "images/agents/costum-variables-open-agent-light.png",
+          "alt": "Lista de Smart Agents dentro de Intelligence Center",
+          "caption": "Intelligence Center → Smart Agents — haga clic en el nombre de un agente para abrir su editor.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/costum-variables-open-agent-dark.png",
+          "alt": "Lista de Smart Agents dentro de Intelligence Center",
+          "caption": "Intelligence Center → Smart Agents — haga clic en el nombre de un agente para abrir su editor.",
+          "theme": "dark"
+        }
       ]
     },
     {
-      "id": "templates",
-      "title": "Administra plantillas y variables",
-      "content": "<ol><li>Abre el panel <strong>Templates &amp; Variables</strong> (Plantillas y variables) en el editor.</li><li>Aquí puedes guardar plantillas de prompt reutilizables y administrar las variables que tu agente conoce.</li></ol>",
+      "id": "insert-variables",
+      "title": "Inserte una Variable en el Prompt o en el Saludo",
+      "content": "<p>Cualquier texto que su agente pronuncie o siga puede contener <strong>variables entre llaves</strong> — marcadores que se sustituyen por los datos reales del cliente en el momento en que comienza la llamada.</p><ol><li>Haga clic dentro del <strong>prompt del sistema</strong> (el cuadro de texto grande) o del campo del <strong>primer mensaje</strong> en la parte superior.</li><li>Escriba una llave de apertura <code>{</code> — aparece al instante un menú de variables. También puede hacer clic en el botón <strong>{...}</strong> en la esquina superior derecha del campo.</li><li>Elija una variable para insertarla donde está el cursor. Las variables principales del CRM son:<ul><li><code>{first_name}</code> — el nombre de pila del cliente</li><li><code>{last_name}</code> — el apellido del cliente</li><li><code>{email}</code> — el correo electrónico del cliente</li><li><code>{full_address}</code> — la dirección completa registrada</li></ul></li></ol><p>Ejemplo de saludo: <em>\"¡Hola {first_name}! Gracias por llamar — ¿sigue en {full_address}?\"</em> En una llamada real se convierte en <em>\"¡Hola Sarah! Gracias por llamar — ¿sigue en 12 Ocean Drive, Miami…\"</em></p><blockquote>💡 Las variables funcionan en el saludo, el prompt del sistema, los prompts de sub-agentes y tareas, e incluso en los prompts de los canales SMS / WhatsApp / Email — en cualquier lugar donde aparezca el botón <strong>{...}</strong>.</blockquote>",
       "images": [
-        { "src": "images/agents/assistant-editor-light.png", "alt": "Editor de agentes", "caption": "Templates & Variables se encuentra en la columna central del editor.", "theme": "light" },
-        { "src": "images/agents/assistant-editor-dark.png", "alt": "Editor de agentes", "caption": "Templates & Variables se encuentra en la columna central del editor.", "theme": "dark" }
+        {
+          "src": "images/agents/costum-variables-editor-light.png",
+          "alt": "Editor del agente con el campo del primer mensaje y el prompt del sistema",
+          "caption": "El editor del agente — el campo del primer mensaje arriba y el prompt del sistema debajo; ambos aceptan variables.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/costum-variables-editor-dark.png",
+          "alt": "Editor del agente con el campo del primer mensaje y el prompt del sistema",
+          "caption": "El editor del agente — el campo del primer mensaje arriba y el prompt del sistema debajo; ambos aceptan variables.",
+          "theme": "dark"
+        },
+        {
+          "src": "images/agents/costum-variables-menu-light.png",
+          "alt": "Menú de autocompletado de variables abierto sobre el prompt del sistema",
+          "caption": "Escriba { en cualquier campo de prompt (o haga clic en el botón {...}) para abrir el menú de variables.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/costum-variables-menu-dark.png",
+          "alt": "Menú de autocompletado de variables abierto sobre el prompt del sistema",
+          "caption": "Escriba { en cualquier campo de prompt (o haga clic en el botón {...}) para abrir el menú de variables.",
+          "theme": "dark"
+        }
       ]
     },
     {
-      "id": "crm-custom-data",
-      "title": "Agrega datos personalizados a un lead o contacto",
-      "content": "<ol><li>Abre un <strong>Lead</strong> (Prospecto) o <strong>Contact</strong> (Contacto) en el CRM.</li><li>Agrega campos personalizados (un nombre y un valor) a ese registro.</li><li>Esos valores quedan disponibles para el agente como contexto siempre que hable con esa persona.</li></ol>",
+      "id": "all-variables",
+      "title": "Conozca el Catálogo Completo de Variables",
+      "content": "<p>Además de las cuatro del menú, iMash resuelve muchos más marcadores en el momento de la llamada — escríbalos a mano en cualquier parte de un prompt:</p><ul><li><strong>Partes de la dirección</strong>: <code>{street_address}</code>, <code>{apartment_suite}</code>, <code>{city}</code>, <code>{state}</code>, <code>{zipcode}</code>, <code>{country}</code> — cuando necesita solo una parte en lugar de <code>{full_address}</code>.</li><li><strong>Etiquetas</strong>: <code>{tag_1}</code>, <code>{tag_2}</code>, … — las etiquetas del lead o contacto identificado, en orden.</li><li><strong>Campos de Custom Data (Datos Personalizados)</strong>: <code>{custom_vars_&lt;campo&gt;}</code> — cualquier campo que agregue en la pestaña Custom Data de un lead o contacto (siguiente paso). Un campo llamado <code>gate_code</code> se convierte en <code>{custom_vars_gate_code}</code>.</li><li><strong>Variables de sistema de llamada y hora</strong>: <code>{system_from}</code> (número del que llama), <code>{system_to}</code> (número marcado), <code>{system_direction}</code> (entrante/saliente), <code>{system_call_type}</code> (Phone o Web), y <code>{system_time_UTC}</code> o cualquier zona horaria como <code>{system_time_America_New_York}</code> — perfecto para lógica del tipo \"nuestra hora local actual es…\".</li></ul><blockquote>⚠️ Una variable sin valor se elimina silenciosamente del texto en el momento de la llamada. Redacte las frases de modo que sigan sonando naturales si falta el dato — \"¡Hola {first_name}, gracias por llamar!\" se degrada con elegancia; \"Su nombre es {first_name}.\" no.</blockquote>",
       "images": []
     },
     {
-      "id": "api-custom-vars",
-      "title": "Envía variables a través de la API",
-      "content": "<ol><li>Cuando inicies una llamada mediante la API, incluye un objeto <strong>customVars</strong> en los metadatos de la solicitud con tus pares clave/valor.</li><li>Esto es ideal para pasar contexto desde un CRM o una aplicación externa al momento de la llamada.</li><li>El agente recibe esos valores y puede referenciarlos en la conversación.</li></ol>",
+      "id": "crm-custom-data",
+      "title": "Alimente las Variables desde los Datos Personalizados de un Lead o Contacto",
+      "content": "<p>¿De dónde salen los valores? Cuando comienza una llamada, iMash asocia el número de teléfono con su CRM y carga el registro de esa persona — nombre, dirección, etiquetas y todos los campos de su pestaña <strong>Custom Data</strong> (Datos Personalizados). Para agregar sus propios campos:</p><ol><li>En la barra lateral izquierda, haga clic en <strong>CRM → Leads</strong> (o <strong>Contacts</strong>) y abra un registro.</li><li>Haga clic en la pestaña <strong>Custom Data</strong>.</li><li>Haga clic en <strong>+ Add Field</strong> (Agregar Campo), escriba un <strong>Field Name</strong> (Nombre del Campo, p. ej. <code>gate_code</code>) y un <strong>Value</strong> (Valor, p. ej. <code>4482</code>), y luego haga clic en <strong>Save</strong> (Guardar).</li><li>Use <strong>Edit</strong> (Editar) para cambiar un valor o el icono de papelera para eliminar un campo.</li></ol><p>A partir de ahora, cada vez que su agente hable con esta persona, <code>{custom_vars_gate_code}</code> se resuelve como <code>4482</code> — el agente puede indicarle el código de la puerta al técnico, confirmar el técnico preferido o mencionar cualquier otro dato que usted guarde.</p>",
+      "images": [
+        {
+          "src": "images/agents/costum-variables-lead-light.png",
+          "alt": "Detalle del lead con la pestaña Custom Data mostrando campos personalizados",
+          "caption": "La pestaña Custom Data de un lead — cada campo se convierte en una variable {custom_vars_...} para el agente.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/costum-variables-lead-dark.png",
+          "alt": "Detalle del lead con la pestaña Custom Data mostrando campos personalizados",
+          "caption": "La pestaña Custom Data de un lead — cada campo se convierte en una variable {custom_vars_...} para el agente.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "api-campaign-vars",
+      "title": "Envíe Variables desde Campañas o la API",
+      "content": "<p>Los registros del CRM no son la única fuente. Los valores pueden llegar junto con la llamada:</p><ul><li><strong>Campañas y listas de marcado</strong> — cuando una campaña llama a un lead o contacto de su lista, los campos y Custom Data de ese registro se cargan automáticamente, de modo que <code>{first_name}</code> y compañía personalizan cada llamada saliente sin configuración adicional.</li><li><strong>Llamadas por API</strong> — cuando inicia una llamada a través de la API de iMash, incluya un objeto <code>custom_vars</code> con sus propios pares clave/valor en la solicitud. Esos valores anulan o amplían los datos del CRM para esa llamada — ideal para pasar contexto desde un CRM externo, un sistema de reservas o una aplicación.</li></ul><blockquote>💡 Orden de prioridad: los valores enviados por la API prevalecen sobre los del registro del CRM, y ambos se complementan con las variables de sistema integradas. Consulte la <em>Referencia de la API</em> para conocer el formato exacto de la solicitud.</blockquote>",
+      "images": []
+    },
+    {
+      "id": "open-templates-modal",
+      "title": "Abra Templates & Variables",
+      "content": "<p>Ahora la función estrella: <strong>plantillas de prompts</strong> reutilizables con sus propias <strong>variables personalizadas</strong>. En el editor del agente:</p><ol><li>Observe el panel de la derecha — la lista que comienza con <strong>Knowledge Base</strong>.</li><li>Haga clic en el último elemento, <strong>Templates &amp; Variables</strong> (Plantillas y Variables). (En el editor basado en nodos, el mismo elemento aparece como <strong>Templates</strong> en la barra superior de capacidades.)</li><li>Se abre la ventana Templates &amp; Variables con dos secciones en su riel izquierdo: <strong>Variables</strong> y <strong>Templates</strong>.</li></ol><blockquote>💡 La insignia numérica junto al elemento muestra cuántas variables personalizadas tiene ya definidas este agente.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/costum-variables-sidebar-light.png",
+          "alt": "Panel derecho del editor del agente con Templates & Variables al final",
+          "caption": "Templates & Variables es el último elemento del panel derecho del editor del agente.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/costum-variables-sidebar-dark.png",
+          "alt": "Panel derecho del editor del agente con Templates & Variables al final",
+          "caption": "Templates & Variables es el último elemento del panel derecho del editor del agente.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "create-custom-variables",
+      "title": "Cree [[Variables]] Reutilizables",
+      "content": "<p>Estas son <strong>sus propios valores con nombre</strong>, escritos con corchetes dobles — <code>[[nombre_variable]]</code>. Defínalas una sola vez y reutilícelas en todas las plantillas: el nombre de su empresa, el horario de atención, la zona de servicio, la promoción del mes.</p><ol><li>En la sección <strong>Variables</strong>, escriba un <strong>Variable Name</strong> (Nombre de la Variable, p. ej. <code>company_name</code>) y un <strong>Value</strong> (Valor, p. ej. <code>Acme Home Services</code>).</li><li>Haga clic en <strong>Add</strong> (Agregar). La variable aparece en la lista como <code>[[company_name]]</code>.</li><li>Edite un valor en cualquier momento escribiendo directamente en su casilla; elimine una con el icono rojo de papelera.</li><li>Haga clic en <strong>Done</strong> (Listo) cuando termine.</li></ol><blockquote>💡 La diferencia en una línea: los <code>[[corchetes_dobles]]</code> se rellenan <strong>cuando usted carga una plantilla</strong> (cambiar la marca de un prompt en un clic), mientras que las <code>{llaves}</code> se rellenan <strong>en vivo en cada llamada</strong> con los datos del cliente. Use ambos juntos para el máximo provecho.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/costum-variables-modal-light.png",
+          "alt": "Sección Variables de la ventana Templates & Variables",
+          "caption": "Agregue [[variables]] reutilizables — un nombre y un valor — y úselas dentro de cualquier plantilla.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/costum-variables-modal-dark.png",
+          "alt": "Sección Variables de la ventana Templates & Variables",
+          "caption": "Agregue [[variables]] reutilizables — un nombre y un valor — y úselas dentro de cualquier plantilla.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "build-template",
+      "title": "Construya una Plantilla de Prompt",
+      "content": "<p>Una plantilla es un prompt guardado (o un conjunto de prompts) que puede cargar en cualquier agente cuando lo necesite.</p><ol><li>Haga clic en <strong>Templates</strong> en el riel izquierdo de la ventana.</li><li>Haga clic en <strong>+ Create New Template</strong> (Crear Nueva Plantilla).</li><li>Asígnele un <strong>Template Name</strong> claro (Nombre de la Plantilla, p. ej. <em>Standard Greeting</em>).</li><li>Escriba el contenido del prompt en la pestaña <strong>Main Prompt</strong> (Prompt Principal). Combine libremente ambos estilos de variables: <code>[[company_name]]</code> para los valores definidos en la sección Variables, y <code>{first_name}</code> para los datos en vivo del cliente (el botón <strong>{...}</strong> también funciona aquí).</li><li>¿Necesita una plantilla de varias partes? Haga clic en <strong>+ Add Prompt</strong> (Agregar Prompt) para añadir más pestañas de prompts; haga doble clic en el nombre de una pestaña para renombrarla, o pulse la pequeña ✕ para eliminarla.</li><li>Haga clic en <strong>Save Template</strong> (Guardar Plantilla).</li></ol>",
+      "images": [
+        {
+          "src": "images/agents/costum-variables-template-editor-light.png",
+          "alt": "Editor de nueva plantilla con nombre, pestañas de prompts y contenido",
+          "caption": "El editor de plantillas — póngale nombre, escriba el contenido con [[variables]] y {variables}, y luego Save Template.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/costum-variables-template-editor-dark.png",
+          "alt": "Editor de nueva plantilla con nombre, pestañas de prompts y contenido",
+          "caption": "El editor de plantillas — póngale nombre, escriba el contenido con [[variables]] y {variables}, y luego Save Template.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "load-template",
+      "title": "Cargue una Plantilla en su Agente",
+      "content": "<p>Las plantillas guardadas se comparten en toda su cuenta — constrúyalas una vez y úselas en todos los agentes. Cada fila de plantilla ofrece:</p><ul><li><strong>Load</strong> (Cargar) — reemplaza el prompt del sistema del agente con el contenido de la plantilla. Cada <code>[[variable]]</code> se sustituye por su valor actual de la sección Variables en ese momento.</li><li><strong>Interruptor de auto-sincronización</strong> — vincula este agente a la plantilla, manteniéndolo enlazado como la fuente \"activa\" de la plantilla. Desactívelo para desvincular.</li><li><strong>Icono de lápiz</strong> — edita el nombre, los prompts o el contenido de la plantilla.</li><li><strong>Icono de papelera</strong> — elimina la plantilla (se pide confirmación primero).</li></ul><blockquote>⚠️ <strong>Load sobrescribe el prompt del sistema actual del agente.</strong> Si ha ajustado el prompt a mano, cópielo en un lugar seguro (o guárdelo como su propia plantilla) antes de cargar otra.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/costum-variables-templates-light.png",
+          "alt": "Lista de plantillas con las acciones Load, auto-sincronización, editar y eliminar",
+          "caption": "Cada plantilla guardada puede cargarse en el agente, auto-sincronizarse, editarse o eliminarse.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/costum-variables-templates-dark.png",
+          "alt": "Lista de plantillas con las acciones Load, auto-sincronización, editar y eliminar",
+          "caption": "Cada plantilla guardada puede cargarse en el agente, auto-sincronizarse, editarse o eliminarse.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "test-personalization",
+      "title": "Pruebe la Personalización",
+      "content": "<p>Llegó la recompensa — escuche a su agente saludar a alguien por su nombre:</p><ol><li>En el editor del agente, haga clic en <strong>Test Agent</strong> (Probar Agente, arriba a la derecha) o en <strong>Connect</strong> (Conectar) en el panel de chat de la derecha.</li><li>Mejor aún, llame al agente desde un número de teléfono que exista en uno de sus leads o contactos — la coincidencia con el CRM ocurre automáticamente y cada variable se rellena con los datos reales de esa persona.</li><li>Revise después la transcripción en <strong>Call Logs</strong> (Registros de Llamadas) para confirmar que las variables se resolvieron como esperaba.</li></ol><p>Eso es todo — un solo prompt, infinitas conversaciones personales. Su agente ahora suena como si se hubiera preparado para cada llamada, porque así fue.</p>",
       "images": []
     }
   ],
   "nextSteps": {
-    "title": "¿Qué sigue?",
-    "description": "Combina el contexto personalizado con más capacidades:",
+    "title": "¿Qué Sigue?",
+    "description": "Su agente sabe quién llama — ahora ponga ese contexto a trabajar en toda la plataforma:",
     "cards": [
-      { "href": "/agents/agent-knowledge-base", "title": "Agrega una base de conocimiento", "description": "Combina variables dinámicas con tus documentos y preguntas frecuentes." },
-      { "href": "/agents/agent-tools", "title": "Agrega herramientas", "description": "Permite que el agente actúe sobre los datos que recopila." },
-      { "href": "/agents/advanced-settings", "title": "Procesamiento posterior a la llamada", "description": "Captura datos estructurados y envíalos a tus sistemas." }
+      {
+        "href": "/crm/leads",
+        "title": "Gestione sus Leads",
+        "description": "Mantenga actualizados nombres, direcciones y Custom Data — es el combustible de sus variables."
+      },
+      {
+        "href": "/campaigns/create-campaign",
+        "title": "Lance una Campaña",
+        "description": "Llame a una lista completa con cada llamada personalizada automáticamente."
+      },
+      {
+        "href": "/agents/advanced-settings",
+        "title": "Procesamiento Post-Llamada",
+        "description": "Extraiga datos estructurados después de cada llamada y envíelos a sus sistemas."
+      }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+    "title": "¿Necesita Ayuda?",
+    "content": "<p>Si tiene algún problema o pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de la API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Personaliza los agentes con variables personalizadas | iMash Docs",
-  "metaDescription": "Dale a tu Smart Agent de iMash contexto en vivo. Inserta {first_name}, {full_address} y campos personalizados en los prompts, agrega datos personalizados a los registros del CRM y pasa customVars a través de la API.",
-  "metaKeywords": "variables personalizadas, imash, smart agent, personalización, customVars, variables del crm, prompt dinámico, plantillas"
+  "metaTitle": "Personalice sus Agentes con Variables Personalizadas y Plantillas | Documentación de iMash",
+  "metaDescription": "Inserte los marcadores {first_name}, {full_address} y {custom_vars_...} en los prompts de su Smart Agent de iMash, alimente los valores desde Custom Data del CRM, campañas o la API, y cree plantillas de prompts reutilizables con [[variables]].",
+  "metaKeywords": "variables personalizadas, plantillas de prompts, imash, smart agent, personalización, custom_vars, variables crm, prompt dinámico, variables de plantilla, variable first_name"
 }

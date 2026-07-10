@@ -1,0 +1,109 @@
+{
+  "title": "Calendario y Programación",
+  "lede": "Un calendario compartido para todo su negocio: citas, llamadas de seguimiento, visitas a domicilio y eventos, codificados por color según su categoría y vinculados directamente a sus leads y contactos. Sus agentes de IA incluso pueden agendar por usted, 24/7.",
+  "timeToComplete": "10 minutos",
+  "steps": [
+    {
+      "id": "open-calendar",
+      "title": "Abra el Calendario",
+      "content": "<ol><li>En la barra lateral izquierda, abra <strong>CRM</strong> y haga clic en <strong>Calendar</strong> (Calendario), o vaya a <code>/crm/calendar</code>.</li><li>La página tiene tres áreas:</li></ol><ul><li><strong>Columna izquierda</strong> — un botón azul <strong>Create Event</strong> (Crear evento) y una tarjeta <strong>Upcoming Events</strong> (Próximos eventos) con sus siguientes citas.</li><li><strong>Calendario principal</strong> — una cuadrícula mensual completa con cada evento dibujado en su fecha, con el color de su categoría. Haga clic en cualquier evento para abrir sus detalles.</li><li>Tarjeta <strong>Categories</strong> (Categorías), debajo del calendario — casillas para filtrar el calendario por categoría, más un botón <strong>Settings</strong> (Configuración) para administrar sus categorías.</li></ul><blockquote>💡 La pequeña insignia numérica en la pestaña <strong>Calendar</strong> de la barra del CRM muestra el conteo de eventos en vivo: sabrá qué tan ocupada está la agenda antes incluso de abrirla.</blockquote>",
+      "images": [
+        { "src": "images/crm/calendar-light.png", "alt": "La página Calendario del CRM en vista mensual", "caption": "La página Calendario — Create Event y Upcoming Events a la izquierda, la cuadrícula mensual con eventos codificados por color a la derecha", "theme": "light" },
+        { "src": "images/crm/calendar-dark.png", "alt": "La página Calendario del CRM en vista mensual", "caption": "La página Calendario — Create Event y Upcoming Events a la izquierda, la cuadrícula mensual con eventos codificados por color a la derecha", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "views-navigation",
+      "title": "Cambie de vista y navegue en el tiempo",
+      "content": "<p>La barra de herramientas sobre la cuadrícula controla lo que está viendo:</p><ol><li>Use los botones circulares <strong>←</strong> y <strong>→</strong> para saltar al mes anterior o siguiente (o semana/día, según la vista). El título junto a ellos siempre indica el período que está viendo.</li><li>Elija una vista a la derecha:</li></ol><ul><li><strong>Month</strong> (Mes) — la cuadrícula clásica; ideal para planificar con antelación.</li><li><strong>Week</strong> (Semana) — una cuadrícula hora por hora de la semana actual; ideal para detectar huecos libres.</li><li><strong>Day</strong> (Día) — un solo día, hora por hora.</li><li><strong>List</strong> (Lista) — una agenda limpia de los eventos del mes, agrupados por fecha, con horarios, puntos de categoría y participantes. Perfecta para el repaso matutino.</li></ul><ol start=\"3\"><li>Use el desplegable <strong>All Statuses</strong> (Todos los estados) para filtrar eventos por resultado: <strong>No Answer</strong> (Sin respuesta), <strong>Rescheduled</strong> (Reprogramado), <strong>Not Interested</strong> (No interesado), <strong>Interested</strong> (Interesado) o <strong>No Status</strong> (Sin estado). Los eventos coloreados por estado facilitan ver de un vistazo qué citas aún necesitan atención.</li></ol><blockquote>💡 En un teléfono, el calendario cambia automáticamente a la agenda tipo lista para que nada quede fuera de la pantalla.</blockquote>",
+      "images": [
+        { "src": "images/crm/calendar-toolbar-light.png", "alt": "Barra de herramientas del calendario con selector de vista y filtro de estado", "caption": "La barra del calendario — flechas de navegación, título del período, selector Month/Week/Day/List y el filtro de estado", "theme": "light" },
+        { "src": "images/crm/calendar-toolbar-dark.png", "alt": "Barra de herramientas del calendario con selector de vista y filtro de estado", "caption": "La barra del calendario — flechas de navegación, título del período, selector Month/Week/Day/List y el filtro de estado", "theme": "dark" },
+        { "src": "images/crm/calendar-list-view-light.png", "alt": "Vista List del calendario con eventos agrupados por fecha", "caption": "Vista List — el mes como agenda, con horarios, puntos de categoría y participantes", "theme": "light" },
+        { "src": "images/crm/calendar-list-view-dark.png", "alt": "Vista List del calendario con eventos agrupados por fecha", "caption": "Vista List — el mes como agenda, con horarios, puntos de categoría y participantes", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "upcoming-events",
+      "title": "Revise la tarjeta Upcoming Events",
+      "content": "<p>La tarjeta <strong>Upcoming Events</strong> (Próximos eventos) en la columna izquierda es su lista de \"lo que sigue\": siempre muestra los próximos eventos a partir de hoy, del más cercano al más lejano.</p><ul><li>Cada entrada muestra el <strong>título</strong> del evento, la <strong>fecha y hora</strong> (o una etiqueta <strong>All day</strong> — todo el día), la etiqueta de <strong>categoría</strong> en su color y los participantes.</li><li>Haga clic en una entrada para abrir los detalles completos del evento.</li></ul><blockquote>💡 Convierta esta tarjeta en su primer vistazo de cada mañana: si hoy hay una cita con un cliente, aparece aquí sin necesidad de buscar.</blockquote>",
+      "images": [
+        { "src": "images/crm/calendar-upcoming-light.png", "alt": "Tarjeta Upcoming Events", "caption": "Upcoming Events — sus próximas citas con fecha, hora y categoría de un vistazo", "theme": "light" },
+        { "src": "images/crm/calendar-upcoming-dark.png", "alt": "Tarjeta Upcoming Events", "caption": "Upcoming Events — sus próximas citas con fecha, hora y categoría de un vistazo", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "create-event",
+      "title": "Cree un evento",
+      "content": "<ol><li>Haga clic en el botón azul <strong>Create Event</strong> (Crear evento) en la parte superior de la columna izquierda.</li><li>Complete el formulario <strong>Create Event</strong>:</li></ol><ul><li><strong>Title</strong> (Título, obligatorio) — de qué se trata el evento, p. ej. \"Presupuesto de fregadero — Sarah Mitchell\".</li><li><strong>Description</strong> (Descripción, obligatoria) — detalles, notas de dirección, todo lo que deba saber quien asista.</li><li><strong>All Day</strong> (Todo el día) — márquelo para eventos de día completo (ferias, días libres). Los selectores de hora cambian a un rango <strong>Start date / End date</strong> (fecha de inicio/fin), así que un evento de día completo puede abarcar varios días.</li><li><strong>Select date</strong> (Seleccionar fecha) + <strong>Start time / End time</strong> (hora de inicio/fin) — para citas normales con horario. Las horas se ajustan en pasos de 5 minutos.</li><li><strong>Category</strong> (Categoría, obligatoria) — elija una categoría como <em>Appointments</em> o <em>Follow-ups</em>. El evento toma automáticamente el color de la categoría en el calendario.</li><li><strong>Invite participants</strong> (Invitar participantes, obligatorio) — busque y adjunte los leads y contactos relacionados con este evento (el siguiente paso explica por qué es tan útil).</li></ul><ol start=\"3\"><li>Haga clic en <strong>Save</strong> (Guardar). El evento aparece en el calendario al instante, con el color de su categoría.</li></ol><blockquote>💡 Las horas se guardan en la zona horaria de su cuenta (configurada en Settings), de modo que una cita de \"10:00 AM\" sigue siendo a las 10:00 AM para todo el equipo — sin sorpresas de zona horaria.</blockquote>",
+      "images": [
+        { "src": "images/crm/calendar-create-event-light.png", "alt": "Ventana Create Event", "caption": "El formulario Create Event — título, descripción, fecha y hora (o All Day), categoría y participantes", "theme": "light" },
+        { "src": "images/crm/calendar-create-event-dark.png", "alt": "Ventana Create Event", "caption": "El formulario Create Event — título, descripción, fecha y hora (o All Day), categoría y participantes", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "link-participants",
+      "title": "Vincule eventos a leads y contactos",
+      "content": "<p>Esto es lo que convierte al calendario de iMash en un calendario de CRM y no en una simple cuadrícula: cada evento puede vincularse a las personas reales de su pipeline.</p><ul><li>En el campo <strong>Invite participants</strong>, empiece a escribir un nombre — los registros coincidentes aparecen con una etiqueta azul <strong>Contact</strong> (Contacto) o verde <strong>Lead</strong>, para que siempre sepa qué tipo de registro está adjuntando. Desplácese en el desplegable para cargar más.</li><li>Puede adjuntar varios participantes a un mismo evento (p. ej. ambos cónyuges para un presupuesto a domicilio).</li><li>También funciona a la inversa: abra cualquier lead o contacto y cree un evento desde su página — la persona queda adjunta automáticamente, y su perfil muestra sus eventos programados.</li></ul><blockquote>💡 Adjunte siempre el lead o contacto. Cuando llegue el día de la cita, un clic lo lleva del evento directamente a su ficha completa — teléfono, historial, notas — en lugar de buscar por todo el CRM.</blockquote>",
+      "images": []
+    },
+    {
+      "id": "manage-categories",
+      "title": "Organice con categorías codificadas por color",
+      "content": "<p>Las categorías dan a cada tipo de evento su propio color — citas en azul, visitas en morado, seguimientos en verde — de modo que la vista mensual se lee como un mapa de calor de su semana.</p><ol><li>Para filtrar el calendario, marque una o más casillas de categoría en la tarjeta <strong>Categories</strong> debajo de la cuadrícula. Solo permanecen visibles los eventos de las categorías marcadas; desmarque todo para volver a ver todos los eventos.</li><li>Para editar su lista de categorías, haga clic en <strong>Settings</strong> (Configuración) en la esquina de la tarjeta Categories. En la ventana <strong>Manage Categories</strong> (Administrar categorías) puede:</li></ol><ul><li><strong>Renombrar</strong> una categoría — simplemente edite su cuadro de texto.</li><li><strong>Cambiar su color</strong> — haga clic en la muestra de color y elija de la paleta.</li><li><strong>Eliminarla</strong> — haga clic en el icono rojo de papelera.</li><li><strong>Add category</strong> (Agregar categoría) — haga clic en el botón punteado inferior, escriba un nombre y elija un color.</li></ul><ol start=\"3\"><li>Haga clic en <strong>Save</strong> (Guardar) para aplicar los cambios (o <strong>Cancel</strong> para descartarlos).</li></ol><blockquote>⚠️ La categoría es un campo obligatorio al crear un evento, así que configure su lista de categorías antes de que el equipo empiece a agendar. Una lista corta (Citas, Seguimientos, Visitas, Interno) es mejor que veinte categorías que se solapan.</blockquote>",
+      "images": [
+        { "src": "images/crm/calendar-categories-light.png", "alt": "Tarjeta de filtro Categories", "caption": "La tarjeta Categories — marque una categoría para filtrar el calendario; Settings abre el administrador", "theme": "light" },
+        { "src": "images/crm/calendar-categories-dark.png", "alt": "Tarjeta de filtro Categories", "caption": "La tarjeta Categories — marque una categoría para filtrar el calendario; Settings abre el administrador", "theme": "dark" },
+        { "src": "images/crm/calendar-manage-categories-light.png", "alt": "Ventana Manage Categories", "caption": "Manage Categories — renombre, cambie el color, elimine o agregue categorías", "theme": "light" },
+        { "src": "images/crm/calendar-manage-categories-dark.png", "alt": "Ventana Manage Categories", "caption": "Manage Categories — renombre, cambie el color, elimine o agregue categorías", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "event-details",
+      "title": "Abra, edite o elimine un evento",
+      "content": "<ol><li>Haga clic en cualquier evento del calendario (o en Upcoming Events / vista List). El panel <strong>Event Details</strong> (Detalles del evento) se desliza desde la derecha con:</li></ol><ul><li><strong>Description</strong> — las notas completas del evento.</li><li><strong>Time</strong> (Hora) — fecha y hora de inicio–fin, o la fecha con <em>(All Day)</em>.</li><li><strong>Category</strong> — la etiqueta de categoría en su color.</li><li><strong>Participants</strong> — cada lead y contacto adjunto, con su etiqueta <strong>Contact</strong>/<strong>Lead</strong>. Haga clic en el nombre de un participante (o en el icono de ojo) para abrir su ficha completa en un panel lateral — sin salir del calendario.</li><li><strong>Actions</strong> (Acciones) — el botón <strong>Reschedule Event</strong> (Reprogramar evento, siguiente paso).</li></ul><ol start=\"2\"><li>Para cambiar algo, haga clic en el icono de <strong>lápiz (Edit)</strong> en el encabezado del panel — se abre el mismo formulario de Create Event con todo precargado. Haga sus cambios y pulse <strong>Save</strong>.</li><li>Para eliminar el evento, haga clic en el icono rojo de <strong>papelera (Delete)</strong> y confirme con <strong>Yes, Delete</strong> (Sí, eliminar).</li></ol><blockquote>⚠️ Eliminar un evento es permanente — no se puede deshacer. Si la cita solo se movió, use <strong>Reschedule Event</strong> para conservar el historial.</blockquote>",
+      "images": [
+        { "src": "images/crm/calendar-event-drawer-light.png", "alt": "Panel Event Details", "caption": "El panel Event Details — descripción, hora, categoría, participantes clicables y la acción Reschedule", "theme": "light" },
+        { "src": "images/crm/calendar-event-drawer-dark.png", "alt": "Panel Event Details", "caption": "El panel Event Details — descripción, hora, categoría, participantes clicables y la acción Reschedule", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "reschedule-event",
+      "title": "Reprograme una cita de forma inteligente",
+      "content": "<p>¿El cliente no puede asistir? No edite la fecha y pierda el rastro — reprograme.</p><ol><li>En el panel Event Details, haga clic en <strong>Reschedule Event</strong> (Reprogramar evento).</li><li>La ventana <strong>Reschedule Event</strong> muestra el <strong>Original Event</strong> (evento original) y el <strong>Original Time</strong> (horario original) como referencia, y precarga mañana a la misma hora.</li><li>Elija la <strong>New Date</strong> (nueva fecha), <strong>Start Time</strong> y <strong>End Time</strong>, y haga clic en <strong>Reschedule</strong>.</li></ol><p>iMash hace entonces dos cosas automáticamente:</p><ul><li>Crea una copia nueva del evento en el nuevo horario — mismos participantes, titulada \"<em>… (Rescheduled)</em>\" con una nota de la fecha original.</li><li>Marca el evento original con el estado azul <strong>Rescheduled</strong>, de modo que su historial muestra exactamente qué se planificó y qué se movió.</li></ul><blockquote>💡 Combine esto con el filtro <strong>All Statuses</strong> visto antes: filtre por <strong>Rescheduled</strong> al final de la semana para ver cuántas citas se desplazaron — una excelente métrica de alerta temprana para su proceso de ventas.</blockquote>",
+      "images": [
+        { "src": "images/crm/calendar-reschedule-light.png", "alt": "Ventana Reschedule Event", "caption": "Reschedule Event — elija la nueva fecha y hora; iMash copia el evento y marca el original como Rescheduled", "theme": "light" },
+        { "src": "images/crm/calendar-reschedule-dark.png", "alt": "Ventana Reschedule Event", "caption": "Reschedule Event — elija la nueva fecha y hora; iMash copia el evento y marca el original como Rescheduled", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "automate-your-calendar",
+      "title": "Deje que la IA y las automatizaciones llenen su calendario",
+      "content": "<p>Aquí es donde se pone interesante — usted no tiene por qué ser el único que agenda en este calendario:</p><ul><li><strong>Los agentes de IA pueden agendar citas durante las llamadas.</strong> Asigne a su Smart Agent la herramienta predefinida <strong>Calendar</strong> en el editor de agentes y elija en qué <strong>Calendar Categories</strong> (categorías del calendario) puede agendar. A partir de entonces, cuando un cliente diga \"¿puede venir alguien el martes por la tarde?\", el agente programa el evento por sí mismo — título, hora, categoría y todo — mientras sigue en la llamada. Vea <a href=\"/agents/agent-tools\">Herramientas del agente</a>.</li><li><strong>Los formularios de reserva en línea también alimentan el calendario.</strong> Publique una página pública de reservas y cada envío se registra como entrada de calendario junto con el nuevo lead y el trabajo. Vea <a href=\"/crm/booking-forms\">Formularios de reserva</a>.</li><li><strong>Recordatorios automáticos de citas por SMS.</strong> Para trabajos programados, iMash puede enviar un SMS al cliente o al técnico antes de la cita (\"su técnico llega en 60 minutos\") y marcar las citas vencidas después — configure estas reglas de recordatorio en los ajustes de mensajes de Dispatch. Vea <a href=\"/dispatch/overview\">Dispatch</a>.</li></ul><p>Configúrelo una vez, y el calendario se mantiene lleno mientras usted duerme.</p>",
+      "images": []
+    },
+    {
+      "id": "api-access",
+      "title": "Para desarrolladores: acceso a la API del calendario",
+      "content": "<p>¿Está construyendo su propia integración? Los dos botones en la esquina superior derecha de la página Calendario lo tienen cubierto:</p><ul><li><strong>API Info (Events)</strong> — detalles de endpoints y ejemplos listos para copiar para leer y crear eventos de calendario por programación.</li><li><strong>API Info (Participants)</strong> — lo mismo para adjuntar leads y contactos a los eventos.</li></ul><p>Combínelos con su clave de API — vea <a href=\"/get-started/api-keys\">Claves de API</a> — y podrá sincronizar el calendario de iMash con lo que quiera.</p>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Su calendario ya está en marcha — ahora conéctelo al resto de su motor de crecimiento para que las citas se agenden solas.",
+    "cards": [
+      { "href": "/crm/booking-forms", "title": "Formularios de reserva", "description": "Publique una página pública de reservas que coloca las citas directamente en su calendario." },
+      { "href": "/agents/agent-tools", "title": "Herramientas del agente", "description": "Dé a su agente de IA la herramienta Calendar para que agende citas durante llamadas en vivo." },
+      { "href": "/crm/leads", "title": "Leads", "description": "Gestione los leads que vinculará a los eventos de su calendario." },
+      { "href": "/crm/tasks", "title": "Tareas y Kanban", "description": "Controle los pendientes de cada cita con listas de verificación y registro de tiempo." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesita ayuda?",
+    "content": "<p>¿Preguntas sobre el calendario, las categorías o la reserva con IA? Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a> — con gusto le ayudamos a configurar el flujo de programación perfecto.</p>"
+  },
+  "metaTitle": "Calendario y Programación | Documentación de iMash",
+  "metaDescription": "Aprenda a usar el calendario del CRM de iMash: cree y reprograme eventos, codifique categorías por color, vincule citas a leads y contactos, y deje que los agentes de IA agenden por usted.",
+  "metaKeywords": "calendario, programación, citas, eventos, categorías de calendario, reprogramar, calendario CRM, reserva con IA, próximos eventos"
+}

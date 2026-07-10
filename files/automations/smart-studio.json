@@ -1,0 +1,125 @@
+{
+  "title": "Smart Studio (AI Workspace)",
+  "lede": "Smart Studio is your built-in AI creative department — chat with top models to brainstorm campaigns and draft copy, generate marketing images, and even produce short videos with Veo, all without leaving iMash. Here's the full tour, from your first message to reusing the results in real campaigns.",
+  "timeToComplete": "15 minutes",
+  "steps": [
+    {
+      "id": "open-smart-studio",
+      "title": "Open Smart Studio",
+      "content": "<p>Everything happens in one workspace: a toolbar on top, your chat history on the left, and the conversation canvas in the middle.</p><ol><li>In the left sidebar, scroll to the <strong>INTELLIGENCE CENTER</strong> section and click <strong>Smart Studio</strong>. (You can also reach it from the top bar: click the <strong>Automation</strong> tab, then the <strong>SMART STUDIO</strong> chip in the strip below.)</li><li>Take a second to map the screen:<ul><li><strong>Toolbar (top)</strong> — the <strong>AI Marketing Studio</strong> header with the <strong>Text / Image / Video</strong> mode switch, the <strong>Provider</strong> and <strong>Model</strong> pickers, a row of tool chips, and the <strong>New Chat</strong> button.</li><li><strong>Chat History (left rail)</strong> — every past session, color-coded by type (blue = text, purple = image, orange = video), with its provider, age, and total cost. Click any card to reopen it; the red trash icon deletes it (you'll confirm <strong>Delete this chat?</strong> first).</li><li><strong>Conversation canvas (center)</strong> — the messages, with a composer at the bottom.</li></ul></li></ol><blockquote>💡 <strong>Tip:</strong> On phones, Smart Studio opens on the history list first — tap a chat (or <strong>New</strong>) to enter the conversation, and use the <strong>Options</strong> button to reveal the provider, model, and tool controls.</blockquote>",
+      "images": [
+        { "src": "images/automations/smart-studio-workspace-light.png", "alt": "Smart Studio workspace with toolbar, chat history rail, and conversation canvas", "caption": "The Smart Studio workspace: toolbar on top, Chat History on the left, conversation canvas in the middle.", "theme": "light" },
+        { "src": "images/automations/smart-studio-workspace-dark.png", "alt": "Smart Studio workspace with toolbar, chat history rail, and conversation canvas", "caption": "The Smart Studio workspace: toolbar on top, Chat History on the left, conversation canvas in the middle.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "pick-mode-provider-model",
+      "title": "Pick a Mode, Provider, and Model",
+      "content": "<p>One workspace, three creative modes — the toolbar adapts to whichever you choose.</p><ol><li>Use the segmented switch in the header to pick a mode:<ul><li><strong>Text</strong> — conversational AI for brainstorming, copywriting, and planning.</li><li><strong>Image</strong> — generate (or edit) marketing imagery from a text description.</li><li><strong>Video</strong> — generate short marketing videos with Google's Veo models.</li></ul></li><li>Choose a <strong>Provider</strong> — <strong>OpenAI</strong>, <strong>Anthropic</strong>, or <strong>Gemini</strong>. The list only shows providers that have models for the current mode (for example, only Gemini appears under <strong>Video</strong>, because Veo is a Gemini model).</li><li>Choose a <strong>Model</strong> from the dropdown next to it — e.g. <strong>Gemini 2.5 Flash</strong> for text, <strong>Gemini 2.5 Flash Image</strong> for images, or <strong>Veo 3.1</strong> for video.</li><li>Notice the primary button in the top-right changes with the mode: <strong>New Chat</strong>, <strong>New Image</strong>, or <strong>New Video</strong>. Click it any time to start fresh.</li></ol><blockquote>⚠️ <strong>Note:</strong> Once a session has messages, its provider and model are <strong>locked to session</strong> (you'll see a gray tag next to the pickers). To try a different model, click <strong>New Chat</strong> and start a new session.</blockquote>",
+      "images": [
+        { "src": "images/automations/smart-studio-toolbar-light.png", "alt": "Smart Studio toolbar with Text/Image/Video modes, provider and model pickers, and tool chips", "caption": "The toolbar: mode switch, Provider + Model pickers, and the per-mode tool chips underneath.", "theme": "light" },
+        { "src": "images/automations/smart-studio-toolbar-dark.png", "alt": "Smart Studio toolbar with Text/Image/Video modes, provider and model pickers, and tool chips", "caption": "The toolbar: mode switch, Provider + Model pickers, and the per-mode tool chips underneath.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "text-tools-settings",
+      "title": "Switch On Tools and Tune the Settings (Text Mode)",
+      "content": "<p>Before you send the first message of a text chat, the tools row lets you decide what your AI can reach for. Each chip is a simple on/off toggle — hover it for a description.</p><ol><li>Toggle the tool chips for your chosen provider:<ul><li><strong>Web Search</strong> (OpenAI and Anthropic) — lets the model search the web for up-to-date information. On Anthropic it's billed at $10 per 1,000 searches.</li><li><strong>Google Search</strong> (Gemini) — grounds answers in live Google results.</li><li><strong>Code Execution</strong> (Gemini) — the model can run Python for math, data analysis, and logic.</li><li><strong>URL Context</strong> (Gemini) — paste a link in your message and the model reads the page.</li></ul></li><li>Tune the extra controls that appear for capable models:<ul><li><strong>Thinking</strong> — reasoning depth for thinking-capable models. Higher = better quality, more tokens.</li><li><strong>Temp</strong> (Gemini) — randomness from 0 to 2. Lower (0.3) for precise, on-brand copy; higher (1.2) for creative variation. Default is 1.</li></ul></li><li>Click <strong>Advanced</strong> on the right for the low-frequency knobs: <strong>Top P</strong> (nucleus sampling — usually leave at 0.95) and <strong>Max output tokens</strong> (cap the reply length; the default 8192 is plenty for marketing copy).</li></ol><blockquote>💡 <strong>Tip:</strong> Tools and settings are chosen per session, before the first message. If the row is hidden, you're inside an existing session — click <strong>New Chat</strong> to configure a fresh one.</blockquote>",
+      "images": []
+    },
+    {
+      "id": "start-a-chat",
+      "title": "Start a Conversation",
+      "content": "<p>Time for the fun part — your first draft, written in seconds.</p><ol><li>Type your request in the composer at the bottom — for example: <em>\"Draft a short, friendly SMS promo for a spring AC tune-up special ($89, this week only).\"</em> Press <strong>Enter</strong> or click <strong>Send</strong> (<strong>Shift+Enter</strong> adds a new line).</li><li>The reply streams in live. Under each AI response you'll see its <strong>token count and exact cost</strong> — no billing surprises, ever.</li><li>The session appears in <strong>Chat History</strong> with an auto-generated title (your first message). Keep the conversation going: ask for variations, a different tone, a shorter version — the model remembers the whole thread.</li><li>Use the <strong>📎 paperclip</strong> button to attach an image or video from your Media Library for the model to analyze (great for \"write a caption for this photo\").</li></ol>",
+      "images": [
+        { "src": "images/automations/smart-studio-chat-light.png", "alt": "A Smart Studio conversation with a drafted SMS promo and per-message cost", "caption": "A live conversation — the AI drafts your copy and shows tokens + cost under every reply.", "theme": "light" },
+        { "src": "images/automations/smart-studio-chat-dark.png", "alt": "A Smart Studio conversation with a drafted SMS promo and per-message cost", "caption": "A live conversation — the AI drafts your copy and shows tokens + cost under every reply.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "system-instructions",
+      "title": "Set System Instructions (Your Brand Voice)",
+      "content": "<p>Stop repeating \"keep it professional but warm\" in every message — set it once and it applies to every turn of the session.</p><ol><li>Above the composer, click the <strong>Set system instructions</strong> pill.</li><li>An editor expands. Describe who the AI should be, e.g.: <em>\"You are a B2B SaaS copywriter for ACME Co. Brand voice: professional but warm. Avoid jargon. Always end with a clear CTA.\"</em></li><li>The instructions panel turns amber with an <strong>(applied to every turn)</strong> badge. Use <strong>Collapse</strong> to tuck it away, <strong>Edit</strong> to reopen it, or <strong>Clear</strong> to remove it.</li></ol><blockquote>💡 <strong>Tip:</strong> System instructions are the single biggest quality lever in text mode. A two-sentence brand-voice brief makes every draft come out 90% ready.</blockquote>",
+      "images": [
+        { "src": "images/automations/smart-studio-system-instructions-light.png", "alt": "System instructions editor above the composer", "caption": "System instructions apply to every message in the session — perfect for your brand voice.", "theme": "light" },
+        { "src": "images/automations/smart-studio-system-instructions-dark.png", "alt": "System instructions editor above the composer", "caption": "System instructions apply to every message in the session — perfect for your brand voice.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "generate-images",
+      "title": "Generate Marketing Images",
+      "content": "<p>Need a social post visual or ad creative? Switch to <strong>Image</strong> mode and describe it.</p><ol><li>Click <strong>Image</strong> in the mode switch. The toolbar swaps to image controls:<ul><li><strong>Google Search</strong> (Gemini) — grounds the generation in real-world references.</li><li><strong>Aspect</strong> — the aspect ratio of the output (e.g. <strong>1:1</strong> for social posts, <strong>16:9</strong> for banners).</li><li><strong>Size</strong> — output resolution (e.g. <strong>1K</strong>, <strong>2K</strong>, <strong>4K</strong> — 4K costs about 80% more than 1K).</li><li><strong>People</strong> — <strong>Allow all</strong>, <strong>Adults only</strong>, or <strong>Block people</strong> (handy for B2B or abstract creative).</li><li><strong>Variants</strong> — how many image candidates to generate per prompt (1–4). Each variant is billed separately.</li></ul></li><li>Describe the image in the composer — subject, mood, framing, palette — and click <strong>Send</strong>. Example: <em>\"A bright, modern hero image of a technician tuning an AC unit, soft morning light, brand-blue accents.\"</em></li><li>Hover a generated image for the <strong>Download</strong> button, or click it to view it full size.</li><li>Want to edit an existing picture instead? Attach an image with the <strong>📎 paperclip</strong> and tell the model what to change — it iterates from your file.</li><li>Not quite right? Click <strong>Regenerate</strong> under a result — it puts the original prompt back in the composer so you can tweak it before re-rolling (it never re-sends automatically).</li></ol>",
+      "images": [
+        { "src": "images/automations/smart-studio-image-mode-light.png", "alt": "Smart Studio in Image mode with aspect, size, people, and variants controls", "caption": "Image mode: describe the visual, pick aspect/size/variants, and generate.", "theme": "light" },
+        { "src": "images/automations/smart-studio-image-mode-dark.png", "alt": "Smart Studio in Image mode with aspect, size, people, and variants controls", "caption": "Image mode: describe the visual, pick aspect/size/variants, and generate.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "generate-videos",
+      "title": "Generate Marketing Videos with Veo",
+      "content": "<p>Yes — real short-form video, straight from a prompt. <strong>Video</strong> mode runs on Google's Veo models.</p><ol><li>Click <strong>Video</strong> in the mode switch and pick a model (e.g. <strong>Veo 3.1</strong>). The toolbar shows the video controls:<ul><li><strong>Aspect</strong> — e.g. <strong>16:9</strong> for ads, <strong>9:16</strong> for reels/stories.</li><li><strong>Duration</strong> — clip length in seconds (e.g. <strong>8s</strong>).</li><li><strong>Resolution</strong> — output quality (e.g. <strong>720p</strong>, <strong>1080p</strong>; <strong>4k</strong> is Veo 3.1 only).</li><li><strong>People</strong> — allow or block human figures in the output.</li><li><strong>Audio</strong> — Veo 3 generates ambient sound and SFX; switch it off for silent clips.</li><li><strong>Enhance prompt</strong> — lets Gemini rewrite your prompt for better Veo results (usually improves quality — leave it on).</li><li><strong>Negative</strong> — describe what you do <em>not</em> want, e.g. <em>\"blurry, low quality, distorted\"</em>.</li></ul></li><li>Click <strong>Advanced</strong> for <strong>Seed</strong> (fix it for reproducible regenerations; leave empty for random) and <strong>Variants per call</strong> (generate up to 2 drafts — each billed separately).</li><li>Describe the video — <em>\"a product spot, social teaser, or ad cut\"</em> — and click <strong>Send</strong>. Generation takes a little while; you'll see a <strong>Preparing video…</strong> indicator, and the finished clip plays right in the conversation with a <strong>Download</strong> button.</li></ol><blockquote>⚠️ <strong>Heads-up:</strong> Video generation is the most expensive thing in the Studio — check the cost shown under each result, and start with 720p drafts before rendering final 1080p/4k cuts.</blockquote>",
+      "images": [
+        { "src": "images/automations/smart-studio-video-mode-light.png", "alt": "Smart Studio in Video mode with aspect, duration, resolution, audio, and enhance prompt controls", "caption": "Video mode with Veo: aspect, duration, resolution, audio, and prompt-enhancement controls.", "theme": "light" },
+        { "src": "images/automations/smart-studio-video-mode-dark.png", "alt": "Smart Studio in Video mode with aspect, duration, resolution, audio, and enhance prompt controls", "caption": "Video mode with Veo: aspect, duration, resolution, audio, and prompt-enhancement controls.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "video-reference-frames",
+      "title": "Anchor Videos with Frames, References, and Extensions",
+      "content": "<p>In Video mode the composer grows four role buttons that give you director-level control over the output.</p><ol><li><strong>First</strong> — attach an image to use as the <em>starting frame</em>. Perfect for animating a product shot or a still from your brand library.</li><li><strong>Last</strong> — attach an image as the <em>ending frame</em> (Veo 3.1 only). Combine First + Last and Veo animates between them.</li><li><strong>Ref</strong> — attach up to <strong>3 style/content reference images</strong> (Veo 3.1 only) to steer the look of the clip.</li><li><strong>Extend</strong> — attach a video you generated earlier and Veo continues it with another segment, picking up from the last frame.</li></ol><p>Each button opens the Media Library so you can pick an existing file or upload a new one. Attached files appear as chips above the composer with a colored role badge (<strong>1st</strong>, <strong>Last</strong>, <strong>Ref</strong>) — tap the badge to reassign a role.</p><blockquote>⚠️ <strong>Veo rules to know:</strong> frame roles (First/Last) and reference images can't be combined in the same generation, and <strong>Extend</strong> only accepts source clips generated within the last 24 hours — after that window, use <strong>Regenerate</strong> to create a fresh variation instead.</blockquote>",
+      "images": [
+        { "src": "images/automations/smart-studio-video-composer-light.png", "alt": "Video mode composer with First, Last, Ref, and Extend attachment buttons", "caption": "The video composer: First/Last frame anchors, style references, and one-click extension.", "theme": "light" },
+        { "src": "images/automations/smart-studio-video-composer-dark.png", "alt": "Video mode composer with First, Last, Ref, and Extend attachment buttons", "caption": "The video composer: First/Last frame anchors, style references, and one-click extension.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "media-library",
+      "title": "Use the Media Library",
+      "content": "<p>Every file you upload and every image or video you generate lands in one shared Media Library — reusable across all your sessions.</p><ol><li>Click the <strong>📎 paperclip</strong> button next to the composer. The <strong>Media Library</strong> modal opens.</li><li>Filter with the two tab groups at the top: <strong>All / Uploads / Generated</strong> on the left, and <strong>All / Images / Videos</strong> on the right.</li><li>Click one or more files to select them, then click <strong>Attach Selected</strong> to add them to your message.</li><li>Need something new? Click <strong>Upload New</strong> to add a file from your computer — it uploads, gets attached, and stays in the library for next time.</li></ol>",
+      "images": [
+        { "src": "images/automations/smart-studio-media-library-light.png", "alt": "Media Library modal with Uploads/Generated and Images/Videos filters", "caption": "The Media Library: every upload and every generated asset, filterable and reusable.", "theme": "light" },
+        { "src": "images/automations/smart-studio-media-library-dark.png", "alt": "Media Library modal with Uploads/Generated and Images/Videos filters", "caption": "The Media Library: every upload and every generated asset, filterable and reusable.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "track-costs",
+      "title": "Track Tokens and Cost",
+      "content": "<p>Smart Studio is radically transparent about spend — you see the price of every single AI turn.</p><ol><li>Under each AI reply: the <strong>token count and cost</strong> of that response.</li><li>Below the conversation: the <strong>session stats bar</strong> with running totals — <strong>Input</strong> tokens, <strong>Output</strong> tokens, and <strong>Cost</strong> — plus a chip showing the provider and model the session is locked to.</li><li>In the <strong>Chat History</strong> rail: each session card shows its lifetime cost, so you can spot your expensive experiments at a glance.</li></ol><blockquote>💡 <strong>Tip:</strong> Text chats typically cost fractions of a cent. Images cost more (and each <strong>Variant</strong> bills separately); video is the premium tier. The stats bar keeps you honest.</blockquote>",
+      "images": [
+        { "src": "images/automations/smart-studio-stats-light.png", "alt": "Session stats bar showing input tokens, output tokens, cost, and the locked model", "caption": "The session stats bar: running input/output tokens, total cost, and the locked provider + model.", "theme": "light" },
+        { "src": "images/automations/smart-studio-stats-dark.png", "alt": "Session stats bar showing input tokens, output tokens, cost, and the locked model", "caption": "The session stats bar: running input/output tokens, total cost, and the locked provider + model.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "chat-access-settings",
+      "title": "Control What Sub-Accounts Can See (Main Account Only)",
+      "content": "<p>If you run a team, you decide who sees whose chats and files.</p><ol><li>Click the <strong>⚙️ gear</strong> button in the top-right of the toolbar (visible to the main account only). The <strong>Chat Access Settings</strong> modal opens.</li><li>Set the <strong>Default visibility for sub-accounts</strong>:<ul><li><strong>Disable for all Sub accounts</strong> — sub-accounts can't use Smart Studio at all (they see an \"AI Chat is disabled\" notice).</li><li><strong>Own chats &amp; files only</strong> — each sub-account sees only what they created.</li><li><strong>Main account + own chats &amp; files</strong> — subs also see the main account's sessions and media.</li><li><strong>All account chats &amp; files</strong> — everyone sees everything across the account.</li></ul></li><li>Under <strong>Per-account overrides</strong>, give any individual sub-account a different level than the default (or set it back to <strong>Use default</strong>).</li><li>Click <strong>Save</strong>.</li></ol><blockquote>💡 <strong>Tip:</strong> When history is shared, session cards in the Chat History rail show the owner's email, so you always know whose conversation you're looking at.</blockquote>",
+      "images": [
+        { "src": "images/automations/smart-studio-access-settings-light.png", "alt": "Chat Access Settings modal with default visibility and per-account overrides", "caption": "Chat Access Settings: a default visibility level plus per-sub-account overrides.", "theme": "light" },
+        { "src": "images/automations/smart-studio-access-settings-dark.png", "alt": "Chat Access Settings modal with default visibility and per-account overrides", "caption": "Chat Access Settings: a default visibility level plus per-sub-account overrides.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "use-results-in-campaigns",
+      "title": "Put the Results to Work",
+      "content": "<p>Smart Studio output is meant to leave the Studio — here's the payoff loop that turns drafts into revenue:</p><ul><li><strong>Copy → campaigns:</strong> paste drafted copy into your <strong>Email Marketing</strong> templates, <strong>WhatsApp campaign</strong> templates, or SMS messages.</li><li><strong>Images → creative:</strong> use <strong>Download</strong> on any generated image and drop it into email headers, WhatsApp media, booking pages, or social posts. Generated assets also stay in your Media Library for reuse.</li><li><strong>Videos → ads and socials:</strong> download the Veo clips for your ad platforms, landing pages, and reels.</li><li><strong>Analysis → decisions:</strong> in Text mode with Code Execution on, paste campaign numbers and ask for a breakdown — the model runs real calculations, not vibes.</li></ul><p>That's the whole workflow: describe → generate → refine → ship. Your marketing team just got a lot faster.</p>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "You've mastered the AI workspace — now wire its output into the channels that reach your customers.",
+    "cards": [
+      { "href": "/messages/email-marketing", "title": "Email Marketing", "description": "Build bulk email campaigns — the perfect home for the copy and imagery you just drafted." },
+      { "href": "/messages/whatsapp-campaigns", "title": "WhatsApp Campaigns", "description": "Send template campaigns on WhatsApp using your Studio-drafted copy and creative." },
+      { "href": "/automations/smart-flows", "title": "Smart Flows", "description": "Automate multi-step journeys that deliver your new content at exactly the right moment." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>Questions about Smart Studio, models, or generation costs? Contact our support team at <a href=\"mailto:support@imash.io\">support@imash.io</a> — we're happy to help you get the most out of your AI workspace.</p>"
+  },
+  "metaTitle": "Smart Studio (AI Workspace) | iMash Documentation",
+  "metaDescription": "Learn how to use Smart Studio in iMash: chat with OpenAI, Anthropic, and Gemini models, generate marketing images and Veo videos, manage the media library, track per-message costs, and control sub-account access.",
+  "metaKeywords": "smart studio, ai workspace, ai chat, image generation, video generation, veo, gemini, openai, anthropic, marketing content, imash"
+}

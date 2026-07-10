@@ -1,0 +1,159 @@
+{
+  "title": "Invoices & Getting Paid",
+  "lede": "Build a professional invoice in four guided steps, send it by email or text message, and watch the money arrive — card payments, deposits, processing fees, refunds and beautiful PDF templates are all built in. This guide takes you from a blank page to \"Paid\" from A to Z.",
+  "timeToComplete": "15 minutes",
+  "steps": [
+    {
+      "id": "open-invoices",
+      "title": "Open the Invoices list",
+      "content": "<p>Every invoice you create — by hand, from a deal, from a quote, or from a field-service job — lands in one searchable list.</p><ol><li>In the top navigation, click <strong>CRM</strong>, then click the <strong>Invoices</strong> tab (or go directly to <code>/pipeline/invoices</code>).</li><li>The table shows one row per invoice with columns for <strong>Invoice #</strong>, <strong>Status</strong>, <strong>Views</strong>, <strong>Total Amount</strong>, <strong>Amount Due</strong>, <strong>Invoice Date</strong>, <strong>Due Date</strong>, <strong>Jobs</strong>, <strong>Account</strong>, <strong>Contacts</strong>, <strong>Leads</strong>, <strong>Title</strong>, <strong>Sent</strong>, <strong>Deal</strong>, <strong>Owner</strong> and <strong>Actions</strong>.</li><li>Status pills tell you exactly where each invoice stands: <strong>Draft</strong> (not sent yet), <strong>Sent</strong>, <strong>Viewed</strong> (the customer opened it), <strong>Paid</strong>, <strong>Partially Paid</strong>, <strong>Overdue</strong>, <strong>Cancelled</strong>, <strong>Fully Refunded</strong> and <strong>Partially Refunded</strong>.</li><li>Each row's <strong>Actions</strong> column offers quick icons: <strong>View</strong> (eye), <strong>Record Payment</strong> (dollar — only while something is still due), <strong>Text invoice copy to customer</strong> (message bubble — only on paid invoices), <strong>Download PDF</strong>, and <strong>Delete unpaid invoice</strong> (trash).</li><li>Click a linked <strong>Account</strong>, <strong>Contact</strong>, <strong>Lead</strong>, <strong>Job</strong> or <strong>Deal</strong> in any row to open that record right on top of the list — you never lose your place.</li></ol><blockquote>⚠️ Invoices with any payment recorded can never be deleted — the trash icon and the row checkbox simply disappear for them. That's on purpose: paid financial records are protected.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/invoices-list-light.png", "alt": "Invoices list showing status pills, amounts and per-row action icons", "caption": "The Invoices list — every invoice with its status, amounts, views and quick actions", "theme": "light" },
+        { "src": "images/pipeline/invoices-list-dark.png", "alt": "Invoices list showing status pills, amounts and per-row action icons", "caption": "The Invoices list — every invoice with its status, amounts, views and quick actions", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "search-and-filter",
+      "title": "Search, filter and track who viewed what",
+      "content": "<ol><li>Click <strong>Show Filters</strong> in the top-right of the list.</li><li>A filter row appears with: a <strong>Search invoices...</strong> box, a <strong>Filter by status</strong> dropdown, a <strong>Start date → End date</strong> range picker, and a <strong>Filter by owner</strong> dropdown (which teammate the invoice belongs to).</li><li>You can also filter straight from the table: click the funnel icon on the <strong>Status</strong> column header and tick one or more statuses — the whole list (not just the current page) is filtered.</li><li>Click the <strong>Total Amount</strong>, <strong>Amount Due</strong>, <strong>Invoice Date</strong> or <strong>Views</strong> column headers to sort.</li></ol><p>The <strong>Views</strong> column is your read receipt: the blue eye pill counts how many times the customer opened the invoice page, and the green dollar pill counts opens of the payment link. Hover it to see when each was last visited — perfect for deciding when to follow up.</p>",
+      "images": [
+        { "src": "images/pipeline/invoices-filters-light.png", "alt": "Filter row with search box, status filter, date range and owner filter", "caption": "The filter row — search, status, date range and owner", "theme": "light" },
+        { "src": "images/pipeline/invoices-filters-dark.png", "alt": "Filter row with search box, status filter, date range and owner filter", "caption": "The filter row — search, status, date range and owner", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "create-customer-info",
+      "title": "Create an invoice — Step 1: Customer Info",
+      "content": "<p>Time to bill someone. The invoice builder walks you through four steps: <strong>Customer Info → Line Items → Terms → Review</strong>.</p><ol><li>Click <strong>Create Invoice</strong> in the top-right of the list.</li><li>Optionally type a <strong>Description</strong> — a short internal summary of what this invoice covers. Invoices number themselves automatically (for example <code>INV-2026-0075</code>), so there's no title field to fill.</li><li>Link the invoice to what it's for: pick an <strong>Associated Deal</strong> or an <strong>Associated Job</strong>. Choosing one auto-fills the customer fields below — and a job with a quoted amount even adds that amount as a ready-made line item.</li><li>Pick who is being billed: an <strong>Account</strong> (company), one or more <strong>Contacts</strong>, and/or <strong>Leads</strong>. The <strong>+</strong> button next to each picker creates a brand-new record without leaving the builder. At least one of the three is required before the invoice can be created.</li><li>Set the <strong>Invoice Date</strong> (defaults to today), an optional <strong>Due Date</strong>, and the <strong>Currency</strong> (USD, EUR, GBP or CAD).</li><li>Click <strong>Next</strong>.</li></ol>",
+      "images": [
+        { "src": "images/pipeline/invoices-create-customer-light.png", "alt": "Create Invoice step 1 with deal, job, account, contacts, leads, dates and currency fields", "caption": "Step 1 — Customer Info: link a deal or job, pick who to bill, set dates and currency", "theme": "light" },
+        { "src": "images/pipeline/invoices-create-customer-dark.png", "alt": "Create Invoice step 1 with deal, job, account, contacts, leads, dates and currency fields", "caption": "Step 1 — Customer Info: link a deal or job, pick who to bill, set dates and currency", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "create-line-items",
+      "title": "Step 2: Add line items",
+      "content": "<p>Line items are what the customer actually pays for. Add them one of two ways:</p><ol><li>Click <strong>Select from Catalog</strong> to pull in <strong>Products</strong> and <strong>Services</strong> you've already created — prices and internal costs come pre-filled.</li><li>Or click <strong>Add Line Item</strong> to type one from scratch. In the modal, fill in:<ul><li><strong>Item Name / Title</strong> (required) — what appears on the invoice.</li><li><strong>Description</strong> — optional extra detail shown under the name.</li><li><strong>Quantity</strong> and <strong>Unit Price</strong> — a negative price is allowed and works as a credit toward the total.</li><li><strong>Cost (internal)</strong> — your cost basis. Admin-only: it powers the Cost and Margin columns and is <em>never</em> shown on the customer's invoice, PDF or payment page.</li><li><strong>Discount (%)</strong> and <strong>Tax (%)</strong> — per-line adjustments; the <strong>Subtotal</strong>, <strong>After Discount</strong> and <strong>Total (with tax)</strong> preview updates live at the bottom.</li></ul></li><li>Click <strong>OK</strong> to add the line. Repeat for every item.</li></ol><blockquote>💡 Building an invoice for a job? The line-item modal also shows an <strong>Owner</strong> choice (<strong>Company</strong> vs <strong>Technician</strong>) so tech-owned parts are tracked for reimbursement instead of being billed to the customer.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/invoices-create-additem-light.png", "alt": "Add Line Item modal with name, quantity, unit price, internal cost, discount and tax fields", "caption": "The Add Line Item modal — note the admin-only Cost (internal) field", "theme": "light" },
+        { "src": "images/pipeline/invoices-create-additem-dark.png", "alt": "Add Line Item modal with name, quantity, unit price, internal cost, discount and tax fields", "caption": "The Add Line Item modal — note the admin-only Cost (internal) field", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "create-fee-and-deposit",
+      "title": "Step 2 (continued): Totals, card processing fee & deposits",
+      "content": "<p>Below the line-item table, the totals block and two powerful money controls turn a plain invoice into a smart one:</p><ul><li><strong>Discount ( %)</strong> and <strong>Tax ( %)</strong> boxes in the totals block apply one percentage across <em>all</em> lines at once — no need to edit each row.</li><li><strong>Add Processing Fee</strong> — flip this switch to add a card surcharge on top of the total. Choose <strong>Percentage</strong> or <strong>Fixed</strong> and set the amount; a blue tag previews the fee. The fee is charged <em>only if the customer pays by card</em> — it is not baked into the invoice total, and it's automatically dropped when you record a cash or check payment. Your default fee comes from CRM Settings and can be overridden here per invoice.</li><li><strong>Amount to collect now</strong> — request a deposit instead of the full balance. Choose <strong>Full amount</strong>, <strong>Percent</strong> or <strong>Fixed</strong>; the customer pays that portion now on the payment page and the rest stays owed for later.</li></ul><p>Click <strong>Next</strong> when the numbers look right.</p>",
+      "images": [
+        { "src": "images/pipeline/invoices-create-items-light.png", "alt": "Line Items step showing the totals block, Add Processing Fee switch and Amount to collect now options", "caption": "Step 2 — bulk discount/tax, the processing-fee switch and the deposit control", "theme": "light" },
+        { "src": "images/pipeline/invoices-create-items-dark.png", "alt": "Line Items step showing the totals block, Add Processing Fee switch and Amount to collect now options", "caption": "Step 2 — bulk discount/tax, the processing-fee switch and the deposit control", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "create-terms",
+      "title": "Step 3: Terms & notes",
+      "content": "<p>These four text boxes control the fine print. Your saved defaults (from CRM Settings → Invoices &amp; Quotes) are pre-filled and fully editable per invoice:</p><ol><li><strong>Payment Terms</strong> — e.g. \"Payment due within 30 days\". Printed on the invoice.</li><li><strong>Terms &amp; Conditions</strong> — your legal text, warranty language, late-fee policy.</li><li><strong>Footer Text</strong> — a friendly closing line like \"Thank you for your business!\".</li><li><strong>Internal Notes</strong> — visible only to your team, never to the customer.</li></ol><p>Click <strong>Next</strong> to review.</p>",
+      "images": [
+        { "src": "images/pipeline/invoices-create-terms-light.png", "alt": "Terms step with Payment Terms, Terms and Conditions, Footer Text and Internal Notes fields", "caption": "Step 3 — payment terms, conditions, footer and internal notes", "theme": "light" },
+        { "src": "images/pipeline/invoices-create-terms-dark.png", "alt": "Terms step with Payment Terms, Terms and Conditions, Footer Text and Internal Notes fields", "caption": "Step 3 — payment terms, conditions, footer and internal notes", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "create-review",
+      "title": "Step 4: Review the tax math and create",
+      "content": "<p>The Review step is your final sanity check — and where iMash's automatic sales-tax engine shows its work.</p><ol><li>Check the <strong>Invoice Summary</strong> (dates, currency, linked deal/job/account) and the <strong>Line Items Summary</strong> (items, subtotal, discount, tax, total).</li><li>The <strong>Tax</strong> line shows the rate iMash resolved automatically — from your sales-tax settings, the customer's location, or the linked job. Hover <strong>why this rate?</strong> to see exactly where the rate came from. Tax-exempt customers are detected automatically and forced to 0% with a clear warning.</li><li>Need a different rate? Type it into <strong>Manual tax-rate override (optional, %)</strong> and click <strong>Refresh</strong>. Click <strong>Clear</strong> to go back to the automatic rate.</li><li>Click <strong>Create Invoice</strong>. The invoice is saved as a <strong>Draft</strong> and you're returned to the list — nothing is sent to the customer yet.</li></ol>",
+      "images": [
+        { "src": "images/pipeline/invoices-create-review-light.png", "alt": "Review step showing invoice summary, tax resolution with why this rate link and manual override", "caption": "Step 4 — Review: resolved tax with \"why this rate?\", manual override, and the Create Invoice button", "theme": "light" },
+        { "src": "images/pipeline/invoices-create-review-dark.png", "alt": "Review step showing invoice summary, tax resolution with why this rate link and manual override", "caption": "Step 4 — Review: resolved tax with \"why this rate?\", manual override, and the Create Invoice button", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "invoice-detail",
+      "title": "Inside an invoice: the detail view",
+      "content": "<p>Click any <strong>Invoice #</strong> in the list to open the invoice. Everything about it lives here.</p><ul><li>The header shows the status pill and a red <strong>Due:</strong> badge while money is outstanding — click either one to open the full payment history.</li><li>Four money tiles summarize <strong>Total Amount</strong>, <strong>Amount Paid</strong>, <strong>Amount Due</strong> and <strong>Tax</strong> at a glance.</li><li>Three tabs organize the record: <strong>Overview</strong> (numbers, status, linked deal/job/account/contacts/leads, dates, view count), <strong>Line Items</strong>, and <strong>Terms &amp; Conditions</strong>. A fourth <strong>Payment Details</strong> tab appears once payments exist.</li><li>The header buttons are your command center: <strong>Send</strong> (or <strong>Resend</strong>), the green <strong>Payment</strong> menu, <strong>Preview</strong>, <strong>PDF</strong>, <strong>Edit</strong>, and <strong>More</strong> (⋮) for <strong>Share / Payment Link</strong> and <strong>Cancel Invoice</strong>.</li><li>Click <strong>Edit</strong> to change anything on an unpaid invoice — dates, customer links, terms, even line items. Once a payment lands, the money side locks and the button becomes <strong>Edit Overview</strong>: you can still fix titles, dates and links, but amounts the customer already paid can never drift.</li></ul>",
+      "images": [
+        { "src": "images/pipeline/invoices-detail-overview-light.png", "alt": "Invoice detail with money tiles, overview fields and Send, Payment, Preview, PDF, Edit, More buttons", "caption": "The invoice detail — money tiles, Overview tab and the action toolbar", "theme": "light" },
+        { "src": "images/pipeline/invoices-detail-overview-dark.png", "alt": "Invoice detail with money tiles, overview fields and Send, Payment, Preview, PDF, Edit, More buttons", "caption": "The invoice detail — money tiles, Overview tab and the action toolbar", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "line-items-tab",
+      "title": "Check your margin on the Line Items tab",
+      "content": "<ol><li>Inside the invoice, click the <strong>Line Items</strong> tab.</li><li>Every line shows <strong>Qty</strong>, <strong>Unit Price</strong>, <strong>Discount</strong>, <strong>Tax</strong> and <strong>Total</strong> — plus two admin-only columns the customer never sees: <strong>Cost</strong> and <strong>Margin</strong> (profit in dollars and percent, green when you're making money).</li><li>The totals block at the bottom rolls everything up to the <strong>Grand Total</strong>.</li></ol><blockquote>💡 Margin is calculated from the <strong>Cost (internal)</strong> you entered per line — keep costs accurate and every invoice doubles as a profit report.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/invoices-detail-lineitems-light.png", "alt": "Line Items tab showing quantity, price, total plus internal Cost and Margin columns", "caption": "Line Items tab — the Cost and Margin columns are for your eyes only", "theme": "light" },
+        { "src": "images/pipeline/invoices-detail-lineitems-dark.png", "alt": "Line Items tab showing quantity, price, total plus internal Cost and Margin columns", "caption": "Line Items tab — the Cost and Margin columns are for your eyes only", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "pdf-templates",
+      "title": "Pick a PDF template that matches your brand",
+      "content": "<p>Your invoice can look exactly how you want — there's a whole gallery of professionally designed PDF templates.</p><ol><li>From the Invoices list, click <strong>Preview Templates</strong> (or click <strong>Preview</strong> inside any invoice).</li><li>Use the <strong>Template</strong> dropdown to flip through designs — the preview re-renders instantly with real invoice data. <strong>Zoom In</strong> / <strong>Zoom Out</strong> / <strong>Reset</strong> control the preview size.</li><li>Click <strong>Customize</strong> to tweak colors and details, <strong>Download PDF</strong> to save the file, or <strong>Use This Template</strong> to make it the default.</li><li>Picking a template from the <em>list</em> sets your account-wide default (used for downloads and the public invoice page); picking one from <em>inside an invoice</em> sets it for that invoice only.</li></ol>",
+      "images": [
+        { "src": "images/pipeline/invoices-templates-light.png", "alt": "Invoice Template Preview modal with template dropdown, zoom controls and Use This Template button", "caption": "Preview Templates — flip through designs and set your default with one click", "theme": "light" },
+        { "src": "images/pipeline/invoices-templates-dark.png", "alt": "Invoice Template Preview modal with template dropdown, zoom controls and Use This Template button", "caption": "Preview Templates — flip through designs and set your default with one click", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "send-by-email",
+      "title": "Send the invoice by email",
+      "content": "<ol><li>Open the invoice and click <strong>Send</strong> (it reads <strong>Resend</strong> after the first send, with a confirmation so you never double-send by accident).</li><li>The <strong>Send Invoice</strong> composer opens with the channel switch on <strong>Email</strong>. Pick the <strong>From</strong> mailbox (any email account you've connected in CRM Settings).</li><li>The invoice <strong>PDF is generated and attached automatically</strong> — click <strong>Regenerate</strong> if you changed the invoice after opening the composer.</li><li>Choose recipients in <strong>To</strong> — the customer's contacts appear as suggestions, or type any address. <strong>Show CC/BCC</strong> adds copy fields.</li><li>The <strong>Subject</strong> and <strong>Email Body</strong> are pre-written and include a personal <strong>View &amp; Pay Invoice</strong> link. Edit freely — or click <strong>Generate with AI</strong> / <strong>Rewrite</strong> to have iMash draft the message for you.</li><li>Click <strong>Send Email</strong>. The invoice's status flips to <strong>Sent</strong>, and it flips again to <strong>Viewed</strong> the moment the customer opens their copy.</li></ol>",
+      "images": [
+        { "src": "images/pipeline/invoices-send-composer-light.png", "alt": "Send Invoice composer with Email channel selected, auto-attached PDF and AI writing tools", "caption": "The Send Invoice composer — auto-attached PDF, pay link and AI-assisted writing", "theme": "light" },
+        { "src": "images/pipeline/invoices-send-composer-dark.png", "alt": "Send Invoice composer with Email channel selected, auto-attached PDF and AI writing tools", "caption": "The Send Invoice composer — auto-attached PDF, pay link and AI-assisted writing", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "text-pay-link",
+      "title": "Or text a pay link straight to their phone",
+      "content": "<p>Emails get buried; texts get read. The same composer can fire the invoice over SMS — or both channels at once.</p><ol><li>In the <strong>Send Invoice</strong> composer, switch the channel to <strong>Text (SMS)</strong> (or <strong>Email + SMS</strong> to send both together).</li><li><strong>Send to</strong> lists every phone number on file for the linked customer, each pre-checked with its label — or type a number into <strong>Add a custom phone number</strong> and click <strong>Add</strong>.</li><li>Choose the <strong>Link to send</strong>: <strong>View &amp; Pay page</strong> (the full branded invoice with a Pay button) or <strong>Direct pay page</strong> (straight to the card form).</li><li>The <strong>Message</strong> is pre-written with the invoice number, amount and link — edit it as you like. The character count and recipient tally sit under the box.</li><li>Click <strong>Send SMS</strong>.</li></ol><blockquote>⚠️ Texting needs an SMS number on your account. If you see <strong>No SMS sender configured</strong>, set a default SMS number under Settings → Messages first.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/invoices-send-sms-light.png", "alt": "Send Invoice composer on the Text SMS channel with recipient list, link style choice and message preview", "caption": "Text (SMS) channel — pick recipients, choose the link style, send the pay link", "theme": "light" },
+        { "src": "images/pipeline/invoices-send-sms-dark.png", "alt": "Send Invoice composer on the Text SMS channel with recipient list, link style choice and message preview", "caption": "Text (SMS) channel — pick recipients, choose the link style, send the pay link", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "share-payment-link",
+      "title": "Share a public payment link anywhere",
+      "content": "<p>Need to drop the invoice into WhatsApp, a chat, or a printed QR code? Grab the raw link.</p><ol><li>Open the invoice, click <strong>More</strong> (⋮) and choose <strong>Share / Payment Link</strong>.</li><li>The <strong>Online payments</strong> switch controls whether the link can actually collect money. On = anyone with the link can pay by card, Apple Pay or Google Pay, settling to your connected Stripe account. Off = the link still shows the invoice, just without a pay button.</li><li>Pick the <strong>Link style</strong>: <strong>Branded invoice</strong> (your chosen template with a Pay Now button at the bottom) or <strong>Direct payment</strong> (straight to checkout).</li><li>Click <strong>Copy</strong> and paste the link into any channel. Customers don't need an iMash account to pay.</li></ol><blockquote>💡 Seeing <strong>Merchant cannot accept payments at this time</strong>? Connect your Stripe account under Settings → Payments — after that every link, email and text can take cards instantly.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/invoices-share-link-light.png", "alt": "Share Invoice modal with Online payments toggle, link style choice and copyable public link", "caption": "Share / Payment Link — toggle online payments, choose the link style, copy and go", "theme": "light" },
+        { "src": "images/pipeline/invoices-share-link-dark.png", "alt": "Share Invoice modal with Online payments toggle, link style choice and copyable public link", "caption": "Share / Payment Link — toggle online payments, choose the link style, copy and go", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "customer-view",
+      "title": "What your customer sees",
+      "content": "<p>The links you send open a clean, public invoice page — no login, no app, no friction.</p><ul><li>The page renders the invoice in your selected PDF template, with zoom controls and a <strong>Download PDF</strong> button.</li><li>When <strong>Online payments</strong> are enabled and a balance is due, a payment section lets the customer pay by card, Apple Pay or Google Pay on the spot — including just the deposit if you requested one.</li><li>If you added a processing fee, it's shown transparently and only applied to card payments.</li><li>Every visit is counted: the <strong>Views</strong> column and the invoice's <strong>View Count</strong> update automatically, and a first open flips the status to <strong>Viewed</strong>. You'll know the moment they're looking.</li></ul>",
+      "images": [
+        { "src": "images/pipeline/invoices-public-view-light.png", "alt": "Public invoice page showing the branded invoice with zoom controls and Download PDF button", "caption": "The public invoice page — branded, zoomable, and payable with no customer login", "theme": "light" },
+        { "src": "images/pipeline/invoices-public-view-dark.png", "alt": "Public invoice page showing the branded invoice with zoom controls and Download PDF button", "caption": "The public invoice page — branded, zoomable, and payable with no customer login", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "record-payments-refunds",
+      "title": "Record payments, partial payments & refunds",
+      "content": "<p>However the money arrives, close the loop in seconds. While a balance is due, the invoice header shows a green <strong>Payment</strong> menu with two choices:</p><ol><li><strong>Charge Card (Stripe)</strong> — type the customer's card in right there (or use their saved card) and collect instantly. The processing fee, if enabled, is added on top automatically.</li><li><strong>Record Manual Payment</strong> — for cash, checks and bank transfers. In the <strong>Record Payment</strong> modal, enter the <strong>Payment Amount</strong> (pre-filled with the amount due — type less for a partial payment), pick the <strong>Payment Method</strong> (<strong>Credit Card</strong>, <strong>Bank Transfer</strong>, <strong>Check</strong>, <strong>Cash</strong> or <strong>Other</strong>), optionally add a <strong>Transaction ID</strong>, and click <strong>OK</strong>. Card processing fees are dropped automatically for manual payments.</li></ol><p>Statuses update themselves: a partial amount sets <strong>Partially Paid</strong>; paying it off sets <strong>Paid</strong> and stamps the paid date. Click the status pill (or the red <strong>Due:</strong> badge) anytime to open the payment history — every payment with its method and time, and for Stripe payments a <strong>Refund</strong> action that can return the full amount or any part of it. Refunds flip the status to <strong>Partially Refunded</strong> or <strong>Fully Refunded</strong>, so the paper trail is always honest.</p><p>That's the whole cycle — build it, send it, get paid, and every dollar accounted for. 🚀</p>",
+      "images": [
+        { "src": "images/pipeline/invoices-record-payment-light.png", "alt": "Record Payment modal with payment amount, payment method and transaction ID fields", "caption": "Record Payment — log cash, check or transfer payments; partial amounts are fine", "theme": "light" },
+        { "src": "images/pipeline/invoices-record-payment-dark.png", "alt": "Record Payment modal with payment amount, payment method and transaction ID fields", "caption": "Record Payment — log cash, check or transfer payments; partial amounts are fine", "theme": "dark" }
+      ]
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Invoices are the finish line of your sales pipeline — now wire up the rest of the money machine.",
+    "cards": [
+      { "href": "/pipeline/payments", "title": "Payments (Stripe)", "description": "Connect Stripe so every invoice link, email and text can take card payments instantly." },
+      { "href": "/pipeline/quotes", "title": "Quotes", "description": "Send a quote first — one click converts an accepted quote into an invoice." },
+      { "href": "/pipeline/products-services", "title": "Products & Services", "description": "Build your catalog once and drop priced items into any invoice in seconds." },
+      { "href": "/pipeline/subscriptions", "title": "Subscriptions", "description": "Bill on repeat — recurring plans that generate their invoices automatically." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>Questions about invoicing, payments or refunds? Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a> — the iMash team is happy to help you get paid faster.</p>"
+  },
+  "metaTitle": "Invoices & Getting Paid | iMash Documentation",
+  "metaDescription": "Create invoices step by step, send them by email or SMS pay link, pick PDF templates, and collect card payments, deposits, partial payments and refunds in iMash.",
+  "metaKeywords": "invoices, invoice builder, pay link, SMS invoice, Stripe payments, partial payment, deposit, processing fee, refunds, PDF templates, iMash"
+}

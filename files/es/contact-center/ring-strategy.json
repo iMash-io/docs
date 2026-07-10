@@ -1,47 +1,89 @@
 {
   "title": "Estrategia de timbrado",
-  "lede": "Controla cómo suenan los miembros en línea de un grupo, cuánto tiempo suena el grupo antes de pasar a la IA, y algunos comportamientos de manejo de llamadas como forzar la respuesta automática. Estos ajustes aplican por igual a las llamadas entrantes, las transferencias de IA y las colas.",
-  "timeToComplete": "6 minutos",
+  "lede": "Decida exactamente cómo timbra su equipo: todos a la vez en una carrera por contestar, o un miembro a la vez en una rotación inteligente, además de cuánto tiempo timbra el grupo antes de que su agente de IA tome el relevo. Una sola pestaña lo controla todo, y aplica por igual a llamadas entrantes, transferencias de IA y colas.",
+  "timeToComplete": "7 minutos",
   "steps": [
     {
       "id": "open-ring",
-      "title": "Abre la pestaña Ring strategy (Estrategia de timbrado)",
-      "content": "<ol><li>Ve a <strong>Call Center &rarr; Contact Center &rarr; Groups</strong> (Grupos) y selecciona un grupo.</li><li>Abre la pestaña <strong>Ring strategy</strong> (Estrategia de timbrado).</li></ol>",
+      "title": "Abra la pestaña Ring strategy",
+      "content": "<p>La estrategia de timbrado se configura por grupo, de modo que cada equipo puede timbrar a su manera.</p><ol><li>En la barra lateral izquierda, haga clic en <strong>Contact Center</strong> (Centro de Contacto, bajo <em>Call Center</em>).</li><li>Haga clic en la pestaña <strong>Groups</strong> (Grupos) en la parte superior (visible para los administradores del Contact Center y la cuenta principal).</li><li>En la lista <strong>Groups</strong> a la izquierda, haga clic en el grupo que desea configurar.</li><li>En el panel del grupo a la derecha, abra la pestaña interna <strong>Ring strategy</strong> (Estrategia de timbrado).</li></ol><p>Verá tres tarjetas: <strong>Ring strategy</strong> (cómo y por cuánto tiempo timbran los miembros), <strong>Call handling</strong> (interruptores de comportamiento) y <strong>When no one answers</strong> (el respaldo de IA).</p><blockquote>💡 ¿Aún no tiene un grupo? Cree uno primero — consulte la guía <em>Crear un Grupo de Permisos</em> — y agregue miembros antes de ajustar cómo timbra.</blockquote>",
       "images": [
-        { "src": "images/contact-center/cc-group-ring-strategy-light.png", "alt": "Pestaña Ring strategy", "caption": "Ring strategy: cómo suenan los miembros, el respaldo de IA y el manejo de llamadas.", "theme": "light" },
-        { "src": "images/contact-center/cc-group-ring-strategy-dark.png", "alt": "Pestaña Ring strategy", "caption": "Ring strategy: cómo suenan los miembros, el respaldo de IA y el manejo de llamadas.", "theme": "dark" }
+        { "src": "images/contact-center/cc-group-ring-strategy-light.png", "alt": "Pestaña Ring strategy dentro de la configuración de un grupo", "caption": "La pestaña Ring strategy: estrategia de timbrado, manejo de llamadas y el respaldo de IA para el grupo seleccionado.", "theme": "light" },
+        { "src": "images/contact-center/cc-group-ring-strategy-dark.png", "alt": "Pestaña Ring strategy dentro de la configuración de un grupo", "caption": "La pestaña Ring strategy: estrategia de timbrado, manejo de llamadas y el respaldo de IA para el grupo seleccionado.", "theme": "dark" }
       ]
     },
     {
       "id": "when-ringing",
-      "title": "Elige cómo suena el grupo",
-      "content": "<p>En <strong>When ringing the group</strong> (Al hacer sonar el grupo), elige una estrategia:</p><ul><li><strong>Ring all at once</strong> (Sonar a todos a la vez) — suenan todos los miembros en línea; el primero en contestar se la queda (predeterminado).</li><li><strong>Round-robin</strong> (Turno rotativo) — un miembro a la vez, rotando entre los miembros.</li><li><strong>Linear</strong> (Lineal) — uno a la vez, empezando siempre desde el inicio de la lista de miembros.</li><li><strong>Longest idle</strong> (Mayor tiempo inactivo) — suena a quien haya esperado más tiempo desde su última llamada.</li></ul><p>Para las estrategias de uno a la vez, define <strong>Ring each member for (seconds)</strong> (Sonar cada miembro por [segundos]) antes de que la llamada avance.</p>"
+      "title": "Elija cómo timbra el grupo",
+      "content": "<p>En la tarjeta <strong>Ring strategy</strong>, abra el menú <strong>When ringing the group</strong> (Al timbrar el grupo) y elija una de cuatro estrategias:</p><ul><li><strong>Ring all at once — first to answer wins (default)</strong> (Timbrar a todos a la vez — gana el primero en contestar, predeterminado) — el marcador de cada miembro en línea timbra simultáneamente. La respuesta más rápida, ideal para equipos pequeños.</li><li><strong>Round-robin — one at a time, rotating between members</strong> (Turno rotativo — uno a la vez, rotando entre miembros) — cada llamada nueva comienza con el siguiente miembro de la rotación, repartiendo las llamadas de forma pareja.</li><li><strong>Linear — one at a time, always from the top of the member list</strong> (Lineal — uno a la vez, siempre desde el inicio de la lista) — cada llamada intenta el mismo orden, de modo que su mejor agente o el más experimentado siempre recibe la primera oportunidad.</li><li><strong>Longest idle — ring whoever has waited longest since their last call</strong> (Mayor inactividad — timbra a quien lleva más tiempo sin recibir una llamada) — la opción más justa: timbra primero al miembro que lleva más tiempo libre.</li></ul><p>La estrategia que elija aplica en todos los lugares donde se timbra este grupo: llamadas entrantes a sus números, transferencias de IA al grupo y llamadas en cola.</p><blockquote>💡 Solo se timbra a los miembros <strong>en línea</strong>: un miembro cuenta como en línea cuando su marcador web está abierto y en estado <strong>Available</strong> (Disponible). Los miembros desconectados simplemente se omiten.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/ring-strategy-policy-options-light.png", "alt": "Opciones del menú When ringing the group", "caption": "Las cuatro estrategias de timbrado: todos a la vez, turno rotativo, lineal y mayor inactividad.", "theme": "light" },
+        { "src": "images/contact-center/ring-strategy-policy-options-dark.png", "alt": "Opciones del menú When ringing the group", "caption": "Las cuatro estrategias de timbrado: todos a la vez, turno rotativo, lineal y mayor inactividad.", "theme": "dark" }
+      ]
     },
     {
-      "id": "ring-seconds",
-      "title": "Define cuánto tiempo antes de dirigir a la IA",
-      "content": "<p>Define <strong>Ring the group for (seconds) before routing to AI</strong> (Sonar el grupo por [segundos] antes de dirigir a la IA). Este es el tiempo total que suena el grupo. Si ningún miembro contesta dentro de ese tiempo, la llamada sigue la opción <strong>When no one answers</strong> (Cuando nadie contesta): dirigir al agente de IA asignado al número, dirigir a un agente de IA distinto, o colgar.</p>"
+      "id": "sequential",
+      "title": "Defina el tiempo de timbrado por miembro (estrategias de uno a la vez)",
+      "content": "<p>Si eligió <strong>Round-robin</strong>, <strong>Linear</strong> o <strong>Longest idle</strong>, aparece un campo adicional:</p><ol><li>Configure <strong>Ring each member for (seconds) before moving on</strong> (Timbrar a cada miembro durante N segundos antes de avanzar) — cuánto tiempo timbra el teléfono de cada miembro antes de que la llamada avance al siguiente (5–120 segundos; 20 es un buen valor inicial).</li></ol><p>La llamada sigue recorriendo a sus miembros en línea, uno a la vez, hasta que alguien contesta o se agota la ventana total de timbrado (siguiente paso).</p><blockquote>⚠️ Mantenga el tiempo por miembro más corto que la ventana total <strong>Ring the group for (seconds)</strong> — de lo contrario, la llamada podría no llegar nunca al segundo miembro antes de pasar a la IA.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/ring-strategy-sequential-light.png", "alt": "Tarjeta Ring strategy con Round-robin seleccionado y el campo de segundos por miembro", "caption": "Elija una estrategia de uno a la vez y aparece el tiempo de timbrado por miembro.", "theme": "light" },
+        { "src": "images/contact-center/ring-strategy-sequential-dark.png", "alt": "Tarjeta Ring strategy con Round-robin seleccionado y el campo de segundos por miembro", "caption": "Elija una estrategia de uno a la vez y aparece el tiempo de timbrado por miembro.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "ring-window",
+      "title": "Defina la ventana total de timbrado antes de que la IA tome el relevo",
+      "content": "<p>Configure <strong>Ring the group for (seconds) before routing to AI</strong> (Timbrar el grupo durante N segundos antes de enrutar a la IA) — el tiempo total que timbra el grupo antes de que la llamada pase a la acción de <strong>When no one answers</strong> (paso 7).</p><ul><li>Con <strong>Ring all at once</strong>, es simplemente cuánto tiempo timbra el marcador de todos.</li><li>Con una estrategia de uno a la vez, es la ventana global dentro de la cual la llamada recorre a los miembros.</li><li>Mínimo 3 segundos, sin límite superior — configure lo que mejor se adapte a su equipo. El valor predeterminado es 15.</li></ul><p><strong>Lo que escucha quien llama mientras el grupo timbra:</strong> de forma predeterminada, el tono de llamada normal. ¿Prefiere recibirlo con música y un mensaje hablado? Active <strong>Play wait audio during the initial group ring</strong> (Reproducir audio de espera durante el timbrado inicial) en la pestaña <strong>Wait &amp; Hold experience</strong> del grupo — la llamada se contesta de inmediato y reproduce su música de espera mientras su equipo timbra.</p>",
+      "images": [
+        { "src": "images/contact-center/ring-strategy-card-light.png", "alt": "Tarjeta Ring strategy con el campo de la ventana total de timbrado", "caption": "La ventana total de timbrado: cuánto tiempo timbra el grupo antes de que corra el respaldo de IA.", "theme": "light" },
+        { "src": "images/contact-center/ring-strategy-card-dark.png", "alt": "Tarjeta Ring strategy con el campo de la ventana total de timbrado", "caption": "La ventana total de timbrado: cuánto tiempo timbra el grupo antes de que corra el respaldo de IA.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "first-answer-wins",
+      "title": "Entienda el \"gana el primero en contestar\"",
+      "content": "<p>El timbrado de grupo es una carrera amistosa:</p><ul><li>Cuando el grupo timbra, cada miembro en línea ve una tarjeta de llamada entrante en su marcador web con los botones <strong>Accept</strong> (Aceptar) y <strong>Decline</strong> (Rechazar).</li><li>El <strong>primer miembro en aceptar gana la llamada</strong>: en cuanto se conecta, el timbrado de los demás se libera automáticamente. Sin respuestas duplicadas ni conexiones triples incómodas.</li><li>Con una estrategia de uno a la vez solo timbra un miembro a la vez, así que la \"carrera\" es simplemente quien esté siendo intentado en ese momento.</li></ul><p>Esta misma mecánica impulsa las llamadas entrantes, las transferencias de IA a humanos y las llamadas en cola que timbran a agentes que se liberan.</p>"
     },
     {
       "id": "call-handling",
-      "title": "Configura los comportamientos de manejo de llamadas",
-      "content": "<p>En la tarjeta <strong>Call handling</strong> (Manejo de llamadas), activa:</p><ul><li><strong>Force auto-answer</strong> (Forzar respuesta automática) — cada miembro en línea conecta automáticamente las llamadas del grupo sin hacer clic en Accept (Aceptar); el primero en ganar se la queda.</li><li><strong>Force auto-open lead/contact</strong> (Forzar abrir prospecto/contacto automáticamente) — la pantalla de cada miembro abre el registro de prospecto/contacto de quien llama mientras la llamada suena.</li><li><strong>Disable auto-leave when the caller hangs up</strong> (Desactivar la salida automática cuando quien llama cuelga) — mantiene al miembro en la línea después de que quien llama cuelga (solo casos especiales).</li><li><strong>Hold callers in a queue when no agent is free</strong> (Retener a las personas en una cola cuando no hay agente libre) — activado por defecto; consulta Queue Settings (Ajustes de cola).</li></ul><p>Haz clic en <strong>Save</strong> (Guardar) cuando termines.</p>"
+      "title": "Ajuste los interruptores de Call handling",
+      "content": "<p>La tarjeta <strong>Call handling</strong> (Manejo de llamadas) contiene cuatro interruptores de comportamiento:</p><ul><li><strong>Force auto-answer</strong> (Forzar respuesta automática) — cada miembro en línea se conecta automáticamente a las llamadas del grupo sin hacer clic en Accept. El primero en ganar la carrera toma la llamada; el resto se libera. Ideal para equipos de alto volumen donde cada segundo cuenta.</li><li><strong>Force auto-open lead/contact</strong> (Forzar apertura automática del lead/contacto) — mientras la llamada de grupo timbra, la pantalla de cada miembro abre automáticamente el registro del lead/contacto de quien llama (cuando el número coincide con uno), ignorando su preferencia personal de Auto-open. Sus agentes saludan por nombre con todo el contexto ya en pantalla.</li><li><strong>Disable auto-leave when the caller hangs up</strong> (Desactivar la salida automática cuando quien llama cuelga) — de forma predeterminada, cuando la última parte real (no IA) abandona la llamada, el marcador web del miembro también sale automáticamente. Actívelo solo para casos especiales en los que el miembro deba permanecer en la línea después de que quien llama cuelgue.</li><li><strong>Hold callers in a queue when no agent is free</strong> (Retener a quienes llaman en una cola cuando ningún agente está libre) — activado de forma predeterminada. Si ningún miembro está libre, quien llama se retiene en una cola (música de espera + su posición en la fila) y timbra en cuanto un agente se libera, hasta el máximo de espera de la cola — luego corre el respaldo de <strong>When no one answers</strong>. Si lo desactiva, las llamadas solo timbran una vez a los miembros en línea; si nadie contesta, el respaldo corre de inmediato y quienes llaman nunca entran en cola.</li></ul><blockquote>💡 El máximo de espera de la cola, la acción al agotarse el tiempo y el audio en espera viven en la pestaña <strong>Queue Settings</strong> del grupo.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/ring-strategy-call-handling-light.png", "alt": "Tarjeta Call handling con cuatro interruptores de comportamiento", "caption": "Call handling: respuesta automática forzada, apertura automática del lead/contacto, desactivar salida automática y retención en cola.", "theme": "light" },
+        { "src": "images/contact-center/ring-strategy-call-handling-dark.png", "alt": "Tarjeta Call handling con cuatro interruptores de comportamiento", "caption": "Call handling: respuesta automática forzada, apertura automática del lead/contacto, desactivar salida automática y retención en cola.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "fallback",
+      "title": "Elija qué sucede cuando nadie contesta",
+      "content": "<p>¿Nadie disponible? Ninguna llamada queda desatendida. En la tarjeta <strong>When no one answers</strong> (Cuando nadie contesta), elija qué sucede cuando expira la ventana de timbrado — o cuando ningún miembro está en línea:</p><ul><li><strong>Route to the number's assigned AI agent</strong> (Enrutar al agente de IA asignado al número) — contesta el agente de IA ya asignado al número marcado, exactamente como si el grupo no existiera (predeterminado).</li><li><strong>Route to a different AI agent</strong> (Enrutar a un agente de IA diferente) — elija un asistente específico en el menú <strong>AI assistant to take the call</strong> que aparece. Perfecto para un agente dedicado de \"desborde\" o fuera de horario.</li><li><strong>Hang up the call</strong> (Colgar la llamada) — termina la llamada sin respaldo de IA. Úselo con moderación: la mayoría de los equipos prefiere la red de seguridad de la IA.</li></ul><blockquote>⚠️ Si elige <strong>Route to a different AI agent</strong>, debe seleccionar un asistente — <strong>Save</strong> (Guardar) no se completará hasta que elija uno.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/ring-strategy-fallback-light.png", "alt": "Tarjeta When no one answers", "caption": "El respaldo de IA: qué sucede tras la ventana de timbrado — o cuando nadie está en línea.", "theme": "light" },
+        { "src": "images/contact-center/ring-strategy-fallback-dark.png", "alt": "Tarjeta When no one answers", "caption": "El respaldo de IA: qué sucede tras la ventana de timbrado — o cuando nadie está en línea.", "theme": "dark" },
+        { "src": "images/contact-center/ring-strategy-fallback-options-light.png", "alt": "Opciones del menú de respaldo", "caption": "Tres opciones de respaldo: la IA del número, un agente de IA diferente o colgar.", "theme": "light" },
+        { "src": "images/contact-center/ring-strategy-fallback-options-dark.png", "alt": "Opciones del menú de respaldo", "caption": "Tres opciones de respaldo: la IA del número, un agente de IA diferente o colgar.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "save-test",
+      "title": "Guarde y pruebe su configuración",
+      "content": "<ol><li>Haga clic en <strong>Save</strong> (Guardar) en la parte inferior derecha — un solo Save aplica todas las pestañas de la configuración del grupo.</li><li>Pida a un miembro del equipo que abra el marcador web y se ponga en <strong>Available</strong> (Disponible).</li><li>Llame a uno de los números entrantes del grupo (configurados en la pestaña <strong>Inbound SIP Routing</strong>) y observe cómo el timbrado sigue su estrategia.</li><li>Luego deje que timbre sin contestar a propósito para confirmar que el respaldo de <strong>When no one answers</strong> entra en acción.</li></ol><p>Eso es todo: sus llamadas ahora llegan primero a un humano, exactamente en el orden que usted diseñó, con un agente de IA en reserva para que ninguna llamada quede sin respuesta.</p>"
     }
   ],
   "nextSteps": {
     "title": "¿Qué sigue?",
-    "description": "Define qué escuchan las personas y qué pasa si esperan.",
+    "description": "Usted controla quién timbra y cuándo — ahora defina lo que escuchan quienes llaman mientras esperan, y qué pasa si siguen esperando.",
     "cards": [
-      { "href": "/contact-center/wait-hold", "title": "Experiencia de espera y retención", "description": "Configura la música y los mensajes que escuchan las personas." },
-      { "href": "/contact-center/queue-settings", "title": "Ajustes de cola", "description": "Espera máxima y comportamiento al agotarse el tiempo." },
-      { "href": "/agents/create-agent", "title": "Crear un agente de IA", "description": "Construye la IA que responde como respaldo." }
+      { "href": "/contact-center/wait-hold", "title": "Experiencia de espera y retención", "description": "Música de espera, música de retención y mensajes periódicos hablados." },
+      { "href": "/contact-center/queue-settings", "title": "Configuración de la cola", "description": "Espera máxima, acción al agotarse el tiempo y audio en espera para llamadas en cola." },
+      { "href": "/contact-center/inbound-sip-routing", "title": "Enrutamiento SIP entrante", "description": "Apunte números telefónicos a este grupo para que timbre." }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
+    "title": "¿Necesita ayuda?",
+    "content": "<p>Si tiene algún problema o pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Estrategia de timbrado | iMash Docs",
-  "metaDescription": "Configura cómo suena un grupo del Contact Center en iMash — sonar a todos a la vez o secuencialmente, segundos antes del respaldo de IA, forzar respuesta automática y abrir prospecto/contacto automáticamente.",
-  "metaKeywords": "estrategia de timbrado, round robin, sonar a todos, forzar respuesta automática, abrir contacto automático, respaldo de ia, contact center"
+  "metaTitle": "Estrategia de timbrado | Documentación de iMash",
+  "metaDescription": "Configure cómo timbra un grupo del Contact Center en iMash: todos a la vez o uno a la vez (turno rotativo, lineal, mayor inactividad), ventanas de timbrado por miembro y totales, gana el primero en contestar, interruptores de manejo de llamadas y el respaldo de IA cuando nadie contesta.",
+  "metaKeywords": "estrategia de timbrado, timbrar a todos, turno rotativo, lineal, mayor inactividad, gana el primero en contestar, ventana de timbrado, respuesta automática forzada, apertura automática de contacto, cola, respaldo de ia, contact center"
 }

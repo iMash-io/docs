@@ -1,56 +1,106 @@
 {
   "title": "Contact Center Overview",
-  "lede": "The Contact Center is where your human agents take and make phone calls. This guide walks you through the four tabs, the Live Monitor, and how supervisors can listen in on live calls.",
-  "timeToComplete": "6 minutes",
+  "lede": "The Contact Center is your command center for human calling — one screen where you watch every live call in real time, see which agents are ready, listen in with Monitor/Whisper/Barge, and manage your teams. This guide walks you through every tab, tile, and button.",
+  "timeToComplete": "8 minutes",
   "steps": [
     {
       "id": "open-contact-center",
       "title": "Open the Contact Center",
-      "content": "<ol><li>In the left navigation, open <strong>Call Center</strong>.</li><li>Click <strong>Contact Center</strong>.</li><li>You land on a workspace with up to four tabs across the top: <strong>Live Monitor</strong>, <strong>Reporting</strong>, <strong>Groups</strong>, and <strong>Call Transfer</strong>.</li></ol><p>Which tabs you see depends on your Contact Center role. Agents see only Live Monitor (as a queue view), Monitor/QA also see Reporting, and Admins see all four including Groups and Call Transfer.</p>"
-    },
-    {
-      "id": "live-monitor",
-      "title": "Watch live calls in Live Monitor",
-      "content": "<p>The <strong>Live Monitor</strong> tab is your real-time wallboard:</p><ul><li>Stat tiles at the top show <strong>Ringing / queued</strong>, <strong>On calls</strong>, <strong>Agents online</strong>, <strong>On break</strong>, <strong>Busy</strong>, and <strong>On queue</strong> counts.</li><li><strong>Live Calls</strong> lists every active call with its parties, direction, and a running clock. <strong>On Queue</strong> lists callers waiting for an agent.</li><li>The <strong>Human Agents</strong> roster on the right shows every agent with a colored status dot: green = <strong>online</strong>, amber = <strong>break</strong>, blue = <strong>busy</strong>, grey = <strong>offline</strong>.</li></ul>",
+      "content": "<p>Everything in this guide lives on a single page — let's get there first.</p><ol><li>In the left sidebar, scroll to the <strong>CALL CENTER</strong> section and click <strong>Contact Center</strong>. (You can also click <strong>Contact Center</strong> in the top navigation bar.)</li><li>You land on a workspace with up to four tabs across the top: <strong>Live Monitor</strong>, <strong>Reporting</strong>, <strong>Groups</strong>, and <strong>Call Transfer</strong>.</li></ol><p>Which tabs you see depends on your Contact Center role:</p><ul><li><strong>Agent</strong> — sees only Live Monitor, as a clean queue-only view (no supervisor tools).</li><li><strong>Monitor / QA</strong> — sees Live Monitor and Reporting, and can silently listen to calls.</li><li><strong>Supervisor</strong> — everything above, plus Whisper/Barge, Mute, Terminate, and force-status controls.</li><li><strong>Admin</strong> (and the main account) — all four tabs, including Groups and Call Transfer.</li></ul><blockquote>💡 Roles are assigned per member inside each permission group — see the <em>Members &amp; Roles</em> guide to set them up.</blockquote>",
       "images": [
-        { "src": "images/contact-center/cc-live-monitor-light.png", "alt": "Live Monitor tab", "caption": "Live Monitor: wallboard tiles, live calls, and the Human Agents roster.", "theme": "light" },
-        { "src": "images/contact-center/cc-live-monitor-dark.png", "alt": "Live Monitor tab", "caption": "Live Monitor: wallboard tiles, live calls, and the Human Agents roster.", "theme": "dark" }
+        { "src": "images/contact-center/cc-live-monitor-light.png", "alt": "The Contact Center page with the Live Monitor tab open", "caption": "The Contact Center: four tabs on top, the wallboard, live calls, and the Human Agents roster.", "theme": "light" },
+        { "src": "images/contact-center/cc-live-monitor-dark.png", "alt": "The Contact Center page with the Live Monitor tab open", "caption": "The Contact Center: four tabs on top, the wallboard, live calls, and the Human Agents roster.", "theme": "dark" }
       ]
     },
     {
-      "id": "supervisor-controls",
-      "title": "Monitor, Whisper, or Barge a call",
-      "content": "<p>Supervisors and admins can join any live call from its card:</p><ul><li><strong>Monitor</strong> — silently listen; nobody on the call hears you.</li><li><strong>Whisper</strong> — talk privately to your agent (the customer never hears you).</li><li><strong>Barge</strong> — join the conversation as a full three-way participant.</li></ul><p>You can also <strong>Mute AI agent</strong> or <strong>Terminate</strong> the call. Monitor/QA users get listen-only Monitor; agents get no supervisor controls.</p>"
+      "id": "read-the-wallboard",
+      "title": "Read the wallboard at a glance",
+      "content": "<p>The six stat tiles across the top of <strong>Live Monitor</strong> are your real-time wallboard — they update automatically, no refresh needed:</p><ul><li><strong>Ringing / queued</strong> — calls currently dialing or ringing that nobody has answered yet.</li><li><strong>On calls</strong> — calls that are actively connected right now.</li><li><strong>Agents online</strong> — human agents signed in and ready to take calls.</li><li><strong>On break</strong> — agents signed in but temporarily not receiving calls.</li><li><strong>Busy</strong> — agents currently on a call.</li><li><strong>On queue</strong> — customers parked in a skill-group queue, waiting for an agent.</li></ul>",
+      "images": [
+        { "src": "images/contact-center/overview-wallboard-light.png", "alt": "The six wallboard stat tiles", "caption": "The wallboard: ringing, on calls, agents online, on break, busy, and on queue — all live.", "theme": "light" },
+        { "src": "images/contact-center/overview-wallboard-dark.png", "alt": "The six wallboard stat tiles", "caption": "The wallboard: ringing, on calls, agents online, on break, busy, and on queue — all live.", "theme": "dark" }
+      ]
     },
     {
-      "id": "agent-status",
-      "title": "Understand agent statuses",
-      "content": "<p>Each agent sets their own availability from the web dialer:</p><ul><li><strong>Online</strong> — ready to receive queued and inbound calls.</li><li><strong>On break</strong> — signed in but not receiving calls.</li><li><strong>Offline</strong> — signed out of the queue.</li></ul><p>Supervisors can force an agent Ready, Not Ready (break), or log them out from the roster's action buttons.</p>"
+      "id": "watch-live-calls",
+      "title": "Watch live calls as they happen",
+      "content": "<p>The main panel has a <strong>Live Calls</strong> / <strong>On Queue</strong> switch. With <strong>Live Calls</strong> selected, a breakdown strip counts <strong>Live Calls</strong>, <strong>Dialing</strong>, <strong>Ongoing</strong>, <strong>Transferred</strong>, and <strong>Events Flagged</strong>, and below it every active call gets its own card showing:</p><ul><li><strong>Status tags</strong> — the call state (Dialing, Ringing, Ongoing…), <strong>↘ Inbound</strong> or <strong>↗ Outbound</strong>, and the call type (Phone or Web).</li><li><strong>Queue / group and campaign chips</strong> — which group's number was called, or which campaign placed the call.</li><li><strong>A running clock</strong> — live elapsed time since the call started.</li><li><strong>The customer's number</strong> and the number they called (or were called from).</li><li><strong>Parties</strong> — everyone on the line in one row: the AI agent, any human agents, and extra phone legs. A pulsing bell shows who the call is ringing right now, and an eye icon counts supervisors monitoring.</li><li><strong>Observer event tags</strong> — if an Observer Agent is watching your calls, AI-detected events (like an upset customer) appear as colored tags, and the card itself gets a colored accent so it jumps out.</li></ul><blockquote>💡 The card's left edge is color-coded: amber = ringing, green = a human is on the line, blue = ongoing AI call, and an observer event overrides them all with its own color.</blockquote>"
+    },
+    {
+      "id": "monitor-whisper-barge",
+      "title": "Monitor, Whisper, or Barge into a call",
+      "content": "<p>This is the superpower of the Live Monitor: join any live call without the customer ever knowing — or jump in fully when your agent needs backup.</p><ol><li>On a live call card, click <strong>Monitor</strong>. Your browser connects to the call audio silently.</li><li>Once connected, a three-way switch appears. Pick your mode — switching is instant, with no reconnect:<ul><li><strong>Monitor</strong> — you hear everything; nobody hears you.</li><li><strong>Whisper</strong> — you can talk, but only your agents hear you. The customer never does — perfect for live coaching.</li><li><strong>Barge</strong> — you join as a full participant; everyone hears you (a three-way conversation).</li></ul></li><li>Next to the mode switch you also get:<ul><li><strong>Mute AI agent</strong> (speaker icon) — silence the AI mid-call, e.g. once a human has taken over.</li><li><strong>Leave</strong> — disconnect your listening session (the call continues).</li></ul></li><li>The red <strong>stop</strong> button ends the call for <em>everyone</em> — you'll be asked to confirm <strong>Terminate</strong>.</li></ol><blockquote>⚠️ Monitor/QA users get listen-only <strong>Monitor</strong> — Whisper, Barge, Mute, and Terminate require the Supervisor or Admin role.</blockquote>"
+    },
+    {
+      "id": "on-queue",
+      "title": "Check who's waiting in the queue",
+      "content": "<p>Click <strong>On Queue</strong> in the panel's switch to see every customer currently parked in a skill-group queue (hearing hold music while agents are found):</p><ul><li><strong>Waiting</strong> or <strong>Ringing agents</strong> — whether the queue is still holding the caller or actively ringing eligible agents.</li><li><strong>In line #</strong> — the caller's position in the queue.</li><li><strong>Skill tags</strong> — the skills an agent must have to receive this call.</li><li><strong>→ AI on timeout</strong> / <strong>→ Hang up on timeout</strong> — what happens if no agent answers before the queue's maximum wait.</li><li><strong>The wait clock</strong> — how long the caller has been holding; it turns red after two minutes.</li><li><strong>Agents matched</strong> — how many online agents qualify for this call, and who queued it (if a teammate transferred it).</li></ul>",
+      "images": [
+        { "src": "images/contact-center/overview-queue-light.png", "alt": "The On Queue tab of the Live Monitor", "caption": "On Queue: every held customer with their position, skills, wait time, and timeout action.", "theme": "light" },
+        { "src": "images/contact-center/overview-queue-dark.png", "alt": "The On Queue tab of the Live Monitor", "caption": "On Queue: every held customer with their position, skills, wait time, and timeout action.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "agent-roster",
+      "title": "Manage agents from the Human Agents roster",
+      "content": "<p>The <strong>Human Agents</strong> panel on the right lists every member of your contact center with live presence — it refreshes every few seconds:</p><ul><li><strong>Agent</strong> — name, with a colored status dot and a gold <strong>Main</strong> tag for the account owner.</li><li><strong>Group</strong> — the permission group(s) — i.e. the queues — this agent staffs.</li><li><strong>Role</strong> — their assigned Contact Center role.</li><li><strong>Status</strong> — <strong>online</strong> (green, ready for calls), <strong>break</strong> (amber, signed in but not receiving), <strong>busy</strong> (blue, on a call), or <strong>offline</strong> (grey).</li></ul><p>Supervisors and admins also get an <strong>Actions</strong> column to override an agent's status remotely:</p><ol><li>Click the green check — <strong>Force Ready (Online)</strong> — to put an agent back in rotation.</li><li>Click the amber pause — <strong>Force Not Ready (Break)</strong> — to pull them out of the queue.</li><li>Click the red power icon — <strong>Force Logout</strong> — and confirm <strong>Log out</strong> to sign them out entirely.</li></ol><blockquote>💡 Agents normally set their own status from the web dialer's Available toggle — force-status is your override for when someone forgot to log out or needs to be pulled in during a rush.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/overview-roster-light.png", "alt": "The Human Agents roster with status and force-status actions", "caption": "The roster: live status per agent, their groups and roles, and the force Ready / Break / Logout actions.", "theme": "light" },
+        { "src": "images/contact-center/overview-roster-dark.png", "alt": "The Human Agents roster with status and force-status actions", "caption": "The roster: live status per agent, their groups and roles, and the force Ready / Break / Logout actions.", "theme": "dark" }
+      ]
     },
     {
       "id": "reporting-tab",
       "title": "Review performance in Reporting",
-      "content": "<p>The <strong>Reporting</strong> tab summarizes call activity across six categories — <strong>General</strong>, <strong>Human Agents</strong>, <strong>AI Agents</strong>, <strong>Smart Campaigns</strong>, <strong>Human Campaigns</strong>, and <strong>Queue</strong> — with KPIs like total calls, connect rate, average handle time, and cost. Pick a date preset and export any tab to CSV.</p>",
+      "content": "<p>Click the <strong>Reporting</strong> tab to turn all that live activity into numbers. Six category views — <strong>General</strong>, <strong>Human Agents</strong>, <strong>AI Agents</strong>, <strong>Smart Campaigns</strong>, <strong>Human Campaigns</strong>, and <strong>Queue</strong> — cover KPIs like total calls, connect rate, average handle time, agent availability, and cost.</p><ol><li>Pick a date preset — <strong>Today</strong>, <strong>This week</strong>, <strong>This month</strong>, <strong>Last 7 days</strong>, <strong>Last 30 days</strong>, or <strong>Custom</strong>.</li><li>Narrow the data with the filter row (calls, assistants, campaigns, owners, call types, phone number, contact, or call UUID).</li><li>Click <strong>Export</strong> to download the active view as a CSV.</li></ol><p>For a field-by-field walkthrough of every column, see the dedicated <em>Reporting</em> guide linked below.</p>",
       "images": [
-        { "src": "images/contact-center/cc-reporting-light.png", "alt": "Reporting tab", "caption": "Reporting: KPI cards, category tabs, date presets, and CSV export.", "theme": "light" },
-        { "src": "images/contact-center/cc-reporting-dark.png", "alt": "Reporting tab", "caption": "Reporting: KPI cards, category tabs, date presets, and CSV export.", "theme": "dark" }
+        { "src": "images/contact-center/cc-reporting-light.png", "alt": "The Reporting tab", "caption": "Reporting: six category tabs, date presets, filters, and CSV export.", "theme": "light" },
+        { "src": "images/contact-center/cc-reporting-dark.png", "alt": "The Reporting tab", "caption": "Reporting: six category tabs, date presets, filters, and CSV export.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "groups-tab",
+      "title": "Build your teams in Groups",
+      "content": "<p>The <strong>Groups</strong> tab (Admin only) is where your contact-center teams live. Each permission group doubles as a calling queue: its members, inbound numbers, ring strategy, and hold experience are all configured here.</p><ol><li>Click <strong>+ New Group</strong> in the top-right to create a team.</li><li>Select any group in the left list to manage its members and its call-center settings (inbound numbers, ring timeout, wait &amp; hold audio, and more).</li></ol><p>Group setup is a topic of its own — follow the <em>Create a Permission Group</em> guide in What's Next for the full A-to-Z.</p>",
+      "images": [
+        { "src": "images/contact-center/overview-groups-light.png", "alt": "The Groups tab with the permission groups list", "caption": "Groups: create teams, then select one to manage members and queue settings.", "theme": "light" },
+        { "src": "images/contact-center/overview-groups-dark.png", "alt": "The Groups tab with the permission groups list", "caption": "Groups: create teams, then select one to manage members and queue settings.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "call-transfer-tab",
+      "title": "Enable transfers in Call Transfer",
+      "content": "<p>The <strong>Call Transfer</strong> tab (Admin only) controls whether operators can hand a live call to a teammate or an outside number. It's off by default:</p><ol><li>Turn on <strong>Allow operators to transfer live calls</strong>.</li><li>Under <strong>Who can transfer</strong>, choose <strong>All sub-accounts</strong> or <strong>Only specific sub-accounts</strong> (then pick the allowed users).</li><li>In <strong>Internal teammate calls</strong>, optionally enable <strong>Record internal calls</strong> and <strong>Transcribe internal calls (multi-party)</strong> — teammate-to-teammate calls are always logged with their outcome either way.</li><li>Click <strong>Save</strong> in the top-right.</li></ol>",
+      "images": [
+        { "src": "images/contact-center/overview-call-transfer-light.png", "alt": "The Call Transfer settings tab", "caption": "Call Transfer: enable transfers, scope who can use them, and capture internal calls.", "theme": "light" },
+        { "src": "images/contact-center/overview-call-transfer-dark.png", "alt": "The Call Transfer settings tab", "caption": "Call Transfer: enable transfers, scope who can use them, and capture internal calls.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "live-calls-page",
+      "title": "Explore the standalone Live Calls page",
+      "content": "<p>Prefer a dedicated full-screen view of call traffic? The <strong>Live Calls</strong> page offers the same real-time visibility in a board layout:</p><ol><li>In the left sidebar under <strong>CALL CENTER</strong>, click <strong>Live Calls</strong> (also available as the <strong>LIVE CALLS</strong> chip in the Contact Center section bar).</li><li>Stat tiles count <strong>Live Calls</strong>, <strong>Dialing</strong>, <strong>Ongoing</strong>, <strong>Transferred</strong>, <strong>Events Flagged</strong>, and <strong>Finished</strong>.</li><li>Switch between <strong>Tabs</strong> (a table with <strong>All Live</strong> / <strong>Finished</strong> tabs) and <strong>Columns</strong> (a kanban board where calls move across stages) using the buttons in the top-right.</li><li>Each call row offers the same actions as the Live Monitor — the eye icon to <strong>Monitor</strong> (then Whisper / Barge), a message icon for <strong>live transcription</strong> while the call runs, and the red button to end it.</li></ol><blockquote>💡 Use the Contact Center's Live Monitor for supervising your human team (roster + queue + force-status), and the Live Calls page when you want a big board of every call — including finished ones — with live transcription at hand.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/overview-live-calls-page-light.png", "alt": "The standalone Live Calls page", "caption": "Live Calls: stat tiles, Tabs/Columns views, and per-call monitor, transcription, and end-call actions.", "theme": "light" },
+        { "src": "images/contact-center/overview-live-calls-page-dark.png", "alt": "The standalone Live Calls page", "caption": "Live Calls: stat tiles, Tabs/Columns views, and per-call monitor, transcription, and end-call actions.", "theme": "dark" }
       ]
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Set up your teams and understand what agents see day to day.",
+    "description": "You now know your way around the command center — time to build the team that staffs it.",
     "cards": [
-      { "href": "/contact-center/groups", "title": "Create a Permission Group", "description": "Build a team or skill group of human agents." },
-      { "href": "/contact-center/agent-guide", "title": "The Agent Experience", "description": "See how agents take calls with the web dialer." },
-      { "href": "/contact-center/reporting", "title": "Reporting", "description": "Dive into KPIs and CSV exports." }
+      { "href": "/contact-center/groups", "title": "Create a Permission Group", "description": "Build a team or skill group of human agents with its own queue." },
+      { "href": "/contact-center/members-roles", "title": "Members & Roles", "description": "Add agents and assign Agent, Monitor, Supervisor, or Admin roles." },
+      { "href": "/contact-center/agent-guide", "title": "The Agent Experience", "description": "See how agents take calls day to day with the web dialer." },
+      { "href": "/contact-center/reporting", "title": "Reporting", "description": "Dive into every KPI, filter, and CSV export." }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Contact Center Overview | iMash Docs",
-  "metaDescription": "Learn the iMash Contact Center: the Live Monitor, Reporting, Groups, and Call Transfer tabs, agent statuses, and supervisor Monitor/Whisper/Barge controls.",
-  "metaKeywords": "contact center, live monitor, supervisor, whisper, barge, agent status, call center, human agents"
+  "metaTitle": "Contact Center Overview | iMash Documentation",
+  "metaDescription": "Learn the iMash Contact Center: the live wallboard, Monitor/Whisper/Barge supervisor controls, the skill-group queue, the agent roster with force-status, Reporting, Groups, Call Transfer, and the standalone Live Calls page.",
+  "metaKeywords": "contact center, live monitor, wallboard, supervisor, monitor, whisper, barge, queue, agent status, force status, call transfer, live calls, reporting, call center, human agents"
 }

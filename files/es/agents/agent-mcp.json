@@ -1,61 +1,113 @@
 {
-  "title": "Conecta un servidor MCP a tu agente",
-  "lede": "Agrupa tus flujos de automatización y herramientas en un servidor MCP y luego adjúntalo a un Smart Agent (Agente inteligente) para que pueda invocarlos en vivo durante una conversación.",
-  "timeToComplete": "10 minutos",
-  "videoUrl": "https://youtu.be/0VZbWIhMBck",
-  "videoLength": "4",
+  "title": "Conecte un Servidor MCP a Su Agente",
+  "lede": "Conecte una caja de herramientas completa a su Smart Agent con un par de clics. Adjunte un servidor MCP y su agente descubrirá al instante todas las herramientas que expone — y podrá invocarlas en vivo, en plena conversación.",
+  "timeToComplete": "8 minutos",
   "steps": [
     {
-      "id": "open-automation",
-      "title": "Abre Automation",
-      "content": "<ol><li>En la navegación izquierda, ve a <strong>Intelligence Center → Automation</strong> (Centro de inteligencia → Automatización).</li><li>Aquí es donde creas <strong>Flows</strong> (Flujos, operaciones de varios pasos) y <strong>MCP Servers</strong> (Servidores MCP) que los exponen a los agentes.</li></ol>",
+      "id": "what-is-mcp",
+      "title": "Qué Aporta MCP a Su Agente",
+      "content": "<p>El <strong>Model Context Protocol (MCP)</strong> es un estándar abierto que permite a un agente de IA conectarse a un servidor externo lleno de herramientas y recursos — consultas de clima, sistemas de pedidos, APIs internas, flujos de automatización — sin que usted tenga que cablear cada herramienta a mano. Cuando adjunta un servidor MCP a un Smart Agent, el agente <em>descubre automáticamente</em> cada herramienta que expone el servidor y puede invocar cualquiera de ellas durante una llamada o chat en vivo.</p><p>Hay dos páginas relacionadas en iMash — esta guía cubre la segunda:</p><ul><li><strong>Registrar servidores MCP</strong> — construir su propio servidor MCP a partir de flujos de automatización en <strong>Automation</strong> (Automatización). Eso se explica en <a data-href=\"/automations/mcp-servers\">Servidores MCP</a>.</li><li><strong>Adjuntar un servidor MCP a un agente</strong> — conectar un servidor registrado (o externo) a un Smart Agent concreto para que sus herramientas pasen a formar parte de las habilidades de ese agente. Eso es esta página.</li></ul><blockquote>💡 No necesita un servidor registrado para seguir la guía — el editor del agente también acepta cualquier servidor MCP externo por URL, como verá en el paso \"Añada un Servidor MCP Personalizado\".</blockquote>"
+    },
+    {
+      "id": "open-your-agent",
+      "title": "Abra Su Agente",
+      "content": "<ol><li>En la barra lateral izquierda, bajo <strong>Intelligence Center</strong> (Centro de Inteligencia), haga clic en <strong>Smart Agents</strong> (Agentes Inteligentes).</li><li>Haga clic en el <strong>nombre</strong> del agente que quiere potenciar. Se abre el editor del agente.</li></ol><p>Si aún no tiene un agente, haga clic primero en <strong>Create New Agent</strong> (Crear Nuevo Agente) — consulte <a data-href=\"/agents/create-agent\">Cree Su Primer Agente</a>.</p>",
       "images": [
-        { "src": "images/agents/assistant-editor-light.png", "alt": "Vista general del editor del agente", "caption": "Los servidores MCP creados en Automation se adjuntan de vuelta a tu agente en el editor.", "theme": "light" },
-        { "src": "images/agents/assistant-editor-dark.png", "alt": "Vista general del editor del agente", "caption": "Los servidores MCP creados en Automation se adjuntan de vuelta a tu agente en el editor.", "theme": "dark" }
+        {"src": "images/agents/agent-mcp-agents-list-light.png", "alt": "Lista de Smart Agents con los nombres de los agentes como enlaces", "caption": "Lista de Smart Agents — haga clic en el nombre de un agente para abrir el editor.", "theme": "light"},
+        {"src": "images/agents/agent-mcp-agents-list-dark.png", "alt": "Lista de Smart Agents con los nombres de los agentes como enlaces", "caption": "Lista de Smart Agents — haga clic en el nombre de un agente para abrir el editor.", "theme": "dark"}
       ]
     },
     {
-      "id": "build-flow",
-      "title": "Crea y publica un flujo",
-      "content": "<ol><li>Crea un flujo nuevo y encadena acciones; por ejemplo: tomar una ciudad como entrada, llamar a una API de clima por HTTP, extraer la temperatura y devolverla.</li><li><strong>Publica</strong> el flujo para que pueda usarse dentro de un servidor MCP.</li></ol>",
-      "images": []
-    },
-    {
-      "id": "create-mcp",
-      "title": "Crea un servidor MCP",
-      "content": "<ol><li>En <strong>Automation</strong> (Automatización), abre <strong>MCP Servers</strong> (Servidores MCP) y crea un nuevo MCP.</li><li>Dale un nombre claro.</li><li>Agrégale herramientas: una <strong>Piece</strong> (Pieza) predefinida o cualquier <strong>Flow</strong> (Flujo) publicado (como tu flujo Check Weather).</li></ol>",
-      "images": []
-    },
-    {
-      "id": "attach",
-      "title": "Adjunta el MCP a tu agente",
-      "content": "<ol><li>Ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes) y abre tu agente.</li><li>Abre <strong>Tools / MCP</strong> (Herramientas / MCP) y cambia a <strong>MCP Servers</strong> (Servidores MCP).</li><li>Adjunta el MCP que creaste. También puedes hacer clic en <strong>Add custom MCP server</strong> (Agregar servidor MCP personalizado) para conectar un MCP externo por URL (un endpoint <code>/sse</code> o <code>/mcp</code>) con un encabezado de autenticación opcional.</li></ol>",
+      "id": "open-tools-mcp",
+      "title": "Abra el Panel Tools / MCP",
+      "content": "<p>Asegúrese de que el editor esté en la vista <strong>Form</strong> (Formulario) — el conmutador <strong>Form</strong> / <strong>Node</strong> está en la parte superior del editor.</p><ol><li>Debajo del prompt del sistema, haga clic en el botón <strong>Tools / MCP</strong> (Herramientas / MCP). El mismo panel también se abre desde la fila <strong>Tools / MCP</strong> de la columna derecha.</li></ol><p>El número entre paréntesis del botón cuenta todo lo ya adjuntado — herramientas predefinidas, herramientas personalizadas <em>y</em> servidores MCP.</p>",
       "images": [
-        { "src": "images/agents/tools-mcp-light.png", "alt": "Servidores MCP en el panel de herramientas", "caption": "Adjunta un servidor MCP en Tools / MCP → MCP Servers.", "theme": "light" },
-        { "src": "images/agents/tools-mcp-dark.png", "alt": "Servidores MCP en el panel de herramientas", "caption": "Adjunta un servidor MCP en Tools / MCP → MCP Servers.", "theme": "dark" }
+        {"src": "images/agents/agent-mcp-editor-light.png", "alt": "Vista de formulario del editor del agente con el botón Tools / MCP bajo el prompt", "caption": "El botón Tools / MCP está justo debajo del prompt del sistema en la vista Form.", "theme": "light"},
+        {"src": "images/agents/agent-mcp-editor-dark.png", "alt": "Vista de formulario del editor del agente con el botón Tools / MCP bajo el prompt", "caption": "El botón Tools / MCP está justo debajo del prompt del sistema en la vista Form.", "theme": "dark"}
       ]
     },
     {
-      "id": "test-mcp",
-      "title": "Prueba la integración",
-      "content": "<ol><li>Abre <strong>Test Agent</strong> (Probar agente) y conéctate.</li><li>Pregunta algo que deba activar la herramienta MCP (por ejemplo <em>\"¿Cómo está el clima en París hoy?\"</em>).</li><li>Confirma que el agente llama al flujo y devuelve el resultado correcto. Puedes revisar cada invocación y sus entradas/salidas en el historial del MCP dentro de Automation.</li></ol>",
-      "images": []
+      "id": "meet-the-panel",
+      "title": "Conozca el Panel Tools & MCP",
+      "content": "<p>El panel <strong>Tools &amp; MCP</strong> es la tienda de capacidades de su agente. Tiene dos mitades:</p><ul><li><strong>Carril izquierdo</strong> — todo lo que <em>puede</em> adjuntar, en tres secciones: <strong>Predefined</strong> (Predefinidas: acciones integradas como End Call y SIP Transfer), <strong>Custom</strong> (Personalizadas: sus propias herramientas HTTP/API) y <strong>MCP Servers</strong> (Servidores MCP) al final.</li><li><strong>Panel derecho</strong> — todo lo <em>ya adjuntado</em> a este agente, lo más reciente primero, cada elemento etiquetado por tipo (<strong>PREBUILT</strong>, <strong>CUSTOM</strong>, <strong>MCP</strong>).</li></ul><ol><li>Desplácese por el carril izquierdo hasta el final, hasta la sección <strong>MCP Servers</strong>.</li></ol><blockquote>💡 Los cambios que haga en este panel se guardan de inmediato — no hay un paso de publicación aparte. <strong>Close</strong> (Cerrar) solo cierra el panel.</blockquote>",
+      "images": [
+        {"src": "images/agents/agent-mcp-tools-modal-light.png", "alt": "Panel Tools & MCP con el carril de elementos disponibles a la izquierda y los adjuntados a la derecha", "caption": "Tools & MCP — elementos disponibles a la izquierda, elementos adjuntados a la derecha.", "theme": "light"},
+        {"src": "images/agents/agent-mcp-tools-modal-dark.png", "alt": "Panel Tools & MCP con el carril de elementos disponibles a la izquierda y los adjuntados a la derecha", "caption": "Tools & MCP — elementos disponibles a la izquierda, elementos adjuntados a la derecha.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "attach-saved-server",
+      "title": "Adjunte Uno de Sus Servidores MCP",
+      "content": "<p>Cada servidor MCP que haya registrado en <strong>Automation → MCP</strong> aparece automáticamente en la sección <strong>MCP Servers</strong>.</p><ol><li>Haga clic en un servidor de la lista (el <strong>+</strong> de la derecha confirma que se puede adjuntar). Se adjunta al instante y su etiqueta cambia a <strong>Attached</strong> (Adjuntado).</li><li>Puede adjuntar <strong>varios</strong> servidores MCP al mismo agente — cada uno se convierte en su propia tarjeta en el panel derecho.</li></ol><p>¿Ve <em>\"No built-in MCP servers configured\"</em> (No hay servidores MCP integrados configurados) como en la captura? Aún no ha registrado ningún servidor. Haga clic en <strong>Set one up</strong> (Configure uno) — le lleva a Automation — o continúe con una URL personalizada en el siguiente paso. El registro de su propio servidor se explica en <a data-href=\"/automations/mcp-servers\">Servidores MCP</a>.</p>",
+      "images": [
+        {"src": "images/agents/agent-mcp-rail-light.png", "alt": "Sección MCP Servers al final del carril con el botón Add custom MCP server", "caption": "La sección MCP Servers — aquí se listan los servidores registrados; debajo, Add custom MCP server.", "theme": "light"},
+        {"src": "images/agents/agent-mcp-rail-dark.png", "alt": "Sección MCP Servers al final del carril con el botón Add custom MCP server", "caption": "La sección MCP Servers — aquí se listan los servidores registrados; debajo, Add custom MCP server.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "add-custom-server",
+      "title": "Añada un Servidor MCP Personalizado (Cualquier URL)",
+      "content": "<p>Su agente no está limitado a los servidores creados en iMash — puede conectarse a <em>cualquier</em> servidor MCP de internet.</p><ol><li>En la sección <strong>MCP Servers</strong>, haga clic en <strong>Add custom MCP server</strong> (Añadir servidor MCP personalizado).</li><li>Complete el cuadro de diálogo:<ul><li><strong>Name</strong> (Nombre) — una etiqueta que reconozca más adelante (p. ej., \"Weather MCP\").</li><li><strong>Server URL</strong> (URL del servidor) — el endpoint del servidor. Las URLs que terminan en <code>/sse</code> usan transporte SSE; las que terminan en <code>/mcp</code> usan HTTP en streaming — el transporte correcto se detecta automáticamente, así que simplemente pegue la URL que le entregue su proveedor.</li><li><strong>Auth header (optional)</strong> (Cabecera de autenticación, opcional) — si el servidor requiere autenticación, introduzca el nombre de la cabecera (por defecto <code>Authorization</code>) y su valor (p. ej., <code>Bearer &lt;token&gt;</code>). El valor se enmascara mientras escribe.</li></ul></li><li>Haga clic en <strong>Attach</strong> (Adjuntar).</li></ol><blockquote>⚠️ Adjunte únicamente servidores MCP en los que confíe. El agente invocará sin reparos cualquier herramienta que exponga el servidor — un servidor malicioso podría suministrarle datos o instrucciones dañinas.</blockquote>",
+      "images": [
+        {"src": "images/agents/agent-mcp-custom-modal-light.png", "alt": "Diálogo Add custom MCP server con los campos Name, Server URL y Auth header", "caption": "Add custom MCP server — nombre, URL y una cabecera de autenticación opcional.", "theme": "light"},
+        {"src": "images/agents/agent-mcp-custom-modal-dark.png", "alt": "Diálogo Add custom MCP server con los campos Name, Server URL y Auth header", "caption": "Add custom MCP server — nombre, URL y una cabecera de autenticación opcional.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "review-and-detach",
+      "title": "Revise la Conexión — el Descubrimiento de Herramientas Es Automático",
+      "content": "<p>Cada servidor adjuntado aparece como una tarjeta en el panel derecho. Esta es la magia de MCP: <strong>usted nunca mapea herramientas individuales</strong>. Al comienzo de cada conversación, el agente se conecta al servidor, descubre las herramientas y recursos que expone en ese momento y puede invocarlos bajo demanda. Añada una herramienta nueva en el lado del servidor y su agente la detectará en la siguiente llamada — sin editar nada en iMash.</p><ol><li>Haga clic en la cabecera de una tarjeta para expandirla. Los servidores personalizados muestran su <strong>URL</strong> y si hay una cabecera de autenticación configurada; los servidores integrados muestran un enlace <strong>Manage MCP servers</strong> (Gestionar servidores MCP) de vuelta a Automation.</li><li>Para quitar un servidor, haga clic en el icono de la <strong>papelera</strong> de su tarjeta y confirme con <strong>Detach</strong> (Desvincular). Desvincular solo lo desconecta de este agente — el servidor sigue existiendo.</li></ol>",
+      "images": [
+        {"src": "images/agents/agent-mcp-attached-card-light.png", "alt": "Tarjeta de servidor MCP adjuntado expandida mostrando el resumen de conexión y la URL del servidor", "caption": "Una tarjeta de MCP personalizado adjuntada — sus herramientas y recursos están disponibles durante las conversaciones.", "theme": "light"},
+        {"src": "images/agents/agent-mcp-attached-card-dark.png", "alt": "Tarjeta de servidor MCP adjuntado expandida mostrando el resumen de conexión y la URL del servidor", "caption": "Una tarjeta de MCP personalizado adjuntada — sus herramientas y recursos están disponibles durante las conversaciones.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "node-view-tasks",
+      "title": "Avanzado: Asigne un Servidor MCP a una Sola Tarea (Vista Node)",
+      "content": "<p>Adjuntar desde el panel Tools &amp; MCP entrega el servidor a su agente <em>principal</em>. Si construye agentes de varios pasos con Tareas (Tasks), también puede limitar un servidor MCP a una sola Tarea, de modo que solo esa parte de la conversación pueda usarlo.</p><ol><li>En la parte superior del editor, cambie el conmutador de <strong>Form</strong> a <strong>Node</strong> (Nodo).</li><li>En el carril derecho, haga clic en el icono <strong>Components</strong> (Componentes, la cuadrícula) y busque <em>MCP</em>. Encontrará dos nodos arrastrables bajo <strong>Tools</strong>:<ul><li><strong>MCP Server</strong> — adjunte uno de sus servidores registrados.</li><li><strong>Custom MCP</strong> — adjunte un servidor externo por URL.</li></ul></li><li>Arrastre uno al lienzo, elija el servidor (o introduzca la URL) en su panel lateral y conecte el nodo al conector <strong>Tools</strong> de la Tarea.</li></ol><p>¿Nuevo en las Tareas? Empiece por <a data-href=\"/agents/sub-agents\">Sub Agentes, Tareas y Transferencias</a>.</p>",
+      "images": [
+        {"src": "images/agents/agent-mcp-node-palette-light.png", "alt": "Paleta Components de la vista Node filtrada por MCP mostrando los nodos MCP Server y Custom MCP", "caption": "En la vista Node, la paleta Components tiene los nodos MCP Server y Custom MCP bajo Tools.", "theme": "light"},
+        {"src": "images/agents/agent-mcp-node-palette-dark.png", "alt": "Paleta Components de la vista Node filtrada por MCP mostrando los nodos MCP Server y Custom MCP", "caption": "En la vista Node, la paleta Components tiene los nodos MCP Server y Custom MCP bajo Tools.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "test-the-integration",
+      "title": "Pruébelo en Vivo",
+      "content": "<p>Llegó la recompensa — vea a su agente usar herramientas que nunca se le enseñaron explícitamente.</p><ol><li>En la barra superior del editor, haga clic en <strong>Test Agent</strong> (Probar Agente) y luego en <strong>Connect</strong> (Conectar) en el panel de prueba.</li><li>Pregunte algo que solo el servidor MCP pueda responder — por ejemplo, <em>\"¿Qué clima hace en París ahora mismo?\"</em> si adjuntó un servidor de clima.</li><li>Confirme que el agente invoca la herramienta y responde con datos reales. En los servidores construidos con flujos de iMash, cada invocación (con sus entradas y salidas) también queda registrada en <strong>Automation</strong>, para que pueda auditar exactamente qué se ejecutó.</li></ol><blockquote>💡 Si el agente no recurre a la herramienta, mencione la capacidad en su prompt del sistema (p. ej., \"Puedes consultar el clima en vivo cuando te lo pidan\") — una pequeña pista mejora drásticamente el uso de herramientas.</blockquote>"
     }
   ],
   "nextSteps": {
-    "title": "¿Qué sigue?",
-    "description": "Sigue ampliando las capacidades de tu agente:",
+    "title": "¿Qué Sigue?",
+    "description": "Una conexión lista, todo un ecosistema por delante — siga sumando capacidades a su agente:",
     "cards": [
-      { "href": "/automations/smart-flows", "title": "Crea flujos avanzados", "description": "Agrega lógica de ramificación y múltiples entradas a tus flujos." },
-      { "href": "/agents/agent-tools", "title": "Agrega más herramientas", "description": "Combina herramientas predefinidas y personalizadas junto con tu MCP." },
-      { "href": "/agents/observer-agent", "title": "Configura el agente observador", "description": "Activa herramientas MCP en segundo plano mientras una llamada está en curso." }
+      {
+        "href": "/automations/mcp-servers",
+        "title": "Construya Su Propio Servidor MCP",
+        "description": "Convierta sus flujos de automatización en un servidor MCP que sus agentes puedan invocar."
+      },
+      {
+        "href": "/agents/agent-tools",
+        "title": "Añada Más Herramientas",
+        "description": "Combine acciones predefinidas y herramientas HTTP personalizadas junto a sus servidores MCP."
+      },
+      {
+        "href": "/agents/test-your-agent",
+        "title": "Pruebe Su Agente",
+        "description": "Domine el panel de pruebas integrado antes de que su agente hable con clientes reales."
+      },
+      {
+        "href": "/agents/sub-agents",
+        "title": "Sub Agentes, Tareas y Transferencias",
+        "description": "Divida conversaciones complejas en Tareas — cada una con sus propias herramientas y servidores MCP."
+      }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+    "title": "¿Necesita Ayuda?",
+    "content": "<p>Si tiene algún problema o alguna pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Conecta un servidor MCP a tu agente | Documentación de iMash",
-  "metaDescription": "Agrupa flujos de automatización y herramientas de iMash en un servidor MCP y adjúntalo a un Smart Agent. Crea un flujo, crea el MCP, adjúntalo y prueba la integración.",
-  "metaKeywords": "MCP, servidor mcp, imash, agente inteligente, automatización, flujos, herramientas, model context protocol"
+  "metaTitle": "Conecte un Servidor MCP a Su Agente | Documentación de iMash",
+  "metaDescription": "Adjunte un servidor MCP a su Smart Agent de iMash: elija un servidor registrado o conecte cualquier MCP externo por URL, deje que el agente descubra sus herramientas automáticamente, limite servidores a Tareas y pruebe en vivo.",
+  "metaKeywords": "MCP, servidor MCP, model context protocol, adjuntar MCP, herramientas smart agent, servidor MCP personalizado, descubrimiento de herramientas, agente iMash"
 }

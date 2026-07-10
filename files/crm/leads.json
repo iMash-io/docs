@@ -1,52 +1,121 @@
 {
   "title": "Leads",
-  "lede": "Leads are your potential customers — people who have shown interest but haven't become customers yet. This guide shows you how to add, filter, tag, and convert them.",
-  "timeToComplete": "5 minutes",
+  "lede": "Leads are your potential customers — every person your AI agents talk to, every form submission, every prospect you import lands here. This guide walks you A-to-Z through the Leads screen: adding, filtering, tagging, tracking lifecycle stages, and converting leads into customers.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
       "id": "open-leads",
       "title": "Open the Leads list",
-      "content": "<ol><li>In the left navigation, open <strong>CRM</strong> and click <strong>Leads</strong> (or go to <code>/crm/leads</code>).</li><li>You'll see every lead in a searchable table with columns for <strong>Name</strong>, <strong>Email</strong>, <strong>Phone</strong>, <strong>Stage</strong>, <strong>Account</strong>, and <strong>Last Updated</strong>.</li><li>Click any name or avatar to open that lead's full profile.</li></ol><p>Think of a lead as a person who might buy from you. Once they do, you convert them into a <strong>Contact</strong>.</p>",
+      "content": "<p>The Leads list is your command center for prospects — and it fills itself: AI agents, booking forms, and imports all create leads here automatically.</p><ol><li>In the top navigation, click <strong>CRM</strong>, then click the <strong>Leads</strong> tab (or go directly to <code>/crm/leads</code>).</li><li>You'll see every lead in a searchable table with columns for <strong>Avatar</strong>, <strong>Name</strong>, <strong>Email</strong>, <strong>Phone</strong>, <strong>Stage</strong>, <strong>Account</strong>, and <strong>Last Updated</strong>.</li><li>Each row also has three action icons on the right: <strong>View</strong> (eye) opens the lead, <strong>Call</strong> (phone) dials the lead's first number with the built-in web dialer, and <strong>Delete</strong> (trash) removes the lead after a confirmation.</li><li>Click any lead's name or avatar to open the full <strong>Lead Details</strong> drawer.</li></ol><p>Think of a lead as a person who might buy from you. Once they become a real customer, you convert them into a <strong>Contact</strong>.</p>",
       "images": [
-        { "src": "images/crm/leads-light.png", "alt": "Leads list", "caption": "The Leads list with search, filters, and stage tags", "theme": "light" },
-        { "src": "images/crm/leads-dark.png", "alt": "Leads list", "caption": "The Leads list with search, filters, and stage tags", "theme": "dark" }
+        { "src": "images/crm/leads-light.png", "alt": "Leads list showing the table of leads with stages and phone numbers", "caption": "The Leads list — search, filters, stage pills, and per-row View / Call / Delete actions", "theme": "light" },
+        { "src": "images/crm/leads-dark.png", "alt": "Leads list showing the table of leads with stages and phone numbers", "caption": "The Leads list — search, filters, stage pills, and per-row View / Call / Delete actions", "theme": "dark" }
       ]
     },
     {
       "id": "add-lead",
       "title": "Add a new lead",
-      "content": "<ol><li>Click the <strong>Create</strong> (New Lead) button at the top of the list.</li><li>Enter the <strong>First Name</strong> and <strong>Last Name</strong> (both required).</li><li>Add one or more addresses in the <strong>Emails</strong> field — the first one is the primary email.</li><li>Click <strong>Add Phone Number</strong> to add a phone with a label (Mobile, Work, Home, etc.).</li><li>Optionally set a <strong>Stage</strong>, link an <strong>Account</strong> (company), and fill in the address.</li><li>Click <strong>Save</strong>.</li></ol>"
+      "content": "<ol><li>Click <strong>Add Lead</strong> in the top-right of the list. The <strong>Create Lead</strong> drawer opens.</li><li>Enter the <strong>First Name</strong> and <strong>Last Name</strong> (both required).</li><li>Click <strong>+ Add Email</strong> to add one or more email addresses — the first one becomes the primary email.</li><li>Click <strong>+ Add Phone Number</strong> to add a phone with a label (<strong>Mobile</strong>, <strong>Home</strong>, <strong>Work</strong>, <strong>Office</strong>, and more). You can add several numbers.</li><li>Pick a <strong>Source</strong> (where this lead came from) and a <strong>Stage</strong> — new leads default to <strong>New</strong>.</li><li>Optionally link an <strong>Account</strong> (the lead's company) and fill in the address fields: <strong>Street Address</strong>, <strong>Apartment/Suite</strong>, <strong>City</strong>, <strong>State/Province</strong>, <strong>Postal Code</strong>, <strong>Country</strong>.</li><li>Click <strong>Save</strong>.</li></ol><blockquote>💡 You rarely have to add leads one by one — the <strong>Import</strong> button (upload icon next to Add Lead) bulk-imports a CSV, and your AI agents create leads automatically during calls.</blockquote>",
+      "images": [
+        { "src": "images/crm/leads-create-light.png", "alt": "Create Lead drawer with name, emails, phone numbers, source, stage, account and address fields", "caption": "The Create Lead drawer — only First and Last Name are required", "theme": "light" },
+        { "src": "images/crm/leads-create-dark.png", "alt": "Create Lead drawer with name, emails, phone numbers, source, stage, account and address fields", "caption": "The Create Lead drawer — only First and Last Name are required", "theme": "dark" }
+      ]
     },
     {
       "id": "search-filter",
       "title": "Search, filter, and sort",
-      "content": "<ul><li>Use the <strong>search box</strong> and switch the field between <strong>Name</strong>, <strong>Email</strong>, or <strong>Phone</strong>.</li><li>Add filters for <strong>Stage</strong>, <strong>Account</strong>, <strong>Source</strong>, <strong>Tags</strong>, <strong>Address</strong>, <strong>City</strong>, or <strong>Owner</strong> to narrow the list.</li><li>Click a column header (Name, Email, Stage, Last Updated) to sort by it.</li></ul>"
+      "content": "<p>Find any lead in seconds, even with thousands in the list:</p><ul><li><strong>Search box</strong> — use the dropdown on its left to switch the search field between <strong>Name</strong>, <strong>Email</strong>, and <strong>Phone</strong>. Phone search is forgiving: it matches digits even if the stored number is formatted differently.</li><li><strong>Filter By</strong> — a multi-select where you can stack filters: <strong>Stage</strong>, <strong>Account</strong>, <strong>Source</strong>, <strong>Tags</strong>, <strong>Address</strong>, <strong>City</strong>, and <strong>Owner</strong>. Picking a filter reveals a dedicated input next to it (for example a stage picker or a tag dropdown).</li><li><strong>Extra columns</strong> — selecting the Source, Tags, Address, or City filter also adds that column to the table so you can see the value on every row.</li><li><strong>Sorting</strong> — click a column header (<strong>Name</strong>, <strong>Email</strong>, <strong>Stage</strong>, <strong>Account</strong>, <strong>Last Updated</strong>) to sort; click again to flip the direction.</li><li><strong>API Info</strong> — the link icon at the far right of the toolbar opens a window with ready-made API examples for creating and reading leads programmatically. Pair it with your key from <a data-href=\"/get-started/api-keys\">API Keys</a>.</li></ul>",
+      "images": [
+        { "src": "images/crm/leads-toolbar-light.png", "alt": "Leads toolbar with search field selector, Search Leads box, Filter By dropdown and action buttons", "caption": "The toolbar: search field picker, Filter By, Select all, Import, Add Lead, Find Duplicates, and API Info", "theme": "light" },
+        { "src": "images/crm/leads-toolbar-dark.png", "alt": "Leads toolbar with search field selector, Search Leads box, Filter By dropdown and action buttons", "caption": "The toolbar: search field picker, Filter By, Select all, Import, Add Lead, Find Duplicates, and API Info", "theme": "dark" }
+      ]
     },
     {
-      "id": "tag-organize",
-      "title": "Tag and organize leads",
-      "content": "<ul><li>Open a lead and add <strong>tags</strong> (for example <em>hot</em>, <em>follow-up</em>, or a campaign name) to group similar leads.</li><li>Set the lead's <strong>Stage</strong> to track where it sits in your pipeline.</li><li>Use the <strong>Tags</strong> filter on the list to instantly pull up everyone with a given tag.</li></ul>"
+      "id": "lead-detail",
+      "title": "Open a lead — the Lead Details drawer",
+      "content": "<p>Click any lead to open its full profile in a drawer. Everything about the person lives here:</p><ul><li><strong>Header</strong> — the avatar (click the camera to upload a photo), the lead's name, the current stage badge, and quick-action circles to <strong>Call Lead</strong> and <strong>Send Email</strong>.</li><li><strong>Lead Information</strong> tab — edit <strong>Emails</strong> (multiple, first is primary), <strong>Account</strong>, <strong>Tags</strong> (type a tag and press Enter), <strong>Phone Numbers</strong> (add with a label, delete with the trash icon), and <strong>Timezone</strong>.</li><li><strong>Convert To Contact</strong> — the button in the drawer's top-right promotes this lead to your Contacts list once they become a customer.</li></ul><blockquote>💡 Set the lead's <strong>Timezone</strong> — campaign calling windows and calendar events respect it, so you never ring someone at 3 AM.</blockquote>",
+      "images": [
+        { "src": "images/crm/leads-detail-light.png", "alt": "Lead Details drawer showing header, tabs and Lead Information fields", "caption": "The Lead Details drawer — header with quick actions, tabs, and the Lead Information fields", "theme": "light" },
+        { "src": "images/crm/leads-detail-dark.png", "alt": "Lead Details drawer showing header, tabs and Lead Information fields", "caption": "The Lead Details drawer — header with quick actions, tabs, and the Lead Information fields", "theme": "dark" }
+      ]
     },
     {
-      "id": "bulk-convert",
-      "title": "Bulk actions and convert to contacts",
-      "content": "<ol><li>Tick the checkboxes next to leads (or select all matching your filters).</li><li>From the bulk toolbar you can <strong>Delete</strong>, <strong>Assign to an Account</strong>, <strong>Change Owner</strong>, or <strong>Convert to Contacts</strong>.</li><li><strong>Convert to Contacts</strong> promotes chosen leads into your Contacts list once they become real customers.</li><li>Use <strong>Find Duplicates</strong> (by phone or email) to clean up repeated records.</li></ol>"
+      "id": "detail-tabs",
+      "title": "Explore the rest of the tabs",
+      "content": "<p>The drawer's tab bar covers the lead's whole world. Besides Lead Information you'll find:</p><ul><li><strong>Additional Information</strong> — first/last name, the full address (<strong>Street Address</strong>, <strong>Apartment/Suite</strong>, <strong>City</strong>, <strong>State/Province</strong>, <strong>Postal Code</strong>, <strong>Country</strong>), plus a <strong>Tax-Exempt</strong> toggle with an <strong>Exemption Certificate #</strong> field for tax-free customers.</li><li><strong>Files</strong> — attach documents, photos, or contracts to the lead.</li><li><strong>Calendar</strong> — every calendar event linked to this lead, with an <strong>Add Event</strong> button to book the next appointment.</li><li><strong>Email</strong> — a full email thread view: send emails to the lead and read replies without leaving the CRM. Badges on the tab show total and unread counts.</li><li><strong>Deals</strong>, <strong>Invoices</strong>, <strong>Quotes</strong>, <strong>Jobs</strong> — everything in your pipeline tied to this lead.</li><li><strong>Payment Methods</strong> — cards saved on file for this lead.</li></ul>",
+      "images": [
+        { "src": "images/crm/leads-additional-light.png", "alt": "Additional Information tab with name, address fields and Tax-Exempt toggle", "caption": "Additional Information — address details and the Tax-Exempt toggle", "theme": "light" },
+        { "src": "images/crm/leads-additional-dark.png", "alt": "Additional Information tab with name, address fields and Tax-Exempt toggle", "caption": "Additional Information — address details and the Tax-Exempt toggle", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "call-logs",
+      "title": "Review every call in Call Logs",
+      "content": "<p>This is where the AI magic becomes visible: every call with this lead — AI agent calls, campaign calls, and calls your team makes with the web dialer — is logged automatically.</p><ol><li>Open the <strong>Call Logs</strong> tab in the Lead Details drawer.</li><li>Each row shows the <strong>Date</strong>, the <strong>Type</strong> (an <strong>AI Dialer</strong> pill for AI-agent calls, a <strong>Web Dialer</strong> pill for calls your team placed), the <strong>Previous Call Transition</strong> (how that call moved the lead's lifecycle stage — for example <em>New ▶ Interested</em>), the <strong>Number</strong> dialed, and the call's <strong>Duration</strong>.</li><li>Click any row to open the full call record — recording, transcript, and the AI's post-call summary.</li></ol><blockquote>💡 No more \"what did we talk about?\" — the complete conversation history for every lead is one click away.</blockquote>",
+      "images": [
+        { "src": "images/crm/leads-call-logs-light.png", "alt": "Call Logs tab listing calls with date, type, number and duration columns", "caption": "Call Logs — every AI and human call with this lead, clickable for full details", "theme": "light" },
+        { "src": "images/crm/leads-call-logs-dark.png", "alt": "Call Logs tab listing calls with date, type, number and duration columns", "caption": "Call Logs — every AI and human call with this lead, clickable for full details", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "custom-data",
+      "title": "Store Custom Data your AI agents can use",
+      "content": "<p>The <strong>Custom Data</strong> tab holds custom variables on the lead — extra fields like <em>gate code</em>, <em>preferred technician</em>, or <em>membership level</em> that don't have a built-in field.</p><ol><li>Open the <strong>Custom Data</strong> tab.</li><li>Click <strong>+ Add Field</strong>, type a <strong>Field Name</strong> and a <strong>Value</strong>, then click <strong>Save</strong>.</li><li>Edit or delete fields any time from the <strong>Actions</strong> column.</li></ol><p>These variables are shared with your AI agents: an agent can read them to personalize the conversation (\"I see your gate code is 4321, I'll pass it to the technician\") and can write new ones it learns during a call. Learn more in <a data-href=\"/agents/costum-variables\">Custom Variables</a>.</p>",
+      "images": [
+        { "src": "images/crm/leads-custom-data-light.png", "alt": "Custom Data tab with Add Field button and field name/value inputs", "caption": "Custom Data — free-form fields your AI agents can read and update", "theme": "light" },
+        { "src": "images/crm/leads-custom-data-dark.png", "alt": "Custom Data tab with Add Field button and field name/value inputs", "caption": "Custom Data — free-form fields your AI agents can read and update", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "lifecycle-notes",
+      "title": "Track the lifecycle and keep notes",
+      "content": "<p>Scroll below the tabs and you'll find two more sections:</p><ul><li><strong>Lifecycle</strong> — a stage bar showing your pipeline (for example <strong>New → Contacted → Interested → Qualified → Negotiation → Won</strong>). Click a stage to move the lead there; stages with a small arrow have sub-stages to choose from. The current stage is highlighted and also colors the badge in the header. You customize these stages in <a data-href=\"/crm/crm-settings\">CRM Settings</a>.</li><li><strong>Campaign Lifecycles</strong> — if the lead is part of a calling campaign, a separate per-campaign stage bar appears here, updated automatically as the AI works the lead.</li><li><strong>Notes</strong> — type in <strong>Add your note</strong> and press Enter. Notes are timestamped and stack up as a running journal on the lead.</li></ul><blockquote>⚠️ Moving a lead to a stage like <strong>Won</strong> or <strong>Lost</strong> doesn't convert or delete it — it just records where the lead stands. Use <strong>Convert To Contact</strong> when they actually become a customer.</blockquote>",
+      "images": [
+        { "src": "images/crm/leads-lifecycle-light.png", "alt": "Lifecycle stage bar with New, Contacted, Interested, Qualified, Negotiation and Won stages", "caption": "The Lifecycle bar — click a stage to move the lead through your pipeline", "theme": "light" },
+        { "src": "images/crm/leads-lifecycle-dark.png", "alt": "Lifecycle stage bar with New, Contacted, Interested, Qualified, Negotiation and Won stages", "caption": "The Lifecycle bar — click a stage to move the lead through your pipeline", "theme": "dark" },
+        { "src": "images/crm/leads-notes-light.png", "alt": "Notes section with the Add your note input", "caption": "Notes — a timestamped journal on every lead", "theme": "light" },
+        { "src": "images/crm/leads-notes-dark.png", "alt": "Notes section with the Add your note input", "caption": "Notes — a timestamped journal on every lead", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "bulk-actions",
+      "title": "Bulk actions — convert, reassign, or delete many at once",
+      "content": "<ol><li>Tick the checkbox on each lead's row, or tick <strong>Select all N leads</strong> in the toolbar to select every lead matching your current search and filters (across all pages).</li><li>A <strong>Selected N</strong> counter appears with the bulk buttons:</li></ol><ul><li><strong>Convert To Contact</strong> — promotes the selected leads into your Contacts list (available when rows are hand-picked).</li><li><strong>Change Owner</strong> (person icon) — reassigns the selected leads to another team member.</li><li><strong>Assign Account</strong> (card icon) — links the selected leads to a company account, or clears the link.</li><li><strong>Delete Selected</strong> (red trash icon) — removes them all after a confirmation.</li></ul><blockquote>💡 Combine filters with <strong>Select all</strong> for power moves: filter by Tag = <em>trade-show-2026</em>, select all, and assign every one of them to a teammate in two clicks.</blockquote>",
+      "images": [
+        { "src": "images/crm/leads-bulk-light.png", "alt": "Toolbar with Select all leads checkbox, Selected counter and bulk action buttons", "caption": "Bulk mode — Convert To Contact, Change Owner, Assign Account, and Delete Selected", "theme": "light" },
+        { "src": "images/crm/leads-bulk-dark.png", "alt": "Toolbar with Select all leads checkbox, Selected counter and bulk action buttons", "caption": "Bulk mode — Convert To Contact, Change Owner, Assign Account, and Delete Selected", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "find-duplicates",
+      "title": "Find and remove duplicate leads",
+      "content": "<p>Imports and inbound calls can create the same person twice. Clean up in seconds:</p><ol><li>Click the <strong>Find Duplicates</strong> button (copy icon) in the toolbar. The <strong>Find &amp; Remove Duplicate Leads</strong> window opens.</li><li>Choose the <strong>Duplicate scope</strong>: across all leads, or only within the same account.</li><li>Click <strong>Phone Number</strong> or <strong>Email Address</strong> to scan for leads sharing that value.</li><li>Matching groups appear below — delete duplicates per group, or delete all at once. The <strong>oldest lead in each group is always kept</strong>, so your original record and its history survive.</li></ol><blockquote>⚠️ Deleting duplicates cannot be undone. Skim the groups before confirming a bulk delete.</blockquote>",
+      "images": [
+        { "src": "images/crm/leads-duplicates-light.png", "alt": "Find and Remove Duplicate Leads window with scope selector and Phone Number / Email Address buttons", "caption": "Find & Remove Duplicate Leads — scan by phone or email, keep the oldest record", "theme": "light" },
+        { "src": "images/crm/leads-duplicates-dark.png", "alt": "Find and Remove Duplicate Leads window with scope selector and Phone Number / Email Address buttons", "caption": "Find & Remove Duplicate Leads — scan by phone or email, keep the oldest record", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "ai-and-leads",
+      "title": "How your AI agents work with leads",
+      "content": "<p>Leads aren't just a list you maintain by hand — they're the memory of your AI call center:</p><ul><li><strong>AI agents create leads</strong> — when an unknown caller reaches your agent (or your agent is told to capture someone's details), it saves them as a new lead with name, phone, and whatever it learned.</li><li><strong>AI agents update leads</strong> — during a call the agent can update fields and Custom Data variables, and every call is written to the lead's <strong>Call Logs</strong> automatically.</li><li><strong>Campaigns work your leads</strong> — add leads to a dial list and a campaign calls through them, advancing each lead's <strong>Campaign Lifecycle</strong> as it goes. See <a data-href=\"/campaigns/create-campaign\">Create a Campaign</a>.</li><li><strong>Personalization</strong> — agent prompts can reference lead fields and custom variables (like the lead's first name), so every conversation feels personal. See <a data-href=\"/agents/costum-variables\">Custom Variables</a>.</li></ul><p>Set your stages once, let the AI fill and work the list, and watch your pipeline move on its own.</p>"
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Turn leads into customers and reach out at scale.",
+    "description": "Turn leads into customers and put your outreach on autopilot.",
     "cards": [
       { "href": "/crm/contacts", "title": "Contacts", "description": "Manage the people who became customers." },
       { "href": "/crm/accounts", "title": "Accounts", "description": "Group leads and contacts under their company." },
-      { "href": "/campaigns/create-campaign", "title": "Create a Campaign", "description": "Call or message your leads automatically." }
+      { "href": "/campaigns/create-campaign", "title": "Create a Campaign", "description": "Have the AI call or message your leads automatically." },
+      { "href": "/crm/import-export-data", "title": "Import & Export Data", "description": "Bulk-import leads from a CSV with field mapping." }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Leads - CRM | iMash Docs",
-  "metaDescription": "Add, filter, tag, and convert leads in the iMash CRM. Track potential customers by stage, search by name, email or phone, and bulk-convert to contacts.",
-  "metaKeywords": "leads, CRM leads, potential customers, lead stage, lead pipeline, convert lead to contact, lead tags"
+  "metaTitle": "Leads - CRM | iMash Documentation",
+  "metaDescription": "Complete guide to leads in the iMash CRM: add and import leads, search and filter, lifecycle stages, call logs, custom data for AI agents, bulk convert to contacts, and duplicate cleanup.",
+  "metaKeywords": "leads, CRM leads, lead management, lead stage, lead lifecycle, convert lead to contact, lead call logs, lead custom data, AI lead capture, duplicate leads"
 }

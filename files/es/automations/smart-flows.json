@@ -1,53 +1,110 @@
 {
   "title": "Crear una Automatización (Smart Flow)",
-  "lede": "Usa el creador visual de Automatización para conectar un disparador con una o más acciones, de modo que tareas como crear un lead, enviar un mensaje o iniciar una llamada ocurran automáticamente.",
-  "timeToComplete": "8 minutos",
+  "lede": "Conecte un disparador con una cadena de acciones en el creador visual de Automatización de iMash: los leads nuevos reciben llamadas de seguimiento, los registros se actualizan solos y el trabajo repetitivo deja de ser su responsabilidad. Sin necesidad de programar.",
+  "timeToComplete": "10 minutos",
   "steps": [
     {
       "id": "open-automation",
-      "title": "Abrir Automatización",
-      "content": "<ol><li>En el menú de la izquierda, ve a <strong>Intelligence Center → Automation</strong> (Centro de Inteligencia → Automatización).</li><li>Esto abre el panel visual de flujos de trabajo donde viven todas tus automatizaciones.</li><li>Haz clic en <strong>New Flow</strong> (Nuevo flujo) o en el botón <strong>+</strong> para comenzar una automatización nueva.</li></ol>",
+      "title": "Abrir el Panel de Automatización",
+      "content": "<p>Cada automatización que construya vive en un único espacio de trabajo visual. Vamos a abrirlo.</p><ol><li>En la barra lateral izquierda, bajo <strong>Intelligence Center</strong> (Centro de Inteligencia), haga clic en <strong>Automation</strong> (Automatización). (También puede hacer clic en la pestaña <strong>Automation</strong> en la parte superior de la aplicación y luego en <strong>Automation Flows</strong>.)</li><li>Se abre el panel de <strong>Flows</strong> (Flujos). Esto es lo que verá:<ul><li>Pestañas <strong>Flows / Runs / Issues</strong> (Flujos / Ejecuciones / Problemas) — su lista de flujos, cada ejecución y los fallos que requieren atención.</li><li>Panel de <strong>Folders</strong> (Carpetas) — organice los flujos en carpetas; <strong>All flows</strong> (Todos los flujos) y <strong>Uncategorized</strong> (Sin categoría) vienen integradas, y el botón <strong>+</strong> agrega carpetas nuevas.</li><li>Filtros de <strong>Flow name</strong> (Nombre del flujo), <strong>Status</strong> (Estado) y <strong>Connection</strong> (Conexión) — para encontrar rápidamente un flujo en una lista larga.</li><li>Un menú lateral con <strong>Flows</strong>, <strong>Custom Tables</strong> (Tablas Personalizadas), <strong>System Tables</strong> (Tablas del Sistema), <strong>MCP</strong>, <strong>Todos</strong> (Pendientes) y <strong>Connections</strong> (Conexiones) — esta guía se centra en Flows; en Connections viven las credenciales de las apps vinculadas.</li></ul></li></ol>",
       "images": [
-        { "src": "images/automations/automation-overview-light.png", "alt": "Panel de Automatización", "caption": "El panel de Automatización lista tus flujos de trabajo.", "theme": "light" },
-        { "src": "images/automations/automation-overview-dark.png", "alt": "Panel de Automatización", "caption": "El panel de Automatización lista tus flujos de trabajo.", "theme": "dark" }
+        { "src": "images/automations/automation-overview-light.png", "alt": "Panel de Automatización mostrando la lista de Flujos", "caption": "El panel de Automatización: todos los flujos, ejecuciones y problemas en un solo lugar.", "theme": "light" },
+        { "src": "images/automations/automation-overview-dark.png", "alt": "Panel de Automatización mostrando la lista de Flujos", "caption": "El panel de Automatización: todos los flujos, ejecuciones y problemas en un solo lugar.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "create-flow",
+      "title": "Crear un Flujo Nuevo",
+      "content": "<ol><li>Haga clic en <strong>Create flow</strong> (Crear flujo) en la esquina superior derecha.</li><li>Elija cómo quiere empezar:<ul><li><strong>From scratch</strong> (Desde cero) — un lienzo en blanco (lo que usaremos en esta guía).</li><li><strong>Use a template</strong> (Usar una plantilla) — explore flujos ya construidos y personalícelos.</li><li><strong>From local file</strong> (Desde archivo local) — importe un flujo exportado previamente como archivo JSON (ideal para copiar flujos entre cuentas).</li></ul></li><li>Haga clic en <strong>From scratch</strong>. Un flujo nuevo llamado <strong>Untitled</strong> (Sin título) se abre en el creador.</li></ol>",
+      "images": [
+        { "src": "images/automations/smart-flows-create-menu-light.png", "alt": "Menú Create flow con las opciones From scratch, Use a template y From local file", "caption": "Create flow → From scratch inicia una automatización en blanco.", "theme": "light" },
+        { "src": "images/automations/smart-flows-create-menu-dark.png", "alt": "Menú Create flow con las opciones From scratch, Use a template y From local file", "caption": "Create flow → From scratch inicia una automatización en blanco.", "theme": "dark" }
       ]
     },
     {
       "id": "pick-trigger",
-      "title": "Elegir un Disparador",
-      "content": "<ol><li>Cada flujo comienza con un <strong>disparador</strong>: el evento que lo pone en marcha.</li><li>Haz clic en el primer bloque y elige un disparador. Uno común es <strong>Catch Webhook</strong> (Capturar Webhook), que te da una URL a la que los sistemas externos pueden enviar datos.</li><li>Otros disparadores incluyen un <strong>schedule</strong> (programación: ejecutar cada X minutos) o un evento de una app.</li></ol>",
+      "title": "Elegir el Disparador",
+      "content": "<p>Cada flujo comienza con exactamente un <strong>disparador</strong>: el evento que lo pone todo en marcha. Hasta que elija uno, el lienzo muestra <strong>1. Select Trigger</strong> (Seleccionar Disparador) con la advertencia \"Empty Trigger\" (Disparador vacío) y la insignia <strong>Complete 1 step</strong> (Complete 1 paso).</p><ol><li>Haga clic en el bloque <strong>1. Select Trigger</strong> (el selector suele abrirse solo en un flujo nuevo).</li><li>Use el cuadro de <strong>Search</strong> (Búsqueda) o acote la lista con los filtros <strong>All</strong> / <strong>AI</strong> / <strong>Core</strong> / <strong>Apps</strong> (Todos / IA / Núcleo / Apps).</li><li>Las fuentes de disparadores populares incluyen <strong>Webhook</strong> (recibir datos de cualquier sistema externo), <strong>Schedule</strong> (Programación: ejecutar con un temporizador), además de apps como <strong>Gmail</strong>, <strong>Google Sheets</strong>, <strong>Slack</strong> y <strong>Human Input</strong> (Entrada Humana).</li><li>Haga clic en una pieza a la izquierda para previsualizar sus disparadores disponibles a la derecha y luego haga clic en un disparador para seleccionarlo.</li></ol>",
       "images": [
-        { "src": "images/automations/automation-builder-light.png", "alt": "Creador de Automatización", "caption": "Elige un disparador y luego encadena acciones debajo de él.", "theme": "light" },
-        { "src": "images/automations/automation-builder-dark.png", "alt": "Creador de Automatización", "caption": "Elige un disparador y luego encadena acciones debajo de él.", "theme": "dark" }
+        { "src": "images/automations/smart-flows-trigger-picker-light.png", "alt": "Selector de disparadores con cuadro de búsqueda, filtros y piezas populares", "caption": "Haga clic en el bloque Select Trigger y explore el catálogo de disparadores.", "theme": "light" },
+        { "src": "images/automations/smart-flows-trigger-picker-dark.png", "alt": "Selector de disparadores con cuadro de búsqueda, filtros y piezas populares", "caption": "Haga clic en el bloque Select Trigger y explore el catálogo de disparadores.", "theme": "dark" }
       ]
     },
     {
-      "id": "add-actions",
-      "title": "Agregar Acciones",
-      "content": "<ol><li>Haz clic en el <strong>+</strong> debajo del disparador para agregar una <strong>acción</strong>: la tarea que se ejecuta.</li><li>Usa las acciones de <strong>System Tables</strong> (Tablas del Sistema) para trabajar con datos de iMash: crear un lead o contacto, buscar filas o iniciar una llamada saliente.</li><li>Referencia datos del disparador (por ejemplo, un número de teléfono que llegó en el webhook) dentro de los campos de cada acción.</li><li>Agrega tantas acciones como necesites: se ejecutan de arriba hacia abajo.</li></ol>",
-      "images": []
+      "id": "schedule-triggers",
+      "title": "Ejemplo: Ejecutar con una Programación",
+      "content": "<p>¿Quiere un flujo que se ejecute en piloto automático sin ningún evento externo? Elija la pieza <strong>Schedule</strong> (Programación) y decida con qué frecuencia se dispara:</p><ul><li><strong>Every X Minutes</strong> (Cada X Minutos) — perfecto para verificaciones frecuentes (p. ej., buscar registros nuevos).</li><li><strong>Every Hour</strong> (Cada Hora), <strong>Every Day</strong> (Cada Día), <strong>Every Week</strong> (Cada Semana), <strong>Every Month</strong> (Cada Mes) — tareas recurrentes clásicas como resúmenes diarios o informes semanales.</li><li><strong>Cron Expression</strong> (Expresión Cron) — control total para patrones de tiempo avanzados.</li></ul><blockquote>💡 <strong>Consejo:</strong> Si otro sistema debe enviar datos a iMash en el momento en que algo sucede (un formulario completado, un pedido nuevo, un lead de una plataforma de anuncios), elija en su lugar <strong>Webhook → Catch Webhook</strong> — es lo que usaremos a continuación.</blockquote>",
+      "images": [
+        { "src": "images/automations/smart-flows-trigger-schedule-light.png", "alt": "Pieza Schedule mostrando los disparadores Every X Minutes, Every Hour, Every Day, Every Week, Every Month y Cron Expression", "caption": "La pieza Schedule ofrece disparadores de temporizador desde minutos hasta una expresión cron completa.", "theme": "light" },
+        { "src": "images/automations/smart-flows-trigger-schedule-dark.png", "alt": "Pieza Schedule mostrando los disparadores Every X Minutes, Every Hour, Every Day, Every Week, Every Month y Cron Expression", "caption": "La pieza Schedule ofrece disparadores de temporizador desde minutos hasta una expresión cron completa.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "configure-webhook",
+      "title": "Configurar el Disparador (Catch Webhook)",
+      "content": "<p>Cuando selecciona <strong>Webhook → Catch Webhook</strong> (Capturar Webhook), el panel de configuración del disparador se abre a la derecha, y su flujo obtiene al instante su propia URL privada:</p><ul><li><strong>Live URL</strong> (URL en vivo) — cópiela con el icono de copiar y péguela en el sistema externo que debe disparar el flujo. Cualquier solicitud HTTP enviada a esa URL inicia su flujo <em>publicado</em>.</li><li><strong>Test URL</strong> (URL de prueba) — una URL separada para probar el borrador actual sin tocar la versión en vivo.</li><li><strong>Synchronous Requests</strong> (Solicitudes síncronas) — agregue <code>/sync</code> al final de la URL si quien llama espera una respuesta (combínelo con una acción <strong>Return Response</strong> más adelante en el flujo).</li><li><strong>Generate Sample Data → Test Trigger</strong> (Generar Datos de Muestra → Probar Disparador) — envíe una solicitud real a la Test URL y luego haga clic aquí para que el creador capture los datos entrantes. Esa muestra es lo que permite a los pasos posteriores mapear campos como un número de teléfono o un nombre.</li></ul><blockquote>⚠️ <strong>No se salte Test Trigger.</strong> Sin datos de muestra, los pasos posteriores no pueden mostrarle los campos entrantes para mapear, y la prueba del flujo completo queda bloqueada.</blockquote>",
+      "images": [
+        { "src": "images/automations/smart-flows-webhook-trigger-light.png", "alt": "Lienzo del creador con el disparador Catch Webhook y su panel de configuración mostrando la Live URL", "caption": "Catch Webhook le da a su flujo una URL única que cualquier sistema puede llamar.", "theme": "light" },
+        { "src": "images/automations/smart-flows-webhook-trigger-dark.png", "alt": "Lienzo del creador con el disparador Catch Webhook y su panel de configuración mostrando la Live URL", "caption": "Catch Webhook le da a su flujo una URL única que cualquier sistema puede llamar.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "add-action",
+      "title": "Agregar una Acción",
+      "content": "<p>Las acciones son los pasos que realmente hacen el trabajo. Se ejecutan de arriba hacia abajo y puede encadenar tantas como necesite.</p><ol><li>Pase el cursor sobre la línea debajo de su disparador y haga clic en el botón <strong>+</strong>.</li><li>Se abre el selector de acciones — con el mismo cuadro de búsqueda y filtros <strong>All / AI / Core / Apps</strong> de antes. Entre las opciones populares están <strong>HTTP</strong> (llamar a cualquier API), <strong>OpenAI</strong>, <strong>Gmail</strong>, <strong>Google Sheets</strong> y <strong>Human Input</strong>.</li><li>Bajo <strong>Core</strong> también encontrará piezas de control de flujo como ramas y bucles para una lógica más inteligente.</li><li>Haga clic en una pieza y luego en la acción específica que desea — se agrega al lienzo como paso 2.</li></ol>",
+      "images": [
+        { "src": "images/automations/smart-flows-action-picker-light.png", "alt": "Selector de acciones abierto desde el botón más debajo del disparador", "caption": "Haga clic en + debajo del disparador para agregar su primera acción.", "theme": "light" },
+        { "src": "images/automations/smart-flows-action-picker-dark.png", "alt": "Selector de acciones abierto desde el botón más debajo del disparador", "caption": "Haga clic en + debajo del disparador para agregar su primera acción.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "imash-actions",
+      "title": "Usar las Acciones de iMash (Datos del CRM + Llamadas de IA)",
+      "content": "<p>Aquí es donde las automatizaciones adquieren superpoderes: la pieza integrada <strong>iMash</strong> conecta los flujos directamente con su CRM y su centro de llamadas de IA.</p><ol><li>En el cuadro de búsqueda del selector de acciones, escriba <strong>imash</strong>.</li><li>La pieza <strong>iMash</strong> aparece con cinco acciones:<ul><li><strong>Find System Table Rows</strong> (Buscar Filas de Tablas del Sistema) — consulte registros existentes (leads, contactos, trabajos y más).</li><li><strong>Create System Table Record(s)</strong> (Crear Registros) — agregue registros nuevos, p. ej., crear un lead con los datos del webhook.</li><li><strong>Update System Table Row</strong> (Actualizar Fila) — modifique los campos de un registro existente.</li><li><strong>Delete System Table Row(s)</strong> (Eliminar Filas) — elimine registros.</li><li><strong>Create Outbound Call</strong> (Crear Llamada Saliente) — haga que uno de sus agentes de IA realice una llamada telefónica. Entra un lead nuevo → sale una llamada de seguimiento de IA, en segundos.</li></ul></li><li>Después de agregar una acción, complete sus campos en el panel derecho. Haga clic en cualquier campo para abrir el <strong>Data Selector</strong> (Selector de Datos) e insertar valores de pasos anteriores — por ejemplo, el número de teléfono que llegó en su webhook.</li></ol><blockquote>💡 <strong>La combinación ganadora:</strong> Catch Webhook → Create System Table Record(s) (guardar el lead) → Create Outbound Call (la IA lo llama de inmediato). Velocidad de respuesta al lead, totalmente automatizada.</blockquote>",
+      "images": [
+        { "src": "images/automations/smart-flows-imash-actions-light.png", "alt": "Selector de acciones buscando imash, mostrando las acciones de Tablas del Sistema y Create Outbound Call", "caption": "Busque \"imash\" para trabajar con registros del CRM o lanzar llamadas de IA desde un flujo.", "theme": "light" },
+        { "src": "images/automations/smart-flows-imash-actions-dark.png", "alt": "Selector de acciones buscando imash, mostrando las acciones de Tablas del Sistema y Create Outbound Call", "caption": "Busque \"imash\" para trabajar con registros del CRM o lanzar llamadas de IA desde un flujo.", "theme": "dark" }
+      ]
     },
     {
       "id": "test-publish",
-      "title": "Probar y Publicar",
-      "content": "<ol><li>Usa <strong>Test</strong> (Probar) para ejecutar el flujo con datos de muestra y confirmar que cada paso funcione.</li><li>Corrige cualquier paso que muestre un error antes de ponerlo en producción.</li><li>Activa el flujo en <strong>On</strong> (Encendido, Publicar) para que se ejecute automáticamente de ahora en adelante.</li></ol>",
+      "title": "Probar y Luego Publicar",
+      "content": "<p>Es hora de darle vida.</p><ol><li>Haga clic en <strong>Test Flow</strong> (Probar Flujo) en la parte superior del lienzo. El creador ejecuta cada paso con sus datos de muestra del disparador y muestra la entrada y salida de cada paso — corrija cualquier paso que reporte un error.</li><li>También puede probar un solo paso desde su panel de configuración antes de ejecutar el flujo completo.</li><li>Cuando todo pase, haga clic en <strong>Publish</strong> (Publicar) en la esquina superior derecha. Su flujo ya está en vivo: se ejecuta automáticamente cada vez que el disparador se activa.</li><li>¿Necesita pausarlo más adelante? Use el interruptor de estado del flujo en la lista de Flows para desactivarlo sin eliminar nada.</li></ol><blockquote>⚠️ <strong>Publicar es obligatorio.</strong> Un flujo en borrador nunca se ejecuta por sí solo — los sistemas externos que llamen a la Live URL no harán nada hasta que el flujo esté publicado.</blockquote>",
       "images": []
+    },
+    {
+      "id": "manage-flow",
+      "title": "Renombrar, Duplicar, Exportar y Más",
+      "content": "<p>Póngale a su flujo un nombre que reconozca dentro de seis meses — \"Untitled\" no será suficiente.</p><ol><li>En el creador, haga clic en la flecha <strong>˅</strong> junto al nombre del flujo en la parte superior izquierda.</li><li>El menú del flujo ofrece:<ul><li><strong>Rename</strong> (Renombrar) — escriba el nuevo nombre y presione <strong>Enter</strong>.</li><li><strong>Move To</strong> (Mover A) — archive el flujo en una carpeta.</li><li><strong>Duplicate</strong> (Duplicar) — copie un flujo que funciona como punto de partida para uno nuevo.</li><li><strong>Import</strong> / <strong>Export</strong> (Importar / Exportar) — traiga un flujo desde un archivo JSON o guarde este (copias de seguridad, compartir, mover entre cuentas).</li><li><strong>Delete</strong> (Eliminar) — elimine el flujo de forma permanente.</li></ul></li><li>También en la barra superior: <strong>Versions</strong> (Versiones) muestra el historial de versiones del flujo y <strong>Runs</strong> (Ejecuciones) salta al registro de ejecuciones de este flujo.</li></ol>",
+      "images": [
+        { "src": "images/automations/smart-flows-flow-menu-light.png", "alt": "Menú del nombre del flujo con Rename, Move To, Duplicate, Import, Export y Delete", "caption": "El menú del flujo: renombrar, organizar, duplicar, importar/exportar o eliminar.", "theme": "light" },
+        { "src": "images/automations/smart-flows-flow-menu-dark.png", "alt": "Menú del nombre del flujo con Rename, Move To, Duplicate, Import, Export y Delete", "caption": "El menú del flujo: renombrar, organizar, duplicar, importar/exportar o eliminar.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "monitor-runs",
+      "title": "Monitorear Ejecuciones y Problemas",
+      "content": "<p>Una vez que los flujos están en vivo, el panel le dice exactamente cómo están funcionando.</p><ol><li>De vuelta en el panel de Automatización, haga clic en la pestaña <strong>Runs</strong> (Ejecuciones) para ver cada ejecución con su <strong>Flow</strong> (Flujo), <strong>Status</strong> (Estado), <strong>Start Time</strong> (Hora de Inicio) y <strong>Duration</strong> (Duración).</li><li>Filtre por <strong>Flow name</strong>, <strong>Status</strong> o <strong>Pick a date range</strong> (Elegir un rango de fechas) para encontrar justo lo que busca.</li><li>Haga clic en cualquier ejecución para reproducirla paso a paso e inspeccionar la entrada y salida exacta de cada paso — la forma más rápida de depurar.</li><li>Seleccione ejecuciones fallidas y haga clic en <strong>Retry</strong> (Reintentar) para ejecutarlas de nuevo.</li><li>La pestaña <strong>Issues</strong> (Problemas) reúne los flujos que fallan repetidamente, para que ningún problema pase desapercibido.</li></ol><p>Eso es todo — ha construido, probado y publicado su primer Smart Flow. Cada uno que agregue desde aquí multiplica el tiempo que ahorra. 🚀</p>",
+      "images": [
+        { "src": "images/automations/smart-flows-runs-light.png", "alt": "Pestaña Runs con filtros de Flow name, Status y rango de fechas y el botón Retry", "caption": "La pestaña Runs registra cada ejecución: filtre, inspeccione y reintente desde aquí.", "theme": "light" },
+        { "src": "images/automations/smart-flows-runs-dark.png", "alt": "Pestaña Runs con filtros de Flow name, Status y rango de fechas y el botón Retry", "caption": "La pestaña Runs registra cada ejecución: filtre, inspeccione y reintente desde aquí.", "theme": "dark" }
+      ]
     }
   ],
   "nextSteps": {
     "title": "¿Qué sigue?",
-    "description": "Amplía tus automatizaciones con datos y herramientas:",
+    "description": "Su primer flujo está en vivo — ahora conéctelo con todo lo demás que iMash puede hacer:",
     "cards": [
-      { "href": "/automations/webhooks", "title": "Recibir Datos con Webhooks", "description": "Usa el disparador Catch Webhook para aceptar datos de otros sistemas." },
-      { "href": "/automations/integrations", "title": "Conectar Integraciones", "description": "Vincula apps externas y credenciales a tus flujos." },
-      { "href": "/automations/custom-tools", "title": "Crear Herramientas Personalizadas", "description": "Crea herramientas HTTP que tu agente de IA pueda invocar durante una llamada." }
+      { "href": "/automations/webhooks", "title": "Recibir Datos con Webhooks", "description": "Domine el disparador Catch Webhook y conecte cualquier sistema externo a sus flujos." },
+      { "href": "/automations/integrations", "title": "Conectar Integraciones", "description": "Vincule Gmail, Slack, Google Sheets y cientos de otras apps a sus automatizaciones." },
+      { "href": "/automations/custom-tools", "title": "Crear Herramientas Personalizadas", "description": "Cree herramientas HTTP que su agente de IA pueda invocar en medio de una conversación." }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o preguntas:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+    "title": "¿Necesita ayuda?",
+    "content": "<p>Si tiene algún problema o preguntas:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Crear una Automatización (Smart Flow) | iMash Docs",
-  "metaDescription": "Crea flujos de trabajo automatizados en iMash: elige un disparador como Catch Webhook, agrega acciones de System Tables y luego prueba y publica tu flujo.",
-  "metaKeywords": "automatización, smart flows, creador de flujos, disparadores, acciones, catch webhook, system tables, imash"
+  "metaTitle": "Crear una Automatización (Smart Flow) | Documentación de iMash",
+  "metaDescription": "Guía paso a paso de Smart Flows en iMash: cree un flujo, elija un disparador de webhook o programación, agregue acciones de iMash como Create Outbound Call y luego pruebe, publique y monitoree las ejecuciones.",
+  "metaKeywords": "automatización, smart flows, creador de flujos, disparadores, acciones, catch webhook, programación, tablas del sistema, llamada saliente, ejecuciones, imash"
 }

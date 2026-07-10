@@ -1,48 +1,102 @@
 {
   "title": "Route Calls to an Agent",
-  "lede": "Decide what happens when someone dials your number. Routing is set per number — assign an inbound AI agent to answer incoming calls, and an outbound agent for calls you place from that number.",
-  "timeToComplete": "5 minutes",
+  "lede": "Decide exactly what happens the moment someone dials your number — send callers to an AI agent 24/7, switch agents by time of day, forward to a human line with an AI safety net, or hand the call off entirely. It's all configured per number, in one panel.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
       "id": "open-number",
-      "title": "Open the phone number",
-      "content": "<ol><li>Go to <strong>Call Center → Phone numbers</strong>.</li><li>Click the number you want to configure to open its details panel. The <strong>Inbound Agent</strong> column shows what a number currently routes to (it reads <em>None</em> until you assign one).</li></ol>",
+      "title": "Open the phone number you want to configure",
+      "content": "<p>Every routing decision lives on the number itself, so start at your numbers list.</p><ol><li>In the left sidebar, click <strong>Phone numbers</strong> (under <strong>Call Center</strong>).</li><li>Make sure you're on the <strong>Numbers</strong> tab. The list shows each number with its <strong>Label</strong>, <strong>Capabilities</strong> (Voice, SMS, provider, WhatsApp), and an <strong>Inbound Agent</strong> column — this column tells you at a glance what each number routes to. It reads <em>None</em> until you assign an agent.</li><li>Click the phone number (the blue link in the <strong>Phone Number</strong> column) or the green eye icon under <strong>Actions</strong> to open its details panel.</li></ol><blockquote>💡 If the Inbound Agent column shows <strong>Unknown</strong> in orange, the assigned agent was deleted or isn't visible to your account — open the number and pick a new one.</blockquote>",
       "images": [
-        { "src": "images/phone/phone-numbers-light.png", "alt": "Phone numbers list with inbound agent column", "caption": "The Inbound Agent column shows which agent answers each number.", "theme": "light" },
-        { "src": "images/phone/phone-numbers-dark.png", "alt": "Phone numbers list with inbound agent column", "caption": "The Inbound Agent column shows which agent answers each number.", "theme": "dark" }
+        { "src": "images/phone/call-routing-numbers-list-light.png", "alt": "Phone numbers list with the Inbound Agent column", "caption": "The Inbound Agent column shows what each number currently routes to.", "theme": "light" },
+        { "src": "images/phone/call-routing-numbers-list-dark.png", "alt": "Phone numbers list with the Inbound Agent column", "caption": "The Inbound Agent column shows what each number currently routes to.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "choose-call-handling",
+      "title": "Pick a Call Handling mode",
+      "content": "<p>The <strong>Phone Number Details</strong> panel opens on the <strong>Settings</strong> tab, in the <strong>Inbound Settings</strong> card. The <strong>Call Handling</strong> switch at the top is the master decision — it has three modes:</p><ul><li><strong>Enable Agents</strong> — an AI agent answers every incoming call (and you can rotate agents on a schedule). This is the default and the most popular mode.</li><li><strong>Warm Transfer</strong> — calls are forwarded to a real phone number (your office line, a cell phone) while iMash stays on the line, so an AI agent can step in if nobody picks up.</li><li><strong>Cold Transfer</strong> — calls are immediately handed off to another number and leave the platform entirely.</li></ul><p>The panel also has <strong>Inbound Calls</strong> and <strong>Outbound Calls</strong> tabs (this number's own call history) plus two buttons at the bottom: <strong>Test Call</strong> and <strong>Save Settings</strong>.</p>",
+      "images": [
+        { "src": "images/phone/call-routing-number-details-light.png", "alt": "Phone Number Details panel showing the Call Handling modes", "caption": "Inbound Settings — choose Enable Agents, Warm Transfer, or Cold Transfer.", "theme": "light" },
+        { "src": "images/phone/call-routing-number-details-dark.png", "alt": "Phone Number Details panel showing the Call Handling modes", "caption": "Inbound Settings — choose Enable Agents, Warm Transfer, or Cold Transfer.", "theme": "dark" }
       ]
     },
     {
       "id": "assign-inbound",
-      "title": "Assign the inbound agent",
-      "content": "<ol><li>In the number's details, find <strong>Inbound Agent</strong> (the AI agent that answers incoming calls).</li><li>Pick an agent from the dropdown. Only agents you've already created appear here.</li><li>Save. From now on, calls to this number are answered by that agent.</li></ol><p>To set an <strong>Outbound Agent</strong> — used when the number places calls (for example dialer campaigns) — pick one from the outbound dropdown in the same panel.</p>"
+      "title": "Assign the AI agent that answers calls",
+      "content": "<p>This is the magic moment — one dropdown and your number answers itself, day and night.</p><ol><li>With <strong>Call Handling</strong> set to <strong>Enable Agents</strong>, click the <strong>Inbound Agent</strong> dropdown.</li><li>Pick the agent that should answer this number. Only agents you've already created appear here — if the list is empty, build one first (see <em>Create an AI Agent</em> below).</li><li>Click <strong>Save Settings</strong> in the bottom-right. The button lights up blue whenever you have unsaved changes.</li></ol><p>From this moment, every call to this number is answered by that agent. You can clear the assignment anytime with the small <strong>×</strong> inside the dropdown.</p><blockquote>⚠️ Nothing is applied until you click <strong>Save Settings</strong> — if you close the panel with the button still blue, your changes are lost.</blockquote>",
+      "images": [
+        { "src": "images/phone/call-routing-inbound-agent-light.png", "alt": "Inbound Agent dropdown open with a list of AI agents", "caption": "Pick any of your AI agents from the Inbound Agent dropdown.", "theme": "light" },
+        { "src": "images/phone/call-routing-inbound-agent-dark.png", "alt": "Inbound Agent dropdown open with a list of AI agents", "caption": "Pick any of your AI agents from the Inbound Agent dropdown.", "theme": "dark" }
+      ]
     },
     {
-      "id": "call-forwarding",
-      "title": "Optional: forwarding and fallbacks",
-      "content": "<p>In the same details panel you can add fallback behavior:</p><ul><li><strong>Forward to an agent or number</strong> when a call comes in.</li><li>Send <strong>busy</strong> or <strong>no-answer</strong> calls to a chosen agent.</li><li>Auto-dial <strong>missed calls</strong> back with an agent.</li></ul><p>Leave these off if you just want the inbound agent to answer every call.</p>"
+      "id": "scheduler",
+      "title": "Optional: rotate agents by time of day (after-hours routing)",
+      "content": "<p>Want your sales agent during business hours and an after-hours message-taker at night? The <strong>Assistant Scheduler</strong> does exactly that.</p><ol><li>Still in <strong>Enable Agents</strong> mode, tick <strong>Enable Scheduler</strong> on the <strong>Assistant Scheduler</strong> card. (The plain Inbound Agent dropdown greys out and shows <em>Managed by Scheduler</em> — the schedule is now in charge.)</li><li>Set the <strong>Timezone</strong> — all time slots are evaluated in this timezone, so pick where your business operates.</li><li>Pick a <strong>Default Assistant</strong>. This agent answers whenever <em>no</em> time slot matches — it is effectively your after-hours agent.</li><li>Click <strong>Add Time Slot</strong>. For each slot, tick the <strong>Days</strong> it applies to (Sun–Sat), set the <strong>Start</strong> and <strong>End</strong> times, and choose the <strong>Agent</strong> that answers during that window.</li><li>Add as many slots as you need (weekday daytime, weekend mornings, etc.), then click <strong>Save Settings</strong>.</li></ol><blockquote>⚠️ Slots must not overlap on the same day — if they do, a red <strong>Schedule Overlap Detected</strong> alert appears and <strong>Save Settings</strong> stays disabled until you fix the times.</blockquote>",
+      "images": [
+        { "src": "images/phone/call-routing-scheduler-light.png", "alt": "Assistant Scheduler with timezone, default assistant, and a weekday time slot", "caption": "One slot for business hours; the Default Assistant covers everything else.", "theme": "light" },
+        { "src": "images/phone/call-routing-scheduler-dark.png", "alt": "Assistant Scheduler with timezone, default assistant, and a weekday time slot", "caption": "One slot for business hours; the Default Assistant covers everything else.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "warm-transfer",
+      "title": "Optional: forward to a real phone with Warm Transfer",
+      "content": "<p>Prefer that a human picks up first? <strong>Warm Transfer</strong> forwards incoming calls to any phone number while iMash stays on the line — so the call is still tracked and recorded, and your AI can catch whatever the human misses.</p><ol><li>Set <strong>Call Handling</strong> to <strong>Warm Transfer</strong>.</li><li>In <strong>Forward To Number</strong>, enter the destination phone number. Use the small <strong>+</strong> / <strong>No +</strong> switch on the right to control whether the number is dialed in international format (with <code>+</code>) or as a plain digit string — most numbers should keep <strong>+</strong>.</li><li>Optionally pick a <strong>Forward Agent</strong> — the AI agent associated with the warm transfer.</li><li>Click <strong>Save Settings</strong>.</li></ol>",
+      "images": [
+        { "src": "images/phone/call-routing-warm-transfer-light.png", "alt": "Warm Transfer settings with Forward To Number and Forward Agent", "caption": "Warm Transfer keeps iMash on the line while ringing your real phone.", "theme": "light" },
+        { "src": "images/phone/call-routing-warm-transfer-dark.png", "alt": "Warm Transfer settings with Forward To Number and Forward Agent", "caption": "Warm Transfer keeps iMash on the line while ringing your real phone.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "warm-advanced",
+      "title": "Give Warm Transfer an AI safety net",
+      "content": "<p>The <strong>Advanced Call Routing</strong> card (visible only in Warm Transfer mode) is where you make sure no call is ever truly missed. Each option is a <strong>Disabled / Enabled</strong> switch that reveals an agent picker when enabled:</p><ul><li><strong>Send Busy Calls to AI</strong> — if the forwarded line is busy, the selected AI agent takes the call instead of the caller hearing a busy tone.</li><li><strong>Auto Dial Missed Calls</strong> — if a call is missed, the selected AI agent automatically calls the customer back.</li><li><strong>No Answer Timeout</strong> — if nobody answers within the number of <strong>seconds</strong> you set (default 30), the selected AI agent picks up the call.</li></ul><ol><li>Flip the options you want to <strong>Enabled</strong>.</li><li>Pick an agent for each enabled option (they can all be the same agent).</li><li>For No Answer Timeout, set how many seconds the phone should ring first.</li><li>Click <strong>Save Settings</strong>.</li></ol><blockquote>💡 The combination \"Warm Transfer + No Answer Timeout\" is the classic small-business setup: your phone rings for 25–30 seconds, and if you can't grab it, the AI answers so the lead never goes to voicemail — or to a competitor.</blockquote>",
+      "images": [
+        { "src": "images/phone/call-routing-warm-advanced-light.png", "alt": "Advanced Call Routing with busy, missed-call, and no-answer AI fallbacks enabled", "caption": "Each fallback reveals its own agent picker when enabled.", "theme": "light" },
+        { "src": "images/phone/call-routing-warm-advanced-dark.png", "alt": "Advanced Call Routing with busy, missed-call, and no-answer AI fallbacks enabled", "caption": "Each fallback reveals its own agent picker when enabled.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "cold-transfer",
+      "title": "Optional: hand calls off completely with Cold Transfer",
+      "content": "<p><strong>Cold Transfer</strong> immediately forwards every incoming call to another number using a SIP REFER — a blind handoff with no warm introduction and no AI involvement.</p><ol><li>Set <strong>Call Handling</strong> to <strong>Cold Transfer</strong>.</li><li>Enter the destination in <strong>Forward To Number</strong> (same <strong>+</strong> / <strong>No +</strong> switch as Warm Transfer).</li><li>Click <strong>Save Settings</strong>.</li></ol><blockquote>⚠️ As the blue info card in the panel explains: once a cold transfer completes, iMash can no longer track or record the call — you lose visibility of everything after the handoff. If you want recordings, analytics, or AI fallbacks, use <strong>Warm Transfer</strong> instead.</blockquote>",
+      "images": [
+        { "src": "images/phone/call-routing-cold-transfer-light.png", "alt": "Cold Transfer settings with the SIP REFER information card", "caption": "Cold Transfer hands the call off entirely — no tracking after the handoff.", "theme": "light" },
+        { "src": "images/phone/call-routing-cold-transfer-dark.png", "alt": "Cold Transfer settings with the SIP REFER information card", "caption": "Cold Transfer hands the call off entirely — no tracking after the handoff.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "route-to-humans",
+      "title": "Routing to a human team instead of an AI",
+      "content": "<p>Assigning an inbound agent covers AI-first answering, but you can also ring a whole team of live operators:</p><ul><li><strong>Ring a human group directly</strong> — a number can route to a Contact Center permission group so every online member's dialer rings at once and the first to answer takes the call. This is set up on the group, not on the number — see the <a data-href=\"/contact-center/inbound-sip-routing\">Inbound SIP Routing</a> guide.</li><li><strong>AI first, humans on demand</strong> — keep the AI agent as the front door and give it a transfer tool, so it hands callers to your team only when needed (see <a data-href=\"/contact-center/call-transfer\">Call Transfer</a>).</li><li><strong>Humans first, AI backup</strong> — use <strong>Warm Transfer</strong> to your team's line with the <strong>No Answer Timeout</strong> fallback from the previous step.</li></ul><p>Mix and match per number — your main line can be AI-first while a VIP line rings straight to your senior team.</p>"
     },
     {
       "id": "bulk-assign",
-      "title": "Assign several numbers at once",
-      "content": "<ol><li>On the Phone numbers list, tick the checkboxes for multiple numbers.</li><li>Use the bulk action to set the same <strong>inbound</strong> or <strong>outbound</strong> agent across all selected numbers.</li><li>Clear an assignment the same way by choosing <em>None</em>.</li></ol>"
+      "title": "Assign one agent to many numbers at once",
+      "content": "<p>Managing dozens of numbers? Don't open them one by one.</p><ol><li>On the <strong>Numbers</strong> list, tick the checkbox at the left of each number you want to change (the header checkbox selects the whole page). A <strong>N selected</strong> counter and a bulk toolbar appear.</li><li>Click the <strong>Inbound Agent</strong> button and pick an agent from the dropdown — it's applied to every selected number instantly.</li><li>To unassign in bulk, choose <strong>Clear Inbound Agent</strong> at the bottom of the same dropdown.</li></ol><p>The same toolbar also offers <strong>Edit Label</strong> (rename many numbers at once) and <strong>Delete Selected</strong>.</p>",
+      "images": [
+        { "src": "images/phone/call-routing-bulk-assign-light.png", "alt": "Two numbers selected with the bulk Inbound Agent dropdown open", "caption": "Select several numbers, then set or clear their inbound agent in one click.", "theme": "light" },
+        { "src": "images/phone/call-routing-bulk-assign-dark.png", "alt": "Two numbers selected with the bulk Inbound Agent dropdown open", "caption": "Select several numbers, then set or clear their inbound agent in one click.", "theme": "dark" }
+      ]
     },
     {
       "id": "verify",
-      "title": "Test and confirm",
-      "content": "<ol><li>Call the number from your phone — your assigned agent should pick up.</li><li>Check <strong>Call Center → Call Logs</strong> to confirm the call was recorded and handled by the right agent.</li></ol>",
+      "title": "Test your routing and confirm it works",
+      "content": "<p>Time for the payoff — hear your number answer itself.</p><ol><li>In the number's details panel, click <strong>Test Call</strong> (bottom-left of the Settings tab). This opens the built-in web dialer pre-loaded with this number and its inbound agent so you can talk to your setup without picking up a phone.</li><li>Then do a real-world check: dial the number from your cell phone — your assigned agent (or forward destination) should pick up exactly as configured.</li><li>Open the <strong>Inbound Calls</strong> tab in the same panel — every incoming call to this number appears here with its date, cost, ended reason, and duration. The <strong>Outbound Calls</strong> tab shows calls placed from this number.</li><li>For the full cross-number picture, go to <strong>Call Center → Call Logs</strong> and open your test call to review the recording and transcript.</li></ol>",
       "images": [
-        { "src": "images/phone/call-logs-light.png", "alt": "Call logs confirming a routed call", "caption": "Call Logs confirm which agent handled each call.", "theme": "light" },
-        { "src": "images/phone/call-logs-dark.png", "alt": "Call logs confirming a routed call", "caption": "Call Logs confirm which agent handled each call.", "theme": "dark" }
+        { "src": "images/phone/call-routing-inbound-calls-light.png", "alt": "Inbound Calls tab inside the Phone Number Details panel", "caption": "Each number keeps its own inbound and outbound call history.", "theme": "light" },
+        { "src": "images/phone/call-routing-inbound-calls-dark.png", "alt": "Inbound Calls tab inside the Phone Number Details panel", "caption": "Each number keeps its own inbound and outbound call history.", "theme": "dark" }
       ]
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Confirm your routing is working and refine your agents.",
+    "description": "Your number knows exactly where to send every caller. Now sharpen the destination.",
     "cards": [
+      { "href": "/contact-center/inbound-sip-routing", "title": "Inbound SIP Routing to Groups", "description": "Ring a whole team of live operators from a phone number." },
+      { "href": "/agents/create-agent", "title": "Create an AI Agent", "description": "Build or tune the agent that answers your calls." },
       { "href": "/phone/call-logs", "title": "Review Call Logs", "description": "See every call, who handled it, and how it ended." },
-      { "href": "/agents/create-agent", "title": "Create an AI Agent", "description": "Build or tune the agent that answers calls." },
       { "href": "/phone/add-phone-number", "title": "Add Another Number", "description": "Buy or import more numbers to route." }
     ]
   },
@@ -50,7 +104,7 @@
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Route Calls to an Agent - Inbound Call Routing | iMash Docs",
-  "metaDescription": "Assign an inbound AI agent to a phone number so it answers calls, set an outbound agent, add forwarding fallbacks, and bulk-assign numbers.",
-  "metaKeywords": "call routing, inbound agent, outbound agent, call forwarding, assign agent, phone number routing, no-answer, missed call"
+  "metaTitle": "Route Calls to an Agent - Inbound Call Routing | iMash Documentation",
+  "metaDescription": "Assign an inbound AI agent to a phone number, rotate agents on a schedule for after-hours, forward calls with warm or cold transfer, add busy/missed/no-answer AI fallbacks, and bulk-assign numbers.",
+  "metaKeywords": "call routing, inbound agent, assistant scheduler, after hours routing, warm transfer, cold transfer, call forwarding, no answer timeout, missed call, bulk assign, phone number routing"
 }

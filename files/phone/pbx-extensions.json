@@ -1,0 +1,86 @@
+{
+  "title": "PBX Extensions",
+  "lede": "Give every desk, department, or AI agent its own short internal number — like 101 or 202 — on your own SIP trunk. Import an extension in under a minute, point it at an AI agent or forward it anywhere, and dial between extensions like a full office phone system.",
+  "timeToComplete": "10 minutes",
+  "steps": [
+    {
+      "id": "open-pbx-extensions",
+      "title": "Open PBX Extensions",
+      "content": "<p>A PBX extension is a short internal number (for example <strong>101</strong>) that lives on <em>your own</em> SIP provider or office PBX and is imported into iMash. Once imported, it behaves like any other number on the platform: it can be answered by an AI agent, forwarded to a person, and every call it makes or receives is logged.</p><ol><li>In the left sidebar, under <strong>Call Center</strong>, click <strong>PBX Extensions</strong>. (You can also use the <strong>PBX Extensions</strong> tile in the Contact Center tab strip at the top.)</li></ol><p>The list shows one row per extension with these columns:</p><ul><li><strong>Extension</strong> — the full stored number (for example <code>+0012101</code>). Click it to open the extension's details.</li><li><strong>Label</strong> — a friendly name like \"Front Desk\"; click the pencil to edit it inline.</li><li><strong>Inbound Agent</strong> — the AI agent that answers calls to this extension.</li><li><strong>Outgoing</strong> / <strong>Incoming</strong> — running call counters for the extension.</li><li><strong>Provider</strong> — which SIP trunk the extension lives on.</li><li><strong>Owner</strong> — the team member the extension belongs to.</li><li><strong>Actions</strong> — the eye icon opens details; the trash icon deletes the extension.</li></ul>",
+      "images": [
+        { "src": "images/phone/pbx-extensions-list-light.png", "alt": "PBX Extensions list page", "caption": "Call Center → PBX Extensions — every internal number in one place.", "theme": "light" },
+        { "src": "images/phone/pbx-extensions-list-dark.png", "alt": "PBX Extensions list page", "caption": "Call Center → PBX Extensions — every internal number in one place.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "connect-provider-first",
+      "title": "Before you start: connect a SIP provider",
+      "content": "<p>Extensions always live on a SIP trunk that you bring — they are not iMash-purchased numbers. So the one prerequisite is a connected <strong>Custom</strong> SIP provider.</p><ol><li>In the left sidebar, click <strong>SIP Providers</strong> and make sure your trunk or PBX is listed there.</li><li>If it isn't yet, follow the <em>Add a SIP Provider</em> guide first (about 10 minutes), then come back here.</li></ol><blockquote>💡 <strong>Tip:</strong> No separate trip needed — you can also add the provider on the fly from inside the Import Extension window (there's an <strong>Add Provider</strong> shortcut right in the provider dropdown).</blockquote>"
+    },
+    {
+      "id": "open-import-modal",
+      "title": "Click Import Extension and pick your provider",
+      "content": "<ol><li>In the top-right of the PBX Extensions page, click <strong>Import Extension</strong>.</li><li>In the <strong>SIP Phone Provider</strong> dropdown, select the trunk that hosts this extension.</li><li>Don't see your trunk? Click <strong>+ Add Provider</strong> at the bottom of the dropdown to create one without leaving the page.</li></ol><p>The rest of the form stays disabled until a provider is selected — that's your cue that this field comes first.</p>",
+      "images": [
+        { "src": "images/phone/pbx-extensions-provider-select-light.png", "alt": "Import Extension modal with the SIP Phone Provider dropdown open", "caption": "Pick the SIP trunk the extension lives on — or add one right from the dropdown.", "theme": "light" },
+        { "src": "images/phone/pbx-extensions-provider-select-dark.png", "alt": "Import Extension modal with the SIP Phone Provider dropdown open", "caption": "Pick the SIP trunk the extension lives on — or add one right from the dropdown.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "fill-extension-details",
+      "title": "Fill in the extension details",
+      "content": "<p>Three quick fields and you're done:</p><ol><li><strong>Label</strong> — a friendly name you'll recognize in the list, like \"Front Desk\" or \"Support Line\".</li><li><strong>Include \"+\" prefix</strong> — leave this checked unless your SIP provider sends extension numbers <em>without</em> a leading <code>+</code>. iMash treats <code>+0012101</code> and <code>0012101</code> as the same extension either way.</li><li><strong>Extension Number</strong> — type just the short number, 1–10 digits (for example <code>101</code>). The <code>0012</code> prefix shown in front of the field is added automatically — it's how iMash stores extensions so they never collide with real phone numbers. Extension 101 is saved as <code>+0012101</code>.</li></ol><p>As you type, iMash checks availability in real time:</p><ul><li>✅ <strong>\"Extension is available!\"</strong> — you're good to go.</li><li>❌ <strong>\"Extension is taken\"</strong> — iMash suggests nearby free numbers; click a suggestion tag to use it instantly.</li></ul><blockquote>💡 <strong>Advanced:</strong> If your provider addresses a sub-extension with a <code>#</code>, you can append it — for example <code>101#999</code> imports as <code>+0012101#999</code>. Only digits are allowed after the <code>#</code>.</blockquote>",
+      "images": [
+        { "src": "images/phone/pbx-extensions-import-modal-light.png", "alt": "Import Extension modal with provider selected", "caption": "Label, prefix choice, and the short extension number — the 0012 prefix is added for you.", "theme": "light" },
+        { "src": "images/phone/pbx-extensions-import-modal-dark.png", "alt": "Import Extension modal with provider selected", "caption": "Label, prefix choice, and the short extension number — the 0012 prefix is added for you.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "import-and-provision",
+      "title": "Import — routing is provisioned automatically",
+      "content": "<ol><li>Click <strong>Import Extension</strong> at the bottom of the window. (The button stays disabled until the number is valid and a provider is selected.)</li><li>iMash saves the extension <em>and</em> sets up the SIP call routing for it in the same step — no manual trunk configuration needed.</li><li>When you see <strong>\"Your Extension has been imported successfully\"</strong>, the new row appears in the list, ready to take calls.</li></ol><blockquote>⚠️ <strong>Good to know:</strong> If SIP routing can't be set up, the extension is <em>not</em> saved — you'll see an \"Extension not added\" message with the reason, and the window stays open so you can fix the issue (usually the provider's gateway details) and click <strong>Import Extension</strong> again. You'll never end up with a dead extension that looks live but can't route calls.</blockquote>"
+    },
+    {
+      "id": "configure-call-handling",
+      "title": "Choose how the extension answers: AI agent or forward",
+      "content": "<p>Now the fun part — deciding what happens when someone dials the extension.</p><ol><li>In the list, click the extension number (or the eye icon under <strong>Actions</strong>). The <strong>Extension Details</strong> drawer opens on the <strong>Settings</strong> tab.</li><li>Under <strong>Inbound Settings</strong>, use the <strong>Call Handling</strong> switch to pick a mode:<ul><li><strong>Enable Agents</strong> — an AI agent answers the extension. Pick it in the <strong>Inbound Agent</strong> dropdown.</li><li><strong>Enable Forward</strong> — calls are passed along instead. Fill in <strong>Forward Calls To:</strong> with another extension or a full phone number, and optionally pick a <strong>Forwarding Agent</strong> to handle the call if forwarding is in play.</li></ul></li><li>Click <strong>Save Settings</strong> (it lights up blue whenever you have unsaved changes).</li><li>Want to hear it live? Click <strong>Test Call</strong> to open the web dialer and talk to the extension's agent right from your browser.</li></ol><p>The drawer's two other tabs — <strong>Inbound Calls</strong> and <strong>Outbound Calls</strong> — list every call this extension has handled. Click any row to open the full call detail with recording and transcript.</p>",
+      "images": [
+        { "src": "images/phone/pbx-extensions-details-drawer-light.png", "alt": "Extension Details drawer on the Settings tab in Enable Agents mode", "caption": "Extension Details → Settings — Enable Agents mode: pick the AI agent that answers the extension.", "theme": "light" },
+        { "src": "images/phone/pbx-extensions-details-drawer-dark.png", "alt": "Extension Details drawer on the Settings tab in Enable Agents mode", "caption": "Extension Details → Settings — Enable Agents mode: pick the AI agent that answers the extension.", "theme": "dark" },
+        { "src": "images/phone/pbx-extensions-forward-mode-light.png", "alt": "Extension Details drawer with Call Handling switched to Enable Forward", "caption": "Switch Call Handling to Enable Forward and the forwarding fields appear — Save Settings lights up blue.", "theme": "light" },
+        { "src": "images/phone/pbx-extensions-forward-mode-dark.png", "alt": "Extension Details drawer with Call Handling switched to Enable Forward", "caption": "Switch Call Handling to Enable Forward and the forwarding fields appear — Save Settings lights up blue.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "dial-between-extensions",
+      "title": "Dial between extensions",
+      "content": "<p>Extensions turn iMash into your internal phone system:</p><ul><li><strong>From your SIP phones / PBX:</strong> dial the short number (for example <code>101</code>) and your provider delivers the call to iMash in the <code>0012</code> format (<code>+0012101</code>). iMash matches the imported extension and runs its call handling — AI agent or forward.</li><li><strong>Extension to extension:</strong> set one extension's <strong>Forward Calls To:</strong> field to another extension's number and calls hop straight between them.</li><li><strong>From a main phone number:</strong> any phone number on your platform can forward its calls to an extension — open the number under <strong>Phone numbers</strong>, switch Call Handling to <strong>Enable Forward</strong>, and enter the extension. Your main line rings the front desk; the front desk is an extension. Done.</li></ul><blockquote>💡 <strong>Tip:</strong> Because every extension can carry its own AI agent, you can give each department a specialist agent — dial 101 for the booking assistant, 102 for support — all on a single trunk.</blockquote>"
+    },
+    {
+      "id": "manage-extensions",
+      "title": "Manage extensions in bulk: labels, filters, and cleanup",
+      "content": "<p>As your extension list grows, the list page keeps it tidy:</p><ul><li><strong>Filter by label</strong> / <strong>Filter by owner</strong> — the two dropdowns above the table narrow the list instantly; your filters are remembered between visits.</li><li><strong>Rename inline</strong> — click the pencil next to any label, type or pick a new one, and confirm with the check mark.</li><li><strong>Bulk actions</strong> — tick the checkboxes on several rows and three buttons appear: <strong>Inbound Agent</strong> (assign or clear the answering agent for all selected at once), <strong>Edit Label</strong> (relabel the whole selection), and <strong>Delete Selected</strong>.</li><li><strong>Delete one</strong> — click the trash icon on a row and confirm. Deleting an extension stops its routing; you can always re-import the same number later.</li><li><strong>API Info</strong> — the button in the top-right opens ready-made code examples for listing and adding extensions programmatically with your API key.</li></ul><blockquote>⚠️ <strong>Careful with bulk delete:</strong> the confirmation applies to every selected row — double-check the \"X selected\" counter before you confirm.</blockquote>",
+      "images": [
+        { "src": "images/phone/pbx-extensions-list-light.png", "alt": "PBX Extensions list with filters and bulk actions", "caption": "Label and owner filters live above the table; select rows to unlock bulk actions.", "theme": "light" },
+        { "src": "images/phone/pbx-extensions-list-dark.png", "alt": "PBX Extensions list with filters and bulk actions", "caption": "Label and owner filters live above the table; select rows to unlock bulk actions.", "theme": "dark" }
+      ]
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Your internal phone system is live — now wire it into the rest of your call center.",
+    "cards": [
+      { "href": "/phone/add-sip-provider", "title": "Add a SIP Provider", "description": "Connect the trunk or PBX your extensions live on." },
+      { "href": "/agents/create-agent", "title": "Create an AI Agent", "description": "Build the agent that answers your extensions 24/7." },
+      { "href": "/phone/call-routing", "title": "Route Calls to an Agent", "description": "Point your main numbers at agents — or at your new extensions." },
+      { "href": "/phone/call-logs", "title": "Review Call Logs", "description": "Listen to recordings and transcripts of every extension call." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "PBX Extensions - Internal Numbers on Your Own Trunk | iMash Documentation",
+  "metaDescription": "Import PBX extensions from your own SIP provider into iMash. Assign AI agents or forwarding per extension, dial between extensions, and manage labels, filters, and bulk actions.",
+  "metaKeywords": "PBX extensions, internal numbers, SIP trunk, extension dialing, 0012 prefix, inbound agent, call forwarding, office phone system, VoIP, call center"
+}

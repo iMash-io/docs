@@ -1,59 +1,110 @@
 {
   "title": "Crear una Herramienta Personalizada",
-  "lede": "Las Herramientas Personalizadas (Custom Tools) son acciones HTTP reutilizables que tu agente de IA puede invocar en medio de una conversación: para buscar algo, agendar un trabajo o enviar datos a tu propio sistema.",
-  "timeToComplete": "7 minutos",
+  "lede": "Las Herramientas Personalizadas (Custom Tools) convierten a su agente de IA en un ejecutor, no solo un conversador: acciones HTTP reutilizables que puede invocar en plena conversación para consultar un pedido, verificar una dirección o enviar datos a cualquier sistema suyo. Aquí le mostramos cómo crearla, probarla y conectarla de principio a fin.",
+  "timeToComplete": "10 minutos",
   "steps": [
     {
       "id": "open-custom-tools",
-      "title": "Abrir Herramientas Personalizadas",
-      "content": "<ol><li>En el menú de la izquierda, ve a <strong>Call Center → Custom Tools</strong> (Centro de Llamadas → Herramientas Personalizadas).</li><li>Verás la lista de herramientas que ya has creado.</li><li>Haz clic en <strong>Create</strong> (Crear, el botón <strong>+</strong>) para abrir el panel <strong>Create Custom Tool</strong> (Crear Herramienta Personalizada).</li></ol>",
+      "title": "Abrir la Biblioteca de Herramientas Personalizadas",
+      "content": "<p>Cada Herramienta Personalizada que construya vive en una sola biblioteca, lista para conectarse a cualquiera de sus agentes.</p><ol><li>En la barra lateral izquierda, desplácese hasta la sección <strong>CALL CENTER</strong> (Centro de Llamadas) y haga clic en <strong>Custom Tools</strong> (Herramientas Personalizadas). (También puede llegar desde la barra superior: haga clic en la pestaña <strong>Contact Center</strong> y luego en el botón <strong>Custom Tools</strong> de la franja inferior.)</li><li>La lista muestra todas las herramientas que ha creado, con estas columnas:<ul><li><strong>Name</strong> (Nombre) — el nombre de función que invoca su agente.</li><li><strong>Description</strong> (Descripción) — qué hace la herramienta.</li><li><strong>Method</strong> (Método) — <code>GET</code> (verde) o <code>POST</code> (azul).</li><li><strong>URL</strong> — el endpoint que invoca (haga clic en el icono de copiar para copiarlo).</li><li><strong>Voice Settings</strong> (Configuración de Voz) — si el agente habla <em>During</em> (durante) y/o <em>After</em> (después de) la llamada a su endpoint.</li><li><strong>Owner</strong> (Propietario) — qué cuenta (principal o subcuenta) posee la herramienta. Use el selector <strong>Filter by owner</strong> (Filtrar por propietario) sobre la tabla para acotar la lista.</li><li><strong>Actions</strong> (Acciones) — el ojo verde abre la herramienta, la papelera roja la elimina.</li></ul></li><li>El botón <strong>API Info</strong> (Información de API) en la esquina superior derecha muestra cómo crear y administrar herramientas de forma programática mediante la API de iMash.</li></ol>",
       "images": [
-        { "src": "images/automations/custom-tools-light.png", "alt": "Lista de Herramientas Personalizadas", "caption": "La biblioteca de Herramientas Personalizadas, donde viven las herramientas HTTP de tu agente.", "theme": "light" },
-        { "src": "images/automations/custom-tools-dark.png", "alt": "Lista de Herramientas Personalizadas", "caption": "La biblioteca de Herramientas Personalizadas, donde viven las herramientas HTTP de tu agente.", "theme": "dark" }
+        { "src": "images/automations/custom-tools-light.png", "alt": "Página de lista de Herramientas Personalizadas", "caption": "La biblioteca de Herramientas Personalizadas: todas las herramientas HTTP de sus agentes en un solo lugar.", "theme": "light" },
+        { "src": "images/automations/custom-tools-dark.png", "alt": "Página de lista de Herramientas Personalizadas", "caption": "La biblioteca de Herramientas Personalizadas: todas las herramientas HTTP de sus agentes en un solo lugar.", "theme": "dark" }
       ]
     },
     {
-      "id": "name-describe",
-      "title": "Ponle Nombre y Descríbela",
-      "content": "<ol><li>En <strong>Basic Information</strong> (Información Básica), dale a la herramienta un <strong>Name</strong> (Nombre) claro (por ejemplo <code>lookupAddress</code> o <code>getUserInfo</code>).</li><li>Escribe una <strong>Description</strong> (Descripción) en lenguaje sencillo sobre qué hace y cuándo debe ejecutarse.</li><li>La IA lee esta descripción para decidir cuándo invocar la herramienta, así que sé específico.</li></ol>",
+      "id": "open-create-drawer",
+      "title": "Iniciar una Herramienta Nueva",
+      "content": "<ol><li>Haga clic en <strong>Add Custom Tool</strong> (Agregar Herramienta Personalizada) en la esquina superior derecha de la lista.</li><li>El panel <strong>Create Custom Tool</strong> (Crear Herramienta Personalizada) se desliza desde la derecha con tres secciones: <strong>Basic Information</strong> (Información Básica), <strong>API Configuration</strong> (Configuración de API, con el <strong>Parameter Schema Builder</strong> dentro) y <strong>Voice Settings</strong> (Configuración de Voz).</li><li>Las completará de arriba hacia abajo en los próximos pasos; nada se guarda hasta que haga clic en <strong>Create Tool</strong> (Crear Herramienta) al final.</li></ol>",
+      "images": [
+        { "src": "images/automations/custom-tools-create-drawer-light.png", "alt": "Panel Crear Herramienta Personalizada", "caption": "El panel Create Custom Tool: Información Básica, Configuración de API y el Constructor de Esquema de Parámetros.", "theme": "light" },
+        { "src": "images/automations/custom-tools-create-drawer-dark.png", "alt": "Panel Crear Herramienta Personalizada", "caption": "El panel Create Custom Tool: Información Básica, Configuración de API y el Constructor de Esquema de Parámetros.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "basic-information",
+      "title": "Nombrar y Describir la Herramienta",
+      "content": "<p>Estos dos campos son lo que la IA realmente lee al decidir si usa su herramienta: trátelos como instrucciones, no como etiquetas.</p><ol><li>En <strong>Basic Information</strong> (Información Básica), ingrese un <strong>Name</strong> (Nombre, mínimo 3 caracteres). Use un nombre corto y de acción, como <code>lookupAddress</code>, <code>getOrderStatus</code> o <code>createTicket</code>.</li><li>Ingrese una <strong>Description</strong> (Descripción) en lenguaje sencillo: qué hace la herramienta y cuándo debe invocarla el agente. Por ejemplo: <em>\"Consulta el estado del pedido de un cliente por número de pedido. Úsala siempre que el cliente pregunte dónde está su pedido.\"</em></li></ol><blockquote>💡 <strong>Consejo:</strong> Una descripción vaga es la razón #1 por la que una herramienta nunca se dispara. Especifique la condición de activación (\"úsala cuando el cliente pregunte por…\") y la IA la invocará de forma confiable.</blockquote>",
+      "images": [
+        { "src": "images/automations/custom-tools-basic-info-light.png", "alt": "Sección de Información Básica con los campos Nombre y Descripción", "caption": "Name y Description: la IA lee ambos para decidir cuándo invocar su herramienta.", "theme": "light" },
+        { "src": "images/automations/custom-tools-basic-info-dark.png", "alt": "Sección de Información Básica con los campos Nombre y Descripción", "caption": "Name y Description: la IA lee ambos para decidir cuándo invocar su herramienta.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "api-configuration",
+      "title": "Apuntarla a Su Endpoint",
+      "content": "<p>Ahora indíquele a iMash adónde enviar la solicitud cuando el agente use la herramienta.</p><ol><li>En <strong>API Configuration</strong> (Configuración de API), elija el <strong>Request Method</strong> (Método de Solicitud):<ul><li><strong>GET</strong> — para obtener o consultar información; los valores de los parámetros se envían junto con la solicitud.</li><li><strong>POST</strong> — para enviar o crear datos; los valores de los parámetros se envían como cuerpo JSON.</li></ul></li><li>Ingrese <strong>Your URL</strong> (Su URL): la dirección completa del endpoint en su servidor (debe ser una URL válida, p. ej. <code>https://api.suempresa.com/orders/status</code>).</li></ol><blockquote>⚠️ <strong>Importante:</strong> El endpoint debe ser accesible desde internet (no <code>localhost</code>). Si su API requiere autenticación, use una URL que lleve su clave (por ejemplo, un endpoint firmado o con token en la ruta), ya que aquí no se pueden configurar encabezados de solicitud.</blockquote>",
+      "images": [
+        { "src": "images/automations/custom-tools-api-config-light.png", "alt": "Sección de Configuración de API con Método de Solicitud y URL", "caption": "Elija GET o POST y pegue la URL del endpoint que su agente debe invocar.", "theme": "light" },
+        { "src": "images/automations/custom-tools-api-config-dark.png", "alt": "Sección de Configuración de API con Método de Solicitud y URL", "caption": "Elija GET o POST y pegue la URL del endpoint que su agente debe invocar.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "build-parameters",
+      "title": "Construir los Parámetros que la IA Completa",
+      "content": "<p>Los parámetros son los datos que la IA extrae de la conversación y envía a su endpoint: un número de pedido, un correo, un código postal. El <strong>Parameter Schema Builder</strong> (Constructor de Esquema de Parámetros) le permite definirlos con un formulario sencillo, sin necesidad de JSON.</p><ol><li>En la pestaña <strong>Form Fields</strong> (Campos del Formulario), haga clic en <strong>+ Add Field</strong> (Agregar Campo). Aparece una tarjeta de campo; agregue una tarjeta por cada dato que necesite.</li><li>Complete cada tarjeta de campo:<ul><li><strong>Field Name</strong> (Nombre del Campo) — la clave técnica que se envía a su API (p. ej. <code>order_number</code>). Use minúsculas y guiones bajos.</li><li><strong>Display Name</strong> (Nombre Visible) — una etiqueta amigable para el campo.</li><li><strong>Type</strong> (Tipo) — <strong>📝 Text</strong> (Texto), <strong>🔢 Number</strong> (Número), <strong>#️⃣ Integer</strong> (Entero), <strong>☑️ Yes/No</strong> (Sí/No) o <strong>📋 List</strong> (Lista).</li><li><strong>Description</strong> (Descripción) — dígale a la IA qué debe poner aquí (p. ej. <em>\"El número de pedido del cliente, normalmente de 6 dígitos\"</em>). Así sabe qué extraer de la conversación.</li><li><strong>Required field</strong> (Campo obligatorio) — márquelo y la IA deberá obtener este valor antes de invocar la herramienta.</li><li><strong>Format</strong> (Formato, solo campos de Texto) — <strong>Plain Text</strong> (Texto Plano), <strong>Email</strong> (Correo), <strong>URL</strong>, <strong>Date</strong> (Fecha), <strong>Date &amp; Time</strong> (Fecha y Hora) o <strong>Password</strong> (Contraseña).</li><li><strong>Min / Max</strong> (Mín/Máx, solo campos Number e Integer) — rango de valores permitido.</li></ul></li><li>Use las flechas <strong>↑</strong> / <strong>↓</strong> de una tarjeta para reordenar los campos, y el icono rojo de papelera para eliminar uno (se le pedirá confirmación).</li></ol><blockquote>💡 <strong>Consejo:</strong> Las descripciones de campo cumplen doble función: guían la extracción de la IA Y documentan su API. Una buena oración por campo es todo lo que se necesita.</blockquote>",
+      "images": [
+        { "src": "images/automations/custom-tools-add-field-light.png", "alt": "Constructor de Esquema de Parámetros con una tarjeta de campo abierta", "caption": "Cada tarjeta de campo define un parámetro: nombre, tipo, descripción y si es obligatorio.", "theme": "light" },
+        { "src": "images/automations/custom-tools-add-field-dark.png", "alt": "Constructor de Esquema de Parámetros con una tarjeta de campo abierta", "caption": "Cada tarjeta de campo define un parámetro: nombre, tipo, descripción y si es obligatorio.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "json-code-mode",
+      "title": "Usuarios Avanzados: Cambiar a JSON Code",
+      "content": "<p>¿Prefiere JSON Schema puro, o necesita algo que el formulario visual no puede expresar (objetos anidados, enums con etiquetas personalizadas)?</p><ol><li>En la parte superior derecha del <strong>Parameter Schema Builder</strong>, mueva el interruptor de <strong>Visual Builder</strong> (Constructor Visual) a <strong>JSON Code</strong> (Código JSON).</li><li>Se abre un editor de código completo donde puede escribir el JSON Schema directamente: este es exactamente el esquema que el LLM usa para estructurar la invocación de la herramienta.</li><li>Si su JSON tiene un error de sintaxis, aparece una alerta <strong>JSON Parse Error</strong> (Error de Análisis JSON) y el botón <strong>Create Tool</strong> permanece deshabilitado hasta que lo corrija.</li><li>Vuelva a mover el interruptor cuando quiera: sus campos se convierten automáticamente entre los dos modos (el interruptor se bloquea mientras el JSON sea inválido).</li></ol><blockquote>💡 <strong>Consejo:</strong> Empiece en el Constructor Visual aunque sea técnico: construya los campos, cambie a JSON Code y use el esquema generado como punto de partida.</blockquote>",
       "images": []
     },
     {
-      "id": "configure-endpoint",
-      "title": "Configurar el Endpoint",
-      "content": "<ol><li>En <strong>API Configuration</strong> (Configuración de API), elige el <strong>Request Method</strong> (Método de Solicitud: <code>GET</code> o <code>POST</code>).</li><li>Ingresa <strong>Your URL</strong> (Tu URL): el endpoint de tu servidor que el agente invocará.</li><li>Define los <strong>parameters</strong> (parámetros) como un esquema JSON. Usa el Visual Builder (Creador Visual) para un formulario simple, o cambia a JSON Code (Código JSON) para edición avanzada.</li><li>Haz clic en <strong>Test</strong> (Probar) para lanzar una solicitud de muestra y confirmar que tu endpoint responde correctamente.</li></ol>",
-      "images": []
+      "id": "test-tool",
+      "title": "Probarla Antes de Salir en Vivo",
+      "content": "<p>No espere a una llamada real para descubrir que su endpoint falla: lance una solicitud de prueba directamente desde el constructor.</p><ol><li>En el <strong>Parameter Schema Builder</strong>, haga clic en la pestaña <strong>Test Tool</strong> (Probar Herramienta, junto a <strong>Form Fields</strong>).</li><li>Aparece un formulario de prueba con un campo por cada parámetro que definió. Ingrese valores de ejemplo: exactamente lo que la IA extraería en una llamada real.</li><li>Haga clic en <strong>Test Tool</strong>. iMash envía una solicitud real a su URL (GET o POST, según su configuración).</li><li>El panel <strong>Test Results</strong> (Resultados de la Prueba) muestra el estado HTTP y el cuerpo de la respuesta que devolvió su endpoint. Lo que devuelva es lo que el agente le leerá al cliente, así que asegúrese de que la respuesta contenga la información en texto claro o JSON.</li></ol><blockquote>⚠️ <strong>Nota:</strong> El botón <strong>Test Tool</strong> permanece deshabilitado hasta que <strong>Your URL</strong> esté completo. Si la prueba falla, verá el código de error HTTP (p. ej. <code>HTTP 404</code>) o un mensaje de error de red para depurar.</blockquote>",
+      "images": [
+        { "src": "images/automations/custom-tools-test-tool-light.png", "alt": "Pestaña Test Tool con un formulario de prueba de ejemplo", "caption": "La pestaña Test Tool genera un formulario a partir de sus parámetros para lanzar una solicitud real a su endpoint.", "theme": "light" },
+        { "src": "images/automations/custom-tools-test-tool-dark.png", "alt": "Pestaña Test Tool con un formulario de prueba de ejemplo", "caption": "La pestaña Test Tool genera un formulario a partir de sus parámetros para lanzar una solicitud real a su endpoint.", "theme": "dark" }
+      ]
     },
     {
       "id": "voice-settings",
-      "title": "Opcional: Configuración de Voz",
-      "content": "<ol><li>Activa <strong>Speaks for Execution</strong> (Habla durante la ejecución) para que el agente diga una frase breve (por ejemplo <em>\"Un momento mientras reviso eso\"</em>) mientras la herramienta se ejecuta.</li><li>Activa <strong>Speak After Execution</strong> (Habla tras la ejecución) para que diga algo una vez que la herramienta responda.</li><li>Haz clic en <strong>Create Tool</strong> (Crear Herramienta) para guardar.</li></ol>",
-      "images": []
+      "title": "Configuración de Voz y Guardar",
+      "content": "<p>Las llamadas a la API tardan un segundo o dos: la Configuración de Voz mantiene viva la conversación mientras su endpoint trabaja.</p><ol><li>En <strong>Voice Settings</strong> (Configuración de Voz), active <strong>Speaks for Execution</strong> (Habla durante la Ejecución) para que el agente diga algo <em>mientras</em> la herramienta se ejecuta. Aparece un campo <strong>Say</strong> (Decir): escriba la frase, p. ej. <em>\"Un momento mientras lo consulto.\"</em></li><li>Active <strong>Speak After Execution</strong> (Hablar después de la Ejecución) para que el agente diga algo justo <em>después</em> de que la herramienta responda. Escriba su frase en <strong>Say</strong>, p. ej. <em>\"Gracias por esperar, esto es lo que encontré.\"</em></li><li>Deje ambos apagados si prefiere que el agente responda de forma natural con los resultados de la herramienta y nada más.</li><li>Haga clic en <strong>Create Tool</strong> (Crear Herramienta) abajo a la derecha para guardar (o <strong>Cancel</strong> (Cancelar) para descartar). Su nueva herramienta aparece en la lista de inmediato.</li></ol>",
+      "images": [
+        { "src": "images/automations/custom-tools-voice-settings-light.png", "alt": "Sección Configuración de Voz con ambos interruptores activados", "caption": "Active cualquiera de los interruptores y aparece un campo Say con la frase exacta que el agente debe decir.", "theme": "light" },
+        { "src": "images/automations/custom-tools-voice-settings-dark.png", "alt": "Sección Configuración de Voz con ambos interruptores activados", "caption": "Active cualquiera de los interruptores y aparece un campo Say con la frase exacta que el agente debe decir.", "theme": "dark" }
+      ]
     },
     {
       "id": "attach-agent",
-      "title": "Adjuntarla a un Agente",
-      "content": "<ol><li>Abre un Smart Agent desde <strong>Intelligence Center → Smart Agents</strong> (Centro de Inteligencia → Agentes Inteligentes).</li><li>Abre el panel <strong>Tools / MCP</strong> (Herramientas / MCP) y agrega tu nueva herramienta en <strong>Custom</strong> (Personalizadas).</li><li>Prueba el agente y pregúntale algo que deba activar la herramienta para confirmar que se ejecute.</li></ol>",
+      "title": "Conectar la Herramienta a un Agente",
+      "content": "<p>Una herramienta en la biblioteca no hace nada hasta que un agente la lleva consigo. Conectarla toma segundos:</p><ol><li>En la barra lateral izquierda, vaya a <strong>INTELLIGENCE CENTER → Smart Agents</strong> (Centro de Inteligencia → Agentes Inteligentes) y abra el agente que debe usar la herramienta.</li><li>Haga clic en el botón <strong>Tools / MCP</strong> (Herramientas / MCP) en la parte inferior del editor para abrir el panel <strong>Tools &amp; MCP</strong>.</li><li>En la columna izquierda, desplácese hasta la sección <strong>CUSTOM</strong> (Personalizadas): su nueva herramienta aparece ahí. Haga clic en el <strong>+</strong> junto a ella para conectarla.</li><li>Haga clic en <strong>Save</strong> (Guardar) y luego use <strong>Test Agent</strong> (Probar Agente) y haga una pregunta que deba activar la herramienta (p. ej. \"¿Dónde está mi pedido 123456?\") para confirmar que se dispara y responde con datos reales.</li></ol><blockquote>💡 <strong>Consejo:</strong> La misma herramienta puede conectarse a tantos agentes como quiera: constrúyala una vez y reutilícela en todas partes.</blockquote>",
       "images": [
-        { "src": "images/agents/tools-mcp-light.png", "alt": "Panel de Herramientas y MCP", "caption": "Adjunta tu herramienta personalizada a un agente en el panel Tools / MCP.", "theme": "light" },
-        { "src": "images/agents/tools-mcp-dark.png", "alt": "Panel de Herramientas y MCP", "caption": "Adjunta tu herramienta personalizada a un agente en el panel Tools / MCP.", "theme": "dark" }
+        { "src": "images/agents/tools-mcp-light.png", "alt": "Panel Tools & MCP en el editor del agente", "caption": "Sus herramientas personalizadas aparecen bajo CUSTOM en el panel Tools & MCP del agente: haga clic en + para conectarlas.", "theme": "light" },
+        { "src": "images/agents/tools-mcp-dark.png", "alt": "Panel Tools & MCP en el editor del agente", "caption": "Sus herramientas personalizadas aparecen bajo CUSTOM en el panel Tools & MCP del agente: haga clic en + para conectarlas.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "manage-tools",
+      "title": "Editar o Eliminar una Herramienta Después",
+      "content": "<ol><li>De vuelta en la lista de <strong>Custom Tools</strong>, haga clic en cualquier fila (o en su icono de ojo verde) para abrir el panel <strong>Custom Tool Details</strong> (Detalles de la Herramienta Personalizada).</li><li>Es el mismo formulario de tres secciones: cambie el nombre, la URL, los parámetros o la configuración de voz. El botón <strong>Save Tool</strong> (Guardar Herramienta) se activa en cuanto modifica algo.</li><li>Haga clic en <strong>Save Tool</strong> para aplicar los cambios. Los agentes que usan la herramienta toman la nueva configuración en su próxima llamada, sin necesidad de volver a conectarla.</li><li>Para eliminar una herramienta, haga clic en <strong>Delete Tool</strong> (Eliminar Herramienta) en el panel (o en el icono rojo de papelera en la lista) y confirme. <strong>Esta acción no se puede deshacer.</strong></li></ol><blockquote>⚠️ <strong>Advertencia:</strong> Antes de eliminar una herramienta, desconéctela de los agentes que la usan; de lo contrario, esos agentes pierden una capacidad que su prompt quizá aún menciona.</blockquote>",
+      "images": [
+        { "src": "images/automations/custom-tools-details-light.png", "alt": "Panel Custom Tool Details de una herramienta existente", "caption": "Abra cualquier herramienta desde la lista para editarla: Save Tool se activa en cuanto cambia algo.", "theme": "light" },
+        { "src": "images/automations/custom-tools-details-dark.png", "alt": "Panel Custom Tool Details de una herramienta existente", "caption": "Abra cualquier herramienta desde la lista para editarla: Save Tool se activa en cuanto cambia algo.", "theme": "dark" }
       ]
     }
   ],
   "nextSteps": {
-    "title": "¿Qué sigue?",
-    "description": "Pon tu herramienta a trabajar en un agente:",
+    "title": "¿Qué Sigue?",
+    "description": "Su agente ahora puede acceder a sus propios sistemas en plena llamada. Siga sumando capacidades:",
     "cards": [
-      { "href": "/agents/agent-tools", "title": "Agregar Herramientas a tu Agente", "description": "Adjunta herramientas predefinidas y personalizadas a un Smart Agent." },
-      { "href": "/automations/mcp-servers", "title": "Conectar un Servidor MCP", "description": "Dale a tu agente un conjunto de herramientas externas de una sola vez." },
-      { "href": "/agents/advanced-settings", "title": "Configuración Avanzada del Agente", "description": "Ajusta cómo y cuándo tu agente usa sus herramientas." }
+      { "href": "/agents/agent-tools", "title": "Agregar Herramientas a Su Agente", "description": "Conecte herramientas predefinidas y personalizadas a un Agente Inteligente." },
+      { "href": "/automations/mcp-servers", "title": "Conectar un Servidor MCP", "description": "Dele a su agente un paquete completo de herramientas externas de una sola vez." },
+      { "href": "/automations/webhooks", "title": "Configurar Webhooks", "description": "Envíe los datos de las llamadas a sus sistemas automáticamente después de cada llamada." }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o preguntas:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+    "title": "¿Necesita Ayuda?",
+    "content": "<p>Si tiene algún problema o pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Crear una Herramienta Personalizada | iMash Docs",
-  "metaDescription": "Crea una Herramienta Personalizada HTTP reutilizable que tu agente de IA de iMash pueda invocar durante una llamada: ponle nombre, configura el endpoint y los parámetros, pruébala y adjúntala a un agente.",
-  "metaKeywords": "herramientas personalizadas, custom tools, herramienta http, function calling, herramientas de agente, endpoint api, esquema json, imash"
+  "metaTitle": "Crear una Herramienta Personalizada | Documentación de iMash",
+  "metaDescription": "Cree una Herramienta Personalizada HTTP reutilizable que su agente de IA de iMash puede invocar en plena conversación: nómbrela, configure el endpoint y el método, defina parámetros con el constructor visual de esquemas, pruébela en vivo y conéctela a un agente.",
+  "metaKeywords": "herramientas personalizadas, custom tools, herramienta http, invocación de funciones, herramientas de agente, endpoint api, json schema, constructor de esquema de parámetros, probar herramienta, imash"
 }

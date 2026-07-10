@@ -1,51 +1,118 @@
 {
-  "title": "Read Campaign Analytics",
-  "lede": "See how your campaigns are performing: live progress and connect rates in Campaign Stats, and per-campaign cost and outcome breakdowns in Campaign Reports.",
-  "timeToComplete": "5 minutes",
+  "title": "Campaign Reports & Stats",
+  "lede": "Your campaigns generate a goldmine of data on every dial — live activity, connect results, spend, and earnings. This guide walks you through both analytics views (Campaign Stats and Campaign Reports) so you always know exactly what's working and what it costs.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
       "id": "open-stats",
-      "title": "Open Campaign Stats",
-      "content": "<ol><li>In the left menu, under <strong>Campaigns</strong>, open <strong>Campaign Stats</strong>.</li><li>This monitoring view shows your campaigns side by side with their live status and key metrics.</li></ol>",
+      "title": "Open Campaign Stats — your live mission control",
+      "content": "<p>Campaign Stats is the real-time monitoring view: it shows every campaign side by side with live call counts, progress bars, and money counters that update while you watch.</p><ol><li>In the top navigation bar, click <strong>Campaigns</strong>.</li><li>In the sub-tab row that appears underneath, click <strong>Campaign Stats</strong>.</li></ol><blockquote>💡 The page refreshes itself automatically. Use the <strong>Auto-refresh</strong> dropdown in the top-right to pick the pace — <strong>Off</strong>, <strong>5 seconds</strong>, <strong>15 seconds</strong> (the default), <strong>30 seconds</strong>, or <strong>1 minute</strong> — or click <strong>Refresh Now</strong> for an instant update.</blockquote>",
       "images": [
-        { "src": "images/campaigns/campaign-stats-light.png", "alt": "Campaign Stats", "caption": "Campaign Stats gives a live monitoring view across campaigns", "theme": "light" },
-        { "src": "images/campaigns/campaign-stats-dark.png", "alt": "Campaign Stats", "caption": "Campaign Stats gives a live monitoring view across campaigns", "theme": "dark" }
+        { "src": "images/campaigns/campaign-stats-light.png", "alt": "Campaign Stats page with live tiles, spend and earnings cards, and the campaigns table", "caption": "Campaign Stats: live tiles on top, money cards in the middle, and every campaign in the table below", "theme": "light" },
+        { "src": "images/campaigns/campaign-stats-dark.png", "alt": "Campaign Stats page with live tiles, spend and earnings cards, and the campaigns table", "caption": "Campaign Stats: live tiles on top, money cards in the middle, and every campaign in the table below", "theme": "dark" }
       ]
     },
     {
-      "id": "read-metrics",
-      "title": "Understand the key numbers",
-      "content": "<p>Across the analytics views you'll see:</p><ul><li><strong>Progress</strong> &mdash; attempts made out of total possible attempts.</li><li><strong>Connect rate</strong> &mdash; the share of calls that reached a person.</li><li><strong>Contacts / remaining</strong> &mdash; how many people are left to dial.</li><li><strong>Total cost</strong> &mdash; what the campaign has spent so far.</li></ul><p>You'll also see these on each campaign's <strong>Overview</strong> tab and in the Progress column of the main Campaigns list.</p>"
+      "id": "live-tiles",
+      "title": "Read the live activity tiles",
+      "content": "<p>The first row of tiles answers \"what is happening right now?\":</p><ul><li><strong>Active Campaigns</strong> — how many campaigns are currently running.</li><li><strong>Calls In Progress</strong> — live calls connected at this very moment.</li><li><strong>Calls Today</strong> — total calls placed since midnight.</li><li><strong>Calls/Min</strong> — your current dialing pace, in calls per minute.</li><li><strong>Queue Depth</strong> — contacts queued up and waiting to be dialed. The number turns orange if the queue grows past 1,000, a hint that calls are being created faster than they can go out.</li></ul>",
+      "images": [
+        { "src": "images/campaigns/campaign-analytics-live-tiles-light.png", "alt": "Live activity tiles: Active Campaigns, Calls In Progress, Calls Today, Calls/Min, Queue Depth", "caption": "The live tiles: everything happening right now, at a glance", "theme": "light" },
+        { "src": "images/campaigns/campaign-analytics-live-tiles-dark.png", "alt": "Live activity tiles: Active Campaigns, Calls In Progress, Calls Today, Calls/Min, Queue Depth", "caption": "The live tiles: everything happening right now, at a glance", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "health-tiles",
+      "title": "Check the health tiles",
+      "content": "<p>The second row tells you whether your dialing engine is healthy:</p><ul><li><strong>Pending in Queue</strong> — contacts waiting for their first attempt.</li><li><strong>Retry Eligible</strong> — contacts whose earlier call didn't finish and are now ready for another attempt. Hover it for the full explanation; it turns orange when a large backlog builds up.</li><li><strong>Errors (Last Hour)</strong> — failed call attempts in the past hour. Green zero is what you want; a red number means something needs attention.</li><li><strong>Active Users</strong> — how many accounts on your tenant are running campaigns right now.</li></ul><blockquote>⚠️ A steadily climbing <strong>Errors (Last Hour)</strong> count usually points at a phone-number or provider issue — check your numbers before scaling the campaign up.</blockquote>",
+      "images": [
+        { "src": "images/campaigns/campaign-analytics-health-tiles-light.png", "alt": "Health tiles: Pending in Queue, Retry Eligible, Errors (Last Hour), Active Users", "caption": "The health row: is the dialer keeping up, and is anything failing?", "theme": "light" },
+        { "src": "images/campaigns/campaign-analytics-health-tiles-dark.png", "alt": "Health tiles: Pending in Queue, Retry Eligible, Errors (Last Hour), Active Users", "caption": "The health row: is the dialer keeping up, and is anything failing?", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "money-cards",
+      "title": "Watch your money in real time",
+      "content": "<p>Two live counters animate upward between refreshes so you can literally watch the numbers move:</p><ul><li><strong>Spend (Today)</strong> — what <em>you</em> have spent today across your campaigns. Only calls you actually paid for count.</li><li><strong>Earnings (Today)</strong> — your markup on sub-account calls plus any affiliate commissions earned today.</li></ul><p>Hover either card for a tooltip explaining exactly what's included.</p><blockquote>💡 Sub-accounts see only <strong>Spend (Today)</strong> — the Earnings card is reserved for main accounts, since that's where markup and commissions land.</blockquote>",
+      "images": [
+        { "src": "images/campaigns/campaign-analytics-money-cards-light.png", "alt": "Spend (Today) and Earnings (Today) cards", "caption": "Live money counters: today's spend on the left, today's earnings on the right", "theme": "light" },
+        { "src": "images/campaigns/campaign-analytics-money-cards-dark.png", "alt": "Spend (Today) and Earnings (Today) cards", "caption": "Live money counters: today's spend on the left, today's earnings on the right", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "stats-table",
+      "title": "Scan the campaigns table",
+      "content": "<p>Below the tiles, every campaign gets its own row. Here's what each column means:</p><ul><li><strong>Campaign</strong> — the campaign name and its owner account.</li><li><strong>Status</strong> — Draft, Running, Cooling Down, After Hours, Paused, Stopped, Completed, or Inactive.</li><li><strong>Active Calls</strong> — live calls right now versus the campaign's concurrent-call limit (e.g. <em>2 / 3</em>).</li><li><strong>Progress</strong> — percent of all planned dial attempts completed.</li><li><strong>Calls</strong> — total calls, how many connected, and total talk minutes.</li><li><strong>Cost</strong> — what the campaign has spent, with the per-minute rate shown on hover.</li><li><strong>Earnings</strong> — what you earned on that campaign (main accounts only).</li><li><strong>Working Hours</strong> — the daily calling window the campaign respects.</li><li><strong>Actions</strong> — pause ⏸ or resume ▶ the campaign right from this table (a confirmation pops up first).</li></ul><p>To narrow the list:</p><ol><li>Type a name into <strong>Search campaigns...</strong>.</li><li>Use <strong>Filter by status</strong> to show only <strong>Running</strong>, <strong>Cooling Down</strong>, <strong>After Hours</strong>, <strong>Paused</strong>, <strong>Stopped</strong>, or <strong>Completed</strong> campaigns.</li><li>Click <strong>Refresh</strong> to reload the table on demand.</li></ol>",
+      "images": [
+        { "src": "images/campaigns/campaign-analytics-stats-table-light.png", "alt": "Campaigns table with search, status filter, and per-campaign status, progress, calls, cost, and earnings columns", "caption": "Every campaign in one table — search it, filter it, and pause/resume rows inline", "theme": "light" },
+        { "src": "images/campaigns/campaign-analytics-stats-table-dark.png", "alt": "Campaigns table with search, status filter, and per-campaign status, progress, calls, cost, and earnings columns", "caption": "Every campaign in one table — search it, filter it, and pause/resume rows inline", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "breakdown",
+      "title": "Expand a row for the dial-list breakdown",
+      "content": "<p>Want to know exactly how far a campaign has chewed through its list? Expand it:</p><ol><li>Click the <strong>+</strong> icon at the left edge of any campaign row.</li><li>A breakdown panel opens with five mini-stats:<ul><li><strong>Contacts</strong> — total people in the dial list.</li><li><strong>Attempts Made</strong> — attempts completed out of the total planned (each contact can get multiple retries).</li><li><strong>Attempts Left</strong> — attempts still remaining for unfinished contacts.</li><li><strong>Finished</strong> — contacts that completed all their attempts (shown in green).</li><li><strong>Progress</strong> — the overall attempt progress bar.</li></ul></li></ol>",
+      "images": [
+        { "src": "images/campaigns/campaign-analytics-breakdown-light.png", "alt": "Expanded row showing Contacts, Attempts Made, Attempts Left, Finished, and Progress", "caption": "The expanded dial-list breakdown: exactly how much of the list is done", "theme": "light" },
+        { "src": "images/campaigns/campaign-analytics-breakdown-dark.png", "alt": "Expanded row showing Contacts, Attempts Made, Attempts Left, Finished, and Progress", "caption": "The expanded dial-list breakdown: exactly how much of the list is done", "theme": "dark" }
+      ]
     },
     {
       "id": "open-reports",
-      "title": "Open Campaign Reports",
-      "content": "<ol><li>In the left menu, under <strong>Campaigns</strong>, open <strong>Campaign Reports</strong>.</li><li>This view breaks down performance per campaign &mdash; calls, outcomes, and cost &mdash; so you can compare campaigns against each other.</li></ol>",
+      "title": "Open Campaign Reports — the billing-grade ledger",
+      "content": "<p>Where Campaign Stats is a live dashboard, Campaign Reports is your accountant's view: one row per campaign with exact call counts, minutes, rates, and billed amounts — perfect for invoicing clients or auditing spend.</p><ol><li>In the top navigation bar, click <strong>Campaigns</strong>.</li><li>Click the <strong>Campaign Reports</strong> sub-tab.</li></ol><blockquote>💡 By default the report covers the <strong>last 30 days</strong>. If the table looks empty, your campaigns simply haven't called in that window — widen the date range (next step) to see older activity.</blockquote>",
       "images": [
-        { "src": "images/campaigns/campaign-reports-light.png", "alt": "Campaign Reports", "caption": "Campaign Reports breaks down calls, outcomes, and cost per campaign", "theme": "light" },
-        { "src": "images/campaigns/campaign-reports-dark.png", "alt": "Campaign Reports", "caption": "Campaign Reports breaks down calls, outcomes, and cost per campaign", "theme": "dark" }
+        { "src": "images/campaigns/campaign-reports-light.png", "alt": "Campaign Reports page with filters and the per-campaign billing table", "caption": "Campaign Reports: one row per campaign with calls, minutes, rates, and billed amounts", "theme": "light" },
+        { "src": "images/campaigns/campaign-reports-dark.png", "alt": "Campaign Reports page with filters and the per-campaign billing table", "caption": "Campaign Reports: one row per campaign with calls, minutes, rates, and billed amounts", "theme": "dark" }
       ]
     },
     {
-      "id": "act",
-      "title": "Act on what you see",
-      "content": "<ul><li>Low connect rate? Adjust your calling hours and time zone so you reach people when they're available.</li><li>Costs climbing faster than results? Pause the campaign and refine the dial list or the AI agent.</li><li>Want per-call detail? Open a campaign and use its <strong>Overview</strong> tab, or review individual calls in Call Center &rarr; Call Logs.</li></ul>"
+      "id": "reports-filters",
+      "title": "Filter the report",
+      "content": "<p>Three filters sit above the table — combine them to zero in on exactly what you need:</p><ul><li><strong>Filter by Account</strong> — main accounts only: pick yourself or any sub-account to see just their campaigns. Affiliates can also pick their referred customers here.</li><li><strong>Filter by Campaign</strong> — type to search and select a single campaign.</li><li><strong>Date range</strong> — the <strong>Start Date → End Date</strong> picker. It defaults to the last 30 days; click the small <strong>×</strong> that appears when you hover it to clear the range and report on <em>all time</em>.</li></ul><p>Every filter change reloads the table instantly and resets you to page 1.</p>",
+      "images": [
+        { "src": "images/campaigns/campaign-analytics-reports-filters-light.png", "alt": "Filter bar with Filter by Account, Filter by Campaign, and the date range picker", "caption": "The report filters: account, campaign, and date range", "theme": "light" },
+        { "src": "images/campaigns/campaign-analytics-reports-filters-dark.png", "alt": "Filter bar with Filter by Account, Filter by Campaign, and the date range picker", "caption": "The report filters: account, campaign, and date range", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "reports-table",
+      "title": "Understand the report columns",
+      "content": "<p>Each row is one campaign's totals for the selected period:</p><ul><li><strong>Account Name / Account Email</strong> — who owns the campaign (useful when you manage sub-accounts).</li><li><strong>Campaign ID</strong> — the unique ID; click the copy icon to grab the full value.</li><li><strong>Campaign</strong> — the campaign name.</li><li><strong>Status</strong> — the campaign's current status.</li><li><strong>Calls/Events</strong> — how many calls (or billable events) the campaign generated.</li><li><strong>Minutes/Units</strong> — total billable minutes or units consumed.</li><li><strong>Sell Rate</strong> — the per-minute price billed for this campaign's calls.</li><li><strong>Bill Amount</strong> — the total amount billed for the period.</li></ul><p>Main accounts get three extra profit columns:</p><ul><li><strong>Cost Rate</strong> — your underlying per-minute cost.</li><li><strong>Total Cost</strong> — your total cost for those calls.</li><li><strong>Profit</strong> — Bill Amount minus Total Cost, shown in green when positive.</li></ul><p>Click any column header to sort by it (click again to flip the direction), and use the pagination controls under the table to page through large reports or change the page size.</p>",
+      "images": [
+        { "src": "images/campaigns/campaign-analytics-reports-table-light.png", "alt": "Report table with account, campaign, status, calls, minutes, and rate columns", "caption": "The report table: sortable billing-grade numbers per campaign", "theme": "light" },
+        { "src": "images/campaigns/campaign-analytics-reports-table-dark.png", "alt": "Report table with account, campaign, status, calls, minutes, and rate columns", "caption": "The report table: sortable billing-grade numbers per campaign", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "export-csv",
+      "title": "Export the report to CSV",
+      "content": "<p>Need the numbers in a spreadsheet or your billing system?</p><ol><li>Set your filters first — the export respects the current <strong>Account</strong>, <strong>Campaign</strong>, and <strong>date range</strong> selections.</li><li>Click <strong>Export to CSV</strong> in the top-right corner of the page.</li><li>Your browser downloads a file named <em>campaign-reports-&lt;date&gt;.csv</em> (with a <em>-filtered</em> suffix when filters are active), containing every matching row — not just the current page.</li></ol><blockquote>💡 The CSV includes all visible columns, so main accounts get Cost Rate, Total Cost, and Profit in the file too — ready for margin analysis in Excel or Google Sheets.</blockquote>",
+      "images": [
+        { "src": "images/campaigns/campaign-analytics-export-light.png", "alt": "Export to CSV button", "caption": "Export to CSV — one click downloads every matching row", "theme": "light" },
+        { "src": "images/campaigns/campaign-analytics-export-dark.png", "alt": "Export to CSV button", "caption": "Export to CSV — one click downloads every matching row", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "act-on-insights",
+      "title": "Turn insights into action",
+      "content": "<p>Numbers are only useful if you act on them. A quick playbook:</p><ul><li><strong>Low connect numbers?</strong> Revisit the campaign's working hours and time zone so calls land when people actually pick up.</li><li><strong>Errors climbing?</strong> Pause the campaign from the Stats table, check your phone numbers and provider, then resume.</li><li><strong>Queue Depth ballooning?</strong> Your concurrency limit is the bottleneck — raise the campaign's concurrent-call limit or slow down list loading.</li><li><strong>Costs rising faster than results?</strong> Pause, tighten the dial list, and sharpen your AI agent's script before spending another dollar.</li><li><strong>Want per-call detail?</strong> Open <strong>Call Center → Call Logs</strong> from the left sidebar to inspect individual calls, recordings, and transcripts.</li></ul><p>With Stats for the live pulse and Reports for the money trail, you're running campaigns with your eyes wide open — that's how winning teams scale.</p>"
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Turn insights into a better-performing campaign.",
+    "description": "You can read the scoreboard — now go improve the game.",
     "cards": [
-      { "href": "/campaigns/create-campaign", "title": "Create a Campaign", "description": "Set pacing, hours, and the AI agent." },
-      { "href": "/campaigns/dial-lists", "title": "Manage the Dial List", "description": "Refine who gets called." },
-      { "href": "/campaigns/do-not-call-list", "title": "Do Not Call List", "description": "Keep your campaigns compliant." }
+      { "href": "/campaigns/create-campaign", "title": "Create a Campaign", "description": "Set pacing, working hours, and the AI agent that does the talking." },
+      { "href": "/campaigns/dial-lists", "title": "Manage Dial Lists", "description": "Refine who gets called — import, clean, and retry smartly." },
+      { "href": "/campaigns/human-dialer", "title": "Human Dialer", "description": "Put your human team on the phones with power dialing." }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Read Campaign Analytics | iMash Docs",
-  "metaDescription": "Understand your iMash campaign performance: live progress and connect rate in Campaign Stats, and per-campaign cost and outcome breakdowns in Campaign Reports.",
-  "metaKeywords": "campaign analytics, campaign stats, campaign reports, connect rate, campaign cost, call outcomes, imash campaigns"
+  "metaTitle": "Campaign Reports & Stats | iMash Documentation",
+  "metaDescription": "Monitor iMash campaigns live in Campaign Stats — active calls, queue health, spend and earnings — and audit per-campaign calls, minutes, rates, and profit in Campaign Reports, with CSV export.",
+  "metaKeywords": "campaign analytics, campaign stats, campaign reports, live campaign monitoring, campaign cost, campaign earnings, dial list progress, export csv, imash campaigns"
 }

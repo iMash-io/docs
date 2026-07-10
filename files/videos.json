@@ -1,0 +1,95 @@
+{
+  "videos": [
+    {
+      "route": "/agents/advanced-settings",
+      "title": "Post-Call Processing & Webhooks",
+      "lede": "Turn every call into structured output: generate a summary, score success, extract custom JSON data, and POST it all to your systems - configured in the Webhooks Post Processing panel.",
+      "videoUrl": "https://youtu.be/l7_wH8Bpsp0",
+      "videoLength": "3"
+    },
+    {
+      "route": "/agents/agent-knowledge-base",
+      "title": "Add a Knowledge Base to Your Agent",
+      "lede": "Upload your FAQs, policies, and support documents so your Smart Agent answers questions with accurate, up-to-date information.",
+      "videoUrl": "https://youtu.be/XvZsh6jPuLg",
+      "videoLength": "2"
+    },
+    {
+      "route": "/agents/agent-mcp",
+      "title": "Connect an MCP Server to Your Agent",
+      "lede": "Bundle your automation flows and tools into an MCP server, then attach it to a Smart Agent so it can call them live during a conversation.",
+      "videoUrl": "https://youtu.be/0VZbWIhMBck",
+      "videoLength": "4"
+    },
+    {
+      "route": "/agents/agent-privacy",
+      "title": "Privacy & Recording Settings",
+      "lede": "Control what your Smart Agent keeps: turn call transcript and recording storage on or off, and choose whether to save the call audio.",
+      "videoUrl": "https://youtu.be/5tPDfE9WJlI",
+      "videoLength": "1"
+    },
+    {
+      "route": "/agents/agent-settings",
+      "title": "Agent Settings: Timeouts, Idle Messages & Voicemail",
+      "lede": "Fine-tune how your Smart Agent behaves on a call: maximum call length, silence and idle handling, voicemail (AMD) detection, backchannel, interruptions, and turn detection.",
+      "videoUrl": "https://youtu.be/7C-N_RWwPFI",
+      "videoLength": "5"
+    },
+    {
+      "route": "/agents/agent-tools",
+      "title": "Add Tools to Your Agent",
+      "lede": "Give your Smart Agent the ability to take actions - end calls, book appointments, transfer, or call your own APIs - using predefined tools and custom HTTP tools.",
+      "videoUrl": "https://youtu.be/Gmo7CE-XORY",
+      "videoLength": "3"
+    },
+    {
+      "route": "/agents/costum-variables",
+      "title": "Personalize Agents with Custom Variables",
+      "lede": "Feed your Smart Agent live context - a caller's name, address, and any custom fields - so it can greet people by name and tailor every conversation.",
+      "videoUrl": "https://youtu.be/mR9rNHDWJJ8",
+      "videoLength": "2"
+    },
+    {
+      "route": "/agents/embed-agent",
+      "title": "Embed Your Agent on Your Website",
+      "lede": "Turn a Smart Agent into a website widget or popup with text, voice, and optional avatar, then paste one snippet of code to go live.",
+      "videoUrl": "https://youtu.be/3JS-ncMsZ7s",
+      "videoLength": "4"
+    },
+    {
+      "route": "/agents/llm-settings",
+      "title": "Choose the Brain (LLM) for Your Agent",
+      "lede": "Pick the model that powers your Smart Agent's replies. Learn the difference between realtime (speech-to-speech) models and text (LLM + transcriber) models, and how to configure each.",
+      "videoUrl": "https://youtu.be/bDy0w1hEz7I",
+      "videoLength": "2"
+    },
+    {
+      "route": "/agents/observer-agent",
+      "title": "Set Up the Observer Agent",
+      "lede": "Run a second AI in the background that watches every live call, flags important moments as events, and can silently trigger tools - without slowing the main conversation.",
+      "videoUrl": "https://youtu.be/-cgpNKzS6FY",
+      "videoLength": "3"
+    },
+    {
+      "route": "/agents/test-your-agent",
+      "title": "Test Your Agent",
+      "lede": "Try your Smart Agent before it goes live. Talk to it right in the browser with Test Agent, or place a real phone call to hear it end-to-end.",
+      "videoUrl": "https://youtu.be/_Baz0eFGyLI",
+      "videoLength": "1"
+    },
+    {
+      "route": "/agents/voice-configuration",
+      "title": "Configure the Voice (TTS) for Your Agent",
+      "lede": "Choose the voice your Smart Agent speaks with. Pick a text-to-speech (TTS) provider, preview voices, filter by gender, accent, and age, and set a backup voice.",
+      "videoUrl": "https://youtu.be/C3Rkclp_KKQ",
+      "videoLength": "2"
+    },
+    {
+      "route": "/get-started/quick-start",
+      "title": "Quickstart Guide - How To Create Your First Voice Agent With iMash",
+      "lede": "This guide provides step-by-step instructions on how to create, configure, and connect an AI voice agent in Imash, including integration with phone numbers, call handling, and system features.",
+      "videoUrl": "https://youtu.be/YG6rAxWvW18",
+      "videoLength": "13"
+    }
+  ]
+}

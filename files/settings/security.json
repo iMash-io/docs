@@ -1,52 +1,91 @@
 {
   "title": "Security",
-  "lede": "Simple, practical steps to keep your iMash account safe — strong passwords, controlling who's signed in, and limiting what each team member can reach.",
-  "timeToComplete": "6 minutes",
+  "lede": "iMash protects your business with per-person logins, granular permissions, single-session control, tamper-proof audit trails, and bank-grade data isolation. Here's your practical checklist to lock it all down in under ten minutes.",
+  "timeToComplete": "8 minutes",
   "steps": [
     {
-      "id": "password",
-      "title": "Use a strong password and reset it safely",
-      "content": "<ol><li>Use a long, unique password for iMash that you don't reuse anywhere else.</li><li>If you ever forget it, use <strong>Forgot password</strong> on the sign-in screen to get a secure reset link by email.</li><li>Change a team member's password at any time from <strong>Team</strong> (User Management) by editing their user.</li></ol><p>Never share one login between multiple people — give each person their own team member account instead so you can track and control access.</p>",
+      "id": "security-model",
+      "title": "Start at Team & Access — one login per person",
+      "content": "<p>Everything about account security starts with one golden rule: <strong>every person gets their own login</strong>. Shared logins make it impossible to know who changed what, and you can't cut off one person without locking out everyone.</p><ol><li>In the left sidebar, click <strong>Team &amp; Access</strong>. The <strong>User Management</strong> page opens on the <strong>Users</strong> tab.</li><li>Review the list: every row is one person, with their <strong>Role</strong>, <strong>Groups</strong>, <strong>View Profile</strong>, and <strong>Status</strong> (Active or Disabled).</li><li>If two people currently share one login, split them now — click <strong>Add User</strong> to give the second person their own account (next step).</li></ol><blockquote>💡 The tabs across the top — <strong>Users</strong>, <strong>Roles</strong>, <strong>Permissions</strong>, <strong>Groups</strong>, and <strong>View Profiles</strong> — are your complete access-control toolkit. This guide focuses on the security essentials; the Team Management guide covers each tab in depth.</blockquote>",
       "images": [
-        { "src": "images/settings/user-management-light.png", "alt": "Team and access management", "caption": "Account security starts with per-person team accounts and controlled access", "theme": "light" },
-        { "src": "images/settings/user-management-dark.png", "alt": "Team and access management", "caption": "Account security starts with per-person team accounts and controlled access", "theme": "dark" }
+        { "src": "images/settings/security-users-light.png", "alt": "User Management page showing the Users tab with per-person accounts, roles, groups, and status", "caption": "Team & Access → User Management — every person gets their own account with its own role and status", "theme": "light" },
+        { "src": "images/settings/security-users-dark.png", "alt": "User Management page showing the Users tab with per-person accounts, roles, groups, and status", "caption": "Team & Access → User Management — every person gets their own account with its own role and status", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "strong-passwords",
+      "title": "Create accounts with strong, unique passwords",
+      "content": "<ol><li>On the <strong>Users</strong> tab, click <strong>Add User</strong>.</li><li>Fill in the fields in the <strong>Create User</strong> modal:<ul><li><strong>Email</strong> — the person's real work email (used for sign-in and password recovery).</li><li><strong>Password</strong> — set a long, unique starting password. Never reuse a password from another service.</li><li><strong>First Name</strong> / <strong>Last Name</strong> — shown across the app and in the audit trail, so activity is always attributable.</li><li><strong>Role</strong> — pick the least-powerful role that covers their job (more on this in the next step).</li></ul></li><li>Click <strong>Create User</strong> and have the person change the starting password on first sign-in.</li><li>If anyone ever forgets their password, they can use <strong>Forgot password</strong> on the sign-in screen to receive a secure reset link by email — you never need to share passwords over chat or SMS.</li></ol><blockquote>⚠️ A password manager beats memory every time. Encourage your team to generate 16+ character random passwords — the single cheapest security upgrade you can make.</blockquote>",
+      "images": [
+        { "src": "images/settings/security-add-user-light.png", "alt": "Create User modal with Email, Password, First Name, Last Name and Role fields", "caption": "The Create User modal — each account gets its own email, password, and least-privilege role", "theme": "light" },
+        { "src": "images/settings/security-add-user-dark.png", "alt": "Create User modal with Email, Password, First Name, Last Name and Role fields", "caption": "The Create User modal — each account gets its own email, password, and least-privilege role", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "least-privilege",
+      "title": "Grant the minimum access each person needs",
+      "content": "<p>The strongest account is the one that can't touch what it doesn't need. iMash layers three controls on top of each user:</p><ol><li><strong>Role</strong> — on the <strong>Roles</strong> tab, roles define read/create/edit/delete rights per data type. Assign the least-powerful role that covers the job.</li><li><strong>Per-user Permissions</strong> — on the <strong>Users</strong> tab, click the grid icon (<strong>Permissions</strong>) on a team member's row. Toggle whole sidebar sections or single pages on and off. Pay special attention to the <strong>Account &amp; Tools</strong> section:<ul><li><strong>API Keys</strong> — can issue and manage API keys. Keep <em>Off</em> unless they manage integrations.</li><li><strong>Credentials</strong> — can manage shared provider credentials. Keep <em>Off</em> for most members.</li><li><strong>User Management</strong> — can create users and change permissions. Keep <em>Off</em> for everyone except admins — this toggle controls access itself.</li></ul>Under <strong>Display Options</strong>, <strong>Hide Billing Prices</strong> and <strong>Hide Billing Page</strong> let members work with usage data without seeing dollar amounts.</li><li><strong>Groups</strong> and <strong>View Profiles</strong> — use the <strong>Groups</strong> tab so members only see records belonging to their team, and <strong>View Profiles</strong> to apply one saved permission set to many users at once.</li></ol><blockquote>💡 Ask \"what would go wrong if this login were stolen?\" — then turn off everything that answer includes. You can always re-enable a toggle in seconds.</blockquote>",
+      "images": [
+        { "src": "images/settings/security-permissions-modal-light.png", "alt": "Per-user Permissions modal with section toggles including API Keys, Credentials and User Management", "caption": "The per-user Permissions modal — note the Account & Tools section where API Keys, Credentials, and User Management can be switched off", "theme": "light" },
+        { "src": "images/settings/security-permissions-modal-dark.png", "alt": "Per-user Permissions modal with section toggles including API Keys, Credentials and User Management", "caption": "The per-user Permissions modal — note the Account & Tools section where API Keys, Credentials, and User Management can be switched off", "theme": "dark" }
       ]
     },
     {
       "id": "session-control",
-      "title": "One active session holds control",
-      "content": "<ul><li>iMash allows only <strong>one active session at a time</strong> per account. If you (or someone using your login) sign in somewhere new, the older window is covered by a <strong>Take control</strong> lock screen.</li><li>Click <strong>Take control</strong> in the window you want to use — the other one stays locked until it takes control back.</li><li>If you see this lock unexpectedly, someone else may be using your login. Change your password right away.</li></ul>"
+      "title": "One session holds control at a time",
+      "content": "<p>iMash enforces <strong>single-session control</strong>: only one browser window actively controls an account at any moment.</p><ul><li>If the same login opens somewhere new, the older window is instantly covered by a full-screen lock that reads <strong>\"This account is in use on another device\"</strong>.</li><li>The locked window offers two buttons: <strong>Take control</strong> (reclaim the account on this device — the other screen locks in turn) and <strong>Log out</strong>.</li><li>Nothing underneath the lock screen is readable or clickable, so an unattended screen never leaks live data.</li></ul><blockquote>⚠️ If you see the lock screen when <em>you</em> didn't sign in anywhere else, treat it as a red flag — someone may have your password. Take control, then change your password immediately and review the Audit Log (step 7) for activity you don't recognize.</blockquote>"
     },
     {
-      "id": "least-access",
-      "title": "Give each person only the access they need",
-      "content": "<ul><li>Assign every team member a <strong>Role</strong> that grants just the read/create/edit/delete rights their job requires.</li><li>Keep <strong>Billing</strong>, <strong>Credentials</strong> (API keys), and <strong>User Management</strong> turned off for members who don't need them — these control money and access.</li><li>Use <strong>Permission Groups</strong> so a member only sees the records that belong to their team, not the whole account.</li></ul><p>Manage all of this on the <strong>Team</strong> page.</p>"
+      "id": "deactivate-fast",
+      "title": "Disable access the moment it's no longer needed",
+      "content": "<p>When someone leaves the company or changes roles, cut access in one click — no deleting, no data loss.</p><ol><li>Open <strong>Team &amp; Access</strong> → <strong>Users</strong> and find the person's row.</li><li>In the <strong>Actions</strong> column, click the red <strong>Disable</strong> button (circle-X icon) and confirm with <strong>Disable</strong>. Their sign-in stops working instantly; their records and history stay intact.</li><li>If they return, click <strong>Enable</strong> (check icon) on the same row to restore access.</li></ol><p>The other row actions are security tools too:</p><ul><li><strong>Permissions</strong> (grid icon) — the toggle editor from step 3.</li><li><strong>Edit</strong> (pencil) — update name or role.</li><li><strong>Impersonate</strong> (person-switch icon) — the account owner can temporarily view the app exactly as that member sees it, perfect for verifying that permissions actually hide what you intended. It's a time-limited support view; the member's password is never exposed.</li></ul>",
+      "images": [
+        { "src": "images/settings/security-user-actions-light.png", "alt": "Row action buttons on a team member: Permissions, Edit, Impersonate, role permissions, and the red Disable button", "caption": "Row actions on each team member — the red circle-X disables sign-in instantly", "theme": "light" },
+        { "src": "images/settings/security-user-actions-dark.png", "alt": "Row action buttons on a team member: Permissions, Edit, Impersonate, role permissions, and the red Disable button", "caption": "Row actions on each team member — the red circle-X disables sign-in instantly", "theme": "dark" }
+      ]
     },
     {
-      "id": "deactivate",
-      "title": "Deactivate access the moment it's no longer needed",
-      "content": "<ol><li>When someone leaves or changes roles, open <strong>Team</strong> and use <strong>Disable</strong> on their row to block sign-in instantly.</li><li>Re-enable later if they return — no need to delete and recreate the account.</li><li>Rotate <strong>API Keys</strong> if a key may have been exposed, and only enable Credentials access for people who manage integrations.</li></ol>"
+      "id": "api-key-hygiene",
+      "title": "Practice API key hygiene",
+      "content": "<p>API keys are passwords for machines — treat them with the same care.</p><ol><li>In the top navigation, click <strong>Credentials</strong>, then open the <strong>API Keys</strong> page.</li><li>Click <strong>Generate New API Key</strong>, give it a descriptive name (one key per integration — \"Zapier\", \"Website form\", \"Reporting script\"), and generate it.</li><li><strong>Copy the key immediately.</strong> The full secret is shown only once at creation; afterwards the list shows just the <strong>Key Prefix</strong>, so a leaked screenshot of this page can't compromise you.</li><li>Audit the list regularly:<ul><li><strong>Last Used</strong> — a key that says <em>Never</em> or hasn't been used in months is pure risk with zero benefit. Delete it.</li><li><strong>Created At</strong> — rotate long-lived keys periodically: generate a replacement, switch your integration over, then delete the old one.</li></ul></li><li>If a key may have been exposed (committed to a repo, pasted in a chat), delete it with the red trash icon right away and issue a fresh one.</li></ol><blockquote>💡 Because each integration has its own key, revoking one never breaks the others — that's why \"one key per integration\" is the golden rule.</blockquote>",
+      "images": [
+        { "src": "images/settings/security-api-keys-light.png", "alt": "API Keys page listing keys with prefix, created date, last used and delete actions", "caption": "The API Keys page — only the prefix is ever displayed again, and Last Used exposes stale keys worth deleting", "theme": "light" },
+        { "src": "images/settings/security-api-keys-dark.png", "alt": "API Keys page listing keys with prefix, created date, last used and delete actions", "caption": "The API Keys page — only the prefix is ever displayed again, and Last Used exposes stale keys worth deleting", "theme": "dark" }
+      ]
     },
     {
-      "id": "data-isolation",
-      "title": "Your data stays isolated",
-      "content": "<ul><li>iMash keeps each account's data separated at the database level, so your records are never visible to other customers.</li><li>Within your account, roles, groups, and per-page toggles decide exactly what each member can open.</li><li>When the owner uses <strong>Impersonate</strong> to help a member, it's a temporary, time-limited view — the member's own login is never exposed.</li></ul>"
+      "id": "audit-trail",
+      "title": "Verify everything with the Audit Log",
+      "content": "<p>Security you can't verify isn't security. iMash keeps an append-only <strong>Audit Log</strong> — a change history that records <em>who</em> changed <em>what</em>, <em>when</em>, across your account and every sub-account.</p><ol><li>In the left sidebar, click <strong>Audit</strong>.</li><li>Each entry shows <strong>When</strong>, <strong>Who</strong> (with a Main/Sub tag), <strong>What Happened</strong> in plain language, and an <strong>Importance</strong> level.</li><li>Filter by <strong>Table</strong>, <strong>Category</strong>, <strong>Severity</strong>, <strong>Action</strong>, <strong>Sub-account</strong>, or a date range to zero in on anything suspicious.</li><li>Toggle <strong>Impersonated</strong> to see actions performed while the owner was impersonating a member — impersonated activity is always labeled, never hidden.</li></ol><p>Use it after any security event: an unexpected session lock, a departed employee, or an integration behaving oddly. For alert rules and notifications, see the dedicated Audit Log guide in What's Next.</p>",
+      "images": [
+        { "src": "images/settings/security-audit-log-light.png", "alt": "Audit Log page with When, Who, What Happened and Importance columns plus filters", "caption": "The Audit Log — every change across your account and sub-accounts, filterable and attributable", "theme": "light" },
+        { "src": "images/settings/security-audit-log-dark.png", "alt": "Audit Log page with When, Who, What Happened and Importance columns plus filters", "caption": "The Audit Log — every change across your account and sub-accounts, filterable and attributable", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "platform-protections",
+      "title": "What iMash handles for you — isolation, encryption, and the Trust Center",
+      "content": "<p>Beyond the controls you configure, the platform protects you by design:</p><ul><li><strong>Data isolation</strong> — every account's data is separated with row-level security enforced by the database itself. Your leads, calls, and invoices are never visible to any other customer, and within your account the roles and toggles above decide exactly what each member can open.</li><li><strong>Encryption</strong> — traffic is encrypted in transit (TLS) and data is encrypted at rest.</li><li><strong>Payment safety</strong> — card payments are processed by Stripe (PCI DSS Level 1); full card numbers never touch iMash servers.</li></ul><p>Want the receipts? Open the public <strong>Trust Center</strong> at <strong>/security</strong> on your dashboard domain. It documents compliance status (SOC 2, GDPR/DPA, HIPAA BAA), live third-party scans you can run yourself (SSL Labs, Mozilla Observatory), the platform architecture, the full sub-processor list, and the responsible-disclosure policy — share the link with any customer or auditor who asks how their data is protected.</p>",
+      "images": [
+        { "src": "images/settings/security-trust-center-light.png", "alt": "Trust Center compliance cards including SOC 2, GDPR DPA, HIPAA BAA, SSL Labs and responsible disclosure", "caption": "The public Trust Center at /security — compliance posture, live scans, and disclosure policy in one place", "theme": "light" },
+        { "src": "images/settings/security-trust-center-dark.png", "alt": "Trust Center compliance cards including SOC 2, GDPR DPA, HIPAA BAA, SSL Labs and responsible disclosure", "caption": "The public Trust Center at /security — compliance posture, live scans, and disclosure policy in one place", "theme": "dark" }
+      ]
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Lock down access and keep your account healthy.",
+    "description": "Access is locked down — now put your security posture on autopilot.",
     "cards": [
-      { "href": "/settings/team-management", "title": "Team Management", "description": "Roles, groups, and per-member access toggles." },
-      { "href": "/settings/billing", "title": "Billing", "description": "Protect payments by limiting billing access." },
-      { "href": "/settings/white-label", "title": "White Label", "description": "Brand the platform under your own domain." }
+      { "href": "/settings/team-management", "title": "Team Management", "description": "The full guide to roles, permission groups, and view profiles." },
+      { "href": "/settings/audit-log", "title": "Audit Log & Notifications", "description": "Get alerted the moment something important changes." },
+      { "href": "/get-started/api-keys", "title": "API Keys", "description": "Create and use API keys for your integrations." }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Security - Keep Your Account Safe | iMash Docs",
-  "metaDescription": "Secure your iMash account with strong passwords, single-session control, least-privilege roles, and instant deactivation of team access.",
-  "metaKeywords": "security, account security, password reset, session control, access control, permissions, data isolation, deactivate user"
+  "metaTitle": "Security - Lock Down Your Account | iMash Documentation",
+  "metaDescription": "Secure your iMash account end to end: per-person logins, least-privilege permissions, single-session control, API key hygiene, the audit trail, and platform-level data isolation.",
+  "metaKeywords": "security, account security, passwords, session control, take control, permissions, least privilege, disable user, API key hygiene, audit log, data isolation, trust center, compliance"
 }

@@ -1,56 +1,102 @@
 {
-  "title": "Reportes",
-  "lede": "Compara el rendimiento de tus campañas de llamadas lado a lado: el progreso en vivo y las tasas de conexión en Campaign Stats, y las llamadas, resultados y costos por campaña en Campaign Reports.",
-  "timeToComplete": "5 minutos",
+  "title": "Informes",
+  "lede": "Cada dólar y cada llamada, lado a lado. Campaign Reports muestra qué hizo cada campaña y cuánto costó (o generó), y Campaign Stats es su centro de control en vivo mientras las campañas se ejecutan — además de un mapa de todos los demás informes de iMash.",
+  "timeToComplete": "10 minutos",
   "steps": [
     {
       "id": "open-reports",
-      "title": "Abre Campaign Reports",
-      "content": "<ol><li>En el menú izquierdo, dentro de <strong>Campaigns</strong> (Campañas), abre <strong>Campaign Reports</strong> (Reportes de campaña).</li><li>Cada fila es una campaña, de modo que puedes comparar campañas entre sí en una sola tabla.</li></ol>",
+      "title": "Abra Campaign Reports",
+      "content": "<p>Campaign Reports (Informes de Campaña) es el resumen a nivel de facturación de sus campañas de llamadas: una fila por campaña, con llamadas, minutos y dinero — perfecto para revisiones de fin de mes y facturación a clientes.</p><ol><li>En la barra de navegación superior, haga clic en <strong>Campaigns</strong> (Campañas).</li><li>En las sub-pestañas que aparecen debajo, haga clic en <strong>Campaign Reports</strong> (Informes de Campaña).</li></ol><p>Cada fila de la tabla es una campaña, de modo que puede comparar todas sus campañas entre sí en una sola vista.</p><blockquote>💡 Si no ve la pestaña <strong>Campaigns</strong>, es posible que su cuenta no tenga campañas habilitadas o que su rol oculte esta página — consulte a su administrador.</blockquote>",
       "images": [
-        { "src": "images/campaigns/campaign-reports-light.png", "alt": "Reportes de campaña", "caption": "Campaign Reports lista las llamadas, resultados y costos por campaña", "theme": "light" },
-        { "src": "images/campaigns/campaign-reports-dark.png", "alt": "Reportes de campaña", "caption": "Campaign Reports lista las llamadas, resultados y costos por campaña", "theme": "dark" }
+        { "src": "images/analytics/reports-page-light.png", "alt": "Página de Campaign Reports con la barra de filtros y la tabla de informes por campaña", "caption": "Campaign Reports: una fila por campaña con llamadas, minutos y facturación", "theme": "light" },
+        { "src": "images/analytics/reports-page-dark.png", "alt": "Página de Campaign Reports con la barra de filtros y la tabla de informes por campaña", "caption": "Campaign Reports: una fila por campaña con llamadas, minutos y facturación", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "filter-the-report",
+      "title": "Configure el rango de fechas y los filtros",
+      "content": "<p>La barra de filtros en la parte superior controla exactamente qué incluye la tabla (y cualquier exportación):</p><ul><li><strong>Filter by Account</strong> (Filtrar por Cuenta) — las cuentas principales con miembros de equipo ven este menú; elija una cuenta para ver solo sus campañas. Bórrelo para ver todas.</li><li><strong>Filter by Campaign</strong> (Filtrar por Campaña) — limite el informe a una sola campaña. La lista se actualiza según la cuenta seleccionada.</li><li><strong>Start Date → End Date</strong> (Fecha de Inicio → Fecha de Fin) — la ventana del informe. Solo se cuentan las llamadas dentro de esta ventana.</li></ul><blockquote>⚠️ El rango de fechas viene configurado por defecto en los <strong>últimos 30 días</strong> para que la página cargue rápido. Si una campaña muestra ceros, sus llamadas probablemente ocurrieron antes — borre el rango de fechas (haga clic en la <strong>×</strong> que aparece al pasar el cursor) para incluir todo el historial.</blockquote>",
+      "images": [
+        { "src": "images/analytics/reports-filters-light.png", "alt": "Barra de filtros con Filter by Account, Filter by Campaign y un selector de rango de fechas", "caption": "Filtros de cuenta, campaña y fechas — la ventana por defecto es de los últimos 30 días", "theme": "light" },
+        { "src": "images/analytics/reports-filters-dark.png", "alt": "Barra de filtros con Filter by Account, Filter by Campaign y un selector de rango de fechas", "caption": "Filtros de cuenta, campaña y fechas — la ventana por defecto es de los últimos 30 días", "theme": "dark" }
       ]
     },
     {
       "id": "read-report-columns",
-      "title": "Comprende las columnas del reporte",
-      "content": "<p>Para cada campaña, el reporte muestra:</p><ul><li><strong>Status</strong> (Estado) &mdash; si la campaña está en ejecución, en pausa o finalizada.</li><li><strong>Calls/Events</strong> (Llamadas/Eventos) &mdash; cuántas llamadas se realizaron.</li><li><strong>Minutes/Units</strong> (Minutos/Unidades) &mdash; tiempo total de conversación consumido.</li><li><strong>Sell Rate</strong> (Tarifa de venta) y <strong>Bill Amount</strong> (Monto facturado) &mdash; la tarifa por minuto facturada y el total facturado.</li></ul><p>Las cuentas principales también ven <strong>Cost Rate</strong> (Tarifa de costo), <strong>Total Cost</strong> (Costo total) y <strong>Profit</strong> (Ganancia) para comparar lo que costó una campaña frente a lo que se facturó.</p>"
-    },
-    {
-      "id": "filter-export",
-      "title": "Filtra y exporta",
-      "content": "<ol><li>Usa el <strong>rango de fechas</strong> en la parte superior para definir el período del reporte (por defecto son los últimos 30 días, por rapidez).</li><li>Filtra por una <strong>campaña</strong> o <strong>cuenta</strong> específica para acotar la lista.</li><li>Haz clic en <strong>Download</strong> (Descargar) para exportar el reporte como un CSV para tus propias hojas de cálculo o registros.</li></ol>"
-    },
-    {
-      "id": "open-stats",
-      "title": "Abre Campaign Stats para monitoreo en vivo",
-      "content": "<ol><li>En el menú izquierdo, dentro de <strong>Campaigns</strong> (Campañas), abre <strong>Campaign Stats</strong> (Estadísticas de campaña).</li><li>Esta es una vista de monitoreo en vivo: muestra tus campañas lado a lado con su estado actual, progreso, tasa de conexión y costo a medida que se ejecutan.</li></ol>",
+      "title": "Interprete las columnas del informe",
+      "content": "<p>Para cada campaña la tabla muestra:</p><ul><li><strong>Account Name / Account Email</strong> (Nombre / Correo de la Cuenta) — el propietario de la campaña (útil cuando administra cuentas de miembros de equipo).</li><li><strong>Campaign ID</strong> — el identificador único de la campaña, con botón de copiar para tickets de soporte o trabajo con la API.</li><li><strong>Campaign</strong> (Campaña) — el nombre de la campaña.</li><li><strong>Status</strong> (Estado) — draft (borrador), active (activa), inactive (inactiva) o completed (completada).</li><li><strong>Calls/Events</strong> (Llamadas/Eventos) — cuántas llamadas realizó la campaña en la ventana seleccionada.</li><li><strong>Minutes/Units</strong> (Minutos/Unidades) — el tiempo total de conversación facturable consumido.</li><li><strong>Sell Rate</strong> (Tarifa de Venta) — el precio por minuto facturado para esta campaña.</li><li><strong>Bill Amount</strong> (Monto Facturado) — el total facturado (minutos × tarifa de venta).</li></ul><p>Las cuentas principales también ven tres columnas de rentabilidad:</p><ul><li><strong>Cost Rate</strong> (Tarifa de Costo) — lo que las llamadas realmente costaron por minuto.</li><li><strong>Total Cost</strong> (Costo Total) — el costo subyacente total.</li><li><strong>Profit</strong> (Ganancia) — Monto Facturado menos Costo Total, para ver al instante qué campañas le generan dinero.</li></ul><p>Haga clic en el encabezado de cualquier columna para ordenar por ella (haga clic de nuevo para invertir la dirección) y use los controles de paginación bajo la tabla para recorrer listas grandes.</p>",
       "images": [
-        { "src": "images/campaigns/campaign-stats-light.png", "alt": "Estadísticas de campaña", "caption": "Campaign Stats ofrece una vista de monitoreo en vivo, lado a lado, entre campañas", "theme": "light" },
-        { "src": "images/campaigns/campaign-stats-dark.png", "alt": "Estadísticas de campaña", "caption": "Campaign Stats ofrece una vista de monitoreo en vivo, lado a lado, entre campañas", "theme": "dark" }
+        { "src": "images/analytics/reports-table-light.png", "alt": "Tabla de Campaign Reports con las columnas de cuenta, campaña, estado, llamadas, minutos, tarifa de venta, monto facturado, tarifa de costo, costo total y ganancia", "caption": "El conjunto completo de columnas — Cost Rate, Total Cost y Profit aparecen para cuentas principales", "theme": "light" },
+        { "src": "images/analytics/reports-table-dark.png", "alt": "Tabla de Campaign Reports con las columnas de cuenta, campaña, estado, llamadas, minutos, tarifa de venta, monto facturado, tarifa de costo, costo total y ganancia", "caption": "El conjunto completo de columnas — Cost Rate, Total Cost y Profit aparecen para cuentas principales", "theme": "dark" }
       ]
     },
     {
-      "id": "act",
-      "title": "Actúa según lo que observes",
-      "content": "<ul><li>¿<strong>Tasa de conexión</strong> baja? Ajusta tus horarios de llamada y zona horaria para contactar a las personas cuando estén disponibles.</li><li>¿El costo sube más rápido que los resultados? Pausa la campaña y refina la lista de marcación o el agente de IA.</li><li>¿Quieres el detalle llamada por llamada? Abre la pestaña <strong>Overview</strong> (Resumen) de una campaña, o revisa las llamadas individuales en <strong>Call Center &rarr; Call Logs</strong> (Centro de llamadas &rarr; Registros de llamadas).</li></ul>"
+      "id": "export-csv",
+      "title": "Exporte el informe a CSV",
+      "content": "<p>Llévese los números — a hojas de cálculo, herramientas de BI o informes para clientes:</p><ol><li>Configure primero los filtros y el rango de fechas — la exportación respeta exactamente lo que haya filtrado.</li><li>Haga clic en <strong>Export to CSV</strong> (Exportar a CSV) en la esquina superior derecha de la página.</li><li>Su navegador descarga un archivo llamado <strong>campaign-reports-&lt;fecha&gt;.csv</strong> (con el sufijo <strong>-filtered</strong> cuando hay filtros activos).</li></ol><blockquote>💡 La exportación no se limita a la página que está viendo — extrae hasta 50,000 filas que coincidan con sus filtros, así obtiene el informe completo en un solo archivo.</blockquote>"
+    },
+    {
+      "id": "open-stats",
+      "title": "Abra Campaign Stats para monitoreo en vivo",
+      "content": "<p>Campaign Reports le dice qué pasó; <strong>Campaign Stats</strong> (Estadísticas de Campaña) muestra lo que está pasando <em>ahora mismo</em>. Es la pantalla que debe mantener abierta mientras su marcador está funcionando.</p><ol><li>En la barra de navegación superior, haga clic en <strong>Campaigns</strong> y luego en la sub-pestaña <strong>Campaign Stats</strong>.</li><li>Configure <strong>Auto-refresh</strong> (Actualización automática, arriba a la derecha) con la frecuencia de actualización: <strong>Off</strong> (Desactivado), <strong>5 seconds</strong>, <strong>15 seconds</strong> (por defecto), <strong>30 seconds</strong> o <strong>1 minute</strong>.</li><li>Haga clic en <strong>Refresh Now</strong> (Actualizar Ahora) cuando quiera una actualización instantánea.</li></ol>",
+      "images": [
+        { "src": "images/analytics/reports-stats-page-light.png", "alt": "Página de Campaign Stats con indicadores en vivo, tarjetas de gasto y ganancias, y la tabla de campañas", "caption": "Campaign Stats: un panel en vivo de cada campaña, actualizado automáticamente", "theme": "light" },
+        { "src": "images/analytics/reports-stats-page-dark.png", "alt": "Página de Campaign Stats con indicadores en vivo, tarjetas de gasto y ganancias, y la tabla de campañas", "caption": "Campaign Stats: un panel en vivo de cada campaña, actualizado automáticamente", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "read-live-tiles",
+      "title": "Interprete los indicadores de actividad en vivo",
+      "content": "<p>Los recuadros de la parte superior resumen toda su operación de marcado de un vistazo:</p><ul><li><strong>Active Campaigns</strong> (Campañas Activas) — cuántas campañas se están ejecutando ahora.</li><li><strong>Calls In Progress</strong> (Llamadas en Curso) — llamadas conectadas en este momento.</li><li><strong>Calls Today</strong> (Llamadas Hoy) — total de llamadas realizadas desde la medianoche.</li><li><strong>Calls/Min</strong> (Llamadas/Min) — el ritmo actual de marcado.</li><li><strong>Queue Depth</strong> (Profundidad de Cola) — contactos esperando ser marcados.</li><li><strong>Pending in Queue</strong> (Pendientes en Cola) — llamadas en cola a punto de salir.</li><li><strong>Retry Eligible</strong> (Elegibles para Reintento) — contactos listos para otro intento.</li><li><strong>Errors (Last Hour)</strong> (Errores, Última Hora) — errores de llamada recientes; si sube, algo requiere atención.</li><li><strong>Active Users</strong> (Usuarios Activos) — cuentas con actividad de campaña en este momento.</li></ul>",
+      "images": [
+        { "src": "images/analytics/reports-stats-kpis-light.png", "alt": "Indicadores en vivo con Active Campaigns, Calls In Progress, Calls Today, Calls/Min, Queue Depth, Pending in Queue, Retry Eligible, Errors y Active Users", "caption": "Indicadores de actividad en vivo — su operación de marcado de un vistazo", "theme": "light" },
+        { "src": "images/analytics/reports-stats-kpis-dark.png", "alt": "Indicadores en vivo con Active Campaigns, Calls In Progress, Calls Today, Calls/Min, Queue Depth, Pending in Queue, Retry Eligible, Errors y Active Users", "caption": "Indicadores de actividad en vivo — su operación de marcado de un vistazo", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "track-spend-earnings",
+      "title": "Controle el gasto y las ganancias de hoy",
+      "content": "<p>Dos tarjetas de dinero se actualizan en vivo a medida que las llamadas terminan:</p><ul><li><strong>Spend (Today)</strong> (Gasto de Hoy) — lo que realmente gastó hoy en sus campañas (solo llamadas que usted pagó).</li><li><strong>Earnings (Today)</strong> (Ganancias de Hoy) — lo que ganó hoy por el margen sobre las llamadas de miembros de equipo más cualquier comisión de afiliado.</li></ul><blockquote>💡 Las cuentas de miembros de equipo (sub-cuentas) solo ven <strong>Spend (Today)</strong> — la tarjeta de Earnings y las cifras de ganancia están reservadas para cuentas principales.</blockquote>",
+      "images": [
+        { "src": "images/analytics/reports-stats-money-light.png", "alt": "Tarjetas de Spend (Today) y Earnings (Today) con montos en dólares en vivo", "caption": "Spend y Earnings se actualizan en vivo mientras las campañas se ejecutan", "theme": "light" },
+        { "src": "images/analytics/reports-stats-money-dark.png", "alt": "Tarjetas de Spend (Today) y Earnings (Today) con montos en dólares en vivo", "caption": "Spend y Earnings se actualizan en vivo mientras las campañas se ejecutan", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "manage-campaign-table",
+      "title": "Profundice en (y controle) cada campaña",
+      "content": "<p>La tabla de la parte inferior lista cada campaña que usted puede ver, con columnas en vivo:</p><ul><li><strong>Campaign</strong> (Campaña) — el nombre de la campaña y su propietario.</li><li><strong>Status</strong> (Estado) — Running (En Ejecución), Cooling Down (En Enfriamiento), After Hours (Fuera de Horario), Paused (Pausada), Stopped (Detenida), Completed (Completada), Draft (Borrador) o Inactive (Inactiva).</li><li><strong>Active Calls</strong> (Llamadas Activas) — llamadas en vivo frente al límite de concurrencia de la campaña (p. ej. <strong>0 / 3</strong>).</li><li><strong>Progress</strong> (Progreso) — qué tan avanzada está la campaña en su lista de marcado.</li><li><strong>Calls</strong> (Llamadas) — total realizadas, cuántas conectaron y minutos conectados.</li><li><strong>Cost</strong> / <strong>Earnings</strong> (Costo / Ganancias) — dinero gastado y ganado en esta campaña hoy.</li><li><strong>Working Hours</strong> (Horario de Trabajo) — la ventana diaria en la que la campaña puede marcar.</li><li><strong>Actions</strong> (Acciones) — pause o reanude la campaña directamente desde el informe.</li></ul><p>Para trabajar con la lista:</p><ol><li>Escriba en <strong>Search campaigns...</strong> (Buscar campañas) para encontrar una campaña por nombre.</li><li>Use <strong>Filter by status</strong> (Filtrar por estado) para ver solo Running, Paused, Completed, etc.</li><li>Haga clic en el <strong>+</strong> al inicio de una fila para expandir su desglose de lista de marcado: <strong>Contacts</strong> (Contactos), <strong>Attempts Made</strong> (Intentos Realizados), <strong>Attempts Left</strong> (Intentos Restantes), <strong>Finished</strong> (Finalizados) y una barra de <strong>Progress</strong>.</li><li>Haga clic en <strong>Refresh</strong> (Actualizar) sobre la tabla para recargar la lista al instante.</li></ol>",
+      "images": [
+        { "src": "images/analytics/reports-stats-table-light.png", "alt": "Tabla de campañas con una fila expandida que muestra Contacts, Attempts Made, Attempts Left, Finished y Progress", "caption": "Expanda cualquier fila para ver su desglose de lista de marcado; pause o reanude desde la columna Actions", "theme": "light" },
+        { "src": "images/analytics/reports-stats-table-dark.png", "alt": "Tabla de campañas con una fila expandida que muestra Contacts, Attempts Made, Attempts Left, Finished y Progress", "caption": "Expanda cualquier fila para ver su desglose de lista de marcado; pause o reanude desde la columna Actions", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "reporting-map",
+      "title": "Sepa dónde vive cada uno de los demás informes",
+      "content": "<p>iMash genera informes de cada parte de la plataforma — cada área tiene su propia pantalla de reportes dedicada:</p><ul><li><strong>Analytics Dashboard</strong> (Panel de Analítica) — KPIs de llamadas de toda la cuenta, gráficos y filtros del historial de llamadas. Vea <a data-href=\"/analytics/analytics-dashboard\">Panel de Analítica</a>.</li><li><strong>Contact Center Reporting</strong> (Reportes del Centro de Contacto) — desempeño de agentes humanos: llamadas contestadas, tiempo de conversación, espera en cola, estadísticas por agente. En la aplicación: <strong>Contact Center</strong> → pestaña <strong>Reporting</strong>. Vea <a data-href=\"/contact-center/reporting\">Reportes del Centro de Contacto</a>.</li><li><strong>Dispatch Reports</strong> (Informes de Despacho) — informes financieros y de equipo para servicio en campo: ingresos por trabajo, pagos a técnicos, estadísticas. En la aplicación: <strong>Dispatch</strong> → pestañas <strong>Finance Reports</strong> / <strong>Team Reports</strong> / <strong>Statistics</strong>. Vea <a data-href=\"/dispatch/reports\">Informes de Despacho</a>.</li><li><strong>Cost Management</strong> (Gestión de Costos) — su saldo, precios y gasto en la plataforma. Vea <a data-href=\"/analytics/cost-management\">Gestión de Costos</a>.</li><li><strong>Call Logs</strong> (Registros de Llamadas) — el registro por llamada detrás de cada informe: grabaciones, transcripciones, resultados. Vea <a data-href=\"/phone/call-logs\">Registros de Llamadas</a>.</li></ul><p>Regla práctica: preguntas de <em>campañas</em> → esta página; preguntas de <em>personas</em> → Reportes del Centro de Contacto; <em>trabajos y dinero en campo</em> → Informes de Despacho; números <em>de toda la plataforma</em> → Panel de Analítica.</p>"
+    },
+    {
+      "id": "act-on-insights",
+      "title": "Actúe sobre lo que ve",
+      "content": "<p>Los informes valen tanto como las decisiones que provocan:</p><ul><li>¿Tasa de conexión baja o <strong>Progress</strong> lento? Ajuste el <strong>Working Hours</strong> y la zona horaria de la campaña para llamar cuando la gente contesta.</li><li>¿El <strong>Spend</strong> sube más rápido que los resultados? Presione <strong>Pause</strong> en la columna Actions y luego refine la lista de marcado o el guion del agente de IA.</li><li>¿Suben los <strong>Errors (Last Hour)</strong>? Revise sus números telefónicos y la salud del proveedor antes de quemar la lista.</li><li>¿Una campaña claramente gana más que el resto? Clone su receta — mismo agente, mismo horario, lista nueva — y escale lo que funciona.</li></ul><p>Ese ciclo — medir, ajustar, volver a ejecutar — es como las buenas campañas se vuelven excelentes.</p>"
     }
   ],
   "nextSteps": {
-    "title": "¿Qué sigue?",
-    "description": "Convierte los datos en una operación de mejor rendimiento.",
+    "title": "¿Qué Sigue?",
+    "description": "Convierta la información en una operación con mejor rendimiento.",
     "cards": [
-      { "href": "/campaigns/campaign-analytics", "title": "Leer las Analíticas de Campaña", "description": "Cómo interpretar el progreso y las tasas de conexión." },
-      { "href": "/analytics/analytics-dashboard", "title": "Panel de Analíticas", "description": "Los KPIs de llamadas de toda tu cuenta y sus filtros." },
-      { "href": "/analytics/cost-management", "title": "Gestión de Costos", "description": "Consulta tu saldo, los precios y el gasto." }
+      { "href": "/campaigns/campaign-analytics", "title": "Analítica de Campañas", "description": "Cómo interpretar el progreso y las tasas de conexión dentro de una campaña." },
+      { "href": "/analytics/analytics-dashboard", "title": "Panel de Analítica", "description": "Sus KPIs de llamadas de toda la cuenta, gráficos y filtros." },
+      { "href": "/contact-center/reporting", "title": "Reportes del Centro de Contacto", "description": "Desempeño de agentes humanos: respuestas, tiempo de conversación, colas." },
+      { "href": "/analytics/cost-management", "title": "Gestión de Costos", "description": "Vea su saldo, precios y gasto." }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+    "title": "¿Necesita Ayuda?",
+    "content": "<p>Si tiene algún problema o pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Reportes - Reportes y Estadísticas de Campaña | iMash Docs",
-  "metaDescription": "Compara campañas de iMash con Campaign Reports (llamadas, resultados, costos, ganancias, exportación a CSV) y Campaign Stats (progreso en vivo y tasas de conexión).",
-  "metaKeywords": "reportes de campaña, estadísticas de campaña, tasa de conexión, resultados de llamadas, costo de campaña, monto facturado, exportación csv, reportes imash"
+  "metaTitle": "Informes - Campaign Reports y Stats | Documentación de iMash",
+  "metaDescription": "Compare campañas de iMash con Campaign Reports (llamadas, minutos, monto facturado, costo, ganancia, exportación CSV) y monitoréelas en vivo con Campaign Stats — más un mapa de todos los demás informes de la plataforma.",
+  "metaKeywords": "informes de campaña, estadísticas de campaña, monitoreo en vivo, tasa de conexión, monto facturado, ganancia, exportar csv, gasto de hoy, ganancias, progreso de lista de marcado, reportes imash"
 }

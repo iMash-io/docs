@@ -1,49 +1,118 @@
 {
   "title": "Prueba tu agente",
-  "lede": "Prueba tu Smart Agent (Agente inteligente) antes de ponerlo en producción. Habla con él directamente en el navegador con Test Agent (Probar agente) o haz una llamada telefónica real para escucharlo de principio a fin.",
-  "timeToComplete": "3 minutos",
-  "videoUrl": "https://youtu.be/_Baz0eFGyLI",
-  "videoLength": "1",
+  "lede": "Nunca lance un agente con el que no haya hablado. iMash le da tres formas de ensayar: una conversación en vivo en el navegador, un Live Test (Prueba en vivo) de un clic sobre el lienzo de nodos y una llamada telefónica real a su propio número — y después, la repetición completa de cada prueba en Call Logs (Registros de llamadas).",
+  "timeToComplete": "10 minutos",
   "steps": [
     {
-      "id": "open-test-agent",
-      "title": "Abre Test Agent",
-      "content": "<ol><li>Ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes) y abre el agente que quieres probar.</li><li>Haz clic en el botón <strong>Test Agent</strong> (Probar agente) en la parte superior del editor para mostrar el panel de prueba.</li></ol>",
+      "id": "open-your-agent",
+      "title": "Abra el agente que quiere probar",
+      "content": "<p>Todo comienza en su lista de agentes.</p><ol><li>En la barra lateral izquierda, bajo <strong>Intelligence Center</strong> (Centro de inteligencia), haga clic en <strong>Smart Agents</strong> (Agentes inteligentes).</li><li>Localice el agente que quiere probar y haga clic en su <strong>nombre</strong> (o en el icono verde de ojo en la columna <strong>Action</strong> (Acción)) para abrir el editor del agente.</li></ol><blockquote>💡 Probar es totalmente seguro: nada de lo que diga en una llamada de prueba cambia la configuración del agente. Puede experimentar tanto como quiera.</blockquote>",
       "images": [
-        { "src": "images/agents/test-agent-light.png", "alt": "Panel de Test Agent", "caption": "El panel de Test Agent te conecta a una conversación en vivo dentro del navegador.", "theme": "light" },
-        { "src": "images/agents/test-agent-dark.png", "alt": "Panel de Test Agent", "caption": "El panel de Test Agent te conecta a una conversación en vivo dentro del navegador.", "theme": "dark" }
+        {"src": "images/agents/test-your-agent-assistants-list-light.png", "alt": "Lista de Smart Agents con agentes listos para abrir", "caption": "Intelligence Center → Smart Agents — haga clic en el nombre de un agente para abrirlo.", "theme": "light"},
+        {"src": "images/agents/test-your-agent-assistants-list-dark.png", "alt": "Lista de Smart Agents con agentes listos para abrir", "caption": "Intelligence Center → Smart Agents — haga clic en el nombre de un agente para abrirlo.", "theme": "dark"}
       ]
     },
     {
-      "id": "talk-in-browser",
-      "title": "Habla con el agente en el navegador",
-      "content": "<ol><li>Haz clic en <strong>Connect</strong> (Conectar) y permite el acceso al micrófono si se te solicita.</li><li>Empieza a hablar. Confirma que el saludo, el prompt, la voz y las herramientas se comporten como esperas.</li><li>Edita el agente y vuelve a conectar para probar los cambios al instante, sin necesidad de un teléfono.</li></ol>",
+      "id": "show-test-panel",
+      "title": "Muestre el panel Test Agent",
+      "content": "<p>En la vista <strong>Form</strong> (Formulario) del editor del agente, la consola de pruebas vive en una columna dedicada a la derecha.</p><ol><li>Observe la barra de herramientas en la parte superior del editor. Asegúrese de que <strong>Form</strong> esté seleccionado en el selector <strong>Form / Node</strong> (Formulario / Nodos).</li><li>Haga clic en el botón <strong>Test Agent</strong> (Probar agente) en la parte superior derecha de la barra. Muestra u oculta la columna de prueba en el lado derecho de la pantalla.</li></ol><p>La columna derecha muestra el chat de prueba con dos botones en la parte superior:</p><ul><li><strong>Connect</strong> (Conectar) — inicia una sesión de voz en vivo con su agente, directamente en el navegador.</li><li><strong>Debug</strong> (Depurar) — abre un monitor de eventos en vivo de la sesión (se habilita una vez conectado). Ideal para ver llamadas a herramientas y transiciones en tiempo real.</li></ul>",
       "images": [
-        { "src": "images/quick-start/test-agent-light.png", "alt": "Prueba del agente en el navegador", "caption": "Probando el agente directamente en el navegador.", "theme": "light" },
-        { "src": "images/quick-start/test-agent-dark.png", "alt": "Prueba del agente en el navegador", "caption": "Probando el agente directamente en el navegador.", "theme": "dark" }
+        {"src": "images/agents/test-your-agent-header-button-light.png", "alt": "Barra de herramientas del editor con el botón Test Agent", "caption": "El botón Test Agent está en el extremo derecho de la barra del editor.", "theme": "light"},
+        {"src": "images/agents/test-your-agent-header-button-dark.png", "alt": "Barra de herramientas del editor con el botón Test Agent", "caption": "El botón Test Agent está en el extremo derecho de la barra del editor.", "theme": "dark"},
+        {"src": "images/agents/test-your-agent-editor-light.png", "alt": "Editor del agente con el panel Test Agent a la derecha", "caption": "El editor con la columna Test Agent visible a la derecha.", "theme": "light"},
+        {"src": "images/agents/test-your-agent-editor-dark.png", "alt": "Editor del agente con el panel Test Agent a la derecha", "caption": "El editor con la columna Test Agent visible a la derecha.", "theme": "dark"}
       ]
     },
     {
-      "id": "test-by-phone",
-      "title": "Prueba con una llamada telefónica real",
-      "content": "<ol><li>Usa el control de teléfono/marcación en el encabezado para hacer una llamada de prueba saliente.</li><li>Elige el número de teléfono <em>desde</em> el cual llamar y selecciona el agente que quieres probar.</li><li>Ingresa tu propio número, inicia la llamada y mantén una conversación completa para verificar el comportamiento telefónico en condiciones reales.</li></ol>",
-      "images": []
+      "id": "connect-and-talk",
+      "title": "Conéctese y hable con su agente",
+      "content": "<p>Este es el momento mágico: una conversación real con su IA, sin necesidad de un número de teléfono.</p><ol><li>Haga clic en <strong>Connect</strong> (Conectar) en la parte superior del panel de prueba.</li><li>Es posible que el navegador pida <strong>permiso de micrófono</strong> — haga clic en <strong>Permitir</strong>. El panel también lo recuerda: \"You may be prompted to allow audio in your browser\" (Puede que se le pida permitir el audio en su navegador).</li><li>Espere un momento mientras aparece <em>Connecting to Agent...</em> (Conectando con el agente...) y empiece a hablar. Escuchará el saludo y la voz del agente exactamente como los oirán sus clientes.</li><li>Verifique lo esencial: el mensaje de saludo, la voz, cómo responde a las preguntas y si las herramientas (como agendar citas o transferir) se activan cuando corresponde.</li></ol><blockquote>⚠️ Si no escucha nada, compruebe que el micrófono no esté bloqueado: haga clic en el candado o icono de ajustes de la barra de direcciones del navegador, ponga Micrófono en <strong>Permitir</strong> y vuelva a conectar.</blockquote><blockquote>💡 Las sesiones de prueba son llamadas reales: aparecen en Call Logs y consumen su saldo igual que las llamadas de producción, así que siempre prueba la experiencia verdadera.</blockquote>",
+      "images": [
+        {"src": "images/agents/test-your-agent-test-panel-light.png", "alt": "Panel Test Agent antes de conectar", "caption": "Haga clic en Connect para empezar — el botón Debug se desbloquea cuando la sesión está en vivo.", "theme": "light"},
+        {"src": "images/agents/test-your-agent-test-panel-dark.png", "alt": "Panel Test Agent antes de conectar", "caption": "Haga clic en Connect para empezar — el botón Debug se desbloquea cuando la sesión está en vivo.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "chat-mute-debug",
+      "title": "Escriba, silencie y siga la transcripción en vivo",
+      "content": "<p>Mientras está conectado, el panel se convierte en una transcripción en vivo de la conversación: cada palabra que usted dice y cada respuesta del agente aparecen como burbujas de chat en tiempo real.</p><ul><li><strong>Type a message...</strong> (Escriba un mensaje...) — también puede conversar por texto: escriba en el cuadro inferior y presione <strong>Enter</strong> (o el botón de enviar). Perfecto para oficinas silenciosas o frases de prueba precisas y repetibles.</li><li><strong>Botón de micrófono</strong> (abajo a la izquierda) — silencia o reactiva su micrófono durante la sesión.</li><li><strong>Debug</strong> (Depurar) — abre el monitor de eventos en vivo para ver qué hace el agente tras bambalinas durante la llamada.</li><li><strong>Disconnect</strong> (Desconectar, en rojo) — termina la sesión de prueba.</li></ul><blockquote>💡 El ciclo de ajuste más rápido: <strong>Disconnect</strong> → edite el prompt, la voz o las herramientas → guarde → <strong>Connect</strong> otra vez. Sus cambios están activos en la siguiente sesión — sin paso de despliegue, nunca.</blockquote>",
+      "images": [
+        {"src": "images/agents/test-your-agent-connected-light.png", "alt": "Sesión de prueba en vivo con una burbuja de transcripción y el botón Disconnect", "caption": "Conectado: sus palabras aparecen como burbujas de chat y Disconnect termina la sesión.", "theme": "light"},
+        {"src": "images/agents/test-your-agent-connected-dark.png", "alt": "Sesión de prueba en vivo con una burbuja de transcripción y el botón Disconnect", "caption": "Conectado: sus palabras aparecen como burbujas de chat y Disconnect termina la sesión.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "live-test-node-view",
+      "title": "Live Test desde el lienzo de nodos",
+      "content": "<p>¿Está construyendo su agente en la vista visual <strong>Node</strong> (Nodos)? No necesita volver a la vista Form para probar.</p><ol><li>En la barra del editor, cambie a <strong>Node</strong> en el selector <strong>Form / Node</strong>.</li><li>Localice la barra <strong>Agent Builder</strong> (Constructor de agentes) en la parte inferior del lienzo y ponga su interruptor en <strong>Live Test</strong> (Prueba en vivo).</li><li>Haga clic en <strong>Start</strong> (Iniciar) y hable con su agente, exactamente igual que en el panel de prueba de la vista Form.</li></ol><p>El extra: mientras corre un Live Test, el lienzo <strong>resalta el nodo en el que está su agente</strong> — literalmente ve la conversación viajar por su flujo, lo que hace muy fácil depurar las transiciones.</p><blockquote>💡 El lado <strong>AI Builder</strong> (Constructor con IA) del mismo interruptor es otra herramienta: una IA que edita el flujo por usted. Mantenga el interruptor en <strong>Live Test</strong> cuando quiera hablar con el agente en sí.</blockquote>",
+      "images": [
+        {"src": "images/agents/test-your-agent-live-test-bar-light.png", "alt": "Barra Agent Builder con el interruptor Live Test y el botón Start", "caption": "Vista Node: cambie a Live Test y presione Start para hablar con el agente del lienzo.", "theme": "light"},
+        {"src": "images/agents/test-your-agent-live-test-bar-dark.png", "alt": "Barra Agent Builder con el interruptor Live Test y el botón Start", "caption": "Vista Node: cambie a Live Test y presione Start para hablar con el agente del lienzo.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "open-web-dialer",
+      "title": "Abra el marcador web para pruebas telefónicas",
+      "content": "<p>Las pruebas en el navegador validan el cerebro; una prueba telefónica valida toda la tubería: audio del operador, latencia e identificador de llamada incluidos.</p><ol><li>Haga clic en el <strong>icono redondo de teléfono</strong> en la esquina superior derecha del encabezado (visible en todas las páginas). El marcador web se abre como un panel lateral derecho.</li><li>Verá un teclado de marcación y cuatro acciones: <strong>Call</strong> (Llamar), <strong>Text</strong> (Mensaje), <strong>AI Agent</strong> (Agente IA) y <strong>Teammate</strong> (Compañero).</li></ol><ul><li><strong>Call</strong> — realiza una llamada telefónica saliente real al número que marque.</li><li><strong>Text</strong> — abre un compositor de SMS con el número marcado ya rellenado.</li><li><strong>AI Agent</strong> — inicia una llamada de voz en el navegador con cualquiera de sus agentes (la misma experiencia que el panel Test Agent, disponible desde cualquier parte de la aplicación).</li><li><strong>Teammate</strong> — hace sonar el marcador web de un colega para una llamada interna.</li></ul>",
+      "images": [
+        {"src": "images/agents/test-your-agent-webphone-light.png", "alt": "Panel del marcador web con teclado y botones Call, Text, AI Agent y Teammate", "caption": "El marcador web: teclado arriba y las acciones Call / Text / AI Agent / Teammate debajo.", "theme": "light"},
+        {"src": "images/agents/test-your-agent-webphone-dark.png", "alt": "Panel del marcador web con teclado y botones Call, Text, AI Agent y Teammate", "caption": "El marcador web: teclado arriba y las acciones Call / Text / AI Agent / Teammate debajo.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "test-real-phone-call",
+      "title": "Pruebe con una llamada real a su propio número",
+      "content": "<p>Escuche a su agente exactamente como lo harán sus clientes: a través de un operador real, en su propio teléfono.</p><ol><li>En el marcador web, escriba <strong>su propio número de móvil</strong> en el teclado.</li><li>Haga clic en <strong>Call</strong> (Llamar). Se abre la ventana <strong>Start Call</strong> (Iniciar llamada).</li><li>Complete los tres ajustes:<ul><li><strong>Caller ID (dial-out number)</strong> (Identificador de llamada — número de salida) — el número desde el que se realiza la llamada; es lo que aparece en la pantalla de su teléfono. Elija uno de sus números de iMash.</li><li><strong>AI Agent</strong> (Agente IA) — el agente que se une a la llamada. Seleccione el agente que está probando.</li><li><strong>Call mode</strong> (Modo de llamada) — elija <strong>AI Mode</strong> (Modo IA): la IA habla y usted escucha (y responde como el \"cliente\"). <strong>Human Mode</strong> (Modo humano) es lo contrario: usted habla mientras la IA transcribe en silencio.</li></ul></li><li>Haga clic en <strong>Call</strong>. Su teléfono sonará — conteste y mantenga una conversación completa con su agente.</li></ol><blockquote>⚠️ Para realizar llamadas telefónicas necesita al menos un número de teléfono conectado a su cuenta. Si la lista de Caller ID está vacía, agregue primero un número (vea \"Agregue un número de teléfono\" más abajo).</blockquote>",
+      "images": [
+        {"src": "images/agents/test-your-agent-start-call-light.png", "alt": "Ventana Start Call con las opciones Caller ID, AI Agent y Call mode", "caption": "Start Call: elija el Caller ID, el AI Agent y AI Mode — y presione Call.", "theme": "light"},
+        {"src": "images/agents/test-your-agent-start-call-dark.png", "alt": "Ventana Start Call con las opciones Caller ID, AI Agent y Call mode", "caption": "Start Call: elija el Caller ID, el AI Agent y AI Mode — y presione Call.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "review-in-call-logs",
+      "title": "Revise cada prueba en Call Logs",
+      "content": "<p>Cada prueba — en el navegador o por teléfono — queda registrada como una llamada real, para que pueda estudiarla después.</p><ol><li>En la barra lateral izquierda, bajo <strong>Call Center</strong> (Centro de llamadas), haga clic en <strong>Call Logs</strong> (Registros de llamadas).</li><li>Sus llamadas de prueba aparecen al inicio de la lista. Las pruebas en el navegador muestran <strong>Web</strong> en la columna <strong>Type</strong> (Tipo); las pruebas telefónicas muestran su dirección y números.</li><li>Use los filtros (rango de fechas, <strong>Call Type</strong>, <strong>Direction</strong> (Dirección), <strong>AI Agent</strong>, búsqueda por número) para aislar sus sesiones de prueba, y las tarjetas de estadísticas sobre la tabla para totales como cantidad de llamadas, duración y costo.</li></ol>",
+      "images": [
+        {"src": "images/agents/test-your-agent-call-logs-light.png", "alt": "Lista de Call Logs con llamadas de prueba web recientes", "caption": "Call Logs: cada sesión de prueba se convierte en una fila — tipo Web para las pruebas en el navegador.", "theme": "light"},
+        {"src": "images/agents/test-your-agent-call-logs-dark.png", "alt": "Lista de Call Logs con llamadas de prueba web recientes", "caption": "Call Logs: cada sesión de prueba se convierte en una fila — tipo Web para las pruebas en el navegador.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "read-call-details",
+      "title": "Abra Call Details: transcripción, análisis y costo",
+      "content": "<p>Aquí es donde califica el desempeño de su agente.</p><ol><li>En Call Logs, haga clic en el <strong>icono verde de ojo</strong> al final de una fila. Se abre el panel <strong>Call Details</strong> (Detalles de la llamada).</li><li>Si la grabación de llamadas está habilitada para el agente, un <strong>reproductor de audio</strong> con forma de onda aparece arriba — presione reproducir para volver a escuchar toda la llamada.</li><li>Recorra las pestañas:<ul><li><strong>Call Overview</strong> (Resumen de la llamada) — ID de la llamada, nombre del agente, tipo y dirección, estado, duración y hora de inicio.</li><li><strong>Transcripts</strong> (Transcripciones) — la conversación completa por escrito, turno por turno.</li><li><strong>Analysis</strong> (Análisis) — el resumen posterior a la llamada y los resultados extraídos (evaluación de éxito, datos estructurados) si están configurados para el agente.</li><li><strong>Call Cost</strong> (Costo de la llamada) — el desglose exacto del costo de la llamada por componente.</li><li><strong>Observer Events</strong> (Eventos del observador) — eventos de monitoreo en vivo, cuando el Observer Agent está habilitado.</li></ul></li></ol><blockquote>💡 ¿Encontró algo raro en la transcripción? Para eso son las pruebas: vuelva al editor, ajuste el prompt o la configuración y ejecute otra prueba. Cuando una conversación completa se lee impecable de principio a fin, su agente está listo para llamadas reales.</blockquote>",
+      "images": [
+        {"src": "images/agents/test-your-agent-call-detail-light.png", "alt": "Panel Call Details con las pestañas Call Overview, Transcripts, Analysis y Call Cost", "caption": "Call Details: resumen, transcripciones, análisis y costo de cada llamada de prueba.", "theme": "light"},
+        {"src": "images/agents/test-your-agent-call-detail-dark.png", "alt": "Panel Call Details con las pestañas Call Overview, Transcripts, Analysis y Call Cost", "caption": "Call Details: resumen, transcripciones, análisis y costo de cada llamada de prueba.", "theme": "dark"}
+      ]
     }
   ],
   "nextSteps": {
     "title": "¿Qué sigue?",
-    "description": "Una vez que tu agente pase las pruebas, llévalo más lejos:",
+    "description": "Su agente pasó la audición — ahora dele más poder y póngalo frente al mundo:",
     "cards": [
-      { "href": "/agents/agent-tools", "title": "Agrega herramientas", "description": "Habilita acciones como finalizar llamadas y agendar citas." },
-      { "href": "/agents/agent-knowledge-base", "title": "Agrega una base de conocimiento", "description": "Dale a tu agente documentos y preguntas frecuentes para responder." },
-      { "href": "/agents/embed-agent", "title": "Incrústalo en tu sitio web", "description": "Publica el agente como un widget de chat/voz en tu sitio." }
+      {
+        "href": "/phone/add-phone-number",
+        "title": "Agregue un número de teléfono",
+        "description": "Dele a su agente un número real para que los clientes puedan llamarlo 24/7."
+      },
+      {
+        "href": "/agents/agent-tools",
+        "title": "Agregue herramientas",
+        "description": "Habilite acciones como agendar citas, transferir y finalizar llamadas."
+      },
+      {
+        "href": "/agents/embed-agent",
+        "title": "Incrústelo en su sitio web",
+        "description": "Publique el agente como un widget de voz/chat en su sitio."
+      }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o alguna pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">referencia de la API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+    "title": "¿Necesita ayuda?",
+    "content": "<p>Si tiene algún problema o alguna pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">referencia de la API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Prueba tu agente | iMash Docs",
-  "metaDescription": "Prueba tu Smart Agent de iMash antes de lanzarlo: habla con él en vivo en el navegador con Test Agent o haz una llamada telefónica real para verificar la voz, el prompt y las herramientas.",
-  "metaKeywords": "test agent, imash, smart agent, llamada de prueba, prueba en el navegador, prueba de agente de voz"
+  "metaTitle": "Prueba tu agente | iMash Documentation",
+  "metaDescription": "Pruebe su Smart Agent de iMash antes de lanzarlo: hable con él en vivo en el navegador, ejecute un Live Test desde el lienzo de nodos, llámelo por teléfono real y revise transcripciones, análisis y costo en Call Logs.",
+  "metaKeywords": "test agent, imash, smart agent, live test, marcador web, llamada de prueba, transcripción, call logs, prueba de agente de voz"
 }

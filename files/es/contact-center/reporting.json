@@ -1,47 +1,123 @@
 {
-  "title": "Reportes del Contact Center",
-  "lede": "La pestaña Reporting (Reportes) resume la actividad de llamadas de tus agentes humanos, agentes de IA y campañas. Filtra por fecha, profundiza en seis categorías de reportes y exporta cualquier vista a CSV.",
-  "timeToComplete": "6 minutos",
+  "title": "Informes del Contact Center",
+  "lede": "Un solo centro de informes para toda su operación de llamadas: agentes humanos, agentes de IA, campañas de marcación y colas. Aprenda cada KPI, gráfico y filtro, y cómo exportar cualquier vista a CSV en segundos.",
+  "timeToComplete": "10 minutos",
   "steps": [
     {
       "id": "open-reporting",
-      "title": "Abre la pestaña Reporting (Reportes)",
-      "content": "<ol><li>Ve a <strong>Call Center &rarr; Contact Center</strong>.</li><li>Haz clic en la pestaña <strong>Reporting</strong> (Reportes) (disponible para Monitor/QA y superiores).</li></ol>",
+      "title": "Abra la pestaña Reporting",
+      "content": "<p>Todo lo que hizo su call center — quién llamó, quién respondió, cuánto duró y cuánto costó — vive en una sola pantalla. Así se llega:</p><ol><li>En la barra lateral izquierda, haga clic en <strong>Contact Center</strong> (dentro de la sección <strong>Call Center</strong>).</li><li>En la parte superior de la página, haga clic en la pestaña <strong>Reporting</strong> (Informes), junto a <strong>Live Monitor</strong>.</li></ol><blockquote>💡 La pestaña Reporting es visible para supervisores y administradores (rol Monitor/QA o superior). Si no la ve, pida a su administrador que eleve su rol de contact center — consulte <a data-href=\"/contact-center/role-mapping\">Asignación de roles</a>.</blockquote>",
       "images": [
-        { "src": "images/contact-center/cc-reporting-light.png", "alt": "Pestaña Reporting", "caption": "Reporting: pestañas de categorías, preajustes de fechas, filtros y KPIs.", "theme": "light" },
-        { "src": "images/contact-center/cc-reporting-dark.png", "alt": "Pestaña Reporting", "caption": "Reporting: pestañas de categorías, preajustes de fechas, filtros y KPIs.", "theme": "dark" }
+        { "src": "images/contact-center/cc-reporting-light.png", "alt": "La pestaña Reporting dentro de Contact Center", "caption": "La pestaña Reporting: categorías, rangos de fecha, filtros, mosaicos de KPI y gráficos — todo en una vista.", "theme": "light" },
+        { "src": "images/contact-center/cc-reporting-dark.png", "alt": "La pestaña Reporting dentro de Contact Center", "caption": "La pestaña Reporting: categorías, rangos de fecha, filtros, mosaicos de KPI y gráficos — todo en una vista.", "theme": "dark" }
       ]
     },
     {
-      "id": "categories",
-      "title": "Elige una categoría de reporte",
-      "content": "<p>Usa las pestañas tipo píldora para cambiar entre las seis categorías:</p><ul><li><strong>General</strong> — volumen total de llamadas, tasas de conexión y respuesta, tiempo promedio de conversación.</li><li><strong>Human Agents</strong> (Agentes humanos) — llamadas atendidas, AHT, ocupación y actividad de supervisión.</li><li><strong>AI Agents</strong> (Agentes de IA) — llamadas por asistente, contención, escalaciones y costo.</li><li><strong>Smart Campaigns</strong> (Campañas inteligentes) — campañas de marcador con IA.</li><li><strong>Human Campaigns</strong> (Campañas humanas) — llamadas de marcador predictivo por lista de marcado.</li><li><strong>Queue</strong> (Cola) — esperas y resultados de las colas de grupos de habilidad.</li></ul>"
+      "id": "pick-category",
+      "title": "Elija una categoría de informe",
+      "content": "<p>La barra de pestañas tipo píldora en la parte superior alterna entre seis categorías de informe — cada una analiza los mismos datos de llamadas desde un ángulo distinto:</p><ul><li><strong>General</strong> — el panorama completo: volumen total, tasas de conexión y respuesta, tiempo de conversación, resultados y gráficos por día y por hora.</li><li><strong>Human Agents</strong> (Agentes humanos) — fichas por agente: llamadas atendidas, tiempo de gestión, disponibilidad, timbres perdidos y actividad de supervisión.</li><li><strong>AI Agents</strong> (Agentes de IA) — rendimiento por asistente: contención, escalaciones, transferencias y costo.</li><li><strong>Smart Campaigns</strong> (Campañas inteligentes) — sus campañas del marcador de IA, con las mismas métricas agrupadas por campaña.</li><li><strong>Human Campaigns</strong> (Campañas humanas) — llamadas del marcador predictivo (Human Dialer) agrupadas por lista de marcación, con el tiempo de gestión del operador.</li><li><strong>Queue</strong> (Cola) — transferencias a colas de grupos con habilidades: esperas, tasas de respuesta y resultado de cada llamada.</li></ul><p>Haga clic en cualquier píldora para cambiar — el rango de fechas y los filtros que configure se mantienen en las seis.</p>",
+      "images": [
+        { "src": "images/contact-center/reporting-categories-light.png", "alt": "Las seis categorías de informe", "caption": "Seis categorías: General, Human Agents, AI Agents, Smart Campaigns, Human Campaigns y Queue.", "theme": "light" },
+        { "src": "images/contact-center/reporting-categories-dark.png", "alt": "Las seis categorías de informe", "caption": "Seis categorías: General, Human Agents, AI Agents, Smart Campaigns, Human Campaigns y Queue.", "theme": "dark" }
+      ]
     },
     {
-      "id": "date-filters",
-      "title": "Define el rango de fechas y los filtros",
-      "content": "<ol><li>Elige un preajuste de fecha: <strong>Today</strong> (Hoy), <strong>This week</strong> (Esta semana), <strong>This month</strong> (Este mes), <strong>Last 7 days</strong> (Últimos 7 días), <strong>Last 30 days</strong> (Últimos 30 días) o <strong>Custom</strong> (Personalizado).</li><li>Abre la barra <strong>Filters</strong> (Filtros) para acotar por dirección, asistente, campaña, propietario, agente humano, tipo de llamada, número de teléfono, contacto/prospecto o UUID de llamada.</li><li>Haz clic en <strong>Refresh</strong> (Actualizar) para recargar, o en <strong>Clear filters</strong> (Limpiar filtros) para restablecer.</li></ol>"
+      "id": "date-range",
+      "title": "Configure el rango de fechas",
+      "content": "<p>Los controles de fecha están en la esquina superior derecha y se aplican a todas las categorías:</p><ol><li>Haga clic en un preajuste: <strong>Today</strong> (Hoy), <strong>This week</strong> (Esta semana), <strong>This month</strong> (Este mes — el predeterminado), <strong>Last 7 days</strong> (Últimos 7 días) o <strong>Last 30 days</strong> (Últimos 30 días).</li><li>Para un período exacto, haga clic en <strong>Custom</strong> (Personalizado) — aparece un selector <strong>Start date → End date</strong> (Fecha inicial → Fecha final) junto a los preajustes.</li><li>Haga clic en el botón circular <strong>Refresh</strong> (Actualizar) en cualquier momento para recargar los números.</li></ol><blockquote>💡 Todas las horas se muestran en la zona horaria de su cuenta — el gráfico \"Calls by hour of day\" incluso imprime la zona horaria en su título, para que nunca haya dudas.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/reporting-daterange-light.png", "alt": "Preajustes de fecha, selector de rango personalizado y botones de actualizar y exportar", "caption": "Preajustes de fecha con Custom seleccionado: aparece un selector de fecha inicial/final, más Refresh y Export.", "theme": "light" },
+        { "src": "images/contact-center/reporting-daterange-dark.png", "alt": "Preajustes de fecha, selector de rango personalizado y botones de actualizar y exportar", "caption": "Preajustes de fecha con Custom seleccionado: aparece un selector de fecha inicial/final, más Refresh y Export.", "theme": "dark" }
+      ]
     },
     {
-      "id": "export",
-      "title": "Exporta a CSV",
-      "content": "<p>Haz clic en <strong>Export</strong> (Exportar, el ícono de descarga) para descargar la pestaña actual como CSV. Las columnas coinciden con la categoría que estés viendo — por ejemplo, métricas de manejo por agente para Human Agents, o contención por asistente para AI Agents.</p>"
+      "id": "filters",
+      "title": "Acote los datos con filtros",
+      "content": "<p>La barra de filtros bajo las categorías refina todas las pestañas a la vez. Cada control hace una sola cosa:</p><ul><li><strong>All calls</strong> (Todas las llamadas) — limitar a solo <strong>Inbound</strong> (entrantes) o <strong>Outbound</strong> (salientes).</li><li><strong>All assistants</strong> (Todos los asistentes) — un solo agente de IA.</li><li><strong>All campaigns</strong> (Todas las campañas) — una sola campaña.</li><li><strong>All owners</strong> (Todos los propietarios) — llamadas de la cuenta de un miembro del equipo.</li><li><strong>All human agents</strong> (Todos los agentes humanos) — llamadas gestionadas por un agente humano específico (deshabilitado si ningún agente humano atendió llamadas en el rango).</li><li><strong>All call types</strong> (Todos los tipos de llamada) — p. ej., llamadas web, telefónicas o internas.</li><li><strong>Phone number</strong> (Número de teléfono) — buscar por número del llamante o de destino.</li><li><strong>Contact / lead</strong> (Contacto / lead) — buscar por el contacto o lead del CRM asociado a la llamada.</li><li><strong>Call UUID</strong> (UUID de la llamada) — ir directamente a una llamada específica por su ID.</li></ul><p>Cuando hay algún filtro activo, aparece un enlace <strong>Clear filters</strong> (Limpiar filtros) al final de la barra para restablecer todo con un clic.</p><blockquote>⚠️ ¿Ve \"No calls match your filters\"? Un filtro olvidado suele ser el culpable — haga clic en <strong>Clear filters</strong> antes de asumir que no hay datos.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/reporting-filters-light.png", "alt": "La barra de filtros de Reporting", "caption": "Filtros: dirección, asistente, campaña, propietario, agente humano, tipo de llamada, teléfono, contacto/lead y UUID de la llamada.", "theme": "light" },
+        { "src": "images/contact-center/reporting-filters-dark.png", "alt": "La barra de filtros de Reporting", "caption": "Filtros: dirección, asistente, campaña, propietario, agente humano, tipo de llamada, teléfono, contacto/lead y UUID de la llamada.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "general-kpis",
+      "title": "Interprete los mosaicos de KPI de General",
+      "content": "<p>La categoría <strong>General</strong> abre con una fila de mosaicos de KPI — los signos vitales de su call center para el rango seleccionado:</p><ul><li><strong>Total calls</strong> (Llamadas totales) — todas las llamadas del rango, de todas las fuentes.</li><li><strong>Connected</strong> / <strong>Connect rate</strong> (Conectadas / Tasa de conexión) — llamadas que llegaron a una conversación en vivo.</li><li><strong>Answer rate</strong> (Tasa de respuesta) — porcentaje de llamadas contestadas (por una persona o una máquina).</li><li><strong>Voicemail rate</strong> (Tasa de buzón de voz) — porcentaje que terminó en el buzón de voz.</li><li><strong>Abandon rate</strong> (Tasa de abandono) — llamadas que timbraron a un agente humano o grupo pero que ninguna persona respondió.</li><li><strong>Avg talk (AHT)</strong> — tiempo promedio de conversación por llamada conectada.</li><li><strong>Total talk time</strong> (Tiempo total de conversación) — todo el tiempo de conversación sumado.</li><li><strong>Inbound</strong> / <strong>Outbound</strong> — la división por dirección.</li><li><strong>Total cost</strong> (Costo total) — costo combinado de las llamadas (se muestra cuando hay datos de costo en el rango).</li></ul><blockquote>💡 Pase el cursor sobre cualquier etiqueta de KPI con subrayado punteado para ver exactamente cómo se calcula.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/reporting-kpis-light.png", "alt": "Mosaicos de KPI de General", "caption": "La fila de KPI de General: volumen, tasas de conexión/respuesta/buzón/abandono, tiempo de conversación, dirección y costo.", "theme": "light" },
+        { "src": "images/contact-center/reporting-kpis-dark.png", "alt": "Mosaicos de KPI de General", "caption": "La fila de KPI de General: volumen, tasas de conexión/respuesta/buzón/abandono, tiempo de conversación, dirección y costo.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "general-charts",
+      "title": "Explore los gráficos y paneles de General",
+      "content": "<p>Debajo de los KPI, la vista General condensa la historia de su rango en varios paneles visuales:</p><ul><li><strong>AI agent performance</strong>, <strong>Smart campaigns</strong> y <strong>Human campaigns</strong> — tablas de vista previa compactas de cada categoría (las pestañas dedicadas muestran las versiones completas).</li><li><strong>Call volume by day</strong> (Volumen de llamadas por día) — un gráfico de barras de todas las llamadas vs. las conectadas por día. Detecte de un vistazo los días de mayor y menor actividad.</li><li><strong>Calls by hour of day</strong> (Llamadas por hora del día) — cuándo suenan realmente sus teléfonos, en su zona horaria. Perfecto para decisiones de dotación de personal.</li><li><strong>Outcomes</strong> (Resultados) — un gráfico de dona con cómo terminaron las llamadas: Completed, SIP Transfers, Internal Transfers, Voicemail, No Answer, Abandoned, Failed u Other — con recuentos y porcentajes debajo.</li><li><strong>Top human agents</strong> (Mejores agentes humanos) — sus cinco agentes más activos, clasificados por llamadas atendidas y con su tiempo medio de gestión.</li><li><strong>Group ring activity</strong> (Actividad de timbres por grupo) — con qué frecuencia la IA timbró a sus grupos de permisos y cuántos de esos timbres respondió un humano (aparece cuando hubo transferencias a grupos).</li><li><strong>Dispositions logged</strong> (Disposiciones registradas) — una nube de etiquetas con los resultados que los agentes registraron tras sus llamadas (aparece cuando los agentes registran disposiciones).</li></ul>",
+      "images": [
+        { "src": "images/contact-center/reporting-volume-light.png", "alt": "Gráfico de volumen de llamadas por día", "caption": "Volumen de llamadas por día — todas las llamadas vs. conectadas, un par de barras por día.", "theme": "light" },
+        { "src": "images/contact-center/reporting-volume-dark.png", "alt": "Gráfico de volumen de llamadas por día", "caption": "Volumen de llamadas por día — todas las llamadas vs. conectadas, un par de barras por día.", "theme": "dark" },
+        { "src": "images/contact-center/reporting-outcomes-light.png", "alt": "Gráfico de dona de resultados", "caption": "La dona de Outcomes — cómo terminó cada llamada del rango.", "theme": "light" },
+        { "src": "images/contact-center/reporting-outcomes-dark.png", "alt": "Gráfico de dona de resultados", "caption": "La dona de Outcomes — cómo terminó cada llamada del rango.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "human-agents",
+      "title": "Mida a su equipo en Human Agents",
+      "content": "<p>Haga clic en <strong>Human Agents</strong> para la vista más profunda de todo el informe — una ficha completa por agente. La fila de KPI lo totaliza: <strong>Active agents</strong> (agentes activos), <strong>Calls handled</strong> (llamadas atendidas), <strong>Avg handle (AHT)</strong>, <strong>Occupancy</strong> (ocupación), <strong>Online time</strong>, <strong>Break time</strong>, <strong>Wrap-up (ACW)</strong>, <strong>Logins</strong>, <strong>Total handle time</strong>, <strong>Calls supervised</strong>, <strong>Whisper / barge</strong>, <strong>Missed calls</strong> y <strong>Rejected</strong>.</p><p>La tabla <strong>Human agent performance</strong> desglosa después a cada agente en grupos de columnas:</p><ul><li><strong>Handling</strong> (Gestión) — <strong>Handled</strong> (llamadas que tomó), <strong>Connect %</strong>, <strong>AHT</strong>, <strong>On call</strong> (tiempo total en llamada) y <strong>Spoke %</strong> (llamadas donde realmente habló).</li><li><strong>Availability</strong> (Disponibilidad) — <strong>Online</strong>, <strong>Idle</strong> (inactivo), <strong>Break</strong> (pausa), <strong>Wrap-up</strong> (trabajo post-llamada en el selector de disposición), <strong>Occupancy</strong> (tiempo en llamada ÷ tiempo en línea), <strong>Logins</strong> y <strong>Last seen</strong> (última actividad).</li><li><strong>Group offers</strong> (Ofertas de grupo) — timbres de grupo ofrecidos al agente: <strong>Offered</strong>, <strong>Answered</strong>, <strong>Answer %</strong>, <strong>Rejected</strong> (rechazados manualmente), <strong>Solo miss</strong> (único agente timbrado, sin acción), <strong>Shared miss</strong> (varios timbrados, nadie respondió) y <strong>Missed calls</strong>.</li><li><strong>Supervision</strong> (Supervisión) — sesiones de <strong>Monitor</strong>, <strong>Whisper</strong> y <strong>Barge</strong>, cada una como recuento · tiempo total.</li><li><strong>Dispositions</strong> (Disposiciones) — los resultados que el agente registró en sus llamadas.</li></ul><blockquote>💡 Pase el cursor sobre cualquier encabezado de columna para ver una definición en lenguaje sencillo, y haga clic en el encabezado para ordenar la tabla por esa métrica.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/reporting-human-light.png", "alt": "Pestaña de informe Human Agents", "caption": "Human Agents: KPI del equipo más una tabla por agente con columnas de Handling, Availability, Group offers y Supervision.", "theme": "light" },
+        { "src": "images/contact-center/reporting-human-dark.png", "alt": "Pestaña de informe Human Agents", "caption": "Human Agents: KPI del equipo más una tabla por agente con columnas de Handling, Availability, Group offers y Supervision.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "ai-agents",
+      "title": "Siga el rendimiento de la IA en AI Agents",
+      "content": "<p>Haga clic en <strong>AI Agents</strong> para ver cómo rinde su fuerza laboral de IA. La fila de KPI muestra <strong>AI agents</strong>, <strong>AI calls</strong>, <strong>Containment</strong> (contención), <strong>Escalated to human</strong> (escaladas a humano), <strong>Connect rate</strong>, <strong>Avg handle</strong> y <strong>Total cost</strong>.</p><p>La tabla por asistente agrega <strong>Calls</strong>, <strong>Connect %</strong>, <strong>Answer %</strong>, <strong>Voicemail %</strong>, <strong>Containment %</strong>, <strong>Escalated</strong>, <strong>SIP xfer</strong>, <strong>Avg talk</strong> y <strong>Cost</strong>. Tres definiciones clave:</p><ul><li><strong>Containment</strong> — llamadas que la IA gestionó completamente por sí sola, sin transferir. Cuanto más alto, mejor: es el trabajo que su equipo nunca tuvo que tocar.</li><li><strong>Escalated</strong> — llamadas que la IA entregó a un agente humano.</li><li><strong>SIP xfer</strong> — llamadas que la IA transfirió a un número de teléfono externo.</li></ul>",
+      "images": [
+        { "src": "images/contact-center/reporting-ai-light.png", "alt": "Pestaña de informe AI Agents", "caption": "AI Agents: contención, escalaciones, transferencias, tiempo de conversación y costo por asistente.", "theme": "light" },
+        { "src": "images/contact-center/reporting-ai-dark.png", "alt": "Pestaña de informe AI Agents", "caption": "AI Agents: contención, escalaciones, transferencias, tiempo de conversación y costo por asistente.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "campaign-tabs",
+      "title": "Compare campañas: Smart vs. Human",
+      "content": "<p>Dos categorías cubren sus marcadores salientes:</p><ol><li><strong>Smart Campaigns</strong> — campañas del marcador de IA, con el mismo conjunto de métricas que AI Agents (contención, escalaciones, transferencias SIP, costo) pero agrupadas <em>por campaña</em>. Perfecto para comparar guiones o listas en A/B.</li><li><strong>Human Campaigns</strong> — sesiones del marcador predictivo (Human Dialer) agrupadas <em>por lista de marcación</em>: <strong>Calls</strong>, <strong>Connect %</strong>, <strong>Answer %</strong>, <strong>Avg handle</strong> (tiempo medio del operador en una llamada conectada), <strong>Total handle</strong> y <strong>Cost</strong>.</li></ol><blockquote>💡 ¿Aún no ejecuta campañas? Estas pestañas simplemente muestran un estado vacío hasta que su primera campaña marque. Consulte <a data-href=\"/campaigns/create-campaign\">Crear una campaña del Smart Dialer</a> y <a data-href=\"/campaigns/human-dialer\">Human Dialer</a> para comenzar.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/reporting-smart-light.png", "alt": "Pestaña de informe Smart Campaigns", "caption": "Smart Campaigns: rendimiento del marcador de IA agrupado por campaña.", "theme": "light" },
+        { "src": "images/contact-center/reporting-smart-dark.png", "alt": "Pestaña de informe Smart Campaigns", "caption": "Smart Campaigns: rendimiento del marcador de IA agrupado por campaña.", "theme": "dark" },
+        { "src": "images/contact-center/reporting-humancampaigns-light.png", "alt": "Pestaña de informe Human Campaigns", "caption": "Human Campaigns: llamadas del marcador predictivo agrupadas por lista de marcación, con tiempo de gestión del operador.", "theme": "light" },
+        { "src": "images/contact-center/reporting-humancampaigns-dark.png", "alt": "Pestaña de informe Human Campaigns", "caption": "Human Campaigns: llamadas del marcador predictivo agrupadas por lista de marcación, con tiempo de gestión del operador.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "queue",
+      "title": "Audite los tiempos de espera en Queue",
+      "content": "<p>Haga clic en <strong>Queue</strong> para revisar las transferencias a colas de grupos con habilidades — las llamadas que un agente humano dejó en la cola de un grupo (con música de espera) mientras se timbraba a los agentes en línea con las habilidades adecuadas hasta que uno respondiera. Mosaicos de KPI: <strong>Queued calls</strong> (llamadas en cola), <strong>Answered</strong>, <strong>Timed out</strong> (expiradas), <strong>Abandoned</strong>, <strong>Answer rate</strong>, <strong>Avg wait</strong> (espera media) y <strong>Longest wait</strong> (espera más larga).</p><p>La tabla <strong>Queue calls</strong> lista cada llamada en cola:</p><ul><li><strong>Queued</strong> / <strong>Customer</strong> — cuándo entró en la cola y el número del cliente.</li><li><strong>Group</strong> / <strong>Skills</strong> — en qué grupo de permisos esperó y qué filtro de habilidades se aplicó.</li><li><strong>Status</strong> — <strong>answered</strong>, <strong>timeout</strong> o <strong>abandoned</strong> (filtrable desde el encabezado de la columna).</li><li><strong>Wait</strong> — cuánto esperó el cliente antes de una respuesta o del timeout.</li><li><strong>Answered by</strong> / <strong>Queued by</strong> — quién la atendió y qué agente la dejó en cola.</li><li><strong>Matched</strong> — cuántos agentes elegibles había disponibles.</li><li><strong>On timeout</strong> — qué pasó cuando nadie respondió: la tomó un <strong>AI agent</strong> o se colgó (<strong>Hang up</strong>).</li><li><strong>Call</strong> — haga clic en <strong>Open</strong> (Abrir) para desplegar el detalle completo de la llamada (grabación, transcripción, registros) sin salir del informe.</li></ul><blockquote>⚠️ Un <strong>Longest wait</strong> que crece o un contador de <strong>Timed out</strong> en aumento es su señal de alerta temprana para añadir agentes a ese grupo o ajustar el timeout de la cola — consulte <a data-href=\"/contact-center/queue-settings\">Configuración de colas</a>.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/reporting-queue-light.png", "alt": "Pestaña de informe Queue", "caption": "Queue: KPI de tiempos de espera más una tabla por llamada con estado, espera y quién respondió.", "theme": "light" },
+        { "src": "images/contact-center/reporting-queue-dark.png", "alt": "Pestaña de informe Queue", "caption": "Queue: KPI de tiempos de espera más una tabla por llamada con estado, espera y quién respondió.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "export-csv",
+      "title": "Exporte cualquier vista a CSV",
+      "content": "<p>Cada categoría se exporta con un clic — y el archivo siempre coincide con lo que está viendo:</p><ol><li>Abra la categoría que desea exportar (por ejemplo <strong>Human Agents</strong>).</li><li>Haga clic en <strong>Export</strong> (Exportar) — el botón de descarga en la esquina superior derecha, junto a Refresh.</li><li>Se descarga un CSV al instante, nombrado según la pestaña y el rango de fechas — p. ej., <em>contact-center-human-agents-2026-06-10-to-2026-07-10.csv</em>.</li></ol><p>Las columnas son específicas de cada pestaña: General exporta el volumen día a día, AI Agents/Smart Campaigns exportan el conjunto completo de métricas por asistente, Human Campaigns exporta las estadísticas de gestión por lista de marcación, y Human Agents exporta la ficha completa — gestión, disponibilidad, ofertas de grupo, supervisión y principales disposiciones por agente. Un informe listo para la dirección en un solo clic.</p><blockquote>💡 La exportación respeta su rango de fechas <em>y</em> sus filtros, así que puede producir un archivo por equipo o por campaña simplemente filtrando primero.</blockquote>"
     }
   ],
   "nextSteps": {
     "title": "¿Qué sigue?",
-    "description": "Observa las llamadas en vivo y comprende lo que hacen los agentes.",
+    "description": "Ya sabe leer los números — ahora vaya a mejorarlos. Observe llamadas en vivo, entrene a sus agentes y ajuste los equipos detrás de cada métrica.",
     "cards": [
-      { "href": "/contact-center/overview", "title": "Visión general del Contact Center", "description": "El Live Monitor y los controles de supervisor." },
-      { "href": "/contact-center/agent-guide", "title": "La experiencia del agente", "description": "Cómo los agentes manejan las llamadas y definen las disposiciones." },
-      { "href": "/contact-center/groups", "title": "Grupos de permisos", "description": "Gestiona los equipos por los que se desglosan estos reportes." }
+      { "href": "/contact-center/overview", "title": "Visión general del Contact Center", "description": "El Live Monitor y los controles de supervisor — monitoree, susurre e intervenga en tiempo real." },
+      { "href": "/contact-center/agent-guide", "title": "La experiencia del agente", "description": "Cómo los agentes toman llamadas, hacen pausas y registran las disposiciones que ve en los informes." },
+      { "href": "/contact-center/groups", "title": "Grupos de permisos", "description": "Administre los equipos y colas por los que se desglosan estos informes." },
+      { "href": "/campaigns/campaign-analytics", "title": "Informes y estadísticas de campañas", "description": "Embudos y analíticas de resultados más profundos a nivel de campaña." }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
+    "title": "¿Necesita ayuda?",
+    "content": "<p>Si tiene algún problema o pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Reportes del Contact Center | iMash Docs",
-  "metaDescription": "Usa los Reportes del Contact Center de iMash: seis categorías (General, Agentes humanos, Agentes de IA, Campañas inteligentes/humanas, Cola), KPIs, preajustes de fechas, filtros y exportación a CSV.",
-  "metaKeywords": "reportes contact center, kpis, tasa de conexión, aht, exportar csv, agentes humanos, agentes de ia, reporte de cola"
+  "metaTitle": "Informes del Contact Center | iMash Documentation",
+  "metaDescription": "Domine los informes del Contact Center de iMash: seis categorías (General, Human Agents, AI Agents, Smart Campaigns, Human Campaigns, Queue), cada KPI explicado, rangos de fecha, filtros y exportación a CSV con un clic.",
+  "metaKeywords": "informes contact center, analítica call center, rendimiento de agentes, KPI, tasa de conexión, AHT, ocupación, contención, informe de cola, exportar csv, agentes humanos, agentes de IA"
 }

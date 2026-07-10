@@ -1,67 +1,282 @@
 {
-  "title": "Agent Settings: Timeouts, Idle Messages & Voicemail",
-  "lede": "Fine-tune how your Smart Agent behaves on a call: maximum call length, silence and idle handling, voicemail (AMD) detection, backchannel, interruptions, and turn detection.",
-  "timeToComplete": "8 minutes",
-  "videoUrl": "https://youtu.be/7C-N_RWwPFI",
-  "videoLength": "5",
+  "title": "Agent Settings: Timeouts, Idle Messages, Voicemail & Turn-Taking",
+  "lede": "This is where a good agent becomes a great one. The Settings panel controls everything about how your Smart Agent behaves on a live call — call length, silence handling, voicemail detection, background sound, interruptions, and turn-taking. This guide walks through every section and every switch, A to Z.",
+  "timeToComplete": "15 minutes",
   "steps": [
     {
-      "id": "open-editor",
-      "title": "Open the Agent Editor",
-      "content": "<ol><li>In the left navigation, go to <strong>Intelligence Center → Smart Agents</strong>.</li><li>Click an existing agent to open it in the editor (you can switch between Form view and Node view).</li><li>The middle column holds the feature panels (Knowledge Base, Voice, Brains, and more), each with its own on/off toggle. Below them you will find <strong>Sub Agents / Tasks / Handoffs</strong>, <strong>Tools / MCP</strong>, and <strong>Settings</strong>.</li></ol>",
+      "id": "open-agent",
+      "title": "Open Your Agent",
+      "content": "<p>Every setting in this guide lives inside an individual agent, so start by opening one:</p><ol><li>In the left sidebar, click <strong>Intelligence Center → Smart Agents</strong>.</li><li>Click the <strong>name</strong> of the agent you want to tune. The agent editor opens.</li></ol><blockquote>💡 Settings are saved per agent — you can give your after-hours agent a short voicemail script and long silence timeout, while your sales agent gets aggressive voicemail hang-up and office background sound.</blockquote>",
       "images": [
-        { "src": "images/agents/assistant-editor-light.png", "alt": "Smart Agent editor", "caption": "The Smart Agent editor: prompt on the left, feature panels in the middle, Test Agent at the top.", "theme": "light" },
-        { "src": "images/agents/assistant-editor-dark.png", "alt": "Smart Agent editor", "caption": "The Smart Agent editor: prompt on the left, feature panels in the middle, Test Agent at the top.", "theme": "dark" }
+        {
+          "src": "images/agents/agent-settings-list-light.png",
+          "alt": "Smart Agents list",
+          "caption": "Intelligence Center → Smart Agents — click an agent's name to open its editor.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-settings-list-dark.png",
+          "alt": "Smart Agents list",
+          "caption": "Intelligence Center → Smart Agents — click an agent's name to open its editor.",
+          "theme": "dark"
+        }
       ]
     },
     {
       "id": "open-settings",
       "title": "Open the Settings Panel",
-      "content": "<ol><li>Click <strong>Settings</strong> in the editor.</li><li>Use the left rail to move between sections: <strong>General</strong>, <strong>Idle Messages</strong>, <strong>Voicemail</strong>, <strong>Speech</strong>, <strong>Voice Activity Detection</strong>, <strong>Audio Quality</strong>, <strong>Background Audio</strong>, <strong>Interruptions</strong>, <strong>User Turn Limits</strong>, <strong>Turn Detection</strong>, and <strong>Privacy &amp; Recording</strong>.</li></ol>",
+      "content": "<p>The editor has two views (switch anytime with the <strong>Form</strong> / <strong>Node</strong> toggle at the top). The Settings panel is the same in both — only the button location differs:</p><ul><li><strong>Form view</strong>: click the <strong>Settings</strong> button below the prompt editor (next to <strong>Sub Agents / Tasks / Handoffs</strong> and <strong>Tools / MCP</strong>).</li><li><strong>Node view</strong>: click the <strong>Settings</strong> card (labeled <em>Configure</em>) in the capabilities bar along the top of the canvas.</li></ul><p>A Settings window opens with a section rail on the left: <strong>General</strong>, <strong>Idle Messages</strong>, <strong>Voicemail</strong>, <strong>Speech</strong>, <strong>Voice Activity Detection</strong>, <strong>Audio Quality</strong>, <strong>Background Audio</strong>, <strong>Interruptions</strong>, <strong>User Turn Limits</strong>, <strong>Turn Detection</strong>, and <strong>Privacy &amp; Recording</strong>.</p><blockquote>💡 Changes save automatically as you adjust them — the <strong>Done</strong> button simply closes the window.</blockquote>",
       "images": [
-        { "src": "images/agents/agent-settings-panel-light.png", "alt": "Agent settings panel", "caption": "The Settings panel with its section rail on the left.", "theme": "light" },
-        { "src": "images/agents/agent-settings-panel-dark.png", "alt": "Agent settings panel", "caption": "The Settings panel with its section rail on the left.", "theme": "dark" }
+        {
+          "src": "images/agents/agent-settings-editor-light.png",
+          "alt": "Agent editor with Settings button",
+          "caption": "Form view: the Settings button sits below the prompt editor.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-settings-editor-dark.png",
+          "alt": "Agent editor with Settings button",
+          "caption": "Form view: the Settings button sits below the prompt editor.",
+          "theme": "dark"
+        }
       ]
     },
     {
       "id": "general-timeouts",
-      "title": "Set Call Length and Silence (General)",
-      "content": "<ul><li><strong>Maximum Duration</strong>: the longest a call can run, in seconds. The agent ends the call when this limit is reached.</li><li><strong>Silence Timeout</strong>: how long to wait during silence before the agent ends the call.</li></ul>",
-      "images": []
+      "title": "General — Call Length and Silence",
+      "content": "<p>The <strong>General</strong> section opens first. It holds the two hard limits of every call:</p><ul><li><strong>Maximum Duration</strong> — the longest a call can run, from 10 to 3,600 seconds (1 hour). When the limit is reached, the agent ends the call.</li><li><strong>Silence Timeout</strong> — how many seconds of total inactivity (10–600) before the call is automatically ended.</li></ul><blockquote>⚠️ Silence Timeout actually <em>hangs up</em> the call. If you just want the agent to say \"Are you still there?\" when the caller goes quiet, use <strong>Idle Messages</strong> (next step) with a shorter timeout than this one.</blockquote><p>For transcription-only agents (LLM and Voice off, Transcriber on), an extra <strong>Transcribe each party separately</strong> toggle appears here — it runs one speaker-tagged transcriber per caller so human-to-human calls transcribe both sides correctly.</p>",
+      "images": [
+        {
+          "src": "images/agents/agent-settings-panel-light.png",
+          "alt": "Settings panel General section",
+          "caption": "The Settings panel: section rail on the left, Maximum Duration and Silence Timeout in General.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-settings-panel-dark.png",
+          "alt": "Settings panel General section",
+          "caption": "The Settings panel: section rail on the left, Maximum Duration and Silence Timeout in General.",
+          "theme": "dark"
+        }
+      ]
     },
     {
       "id": "idle-messages",
-      "title": "Configure Idle Messages",
-      "content": "<ol><li>Open the <strong>Idle Messages</strong> section and turn it on.</li><li>Set the <strong>Idle Timeout</strong> (seconds of quiet before the agent speaks up) and <strong>Max Idle Messages</strong>.</li><li>Add prompts such as <em>\"Are you still there?\"</em>. Type <code>{</code> to insert a variable like the caller's name.</li></ol>",
-      "images": []
+      "title": "Idle Messages — Re-Engage a Quiet Caller",
+      "content": "<p>Click <strong>Idle Messages</strong> in the left rail. This is your agent's polite nudge when the caller stops responding:</p><ol><li>Keep the <strong>Idle Messages</strong> toggle <strong>ON</strong> to enable the feature.</li><li>In <strong>Idle Messages</strong>, pick one or more prompts (e.g. <em>\"Hey, are you still there?\"</em>). To add your own, type it in the <strong>Add Custom Message and Press Enter</strong> box — type <code>{</code> to insert a dynamic variable such as the caller's name.</li><li><strong>Max Idle Messages</strong> (1–10) — how many times the agent may speak up during one call before giving up.</li><li><strong>Idle Timeout</strong> (5–15 seconds) — how long the caller must be quiet before an idle message is spoken.</li></ol><p>Below that, <strong>User Presence → User-Away Timeout</strong> is a separate, SDK-level detector: after this much silence (default 15s) it fires a \"user away\" signal so the agent can react <em>before</em> the hard Silence Timeout hangs up. Toggle it off to disable.</p>",
+      "images": [
+        {
+          "src": "images/agents/agent-settings-idle-light.png",
+          "alt": "Idle Messages settings",
+          "caption": "Idle Messages: prompts, max count, idle timeout, and the User-Away Timeout.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-settings-idle-dark.png",
+          "alt": "Idle Messages settings",
+          "caption": "Idle Messages: prompts, max count, idle timeout, and the User-Away Timeout.",
+          "theme": "dark"
+        }
+      ]
     },
     {
       "id": "voicemail-amd",
-      "title": "Voicemail Detection (AMD)",
-      "content": "<ul><li>Under <strong>Voicemail</strong>, turn on <strong>Voicemail Detection (AMD)</strong> and choose <strong>Hang up if reach voicemail</strong> or <strong>Leave a message if reach voicemail</strong>.</li><li>A voicemail message can include dynamic variables from the conversation.</li><li>Advanced detection timings (No-Speech Timeout, Detection Timeout, speech/silence thresholds) are available if you need to tune accuracy.</li></ul>",
-      "images": []
+      "title": "Voicemail — Detect Answering Machines (AMD)",
+      "content": "<p>Click <strong>Voicemail</strong> in the left rail. On outbound calls, Answering Machine Detection classifies who (or what) answered — human, voicemail, IVR, or unavailable — so your agent never wastes a pitch on a beep:</p><ol><li>Turn <strong>Voicemail Detection (AMD)</strong> <strong>ON</strong>.</li><li>Choose what happens on a machine: <strong>Hang up if reach voicemail</strong> or <strong>Leave a message if reach voicemail</strong>.</li><li>If you chose to leave a message, type it in the message box — use <code>{{}}</code> to insert dynamic variables. Keep it under <strong>200 characters</strong>; anything longer is cut off.</li></ol><p><strong>Detection Tuning (Advanced)</strong> — leave at defaults unless calls are being mis-classified:</p><ul><li><strong>No-Speech Timeout</strong> (default 10s) — how long AMD waits for any audio after the call answers.</li><li><strong>Detection Timeout</strong> (default 20s) — hard ceiling for the whole detection; must be ≥ No-Speech Timeout.</li><li><strong>Human Speech Threshold</strong> (default 2.5s) — greetings shorter than this are treated as human; longer ones go to the classifier.</li><li><strong>Human Silence Threshold</strong> (default 0.5s) — silence after a short greeting before committing to \"human\".</li><li><strong>Machine Silence Threshold</strong> (default 1.5s) — silence after machine-like speech before a verdict.</li><li><strong>Interrupt Agent on Machine</strong> — stop the agent mid-sentence the moment a machine is detected (recommended ON).</li><li><strong>Wait for Detection Before Speaking</strong> — hold the opening greeting until AMD decides, so it never plays into a voicemail.</li><li><strong>Don't Reply Until Detection Finishes</strong> — for \"caller speaks first\" agents, hold the first reply until classification completes.</li><li><strong>Classifier Hint Phrases</strong> (up to 50) — add domain-specific greetings (Spanish carriers, branded voicemail, etc.) as extra examples to bias the classifier.</li></ul><blockquote>⚠️ If your account-level <strong>Override My Agents</strong> voicemail setting is on (Call Center → Voicemail Settings), it supersedes this agent's voicemail behavior — a blue banner at the top of this section will tell you.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/agent-settings-voicemail-light.png",
+          "alt": "Voicemail detection settings",
+          "caption": "Voicemail Detection (AMD) enabled, with hang-up/leave-message modes and advanced detection tuning.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-settings-voicemail-dark.png",
+          "alt": "Voicemail detection settings",
+          "caption": "Voicemail Detection (AMD) enabled, with hang-up/leave-message modes and advanced detection tuning.",
+          "theme": "dark"
+        }
+      ]
     },
     {
-      "id": "speech-and-turns",
-      "title": "Speech, Interruptions & Turn Detection",
-      "content": "<ul><li><strong>Speech</strong>: enable <strong>Enable Backchannel (Beta)</strong> for natural fillers like \"uh-huh\", and <strong>Preemptive Generation</strong> so a text-based (STT + LLM + TTS) agent starts thinking while the caller is still speaking.</li><li><strong>Interruptions</strong>: allow or block interruptions and set the minimum words that trigger one.</li><li><strong>Turn Detection</strong>: an audio-based detector decides when the caller has finished talking. These settings are ignored for realtime (speech-to-speech) models, which handle turns themselves.</li></ul>",
-      "images": []
+      "id": "speech",
+      "title": "Speech — Backchannel, Latency & Pacing",
+      "content": "<p>Click <strong>Speech</strong> in the left rail. These settings make the agent sound faster and more human:</p><ul><li><strong>Enable Backchannel (Beta)</strong> — the agent drops natural affirmations like \"yeah\" and \"uh-huh\" while the caller talks. When ON you can tune <strong>Backchannel Frequency</strong> (Less ↔ More) and pick the <strong>Backchannel Words</strong> it may use (add your own and press Enter).</li><li><strong>Preemptive Generation</strong> — the agent starts thinking (LLM) before the caller fully finishes speaking, cutting response latency. When ON you also get:<ul><li><strong>Preemptive TTS</strong> — generate audio speculatively too. Even lower latency, slightly higher cost (discarded audio still bills).</li><li><strong>Skip Preemptive If User Speaks Longer Than</strong> (default 10s) — very long utterances are too unstable to speculate on.</li><li><strong>Max Preemptive Retries</strong> (default 3) — how many times to re-speculate per turn.</li></ul></li></ul><p><strong>Pacing &amp; Echo</strong>:</p><ul><li><strong>AEC Warmup Duration</strong> (default 3s) — suppresses interruptions while echo cancellation settles on the opening greeting, so the agent's own voice doesn't trigger false interrupts.</li><li><strong>Min Consecutive Speech Delay</strong> (default 0s) — a forced pause between the agent's own back-to-back turns; 0.3–1.0s gives a more natural cadence.</li><li><strong>Pre-TTS Text Cleanup</strong> — transforms applied to agent text before it's spoken: <code>filter_markdown</code> strips ** _ # symbols, <code>filter_emoji</code> drops emoji. You can add custom transform names your TTS provider recognizes.</li></ul>",
+      "images": [
+        {
+          "src": "images/agents/agent-settings-speech-light.png",
+          "alt": "Speech settings",
+          "caption": "Speech: backchannel, preemptive generation, AEC warmup, pacing, and pre-TTS text cleanup.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-settings-speech-dark.png",
+          "alt": "Speech settings",
+          "caption": "Speech: backchannel, preemptive generation, AEC warmup, pacing, and pre-TTS text cleanup.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "vad",
+      "title": "Voice Activity Detection — Hearing the Caller",
+      "content": "<p>Click <strong>Voice Activity Detection</strong> in the left rail. VAD decides when the caller is speaking versus silent — the foundation of natural turn-taking:</p><ul><li><strong>Activation Threshold</strong> (default 0.5) — sensitivity of speech detection. Lower catches softer voices but may pick up background noise; higher reduces false positives but can miss quiet speakers.</li><li><strong>Min Speech Duration</strong> (default 0.05s) — minimum continuous speech to register a new speech chunk.</li><li><strong>Min Silence Duration</strong> (default 0.55s) — how long to wait after speech ends before deciding the caller finished.</li><li><strong>Prefix Padding</strong> (default 0.5s) — audio prepended to each detected chunk so the start of words isn't clipped.</li><li><strong>Max Buffered Speech</strong> (default 60s) — the most speech kept in the VAD buffer.</li></ul><blockquote>💡 Calls from noisy environments (job sites, cars) triggering ghost interruptions? Nudge the <strong>Activation Threshold</strong> up toward 0.6–0.7 before touching anything else.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/agent-settings-vad-light.png",
+          "alt": "Voice Activity Detection settings",
+          "caption": "VAD: activation threshold, speech/silence durations, prefix padding, and buffer size.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-settings-vad-dark.png",
+          "alt": "Voice Activity Detection settings",
+          "caption": "VAD: activation threshold, speech/silence durations, prefix padding, and buffer size.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "audio-quality",
+      "title": "Audio Quality — Microphone-Side Processing",
+      "content": "<p>Click <strong>Audio Quality</strong> in the left rail. This audio processing is applied before the platform listens (VAD / transcription):</p><ul><li><strong>Auto-Gain Control (AGC)</strong> — normalizes input loudness so quiet callers come through louder. Leave it <strong>ON</strong> for phone calls; turn it off only for professional/studio audio setups where you want to preserve dynamics.</li></ul>",
+      "images": [
+        {
+          "src": "images/agents/agent-settings-audio-light.png",
+          "alt": "Audio Quality settings",
+          "caption": "Audio Quality: the Auto-Gain Control toggle.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-settings-audio-dark.png",
+          "alt": "Audio Quality settings",
+          "caption": "Audio Quality: the Auto-Gain Control toggle.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "background-audio",
+      "title": "Background Audio — Make the Agent Feel Human",
+      "content": "<p>Click <strong>Background Audio</strong> in the left rail. This is one of the platform's best-kept secrets: a continuous ambient track behind the agent's voice makes it feel like a real person in a real office — and a soft typing sound fills the silence while the AI is thinking:</p><ol><li>Turn <strong>Enable Background Audio</strong> <strong>ON</strong> (master toggle — when off, no extra audio is published).</li><li><strong>Ambient Sound</strong> — toggle the <strong>Clip</strong> on and pick a loop that plays for the whole call: <em>Office ambience</em> (great B2B default), <em>City ambience</em>, <em>Forest ambience</em>, <em>Crowded room</em>, or <em>Hold music</em>. Set its <strong>Volume</strong> (default 0.8).</li><li><strong>Thinking Sound</strong> — toggle the <strong>Clip</strong> on and pick a short sound that plays between the caller finishing and the agent replying. The <em>Keyboard typing</em> clips are made for this. Set its <strong>Volume</strong> too.</li></ol><p>All clips are bundled with the platform — nothing to upload.</p>",
+      "images": [
+        {
+          "src": "images/agents/agent-settings-background-audio-light.png",
+          "alt": "Background Audio settings",
+          "caption": "Background Audio enabled with an office-ambience loop and a keyboard-typing thinking sound.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-settings-background-audio-dark.png",
+          "alt": "Background Audio settings",
+          "caption": "Background Audio enabled with an office-ambience loop and a keyboard-typing thinking sound.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "interruptions",
+      "title": "Interruptions — Letting Callers Cut In",
+      "content": "<p>Click <strong>Interruptions</strong> in the left rail. Real people interrupt — this section controls how gracefully your agent handles it:</p><ul><li><strong>Allow Interruptions</strong> — lets the caller cut the agent off mid-sentence. (Ignored when using a realtime speech-to-speech model with built-in turn detection.)</li><li><strong>Interruption Mode</strong>:<ul><li><strong>VAD only (default)</strong> — interrupts on any detected voice activity. Lowest cost, most aggressive.</li><li><strong>Adaptive (ML)</strong> — a smarter model decides whether the caller really means to interrupt. Not available with OpenAI Realtime.</li><li><strong>Auto</strong> — let the platform pick.</li></ul></li><li><strong>Min Interruption Duration</strong> (default 0.5s) — minimum detected speech before an interruption triggers.</li><li><strong>Min Interruption Words</strong> (default 0) — minimum recognized words to count as an interruption (0 = duration only). Raising this to 2–3 stops coughs and \"uh-huh\"s from cutting the agent off.</li></ul><p><strong>False Interruption Handling</strong>:</p><ul><li><strong>Resume After False Interruption</strong> — if the \"interruption\" produced no recognizable words (a noise), the agent resumes from where it left off.</li><li><strong>False Interruption Timeout</strong> (default 2s) — how long to wait before ruling it a false interruption. Toggle <strong>Disable handling</strong> to treat every interruption as intentional.</li></ul><p>When Adaptive mode is selected, an extra <strong>Backchannel Boundary</strong> control appears — it suppresses interruptions near turn boundaries (SDK default 1.0s at turn start, 3.5s at turn end).</p>",
+      "images": [
+        {
+          "src": "images/agents/agent-settings-interruptions-light.png",
+          "alt": "Interruptions settings",
+          "caption": "Interruptions: allow toggle, mode, duration/word thresholds, and false-interruption handling.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-settings-interruptions-dark.png",
+          "alt": "Interruptions settings",
+          "caption": "Interruptions: allow toggle, mode, duration/word thresholds, and false-interruption handling.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "user-turn-limits",
+      "title": "User Turn Limits — Tame Runaway Monologues",
+      "content": "<p>Click <strong>User Turn Limits</strong> in the left rail. Some callers never stop talking — either limit forces the agent to end the caller's turn and respond. Both off = unlimited (the platform default):</p><ul><li><strong>Max Words Per Turn</strong> — force-end the caller's turn after this many recognized words. Suggested 100–300 for chatty domains.</li><li><strong>Max Duration Per Turn</strong> — force-end after this much continuous speech. Suggested 30–60 seconds for screening flows.</li></ul>",
+      "images": [
+        {
+          "src": "images/agents/agent-settings-turn-limits-light.png",
+          "alt": "User Turn Limits settings",
+          "caption": "User Turn Limits: word and duration caps for a single caller turn.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-settings-turn-limits-dark.png",
+          "alt": "User Turn Limits settings",
+          "caption": "User Turn Limits: word and duration caps for a single caller turn.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "turn-detection",
+      "title": "Turn Detection — When to Listen, When to Speak",
+      "content": "<p>Click <strong>Turn Detection</strong> in the left rail. This decides when a caller's turn begins and ends. (Realtime speech-to-speech models ignore these settings — they handle turns themselves.)</p><ul><li><strong>Turn Detector Enabled</strong> — uses an audio-based model that listens to intonation, pitch, and rhythm directly (no transcript needed). When off, the agent falls back to VAD-only or transcriber endpointing.</li><li><strong>Override End-of-Turn Sensitivity</strong> — the detector ships with calibrated per-language defaults; turn this on only to override how confident it must be before ending a turn (English default ≈ 0.36; lower = faster responses, higher = more patient).</li><li><strong>Endpointing Mode</strong>:<ul><li><strong>Fixed (default)</strong> — always waits the min/max delays below. Predictable.</li><li><strong>Dynamic</strong> — adapts the end-of-turn delay to the conversation's pace: snappier with fast talkers, more patient with slow ones. Exposes a <strong>Smoothing α</strong> slider (default 0.9 — higher adapts more slowly).</li></ul></li><li><strong>Min Endpointing Delay</strong> (default 0.5s) — wait before considering the turn complete when no detector signal is available.</li><li><strong>Max Endpointing Delay</strong> (default 6s) — maximum wait when the detector believes the caller will keep talking.</li></ul><blockquote>💡 Agent talking over callers who pause mid-thought? Raise <strong>Min Endpointing Delay</strong> to 0.8–1.0s. Agent feels sluggish? Lower it — or switch Endpointing Mode to <strong>Dynamic</strong>.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/agent-settings-turn-detection-light.png",
+          "alt": "Turn Detection settings",
+          "caption": "Turn Detection: audio-based detector, sensitivity override, and endpointing delays.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-settings-turn-detection-dark.png",
+          "alt": "Turn Detection settings",
+          "caption": "Turn Detection: audio-based detector, sensitivity override, and endpointing delays.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "privacy-recording",
+      "title": "Privacy & Recording, Then You're Done",
+      "content": "<p>Finally, click <strong>Privacy &amp; Recording</strong> in the left rail:</p><ul><li><strong>Disable Sensitive Data Storage</strong> — when ON, iMash will not store or log the call transcript or recording for this agent. (This also disables the Audio Recording toggle below.)</li><li><strong>Audio Recording</strong> — record conversations with this agent so you can play them back from Call Logs.</li></ul><ol><li>Click <strong>Done</strong> to close the panel — everything you changed is already saved.</li><li>Hit <strong>Test Agent</strong> in the editor header and have a conversation. You'll hear your background audio, feel the new turn-taking, and can interrupt the agent to check your interruption settings.</li></ol><p>That's it — your agent now handles silence, voicemail, and chatty callers exactly the way you designed. 🎉</p><blockquote>⚠️ If your agent uses <strong>OpenAI Realtime</strong> as its LLM, a warning banner appears in Settings: some interruption and turn-detection options are handled by the realtime model itself and will be ignored.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/agent-settings-privacy-light.png",
+          "alt": "Privacy & Recording settings",
+          "caption": "Privacy & Recording: sensitive-data storage opt-out and the audio-recording toggle.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-settings-privacy-dark.png",
+          "alt": "Privacy & Recording settings",
+          "caption": "Privacy & Recording: sensitive-data storage opt-out and the audio-recording toggle.",
+          "theme": "dark"
+        }
+      ]
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "With behavior dialed in, expand what your agent can do:",
+    "description": "Behavior dialed in? Give your agent an even better voice, sharper brain, and a proper test drive:",
     "cards": [
-      { "href": "/agents/voice-configuration", "title": "Configure the Voice", "description": "Pick a TTS provider and preview voices for your agent." },
-      { "href": "/agents/agent-tools", "title": "Add Tools", "description": "Let the agent end calls, book appointments, and call your APIs." },
-      { "href": "/agents/agent-privacy", "title": "Privacy & Recording", "description": "Control data storage and audio recording for calls." }
+      {
+        "href": "/agents/voice-configuration",
+        "title": "Configure the Voice",
+        "description": "Pick a TTS provider and preview voices for your agent."
+      },
+      {
+        "href": "/agents/llm-settings",
+        "title": "LLM Settings",
+        "description": "Choose the language model and tune temperature and backups."
+      },
+      {
+        "href": "/agents/test-your-agent",
+        "title": "Test Your Agent",
+        "description": "Call your agent right from the browser and hear your settings in action."
+      }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Agent Settings: Timeouts, Idle & Voicemail | iMash Docs",
-  "metaDescription": "Configure iMash Smart Agent settings: maximum call duration, silence and idle timeouts, voicemail (AMD) detection, backchannel, interruptions, and turn detection.",
-  "metaKeywords": "agent settings, imash, smart agent, voicemail detection, idle messages, backchannel, turn detection, conversation length"
+  "metaTitle": "Agent Settings: Timeouts, Idle, Voicemail & Turn-Taking | iMash Documentation",
+  "metaDescription": "Configure every iMash Smart Agent call setting: maximum duration, silence and idle timeouts, voicemail (AMD) detection, backchannel, background audio, interruptions, VAD, turn detection, and privacy.",
+  "metaKeywords": "agent settings, imash, smart agent, voicemail detection, AMD, idle messages, backchannel, turn detection, interruptions, background audio, VAD, call duration, privacy recording"
 }

@@ -1,0 +1,113 @@
+{
+  "title": "SMS Inbox & Messaging",
+  "lede": "Every text your business sends and receives — customer replies, technician confirmations, group threads, even your AI agent's conversations — lands in one searchable SMS inbox. This guide takes you A-to-Z: reading threads, filtering like a pro, replying with one-click templates, and starting brand-new conversations.",
+  "timeToComplete": "10 minutes",
+  "steps": [
+    {
+      "id": "open-inbox",
+      "title": "Open the SMS inbox",
+      "content": "<p>Your entire texting operation lives on one screen. Let's find it.</p><ol><li>In the top navigation, click <strong>Messages</strong>, then the <strong>SMS MESSAGES</strong> tab (or in the left sidebar under <strong>MESSAGES</strong>, click <strong>SMS Messages</strong>).</li><li>The <strong>Messages</strong> page opens with three zones:</li></ol><ul><li><strong>Header row</strong> — the page title with a red <strong>unread counter</strong> badge, a <strong>Search messages...</strong> box that searches names, numbers, and message text, a <strong>Refresh</strong> icon, and the green <strong>New Message</strong> button.</li><li><strong>Filter bar</strong> — channel, direction, sort, and date controls (covered in the next steps).</li><li><strong>Two-panel workspace</strong> — the conversation list on the left, and the full message thread of whichever conversation you select on the right.</li></ul><blockquote>💡 New messages appear automatically in real time — you don't need to refresh. The unread badge in the header updates the moment a customer texts you.</blockquote>",
+      "images": [
+        {"src": "images/messages/sms-inbox-light.png", "alt": "The SMS Messages inbox with the filter bar, conversation list on the left and the open thread on the right", "caption": "The SMS inbox — conversations on the left, the selected thread on the right.", "theme": "light"},
+        {"src": "images/messages/sms-inbox-dark.png", "alt": "The SMS Messages inbox in dark mode with the filter bar, conversation list and open thread", "caption": "The SMS inbox — conversations on the left, the selected thread on the right.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "conversation-cards",
+      "title": "Read a conversation card at a glance",
+      "content": "<p>Each card in the left-hand list is a full conversation with one person (or one group). The card packs a lot of signal into a small space:</p><ul><li><strong>Name or number</strong> — if the phone number matches a lead, contact, or technician in your CRM, their name shows automatically. Unknown numbers show as the raw number until you save them as a CRM record.</li><li><strong>Timestamp</strong> — when the last message was sent or received.</li><li><strong>Preview line</strong> — the first words of the most recent message.</li><li><strong>Direction arrow</strong> — a green arrow for the last message being <em>inbound</em> (they texted you) or red for <em>outbound</em> (you texted them). Hover it for the exact direction.</li><li><strong>Channel chip</strong> — <strong>SMS</strong> (blue) or <strong>WhatsApp</strong> (green), since this inbox unifies both text channels.</li><li><strong>Message count</strong> — total messages in the thread.</li><li><strong>Unread badge</strong> — a red count when the thread has messages you haven't opened yet.</li></ul><p>Group MMS threads (multiple people on one text thread) show a purple team icon and list the participants — hover the name row to see the full roster. Threads that came in through a job source also show a small <strong>Source</strong> tag.</p><blockquote>💡 The linking is automatic: because iMash matches phone numbers against your CRM, texting with a lead shows their name here, and their thread shows up when you filter by that lead — no manual tagging needed.</blockquote>",
+      "images": [
+        {"src": "images/messages/sms-conversation-card-light.png", "alt": "A single conversation card showing the number, timestamp, preview, direction arrow, SMS channel chip and message count", "caption": "One conversation card: name/number, last-message time, preview, direction arrow, channel chip, and total count.", "theme": "light"},
+        {"src": "images/messages/sms-conversation-card-dark.png", "alt": "A single conversation card in dark mode showing the number, timestamp, preview, direction arrow, SMS chip and message count", "caption": "One conversation card: name/number, last-message time, preview, direction arrow, channel chip, and total count.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "filter-and-sort",
+      "title": "Filter and sort the inbox",
+      "content": "<p>When texts are flying, the filter bar keeps you focused. Left to right:</p><ul><li><strong>Channel</strong> — <strong>All</strong>, <strong>SMS</strong>, or <strong>WhatsApp</strong>. This one inbox carries both channels; pick one to isolate it.</li><li><strong>Direction</strong> — <strong>All</strong>, <strong>Outbound</strong>, or <strong>Inbound</strong>.</li><li><strong>Sort</strong> — <strong>Sort: Newest</strong>, <strong>Sort: Oldest</strong>, or <strong>Sort: Most unread</strong> (bubbles the threads that need attention to the top).</li><li><strong>Date preset</strong> — <strong>Today</strong>, <strong>Yesterday</strong>, or <strong>Last 7 Days</strong>, plus a custom date-range picker next to it for any period. Click the small <strong>×</strong> in the range picker to clear the date filter and see everything.</li></ul><p>Every active filter also appears as a removable chip next to the page title — click a chip's <strong>×</strong> to drop just that filter, or <strong>Clear all</strong> to reset the whole bar.</p><blockquote>⚠️ The inbox opens with <strong>Last 7 Days</strong> pre-selected. If a conversation seems to be \"missing\", clear the date filter first — it's almost always just outside the window.</blockquote>",
+      "images": [
+        {"src": "images/messages/sms-filters-light.png", "alt": "The filter bar with channel, direction, sort, date preset, date range, More filters and Bulk buttons", "caption": "The filter bar: channel, direction, sort and date at a glance — More filters and Bulk on the second row.", "theme": "light"},
+        {"src": "images/messages/sms-filters-dark.png", "alt": "The filter bar in dark mode with channel, direction, sort, date preset, More filters and Bulk buttons", "caption": "The filter bar: channel, direction, sort and date at a glance — More filters and Bulk on the second row.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "refine-filters",
+      "title": "Drill deeper with More filters",
+      "content": "<p>Click <strong>More filters</strong> to open the refinements popover. A count badge on the button reminds you when any of these are silently active.</p><ul><li><strong>Entity</strong> — narrow to conversations with <strong>Technicians</strong>, <strong>Contacts</strong>, <strong>Leads</strong>, or <strong>Other / Unlinked</strong> numbers. Picking a type reveals a second dropdown to zero in on one specific person — perfect for pulling up every text with one customer.</li><li><strong>Delivery Status</strong> — show only threads whose messages were <em>delivered</em>, <em>pending</em>, or <em>failed</em>.</li><li><strong>From Number (10DLC)</strong> — if you text from multiple business lines, filter to threads on a specific number.</li><li><strong>Source</strong> — appears when your phone numbers are bound to job sources; filters to threads that arrived through one lead source.</li><li><strong>Unread only</strong> — a switch that hides everything you've already read.</li><li><strong>Has media</strong> — a switch that shows only threads containing photos or attachments (MMS).</li></ul><p>Click <strong>Clear refinements</strong> at the bottom of the popover to reset just these advanced filters.</p>",
+      "images": [
+        {"src": "images/messages/sms-more-filters-light.png", "alt": "The More filters popover with Entity, Delivery Status, From Number, Unread only and Has media controls", "caption": "More filters: entity, delivery status, business line, and the Unread only / Has media switches.", "theme": "light"},
+        {"src": "images/messages/sms-more-filters-dark.png", "alt": "The More filters popover in dark mode with Entity, Delivery Status, From Number, Unread only and Has media controls", "caption": "More filters: entity, delivery status, business line, and the Unread only / Has media switches.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "read-a-thread",
+      "title": "Open a thread and read it like a chat",
+      "content": "<p>Click any conversation card and the full thread opens on the right, newest messages at the bottom — just like your phone.</p><ul><li><strong>Thread header</strong> — the person's name and number on the left; on the right, <strong>via</strong> shows which of your business numbers this thread runs on, and any <strong>Associated Jobs</strong> appear as blue tags — click one to jump straight to that job's detail page.</li><li><strong>Message bubbles</strong> — your outbound messages on the right (blue), inbound on the left. Under each outbound bubble you'll see the delivery state: ✓ sent, ✓✓ delivered, blue ✓✓ read.</li><li><strong>Failed messages</strong> — flagged with a red <strong>FAILED</strong> tag. Hover the <strong>!</strong> icon to read the carrier's error, then click <strong>Retry</strong> to resend it instantly.</li><li><strong>Hover actions</strong> — hover any bubble to reveal <strong>Reply</strong> (quote that message in your response), <strong>Forward</strong> (send it to someone else), and on WhatsApp threads, <strong>React</strong> with an emoji.</li><li><strong>Scroll up</strong> — older messages load automatically as you scroll, all the way back to \"Start of conversation\".</li></ul><p>Opening a thread automatically marks its messages as read and clears the red badge.</p>",
+      "images": [
+        {"src": "images/messages/sms-thread-light.png", "alt": "An open SMS thread showing the header with the peer number, message bubbles with delivery status and the reply box below", "caption": "The thread view: header, bubbles with per-message delivery status (and Retry for failed sends), reply box at the bottom.", "theme": "light"},
+        {"src": "images/messages/sms-thread-dark.png", "alt": "An open SMS thread in dark mode showing the header, message bubbles with delivery status and the reply box", "caption": "The thread view: header, bubbles with per-message delivery status (and Retry for failed sends), reply box at the bottom.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "reply-to-a-thread",
+      "title": "Reply — with one-click templates, emoji, and photos",
+      "content": "<p>The reply box at the bottom of every thread is built for speed:</p><ol><li>Click a <strong>Quick:</strong> template chip — like <strong>Tech on the way</strong>, <strong>Running late</strong>, or <strong>Confirm appointment</strong> — and a ready-made message drops into the box with the customer's and technician's details already filled in. You can add your own chips under Dispatch Settings → Messages Templates.</li><li>Or type your message in the <strong>Type your reply...</strong> box. Use the smiley icon for <strong>emoji</strong> and the paperclip to <strong>attach a photo or file</strong> — attachments go out as MMS, and your text becomes the caption.</li><li>Click <strong>Send Reply</strong> (or press <strong>Ctrl+Enter</strong>).</li></ol><p>Replies automatically go out on the same business number the thread lives on, so the customer always sees a consistent number. On a group thread, one reply fans out to every participant.</p><blockquote>💡 Want to quote a specific message? Hover it, click <strong>Reply</strong>, and your response goes out with the quoted text on top — great for answering an older question in a busy thread.</blockquote>",
+      "images": [
+        {"src": "images/messages/sms-reply-light.png", "alt": "The reply box with Quick template chips, the reply text area, emoji and attachment buttons and the Send Reply button", "caption": "The reply box: Quick template chips, emoji + attachment buttons, and Send Reply (Ctrl+Enter works too).", "theme": "light"},
+        {"src": "images/messages/sms-reply-dark.png", "alt": "The reply box in dark mode with Quick template chips, text area, emoji and attachment buttons and Send Reply", "caption": "The reply box: Quick template chips, emoji + attachment buttons, and Send Reply (Ctrl+Enter works too).", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "start-new-conversation",
+      "title": "Start a brand-new conversation",
+      "content": "<p>Reaching out first? Click the green <strong>New Message</strong> button at the top-right.</p><ol><li>In the <strong>New SMS Message</strong> window, pick who you're texting under <strong>Send To</strong>: <strong>Technician</strong>, <strong>Contact</strong>, <strong>Lead</strong>, or a raw <strong>Phone Number</strong>.</li><li>Choose the person from the searchable dropdown — their saved phone number(s) auto-fill the <strong>Destination Phone Number</strong> field. No saved number? Type one manually.</li><li>Pick your <strong>From Number</strong> — the 10DLC-registered business line the text is sent from. iMash pre-selects the number you most recently used with that person.</li><li>Write your text in <strong>Message Body</strong> — the paperclip and emoji buttons work here too, and quick template chips appear below for recipients linked to a CRM record.</li><li>Click <strong>Send Message</strong>. The new thread appears at the top of your inbox.</li></ol><blockquote>⚠️ US carriers require your texting numbers to be <strong>10DLC-registered</strong> — the From Number list only shows registered numbers. If it's empty, register a number first (see the Phone Numbers guide below). If you've connected WhatsApp, a <strong>Channel</strong> toggle also appears here so the same composer can send via WhatsApp instead.</blockquote>",
+      "images": [
+        {"src": "images/messages/sms-compose-light.png", "alt": "The New SMS Message modal with Send To options, Destination Phone Number, From Number and Message Body fields", "caption": "The composer: pick a recipient type, destination and From number, write the message, hit Send Message.", "theme": "light"},
+        {"src": "images/messages/sms-compose-dark.png", "alt": "The New SMS Message modal in dark mode with Send To options, Destination Phone Number, From Number and Message Body fields", "caption": "The composer: pick a recipient type, destination and From number, write the message, hit Send Message.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "bulk-actions",
+      "title": "Clean up with bulk actions",
+      "content": "<p>Inbox piling up? The <strong>Bulk</strong> button in the filter bar handles many conversations at once:</p><ol><li>Click <strong>Bulk</strong> → <strong>Select conversations</strong> — checkboxes appear on every card.</li><li>Tick the threads you want (or use the <strong>Select all</strong> checkbox that appears above the list).</li><li>Open <strong>Bulk</strong> again and choose an action:</li></ol><ul><li><strong>Mark selected as read</strong> — clears the unread badges on the ticked threads.</li><li><strong>Mark all visible as read</strong> — one click clears every thread currently matching your filters (the count shows how many).</li><li><strong>Archive selected</strong> — hides the ticked conversations from the inbox. Archiving never deletes the messages; the thread reappears if the person texts you again.</li></ul><p>Click <strong>Exit multi-select</strong> when you're done.</p>",
+      "images": [
+        {"src": "images/messages/sms-bulk-light.png", "alt": "The Bulk dropdown menu with Select conversations, Mark selected as read, Mark all visible as read and Archive selected", "caption": "The Bulk menu: multi-select, mark-as-read, and archive actions.", "theme": "light"},
+        {"src": "images/messages/sms-bulk-dark.png", "alt": "The Bulk dropdown menu in dark mode with Select conversations, mark-as-read and Archive selected options", "caption": "The Bulk menu: multi-select, mark-as-read, and archive actions.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "groups-ai-and-optout",
+      "title": "Good to know: group texts, AI agents, and opt-outs",
+      "content": "<p>Three powerful behaviors happen behind the scenes of this inbox:</p><ul><li><strong>Group MMS threads.</strong> When several people share one text thread (for example, a lead-source company's group chat), it shows as a single conversation with a purple team icon. Your reply goes to <em>everyone</em> in the group, and the <strong>Add</strong> button in the thread header lets you add another participant (they join on your next message). Group threads are SMS/MMS only.</li><li><strong>AI text agents.</strong> If you've bound a Smart Agent to one of your numbers (in the agent's Channels tab), inbound texts on that number get answered by the AI automatically — and the whole conversation streams into this same inbox in real time. You can jump in and reply manually at any moment; the thread stays unified, so you always see both the AI's messages and your own.</li><li><strong>Opt-outs and compliance.</strong> Recipients can always reply <strong>STOP</strong> to stop receiving texts — carriers enforce this at the network level, and iMash can append an opt-out notice to outbound texts to keep your 10DLC campaigns compliant. Keep business texting on registered numbers and honor opt-outs to protect your delivery rates.</li></ul><p>That's the full tour — you now run a professional, multi-channel texting operation from a single screen. 🚀</p>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Your SMS inbox is mastered — now add more firepower to your messaging stack.",
+    "cards": [
+      {
+        "href": "/phone/add-phone-number",
+        "title": "Add a Phone Number",
+        "description": "Buy and 10DLC-register the business numbers your texts are sent from."
+      },
+      {
+        "href": "/messages/whatsapp",
+        "title": "WhatsApp Messaging",
+        "description": "Connect WhatsApp Business and run it from this same unified inbox."
+      },
+      {
+        "href": "/agents/create-agent",
+        "title": "Create a Smart Agent",
+        "description": "Let an AI agent answer inbound texts on your numbers 24/7."
+      }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>Questions about SMS delivery, 10DLC registration, or a thread that isn't behaving? Email <a href=\"mailto:support@imash.io\">support@imash.io</a> and our team will dig in with you.</p>"
+  },
+  "metaTitle": "SMS Inbox & Messaging | iMash Documentation",
+  "metaDescription": "Master the iMash SMS inbox: read and filter conversation threads, reply with quick templates and MMS attachments, start new conversations, run bulk actions, and understand group texts, AI text agents, and opt-outs.",
+  "metaKeywords": "sms inbox, text messaging, sms threads, mms, quick templates, 10dlc, group mms, bulk sms actions, sms opt-out, unified inbox"
+}

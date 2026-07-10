@@ -42,6 +42,7 @@ CROPS = {
     "contact-center/agent-login": (446, 212, 992, 792),   # login card only; drop the logo above it
 }
 
+# Legacy stems from the first capture pass (regex kept for back-compat) …
 ALLOW = re.compile(
     r"/(get-started/(dashboard-overview-main|api-keys)|"
     r"phone/(phone-numbers|sip-providers|call-logs|add-phone-number)|"
@@ -52,6 +53,26 @@ ALLOW = re.compile(
     r"contact-center/(cc-live-monitor|cc-reporting|cc-groups-overview|cc-group-[a-z-]+|cc-call-transfer|agent-home|agent-contact-center|"
     r"agent-lead-detail|agent-lead-stage|agent-lifecycle|agent-lead-additional|agent-lead-calllogs)|"
     r"dashboard-overview)-(light|dark)\.png$")
+
+# … plus the maintained stem list (one images/<path> stem per line). Page agents
+# report new sidebar-logo screenshots there; the pixel check still gates both.
+_stems_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "sidebar_logo_images.txt")
+STEMS = set()
+if os.path.exists(_stems_file):
+    for line in open(_stems_file):
+        line = line.strip()
+        if line and not line.startswith("#"):
+            STEMS.add(line)
+
+
+def allowed(path):
+    if ALLOW.search(path):
+        return True
+    rel = os.path.relpath(path, C.IMAGES_DIR)
+    for suffix in ("-light.png", "-dark.png"):
+        if rel.endswith(suffix) and rel[: -len(suffix)] in STEMS:
+            return True
+    return False
 
 
 def has_logo(im):
@@ -75,7 +96,7 @@ def main(clean=False):
     logo = logo.resize((lw, LOGO_H), Image.LANCZOS)
     n = 0
     for p in glob.glob(f"{C.IMAGES_DIR}/**/*.png", recursive=True):
-        if p.endswith(f".{SUFFIX}.png") or not ALLOW.search(p):
+        if p.endswith(f".{SUFFIX}.png") or not allowed(p):
             continue
         im = Image.open(p).convert("RGB")
         if not has_logo(im):

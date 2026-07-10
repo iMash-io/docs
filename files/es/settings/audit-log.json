@@ -1,0 +1,122 @@
+{
+  "title": "Registro de Auditoría y Notificaciones",
+  "lede": "Cada cambio en su cuenta de iMash — quién lo hizo, cuándo y exactamente qué cambió — se registra automáticamente en el Registro de Auditoría. Aprenda a leerlo, filtrarlo y convertir los eventos que le importan en notificaciones instantáneas.",
+  "timeToComplete": "8 minutos",
+  "steps": [
+    {
+      "id": "open-audit-log",
+      "title": "Abra el Registro de Auditoría",
+      "content": "<p>Piense en el Registro de Auditoría como la caja negra de su cuenta: ediciones de configuración, registros eliminados, cambios de facturación, acciones realizadas en modo de suplantación — todo queda capturado, automáticamente, sin configuración previa.</p><ol><li>En la navegación superior, haga clic en <strong>User Management</strong> (Gestión de usuarios).</li><li>En la barra lateral izquierda, haga clic en <strong>Audit</strong> (Auditoría).</li></ol><p>El subtítulo bajo el título de la página le indica qué está viendo:</p><ul><li>Los <strong>propietarios de la cuenta principal</strong> ven <em>\"Every change across your account and sub-accounts\"</em> (todos los cambios de su cuenta y subcuentas) — el panorama completo.</li><li>Los <strong>usuarios de subcuentas</strong> ven <em>\"Your account activity\"</em> (la actividad de su cuenta) — solo sus propias acciones, salvo que usted les conceda un acceso más amplio (Paso 6).</li></ul>",
+      "images": [
+        { "src": "images/settings/audit-log-overview-light.png", "alt": "Página del Registro de Auditoría con la tabla de actividad, los filtros y los botones del encabezado", "caption": "El Registro de Auditoría — cada cambio de su cuenta, primero el más reciente", "theme": "light" },
+        { "src": "images/settings/audit-log-overview-dark.png", "alt": "Página del Registro de Auditoría con la tabla de actividad, los filtros y los botones del encabezado", "caption": "El Registro de Auditoría — cada cambio de su cuenta, primero el más reciente", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "read-the-activity-feed",
+      "title": "Lea el flujo de actividad",
+      "content": "<p>Cada fila es un evento registrado, primero el más reciente. Las columnas:</p><ul><li><strong>When</strong> (Cuándo) — tiempo relativo (\"hace 9 minutos\"). Pase el cursor para ver la fecha y hora exactas.</li><li><strong>Who</strong> (Quién) — la persona que hizo el cambio, con una etiqueta de color: <strong>Main</strong> (la cuenta principal), <strong>Sub (Own)</strong> (una subcuenta de su propio entorno) o <strong>Sub</strong> (una subcuenta de un cliente referido, para afiliados). Las filas marcadas como <strong>System · automated</strong> fueron realizadas por un proceso en segundo plano — configuración de cuenta, facturación o actividad del marcador — sin un usuario con sesión iniciada.</li><li><strong>What happened</strong> (Qué pasó) — un resumen en lenguaje claro (\"Deleted phone number…\", \"Updated lead…\") junto con el área a la que pertenece (CRM, AI Agents, Billing & Settings, Telephony, Dialers, Roles & Access, Security).</li><li><strong>Importance</strong> (Importancia) — <strong>Routine</strong> (Rutina), <strong>Notable</strong>, <strong>Warning</strong> (Advertencia) o <strong>Sensitive</strong> (Sensible). Los eventos sensibles incluyen cambios de roles, rotaciones de credenciales y ediciones relevantes para la seguridad.</li></ul><blockquote>💡 Si un cambio se hizo mientras un administrador <strong>suplantaba</strong> a otro usuario, la columna Who muestra una etiqueta naranja <strong>via …</strong> con el nombre de la persona real detrás. La suplantación nunca puede ocultarse — siempre queda registrada.</blockquote>",
+      "images": [
+        { "src": "images/settings/audit-log-rows-light.png", "alt": "Filas del registro de auditoría con las columnas When, Who, What happened e Importance", "caption": "Cada fila: cuándo, quién, qué pasó y su nivel de importancia", "theme": "light" },
+        { "src": "images/settings/audit-log-rows-dark.png", "alt": "Filas del registro de auditoría con las columnas When, Who, What happened e Importance", "caption": "Cada fila: cuándo, quién, qué pasó y su nivel de importancia", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "filter-the-log",
+      "title": "Filtre para encontrar exactamente lo que busca",
+      "content": "<p>La barra de filtros sobre la tabla reduce miles de eventos al puñado que usted está buscando:</p><ul><li><strong>Table (e.g. assistants)</strong> (Tabla) — escriba un tipo de registro (como <em>assistants</em> o <em>crm_leads</em>) y pulse <strong>Enter</strong>.</li><li><strong>Category</strong> (Categoría) — una sola área: <em>ai_config, telephony, rbac, security, billing, campaigns, crm</em>.</li><li><strong>Severity</strong> (Severidad) — solo eventos de una importancia determinada (<em>critical, warn, notice, info</em>).</li><li><strong>Action</strong> (Acción) — <em>INSERT</em> (creado), <em>UPDATE</em> (editado), <em>DELETE</em> (eliminado) o <em>ROLLUP</em> (actividad agregada como llamadas y mensajes).</li><li><strong>Sub-account</strong> (Subcuenta) — las cuentas principales pueden aislar la actividad de una subcuenta.</li><li><strong>Start date → End date</strong> (Fecha de inicio → fin) — una ventana precisa de fecha y hora.</li><li>Interruptor <strong>Impersonated</strong> (Suplantado) — muestre solo acciones realizadas en modo de suplantación.</li><li><strong>Clear</strong> (Limpiar) — restablezca todo de una vez.</li></ul>",
+      "images": [
+        { "src": "images/settings/audit-log-filters-light.png", "alt": "Barra de filtros del registro con tabla, categoría, severidad, acción, subcuenta, rango de fechas y filtro de suplantación", "caption": "Combine filtros para localizar cualquier evento", "theme": "light" },
+        { "src": "images/settings/audit-log-filters-dark.png", "alt": "Barra de filtros del registro con tabla, categoría, severidad, acción, subcuenta, rango de fechas y filtro de suplantación", "caption": "Combine filtros para localizar cualquier evento", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "open-event-details",
+      "title": "Abra un evento para ver el cambio exacto",
+      "content": "<p>Aquí es donde el Registro de Auditoría demuestra su valor — detalle de antes y después campo por campo.</p><ol><li>Haga clic en cualquier fila de la tabla. Un panel de detalle se desliza desde la derecha.</li><li>El banner de color en la parte superior reformula el evento en lenguaje claro.</li><li>Debajo, la cuadrícula de resumen muestra <strong>When</strong> (Cuándo), <strong>Who</strong> (Quién), <strong>Area</strong> (Área), <strong>Importance</strong> (Importancia) y <strong>Affects</strong> (Afecta — el registro exacto modificado, por nombre).</li><li>En las ediciones, la sección <strong>What changed</strong> (Qué cambió) lista cada campo modificado con el valor anterior en rojo a la izquierda y el nuevo valor en verde a la derecha.</li></ol><ul><li>Las contraseñas, claves API y tokens nunca se muestran — un secreto modificado aparece como una insignia 🔒 <strong>secret rotated</strong> (secreto rotado) sin valores.</li><li><strong>Technical details</strong> (Detalles técnicos), al final, expande los identificadores internos del registro, útiles al trabajar con el soporte de iMash.</li></ul>",
+      "images": [
+        { "src": "images/settings/audit-log-detail-light.png", "alt": "Panel de detalle del evento con la información de resumen y la comparación de campos antes y después", "caption": "Diff a nivel de campo: valor anterior en rojo, nuevo valor en verde", "theme": "light" },
+        { "src": "images/settings/audit-log-detail-dark.png", "alt": "Panel de detalle del evento con la información de resumen y la comparación de campos antes y después", "caption": "Diff a nivel de campo: valor anterior en rojo, nuevo valor en verde", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "show-metrics",
+      "title": "Vea el panorama general con las métricas",
+      "content": "<p>¿Prefiere un chequeo de un vistazo en lugar de leer fila por fila?</p><ol><li>Haga clic en <strong>Show metrics</strong> (Mostrar métricas) en la esquina superior derecha de la página.</li><li>Aparecen dos filas de tarjetas de estadísticas, siempre respetando los filtros activos:</li></ol><ul><li><strong>Events</strong> (Eventos) — total de eventos en la vista.</li><li><strong>Critical</strong> / <strong>Warnings</strong> (Críticos / Advertencias) — cuántos eventos sensibles o de advertencia ocurrieron.</li><li><strong>Impersonated actions</strong> (Acciones suplantadas) — cambios hechos en modo de suplantación.</li><li><strong>Created / Updated / Deleted</strong> (Creados / Actualizados / Eliminados) — registros nuevos, ediciones y eliminaciones.</li><li><strong>Activity rollups</strong> (Resúmenes de actividad) — actividad agregada de llamadas, mensajes e importaciones.</li></ul><p>Haga clic en <strong>Hide metrics</strong> (Ocultar métricas) para plegarlas de nuevo, y en <strong>Refresh</strong> (Actualizar) en cualquier momento para traer los eventos más recientes.</p>",
+      "images": [
+        { "src": "images/settings/audit-log-metrics-light.png", "alt": "Tarjetas de métricas con totales de eventos, críticos, advertencias, acciones suplantadas, creados, actualizados, eliminados y resúmenes", "caption": "Las métricas resumen lo que seleccionen sus filtros actuales", "theme": "light" },
+        { "src": "images/settings/audit-log-metrics-dark.png", "alt": "Tarjetas de métricas con totales de eventos, críticos, advertencias, acciones suplantadas, creados, actualizados, eliminados y resúmenes", "caption": "Las métricas resumen lo que seleccionen sus filtros actuales", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "sub-account-access",
+      "title": "Controle lo que ven las subcuentas (cuentas principales)",
+      "content": "<p>De forma predeterminada, cada subcuenta ve únicamente su propia actividad. Como cuenta principal, usted puede ampliar esa visibilidad por persona:</p><ol><li>Haga clic en <strong>Sub-account access</strong> (Acceso de subcuentas) en la esquina superior derecha del Registro de Auditoría.</li><li>Para cada subcuenta, elija uno de tres modos:<ul><li><strong>Own only</strong> (Solo propio) — el valor predeterminado; solo ven sus propias acciones.</li><li><strong>View all</strong> (Ver todo) — ven el historial de auditoría de todo el entorno (ideal para un gerente de confianza).</li><li><strong>By group</strong> (Por grupo) — ven la actividad de los grupos de permisos que usted seleccione debajo de su fila.</li></ul></li><li>Haga clic en <strong>Save</strong> (Guardar).</li></ol><blockquote>⚠️ Los cambios de acceso se aplican de inmediato. Usted, la cuenta principal, siempre lo ve todo — estos ajustes solo amplían (nunca reducen) la vista de una subcuenta.</blockquote>",
+      "images": [
+        { "src": "images/settings/audit-log-access-light.png", "alt": "Modal de acceso de auditoría por subcuenta con las opciones Own only, View all y By group", "caption": "Conceda a cada subcuenta exactamente la visibilidad que necesita", "theme": "light" },
+        { "src": "images/settings/audit-log-access-dark.png", "alt": "Modal de acceso de auditoría por subcuenta con las opciones Own only, View all y By group", "caption": "Conceda a cada subcuenta exactamente la visibilidad que necesita", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "notification-bell",
+      "title": "Conozca la campana de notificaciones",
+      "content": "<p>¿Para qué revisar el registro constantemente si puede venir a usted? El <strong>icono de campana</strong> en el encabezado superior es su bandeja personal de alertas, impulsada por el registro de auditoría y las reglas que creará en los próximos pasos.</p><ol><li>Haga clic en la <strong>campana</strong> del encabezado. Una insignia roja sobre ella cuenta las notificaciones sin leer.</li><li>Cada entrada muestra el título del evento, un resumen y hace cuánto ocurrió. Las no leídas se resaltan con un punto de color según su severidad.</li><li>Haga clic en una entrada para alternar entre leída y no leída. Use el botón <strong>View</strong> (Ver) para saltar a la página relacionada, o <strong>Details</strong> (Detalles) para abrir el evento de auditoría completo sin salir.</li><li><strong>Mark all read</strong> (Marcar todo como leído) limpia la insignia; <strong>Open audit log</strong> (Abrir registro de auditoría), al final, lo lleva de vuelta al registro completo.</li></ol><p>La bandeja comienza vacía — las entradas aparecen en cuanto la actividad coincide con alguna de sus reglas de notificación.</p>",
+      "images": [
+        { "src": "images/settings/audit-log-bell-light.png", "alt": "Popover de la campana de notificaciones con la bandeja, el engranaje de configuración y el enlace Open audit log", "caption": "La bandeja de la campana — los eventos coincidentes llegan aquí en el momento en que ocurren", "theme": "light" },
+        { "src": "images/settings/audit-log-bell-dark.png", "alt": "Popover de la campana de notificaciones con la bandeja, el engranaje de configuración y el enlace Open audit log", "caption": "La bandeja de la campana — los eventos coincidentes llegan aquí en el momento en que ocurren", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "enable-browser-push",
+      "title": "Active las notificaciones push del navegador",
+      "content": "<p>Las alertas dentro de la aplicación son geniales — pero las notificaciones push lo alcanzan incluso cuando la pestaña de iMash está en segundo plano.</p><ol><li>Haga clic en la <strong>campana</strong> y luego en el icono de <strong>engranaje</strong> para abrir <strong>Notification settings</strong> (Configuración de notificaciones).</li><li>En el cuadro <strong>Browser notifications</strong> (Notificaciones del navegador), arriba, haga clic en <strong>Enable on this device</strong> (Activar en este dispositivo) y acepte el permiso que solicita el navegador.</li><li>Una vez activado verá una etiqueta verde <strong>Enabled on this device</strong> (Activado en este dispositivo), además de <strong>Send test</strong> (Enviar prueba) para disparar una notificación de prueba y <strong>Disable</strong> (Desactivar) para apagarlo.</li></ol><blockquote>💡 Si el cuadro indica que las notificaciones están <strong>bloqueadas</strong>, usted denegó el permiso del navegador anteriormente — vuelva a permitir las notificaciones para este sitio en la configuración del navegador y recargue la página.</blockquote><p>El push es por dispositivo: actívelo en cada computadora donde quiera recibir alertas.</p>",
+      "images": [
+        { "src": "images/settings/audit-log-notification-settings-light.png", "alt": "Panel de configuración de notificaciones con el cuadro de notificaciones del navegador y la lista de presets rápidos", "caption": "Configuración de notificaciones: inscripción push arriba, presets rápidos debajo", "theme": "light" },
+        { "src": "images/settings/audit-log-notification-settings-dark.png", "alt": "Panel de configuración de notificaciones con el cuadro de notificaciones del navegador y la lista de presets rápidos", "caption": "Configuración de notificaciones: inscripción push arriba, presets rápidos debajo", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "quick-presets",
+      "title": "Suscríbase con presets rápidos de un clic",
+      "content": "<p>Los presets rápidos son suscripciones prediseñadas para lo que los equipos más quieren saber. Active un interruptor y ya está suscrito — sin configuración:</p><ul><li><strong>Security & access changes</strong> (Cambios de seguridad y acceso) — roles, grupos de permisos, perfiles de vista, claves API.</li><li><strong>Anything done while impersonating</strong> (Todo lo hecho en suplantación) — cualquier cambio de un administrador actuando como otro usuario.</li><li><strong>Credential / API-key changes</strong> (Cambios de credenciales / claves API) — claves, conexiones de WhatsApp y correo, secretos.</li><li><strong>Billing & payment changes</strong> (Cambios de facturación y pagos) — precios, cuentas de pago, suscripciones.</li><li><strong>AI agent changes</strong> (Cambios de agentes de IA) — asistentes, flujos, modelos y herramientas.</li><li><strong>SIP / phone-number changes</strong> (Cambios de SIP / números) — proveedores, números y pedidos de números.</li><li><strong>Anything deleted</strong> (Todo lo eliminado) — cada eliminación de registros, en cualquier parte.</li><li><strong>Missed incoming calls</strong> (Llamadas entrantes perdidas) — llamadas entrantes sin responder, perfecto para dar seguimiento.</li><li><strong>Low balance</strong> (Saldo bajo) — una cuenta baja de $5 o queda en negativo.</li></ul><p>Desactivar un preset cancela la suscripción al instante.</p>",
+      "images": [
+        { "src": "images/settings/audit-log-presets-light.png", "alt": "Lista de presets rápidos con interruptores, con Security and access changes activado", "caption": "Active un preset para suscribirse — desactívelo para cancelar", "theme": "light" },
+        { "src": "images/settings/audit-log-presets-dark.png", "alt": "Lista de presets rápidos con interruptores, con Security and access changes activado", "caption": "Active un preset para suscribirse — desactívelo para cancelar", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "build-custom-rule",
+      "title": "Cree una regla de notificación personalizada",
+      "content": "<p>¿Necesita algo más específico? La sección <strong>Build a custom rule</strong> (Crear una regla personalizada) le permite componer su propio disparador con cualquier combinación de condiciones:</p><ol><li><strong>Area</strong> (Área) — limite a un área (CRM, AI Agents, Billing & Settings, Telephony, Dialers, Roles & Access, Security).</li><li><strong>Specific things (optional)</strong> (Elementos específicos, opcional) — elija tipos de registro exactos (con búsqueda, agrupados por área).</li><li><strong>What happens</strong> (Qué sucede) — Created (Creado), Updated (Actualizado), Deleted (Eliminado) o Activity (Actividad: llamadas, mensajes…).</li><li><strong>Minimum importance</strong> (Importancia mínima) — notificar solo a partir de una severidad (Rutina → Sensible).</li><li><strong>Threshold (for activity rollups)</strong> (Umbral para resúmenes de actividad) — en actividad agregada, notificar solo cuando el conteo alcance este número.</li><li><strong>Only while impersonating</strong> (Solo en suplantación) — restringir a acciones suplantadas.</li></ol><p>A medida que elige condiciones, la vista previa en vivo muestra <em>\"Matches N events in the last 7 days\"</em> (coincide con N eventos en los últimos 7 días) — información inmediata sobre cuán ruidosa será la regla. Cuando se vea bien, haga clic en <strong>Create rule</strong> (Crear regla).</p><blockquote>💡 Una regla que coincida con cientos de eventos por semana inundará su campana. Apunte a vistas previas de decenas, o agregue una condición de severidad o de tabla para acotarla.</blockquote>",
+      "images": [
+        { "src": "images/settings/audit-log-rule-builder-light.png", "alt": "Constructor de reglas personalizadas con el Área en CRM y una vista previa en vivo de eventos coincidentes", "caption": "La vista previa en vivo le dice con qué frecuencia se habría disparado la regla", "theme": "light" },
+        { "src": "images/settings/audit-log-rule-builder-dark.png", "alt": "Constructor de reglas personalizadas con el Área en CRM y una vista previa en vivo de eventos coincidentes", "caption": "La vista previa en vivo le dice con qué frecuencia se habría disparado la regla", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "manage-rules",
+      "title": "Administre sus reglas",
+      "content": "<p>Todo lo que crea vive en <strong>Your custom rules</strong> (Sus reglas personalizadas), al final del panel de configuración:</p><ul><li>Cada regla muestra una descripción en lenguaje claro de sus condiciones (p. ej., <em>CRM · Updated</em>).</li><li>Use el <strong>interruptor</strong> para pausar una regla sin perderla — muy útil durante una migración ruidosa o una importación masiva.</li><li>Haga clic en el icono de <strong>papelera</strong> para eliminar una regla de forma permanente.</li></ul><p>Ese es el ciclo completo: iMash lo registra todo, usted decide qué merece su atención — y en el momento en que sucede, usted lo sabe. Responsabilidad total, esfuerzo cero.</p>",
+      "images": [
+        { "src": "images/settings/audit-log-custom-rules-light.png", "alt": "Lista Your custom rules con una regla CRM Updated activada, su interruptor y el botón de eliminar", "caption": "Pause una regla con el interruptor o elimínela con el icono de papelera", "theme": "light" },
+        { "src": "images/settings/audit-log-custom-rules-dark.png", "alt": "Lista Your custom rules con una regla CRM Updated activada, su interruptor y el botón de eliminar", "caption": "Pause una regla con el interruptor o elimínela con el icono de papelera", "theme": "dark" }
+      ]
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Ya cuenta con un historial completo y alertas en tiempo real. Complete la gobernanza de su cuenta con estas guías:",
+    "cards": [
+      { "href": "/settings/security", "title": "Seguridad", "description": "Contraseñas fuertes, control de sesiones y acceso de mínimo privilegio para su equipo." },
+      { "href": "/settings/team-management", "title": "Gestión de Equipo", "description": "Agregue miembros, asigne roles y delimite lo que cada persona puede ver y hacer." },
+      { "href": "/settings/system-health", "title": "Estado del Sistema", "description": "Supervise en vivo el estado de los servicios e integraciones de su cuenta." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesita ayuda?",
+    "content": "<p>¿Preguntas sobre un evento de auditoría que no puede explicar, o sobre las reglas de notificación? Escriba a <a href=\"mailto:support@imash.io\">support@imash.io</a> — incluya los Technical details (detalles técnicos) del evento, al final del panel de detalle, y lo rastrearemos con usted.</p>"
+  },
+  "metaTitle": "Registro de Auditoría y Notificaciones | Documentación de iMash",
+  "metaDescription": "Lea el registro de auditoría de iMash — quién cambió qué y cuándo, con diffs a nivel de campo — filtre eventos, controle la visibilidad de subcuentas y cree reglas de notificación con alertas push del navegador.",
+  "metaKeywords": "registro de auditoría, historial de cambios, notificaciones, reglas de notificación, push del navegador, seguimiento de suplantación, seguridad, responsabilidad, iMash"
+}

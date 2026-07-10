@@ -1,55 +1,198 @@
 {
-  "title": "Personalize Agents with Custom Variables",
-  "lede": "Feed your Smart Agent live context - a caller's name, address, and any custom fields - so it can greet people by name and tailor every conversation.",
-  "timeToComplete": "6 minutes",
-  "videoUrl": "https://youtu.be/mR9rNHDWJJ8",
-  "videoLength": "2",
+  "title": "Personalize Agents with Custom Variables & Templates",
+  "lede": "Turn a generic script into a personal conversation. Feed your Smart Agent live context — the caller's name, address, gate code, anything — so it greets every customer like it already knows them, and save reusable prompt templates so you never rebuild an agent from scratch.",
+  "timeToComplete": "8 minutes",
   "steps": [
     {
-      "id": "insert-variable",
-      "title": "Insert Variables in the Prompt",
-      "content": "<ol><li>Go to <strong>Intelligence Center → Smart Agents</strong> and open your agent.</li><li>Click into a text field such as the system prompt or the first message.</li><li>Type an opening brace <code>{</code> to open the variable menu. Built-in variables include <code>{first_name}</code>, <code>{last_name}</code>, <code>{email}</code>, and <code>{full_address}</code>.</li><li>Pick one to insert it at the cursor - at call time it is replaced with the real value.</li></ol>",
+      "id": "open-agent",
+      "title": "Open the Agent You Want to Personalize",
+      "content": "<p>Variables and templates live inside each agent's editor, so start by opening one:</p><ol><li>In the left sidebar, click <strong>Intelligence Center → Smart Agents</strong>.</li><li>Click the <strong>name</strong> of the agent you want to personalize. The agent editor opens with the greeting and system prompt in the left column.</li></ol><blockquote>💡 No agent yet? Create one first with the <em>Create Your First Agent</em> guide. Everything in this guide works the same for every agent you build.</blockquote>",
       "images": [
-        { "src": "images/agents/templates-variables-light.png", "alt": "Templates and variables", "caption": "Type { in a prompt field to insert CRM variables.", "theme": "light" },
-        { "src": "images/agents/templates-variables-dark.png", "alt": "Templates and variables", "caption": "Type { in a prompt field to insert CRM variables.", "theme": "dark" }
+        {
+          "src": "images/agents/costum-variables-open-agent-light.png",
+          "alt": "Smart Agents list under Intelligence Center",
+          "caption": "Intelligence Center → Smart Agents — click an agent's name to open its editor.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/costum-variables-open-agent-dark.png",
+          "alt": "Smart Agents list under Intelligence Center",
+          "caption": "Intelligence Center → Smart Agents — click an agent's name to open its editor.",
+          "theme": "dark"
+        }
       ]
     },
     {
-      "id": "templates",
-      "title": "Manage Templates & Variables",
-      "content": "<ol><li>Open the <strong>Templates &amp; Variables</strong> panel in the editor.</li><li>Here you can save reusable prompt templates and manage the variables your agent knows about.</li></ol>",
+      "id": "insert-variables",
+      "title": "Insert a Variable into the Prompt or Greeting",
+      "content": "<p>Any text your agent speaks or follows can contain <strong>variables in curly braces</strong> — placeholders that are swapped for the caller's real data the moment a call starts.</p><ol><li>Click into the <strong>system prompt</strong> (the big text box) or the <strong>first message</strong> field at the top.</li><li>Type an opening brace <code>{</code> — a variable menu pops up instantly. You can also click the <strong>{...}</strong> button in the top-right corner of the field.</li><li>Pick a variable to insert it at your cursor. The core CRM variables are:<ul><li><code>{first_name}</code> — the caller's first name</li><li><code>{last_name}</code> — the caller's last name</li><li><code>{email}</code> — the caller's email address</li><li><code>{full_address}</code> — the complete address on file</li></ul></li></ol><p>Example greeting: <em>\"Hi {first_name}! Thanks for calling — are you still at {full_address}?\"</em> On a real call this becomes <em>\"Hi Sarah! Thanks for calling — are you still at 12 Ocean Drive, Miami…\"</em></p><blockquote>💡 Variables work in the greeting, the system prompt, sub-agent and task prompts, and even the SMS / WhatsApp / Email channel prompts — anywhere the <strong>{...}</strong> button appears.</blockquote>",
       "images": [
-        { "src": "images/agents/assistant-editor-light.png", "alt": "Agent editor", "caption": "Templates & Variables lives in the middle column of the editor.", "theme": "light" },
-        { "src": "images/agents/assistant-editor-dark.png", "alt": "Agent editor", "caption": "Templates & Variables lives in the middle column of the editor.", "theme": "dark" }
+        {
+          "src": "images/agents/costum-variables-editor-light.png",
+          "alt": "Agent editor with the first message field and system prompt",
+          "caption": "The agent editor — the first message field sits on top, the system prompt below; both accept variables.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/costum-variables-editor-dark.png",
+          "alt": "Agent editor with the first message field and system prompt",
+          "caption": "The agent editor — the first message field sits on top, the system prompt below; both accept variables.",
+          "theme": "dark"
+        },
+        {
+          "src": "images/agents/costum-variables-menu-light.png",
+          "alt": "Variable autocomplete menu open over the system prompt",
+          "caption": "Type { in any prompt field (or click the {...} button) to open the variable menu.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/costum-variables-menu-dark.png",
+          "alt": "Variable autocomplete menu open over the system prompt",
+          "caption": "Type { in any prompt field (or click the {...} button) to open the variable menu.",
+          "theme": "dark"
+        }
       ]
     },
     {
-      "id": "crm-custom-data",
-      "title": "Add Custom Data to a Lead or Contact",
-      "content": "<ol><li>Open a <strong>Lead</strong> or <strong>Contact</strong> in the CRM.</li><li>Add custom fields (a name and a value) to that record.</li><li>Those values become available to the agent as context whenever it speaks with that person.</li></ol>",
+      "id": "all-variables",
+      "title": "Know the Full Variable Catalog",
+      "content": "<p>Beyond the four in the menu, iMash resolves many more placeholders at call time — type them by hand anywhere in a prompt:</p><ul><li><strong>Address parts</strong>: <code>{street_address}</code>, <code>{apartment_suite}</code>, <code>{city}</code>, <code>{state}</code>, <code>{zipcode}</code>, <code>{country}</code> — when you need just one piece instead of <code>{full_address}</code>.</li><li><strong>Tags</strong>: <code>{tag_1}</code>, <code>{tag_2}</code>, … — the tags on the matched lead or contact, in order.</li><li><strong>Custom Data fields</strong>: <code>{custom_vars_&lt;field&gt;}</code> — any field you add to a lead or contact's Custom Data tab (next step). A field named <code>gate_code</code> becomes <code>{custom_vars_gate_code}</code>.</li><li><strong>Call &amp; time system variables</strong>: <code>{system_from}</code> (caller's number), <code>{system_to}</code> (number dialed), <code>{system_direction}</code> (inbound/outbound), <code>{system_call_type}</code> (Phone or Web), and <code>{system_time_UTC}</code> or any timezone like <code>{system_time_America_New_York}</code> — perfect for \"our current local time is…\" logic.</li></ul><blockquote>⚠️ A variable with no value is silently removed from the text at call time. Phrase sentences so they still read naturally if the data is missing — \"Hi {first_name}, thanks for calling!\" degrades gracefully; \"Your name is {first_name}.\" does not.</blockquote>",
       "images": []
     },
     {
-      "id": "api-custom-vars",
-      "title": "Send Variables via the API",
-      "content": "<ol><li>When you start a call through the API, include a <strong>customVars</strong> object in the request metadata with your key/value pairs.</li><li>This is ideal for passing context from an external CRM or app at call time.</li><li>The agent receives those values and can reference them in the conversation.</li></ol>",
+      "id": "crm-custom-data",
+      "title": "Feed Variables from a Lead or Contact's Custom Data",
+      "content": "<p>Where do the values come from? When a call starts, iMash matches the phone number to your CRM and loads that person's record — name, address, tags, and every field on their <strong>Custom Data</strong> tab. To add your own fields:</p><ol><li>In the left sidebar, click <strong>CRM → Leads</strong> (or <strong>Contacts</strong>) and open a record.</li><li>Click the <strong>Custom Data</strong> tab.</li><li>Click <strong>+ Add Field</strong>, enter a <strong>Field Name</strong> (e.g. <code>gate_code</code>) and a <strong>Value</strong> (e.g. <code>4482</code>), then click <strong>Save</strong>.</li><li>Use <strong>Edit</strong> to change a value or the trash icon to remove a field.</li></ol><p>From now on, whenever your agent talks to this person, <code>{custom_vars_gate_code}</code> resolves to <code>4482</code> — so the agent can tell the technician the gate code, confirm the preferred technician, or reference anything else you store.</p>",
+      "images": [
+        {
+          "src": "images/agents/costum-variables-lead-light.png",
+          "alt": "Lead details with the Custom Data tab showing custom fields",
+          "caption": "The Custom Data tab on a lead — each field becomes a {custom_vars_...} variable for the agent.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/costum-variables-lead-dark.png",
+          "alt": "Lead details with the Custom Data tab showing custom fields",
+          "caption": "The Custom Data tab on a lead — each field becomes a {custom_vars_...} variable for the agent.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "api-campaign-vars",
+      "title": "Send Variables from Campaigns or the API",
+      "content": "<p>CRM records aren't the only source. Values can arrive with the call itself:</p><ul><li><strong>Campaigns &amp; dial lists</strong> — when a campaign dials a lead or contact from your list, that record's fields and Custom Data are loaded automatically, so <code>{first_name}</code> and friends personalize every outbound call with zero extra setup.</li><li><strong>API calls</strong> — when you start a call through the iMash API, include a <code>custom_vars</code> object with your own key/value pairs in the request. Those values override or extend the CRM data for that one call — ideal for passing context from an external CRM, booking system, or app.</li></ul><blockquote>💡 Priority order: values sent via the API win over the CRM record's values, and both are topped up with the built-in system variables. See the <em>API Reference</em> for the exact request format.</blockquote>",
+      "images": []
+    },
+    {
+      "id": "open-templates-modal",
+      "title": "Open Templates & Variables",
+      "content": "<p>Now for the power feature: reusable <strong>prompt templates</strong> with your own <strong>custom variables</strong>. In the agent editor:</p><ol><li>Look at the panel on the right — the list that starts with <strong>Knowledge Base</strong>.</li><li>Click the last item, <strong>Templates &amp; Variables</strong>. (In the node-based editor, the same item appears as <strong>Templates</strong> in the top capabilities bar.)</li><li>The Templates &amp; Variables window opens with two sections in its left rail: <strong>Variables</strong> and <strong>Templates</strong>.</li></ol><blockquote>💡 The number badge next to the item shows how many custom variables this agent already has defined.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/costum-variables-sidebar-light.png",
+          "alt": "Agent editor right panel with Templates & Variables at the bottom",
+          "caption": "Templates & Variables is the last item in the agent editor's right-hand panel.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/costum-variables-sidebar-dark.png",
+          "alt": "Agent editor right panel with Templates & Variables at the bottom",
+          "caption": "Templates & Variables is the last item in the agent editor's right-hand panel.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "create-custom-variables",
+      "title": "Create Reusable [[Variables]]",
+      "content": "<p>These are <strong>your own named values</strong>, written with double square brackets — <code>[[variable_name]]</code>. Define them once, reuse them across every template: your company name, business hours, service area, promo of the month.</p><ol><li>In the <strong>Variables</strong> section, type a <strong>Variable Name</strong> (e.g. <code>company_name</code>) and a <strong>Value</strong> (e.g. <code>Acme Home Services</code>).</li><li>Click <strong>Add</strong>. The variable appears in the list as <code>[[company_name]]</code>.</li><li>Edit a value any time by typing directly in its box; remove one with the red trash icon.</li><li>Click <strong>Done</strong> when finished.</li></ol><blockquote>💡 The difference in one line: <code>[[double_brackets]]</code> are filled in <strong>when you load a template</strong> (rebranding a prompt in one click), while <code>{curly_braces}</code> are filled in <strong>live on each call</strong> with the caller's data. Use both together for maximum leverage.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/costum-variables-modal-light.png",
+          "alt": "Variables section of the Templates & Variables window",
+          "caption": "Add reusable [[variables]] — a name and a value — then use them inside any template.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/costum-variables-modal-dark.png",
+          "alt": "Variables section of the Templates & Variables window",
+          "caption": "Add reusable [[variables]] — a name and a value — then use them inside any template.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "build-template",
+      "title": "Build a Prompt Template",
+      "content": "<p>A template is a saved prompt (or a set of prompts) you can load into any agent whenever you need it.</p><ol><li>Click <strong>Templates</strong> in the left rail of the window.</li><li>Click <strong>+ Create New Template</strong>.</li><li>Give it a clear <strong>Template Name</strong> (e.g. <em>Standard Greeting</em>).</li><li>Write the prompt content in the <strong>Main Prompt</strong> tab. Mix both variable styles freely: <code>[[company_name]]</code> for values you defined in the Variables section, and <code>{first_name}</code> for live caller data (the <strong>{...}</strong> button works here too).</li><li>Need a multi-part template? Click <strong>+ Add Prompt</strong> to add more prompt tabs; double-click a tab's name to rename it, or hit the small ✕ to remove it.</li><li>Click <strong>Save Template</strong>.</li></ol>",
+      "images": [
+        {
+          "src": "images/agents/costum-variables-template-editor-light.png",
+          "alt": "New template editor with name, prompt tabs and content",
+          "caption": "The template editor — name it, write the content with [[variables]] and {variables}, then Save Template.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/costum-variables-template-editor-dark.png",
+          "alt": "New template editor with name, prompt tabs and content",
+          "caption": "The template editor — name it, write the content with [[variables]] and {variables}, then Save Template.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "load-template",
+      "title": "Load a Template into Your Agent",
+      "content": "<p>Saved templates are shared across your whole account — build once, use in every agent. Each template row offers:</p><ul><li><strong>Load</strong> — replaces the agent's system prompt with the template content. Every <code>[[variable]]</code> is substituted with its current value from the Variables section at that moment.</li><li><strong>Auto-sync switch</strong> — binds this agent to the template, so it stays linked as the template's \"active\" source. Flip it off to unbind.</li><li><strong>Pencil icon</strong> — edit the template's name, prompts, or content.</li><li><strong>Trash icon</strong> — delete the template (a confirmation is asked first).</li></ul><blockquote>⚠️ <strong>Load overwrites the agent's current system prompt.</strong> If you've hand-tuned the prompt, copy it somewhere safe (or save it as its own template) before loading a different one.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/costum-variables-templates-light.png",
+          "alt": "Templates list with Load, auto-sync, edit and delete actions",
+          "caption": "Each saved template can be loaded into the agent, auto-synced, edited, or deleted.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/costum-variables-templates-dark.png",
+          "alt": "Templates list with Load, auto-sync, edit and delete actions",
+          "caption": "Each saved template can be loaded into the agent, auto-synced, edited, or deleted.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "test-personalization",
+      "title": "Test the Personalization",
+      "content": "<p>Time for the payoff — hear your agent greet someone by name:</p><ol><li>In the agent editor, click <strong>Test Agent</strong> (top-right) or <strong>Connect</strong> in the chat panel on the right.</li><li>Better yet, call the agent from a phone number that exists on one of your leads or contacts — the CRM match happens automatically and every variable fills in with that person's real data.</li><li>Check the transcript afterwards in <strong>Call Logs</strong> to confirm the variables resolved the way you expected.</li></ol><p>That's it — one prompt, infinite personal conversations. Your agent now sounds like it prepared for every single call, because it did.</p>",
       "images": []
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Combine personalized context with more capabilities:",
+    "description": "Your agent knows who's calling — now put that context to work across the platform:",
     "cards": [
-      { "href": "/agents/agent-knowledge-base", "title": "Add a Knowledge Base", "description": "Pair dynamic variables with your documents and FAQs." },
-      { "href": "/agents/agent-tools", "title": "Add Tools", "description": "Let the agent act on the data it collects." },
-      { "href": "/agents/advanced-settings", "title": "Post-Call Processing", "description": "Capture structured data and push it to your systems." }
+      {
+        "href": "/crm/leads",
+        "title": "Manage Leads",
+        "description": "Keep names, addresses and Custom Data fresh — it's the fuel for your variables."
+      },
+      {
+        "href": "/campaigns/create-campaign",
+        "title": "Launch a Campaign",
+        "description": "Dial a whole list with every call personalized automatically."
+      },
+      {
+        "href": "/agents/advanced-settings",
+        "title": "Post-Call Processing",
+        "description": "Extract structured data after each call and push it back to your systems."
+      }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Personalize Agents with Custom Variables | iMash Docs",
-  "metaDescription": "Give your iMash Smart Agent live context. Insert {first_name}, {full_address} and custom fields in prompts, add custom data to CRM records, and pass customVars via the API.",
-  "metaKeywords": "custom variables, imash, smart agent, personalization, customVars, crm variables, dynamic prompt, templates"
+  "metaTitle": "Personalize Agents with Custom Variables & Templates | iMash Documentation",
+  "metaDescription": "Insert {first_name}, {full_address} and {custom_vars_...} placeholders in your iMash Smart Agent prompts, feed values from CRM Custom Data, campaigns or the API, and build reusable prompt templates with [[variables]].",
+  "metaKeywords": "custom variables, prompt templates, imash, smart agent, personalization, custom_vars, crm variables, dynamic prompt, template variables, first_name variable"
 }

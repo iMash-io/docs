@@ -1,61 +1,212 @@
 {
   "title": "Post-Call Processing & Webhooks",
-  "lede": "Turn every call into structured output: generate a summary, score success, extract custom JSON data, and POST it all to your systems - configured in the Webhooks Post Processing panel.",
+  "lede": "Every call your AI agent takes is full of valuable data — who called, what they wanted, and whether the goal was met. The Webhooks Post Processing panel turns each finished call into a summary, a success score, and clean structured JSON, then POSTs it all to any system you choose.",
   "timeToComplete": "10 minutes",
-  "videoUrl": "https://youtu.be/l7_wH8Bpsp0",
-  "videoLength": "3",
   "steps": [
     {
-      "id": "open-webhooks",
-      "title": "Open Webhooks Post Processing",
-      "content": "<ol><li>Go to <strong>Intelligence Center → Smart Agents</strong> and open your agent.</li><li>Open the <strong>Webhooks Post Processing</strong> panel. Its sections are <strong>Server URL &amp; Events</strong>, <strong>Summary</strong>, <strong>Success Evaluation</strong>, and <strong>Structured Data</strong>.</li></ol>",
+      "id": "open-agent",
+      "title": "Open Your Agent",
+      "content": "<p>Post-call processing is configured per agent, so start by opening the agent you want to work on.</p><ol><li>In the left sidebar, under <strong>Intelligence Center</strong>, click <strong>Smart Agents</strong>.</li><li>In the agents list, click the <strong>name</strong> of the agent you want to configure (for example <strong>Agent_9278647</strong>). The agent editor opens.</li></ol><blockquote>💡 If your editor opens in the visual <strong>Node</strong> view, click <strong>Form</strong> in the top toolbar — this guide follows the Form view.</blockquote>",
       "images": [
-        { "src": "images/agents/webhooks-post-light.png", "alt": "Webhooks post processing panel", "caption": "The Webhooks Post Processing panel: server URL, summary, success evaluation, and structured data.", "theme": "light" },
-        { "src": "images/agents/webhooks-post-dark.png", "alt": "Webhooks post processing panel", "caption": "The Webhooks Post Processing panel: server URL, summary, success evaluation, and structured data.", "theme": "dark" }
+        {
+          "src": "images/agents/advanced-settings-agents-list-light.png",
+          "alt": "Smart Agents list under Intelligence Center",
+          "caption": "Intelligence Center → Smart Agents — click an agent's name to open its editor.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/advanced-settings-agents-list-dark.png",
+          "alt": "Smart Agents list under Intelligence Center",
+          "caption": "Intelligence Center → Smart Agents — click an agent's name to open its editor.",
+          "theme": "dark"
+        }
       ]
     },
     {
-      "id": "server-url",
-      "title": "Set the Server URL and Events",
-      "content": "<ol><li>In <strong>Server URL &amp; Events</strong>, enter the URL that should receive the call data via HTTP POST.</li><li>Tick the events to send - for example summary, transcript, status updates, tool calls, structured data, and success evaluation.</li></ol>",
+      "id": "find-the-panel",
+      "title": "Find the Webhooks Post Processing Row",
+      "content": "<p>The middle column of the agent editor lists every capability your agent has — Knowledge Base, Voice, Brains, and more.</p><ol><li>Locate the <strong>Webhooks Post Processing</strong> row in that list.</li><li>Note the <strong>ON / OFF</strong> pill on the right edge of the row — it lights up green once at least one post-call event is enabled, so you can see at a glance whether this agent reports its calls.</li><li>Click anywhere on the <strong>Webhooks Post Processing</strong> row to open its configuration window.</li></ol>",
       "images": [
-        { "src": "images/agents/assistant-editor-light.png", "alt": "Agent editor", "caption": "Post-call results are sent automatically when the call ends.", "theme": "light" },
-        { "src": "images/agents/assistant-editor-dark.png", "alt": "Agent editor", "caption": "Post-call results are sent automatically when the call ends.", "theme": "dark" }
+        {
+          "src": "images/agents/advanced-settings-open-row-light.png",
+          "alt": "Agent capability list with the Webhooks Post Processing row",
+          "caption": "The agent's capability list — click the Webhooks Post Processing row to open the panel.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/advanced-settings-open-row-dark.png",
+          "alt": "Agent capability list with the Webhooks Post Processing row",
+          "caption": "The agent's capability list — click the Webhooks Post Processing row to open the panel.",
+          "theme": "dark"
+        }
       ]
     },
     {
-      "id": "summary-eval",
-      "title": "Summary and Success Evaluation",
-      "content": "<ul><li><strong>Summary</strong>: write a prompt describing how to summarize each call.</li><li><strong>Success Evaluation</strong>: write a prompt and pick a rubric - such as a 1-10 scale, a checklist, or a simple pass/fail - so each call is scored consistently.</li></ul>",
-      "images": []
+      "id": "tour-the-panel",
+      "title": "Tour the Panel",
+      "content": "<p>The <strong>Webhooks Post Processing</strong> window is split in two: a section list on the left and the active section's settings on the right.</p><ul><li><strong>Server URL &amp; Events</strong> — where to POST call data and which events to send.</li><li><strong>Summary</strong> — the prompt that writes a short recap of each call.</li><li><strong>Success Evaluation</strong> — decides whether the call met its goal, on a rubric you pick.</li><li><strong>Structured Data</strong> — a custom JSON schema extracted from the transcript.</li></ul><p>Above the sections sits the <strong>Webhook Model</strong> row, which applies to all of them. Click any section on the left to work on it, and click <strong>Done</strong> when you finish.</p>",
+      "images": [
+        {
+          "src": "images/agents/advanced-settings-modal-light.png",
+          "alt": "Webhooks Post Processing panel overview",
+          "caption": "Four sections on the left, settings on the right, and the shared Webhook Model on top.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/advanced-settings-modal-dark.png",
+          "alt": "Webhooks Post Processing panel overview",
+          "caption": "Four sections on the left, settings on the right, and the shared Webhook Model on top.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "webhook-model",
+      "title": "Pick the Webhook Model",
+      "content": "<p>After each call, an LLM reads the transcript and produces your summary, success score, and structured data. You control which model does that work.</p><ol><li>In the <strong>Webhook Model</strong> row at the top, pick a model from the dropdown — or leave it empty to use the platform default (<strong>gpt-5-mini</strong>).</li><li>If you pick an OpenAI reasoning model (gpt-5.x or o-series), the <strong>Reasoning Effort</strong> dropdown unlocks: choose <strong>None (use plugin default)</strong>, <strong>Low</strong>, <strong>Medium</strong>, or <strong>High</strong>. Other providers simply ignore this setting.</li></ol><blockquote>💡 The default model is fast and inexpensive — only switch if you need deeper reasoning for complex extractions.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/advanced-settings-webhook-model-light.png",
+          "alt": "Webhook Model and Reasoning Effort selectors",
+          "caption": "One model powers the summary, evaluation, and structured-data extraction.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/advanced-settings-webhook-model-dark.png",
+          "alt": "Webhook Model and Reasoning Effort selectors",
+          "caption": "One model powers the summary, evaluation, and structured-data extraction.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "server-url-events",
+      "title": "Set the Server URL and Choose Events",
+      "content": "<p>This is the delivery address for your call data. iMash sends it as HTTP POST requests the moment each call ends.</p><ol><li>Open the <strong>Server URL &amp; Events</strong> section.</li><li>In <strong>Server URL</strong>, paste the endpoint that should receive the data (your backend, a Zapier/Make hook, or an iMash Automation webhook — see the last step).</li><li>Under <strong>Enabled Settings → Webhook Events</strong>, tick each event you want delivered:</li></ol><ul><li><strong>Summary</strong> — the call recap written by your Summary prompt.</li><li><strong>Success Evaluation</strong> — the pass/fail or score result.</li><li><strong>Structured Data</strong> — the extracted JSON fields.</li><li><strong>Transcript</strong> — the full call transcript.</li><li><strong>Status Updates</strong> — real-time events such as call started and call ended.</li><li><strong>Tool Calls</strong> — details of any tools the agent used during the conversation.</li></ul><blockquote>⚠️ Ticking an event without a Server URL means nothing is delivered externally — but summaries, evaluations, and structured data are still generated and saved on the call's log entry, so you can enable them even without an endpoint.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/advanced-settings-events-light.png",
+          "alt": "Server URL field and the six webhook event checkboxes",
+          "caption": "Paste your endpoint, then tick exactly the events you want POSTed.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/advanced-settings-events-dark.png",
+          "alt": "Server URL field and the six webhook event checkboxes",
+          "caption": "Paste your endpoint, then tick exactly the events you want POSTed.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "Write the Summary Prompt",
+      "content": "<p>Never re-listen to a call again — the summary gives you the whole conversation in two or three sentences.</p><ol><li>Click <strong>Summary</strong> in the left section list.</li><li>In <strong>Prompt</strong>, describe how each call should be summarized. A solid starting point: <em>\"You are an expert note-taker. You will be given a transcript of a call. Summarize the call in 2-3 sentences, if applicable.\"</em></li></ol><p>The result is stored with the call and shown on the <strong>Call Logs</strong> page, so your team sees the gist of every conversation without opening a transcript.</p>",
+      "images": [
+        {
+          "src": "images/agents/advanced-settings-summary-light.png",
+          "alt": "Summary prompt editor",
+          "caption": "Tell the model how to summarize — short and factual works best.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/advanced-settings-summary-dark.png",
+          "alt": "Summary prompt editor",
+          "caption": "Tell the model how to summarize — short and factual works best.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "success-evaluation",
+      "title": "Score Every Call with Success Evaluation",
+      "content": "<p>Did the agent actually book the appointment? Close the sale? Success Evaluation answers that automatically, for every single call.</p><ol><li>Click <strong>Success Evaluation</strong> in the left section list.</li><li>In <strong>Prompt</strong>, describe what \"success\" means for this agent — for example: <em>\"You are an expert call evaluator. Determine if the call was successful based on whether the caller booked an appointment.\"</em> If you leave it empty, the model infers the goal from the agent's own system prompt.</li></ol><p>You can use the prompt alone, the rubric alone (next step), or both together — when both are provided they are combined into one set of instructions.</p>",
+      "images": [
+        {
+          "src": "images/agents/advanced-settings-evaluation-light.png",
+          "alt": "Success Evaluation prompt and rubric",
+          "caption": "Define success in plain language; the model scores each call against it.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/advanced-settings-evaluation-dark.png",
+          "alt": "Success Evaluation prompt and rubric",
+          "caption": "Define success in plain language; the model scores each call against it.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "choose-rubric",
+      "title": "Choose a Scoring Rubric",
+      "content": "<p>The rubric locks the evaluation into a consistent format, so scores are comparable across thousands of calls.</p><ol><li>Below the prompt, open the <strong>Success Evaluation Rubric</strong> dropdown.</li><li>Pick the scale that fits your reporting:</li></ol><ul><li><strong>A scale of 1 to 10</strong> — a simple numeric score.</li><li><strong>A scale of Excellent, Good, Fair, Poor</strong> — descriptive grades.</li><li><strong>A checklist of criteria and their status</strong> — item-by-item pass marks.</li><li><strong>A grid that evaluates multiple criteria across different performance levels</strong> — a full scoring matrix.</li><li><strong>A scale of 0% to 100%</strong> — percentage scoring.</li><li><strong>A scale of Strongly Agree … Strongly Disagree</strong> — Likert-style rating.</li><li><strong>Automatically break down evaluation into several criteria</strong> — the model invents sensible criteria and scores each.</li><li><strong>A simple 'true' if call passed, 'false' if not</strong> — clean pass/fail, perfect for dashboards and automations.</li></ul><blockquote>💡 Starting out? Pick <strong>pass/fail</strong> — it is the easiest result to filter on and to branch an automation with.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/advanced-settings-rubric-light.png",
+          "alt": "Success Evaluation Rubric dropdown with all scale options",
+          "caption": "Eight rubric styles — from a 1-10 scale to a simple pass/fail.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/advanced-settings-rubric-dark.png",
+          "alt": "Success Evaluation Rubric dropdown with all scale options",
+          "caption": "Eight rubric styles — from a 1-10 scale to a simple pass/fail.",
+          "theme": "dark"
+        }
+      ]
     },
     {
       "id": "structured-data",
       "title": "Extract Structured Data",
-      "content": "<ol><li>In <strong>Structured Data</strong>, add a prompt and build a <strong>Data Schema</strong> of the properties you want captured (for example name, order number, or intent).</li><li>iMash extracts those fields from the transcript and includes them in the POST to your Server URL.</li></ol>",
-      "images": []
+      "content": "<p>This is where post-processing gets really powerful: define the exact fields you care about, and the model fills them in from the transcript — clean JSON, every call.</p><ol><li>Click <strong>Structured Data</strong> in the left section list.</li><li>(Optional) In <strong>Prompt</strong>, give extraction guidance — e.g. <em>\"Extract the caller's details exactly as stated; leave fields empty if not mentioned.\"</em></li><li>Under <strong>Data Schema</strong>, click <strong>+ Add Property</strong> for each field you want.</li><li>For every property, fill in:<ul><li><strong>Property Name</strong> — the JSON key, e.g. <code>customer_name</code>.</li><li><strong>Description</strong> — tell the model what to capture, e.g. <em>\"The caller's full name, exactly as they said it.\"</em></li><li><strong>Type</strong> — <strong>string</strong>, <strong>number</strong>, <strong>boolean</strong>, <strong>object</strong> (nests its own properties), or <strong>array</strong> (you define the item type).</li></ul></li><li>Delete a property anytime with the red <strong>trash</strong> button next to it.</li></ol><blockquote>💡 Write descriptions like instructions to a new assistant — the clearer the description, the more accurate the extraction. You can use the schema alone or combine it with the prompt; both are merged into one instruction set.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/advanced-settings-structured-light.png",
+          "alt": "Structured Data prompt and Data Schema builder with a customer_name property",
+          "caption": "Each property = one JSON field: name, description, and type.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/advanced-settings-structured-dark.png",
+          "alt": "Structured Data prompt and Data Schema builder with a customer_name property",
+          "caption": "Each property = one JSON field: name, description, and type.",
+          "theme": "dark"
+        }
+      ]
     },
     {
       "id": "connect-automation",
-      "title": "Send It to an Automation",
-      "content": "<ol><li>In <strong>Intelligence Center → Automation</strong>, create a flow that starts with a <strong>Catch Webhook</strong> trigger and copy its URL.</li><li>Paste that URL as the Server URL above.</li><li>Now call results can flow straight into an automation - emailing a summary, updating a sheet, or calling another API.</li></ol>",
+      "title": "Pipe Results into an Automation",
+      "content": "<p>The fastest way to act on call data — no code required — is to point the webhook at an iMash Automation.</p><ol><li>In the left sidebar, click <strong>Automation</strong> (under Intelligence Center) and create a new flow.</li><li>Start the flow with a <strong>Catch Webhook</strong> trigger and copy the URL it generates.</li><li>Back in your agent's <strong>Webhooks Post Processing → Server URL &amp; Events</strong>, paste that URL as the <strong>Server URL</strong> and tick the events you need.</li><li>Click <strong>Done</strong>, run a test call, and watch the flow fire — email the summary to your team, log structured data to a sheet, or branch on a failed success evaluation to trigger a follow-up.</li></ol><p>That's the full loop: your agent talks, iMash analyzes, and your systems react — automatically, on every call.</p>",
       "images": []
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Do more with your call data:",
+    "description": "Your calls now produce data — put it to work:",
     "cards": [
-      { "href": "/automations/webhooks", "title": "Build a Webhook Flow", "description": "Catch the POST and route it anywhere with automations." },
-      { "href": "/agents/observer-agent", "title": "Observer Agent", "description": "Tag important moments live, during the call." },
-      { "href": "/agents/agent-privacy", "title": "Privacy & Recording", "description": "Control what transcript and audio is stored." }
+      {
+        "href": "/automations/webhooks",
+        "title": "Build a Webhook Flow",
+        "description": "Catch the POST and route call data anywhere with automations."
+      },
+      {
+        "href": "/phone/call-logs",
+        "title": "Call Logs",
+        "description": "See summaries, evaluations, and transcripts on every call record."
+      },
+      {
+        "href": "/agents/observer-agent",
+        "title": "Observer Agent",
+        "description": "Tag important moments live, while the call is still happening."
+      }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Post-Call Processing & Webhooks | iMash Docs",
-  "metaDescription": "Configure iMash Webhooks Post Processing: summarize calls, score success, extract structured JSON data, and POST everything to your server or an automation.",
-  "metaKeywords": "webhooks, post processing, imash, smart agent, structured data, success evaluation, call summary, automation"
+  "metaTitle": "Post-Call Processing & Webhooks | iMash Documentation",
+  "metaDescription": "Configure iMash Webhooks Post Processing step by step: pick the webhook model, set a Server URL, choose events, write summary and success-evaluation prompts, build a structured-data schema, and pipe results into automations.",
+  "metaKeywords": "webhooks, post processing, imash, smart agent, structured data, success evaluation, call summary, webhook model, data schema, automation"
 }

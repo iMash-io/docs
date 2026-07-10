@@ -1,0 +1,145 @@
+{
+  "title": "Quotes",
+  "lede": "Send a polished, professional quote in minutes — and let iMash do the chasing. Build it with line items, taxes, and discounts; text or email your customer a live link; watch when they open it; and turn one click of 'Accept' into a ready-to-pay invoice. This guide covers the entire quote lifecycle, A to Z.",
+  "timeToComplete": "15 minutes",
+  "steps": [
+    {
+      "id": "open-quotes",
+      "title": "Open the Quotes list",
+      "content": "<p>Every quote you or your team creates lives on one screen — with live engagement signals so you always know who has seen what.</p><ol><li>In the top navigation, click <strong>CRM</strong>, then click the <strong>Quotes</strong> tab (or go directly to <code>/pipeline/quotes</code>). The counter pill on the tab shows your total quote count.</li><li>The table shows one row per quote with these columns: <strong>Quote #</strong> (click to open it), <strong>Status</strong>, <strong>Total Amount</strong>, <strong>Quote Date</strong>, <strong>Valid Until</strong> (turns red with an <em>(Expired)</em> tag when past due), <strong>Jobs</strong> and <strong>Deal</strong> (jump links to linked records), <strong>Account</strong> / <strong>Contacts</strong> / <strong>Leads</strong> (who it's for), <strong>Title</strong>, <strong>Sent</strong>, <strong>Views</strong>, <strong>Accepted</strong>, and <strong>Owner</strong>.</li><li>Each row ends with four action icons: <strong>View</strong> (eye) opens the quote, <strong>Send</strong> (paper plane) opens the send composer for drafts, <strong>Download PDF</strong> downloads it with your default template, and <strong>Delete</strong> (trash) removes it after a confirmation.</li><li>Tick the checkboxes on the left to select several quotes, then use the red <strong>Delete N selected</strong> button that appears in the header to remove them in bulk.</li></ol><p>A quote moves through six statuses: <strong>Draft</strong> (not sent yet), <strong>Sent</strong>, <strong>Viewed</strong> (the customer opened the link), <strong>Accepted</strong>, <strong>Declined</strong>, and <strong>Expired</strong>.</p><blockquote>💡 The <strong>Views</strong> column is your buying-intent radar: it counts every time the customer opens the public quote link, and hovering it shows the first and last view times. A quote viewed five times is begging for a follow-up call.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/quotes-list-light.png", "alt": "Quotes list showing quote numbers, statuses, totals, dates and per-row actions", "caption": "The Quotes list — statuses, totals, engagement columns, and per-row View / Send / PDF / Delete actions", "theme": "light" },
+        { "src": "images/pipeline/quotes-list-dark.png", "alt": "Quotes list showing quote numbers, statuses, totals, dates and per-row actions", "caption": "The Quotes list — statuses, totals, engagement columns, and per-row View / Send / PDF / Delete actions", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "search-filter",
+      "title": "Search, filter, and sort your quotes",
+      "content": "<ol><li>Click <strong>Show Filters</strong> in the top-right of the list. A filter row appears with four controls:</li></ol><ul><li><strong>Search quotes...</strong> — free-text search across your quotes.</li><li><strong>Filter by status</strong> — show only <strong>Draft</strong>, <strong>Sent</strong>, <strong>Viewed</strong>, <strong>Accepted</strong>, <strong>Declined</strong>, or <strong>Expired</strong> quotes.</li><li><strong>Start date → End date</strong> — limit the list to a quote-date range.</li><li><strong>Filter by owner</strong> — see only quotes created by a specific team member.</li></ul><p>You can also filter and sort straight from the table: click the funnel icon on the <strong>Status</strong> column header to multi-select statuses, and click the <strong>Total Amount</strong>, <strong>Quote Date</strong>, or <strong>Views</strong> headers to sort. All filtering and sorting runs against your full quote set, not just the visible page.</p>",
+      "images": [
+        { "src": "images/pipeline/quotes-filters-light.png", "alt": "Quotes list with the filter row open showing search, status, date range and owner filters", "caption": "Click Show Filters to reveal search, status, date-range, and owner filters", "theme": "light" },
+        { "src": "images/pipeline/quotes-filters-dark.png", "alt": "Quotes list with the filter row open showing search, status, date range and owner filters", "caption": "Click Show Filters to reveal search, status, date-range, and owner filters", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "create-customer-info",
+      "title": "Start a new quote — Customer Info",
+      "content": "<p>The quote builder is a four-step wizard: <strong>Customer Info → Line Items → Terms → Review</strong>.</p><ol><li>Click <strong>Create Quote</strong> in the top-right of the list.</li><li>Enter a <strong>Quote Title</strong> (required) — this is what the customer sees as the headline, e.g. \"Kitchen Remodel — Cabinet Package\".</li><li>Optionally add a <strong>Description</strong> summarizing the work.</li><li>Link the quote to your pipeline (all optional):<ul><li><strong>Associated Deal</strong> — attaches the quote to an existing deal and automatically pulls in that deal's account, contacts, and leads.</li><li><strong>Associated Job</strong> — attaches it to a field-service job; if the job has a quoted amount, iMash automatically adds it as a line item in the next step.</li><li><strong>Account</strong>, <strong>Contacts</strong>, <strong>Leads</strong> — pick who the quote is for. Click the <strong>+</strong> button next to any picker to create a brand-new account, contact, or lead without leaving the wizard.</li></ul></li><li>Set <strong>Valid Until</strong> — the expiry date. After this date the quote shows as <strong>Expired</strong> and can no longer be accepted online.</li><li>Pick the <strong>Currency</strong> (USD, EUR, GBP, or CAD).</li><li>Click <strong>Next</strong>.</li></ol><blockquote>⚠️ A quote must be addressed to at least one account, contact, or lead before it can be created — if you skip this, the final <strong>Create Quote</strong> button will ask you to add one.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/quotes-create-customer-light.png", "alt": "Create Quote wizard step one with title, description, deal, job, account, contacts, leads, valid until and currency fields", "caption": "Step 1 — Customer Info: title, linked records, who it's for, expiry date, and currency", "theme": "light" },
+        { "src": "images/pipeline/quotes-create-customer-dark.png", "alt": "Create Quote wizard step one with title, description, deal, job, account, contacts, leads, valid until and currency fields", "caption": "Step 1 — Customer Info: title, linked records, who it's for, expiry date, and currency", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "add-line-items",
+      "title": "Add line items",
+      "content": "<p>Line items are the heart of the quote — what you're selling and for how much. You have two ways to add them:</p><ol><li>Click <strong>Add Line Item</strong> for a custom item. In the modal, fill in:<ul><li><strong>Item Name / Title</strong> (required) — e.g. \"Shaker cabinet set (12 units)\".</li><li><strong>Description</strong> — optional detail line shown under the name.</li><li><strong>Quantity</strong> (required).</li><li><strong>Unit Price</strong> (required) — tip: a <em>negative</em> price creates a credit line that reduces the total.</li><li><strong>Discount (%)</strong> — per-line discount.</li><li><strong>Tax (%)</strong> — per-line tax rate, e.g. 8.25 for your local sales tax.</li></ul>The panel at the bottom live-calculates <strong>Subtotal</strong>, <strong>After Discount</strong>, and <strong>Total (with tax)</strong> as you type. Click <strong>OK</strong> to add the line.</li><li>Or click <strong>Select from Catalog</strong> to pull items straight from your <strong>Products</strong> and <strong>Services</strong> catalogs — names, descriptions, and prices fill in automatically.</li></ol><blockquote>💡 Build your catalogs once (CRM → Products / Services) and quoting becomes a 30-second job — no retyping prices, no typos in front of customers.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/quotes-add-item-light.png", "alt": "Add Line Item modal with name, description, quantity, unit price, discount and tax fields plus a live total", "caption": "The Add Line Item modal — the footer live-calculates subtotal, discount, and tax as you type", "theme": "light" },
+        { "src": "images/pipeline/quotes-add-item-dark.png", "alt": "Add Line Item modal with name, description, quantity, unit price, discount and tax fields plus a live total", "caption": "The Add Line Item modal — the footer live-calculates subtotal, discount, and tax as you type", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "pricing-totals",
+      "title": "Fine-tune pricing, discounts, and taxes",
+      "content": "<p>With items on the table, everything stays editable inline:</p><ul><li>Edit any line's <strong>Unit Price</strong>, <strong>Discount</strong> %, or <strong>Tax</strong> % directly in its table cell — totals recalculate instantly.</li><li>Use the arrow buttons in the <strong>Actions</strong> column to reorder lines, the pencil to reopen the edit modal, and the trash icon to remove a line.</li><li>In the totals block below the table, type into the <strong>Discount ( %)</strong> or <strong>Tax ( %)</strong> boxes to apply one percentage to <em>every</em> line at once — perfect for a flat sales-tax rate or a negotiated overall discount. If lines have different rates, the box shows <em>mixed</em>.</li><li>The summary rows show <strong>Subtotal</strong>, <strong>Discount</strong>, <strong>Tax</strong>, and the <strong>Grand Total</strong> your customer will see.</li></ul><p>When the numbers look right, click <strong>Next</strong>.</p>",
+      "images": [
+        { "src": "images/pipeline/quotes-create-items-light.png", "alt": "Line Items step showing two items, inline price, discount and tax editors, and the totals block with grand total", "caption": "Step 2 — Line Items: inline editors per line, bulk Discount/Tax % boxes, and the Grand Total", "theme": "light" },
+        { "src": "images/pipeline/quotes-create-items-dark.png", "alt": "Line Items step showing two items, inline price, discount and tax editors, and the totals block with grand total", "caption": "Step 2 — Line Items: inline editors per line, bulk Discount/Tax % boxes, and the Grand Total", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "terms-notes",
+      "title": "Set terms, conditions, and notes",
+      "content": "<p>Step 3 is the fine print — everything here prints on the quote PDF except the last field:</p><ol><li><strong>Payment Terms</strong> — e.g. \"50% deposit due on acceptance; balance due on completion.\"</li><li><strong>Terms &amp; Conditions</strong> — warranty language, validity window, cancellation policy.</li><li><strong>Footer Text</strong> — a closing line printed at the bottom of the PDF (e.g. \"Thank you for your business!\").</li><li><strong>Internal Notes</strong> — visible only to your team, never to the customer.</li><li>Click <strong>Next</strong>.</li></ol><blockquote>💡 Set default payment terms, conditions, and footer text once under <strong>CRM → Settings → Invoices &amp; Quotes</strong> — the wizard pre-fills them on every new quote, and you can still edit per quote.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/quotes-create-terms-light.png", "alt": "Terms step with payment terms, terms and conditions, footer text and internal notes fields", "caption": "Step 3 — Terms: payment terms, conditions, footer text, and team-only internal notes", "theme": "light" },
+        { "src": "images/pipeline/quotes-create-terms-dark.png", "alt": "Terms step with payment terms, terms and conditions, footer text and internal notes fields", "caption": "Step 3 — Terms: payment terms, conditions, footer text, and team-only internal notes", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "review-create",
+      "title": "Review and create the quote",
+      "content": "<ol><li>The <strong>Review</strong> step shows three summary cards — <strong>Quote Summary</strong> (title, links, expiry, currency), <strong>Line Items Summary</strong> (item count, subtotal, discount, tax, total), and <strong>Terms &amp; Notes</strong>. Use <strong>Previous</strong> to go back and fix anything.</li><li>Click <strong>Create Quote</strong>. The quote is saved as a <strong>Draft</strong> with an automatically generated quote number (the prefix comes from your numbering settings in <strong>CRM → Settings</strong>).</li></ol><p>iMash keeps your pipeline in sync automatically: creating a quote for a contact links it into your deal pipeline, and quote/deal/invoice records stay connected so nothing falls through the cracks.</p>",
+      "images": [
+        { "src": "images/pipeline/quotes-create-review-light.png", "alt": "Review step showing the quote summary, line items summary and terms cards before creating", "caption": "Step 4 — Review: one last look at everything before the quote is created as a draft", "theme": "light" },
+        { "src": "images/pipeline/quotes-create-review-dark.png", "alt": "Review step showing the quote summary, line items summary and terms cards before creating", "caption": "Step 4 — Review: one last look at everything before the quote is created as a draft", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "quote-detail",
+      "title": "Inside a quote — the detail view",
+      "content": "<p>Click any quote number in the list to open its detail view. Across the top you'll find the status badge and the action bar: <strong>Approve &amp; Invoice</strong>, the send button (<strong>Quote</strong> for drafts, <strong>Resend Quote</strong> after sending), <strong>Preview</strong>, <strong>PDF</strong>, <strong>Edit</strong>, and a <strong>More</strong> menu (<strong>Share</strong>, <strong>Mark Accepted</strong>, <strong>Mark Declined</strong>, and <strong>View Invoice</strong> once one exists).</p><ol><li>The <strong>Overview</strong> tab opens with four stat tiles — <strong>Total Amount</strong>, <strong>Subtotal</strong>, <strong>Tax</strong>, <strong>Discount</strong> — followed by every detail: title, description, status, currency, linked <strong>Deal</strong>/<strong>Job</strong>/<strong>Account</strong>/<strong>Contacts</strong>/<strong>Leads</strong>, dates, and the engagement trail (<strong>Sent At</strong>, <strong>Viewed At</strong>, <strong>View Count</strong>, <strong>Accepted Date</strong>).</li><li>The <strong>Line Items</strong> tab shows the full item table with subtotal, discount, tax, and grand total.</li><li>The <strong>Terms &amp; Conditions</strong> tab holds the payment terms, conditions, footer text, and internal notes.</li><li>Click <strong>Edit</strong> to change anything inline — items, terms, links, dates — then <strong>Save Changes</strong>.</li></ol><blockquote>⚠️ Once a quote is <strong>Accepted</strong> (or converted to an invoice), its line items and totals are <em>locked</em> — the customer approved those exact amounts. The button becomes <strong>Edit Overview</strong>, letting you still update the title, dates, and linked records without touching the money.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/quotes-detail-overview-light.png", "alt": "Quote detail overview tab with stat tiles for total, subtotal, tax and discount plus the full details table", "caption": "The quote detail — stat tiles, full details, and the engagement trail (sent / viewed / view count)", "theme": "light" },
+        { "src": "images/pipeline/quotes-detail-overview-dark.png", "alt": "Quote detail overview tab with stat tiles for total, subtotal, tax and discount plus the full details table", "caption": "The quote detail — stat tiles, full details, and the engagement trail (sent / viewed / view count)", "theme": "dark" },
+        { "src": "images/pipeline/quotes-detail-lineitems-light.png", "alt": "Quote detail line items tab showing the item table with subtotal, tax and grand total", "caption": "The Line Items tab — the exact table your customer's PDF is built from", "theme": "light" },
+        { "src": "images/pipeline/quotes-detail-lineitems-dark.png", "alt": "Quote detail line items tab showing the item table with subtotal, tax and grand total", "caption": "The Line Items tab — the exact table your customer's PDF is built from", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "pdf-templates",
+      "title": "Pick a PDF template that matches your brand",
+      "content": "<p>Your quote renders as a professional PDF, and you choose the design:</p><ol><li>On the Quotes list, click <strong>Preview Templates</strong>. The <strong>Live PDF Template Preview</strong> opens with your real quote data rendered in the selected design.</li><li>Use the <strong>Template</strong> dropdown to flip through the built-in designs (Classic, Modern, and more) — the preview re-renders live. <strong>Zoom In</strong> / <strong>Zoom Out</strong> to inspect details.</li><li>Click <strong>Use This Template</strong> to save it as your default for all quotes — downloads, emails, and the public quote page will all use it.</li><li>Click <strong>Customize</strong> to tweak branding, or <strong>Download PDF</strong> to grab a copy immediately.</li></ol><p>Need a different look for one specific quote? Open that quote and click <strong>Preview</strong> in its action bar — selecting a template there saves it for that quote only. The company name, logo, address, and contact details on the PDF come from <strong>CRM → Settings → Company</strong>.</p>",
+      "images": [
+        { "src": "images/pipeline/quotes-templates-light.png", "alt": "Live PDF Template Preview modal showing the quote rendered in the Classic template with template picker and zoom controls", "caption": "Preview Templates — see your actual quote in every design before you commit", "theme": "light" },
+        { "src": "images/pipeline/quotes-templates-dark.png", "alt": "Live PDF Template Preview modal showing the quote rendered in the Classic template with template picker and zoom controls", "caption": "Preview Templates — see your actual quote in every design before you commit", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "send-quote",
+      "title": "Send it — by email, text message, or both",
+      "content": "<p>This is where iMash pulls ahead: one composer sends your quote by email, by SMS (\"Text Quote\"), or both at once.</p><ol><li>Open the quote and click the blue send button (<strong>Quote</strong> — it becomes <strong>Resend Quote</strong> after the first send). You can also click the paper-plane icon on a draft row in the list.</li><li>Pick the channel with the toggle at the top: <strong>Email</strong>, <strong>Text (SMS)</strong>, or <strong>Email + SMS</strong>.</li><li>For email, review:<ul><li><strong>From</strong> — the sending mailbox (set up under Messages → Email).</li><li><strong>Delivery Method</strong> — <strong>Send link to view quote online (recommended)</strong> lets the customer view and <em>accept</em> in their browser and powers view tracking; <strong>Attach PDF to email</strong> sends a static file instead.</li><li><strong>To</strong> — pre-filled with the quote's contacts and leads; add more, or click <strong>Show CC/BCC</strong>.</li><li><strong>Subject</strong> and <strong>Email Body</strong> — pre-written for you; click <strong>Generate with AI</strong> or <strong>Rewrite</strong> to let AI polish the message.</li></ul></li><li>For SMS, the panel shows <strong>Send to</strong> with the customer's numbers pre-checked (add extras via <strong>Add a custom phone number</strong>) and a pre-filled <strong>Message</strong> containing the quote total and the view link.</li><li>Click <strong>Send Email</strong>, <strong>Send SMS</strong>, or <strong>Send Email &amp; SMS</strong>. The quote's status flips to <strong>Sent</strong>.</li></ol><blockquote>⚠️ Texting a quote requires a default SMS number — if the panel warns <strong>No SMS sender configured</strong>, set one under Settings → Messages (or on the job source) first.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/quotes-send-composer-light.png", "alt": "Send Quote composer showing the Email / Text SMS / Email + SMS channel toggle, delivery method, recipients, subject and AI-assisted body", "caption": "The Send Quote composer — channel toggle up top, link-or-PDF delivery, and AI writing help", "theme": "light" },
+        { "src": "images/pipeline/quotes-send-composer-dark.png", "alt": "Send Quote composer showing the Email / Text SMS / Email + SMS channel toggle, delivery method, recipients, subject and AI-assisted body", "caption": "The Send Quote composer — channel toggle up top, link-or-PDF delivery, and AI writing help", "theme": "dark" },
+        { "src": "images/pipeline/quotes-send-sms-light.png", "alt": "Text SMS channel of the Send Quote composer with recipient checkboxes and a pre-filled message containing the quote link", "caption": "Text Quote — recipients pre-checked, message pre-written with the total and the live quote link", "theme": "light" },
+        { "src": "images/pipeline/quotes-send-sms-dark.png", "alt": "Text SMS channel of the Send Quote composer with recipient checkboxes and a pre-filled message containing the quote link", "caption": "Text Quote — recipients pre-checked, message pre-written with the total and the live quote link", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "share-link",
+      "title": "Share the public quote link anywhere",
+      "content": "<p>Every quote has a public web link you can drop into any channel — WhatsApp, a chat, a QR code on a printout.</p><ol><li>Open the quote, click <strong>More</strong>, then <strong>Share</strong>.</li><li>Copy the <strong>Public quote link</strong> with the <strong>Copy</strong> button. Customers don't need an iMash account — the link just works.</li><li>Use the <strong>Public view</strong> toggle to disable the link at any time (for example after a renegotiation). Anyone visiting a disabled link sees a \"this quote isn't available\" notice; flip the toggle back on to re-enable it.</li></ol><p>Every visit to the link stamps <strong>Viewed At</strong>, bumps the <strong>View Count</strong>, and moves a <strong>Sent</strong> quote to <strong>Viewed</strong> — so your pipeline reflects real customer attention.</p>",
+      "images": [
+        { "src": "images/pipeline/quotes-share-light.png", "alt": "Share Quote modal with the public view toggle and the copyable public quote link", "caption": "Share — copy the public link, or kill it instantly with the Public view toggle", "theme": "light" },
+        { "src": "images/pipeline/quotes-share-dark.png", "alt": "Share Quote modal with the public view toggle and the copyable public quote link", "caption": "Share — copy the public link, or kill it instantly with the Public view toggle", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "public-page",
+      "title": "What your customer sees",
+      "content": "<p>The public quote page is your closer — polished, branded, and one tap away from a yes:</p><ul><li>The full quote renders in your chosen PDF template with your company branding, right in the browser — with zoom controls and a <strong>Download PDF</strong> button.</li><li>A sticky bar at the bottom asks <em>\"Ready to respond?\"</em> with two buttons: <strong>Accept Quote</strong> and <strong>Decline</strong>.</li><li>When the customer clicks <strong>Accept Quote</strong>, the quote flips to <strong>Accepted</strong>, the accepted date is stamped, and <em>an invoice is created automatically</em> with every line item copied over — the customer is offered a link to pay it right away.</li><li>If they click <strong>Decline</strong>, the quote is marked <strong>Declined</strong> so you know to follow up with a revised offer.</li><li>Past the <strong>Valid Until</strong> date the page shows the quote as <strong>Expired</strong> and the respond buttons disappear.</li></ul><blockquote>💡 From a text message on their phone to an accepted quote and a payable invoice — the whole loop can happen in under a minute, without a single call back to your office.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/quotes-public-light.png", "alt": "Public quote page showing the rendered PDF and the sticky Accept Quote and Decline buttons", "caption": "The public quote page — branded PDF in the browser with one-tap Accept / Decline", "theme": "light" },
+        { "src": "images/pipeline/quotes-public-dark.png", "alt": "Public quote page showing the rendered PDF and the sticky Accept Quote and Decline buttons", "caption": "The public quote page — branded PDF in the browser with one-tap Accept / Decline", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "approve-convert",
+      "title": "Approve and convert to an invoice",
+      "content": "<p>An accepted quote becomes an invoice — either automatically or by hand:</p><ol><li><strong>Customer accepts online</strong> — nothing to do: the invoice is created for you the moment they click <strong>Accept Quote</strong>.</li><li><strong>You accept on their behalf</strong> (a verbal yes on a call): open the quote and click the green <strong>Approve &amp; Invoice</strong> button. A confirmation explains it will mark the quote accepted <em>and</em> create a linked invoice with all line items copied over — click <strong>Approve &amp; Create Invoice</strong> and you land directly on the new invoice.</li><li><strong>Just flag the status</strong>: use <strong>More → Mark Accepted</strong> (or <strong>Mark Declined</strong>) on a sent quote without creating an invoice yet; a <strong>Convert to Invoice</strong> button then appears for when you're ready.</li></ol><p>Once converted, the quote and invoice stay linked — <strong>More → View Invoice</strong> jumps straight to it, and the quote's money fields lock to match what the customer approved. You've just closed the loop: quoted, accepted, invoiced — time to get paid.</p>",
+      "images": [
+        { "src": "images/pipeline/quotes-approve-confirm-light.png", "alt": "Approve Quote and Create Invoice confirmation dialog", "caption": "Approve & Invoice — one click marks the quote accepted and spins up the linked invoice", "theme": "light" },
+        { "src": "images/pipeline/quotes-approve-confirm-dark.png", "alt": "Approve Quote and Create Invoice confirmation dialog", "caption": "Approve & Invoice — one click marks the quote accepted and spins up the linked invoice", "theme": "dark" }
+      ]
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Your quote is accepted — now collect the money and tighten the rest of your sales pipeline.",
+    "cards": [
+      { "href": "/pipeline/invoices", "title": "Invoices & Getting Paid", "description": "Send the converted invoice with a pay link and watch payments land." },
+      { "href": "/pipeline/products-services", "title": "Products & Services", "description": "Build your catalogs so every quote assembles itself in seconds." },
+      { "href": "/pipeline/payments", "title": "Payments (Stripe)", "description": "Connect Stripe so accepted quotes turn into real revenue online." },
+      { "href": "/crm/crm-settings", "title": "CRM Settings", "description": "Set quote numbering, default terms, and your company branding for PDFs." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>Questions about quotes, templates, or the public accept flow? Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a> — we're happy to help you get your first quote out the door.</p>"
+  },
+  "metaTitle": "Quotes — Build, Send & Convert | iMash Documentation",
+  "metaDescription": "Create professional quotes in iMash: line items, taxes and discounts, PDF templates, email and Text Quote (SMS) sending, the public accept page, and one-click conversion to an invoice.",
+  "metaKeywords": "quotes, quote builder, line items, quote templates, text quote, SMS quote, public quote link, accept quote, convert quote to invoice, iMash"
+}

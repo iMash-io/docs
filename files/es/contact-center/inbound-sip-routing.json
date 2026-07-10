@@ -1,47 +1,82 @@
 {
-  "title": "Enrutamiento SIP entrante",
-  "lede": "Dirige uno o más de tus números de teléfono hacia un grupo para que las llamadas entrantes a esos números suenen en los miembros en línea del grupo. Así es como un equipo empieza a recibir llamadas entrantes en vivo.",
-  "timeToComplete": "4 minutos",
+  "title": "Enrutamiento SIP entrante (a humanos)",
+  "lede": "Dirija cualquiera de sus números de teléfono directamente a un equipo de agentes humanos: las llamadas suenan primero a sus personas, y su agente de IA solo interviene cuando usted lo decide. Configúrelo en menos de cinco minutos.",
+  "timeToComplete": "5 minutos",
   "steps": [
     {
-      "id": "open-inbound",
-      "title": "Abre la pestaña Inbound SIP Routing (Enrutamiento SIP entrante)",
-      "content": "<ol><li>Ve a <strong>Call Center &rarr; Contact Center &rarr; Groups</strong> (Grupos) y selecciona un grupo.</li><li>Abre la pestaña <strong>Inbound SIP Routing</strong> (Enrutamiento SIP entrante).</li></ol>",
+      "id": "understand",
+      "title": "Entienda cómo funciona el enrutamiento entrante a humanos",
+      "content": "<p>Normalmente, una llamada a uno de sus números de iMash la responde el agente de IA asignado a ese número. El <strong>Inbound SIP Routing</strong> (Enrutamiento SIP entrante) invierte esa prioridad para los números que usted elija: la llamada suena primero a los <em>miembros humanos</em> de un grupo del Contact Center, y la IA pasa a ser el respaldo.</p><ul><li><strong>El número</strong> — cualquier número de teléfono de su cuenta puede apuntarse a un grupo.</li><li><strong>El grupo</strong> — un grupo del Contact Center (su equipo de agentes). Todos los miembros que estén <strong>Online</strong> (en línea) reciben el timbre.</li><li><strong>El respaldo</strong> — si nadie contesta (o nadie está en línea), usted decide qué ocurre: responde el agente de IA del número, responde otro agente de IA distinto, o la llamada se cuelga.</li></ul><blockquote>💡 No tiene que elegir entre humanos e IA. El mismo número puede sonar a su equipo durante el día y entregar las llamadas sin respuesta a su agente de IA — así ninguna llamada queda sin atender.</blockquote>"
+    },
+    {
+      "id": "open-groups",
+      "title": "Abra su grupo en el Contact Center",
+      "content": "<ol><li>En la barra lateral izquierda, haga clic en <strong>Contact Center</strong> (Centro de contacto), dentro de la sección <strong>Call Center</strong>.</li><li>Abra la pestaña <strong>Groups</strong> (Grupos) en la parte superior de la página.</li><li>En la lista <strong>Groups</strong> de la izquierda, haga clic en el grupo que debe recibir las llamadas.</li></ol><p>¿Todavía no tiene un grupo? Haga clic en <strong>New Group</strong> (Nuevo grupo) arriba a la derecha y agregue primero a sus agentes como miembros — consulte la guía de <a data-href=\"/contact-center/groups\">Grupos de permisos</a>.</p>",
       "images": [
-        { "src": "images/contact-center/cc-group-inbound-sip-routing-light.png", "alt": "Pestaña Inbound SIP Routing", "caption": "Inbound SIP Routing: actívalo y elige los números que suenan en este grupo.", "theme": "light" },
-        { "src": "images/contact-center/cc-group-inbound-sip-routing-dark.png", "alt": "Pestaña Inbound SIP Routing", "caption": "Inbound SIP Routing: actívalo y elige los números que suenan en este grupo.", "theme": "dark" }
+        { "src": "images/contact-center/inbound-sip-routing-groups-tab-light.png", "alt": "Pestaña Groups del Contact Center con la lista de grupos", "caption": "Contact Center → Groups: elija el equipo que debe atender las llamadas entrantes.", "theme": "light" },
+        { "src": "images/contact-center/inbound-sip-routing-groups-tab-dark.png", "alt": "Pestaña Groups del Contact Center con la lista de grupos", "caption": "Contact Center → Groups: elija el equipo que debe atender las llamadas entrantes.", "theme": "dark" }
       ]
     },
     {
-      "id": "enable",
-      "title": "Activa el enrutamiento entrante",
-      "content": "<p>Cambia el interruptor de la tarjeta <strong>Inbound SIP calls to this group</strong> (Llamadas SIP entrantes a este grupo) a <strong>on</strong> (activado). Cuando está activado, las llamadas a los números que elijas suenan en todos los miembros en línea a la vez (el primero en contestar se la queda). Cuando está desactivado, este grupo ignora esos números y tu IA responde como de costumbre.</p>"
+      "id": "open-inbound-tab",
+      "title": "Abra la pestaña Inbound SIP Routing",
+      "content": "<p>Con el grupo seleccionado, aparece a la derecha una fila de pestañas de configuración: <strong>Members</strong> (Miembros), <strong>Members Roles</strong> (Roles de miembros), <strong>Role Mapping</strong> (Mapeo de roles), <strong>Inbound SIP Routing</strong> (Enrutamiento SIP entrante), <strong>Ring strategy</strong> (Estrategia de timbre), <strong>Wait &amp; Hold experience</strong> (Experiencia de espera y retención) y <strong>Queue Settings</strong> (Configuración de cola).</p><ol><li>Haga clic en la pestaña <strong>Inbound SIP Routing</strong>.</li><li>Verá una tarjeta: <strong>Inbound SIP calls to this group</strong> (Llamadas SIP entrantes a este grupo), con un interruptor de encendido/apagado en su esquina superior derecha. Está apagado de forma predeterminada.</li></ol>",
+      "images": [
+        { "src": "images/contact-center/inbound-sip-routing-tab-light.png", "alt": "Pestaña Inbound SIP Routing con el interruptor de enrutamiento apagado", "caption": "La pestaña Inbound SIP Routing — el interruptor en la esquina de la tarjeta enciende y apaga el enrutamiento.", "theme": "light" },
+        { "src": "images/contact-center/inbound-sip-routing-tab-dark.png", "alt": "Pestaña Inbound SIP Routing con el interruptor de enrutamiento apagado", "caption": "La pestaña Inbound SIP Routing — el interruptor en la esquina de la tarjeta enciende y apaga el enrutamiento.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "enable-routing",
+      "title": "Active el enrutamiento entrante",
+      "content": "<p>Haga clic en el interruptor de la tarjeta <strong>Inbound SIP calls to this group</strong> para ponerlo en <strong>encendido</strong> (azul).</p><ul><li><strong>Encendido</strong> — las llamadas a los números que elija abajo suenan <em>a todos los miembros en línea a la vez</em>; el primer agente que conteste se queda con la llamada y los demás dejan de sonar.</li><li><strong>Apagado</strong> — este grupo ignora por completo esos números y su agente de IA los responde como de costumbre.</li></ul><p>Al encender el interruptor aparece el campo <strong>Associated inbound numbers</strong> (Números entrantes asociados) — ese es el siguiente paso.</p>"
     },
     {
       "id": "pick-numbers",
-      "title": "Elige los números de teléfono",
-      "content": "<ol><li>En <strong>Associated inbound numbers</strong> (Números entrantes asociados), selecciona uno o más de los números de teléfono de tu cuenta.</li><li>Las llamadas entrantes a cualquiera de estos números sonarán en los miembros en línea de este grupo.</li></ol><p>Si la lista está vacía, aún no tienes ningún número de teléfono — agrega uno primero (ver abajo).</p>"
+      "title": "Elija qué números de teléfono suenan a este grupo",
+      "content": "<ol><li>Haga clic en <strong>Associated inbound numbers</strong> (Números entrantes asociados).</li><li>Seleccione uno o más números de teléfono de su cuenta — es una selección múltiple, así que un grupo puede tener varias líneas (por ejemplo, su línea principal y un número local).</li><li>Toda llamada entrante a cualquiera de estos números sonará ahora a los miembros en línea de este grupo.</li></ol><blockquote>⚠️ Si el desplegable dice <strong>No phone numbers found for this account</strong> (No se encontraron números para esta cuenta), todavía no tiene números — consiga uno primero en <a data-href=\"/phone/add-phone-number\">Agregar un número de teléfono</a> y vuelva aquí.</blockquote><p>Así es también como le da a cada equipo su propia línea: asigne su número de ventas al grupo de Ventas y su número de soporte al grupo de Soporte — cada grupo solo suena para sus propios números.</p>",
+      "images": [
+        { "src": "images/contact-center/inbound-sip-routing-card-on-light.png", "alt": "Tarjeta Inbound SIP Routing activada mostrando el campo Associated inbound numbers", "caption": "Enrutamiento activado: elija los números que deben sonar a este grupo y luego guarde.", "theme": "light" },
+        { "src": "images/contact-center/inbound-sip-routing-card-on-dark.png", "alt": "Tarjeta Inbound SIP Routing activada mostrando el campo Associated inbound numbers", "caption": "Enrutamiento activado: elija los números que deben sonar a este grupo y luego guarde.", "theme": "dark" }
+      ]
     },
     {
-      "id": "save",
-      "title": "Guarda",
-      "content": "<p>Haz clic en <strong>Save</strong> (Guardar). Prueba llamando a uno de los números asignados — los web dialers de los miembros en línea deberían sonar. Si nadie contesta dentro de la ventana de timbrado, la llamada sigue el respaldo (fallback) que configuraste en la pestaña <strong>Ring strategy</strong> (Estrategia de timbrado).</p>"
+      "id": "save-and-test",
+      "title": "Guarde y haga una llamada de prueba",
+      "content": "<ol><li>Haga clic en <strong>Save</strong> (Guardar) en la esquina inferior derecha. Un solo Save aplica todas las pestañas de configuración del grupo.</li><li>Pida a al menos un miembro del grupo que se ponga <strong>Online</strong> (En línea) en su marcador web (vea la <a data-href=\"/contact-center/agent-guide\">Guía del agente humano</a>).</li><li>Llame a uno de los números asignados desde su celular — el marcador de cada miembro en línea debería sonar al mismo tiempo; el primero en hacer clic en <strong>Accept</strong> (Aceptar) se queda con la llamada.</li></ol><blockquote>⚠️ <strong>Solo suenan los miembros en línea.</strong> Si nadie del grupo está en línea, la llamada pasa directamente al respaldo que configurará en el siguiente paso. Los agentes controlan su propia disponibilidad con el interruptor de estado de su marcador.</blockquote>"
+    },
+    {
+      "id": "choose-fallback",
+      "title": "Decida qué ocurre cuando nadie contesta (el relevo a la IA)",
+      "content": "<p>Aquí es donde el enrutamiento entrante se conecta con el enrutamiento de sus agentes de IA. Abra la pestaña <strong>Ring strategy</strong> (Estrategia de timbre) del grupo y busque la tarjeta <strong>When no one answers</strong> (Cuando nadie contesta) — controla el destino de la llamada cuando se agota la ventana de timbre, o cuando ningún miembro está en línea.</p><ol><li>Haga clic en la pestaña <strong>Ring strategy</strong>.</li><li>En <strong>When no one answers</strong>, elija una de las tres opciones:<ul><li><strong>Route to the number's assigned AI agent</strong> (Enrutar al agente de IA asignado del número) — opción predeterminada: responde el agente de IA ya vinculado a ese número, exactamente como si el enrutamiento estuviera apagado. El comportamiento perfecto de \"humanos primero, IA de respaldo\".</li><li><strong>Route to a different AI agent</strong> (Enrutar a un agente de IA distinto) — elija cualquier asistente en <strong>AI assistant to take the call</strong> (Asistente de IA que tomará la llamada); ideal para un agente dedicado fuera de horario o de desborde.</li><li><strong>Hang up the call</strong> (Colgar la llamada) — la llamada simplemente termina. Úselo con cuidado.</li></ul></li><li>Ya que está aquí, también puede ajustar <strong>Ring the group for (seconds) before routing to AI</strong> (Hacer sonar el grupo durante N segundos antes de enrutar a la IA) — la ventana de timbre que decide cuánto tiempo tienen los humanos para contestar. Más detalles en <a data-href=\"/contact-center/ring-strategy\">Estrategia de timbre</a>.</li><li>Haga clic en <strong>Save</strong> (Guardar).</li></ol><blockquote>💡 El número de teléfono conserva su agente de IA asignado todo el tiempo — el enrutamiento entrante solo pone a sus humanos por delante. Apague el interruptor del grupo y el número vuelve al instante a la atención 100% por IA.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/inbound-sip-routing-fallback-light.png", "alt": "Tarjeta When no one answers en la pestaña Ring strategy", "caption": "La tarjeta 'When no one answers' decide el relevo a la IA para las llamadas enrutadas al grupo.", "theme": "light" },
+        { "src": "images/contact-center/inbound-sip-routing-fallback-dark.png", "alt": "Tarjeta When no one answers en la pestaña Ring strategy", "caption": "La tarjeta 'When no one answers' decide el relevo a la IA para las llamadas enrutadas al grupo.", "theme": "dark" },
+        { "src": "images/contact-center/inbound-sip-routing-fallback-options-light.png", "alt": "Las tres opciones de respaldo: agente de IA asignado del número, otro agente de IA, o colgar", "caption": "Tres respaldos: el agente de IA propio del número, un agente distinto, o colgar.", "theme": "light" },
+        { "src": "images/contact-center/inbound-sip-routing-fallback-options-dark.png", "alt": "Las tres opciones de respaldo: agente de IA asignado del número, otro agente de IA, o colgar", "caption": "Tres respaldos: el agente de IA propio del número, un agente distinto, o colgar.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "polish-the-experience",
+      "title": "Perfeccione la experiencia del llamante (opcional pero recomendado)",
+      "content": "<p>Su número ya suena a personas reales con una red de seguridad de IA — las pestañas restantes le permiten afinar lo que oyen los llamantes y qué pasa cuando hay mucha carga:</p><ul><li><strong>Ring strategy</strong> (Estrategia de timbre) — sonar a todos a la vez o a un agente por turno, forzar auto-respuesta, abrir automáticamente el lead/contacto del llamante en las pantallas de sus agentes. Vea <a data-href=\"/contact-center/ring-strategy\">Estrategia de timbre</a>.</li><li><strong>Wait &amp; Hold</strong> (Espera y retención) — música de espera y anuncios periódicos que oyen los llamantes mientras esperan. Vea <a data-href=\"/contact-center/wait-hold\">Experiencia de espera y retención</a>.</li><li><strong>Queue Settings</strong> (Configuración de cola) — cuando todos los agentes están ocupados, los llamantes pueden esperar en una cola y sonar en cuanto alguien se libere, con una espera máxima antes de que se ejecute el respaldo. Vea <a data-href=\"/contact-center/queue-settings\">Configuración de cola</a>.</li></ul><p>Eso es todo — sus llamantes ahora llegan a un humano en vivo siempre que haya uno disponible, y su IA atiende todo lo demás. Lo mejor de ambos mundos.</p>"
     }
   ],
   "nextSteps": {
     "title": "¿Qué sigue?",
-    "description": "Controla cómo suena el grupo y qué pasa cuando nadie contesta.",
+    "description": "Sus números ya suenan primero a humanos — ahora dé forma al timbre y a lo que experimentan los llamantes mientras esperan.",
     "cards": [
-      { "href": "/contact-center/ring-strategy", "title": "Estrategia de timbrado", "description": "Suena a todos a la vez o uno por uno, luego pasa a la IA." },
-      { "href": "/phone/add-phone-number", "title": "Agregar un número de teléfono", "description": "Consigue un número para dirigir a este grupo." },
-      { "href": "/contact-center/queue-settings", "title": "Ajustes de cola", "description": "Retén a las personas cuando no hay agente libre." }
+      { "href": "/contact-center/ring-strategy", "title": "Estrategia de timbre", "description": "Timbre simultáneo o secuencial, ventana de timbre y el respaldo de IA." },
+      { "href": "/contact-center/queue-settings", "title": "Configuración de cola", "description": "Mantenga a los llamantes en cola cuando todos los agentes estén ocupados." },
+      { "href": "/contact-center/agent-guide", "title": "Guía del agente humano", "description": "Enséñeles a sus agentes a ponerse en línea y tomar llamadas." },
+      { "href": "/phone/add-phone-number", "title": "Agregar un número de teléfono", "description": "Consiga otro número para enrutarlo a un equipo." }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
+    "title": "¿Necesita ayuda?",
+    "content": "<p>Si tiene algún problema o pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Enrutamiento SIP entrante | iMash Docs",
-  "metaDescription": "Dirige un número de teléfono o DID a un grupo del Contact Center en iMash para que las llamadas entrantes suenen en los miembros en línea del grupo, con un respaldo de IA cuando nadie contesta.",
-  "metaKeywords": "enrutamiento sip entrante, número de teléfono, did, grupo de timbrado, contact center, grupo de permisos, llamadas entrantes"
+  "metaTitle": "Enrutamiento SIP entrante a agentes humanos | Documentación de iMash",
+  "metaDescription": "Enrute un número de teléfono o DID directamente a un grupo humano del Contact Center en iMash: los agentes en línea suenan primero, con un respaldo configurable de agente de IA cuando nadie contesta.",
+  "metaKeywords": "enrutamiento sip entrante, enrutar llamadas a humanos, enrutamiento did, grupo de timbre, contact center, grupo de permisos, llamadas entrantes, respaldo de ia, agentes humanos"
 }

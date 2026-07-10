@@ -1,0 +1,105 @@
+{
+  "title": "Dispatch Overview",
+  "lede": "Dispatch is iMash's field-service headquarters — every job, technician, text message, and dollar of your field business on one screen. This guide tours the whole Dispatch section: the Statistics home view, every tab in the strip, and the Settings hub that powers your messaging and auto-dispatch automations.",
+  "timeToComplete": "8 minutes",
+  "steps": [
+    {
+      "id": "open-dispatch",
+      "title": "Open the Dispatch section",
+      "content": "<p>If you run technicians in the field — plumbers, garage-door techs, locksmiths, movers, anyone — Dispatch is where iMash runs that business for you: jobs come in, technicians get texted automatically, customers get updates, and the money is tracked job by job.</p><ol><li>In the top navigation bar, click <strong>Dispatch</strong>.</li><li>You land on the <strong>Statistics</strong> view — the section's default home — with a second row of colorful chips right below the navigation bar. That chip strip is how you move between every Dispatch view.</li></ol><blockquote>💡 Every view in this section is deep-linkable — the address bar updates as you switch chips, so you can bookmark or share any tab (for example, the Kanban board) directly.</blockquote>",
+      "images": [
+        { "src": "images/dispatch/overview-statistics-light.png", "alt": "The Dispatch section open on the Statistics view", "caption": "Dispatch home: the chip strip under the navigation bar, date filters, KPI cards, and charts.", "theme": "light" },
+        { "src": "images/dispatch/overview-statistics-dark.png", "alt": "The Dispatch section open on the Statistics view", "caption": "Dispatch home: the chip strip under the navigation bar, date filters, KPI cards, and charts.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "statistics-date-and-kpis",
+      "title": "Read your business at a glance in Statistics",
+      "content": "<p>The <strong>Statistics</strong> view answers the owner's question — \"how are we doing?\" — with real revenue math, not vanity numbers. Start with the toolbar:</p><ol><li>Pick a date preset — <strong>Today</strong>, <strong>Yesterday</strong>, <strong>This Week</strong>, <strong>Last Week</strong>, <strong>Last 7 days</strong>, <strong>This Month</strong>, <strong>Last Month</strong>, <strong>Last 30 days</strong>, or <strong>Custom</strong> — or set exact dates in the range picker next to it.</li><li>Check the <strong>Filter By</strong> chip. It defaults to <strong>Completion Date</strong>, so revenue is counted in the period the work was <em>finished</em> — click the arrow to switch to other date fields (like the date the job was added) if you prefer.</li><li>Click the refresh icon any time to recompute.</li></ol><p>The KPI cards then update instantly:</p><ul><li><strong>Jobs</strong> — how many jobs fall in the period.</li><li><strong>Total</strong> — the actual amount charged on paid invoices (including tax, net of refunds). Tips are excluded — they get their own card.</li><li><strong>Tips</strong> — customer tips collected on paid invoices. Tips go 100% to the technician, so they're kept separate from company revenue.</li><li><strong>Company's Cut</strong> — your share after technician commissions.</li><li><strong>Cancelled</strong> and <strong>Completed</strong> — job counts with their percentage of the total, so you can watch your close rate.</li><li><strong>Calls</strong> — calls linked to dispatch activity in the period.</li></ul>",
+      "images": [
+        { "src": "images/dispatch/overview-stats-kpis-light.png", "alt": "The Statistics date toolbar and KPI cards", "caption": "Date presets, the Completion Date filter, and the KPI cards: Jobs, Total, Tips, Company's Cut, Cancelled, Completed, and Calls.", "theme": "light" },
+        { "src": "images/dispatch/overview-stats-kpis-dark.png", "alt": "The Statistics date toolbar and KPI cards", "caption": "Date presets, the Completion Date filter, and the KPI cards: Jobs, Total, Tips, Company's Cut, Cancelled, Completed, and Calls.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "statistics-charts",
+      "title": "Dig deeper with the Statistics charts",
+      "content": "<p>Scroll down for the visual breakdowns — each chart respects the same date range you picked above:</p><ul><li><strong>Top Team Members</strong> — your best performers ranked by completed work.</li><li><strong>Top Performance By</strong> — a leaderboard you can pivot between <strong>Job Source</strong> and <strong>Job Type</strong>, so you see which lead sources or service categories actually deliver.</li><li><strong>Tickets by Status</strong> — a donut of every job by its current status (scheduled, dispatched, completed, cancelled…).</li><li><strong>Jobs by Area</strong> — where your work is happening, city by city.</li><li><strong>Job Sources by Sales Amount</strong> and <strong>Job Sources by Done Jobs</strong> — which sources bring the revenue vs. which bring the volume.</li><li><strong>Earnings Breakdown (Last 12 Months)</strong> — a month-by-month bar view of Total, Company's Cut, and Tech's Cut, so trends jump out.</li></ul><blockquote>💡 Hover any chart segment for exact numbers, and use the legends to identify each slice.</blockquote>",
+      "images": [
+        { "src": "images/dispatch/overview-stats-charts-light.png", "alt": "The Statistics charts: leaderboards, status donut, and area breakdown", "caption": "The chart grid: Top Team Members, Top Performance By, Tickets by Status, Jobs by Area, and job-source breakdowns.", "theme": "light" },
+        { "src": "images/dispatch/overview-stats-charts-dark.png", "alt": "The Statistics charts: leaderboards, status donut, and area breakdown", "caption": "The chart grid: Top Team Members, Top Performance By, Tickets by Status, Jobs by Area, and job-source breakdowns.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "tour-the-tab-strip",
+      "title": "Tour the Dispatch tab strip",
+      "content": "<p>The chip strip under the navigation bar is your map of the whole section. Scroll it sideways with the arrow at its edge — here's what each chip does:</p><ul><li><strong>Statistics</strong> — the KPI and chart home view you just explored.</li><li><strong>Dispatch Dashboard</strong> — the job command center: every job in a live table with status tabs, filters, and the <strong>Create Job</strong> button (full walkthrough in the <em>Jobs</em> guide).</li><li><strong>Kanban View</strong> — the same jobs as a drag-and-drop board, one column per status.</li><li><strong>Map</strong> — technicians and jobs plotted live on a map.</li><li><strong>Messages</strong> — the dispatch texting inbox: every SMS conversation with customers and technicians in one place.</li><li><strong>Team Members</strong> — your technician roster: availability, priority order, commission plans, and devices (see the <em>Technicians &amp; Team Members</em> guide).</li><li><strong>Managers</strong> — give a lead-source partner a read-only reporting portal for the jobs they send you.</li><li><strong>Job Sources</strong>, <strong>Job Types</strong>, <strong>Payment Types</strong> — the catalogs that classify every job: where it came from, what kind of work it is, and how it was paid (see the <em>Job Sources &amp; Types</em> guide).</li><li><strong>Finance Reports</strong> and <strong>Team Reports</strong> — deep money and per-technician reporting with exports (see the <em>Dispatch Reports</em> guide).</li><li><strong>Waiting ACK</strong> — a live board of dispatches waiting for a technician to reply <em>ACK</em> (accept) — the heartbeat of auto-dispatch.</li><li><strong>Simulator</strong> — a safe sandbox that runs your entire auto-dispatch flow with fake jobs and technicians, so you can test rules without texting anyone real.</li><li><strong>Trace</strong> — a step-by-step event log of every dispatch: every text sent, every candidate scored, every state change.</li><li><strong>Simulate SMS</strong> — an action chip that opens a composer to inject a test inbound text, exactly as if a customer had texted your number.</li><li><strong>Settings</strong> — an action chip that opens the Dispatch Settings hub (next-to-last step below).</li></ul>",
+      "images": [
+        { "src": "images/dispatch/overview-tab-strip-light.png", "alt": "The Dispatch chip strip with all its tabs", "caption": "The tab strip: Statistics, Dispatch Dashboard, Kanban View, Map, Messages, Team Members, Managers, and more — scroll for the rest.", "theme": "light" },
+        { "src": "images/dispatch/overview-tab-strip-dark.png", "alt": "The Dispatch chip strip with all its tabs", "caption": "The tab strip: Statistics, Dispatch Dashboard, Kanban View, Map, Messages, Team Members, Managers, and more — scroll for the rest.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "dispatch-dashboard",
+      "title": "Visit the Dispatch Dashboard — your job command center",
+      "content": "<p>Click <strong>Dispatch Dashboard</strong> in the strip. This is where dispatchers live all day:</p><ul><li><strong>Date controls</strong> — a preset picker (including <strong>Recently Updated</strong>), a custom range, and an <strong>Added Date</strong> / <strong>Scheduled Start</strong> / <strong>Scheduled End</strong> switch that decides which date the range filters by.</li><li><strong>Counter tiles</strong> — live counts like <strong>Jobs</strong>, <strong>Draft</strong>, <strong>In Progress</strong>, <strong>Completed</strong>, <strong>Urgent</strong>, and <strong>Available Techs</strong>. Which tiles show is configurable in Dispatch Settings.</li><li><strong>Status tabs</strong> — <strong>All Jobs</strong>, <strong>Draft</strong>, <strong>In Progress</strong>, <strong>Completed</strong>, <strong>Scheduled</strong>, <strong>Dispatched</strong>, <strong>On Hold</strong>, <strong>Cancelled</strong>, <strong>Unassigned</strong>, <strong>Urgent</strong>, and more — each with its live count, filtering the table to that slice.</li><li><strong>Filters</strong> — opens a drawer to narrow by technician, status, job type, job source, or owner; the badge on the button counts active filters.</li><li><strong>Create Job</strong> — the blue button in the top-right starts a new job.</li></ul><p>Every row links into the full job detail — status, finance, documents, messages, and dispatch controls. The complete walkthrough lives in the <em>Jobs</em> guide.</p>",
+      "images": [
+        { "src": "images/dispatch/overview-dispatch-light.png", "alt": "The Dispatch Dashboard with counter tiles, status tabs, and the jobs table", "caption": "The Dispatch Dashboard: date controls, counter tiles, status tabs, Filters, and Create Job.", "theme": "light" },
+        { "src": "images/dispatch/overview-dispatch-dark.png", "alt": "The Dispatch Dashboard with counter tiles, status tabs, and the jobs table", "caption": "The Dispatch Dashboard: date controls, counter tiles, status tabs, Filters, and Create Job.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "kanban-view",
+      "title": "Drag jobs across the Kanban board",
+      "content": "<p>Prefer a visual pipeline? Click <strong>Kanban View</strong>:</p><ol><li>Each column is a job status — <strong>Draft</strong>, <strong>Scheduled</strong>, <strong>Dispatched</strong>, <strong>In Progress</strong>, <strong>On Hold</strong>, <strong>Completed</strong> — with a live count in its header.</li><li>Each card shows the job's title, address, and how long ago it was created (or when it's scheduled).</li><li><strong>Drag a card</strong> from one column to another to change the job's status — no forms, no clicks into the record.</li><li>The same date controls from the Dispatch Dashboard sit on top, so the board can show today, this week, or any range you need.</li></ol><blockquote>⚠️ Dragging a card really changes the job's status — and any status-change automations you've enabled (like customer SMS updates) will fire. Move cards with intent!</blockquote>",
+      "images": [
+        { "src": "images/dispatch/overview-kanban-light.png", "alt": "The Kanban board with status columns and job cards", "caption": "Kanban View: one column per status — drag a card to change a job's status instantly.", "theme": "light" },
+        { "src": "images/dispatch/overview-kanban-dark.png", "alt": "The Kanban board with status columns and job cards", "caption": "Kanban View: one column per status — drag a card to change a job's status instantly.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "map-view",
+      "title": "See your fleet on the Map",
+      "content": "<p>Click <strong>Map</strong> to plot your whole operation geographically — technicians with GPS tracking enabled appear as live pins, and every job with a coordinates-resolved address gets a status-colored marker:</p><ul><li>The counters in the top-left show how many <strong>technicians</strong> and <strong>jobs</strong> are currently plotted.</li><li>Use the <strong>Technician</strong> picker to focus on one tech's pin and jobs.</li><li>Toggle <strong>Added</strong> / <strong>Scheduled</strong> and pick a day preset (like <strong>Today</strong>) to control which jobs are drawn.</li><li>The status multi-select (e.g. <strong>Draft +7</strong>) filters markers by job status; <strong>Reset</strong> clears everything back to defaults.</li><li>The legend underneath decodes the colors — technicians as <strong>Available</strong>, <strong>Busy</strong>, or <strong>Offline/Stale</strong>, and jobs by their status color.</li><li>Click any technician or job marker to open its details right from the map.</li></ul><blockquote>💡 Seeing \"No locations to display\"? Technicians need GPS tracking enabled (they share location from the technician mobile app), and jobs need real street addresses so iMash can resolve coordinates.</blockquote>",
+      "images": [
+        { "src": "images/dispatch/overview-map-light.png", "alt": "The Map view with its filter toolbar and legend", "caption": "The Map view: technician and job counters, filters, day presets, and the color legend.", "theme": "light" },
+        { "src": "images/dispatch/overview-map-dark.png", "alt": "The Map view with its filter toolbar and legend", "caption": "The Map view: technician and job counters, filters, day presets, and the color legend.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "team-members",
+      "title": "Meet your roster in Team Members",
+      "content": "<p>Click <strong>Team Members</strong> for the technician roster that powers dispatching:</p><ul><li>Four tiles summarize the team: <strong>Total Team Members</strong>, <strong>Active Team Members</strong>, <strong>Available Now</strong>, and <strong>On Assignment</strong>.</li><li>The table lists every member with their <strong>Status</strong> (active/inactive), <strong>Tag</strong>, dispatch <strong>Priority</strong> (reorder with the arrows or by dragging the handle), <strong>Availability</strong>, <strong>Performance</strong> (jobs completed), <strong>Commission</strong> plan, and connected <strong>Devices</strong>.</li><li>Click <strong>+ Add Team Member</strong> in the top-right to create a new technician.</li></ul><p>Priority order matters: sequential auto-dispatch texts technicians one at a time <em>in this order</em> until someone accepts. The full setup — commissions, working hours, service areas, devices — is covered in the <em>Technicians &amp; Team Members</em> guide.</p>",
+      "images": [
+        { "src": "images/dispatch/overview-technicians-light.png", "alt": "The Team Members roster with summary tiles and the technician table", "caption": "Team Members: summary tiles, the roster with priority, availability, performance, and commissions, and Add Team Member.", "theme": "light" },
+        { "src": "images/dispatch/overview-technicians-dark.png", "alt": "The Team Members roster with summary tiles and the technician table", "caption": "Team Members: summary tiles, the roster with priority, availability, performance, and commissions, and Add Team Member.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "dispatch-settings",
+      "title": "Open Dispatch Settings — the automation hub",
+      "content": "<p>The <strong>Settings</strong> chip at the end of the strip opens the <strong>Dispatch Settings</strong> modal — the single place where all dispatch messaging and automation is configured:</p><ol><li>Click <strong>Settings</strong> in the tab strip.</li><li>At the top, set <strong>Send SMS From</strong> — the phone number all outbound dispatch texts are sent from. (No numbers listed? Assign a messaging profile to one of your numbers under Phone Numbers first.)</li><li>Work through the sections in the left rail — each one is an independent automation with its own <strong>On/Off</strong> toggle:<ul><li><strong>JOB SMS</strong> — <strong>New Job</strong> and <strong>Job Update</strong>: text a recipient list whenever a job is created or changed, with match rules deciding exactly when it fires.</li><li><strong>INBOUND</strong> — <strong>SMS → Ticket</strong> (turn inbound customer texts into jobs automatically), <strong>Status-Change SMS</strong> (notify customers as their job moves through statuses), <strong>Stale-Status</strong> (nudge when a job sits too long), and <strong>SMS Calendar Reminder</strong> (appointment reminders).</li><li><strong>AUTO DISPATCH</strong> — <strong>Reply Handling</strong>, <strong>OTW Confirmation</strong>, <strong>Outbound Dispatch</strong>, <strong>Broadcast / Race</strong>, and <strong>Calendar Sync</strong>: the engine that texts jobs to technicians and processes their ACK/PASS replies.</li></ul></li><li>Click <strong>Save</strong> when you change anything, or <strong>Close</strong> to exit.</li></ol><blockquote>💡 Auto-dispatch is the crown jewel — iMash texting the right technician the moment a job lands, escalating until someone accepts. Set it up end to end with the <em>Auto Dispatch</em> guide below.</blockquote>",
+      "images": [
+        { "src": "images/dispatch/overview-settings-light.png", "alt": "The Dispatch Settings modal with its section rail and toggles", "caption": "Dispatch Settings: Send SMS From on top, then Job SMS, Inbound, and Auto Dispatch sections — each with its own On/Off toggle.", "theme": "light" },
+        { "src": "images/dispatch/overview-settings-dark.png", "alt": "The Dispatch Settings modal with its section rail and toggles", "caption": "Dispatch Settings: Send SMS From on top, then Job SMS, Inbound, and Auto Dispatch sections — each with its own On/Off toggle.", "theme": "dark" }
+      ]
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "You've seen the whole cockpit — now put jobs in it and let iMash dispatch them for you.",
+    "cards": [
+      { "href": "/dispatch/jobs", "title": "Jobs", "description": "Create jobs and master the job detail page — status, finance, documents, and dispatch controls." },
+      { "href": "/dispatch/auto-dispatch", "title": "Auto Dispatch", "description": "Set up automatic technician texting with ACK/PASS replies, escalation, and broadcast mode." },
+      { "href": "/dispatch/technicians", "title": "Technicians & Team Members", "description": "Build your roster: availability, priority, commissions, and devices." },
+      { "href": "/dispatch/reports", "title": "Dispatch Reports", "description": "Finance and team reporting — every dollar and every technician, exportable." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>Questions about setting up your dispatch operation? Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a> and our team will help you get every job, technician, and automation dialed in.</p>"
+  },
+  "metaTitle": "Dispatch Overview | iMash Documentation",
+  "metaDescription": "Tour the iMash Dispatch section: the Statistics home view with revenue KPIs and charts, the Dispatch Dashboard, Kanban board, live Map, Team Members roster, and the Dispatch Settings automation hub.",
+  "metaKeywords": "dispatch, field service, jobs, technicians, statistics, kanban, map, dispatch settings, auto dispatch, iMash"
+}

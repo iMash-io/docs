@@ -1,0 +1,321 @@
+{
+  "title": "Email Marketing Campaigns",
+  "lede": "Send beautiful, personalized bulk email to thousands of contacts — with AI-written content, A/B template testing, adjustable sending speed, and live open/click tracking — all without leaving iMash.",
+  "timeToComplete": "12 minutes",
+  "steps": [
+    {
+      "id": "open-email-marketing",
+      "title": "Open the Marketing workspace",
+      "content": "<p>Your entire email marketing engine lives inside the Messages section — campaigns, reusable templates, recipient lists, and the suppression safety net, all in one place.</p><ol><li>In the left sidebar, click <strong>Email</strong> (under <em>Messages</em>). You can also use the top navigation: <strong>Messages → Email</strong>.</li><li>Across the top of the Email page, click the <strong>Marketing</strong> tab (next to <strong>Mailbox</strong>, <strong>Sending Domains</strong>, and <strong>Settings</strong>).</li><li>A four-way switcher appears: <strong>Campaigns</strong>, <strong>Templates</strong>, <strong>Lists</strong>, and <strong>Suppression</strong>. Each one is a building block:</li></ol><ul><li><strong>Campaigns</strong> — the sends themselves: who gets what, when, and how fast.</li><li><strong>Templates</strong> — reusable subject + body content you can rotate and A/B test.</li><li><strong>Lists</strong> — the audiences: recipients pulled from your CRM, CSV files, or pasted data.</li><li><strong>Suppression</strong> — addresses that must never be emailed (bounces, complaints, unsubscribes).</li></ul>",
+      "images": [
+        {
+          "src": "images/messages/email-marketing-campaigns-light.png",
+          "alt": "Messages → Email → Marketing tab with the Campaigns, Templates, Lists, and Suppression switcher and a draft campaign in the table",
+          "caption": "Messages → Email → Marketing: the Campaigns view with the four-way switcher on top",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-campaigns-dark.png",
+          "alt": "Messages → Email → Marketing tab with the Campaigns, Templates, Lists, and Suppression switcher and a draft campaign in the table",
+          "caption": "Messages → Email → Marketing: the Campaigns view with the four-way switcher on top",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "prep-sending-address",
+      "title": "Before you start: have a verified sending address",
+      "content": "<p>Marketing campaigns send from one of your <strong>verified</strong> email addresses — that's what keeps your mail out of the spam folder.</p><ol><li>On the Email page, open the <strong>Sending Domains</strong> tab and verify your domain (add the DNS records it shows you).</li><li>Create at least one mailbox/from-address on that domain — it will then appear in the campaign builder's <strong>From address</strong> dropdown.</li></ol><blockquote>⚠️ If the campaign builder's <strong>From address</strong> dropdown says <em>\"No verified sending addresses\"</em>, finish domain verification first — you can build and save campaigns as drafts in the meantime, but you won't be able to send.</blockquote>"
+    },
+    {
+      "id": "create-list",
+      "title": "Create a recipient list",
+      "content": "<p>Every campaign sends to exactly one list, so start by building your audience.</p><ol><li>In the switcher, click <strong>Lists</strong>.</li><li>Click <strong>New list</strong> in the top-left.</li><li>Give it a <strong>List name</strong> (e.g. \"Spring promo — past customers\") and an optional <strong>Description</strong>, then click <strong>Create</strong>.</li></ol><p>The list opens immediately so you can add members. The table shows every list with its <strong>Members</strong> count and <strong>Created</strong> date — click a list's name or its <strong>Manage</strong> button any time to reopen it.</p>",
+      "images": [
+        {
+          "src": "images/messages/email-marketing-lists-light.png",
+          "alt": "Lists view showing the New list button and a list with 10 members",
+          "caption": "The Lists view — each row shows the member count; Manage opens the list",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-lists-dark.png",
+          "alt": "Lists view showing the New list button and a list with 10 members",
+          "caption": "The Lists view — each row shows the member count; Manage opens the list",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "add-recipients",
+      "title": "Fill the list — CSV upload or pasted data",
+      "content": "<p>Open a list and you'll see three ways to add people across the top of the drawer:</p><ul><li><strong>Upload CSV</strong> — pick a .csv file from your computer. It needs a header row with a column containing \"email\"; every OTHER column you upload becomes a personalization <code>{token}</code> you can use in your emails (a <em>city</em> column becomes <code>{city}</code>, and so on).</li><li><strong>Add from CRM</strong> — pull in your existing contacts and leads (next step).</li><li><strong>Paste data</strong> — copy rows straight from a spreadsheet: paste them with a header line (comma or tab separated), click <strong>Parse columns</strong> to map each column, then <strong>Import</strong>.</li></ul><p>The member table shows each person's <strong>Email</strong>, <strong>Name</strong>, <strong>Source</strong> (<em>contact</em>, <em>lead</em>, or <em>csv</em>) and <strong>Status</strong> (<em>subscribed</em> / <em>unsubscribed</em>). Use the <strong>Search email…</strong> box to find someone, tick rows and click <strong>Remove</strong> to take them off the list.</p><blockquote>💡 Duplicates are handled for you — the same email address is only ever added to a list once, and anyone who unsubscribes stays on the list but is automatically skipped by every future send.</blockquote>",
+      "images": [
+        {
+          "src": "images/messages/email-marketing-list-members-light.png",
+          "alt": "List members drawer with Upload CSV, Add from CRM, and Paste data buttons and a members table showing contact and csv sources",
+          "caption": "The list drawer — three ways in, plus a personalization note explaining which {tokens} each member carries",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-list-members-dark.png",
+          "alt": "List members drawer with Upload CSV, Add from CRM, and Paste data buttons and a members table showing contact and csv sources",
+          "caption": "The list drawer — three ways in, plus a personalization note explaining which {tokens} each member carries",
+          "theme": "dark"
+        },
+        {
+          "src": "images/messages/email-marketing-paste-light.png",
+          "alt": "Paste recipients modal with a textarea for comma or tab separated rows and a Parse columns button",
+          "caption": "Paste data: drop in spreadsheet rows with a header line, then map the columns",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-paste-dark.png",
+          "alt": "Paste recipients modal with a textarea for comma or tab separated rows and a Parse columns button",
+          "caption": "Paste data: drop in spreadsheet rows with a header line, then map the columns",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "add-from-crm",
+      "title": "Add recipients straight from your CRM",
+      "content": "<p>This is where iMash shines: your CRM is already full of leads and contacts, complete with names, addresses, and custom fields — and every one of those travels into the email as a personalization token.</p><ol><li>In the list drawer, click <strong>Add from CRM</strong>.</li><li>Switch between <strong>Contacts</strong> and <strong>Leads</strong> at the top.</li><li>Narrow the audience with the filters: <strong>Search name or email…</strong>, <strong>Tags (any)</strong>, <strong>Accounts</strong>, <strong>State</strong>, and <strong>City</strong> (leads also get <strong>Status</strong> and <strong>Source</strong> filters). Click <strong>Apply filters</strong> — the match count updates instantly.</li><li>Tick individual rows and click <strong>Add selected</strong>, or click <strong>Add all N matching</strong> to snapshot <em>every</em> record that matches your filters in one go.</li></ol><blockquote>💡 Records without an email address (or with a duplicate one) are skipped automatically and reported — you'll see \"Added 42 (3 skipped — no/dup email)\".</blockquote>",
+      "images": [
+        {
+          "src": "images/messages/email-marketing-add-crm-light.png",
+          "alt": "Add from CRM modal with Contacts/Leads switch, search, tag, account, state and city filters, a match count, and Add all matching button",
+          "caption": "Add from CRM — filter by tags, account, or geography, then add selected rows or all matches",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-add-crm-dark.png",
+          "alt": "Add from CRM modal with Contacts/Leads switch, search, tag, account, state and city filters, a match count, and Add all matching button",
+          "caption": "Add from CRM — filter by tags, account, or geography, then add selected rows or all matches",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "create-template",
+      "title": "Create reusable templates (optional but powerful)",
+      "content": "<p>Templates are reusable subject + body combos. Attach several to one campaign and iMash rotates them automatically — an instant A/B/n test with per-template results.</p><ol><li>In the switcher, click <strong>Templates</strong>, then <strong>New template</strong>.</li><li>Enter a <strong>Template name</strong> (e.g. \"Variant A — short pitch\") and a <strong>Subject</strong> — both support <code>{tokens}</code>.</li><li>In the settings card, choose your <strong>Content</strong> source (<em>Static body</em> or <em>🪄 AI per recipient</em> — next step), the <strong>Format</strong> (<em>HTML</em> with a plain-text fallback, or <em>Plain text</em> only), and whether to include the <strong>One-click unsubscribe</strong> header.</li><li>Write the body in the <strong>HTML body</strong> and <strong>Plain-text fallback</strong> tabs. Click any token chip in the <strong>Insert:</strong> bar — <code>{first_name}</code>, <code>{city}</code>, <code>{account_name}</code>… — to drop it wherever your cursor last was. <strong>Custom fields</strong> hides your CRM custom-field tokens, including <code>{all_custom_vars}</code> which inserts every custom field the recipient has as one block.</li><li>Click <strong>Preview</strong> in the drawer header to render the template against a <em>real</em> contact or lead — search for a specific record or click <strong>Random</strong> — so you can see exactly what a recipient will receive, tokens filled in. Click <strong>Edit</strong> to go back.</li><li>Click <strong>Save</strong>.</li></ol><blockquote>⚠️ Keep <strong>One-click unsubscribe</strong> ON — Gmail and Yahoo require the hidden List-Unsubscribe header for bulk senders, and turning it off can hurt deliverability.</blockquote>",
+      "images": [
+        {
+          "src": "images/messages/email-marketing-templates-light.png",
+          "alt": "Templates view listing two template variants with their subjects and Edit/Delete actions",
+          "caption": "The Templates view — build several variants, then rotate them in one campaign",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-templates-dark.png",
+          "alt": "Templates view listing two template variants with their subjects and Edit/Delete actions",
+          "caption": "The Templates view — build several variants, then rotate them in one campaign",
+          "theme": "dark"
+        },
+        {
+          "src": "images/messages/email-marketing-template-editor-light.png",
+          "alt": "Template editor with name, subject, content/format/unsubscribe settings card, token chips, and the HTML body editor",
+          "caption": "The template editor — settings card up top, token chips, and the HTML body with {tokens}",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-template-editor-dark.png",
+          "alt": "Template editor with name, subject, content/format/unsubscribe settings card, token chips, and the HTML body editor",
+          "caption": "The template editor — settings card up top, token chips, and the HTML body with {tokens}",
+          "theme": "dark"
+        },
+        {
+          "src": "images/messages/email-marketing-preview-light.png",
+          "alt": "Template preview rendering the email against a real CRM record with the subject and body tokens filled in",
+          "caption": "Preview renders your template against a real contact or lead — every token filled in",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-preview-dark.png",
+          "alt": "Template preview rendering the email against a real CRM record with the subject and body tokens filled in",
+          "caption": "Preview renders your template against a real contact or lead — every token filled in",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "ai-writer",
+      "title": "Let the AI write your emails",
+      "content": "<p>Two levels of AI help are built into the template editor:</p><ul><li><strong>Write with AI</strong> (one-shot) — with <em>Static body</em> selected, click the <strong>Write with AI</strong> button next to the token bar. Describe the email you want (\"A spring tune-up promo for {first_name} in {city} — friendly tone, one CTA to book online\"), pick a model, and click <strong>Generate HTML email</strong>. The AI streams its draft live and fills the subject + body fields for you — then you edit and save as usual. Billed per token to your balance, like AI chat.</li><li><strong>🪄 AI per recipient</strong> — switch <strong>Content</strong> to <em>AI per recipient</em> and the body editors are replaced by a prompt panel. At send time, the model writes a <em>fresh, unique email for every single recipient</em>, with that person's tokens and CRM profile (name, address, custom fields) filled into your prompt. Leave the <strong>Subject</strong> empty to let the AI write that per recipient too.</li></ul><blockquote>⚠️ AI-per-recipient is billed per generation — a 1,000-recipient campaign means 1,000 AI generations. It's unbeatable for personalization, but use the one-shot writer when one great email for everyone is enough. Templates marked <strong>🪄 AI</strong> in the Templates list can't be previewed statically — they're written live at send time.</blockquote>",
+      "images": [
+        {
+          "src": "images/messages/email-marketing-write-ai-light.png",
+          "alt": "AI email writer panel open in the template editor with a prompt box, model picker, and Generate HTML email button",
+          "caption": "Write with AI: describe the email, pick a model, and the draft streams straight into your fields",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-write-ai-dark.png",
+          "alt": "AI email writer panel open in the template editor with a prompt box, model picker, and Generate HTML email button",
+          "caption": "Write with AI: describe the email, pick a model, and the draft streams straight into your fields",
+          "theme": "dark"
+        },
+        {
+          "src": "images/messages/email-marketing-template-ai-light.png",
+          "alt": "Template editor in AI per recipient mode showing the per-recipient AI writer prompt panel and model selector",
+          "caption": "AI per recipient: the model writes a unique email for every person on the list at send time",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-template-ai-dark.png",
+          "alt": "Template editor in AI per recipient mode showing the per-recipient AI writer prompt panel and model selector",
+          "caption": "AI per recipient: the model writes a unique email for every person on the list at send time",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "build-campaign",
+      "title": "Build the campaign",
+      "content": "<p>Time to put it all together.</p><ol><li>In the switcher, click <strong>Campaigns</strong>, then <strong>New campaign</strong> in the top-left.</li><li><strong>Campaign name</strong> — an internal label only; recipients never see it.</li><li><strong>From address</strong> — pick one of your verified sending addresses. <strong>From name</strong> is the display name recipients see; <strong>Reply-To</strong> optionally routes replies to a different address.</li><li><strong>Recipient list</strong> — pick the list you built; the member count shows right in the dropdown.</li><li>Under <strong>Email content</strong>, choose <strong>Compose inline</strong> to write the subject and body right here (same token chips, HTML + plain-text tabs, and a <strong>Preview</strong> toggle as the template editor).</li><li>Click <strong>Save</strong> in the drawer header at any point — the campaign is stored as a <em>draft</em> you can come back to.</li></ol>",
+      "images": [
+        {
+          "src": "images/messages/email-marketing-builder-light.png",
+          "alt": "Campaign builder drawer with name, from address, recipient list, sending speed tiers, email content mode, subject, token chips, and HTML body",
+          "caption": "The campaign builder — audience, speed, and content in one drawer; Save, Test, Schedule, and Send now live in the header",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-builder-dark.png",
+          "alt": "Campaign builder drawer with name, from address, recipient list, sending speed tiers, email content mode, subject, token chips, and HTML body",
+          "caption": "The campaign builder — audience, speed, and content in one drawer; Save, Test, Schedule, and Send now live in the header",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "rotate-templates",
+      "title": "Or rotate templates for an instant A/B test",
+      "content": "<p>Instead of composing inline, let your templates compete:</p><ol><li>Under <strong>Email content</strong>, click <strong>Rotate templates</strong>.</li><li>In <strong>Templates to rotate</strong>, pick one or more of your saved templates.</li></ol><p>Recipients are split evenly across the selected templates — each template carries its own subject and body, while the From address, footer, and tracking settings of the campaign apply to all of them. After the send, the campaign report shows a <strong>Template rotation</strong> table comparing each variant's delivery, open, click, and reply rates — so the next campaign uses the proven winner.</p>",
+      "images": [
+        {
+          "src": "images/messages/email-marketing-rotate-light.png",
+          "alt": "Campaign builder with Rotate templates selected and the Templates to rotate multi-select visible",
+          "caption": "Rotate templates: pick several variants and iMash splits recipients evenly between them",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-rotate-dark.png",
+          "alt": "Campaign builder with Rotate templates selected and the Templates to rotate multi-select visible",
+          "caption": "Rotate templates: pick several variants and iMash splits recipients evenly between them",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "pick-speed",
+      "title": "Pick a sending speed",
+      "content": "<p>Blasting 50,000 emails in a minute from a fresh domain is how you land in spam. The <strong>Sending speed</strong> tiers let you match the pace to your list and domain reputation:</p><ul><li><strong>🐢 Trickle</strong> — slowest; cold outreach or warming a brand-new domain.</li><li><strong>🚶 Steady</strong> — the recommended default (~3,000/hr) for newsletters and nurture emails.</li><li><strong>🏃 Fast</strong> — for engaged, warmed-up lists.</li><li><strong>🚀 Rapid</strong> — time-sensitive blasts on a trusted domain.</li><li><strong>⚡ Max</strong> — the full shared pipe, limited only by your account's governor.</li><li><strong>🎛️ Custom</strong> — type an exact emails-per-hour rate.</li></ul><p>The helper line below the tiers does the math for you — pick a list and it estimates the total send duration (\"~3,000/hr · ≈ under a minute for 10 recipients\").</p><blockquote>💡 You can change the speed <em>while a campaign is sending</em> — open its report and use the <strong>Sending speed</strong> dropdown there; the new rate applies within ~30 seconds. Started too fast? Throttle down without cancelling.</blockquote>",
+      "images": [
+        {
+          "src": "images/messages/email-marketing-speed-light.png",
+          "alt": "Sending speed tier buttons Trickle, Steady, Fast, Rapid, Max, and Custom with a live duration estimate below",
+          "caption": "Six speed tiers, with a live estimate of how long your list will take at the chosen rate",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-speed-dark.png",
+          "alt": "Sending speed tier buttons Trickle, Steady, Fast, Rapid, Max, and Custom with a live duration estimate below",
+          "caption": "Six speed tiers, with a live estimate of how long your list will take at the chosen rate",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "tracking-footer",
+      "title": "Tracking and the unsubscribe footer",
+      "content": "<p>Scroll to the bottom of the campaign builder for the last two controls:</p><ul><li><strong>Track opens</strong> / <strong>Track clicks</strong> — on by default. Opens and clicks are measured through your tracking domain and feed the campaign report. Open tracking needs an HTML body — a text-only campaign is auto-converted to HTML when tracking is on; turn <em>both</em> toggles off to send pure plain text.</li><li><strong>Include unsubscribe footer</strong> — appends a footer with the recipient's personal unsubscribe link. Edit the <strong>Footer (HTML)</strong> and <strong>Footer (plain text)</strong> tabs to match your brand, and place <code>{unsubscribe_url}</code> wherever you want the link.</li></ul><blockquote>💡 Even with the visible footer off, a hidden one-click <code>List-Unsubscribe</code> header is always sent — that's what powers Gmail's and Yahoo's built-in Unsubscribe button and protects your sender reputation.</blockquote>",
+      "images": [
+        {
+          "src": "images/messages/email-marketing-footer-light.png",
+          "alt": "Bottom of the campaign builder showing Track opens and Track clicks toggles and the Include unsubscribe footer section with HTML footer editor",
+          "caption": "Tracking toggles and the customizable unsubscribe footer with the {unsubscribe_url} token",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-footer-dark.png",
+          "alt": "Bottom of the campaign builder showing Track opens and Track clicks toggles and the Include unsubscribe footer section with HTML footer editor",
+          "caption": "Tracking toggles and the customizable unsubscribe footer with the {unsubscribe_url} token",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "test-schedule-send",
+      "title": "Test it, then send or schedule",
+      "content": "<p>The four buttons in the campaign drawer's header are your launch pad:</p><ol><li><strong>Save</strong> — stores the campaign as a draft (drafts and scheduled campaigns stay fully editable).</li><li><strong>Test</strong> — enter any email address and receive the real rendered campaign in that inbox. <em>Always</em> send yourself a test first — check the subject, the tokens, and how it looks on your phone.</li><li><strong>Schedule</strong> — pick a date and time, click <strong>Schedule</strong>, and the campaign fires automatically at that moment. A scheduled campaign shows its launch time in the Campaigns table and can still be edited or cancelled until then.</li><li><strong>Send now</strong> — a confirmation explains exactly what happens: emails go out immediately to every <em>subscribed, non-suppressed</em> member of the list. Confirm and the send begins at your chosen speed.</li></ol><blockquote>💡 Changed your mind mid-send? In the Campaigns table, click <strong>Cancel</strong> on a <em>sending</em> or <em>scheduled</em> campaign — remaining recipients simply aren't sent to.</blockquote>"
+    },
+    {
+      "id": "monitor-report",
+      "title": "Watch results live in the campaign report",
+      "content": "<p>The Campaigns table itself shows <strong>Status</strong> (draft, scheduled, sending, sent, cancelled), a live <strong>Progress</strong> bar, <strong>Recipients</strong>, <strong>Opens</strong>, and <strong>Clicks</strong> — refreshing automatically while a send runs. For the full story, click <strong>Report</strong> on any campaign:</p><ul><li><strong>Stat tiles</strong> — Recipients, Sent, Delivered (with rate), Failed, unique Opens and Clicks (with rates), Bounced, Complaints, Replied, Unsubscribed, Blocked (AWS pre-delivery validation), Suppressed (skipped), plus Total opens/clicks.</li><li><strong>Sending speed</strong> — retune the rate mid-send right from the report.</li><li><strong>Template rotation</strong> — if you rotated templates, a comparison table shows each variant's sent/delivered/opened/clicked/replied numbers side by side.</li><li><strong>Recipient table</strong> — every single address with its status (<em>sent, delivered, opened, clicked, bounced, complained, unsubscribed, failed…</em>), open/click counts, timestamp, and any error. Filter it with the status dropdown.</li><li><strong>Add new list members</strong> — grew the list after sending? This button sends to <em>only the new</em> subscribed members; nobody already in the campaign is ever emailed twice.</li></ul>",
+      "images": [
+        {
+          "src": "images/messages/email-marketing-report-light.png",
+          "alt": "Campaign report drawer with stat tiles for recipients, sent, delivered, opens, clicks, bounces, complaints and a per-recipient table below",
+          "caption": "The campaign report — every metric that matters, a mid-send speed control, and a per-recipient breakdown",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-report-dark.png",
+          "alt": "Campaign report drawer with stat tiles for recipients, sent, delivered, opens, clicks, bounces, complaints and a per-recipient table below",
+          "caption": "The campaign report — every metric that matters, a mid-send speed control, and a per-recipient breakdown",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "suppression",
+      "title": "The Suppression list — your deliverability bodyguard",
+      "content": "<p>The <strong>Suppression</strong> view is the list of addresses iMash will <em>never</em> email again, no matter which list they're on. It fills itself:</p><ul><li><strong>bounce</strong> — the address hard-bounced (doesn't exist / mailbox dead).</li><li><strong>complaint</strong> — the recipient marked your email as spam.</li><li><strong>unsubscribe</strong> — they clicked an unsubscribe link or Gmail's one-click button.</li><li><strong>manual</strong> — you added them yourself: type an address in <strong>Add email to suppress</strong> and click <strong>Suppress</strong>.</li></ul><p>Each row shows the <strong>Reason</strong>, <strong>Source</strong>, and <strong>When</strong>. Use <strong>Search email…</strong> to check a specific address. Suppressed recipients are counted as \"Suppressed (skipped)\" in campaign reports — they cost you nothing and protect your sender reputation.</p><blockquote>⚠️ Removing an address from suppression is restricted to the main account, and should be rare — emailing someone who complained is the fastest way to get your domain blacklisted. That's the whole campaign cycle: audience → content → speed → send → learn. Your next promo is one <strong>New campaign</strong> click away.</blockquote>",
+      "images": [
+        {
+          "src": "images/messages/email-marketing-suppression-light.png",
+          "alt": "Suppression view with search, an Add email to suppress field, and a table of suppressed addresses with reason and source",
+          "caption": "Suppression: bounces, complaints, and unsubscribes land here automatically — and are never emailed again",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/email-marketing-suppression-dark.png",
+          "alt": "Suppression view with search, an Add email to suppress field, and a table of suppressed addresses with reason and source",
+          "caption": "Suppression: bounces, complaints, and unsubscribes land here automatically — and are never emailed again",
+          "theme": "dark"
+        }
+      ]
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Your campaigns are only as good as your audience and your domain — level both up next.",
+    "cards": [
+      {
+        "href": "/messages/email",
+        "title": "Email Inbox & Sending Domains",
+        "description": "Verify your sending domain, manage mailboxes, and handle replies to your campaigns."
+      },
+      {
+        "href": "/messages/whatsapp-campaigns",
+        "title": "WhatsApp Campaigns",
+        "description": "Run the same bulk-campaign playbook over WhatsApp templates."
+      },
+      {
+        "href": "/crm/import-export-data",
+        "title": "Import & Export CRM Data",
+        "description": "Bring in spreadsheets of customers so Add from CRM has everything it needs."
+      }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>Questions about deliverability, sending speeds, or the AI writer? Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a> — we're happy to help you get your first campaign out the door.</p>"
+  },
+  "metaTitle": "Email Marketing Campaigns | iMash Documentation",
+  "metaDescription": "Send bulk email campaigns in iMash: build recipient lists from CRM or CSV, personalize with {tokens}, write content with AI, rotate templates as A/B tests, control sending speed, and track opens, clicks, and unsubscribes.",
+  "metaKeywords": "email marketing, bulk email, email campaigns, AI email writer, A/B testing, sending speed, open tracking, click tracking, unsubscribe, suppression list, iMash"
+}

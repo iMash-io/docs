@@ -1,47 +1,88 @@
 {
-  "title": "Ajustes de cola",
-  "lede": "Cuando un agente transfiere una llamada a este grupo como cola, el cliente queda retenido mientras suenan los miembros en línea del grupo hasta que uno contesta. Define la espera máxima, qué pasa al agotarse el tiempo y el audio de retención.",
-  "timeToComplete": "5 minutos",
+  "title": "Configuración de Colas",
+  "lede": "No vuelva a perder una llamada porque su equipo estaba ocupado. Las colas retienen a sus clientes con música, avisos en vivo de su posición en la fila y una red de seguridad garantizada — esta guía recorre cada ajuste de la cola, desde la espera máxima hasta el respaldo con IA, además de lo que ven sus agentes.",
+  "timeToComplete": "10 minutos",
   "steps": [
     {
-      "id": "open-queue",
-      "title": "Abre la pestaña Queue Settings (Ajustes de cola)",
-      "content": "<ol><li>Ve a <strong>Call Center &rarr; Contact Center &rarr; Groups</strong> (Grupos) y selecciona un grupo.</li><li>Abre la pestaña <strong>Queue Settings</strong> (Ajustes de cola).</li></ol>",
+      "id": "understand-queues",
+      "title": "Entienda cómo funcionan las colas en iMash",
+      "content": "<p>Una cola es una sala de espera cortés: la persona que llama escucha música y mensajes hablados mientras iMash sigue timbrando a los miembros <strong>Online</strong> (en línea) del equipo — en cuanto un agente se libera, la llamada se conecta. Una llamada entra en una cola de dos maneras:</p><ul><li><strong>Alguien la estaciona ahí a propósito.</strong> Durante una llamada en vivo, un agente (o un asistente de IA) transfiere al cliente a un grupo <em>como cola</em> — por ejemplo, pasando una consulta de facturación a la cola del equipo de Facturación.</li><li><strong>Desborde de llamadas entrantes.</strong> Una llamada timbra al grupo pero todos los miembros están ocupados — con el interruptor de desborde activado (lo está por defecto), la persona queda retenida en la cola en lugar de ir directo al respaldo.</li></ul><p>Las llamadas se atienden en el orden en que llegaron, y la cola puede incluso decirle a cada persona su posición en la fila en tiempo real. Todo en esta página se configura <strong>por grupo</strong>, así que Ventas y Soporte pueden tener cada uno sus propios límites de espera, sonidos y respaldos.</p>"
+    },
+    {
+      "id": "open-queue-settings",
+      "title": "Abra la pestaña Queue Settings de un grupo",
+      "content": "<ol><li>En la barra lateral izquierda, bajo <strong>Call Center</strong> (Centro de Llamadas), haga clic en <strong>Contact Center</strong> (Centro de Contacto).</li><li>Abra la pestaña <strong>Groups</strong> (Grupos) en la parte superior de la página.</li><li>En la lista <strong>Groups</strong> de la izquierda, haga clic en el grupo que quiere configurar.</li><li>En el panel del grupo, abra la pestaña <strong>Queue Settings</strong> (Configuración de Cola) — puede que necesite desplazar la franja de pestañas hacia la derecha.</li></ol><p>Verá una tarjeta — <strong>Queue (transfer to this group as a queue)</strong> (Cola: transferir a este grupo como cola) — con el límite de espera, la acción por tiempo agotado y el audio en espera de la cola de este grupo.</p>",
       "images": [
-        { "src": "images/contact-center/cc-group-queue-settings-light.png", "alt": "Pestaña Queue Settings", "caption": "Queue Settings: espera máxima, acción al agotarse el tiempo y audio de retención de la cola.", "theme": "light" },
-        { "src": "images/contact-center/cc-group-queue-settings-dark.png", "alt": "Pestaña Queue Settings", "caption": "Queue Settings: espera máxima, acción al agotarse el tiempo y audio de retención de la cola.", "theme": "dark" }
+        { "src": "images/contact-center/cc-group-queue-settings-light.png", "alt": "Pestaña Groups del Contact Center con un grupo seleccionado y la pestaña Queue Settings abierta", "caption": "Groups → seleccione un grupo → Queue Settings: espera máxima, acción por tiempo agotado y audio de la cola en una sola tarjeta.", "theme": "light" },
+        { "src": "images/contact-center/cc-group-queue-settings-dark.png", "alt": "Pestaña Groups del Contact Center con un grupo seleccionado y la pestaña Queue Settings abierta", "caption": "Groups → seleccione un grupo → Queue Settings: espera máxima, acción por tiempo agotado y audio de la cola en una sola tarjeta.", "theme": "dark" }
       ]
     },
     {
       "id": "max-wait",
-      "title": "Define la espera máxima",
-      "content": "<p>En <strong>Max wait in queue (seconds)</strong> (Espera máxima en cola [segundos]), ingresa cuánto espera un cliente en cola antes de que se dispare la acción por tiempo agotado. Ingresa <strong>0</strong> para usar el valor predeterminado del sistema (30 minutos).</p>"
+      "title": "Defina el tiempo máximo de espera",
+      "content": "<p>En <strong>Max wait in queue (seconds)</strong> (Espera máxima en cola, en segundos), indique cuánto puede esperar un cliente en cola antes de que se dispare la acción por tiempo agotado (paso siguiente).</p><ul><li><strong>300</strong> (5 minutos) es un buen punto de partida para la mayoría de los equipos.</li><li>Escriba <strong>0</strong> para usar el valor por defecto del sistema — 30 minutos.</li><li>El máximo configurable es <strong>14400</strong> segundos (4 horas).</li></ul><blockquote>💡 Piense en esto como su presupuesto de paciencia del cliente. Lo bastante largo para que un equipo ocupado por un momento aún alcance la llamada, y lo bastante corto para que nadie se desespere en espera — 300–600 segundos funciona bien para la mayoría de los equipos de soporte y ventas.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/queue-settings-card-light.png", "alt": "Tarjeta Queue Settings mostrando la espera máxima en cola, la acción por tiempo agotado y los interruptores de audio", "caption": "La tarjeta de la cola: Max wait in queue (seconds), la acción por tiempo agotado y los interruptores de audio.", "theme": "light" },
+        { "src": "images/contact-center/queue-settings-card-dark.png", "alt": "Tarjeta Queue Settings mostrando la espera máxima en cola, la acción por tiempo agotado y los interruptores de audio", "caption": "La tarjeta de la cola: Max wait in queue (seconds), la acción por tiempo agotado y los interruptores de audio.", "theme": "dark" }
+      ]
     },
     {
       "id": "on-timeout",
-      "title": "Elige la acción al agotarse el tiempo",
-      "content": "<p>En <strong>When the max wait is reached</strong> (Cuando se alcanza la espera máxima), elige qué pasa si nadie contesta a tiempo:</p><ul><li><strong>Hang up the call</strong> (Colgar la llamada).</li><li><strong>Transfer to an AI assistant</strong> (Transferir a un asistente de IA) — luego elige el asistente que toma la llamada.</li></ul><p>Esta es la red de seguridad para que un cliente en espera nunca quede abandonado.</p>"
+      "title": "Elija qué ocurre al alcanzarse la espera máxima",
+      "content": "<p>En <strong>When the max wait is reached</strong> (Cuando se alcanza la espera máxima), elija la red de seguridad para una llamada que nadie logró atender a tiempo:</p><ul><li><strong>Hang up the call</strong> (Colgar la llamada) — la llamada simplemente termina tras la espera máxima.</li><li><strong>Transfer to an AI assistant</strong> (Transferir a un asistente de IA) — el cliente pasa a un agente de IA en lugar de quedar abandonado. Aparece un campo nuevo: <strong>AI assistant to take the call</strong> (Asistente de IA que toma la llamada) — elija el asistente (este campo es obligatorio cuando se selecciona esta opción).</li></ul><blockquote>💡 El traspaso a la IA es la diferencia entre \"perdimos una llamada\" y \"capturamos un cliente potencial\": el asistente puede disculparse por la espera, responder preguntas, tomar un mensaje detallado o agendar una devolución de llamada — 24/7, incluso cuando todo el equipo está saturado.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/queue-settings-timeout-ai-light.png", "alt": "When the max wait is reached configurado en Transfer to an AI assistant con el selector de asistente visible", "caption": "Elija Transfer to an AI assistant y aparece el selector de asistente obligatorio.", "theme": "light" },
+        { "src": "images/contact-center/queue-settings-timeout-ai-dark.png", "alt": "When the max wait is reached configurado en Transfer to an AI assistant con el selector de asistente visible", "caption": "Elija Transfer to an AI assistant y aparece el selector de asistente obligatorio.", "theme": "dark" }
+      ]
     },
     {
       "id": "queue-audio",
-      "title": "Configura el audio de retención de la cola",
-      "content": "<p>Activa <strong>Play hold music while queued</strong> (Reproducir música de retención mientras está en cola) para reproducir la música de retención o de espera configurada mientras la persona está en esta cola. Opcionalmente agrega <strong>Queue periodic messages</strong> (Mensajes periódicos de cola) — líneas habladas que se repiten en bucle mientras la persona está retenida. Puedes usar tokens como {first_name} y {callers_queue_position}, que se actualiza en vivo con el lugar de la persona en la fila. Haz clic en <strong>Save</strong> (Guardar).</p>"
+      "title": "Diseñe lo que escuchan los clientes mientras esperan",
+      "content": "<p>Dos controles definen la banda sonora en espera de <em>esta</em> cola:</p><ul><li><strong>Play hold music while queued</strong> (Reproducir música de espera en cola) — reproduce la <strong>Hold music</strong> (música de retención) o la Wait music que configuró en la pestaña <strong>Wait &amp; Hold experience</strong>. Desactívelo para tener silencio entre los mensajes hablados.</li><li><strong>Queue periodic messages</strong> (Mensajes periódicos de la cola) — frases habladas que se repiten en bucle mientras la persona está retenida en esta cola, independientes de los mensajes de espera. Deje la lista vacía para reutilizar los mensajes de espera.</li></ul><p>Con <strong>Queue periodic messages</strong> activado:</p><ol><li>Marque <strong>Play the first message once before the hold music starts</strong> (Reproducir el primer mensaje una vez antes de que empiece la música) si quiere que el mensaje 1 actúe como saludo único (queda etiquetado <strong>Before music</strong>).</li><li>Escriba cada mensaje — por ejemplo, <em>\"Gracias por esperar, {first_name}.\"</em></li><li>Junto a cada mensaje, defina la espera antes de reproducirlo: un número de segundos (p. ej. <strong>30</strong>) o un rango como <strong>15-45</strong> para una espera aleatoria cada vez.</li><li>Haga clic en <strong>Add message</strong> (Agregar mensaje) para más líneas; el icono de papelera elimina una.</li></ol><blockquote>💡 Los tokens de personalización funcionan aquí: <code>{first_name}</code> saluda al cliente por su nombre y <code>{callers_queue_position}</code> se actualiza <em>en vivo</em> con su posición en la fila — \"Usted es el número 2 en la fila\" supera a la música genérica todas las veces.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/queue-settings-periodic-light.png", "alt": "Queue periodic messages activado con la lista de mensajes, el campo de intervalo y el botón Add message", "caption": "Queue periodic messages: casilla de saludo antes de la música, filas de mensajes con espera individual y Add message.", "theme": "light" },
+        { "src": "images/contact-center/queue-settings-periodic-dark.png", "alt": "Queue periodic messages activado con la lista de mensajes, el campo de intervalo y el botón Add message", "caption": "Queue periodic messages: casilla de saludo antes de la música, filas de mensajes con espera individual y Add message.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "inbound-overflow-queue",
+      "title": "Decida si las llamadas entrantes ocupadas entran a la cola automáticamente",
+      "content": "<p>Hay un interruptor más de la cola, y está en otra pestaña: abra la pestaña <strong>Ring strategy</strong> (Estrategia de timbrado) del grupo y busque la tarjeta <strong>Call handling</strong> (Manejo de llamadas).</p><ul><li><strong>Hold callers in a queue when no agent is free</strong> (Retener llamadas en cola cuando ningún agente está libre) — <strong>Activado (por defecto)</strong>: si todos los miembros están ocupados, la llamada entrante queda retenida en la cola (música de espera + posición en la fila) y timbra en cuanto un agente se libera, hasta la espera máxima de la cola — luego se ejecuta el respaldo <strong>When no one answers</strong> (Cuando nadie contesta). <strong>Desactivado</strong>: la llamada timbra a los miembros en línea una sola vez; si nadie contesta, el respaldo se ejecuta de inmediato — las llamadas nunca entran a la cola.</li></ul><blockquote>⚠️ Desactivarlo significa que un momento de alta ocupación envía las llamadas directo al respaldo (agente de IA o colgar). Manténgalo activado salvo que busque específicamente un flujo de \"timbrar una vez y luego IA\".</blockquote>",
+      "images": [
+        { "src": "images/contact-center/queue-settings-inbound-queue-light.png", "alt": "Tarjeta Call handling en la pestaña Ring strategy con el interruptor Hold callers in a queue activado", "caption": "Ring strategy → Call handling: 'Hold callers in a queue when no agent is free' controla el encolado por desborde de entrantes.", "theme": "light" },
+        { "src": "images/contact-center/queue-settings-inbound-queue-dark.png", "alt": "Tarjeta Call handling en la pestaña Ring strategy con el interruptor Hold callers in a queue activado", "caption": "Ring strategy → Call handling: 'Hold callers in a queue when no agent is free' controla el encolado por desborde de entrantes.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "save-and-test",
+      "title": "Guarde y pruebe su cola",
+      "content": "<ol><li>Haga clic en <strong>Save</strong> (Guardar) en la parte inferior derecha del panel del grupo — un solo guardado aplica la configuración de todas las pestañas del grupo.</li><li>Para probar: asegúrese de que al menos un miembro esté <strong>Online</strong> (en línea), y pida a un agente que transfiera una llamada en vivo a este grupo como cola (o llame a uno de los números entrantes del grupo mientras todos están ocupados).</li><li>Observe la pestaña <strong>Live Monitor</strong> (Monitor en Vivo) — los clientes en cola aparecen en el panel <strong>On Queue</strong> (En Cola) en tiempo real, así puede ver la cola funcionando desde el momento en que la configura.</li></ol><blockquote>💡 La forma en que se timbra a los miembros desde la cola sigue la <strong>Ring strategy</strong> del grupo — todos a la vez, round-robin, lineal o el más tiempo inactivo. Ajústela en la pestaña Ring strategy.</blockquote>"
+    },
+    {
+      "id": "agent-experience",
+      "title": "Conozca lo que ven sus agentes",
+      "content": "<p>Así se ve la cola desde el lado de su equipo:</p><ul><li>El panel <strong>On Queue</strong> (En Cola) en el centro de la pantalla de inicio del agente muestra a cada cliente en espera, con un contador en vivo.</li><li>Los agentes no \"escogen\" de la cola — mientras están <strong>Online</strong>, el sistema les timbra automáticamente al siguiente cliente en cola. Cuando nadie espera, el panel muestra <strong>No customers on queue</strong> (No hay clientes en cola).</li><li>Para estacionar a un cliente en una cola, un agente en llamada activa hace clic en <strong>Teammate</strong> (Compañero) en el marcador web, lo que abre <strong>Conference / Transfer</strong> (Conferencia / Transferencia), y elige <strong>A queue</strong> (Una cola) — luego selecciona el grupo. El cliente escucha la música y los mensajes de espera de ese grupo mientras se timbra a sus miembros en línea.</li></ul><p>Eso es todo — su cola ahora atrapa cada llamada, entretiene a los clientes por su nombre y siempre tiene un respaldo de IA. Para el recorrido completo del día a día que deberían leer sus representantes, vea la Guía del Agente abajo.</p>",
+      "images": [
+        { "src": "images/contact-center/queue-settings-agent-view-light.png", "alt": "Pantalla de inicio del agente con el panel On Queue, el marcador web y el estado Online", "caption": "La vista del agente: panel On Queue al centro, marcador web con el botón Teammate a la derecha y la tarjeta de estado Online.", "theme": "light" },
+        { "src": "images/contact-center/queue-settings-agent-view-dark.png", "alt": "Pantalla de inicio del agente con el panel On Queue, el marcador web y el estado Online", "caption": "La vista del agente: panel On Queue al centro, marcador web con el botón Teammate a la derecha y la tarjeta de estado Online.", "theme": "dark" }
+      ]
     }
   ],
   "nextSteps": {
-    "title": "¿Qué sigue?",
-    "description": "Completa cómo suena y se escucha el grupo.",
+    "title": "¿Qué Sigue?",
+    "description": "Su cola ya está en marcha — ahora perfeccione el resto del recorrido del cliente, desde el primer timbre hasta la música de espera.",
     "cards": [
-      { "href": "/contact-center/wait-hold", "title": "Experiencia de espera y retención", "description": "Música y mensajes mientras las personas esperan." },
-      { "href": "/contact-center/ring-strategy", "title": "Estrategia de timbrado", "description": "Cómo suenan los miembros antes de pasar a la cola." },
-      { "href": "/agents/create-agent", "title": "Crear un agente de IA", "description": "Construye el asistente para el respaldo por tiempo agotado." }
+      { "href": "/contact-center/ring-strategy", "title": "Estrategia de Timbrado", "description": "Elija cómo se timbra a los miembros — todos a la vez, round-robin, lineal o el más tiempo inactivo." },
+      { "href": "/contact-center/wait-hold", "title": "Experiencia de Espera y Retención", "description": "Elija la música y los mensajes que escuchan los clientes mientras esperan o están en retención." },
+      { "href": "/contact-center/agent-guide", "title": "Guía del Agente", "description": "El recorrido de primer día para sus representantes — ponerse Online, el panel On Queue y las transferencias." },
+      { "href": "/agents/create-agent", "title": "Crear un Agente de IA", "description": "Construya el asistente que atrapa los tiempos agotados de la cola 24/7." }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
+    "title": "¿Necesita Ayuda?",
+    "content": "<p>Si tiene algún problema o pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
   },
-  "metaTitle": "Ajustes de cola | iMash Docs",
-  "metaDescription": "Configura los ajustes de cola del Contact Center en iMash: tiempo máximo de espera, acción al agotarse el tiempo (colgar o pasar a la IA), tamaño de la cola y audio de retención.",
-  "metaKeywords": "ajustes de cola, espera máxima, tiempo agotado, buzón de voz, respaldo de ia, música de retención, contact center, grupo de permisos"
+  "metaTitle": "Configuración de Colas | Documentación de iMash",
+  "metaDescription": "Configure las colas del Contact Center en iMash: tiempo máximo de espera, acción por tiempo agotado (colgar o asistente de IA), música de espera, mensajes periódicos con posición en la fila en vivo, encolado por desborde de entrantes y la experiencia On Queue del agente.",
+  "metaKeywords": "configuración de colas, cola de llamadas, espera máxima, tiempo agotado, respaldo de IA, música de espera, mensajes periódicos, posición en la fila, desborde de entrantes, centro de contacto, grupo de permisos, iMash"
 }

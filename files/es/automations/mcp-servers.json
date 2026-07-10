@@ -1,50 +1,119 @@
 {
-  "title": "Adjuntar un Servidor MCP",
-  "lede": "Un servidor Model Context Protocol (MCP) agrupa herramientas y recursos externos que tu Smart Agent puede usar durante una conversación. Adjunta uno desde el panel Tools / MCP del agente.",
-  "timeToComplete": "5 minutos",
+  "title": "Servidores MCP",
+  "lede": "Construya su propio servidor MCP (Model Context Protocol) — un kit de herramientas listo para usar con acciones de más de 280 aplicaciones y sus propios flujos de automatización — y entrégueselo a sus Smart Agents para que realmente HAGAN cosas durante una conversación.",
+  "timeToComplete": "10 minutos",
   "steps": [
     {
-      "id": "open-tools-mcp",
-      "title": "Abrir el Panel Tools / MCP",
-      "content": "<ol><li>Ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de Inteligencia → Agentes Inteligentes) y abre el agente que quieres ampliar.</li><li>Abre el panel <strong>Tools / MCP</strong> (Herramientas / MCP) en el editor.</li><li>Encuentra el selector <strong>MCP Server</strong> (Servidor MCP).</li></ol>",
+      "id": "open-mcp",
+      "title": "Abra el Administrador de MCP",
+      "content": "<p>Piense en un servidor MCP como una caja de herramientas que usted arma una sola vez y entrega a cualquier agente de IA: cada herramienta es una acción real (enviar un mensaje de Slack, crear un evento de calendario, llamar a una API, ejecutar uno de sus flujos) que el agente puede disparar en medio de la conversación. Aquí es donde se construye esa caja:</p><ol><li>En la barra lateral izquierda, haga clic en <strong>Intelligence Center → Automation</strong> (Centro de Inteligencia → Automatización).</li><li>El espacio de trabajo de Automation se abre con su propia mini-barra lateral a la izquierda (Flows, Custom Tables, System Tables, MCP, Todos, Connections).</li><li>Haga clic en <strong>MCP</strong> en esa mini-barra lateral.</li><li>Llegará a la página <strong>MCP Servers</strong> (Servidores MCP): una tabla con las columnas <strong>Name</strong> (Nombre), <strong>Tools</strong> (Herramientas) y <strong>Last Modified</strong> (Última modificación). En una cuenta nueva dirá <strong>No MCP servers have been created yet</strong> (Aún no se han creado servidores MCP).</li></ol><blockquote>💡 <strong>Consejo:</strong> Los servidores MCP son distintos de sus flujos de automatización: un flujo se ejecuta con un disparador, mientras que una herramienta MCP espera a que un agente de IA decida que la necesita. Incluso puede exponer flujos como herramientas MCP (se explica más abajo), obteniendo lo mejor de ambos mundos.</blockquote>",
       "images": [
-        { "src": "images/agents/tools-mcp-light.png", "alt": "Panel de Herramientas y MCP", "caption": "El panel Tools / MCP, donde eliges un servidor MCP para el agente.", "theme": "light" },
-        { "src": "images/agents/tools-mcp-dark.png", "alt": "Panel de Herramientas y MCP", "caption": "El panel Tools / MCP, donde eliges un servidor MCP para el agente.", "theme": "dark" }
+        { "src": "images/automations/mcp-servers-open-light.png", "alt": "Página de Servidores MCP dentro del espacio de trabajo de Automation", "caption": "Automation → MCP: la página de Servidores MCP, lista para su primer servidor.", "theme": "light" },
+        { "src": "images/automations/mcp-servers-open-dark.png", "alt": "Página de Servidores MCP dentro del espacio de trabajo de Automation", "caption": "Automation → MCP: la página de Servidores MCP, lista para su primer servidor.", "theme": "dark" }
       ]
     },
     {
-      "id": "select-server",
-      "title": "Seleccionar un Servidor MCP",
-      "content": "<ol><li>Abre el desplegable <strong>MCP Server</strong> (Servidor MCP) para ver los servidores configurados en tu cuenta.</li><li>Elige uno: al seleccionarlo se <strong>habilita</strong> automáticamente MCP para este agente y se guarda la elección.</li><li>Para desactivarlo, borra la selección.</li></ol>",
-      "images": []
+      "id": "create-server",
+      "title": "Cree y Nombre su Servidor",
+      "content": "<ol><li>Haga clic en <strong>+ New MCP Server</strong> (Nuevo servidor MCP) en la esquina superior derecha.</li><li>El servidor se crea al instante y usted llega a su página. Tiene dos pestañas: <strong>Configure</strong> (Configurar — sus herramientas) e <strong>History</strong> (Historial — cada ejecución de herramienta).</li><li>Haga clic en el nombre del servidor en la parte superior (o en el ícono de lápiz junto a él), escriba un nombre descriptivo como <em>Support Toolkit</em> y presione <strong>Enter</strong>. El cambio de nombre se guarda automáticamente.</li></ol><blockquote>💡 <strong>Consejo:</strong> Nombre los servidores según el trabajo que realizan: \"Support Toolkit\", \"Sales Research\", \"Booking Actions\". Cuando más adelante conecte servidores a sus agentes, un nombre claro siempre gana frente a \"Untitled\".</blockquote>",
+      "images": [
+        { "src": "images/automations/mcp-servers-configure-light.png", "alt": "Pestaña Configure de un servidor MCP nuevo sin herramientas todavía", "caption": "Su nuevo servidor: la pestaña Configure comienza vacía — hora de agregar herramientas.", "theme": "light" },
+        { "src": "images/automations/mcp-servers-configure-dark.png", "alt": "Pestaña Configure de un servidor MCP nuevo sin herramientas todavía", "caption": "Su nuevo servidor: la pestaña Configure comienza vacía — hora de agregar herramientas.", "theme": "dark" }
+      ]
     },
     {
-      "id": "no-servers",
-      "title": "¿No Ves Ningún Servidor?",
-      "content": "<ol><li>Si la lista está vacía, primero necesitas configurar un servidor MCP para tu cuenta.</li><li>Usa el enlace <strong>Setup MCP</strong> (Configurar MCP) en el panel, y luego regresa y selecciónalo aquí.</li></ol>",
-      "images": []
+      "id": "add-tools",
+      "title": "Agregue Herramientas: Dos Fuentes",
+      "content": "<p>En la pestaña <strong>Configure</strong>, la sección <strong>Tools</strong> (Herramientas) es donde ocurre la magia.</p><ol><li>Haga clic en <strong>Add tool</strong> (Agregar herramienta) en el lado derecho de la sección Tools.</li><li>Se abre un pequeño menú con dos opciones:</li></ol><ul><li><strong>From piece</strong> (Desde una pieza) — elija acciones ya listas de un catálogo de más de 280 integraciones (Slack, Google Sheets, HubSpot, Stripe, solicitudes HTTP simples y muchas más).</li><li><strong>From flow</strong> (Desde un flujo) — exponga uno de sus propios flujos de automatización como herramienta, para que el agente pueda disparar su lógica personalizada bajo demanda.</li></ul>",
+      "images": [
+        { "src": "images/automations/mcp-servers-add-tool-light.png", "alt": "Menú Add tool con las opciones From piece y From flow", "caption": "Add tool → elija From piece (catálogo de apps) o From flow (sus propios flujos).", "theme": "light" },
+        { "src": "images/automations/mcp-servers-add-tool-dark.png", "alt": "Menú Add tool con las opciones From piece y From flow", "caption": "Add tool → elija From piece (catálogo de apps) o From flow (sus propios flujos).", "theme": "dark" }
+      ]
     },
     {
-      "id": "test-it",
-      "title": "Probar el Agente",
-      "content": "<ol><li>Abre <strong>Test Agent</strong> (Probar Agente) y conéctate.</li><li>Pregunta algo que deba usar una herramienta MCP y confirma que el agente pueda acceder a ella.</li></ol>",
+      "id": "pick-an-app",
+      "title": "From Piece: Elija una Aplicación",
+      "content": "<ol><li>Haga clic en <strong>Add tool → From piece</strong>.</li><li>Se abre el cuadro de diálogo <strong>Add Tool</strong> (Agregar herramienta) con una cuadrícula de integraciones con buscador.</li><li>Escriba en el cuadro <strong>Search</strong> (Buscar) para filtrar (por ejemplo, <em>slack</em>, <em>sheets</em>, <em>http</em>).</li><li>Haga clic en la aplicación que desee — el diálogo cambia a la lista de acciones disponibles de esa aplicación.</li></ol><blockquote>💡 <strong>Consejo:</strong> La pieza <strong>HTTP</strong> es la navaja suiza del catálogo: su acción <strong>Send HTTP request</strong> (Enviar solicitud HTTP) permite a su agente llamar a cualquier API de internet, sin necesidad de una integración dedicada.</blockquote>",
+      "images": [
+        { "src": "images/automations/mcp-servers-piece-dialog-light.png", "alt": "Diálogo Add Tool con una cuadrícula de integraciones con buscador", "caption": "El diálogo Add Tool: busque entre más de 280 integraciones de aplicaciones.", "theme": "light" },
+        { "src": "images/automations/mcp-servers-piece-dialog-dark.png", "alt": "Diálogo Add Tool con una cuadrícula de integraciones con buscador", "caption": "El diálogo Add Tool: busque entre más de 280 integraciones de aplicaciones.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "choose-actions",
+      "title": "Elija las Acciones y Guarde",
+      "content": "<ol><li>Dentro de la aplicación elegida, marque la casilla junto a cada acción que quiera darle al agente, o marque <strong>Select all</strong> (Seleccionar todo).</li><li>Haga clic en <strong>Save</strong> (Guardar). El diálogo se cierra y cada acción seleccionada aparece como una herramienta propia en el servidor.</li><li>Use la flecha <strong>&lt;</strong> de retroceso en la parte superior del diálogo si prefiere elegir otra aplicación, o <strong>Close</strong> (Cerrar) para cancelar.</li></ol><blockquote>⚠️ <strong>Importante:</strong> Las aplicaciones que se comunican con una cuenta (Slack, Gmail, HubSpot…) muestran un menú desplegable <strong>Connection</strong> (Conexión) encima de la lista de acciones — el agente necesita credenciales para actuar en su nombre. Elija una conexión existente o cree una primero en <strong>Connections</strong> en la mini-barra lateral de Automation. Las piezas simples como <strong>HTTP</strong> no requieren ninguna conexión.</blockquote>",
+      "images": [
+        { "src": "images/automations/mcp-servers-piece-actions-light.png", "alt": "Lista de acciones de la pieza HTTP con Send HTTP request seleccionada", "caption": "Marque las acciones que el agente puede usar y luego haga clic en Save.", "theme": "light" },
+        { "src": "images/automations/mcp-servers-piece-actions-dark.png", "alt": "Lista de acciones de la pieza HTTP con Send HTTP request seleccionada", "caption": "Marque las acciones que el agente puede usar y luego haga clic en Save.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "add-flow-tool",
+      "title": "From Flow: Convierta sus Automatizaciones en Herramientas",
+      "content": "<p>Aquí es donde MCP se vuelve realmente poderoso: cualquier flujo de automatización que haya construido puede convertirse en una herramienta que el agente llama bajo demanda — con lógica de varios pasos, ramificaciones, escrituras en base de datos y todo.</p><ol><li>Haga clic en <strong>Add tool → From flow</strong>.</li><li>El diálogo <strong>Add Flow Tools</strong> (Agregar herramientas de flujo) lista sus flujos elegibles. Use <strong>Search flows</strong> (Buscar flujos) para filtrar.</li><li>Marque los flujos que desee y haga clic en <strong>Save</strong>.</li><li>¿Todavía no tiene flujos? Haga clic en la tarjeta <strong>Create New Flow</strong> (Crear nuevo flujo) para ir directo al constructor de flujos.</li></ol><blockquote>💡 <strong>Consejo:</strong> Si el diálogo dice <strong>No flows available</strong> (No hay flujos disponibles), puede que sus flujos aún no estén publicados o que no exista ninguno — construya y publique un flujo en <strong>Automation → Flows</strong> primero y luego regrese.</blockquote>",
+      "images": [
+        { "src": "images/automations/mcp-servers-flow-dialog-light.png", "alt": "Diálogo Add Flow Tools con buscador y tarjeta Create New Flow", "caption": "Add Flow Tools: exponga sus propios flujos como herramientas MCP.", "theme": "light" },
+        { "src": "images/automations/mcp-servers-flow-dialog-dark.png", "alt": "Diálogo Add Flow Tools con buscador y tarjeta Create New Flow", "caption": "Add Flow Tools: exponga sus propios flujos como herramientas MCP.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "review-tools",
+      "title": "Revise las Herramientas de su Servidor",
+      "content": "<ol><li>De vuelta en la pestaña <strong>Configure</strong>, cada herramienta aparece como una tarjeta que muestra el ícono de la aplicación, su nombre y el nombre técnico de la acción (por ejemplo, <strong>HTTP / send_request</strong>) — ese nombre de acción es lo que la IA ve al decidir qué herramienta llamar.</li><li>Siga sumando: haga clic en <strong>Add tool</strong> de nuevo para combinar acciones de muchas aplicaciones y flujos en el mismo servidor — un solo servidor puede ser el kit completo de un departamento.</li></ol>",
+      "images": [
+        { "src": "images/automations/mcp-servers-tools-list-light.png", "alt": "Pestaña Configure del servidor MCP mostrando una herramienta HTTP send_request", "caption": "Cada acción guardada aparece como su propia tarjeta de herramienta en el servidor.", "theme": "light" },
+        { "src": "images/automations/mcp-servers-tools-list-dark.png", "alt": "Pestaña Configure del servidor MCP mostrando una herramienta HTTP send_request", "caption": "Cada acción guardada aparece como su propia tarjeta de herramienta en el servidor.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "remove-tool",
+      "title": "Elimine una Herramienta",
+      "content": "<ol><li>En la tarjeta de la herramienta, haga clic en el menú <strong>⋮</strong> (tres puntos) a la derecha.</li><li>Haga clic en <strong>Delete</strong> (Eliminar).</li><li>Un diálogo de confirmación pregunta <em>\"Are you sure you want to delete this tool?\"</em> (¿Está seguro de que desea eliminar esta herramienta?) — haga clic en <strong>Remove</strong> (Quitar) para confirmar, o en <strong>Cancel</strong> (Cancelar) para conservarla.</li></ol><blockquote>⚠️ <strong>Advertencia:</strong> Al quitar una herramienta, todos los agentes que usan este servidor la pierden de inmediato. Si el guion de un agente depende de esa acción, actualice también el agente.</blockquote>",
+      "images": [
+        { "src": "images/automations/mcp-servers-delete-tool-light.png", "alt": "Diálogo de confirmación de eliminación de herramienta con botones Cancel y Remove", "caption": "Eliminar una herramienta pide confirmación antes de quitarla.", "theme": "light" },
+        { "src": "images/automations/mcp-servers-delete-tool-dark.png", "alt": "Diálogo de confirmación de eliminación de herramienta con botones Cancel y Remove", "caption": "Eliminar una herramienta pide confirmación antes de quitarla.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "manage-servers",
+      "title": "Administre sus Servidores",
+      "content": "<ol><li>Haga clic en la flecha <strong>&lt;</strong> junto al nombre del servidor para volver a la lista <strong>MCP Servers</strong>.</li><li>La tabla muestra el <strong>Name</strong> de cada servidor, los íconos de sus <strong>Tools</strong> y <strong>Last Modified</strong>. Haga clic en cualquier fila para abrir ese servidor.</li><li>Para renombrar un servidor, ábralo y haga clic en el ícono de lápiz junto a su nombre.</li><li>Para eliminar servidores, marque la casilla a la izquierda de una o más filas — aparece un botón <strong>Delete</strong> encima de la tabla. Confirme para eliminarlos.</li><li>Cree tantos servidores como necesite con <strong>+ New MCP Server</strong> — por ejemplo, uno por equipo, uno por personalidad de agente o uno por flujo de trabajo de cliente.</li></ol>",
+      "images": [
+        { "src": "images/automations/mcp-servers-list-light.png", "alt": "Lista de Servidores MCP mostrando una fila de servidor con sus herramientas", "caption": "La lista de Servidores MCP: cada servidor con sus herramientas de un vistazo.", "theme": "light" },
+        { "src": "images/automations/mcp-servers-list-dark.png", "alt": "Lista de Servidores MCP mostrando una fila de servidor con sus herramientas", "caption": "La lista de Servidores MCP: cada servidor con sus herramientas de un vistazo.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "monitor-history",
+      "title": "Supervise el Uso de Herramientas con History",
+      "content": "<p>Cuando los agentes empiecen a usar su servidor, tendrá un registro de auditoría completo.</p><ol><li>Abra un servidor y haga clic en la pestaña <strong>History</strong> (Historial).</li><li>La tabla <strong>Tool Usage History</strong> (Historial de uso de herramientas) registra cada ejecución con su <strong>Action</strong> (Acción), <strong>Status</strong> (Estado) y hora de <strong>Created At</strong> (Creado el).</li><li>Filtre con el buscador <strong>Action Name</strong> (Nombre de acción) o con el filtro <strong>Status</strong> para detectar fallas rápidamente.</li></ol><blockquote>💡 <strong>Consejo:</strong> ¿Ve <strong>No tool executions yet</strong> (Aún no hay ejecuciones de herramientas)? Es normal hasta que un agente llame realmente a una herramienta — vuelva después de su primera llamada de prueba en vivo.</blockquote>",
+      "images": [
+        { "src": "images/automations/mcp-servers-history-light.png", "alt": "Pestaña Tool Usage History con columnas Action, Status y Created At", "caption": "La pestaña History registra cada ejecución de herramienta que hacen sus agentes.", "theme": "light" },
+        { "src": "images/automations/mcp-servers-history-dark.png", "alt": "Pestaña Tool Usage History con columnas Action, Status y Created At", "caption": "La pestaña History registra cada ejecución de herramienta que hacen sus agentes.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "attach-to-agent",
+      "title": "Póngalo a Trabajar: Conecte el Servidor a un Smart Agent",
+      "content": "<p>Una caja de herramientas solo importa en manos de un trabajador. La conexión se hace en el editor del agente:</p><ol><li>Vaya a <strong>Intelligence Center → Smart Agents</strong> y abra un agente.</li><li>En el panel <strong>Tools / MCP</strong> del agente, seleccione su servidor en la lista <strong>MCP Server</strong> — el agente obtiene al instante todas las herramientas del servidor.</li><li>En el editor visual de nodos puede ir más lejos: coloque nodos <strong>MCP Server</strong> en el lienzo y conéctelos a Tareas específicas, de modo que distintas partes de la conversación reciban distintos kits de herramientas. El editor de nodos también acepta servidores MCP <strong>personalizados</strong> — cualquier servidor externo mediante <strong>Server URL</strong> (URL del servidor) más un encabezado de autenticación opcional — así que también puede conectar servidores MCP alojados fuera de iMash.</li><li>Luego abra <strong>Test Agent</strong> (Probar agente), conéctese y pida algo que requiera una herramienta — véalo suceder, y vea cómo la ejecución aparece en su pestaña <strong>History</strong>.</li></ol><p>La guía completa de conexión (incluida la opción de URL personalizada) está en la <a data-href=\"/agents/agent-mcp\">guía de MCP del Agente</a>.</p>",
       "images": []
     }
   ],
   "nextSteps": {
-    "title": "¿Qué sigue?",
-    "description": "Dale a tu agente más formas de actuar:",
+    "title": "¿Qué Sigue?",
+    "description": "Su caja de herramientas está lista — ahora entréguesela a un agente y siga ampliando lo que su IA puede hacer:",
     "cards": [
-      { "href": "/agents/agent-tools", "title": "Agregar Herramientas a tu Agente", "description": "Combina MCP con herramientas predefinidas y personalizadas." },
-      { "href": "/automations/custom-tools", "title": "Crear Herramientas Personalizadas", "description": "Crea tus propias herramientas HTTP para el agente." },
-      { "href": "/agents/advanced-settings", "title": "Configuración Avanzada del Agente", "description": "Controla cómo decide el agente qué herramientas usar." }
+      { "href": "/agents/agent-mcp", "title": "Conecte MCP a un Agente", "description": "Integre su servidor MCP en un Smart Agent y pruébelo en vivo." },
+      { "href": "/automations/smart-flows", "title": "Construya Flujos de Automatización", "description": "Cree flujos que pueda exponer como herramientas MCP." },
+      { "href": "/automations/custom-tools", "title": "Cree Herramientas Personalizadas", "description": "Otra forma de dar capacidades a los agentes: sus propias herramientas HTTP." }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o preguntas:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+    "title": "¿Necesita Ayuda?",
+    "content": "<p>Si tiene algún problema o pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Adjuntar un Servidor MCP | iMash Docs",
-  "metaDescription": "Dale a tu Smart Agent de iMash herramientas externas mediante un servidor Model Context Protocol (MCP): abre el panel Tools / MCP, selecciona un servidor y prueba el agente.",
-  "metaKeywords": "servidor mcp, model context protocol, herramientas de agente, herramientas externas, smart agent, tools mcp, imash"
+  "metaTitle": "Servidores MCP | Documentación de iMash",
+  "metaDescription": "Cree y administre servidores MCP (Model Context Protocol) en iMash: registre un servidor, agregue herramientas de más de 280 integraciones o de sus propios flujos, supervise el uso de herramientas y conecte el servidor a sus Smart Agents.",
+  "metaKeywords": "servidor mcp, model context protocol, herramientas de agente, integraciones, automatización, historial de uso de herramientas, herramientas smart agent, from piece, from flow, imash"
 }

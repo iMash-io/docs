@@ -1,67 +1,282 @@
 {
-  "title": "Configuración del agente: tiempos de espera, mensajes de inactividad y buzón de voz",
-  "lede": "Ajusta con precisión cómo se comporta tu Smart Agent (Agente inteligente) en una llamada: duración máxima, manejo de silencios e inactividad, detección de buzón de voz (AMD), backchannel, interrupciones y detección de turnos.",
-  "timeToComplete": "8 minutos",
-  "videoUrl": "https://youtu.be/7C-N_RWwPFI",
-  "videoLength": "5",
+  "title": "Configuración del agente: tiempos, mensajes de inactividad, buzón de voz y turnos",
+  "lede": "Aquí es donde un buen agente se convierte en uno excelente. El panel Settings (Configuración) controla todo el comportamiento de su Smart Agent durante una llamada en vivo: duración, manejo de silencios, detección de buzón de voz, sonido de fondo, interrupciones y toma de turnos. Esta guía recorre cada sección y cada interruptor, de la A a la Z.",
+  "timeToComplete": "15 minutos",
   "steps": [
     {
-      "id": "open-editor",
-      "title": "Abre el editor de agentes",
-      "content": "<ol><li>En la navegación izquierda, ve a <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes).</li><li>Haz clic en un agente existente para abrirlo en el editor (puedes alternar entre la vista de formulario y la vista de nodos).</li><li>La columna central contiene los paneles de funciones (Knowledge Base, Voice, Brains y más), cada uno con su propio interruptor de activación/desactivación. Debajo de ellos encontrarás <strong>Sub Agents / Tasks / Handoffs</strong>, <strong>Tools / MCP</strong> y <strong>Settings</strong>.</li></ol>",
+      "id": "open-agent",
+      "title": "Abra su agente",
+      "content": "<p>Todos los ajustes de esta guía viven dentro de un agente individual, así que empiece por abrir uno:</p><ol><li>En la barra lateral izquierda, haga clic en <strong>Intelligence Center → Smart Agents</strong> (Centro de inteligencia → Agentes inteligentes).</li><li>Haga clic en el <strong>nombre</strong> del agente que quiere ajustar. Se abre el editor del agente.</li></ol><blockquote>💡 La configuración se guarda por agente: puede darle a su agente fuera de horario un guion de buzón de voz corto y un tiempo de silencio largo, mientras que su agente de ventas cuelga agresivamente en buzones de voz y suena con ambiente de oficina.</blockquote>",
       "images": [
-        { "src": "images/agents/assistant-editor-light.png", "alt": "Editor de Smart Agent", "caption": "El editor de Smart Agent: el prompt a la izquierda, los paneles de funciones en el centro y Test Agent en la parte superior.", "theme": "light" },
-        { "src": "images/agents/assistant-editor-dark.png", "alt": "Editor de Smart Agent", "caption": "El editor de Smart Agent: el prompt a la izquierda, los paneles de funciones en el centro y Test Agent en la parte superior.", "theme": "dark" }
+        {
+          "src": "images/agents/agent-settings-list-light.png",
+          "alt": "Lista de Smart Agents",
+          "caption": "Intelligence Center → Smart Agents — haga clic en el nombre de un agente para abrir su editor.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-settings-list-dark.png",
+          "alt": "Lista de Smart Agents",
+          "caption": "Intelligence Center → Smart Agents — haga clic en el nombre de un agente para abrir su editor.",
+          "theme": "dark"
+        }
       ]
     },
     {
       "id": "open-settings",
-      "title": "Abre el panel de configuración (Settings)",
-      "content": "<ol><li>Haz clic en <strong>Settings</strong> (Configuración) en el editor.</li><li>Usa la barra izquierda para moverte entre las secciones: <strong>General</strong>, <strong>Idle Messages</strong>, <strong>Voicemail</strong>, <strong>Speech</strong>, <strong>Voice Activity Detection</strong>, <strong>Audio Quality</strong>, <strong>Background Audio</strong>, <strong>Interruptions</strong>, <strong>User Turn Limits</strong>, <strong>Turn Detection</strong> y <strong>Privacy &amp; Recording</strong>.</li></ol>",
+      "title": "Abra el panel Settings (Configuración)",
+      "content": "<p>El editor tiene dos vistas (cambie en cualquier momento con el conmutador <strong>Form</strong> / <strong>Node</strong> — Formulario / Nodos — en la parte superior). El panel de configuración es el mismo en ambas; solo cambia la ubicación del botón:</p><ul><li><strong>Vista Form</strong>: haga clic en el botón <strong>Settings</strong> (Configuración) debajo del editor de prompt (junto a <strong>Sub Agents / Tasks / Handoffs</strong> y <strong>Tools / MCP</strong>).</li><li><strong>Vista Node</strong>: haga clic en la tarjeta <strong>Settings</strong> (etiquetada <em>Configure</em>) en la barra de capacidades sobre el lienzo.</li></ul><p>Se abre una ventana de configuración con un riel de secciones a la izquierda: <strong>General</strong>, <strong>Idle Messages</strong> (Mensajes de inactividad), <strong>Voicemail</strong> (Buzón de voz), <strong>Speech</strong> (Habla), <strong>Voice Activity Detection</strong> (Detección de actividad de voz), <strong>Audio Quality</strong> (Calidad de audio), <strong>Background Audio</strong> (Audio de fondo), <strong>Interruptions</strong> (Interrupciones), <strong>User Turn Limits</strong> (Límites de turno del usuario), <strong>Turn Detection</strong> (Detección de turnos) y <strong>Privacy &amp; Recording</strong> (Privacidad y grabación).</p><blockquote>💡 Los cambios se guardan automáticamente a medida que los ajusta — el botón <strong>Done</strong> (Listo) simplemente cierra la ventana.</blockquote>",
       "images": [
-        { "src": "images/agents/agent-settings-panel-light.png", "alt": "Panel de configuración del agente", "caption": "El panel de configuración con su barra de secciones a la izquierda.", "theme": "light" },
-        { "src": "images/agents/agent-settings-panel-dark.png", "alt": "Panel de configuración del agente", "caption": "El panel de configuración con su barra de secciones a la izquierda.", "theme": "dark" }
+        {
+          "src": "images/agents/agent-settings-editor-light.png",
+          "alt": "Editor del agente con el botón Settings",
+          "caption": "Vista Form: el botón Settings está debajo del editor de prompt.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-settings-editor-dark.png",
+          "alt": "Editor del agente con el botón Settings",
+          "caption": "Vista Form: el botón Settings está debajo del editor de prompt.",
+          "theme": "dark"
+        }
       ]
     },
     {
       "id": "general-timeouts",
-      "title": "Define la duración de la llamada y el silencio (General)",
-      "content": "<ul><li><strong>Maximum Duration</strong> (Duración máxima): el tiempo máximo que puede durar una llamada, en segundos. El agente finaliza la llamada al alcanzar este límite.</li><li><strong>Silence Timeout</strong> (Tiempo de espera por silencio): cuánto tiempo esperar durante el silencio antes de que el agente finalice la llamada.</li></ul>",
-      "images": []
+      "title": "General — duración de la llamada y silencio",
+      "content": "<p>La sección <strong>General</strong> se abre primero. Contiene los dos límites duros de cada llamada:</p><ul><li><strong>Maximum Duration</strong> (Duración máxima) — lo máximo que puede durar una llamada, de 10 a 3.600 segundos (1 hora). Al alcanzar el límite, el agente finaliza la llamada.</li><li><strong>Silence Timeout</strong> (Tiempo de espera por silencio) — cuántos segundos de inactividad total (10–600) antes de que la llamada se finalice automáticamente.</li></ul><blockquote>⚠️ Silence Timeout realmente <em>cuelga</em> la llamada. Si solo quiere que el agente diga \"¿Sigue ahí?\" cuando la persona se queda en silencio, use <strong>Idle Messages</strong> (siguiente paso) con un tiempo más corto que este.</blockquote><p>Para agentes de solo transcripción (LLM y Voice apagados, Transcriber encendido), aquí aparece un interruptor adicional <strong>Transcribe each party separately</strong> (Transcribir cada parte por separado): ejecuta un transcriptor etiquetado por hablante para cada participante, de modo que las llamadas entre humanos transcriban ambos lados correctamente.</p>",
+      "images": [
+        {
+          "src": "images/agents/agent-settings-panel-light.png",
+          "alt": "Sección General del panel de configuración",
+          "caption": "El panel de configuración: riel de secciones a la izquierda, Maximum Duration y Silence Timeout en General.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-settings-panel-dark.png",
+          "alt": "Sección General del panel de configuración",
+          "caption": "El panel de configuración: riel de secciones a la izquierda, Maximum Duration y Silence Timeout en General.",
+          "theme": "dark"
+        }
+      ]
     },
     {
       "id": "idle-messages",
-      "title": "Configura los mensajes de inactividad",
-      "content": "<ol><li>Abre la sección <strong>Idle Messages</strong> (Mensajes de inactividad) y actívala.</li><li>Establece el <strong>Idle Timeout</strong> (segundos de silencio antes de que el agente hable) y <strong>Max Idle Messages</strong> (Máximo de mensajes de inactividad).</li><li>Agrega frases como <em>\"¿Sigues ahí?\"</em>. Escribe <code>{</code> para insertar una variable, como el nombre de la persona que llama.</li></ol>",
-      "images": []
+      "title": "Idle Messages — reactive a quien se queda en silencio",
+      "content": "<p>Haga clic en <strong>Idle Messages</strong> (Mensajes de inactividad) en el riel izquierdo. Es el empujón cortés de su agente cuando la persona deja de responder:</p><ol><li>Mantenga el interruptor <strong>Idle Messages</strong> en <strong>ON</strong> para habilitar la función.</li><li>En <strong>Idle Messages</strong>, elija uno o más mensajes (p. ej. <em>\"Hey, are you still there?\"</em>). Para agregar el suyo, escríbalo en el cuadro <strong>Add Custom Message and Press Enter</strong> (Agregue un mensaje personalizado y presione Enter) — escriba <code>{</code> para insertar una variable dinámica, como el nombre de quien llama.</li><li><strong>Max Idle Messages</strong> (1–10) — cuántas veces puede hablar el agente durante una llamada antes de desistir.</li><li><strong>Idle Timeout</strong> (5–15 segundos) — cuánto silencio debe haber antes de que se pronuncie un mensaje de inactividad.</li></ol><p>Debajo, <strong>User Presence → User-Away Timeout</strong> es un detector independiente a nivel de SDK: tras este tiempo de silencio (15 s por defecto) emite una señal de \"usuario ausente\" para que el agente reaccione <em>antes</em> de que el Silence Timeout cuelgue. Desactívelo con el interruptor si no lo quiere.</p>",
+      "images": [
+        {
+          "src": "images/agents/agent-settings-idle-light.png",
+          "alt": "Configuración de Idle Messages",
+          "caption": "Idle Messages: mensajes, cantidad máxima, tiempo de inactividad y el User-Away Timeout.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-settings-idle-dark.png",
+          "alt": "Configuración de Idle Messages",
+          "caption": "Idle Messages: mensajes, cantidad máxima, tiempo de inactividad y el User-Away Timeout.",
+          "theme": "dark"
+        }
+      ]
     },
     {
       "id": "voicemail-amd",
-      "title": "Detección de buzón de voz (AMD)",
-      "content": "<ul><li>En <strong>Voicemail</strong> (Buzón de voz), activa <strong>Voicemail Detection (AMD)</strong> y elige <strong>Hang up if reach voicemail</strong> (Colgar si se llega al buzón de voz) o <strong>Leave a message if reach voicemail</strong> (Dejar un mensaje si se llega al buzón de voz).</li><li>Un mensaje de buzón de voz puede incluir variables dinámicas de la conversación.</li><li>Los tiempos de detección avanzados (No-Speech Timeout, Detection Timeout, umbrales de voz/silencio) están disponibles si necesitas ajustar la precisión.</li></ul>",
-      "images": []
+      "title": "Voicemail — detecte contestadores automáticos (AMD)",
+      "content": "<p>Haga clic en <strong>Voicemail</strong> (Buzón de voz) en el riel izquierdo. En llamadas salientes, la detección de contestador (AMD) clasifica quién (o qué) contestó — humano, buzón de voz, IVR o no disponible — para que su agente nunca desperdicie su discurso con un pitido:</p><ol><li>Active <strong>Voicemail Detection (AMD)</strong> en <strong>ON</strong>.</li><li>Elija qué ocurre con una máquina: <strong>Hang up if reach voicemail</strong> (Colgar si llega al buzón) o <strong>Leave a message if reach voicemail</strong> (Dejar un mensaje si llega al buzón).</li><li>Si eligió dejar un mensaje, escríbalo en el cuadro de mensaje — use <code>{{}}</code> para insertar variables dinámicas. Manténgalo por debajo de <strong>200 caracteres</strong>; lo que exceda se corta.</li></ol><p><strong>Detection Tuning (Advanced)</strong> (Ajuste de detección avanzado) — deje los valores por defecto salvo que las llamadas se estén clasificando mal:</p><ul><li><strong>No-Speech Timeout</strong> (10 s por defecto) — cuánto espera AMD algún audio después de que la llamada conteste.</li><li><strong>Detection Timeout</strong> (20 s por defecto) — techo duro de toda la detección; debe ser ≥ No-Speech Timeout.</li><li><strong>Human Speech Threshold</strong> (2,5 s por defecto) — los saludos más cortos que esto se tratan como humanos; los más largos van al clasificador.</li><li><strong>Human Silence Threshold</strong> (0,5 s por defecto) — silencio tras un saludo corto antes de confirmar \"humano\".</li><li><strong>Machine Silence Threshold</strong> (1,5 s por defecto) — silencio tras un habla tipo máquina antes de emitir un veredicto.</li><li><strong>Interrupt Agent on Machine</strong> (Interrumpir al agente al detectar máquina) — detiene al agente a mitad de frase en cuanto se detecta una máquina (recomendado en ON).</li><li><strong>Wait for Detection Before Speaking</strong> (Esperar la detección antes de hablar) — retiene el saludo inicial hasta que AMD decida, para que nunca suene dentro de un buzón de voz.</li><li><strong>Don't Reply Until Detection Finishes</strong> (No responder hasta terminar la detección) — para agentes donde \"el cliente habla primero\", retiene la primera respuesta hasta completar la clasificación.</li><li><strong>Classifier Hint Phrases</strong> (Frases de pista para el clasificador, hasta 50) — agregue saludos específicos de su dominio (operadoras en español, buzones con marca, etc.) como ejemplos extra para orientar al clasificador.</li></ul><blockquote>⚠️ Si el ajuste de buzón de voz a nivel de cuenta <strong>Override My Agents</strong> (Anular mis agentes) está activo (Call Center → Voicemail Settings), este prevalece sobre el comportamiento de buzón de voz del agente — un aviso azul en la parte superior de esta sección se lo indicará.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/agent-settings-voicemail-light.png",
+          "alt": "Configuración de detección de buzón de voz",
+          "caption": "Voicemail Detection (AMD) habilitada, con los modos colgar/dejar mensaje y el ajuste avanzado de detección.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-settings-voicemail-dark.png",
+          "alt": "Configuración de detección de buzón de voz",
+          "caption": "Voicemail Detection (AMD) habilitada, con los modos colgar/dejar mensaje y el ajuste avanzado de detección.",
+          "theme": "dark"
+        }
+      ]
     },
     {
-      "id": "speech-and-turns",
-      "title": "Voz, interrupciones y detección de turnos",
-      "content": "<ul><li><strong>Speech</strong> (Voz): activa <strong>Enable Backchannel (Beta)</strong> para muletillas naturales como \"ajá\", y <strong>Preemptive Generation</strong> (Generación anticipada) para que un agente basado en texto (STT + LLM + TTS) empiece a pensar mientras la persona sigue hablando.</li><li><strong>Interruptions</strong> (Interrupciones): permite o bloquea las interrupciones y define el mínimo de palabras que las activan.</li><li><strong>Turn Detection</strong> (Detección de turnos): un detector basado en audio decide cuándo la persona ha terminado de hablar. Estos ajustes se ignoran en los modelos en tiempo real (voz a voz), que manejan los turnos por sí mismos.</li></ul>",
-      "images": []
+      "id": "speech",
+      "title": "Speech — backchannel, latencia y ritmo",
+      "content": "<p>Haga clic en <strong>Speech</strong> (Habla) en el riel izquierdo. Estos ajustes hacen que el agente suene más rápido y más humano:</p><ul><li><strong>Enable Backchannel (Beta)</strong> — el agente intercala afirmaciones naturales como \"yeah\" y \"uh-huh\" mientras la persona habla. Con ON puede ajustar <strong>Backchannel Frequency</strong> (Menos ↔ Más) y elegir las <strong>Backchannel Words</strong> que puede usar (agregue las suyas y presione Enter).</li><li><strong>Preemptive Generation</strong> (Generación anticipada) — el agente empieza a pensar (LLM) antes de que la persona termine de hablar, reduciendo la latencia de respuesta. Con ON también obtiene:<ul><li><strong>Preemptive TTS</strong> — genera el audio de forma especulativa también. Latencia aún menor, costo ligeramente mayor (el audio descartado igualmente se factura).</li><li><strong>Skip Preemptive If User Speaks Longer Than</strong> (10 s por defecto) — las intervenciones muy largas son demasiado inestables para especular.</li><li><strong>Max Preemptive Retries</strong> (3 por defecto) — cuántas veces re-especular por turno.</li></ul></li></ul><p><strong>Pacing &amp; Echo</strong> (Ritmo y eco):</p><ul><li><strong>AEC Warmup Duration</strong> (3 s por defecto) — suprime interrupciones mientras la cancelación de eco se estabiliza en el saludo inicial, para que la propia voz del agente no dispare interrupciones falsas.</li><li><strong>Min Consecutive Speech Delay</strong> (0 s por defecto) — una pausa forzada entre turnos consecutivos del propio agente; 0,3–1,0 s da una cadencia más natural.</li><li><strong>Pre-TTS Text Cleanup</strong> (Limpieza de texto antes del TTS) — transformaciones aplicadas al texto del agente antes de pronunciarlo: <code>filter_markdown</code> elimina símbolos ** _ #, <code>filter_emoji</code> descarta emojis. Puede agregar nombres de transformaciones personalizadas que su proveedor de TTS reconozca.</li></ul>",
+      "images": [
+        {
+          "src": "images/agents/agent-settings-speech-light.png",
+          "alt": "Configuración de Speech",
+          "caption": "Speech: backchannel, generación anticipada, calentamiento AEC, ritmo y limpieza de texto pre-TTS.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-settings-speech-dark.png",
+          "alt": "Configuración de Speech",
+          "caption": "Speech: backchannel, generación anticipada, calentamiento AEC, ritmo y limpieza de texto pre-TTS.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "vad",
+      "title": "Voice Activity Detection — escuchar a quien llama",
+      "content": "<p>Haga clic en <strong>Voice Activity Detection</strong> (Detección de actividad de voz) en el riel izquierdo. El VAD decide cuándo la persona está hablando o en silencio — la base de una toma de turnos natural:</p><ul><li><strong>Activation Threshold</strong> (0,5 por defecto) — sensibilidad de la detección de habla. Un valor más bajo capta voces más suaves pero puede recoger ruido de fondo; uno más alto reduce falsos positivos pero puede perder a hablantes silenciosos.</li><li><strong>Min Speech Duration</strong> (0,05 s por defecto) — habla continua mínima para registrar un nuevo fragmento de voz.</li><li><strong>Min Silence Duration</strong> (0,55 s por defecto) — cuánto esperar tras el fin del habla antes de decidir que la persona terminó.</li><li><strong>Prefix Padding</strong> (0,5 s por defecto) — audio antepuesto a cada fragmento detectado para no recortar el inicio de las palabras.</li><li><strong>Max Buffered Speech</strong> (60 s por defecto) — el máximo de habla conservado en el búfer del VAD.</li></ul><blockquote>💡 ¿Las llamadas desde entornos ruidosos (obras, autos) disparan interrupciones fantasma? Suba el <strong>Activation Threshold</strong> hacia 0,6–0,7 antes de tocar cualquier otra cosa.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/agent-settings-vad-light.png",
+          "alt": "Configuración de Voice Activity Detection",
+          "caption": "VAD: umbral de activación, duraciones de habla/silencio, prefix padding y tamaño del búfer.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-settings-vad-dark.png",
+          "alt": "Configuración de Voice Activity Detection",
+          "caption": "VAD: umbral de activación, duraciones de habla/silencio, prefix padding y tamaño del búfer.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "audio-quality",
+      "title": "Audio Quality — procesamiento del lado del micrófono",
+      "content": "<p>Haga clic en <strong>Audio Quality</strong> (Calidad de audio) en el riel izquierdo. Este procesamiento de audio se aplica antes de que la plataforma escuche (VAD / transcripción):</p><ul><li><strong>Auto-Gain Control (AGC)</strong> (Control automático de ganancia) — normaliza el volumen de entrada para que las voces bajas se escuchen más fuerte. Déjelo en <strong>ON</strong> para llamadas telefónicas; apáguelo solo en configuraciones de audio profesional/estudio donde quiera preservar la dinámica.</li></ul>",
+      "images": [
+        {
+          "src": "images/agents/agent-settings-audio-light.png",
+          "alt": "Configuración de Audio Quality",
+          "caption": "Audio Quality: el interruptor de Auto-Gain Control.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-settings-audio-dark.png",
+          "alt": "Configuración de Audio Quality",
+          "caption": "Audio Quality: el interruptor de Auto-Gain Control.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "background-audio",
+      "title": "Background Audio — haga que el agente se sienta humano",
+      "content": "<p>Haga clic en <strong>Background Audio</strong> (Audio de fondo) en el riel izquierdo. Es uno de los secretos mejor guardados de la plataforma: una pista de ambiente continua detrás de la voz del agente hace que se sienta como una persona real en una oficina real — y un suave sonido de teclado llena el silencio mientras la IA piensa:</p><ol><li>Active <strong>Enable Background Audio</strong> en <strong>ON</strong> (interruptor maestro — apagado, no se publica audio adicional).</li><li><strong>Ambient Sound</strong> (Sonido de ambiente) — active el <strong>Clip</strong> y elija un bucle que suene durante toda la llamada: <em>Office ambience</em> (excelente para B2B), <em>City ambience</em>, <em>Forest ambience</em>, <em>Crowded room</em> u <em>Hold music</em>. Ajuste su <strong>Volume</strong> (0,8 por defecto).</li><li><strong>Thinking Sound</strong> (Sonido de \"pensando\") — active el <strong>Clip</strong> y elija un sonido corto que suene entre que la persona termina y el agente responde. Los clips de <em>Keyboard typing</em> (tecleo) están hechos para esto. Ajuste también su <strong>Volume</strong>.</li></ol><p>Todos los clips vienen incluidos con la plataforma — no hay nada que subir.</p>",
+      "images": [
+        {
+          "src": "images/agents/agent-settings-background-audio-light.png",
+          "alt": "Configuración de Background Audio",
+          "caption": "Background Audio habilitado con un bucle de ambiente de oficina y un sonido de tecleo mientras piensa.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-settings-background-audio-dark.png",
+          "alt": "Configuración de Background Audio",
+          "caption": "Background Audio habilitado con un bucle de ambiente de oficina y un sonido de tecleo mientras piensa.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "interruptions",
+      "title": "Interruptions — permitir que le interrumpan",
+      "content": "<p>Haga clic en <strong>Interruptions</strong> (Interrupciones) en el riel izquierdo. Las personas reales interrumpen — esta sección controla con cuánta elegancia lo maneja su agente:</p><ul><li><strong>Allow Interruptions</strong> (Permitir interrupciones) — deja que la persona corte al agente a mitad de frase. (Se ignora al usar un modelo de voz a voz en tiempo real con detección de turnos integrada.)</li><li><strong>Interruption Mode</strong> (Modo de interrupción):<ul><li><strong>VAD only (default)</strong> — interrumpe ante cualquier actividad de voz detectada. Menor costo, más agresivo.</li><li><strong>Adaptive (ML)</strong> — un modelo más inteligente decide si la persona realmente quiere interrumpir. No disponible con OpenAI Realtime.</li><li><strong>Auto</strong> — deje que la plataforma elija.</li></ul></li><li><strong>Min Interruption Duration</strong> (0,5 s por defecto) — habla mínima detectada antes de que se dispare una interrupción.</li><li><strong>Min Interruption Words</strong> (0 por defecto) — mínimo de palabras reconocidas para contar como interrupción (0 = solo por duración). Subirlo a 2–3 evita que toses y \"ajás\" corten al agente.</li></ul><p><strong>False Interruption Handling</strong> (Manejo de interrupciones falsas):</p><ul><li><strong>Resume After False Interruption</strong> — si la \"interrupción\" no produjo palabras reconocibles (un ruido), el agente retoma donde quedó.</li><li><strong>False Interruption Timeout</strong> (2 s por defecto) — cuánto esperar antes de declararla interrupción falsa. Active <strong>Disable handling</strong> para tratar cada interrupción como intencional.</li></ul><p>Al seleccionar el modo Adaptive aparece un control adicional <strong>Backchannel Boundary</strong> — suprime interrupciones cerca de los límites de turno (valores por defecto del SDK: 1,0 s al inicio del turno, 3,5 s al final).</p>",
+      "images": [
+        {
+          "src": "images/agents/agent-settings-interruptions-light.png",
+          "alt": "Configuración de Interruptions",
+          "caption": "Interruptions: interruptor de permiso, modo, umbrales de duración/palabras y manejo de interrupciones falsas.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-settings-interruptions-dark.png",
+          "alt": "Configuración de Interruptions",
+          "caption": "Interruptions: interruptor de permiso, modo, umbrales de duración/palabras y manejo de interrupciones falsas.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "user-turn-limits",
+      "title": "User Turn Limits — controle los monólogos interminables",
+      "content": "<p>Haga clic en <strong>User Turn Limits</strong> (Límites de turno del usuario) en el riel izquierdo. Algunas personas nunca dejan de hablar — cualquiera de estos límites obliga al agente a cerrar el turno de quien llama y responder. Ambos apagados = sin límite (el valor por defecto de la plataforma):</p><ul><li><strong>Max Words Per Turn</strong> (Máx. de palabras por turno) — cierra el turno tras esta cantidad de palabras reconocidas. Sugerido: 100–300 para dominios conversadores.</li><li><strong>Max Duration Per Turn</strong> (Duración máx. por turno) — cierra el turno tras este tiempo de habla continua. Sugerido: 30–60 segundos para flujos de filtrado.</li></ul>",
+      "images": [
+        {
+          "src": "images/agents/agent-settings-turn-limits-light.png",
+          "alt": "Configuración de User Turn Limits",
+          "caption": "User Turn Limits: topes de palabras y duración para un solo turno de quien llama.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-settings-turn-limits-dark.png",
+          "alt": "Configuración de User Turn Limits",
+          "caption": "User Turn Limits: topes de palabras y duración para un solo turno de quien llama.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "turn-detection",
+      "title": "Turn Detection — cuándo escuchar, cuándo hablar",
+      "content": "<p>Haga clic en <strong>Turn Detection</strong> (Detección de turnos) en el riel izquierdo. Decide cuándo empieza y termina el turno de quien llama. (Los modelos de voz a voz en tiempo real ignoran estos ajustes — manejan los turnos por sí mismos.)</p><ul><li><strong>Turn Detector Enabled</strong> (Detector de turnos habilitado) — usa un modelo basado en audio que escucha directamente la entonación, el tono y el ritmo (sin necesidad de transcripción). Apagado, el agente recurre solo al VAD o al endpointing del transcriptor.</li><li><strong>Override End-of-Turn Sensitivity</strong> (Anular la sensibilidad de fin de turno) — el detector trae valores calibrados por idioma; actívelo solo para modificar cuánta confianza necesita antes de cerrar un turno (valor por defecto en inglés ≈ 0,36; más bajo = respuestas más rápidas, más alto = más paciencia).</li><li><strong>Endpointing Mode</strong> (Modo de endpointing):<ul><li><strong>Fixed (default)</strong> — siempre espera los retardos mín./máx. de abajo. Predecible.</li><li><strong>Dynamic</strong> — adapta el retardo de fin de turno al ritmo de la conversación: más ágil con quien habla rápido, más paciente con quien habla lento. Muestra un deslizador <strong>Smoothing α</strong> (0,9 por defecto — más alto se adapta más lento).</li></ul></li><li><strong>Min Endpointing Delay</strong> (0,5 s por defecto) — espera antes de considerar completo el turno cuando no hay señal del detector.</li><li><strong>Max Endpointing Delay</strong> (6 s por defecto) — espera máxima cuando el detector cree que la persona seguirá hablando.</li></ul><blockquote>💡 ¿El agente habla por encima de quienes pausan a mitad de una idea? Suba <strong>Min Endpointing Delay</strong> a 0,8–1,0 s. ¿El agente se siente lento? Bájelo — o cambie el Endpointing Mode a <strong>Dynamic</strong>.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/agent-settings-turn-detection-light.png",
+          "alt": "Configuración de Turn Detection",
+          "caption": "Turn Detection: detector basado en audio, anulación de sensibilidad y retardos de endpointing.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-settings-turn-detection-dark.png",
+          "alt": "Configuración de Turn Detection",
+          "caption": "Turn Detection: detector basado en audio, anulación de sensibilidad y retardos de endpointing.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "privacy-recording",
+      "title": "Privacy & Recording, y ya está listo",
+      "content": "<p>Por último, haga clic en <strong>Privacy &amp; Recording</strong> (Privacidad y grabación) en el riel izquierdo:</p><ul><li><strong>Disable Sensitive Data Storage</strong> (Deshabilitar almacenamiento de datos sensibles) — con ON, iMash no almacenará ni registrará la transcripción ni la grabación de las llamadas de este agente. (Esto también deshabilita el interruptor de Audio Recording de abajo.)</li><li><strong>Audio Recording</strong> (Grabación de audio) — graba las conversaciones con este agente para reproducirlas desde Call Logs (Registros de llamadas).</li></ul><ol><li>Haga clic en <strong>Done</strong> (Listo) para cerrar el panel — todo lo que cambió ya está guardado.</li><li>Pulse <strong>Test Agent</strong> (Probar agente) en la cabecera del editor y converse con él. Escuchará su audio de fondo, sentirá la nueva toma de turnos y podrá interrumpir al agente para comprobar sus ajustes de interrupciones.</li></ol><p>Eso es todo — su agente ahora maneja el silencio, el buzón de voz y a los conversadores incansables exactamente como usted lo diseñó. 🎉</p><blockquote>⚠️ Si su agente usa <strong>OpenAI Realtime</strong> como LLM, aparece un aviso en Settings: algunas opciones de interrupción y detección de turnos las maneja el propio modelo en tiempo real y serán ignoradas.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/agent-settings-privacy-light.png",
+          "alt": "Configuración de Privacy & Recording",
+          "caption": "Privacy & Recording: exclusión del almacenamiento de datos sensibles y el interruptor de grabación de audio.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/agent-settings-privacy-dark.png",
+          "alt": "Configuración de Privacy & Recording",
+          "caption": "Privacy & Recording: exclusión del almacenamiento de datos sensibles y el interruptor de grabación de audio.",
+          "theme": "dark"
+        }
+      ]
     }
   ],
   "nextSteps": {
     "title": "¿Qué sigue?",
-    "description": "Con el comportamiento afinado, amplía lo que tu agente puede hacer:",
+    "description": "¿Comportamiento afinado? Dele a su agente una voz aún mejor, un cerebro más agudo y una buena prueba de manejo:",
     "cards": [
-      { "href": "/agents/voice-configuration", "title": "Configura la voz", "description": "Elige un proveedor de TTS y previsualiza voces para tu agente." },
-      { "href": "/agents/agent-tools", "title": "Agrega herramientas", "description": "Permite que el agente finalice llamadas, agende citas y llame a tus API." },
-      { "href": "/agents/agent-privacy", "title": "Privacidad y grabación", "description": "Controla el almacenamiento de datos y la grabación de audio de las llamadas." }
+      {
+        "href": "/agents/voice-configuration",
+        "title": "Configure la voz",
+        "description": "Elija un proveedor de TTS y previsualice voces para su agente."
+      },
+      {
+        "href": "/agents/llm-settings",
+        "title": "Configuración del LLM",
+        "description": "Elija el modelo de lenguaje y ajuste la temperatura y los respaldos."
+      },
+      {
+        "href": "/agents/test-your-agent",
+        "title": "Pruebe su agente",
+        "description": "Llame a su agente directamente desde el navegador y escuche sus ajustes en acción."
+      }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+    "title": "¿Necesita ayuda?",
+    "content": "<p>Si tiene algún problema o pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Configuración del agente: tiempos de espera, inactividad y buzón de voz | iMash Docs",
-  "metaDescription": "Configura los ajustes de tu Smart Agent de iMash: duración máxima de la llamada, tiempos de espera por silencio e inactividad, detección de buzón de voz (AMD), backchannel, interrupciones y detección de turnos.",
-  "metaKeywords": "configuración del agente, imash, smart agent, detección de buzón de voz, mensajes de inactividad, backchannel, detección de turnos, duración de la conversación"
+  "metaTitle": "Configuración del agente: tiempos, inactividad, buzón de voz y turnos | iMash Documentation",
+  "metaDescription": "Configure cada ajuste de llamada de su Smart Agent de iMash: duración máxima, tiempos de silencio e inactividad, detección de buzón de voz (AMD), backchannel, audio de fondo, interrupciones, VAD, detección de turnos y privacidad.",
+  "metaKeywords": "configuración del agente, imash, smart agent, detección de buzón de voz, AMD, mensajes de inactividad, backchannel, detección de turnos, interrupciones, audio de fondo, VAD, duración de llamada, privacidad grabación"
 }

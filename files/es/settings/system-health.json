@@ -1,0 +1,101 @@
+{
+  "title": "Salud del Sistema y Disponibilidad",
+  "lede": "¿Está la plataforma en línea? Ya no tendrá que preguntárselo. El panel de Salud del Sistema le muestra el estado en vivo, la disponibilidad de los últimos 90 días y las métricas de cada servicio de iMash — desde sus agentes de voz hasta la base de datos — todo en una sola página.",
+  "timeToComplete": "5 minutos",
+  "steps": [
+    {
+      "id": "open-system-health",
+      "title": "Abra el panel de Salud del Sistema",
+      "content": "<p>iMash se monitorea a sí mismo las 24 horas y convierte esa telemetría en una página de estado creada para usted. Aquí puede encontrarla:</p><ol><li>En la barra lateral izquierda, haga clic en <strong>System Health</strong> (Salud del Sistema), en el grupo superior, junto a <strong>Overview</strong> (Resumen), <strong>Team &amp; Access</strong> (Equipo y Acceso) y <strong>Audit</strong> (Auditoría). También puede ir directamente a <code>/monitor</code>.</li><li>El título de la página dice <strong>System Health &amp; Uptime</strong> (Salud del Sistema y Disponibilidad). De arriba hacia abajo verá: un gran <strong>banner de estado</strong>, una <strong>franja de KPIs</strong>, una fila de <strong>Live Activity</strong> (Actividad en Vivo) y luego una <strong>lista de servicios</strong> a la izquierda con la cuadrícula de servicios (o la vista de detalle de un servicio) a la derecha.</li></ol><blockquote>💡 Si no ve <strong>System Health</strong> en su barra lateral, su administrador lo ha ocultado para su rol — pida al propietario de la cuenta que lo habilite en su Perfil de Vista.</blockquote>",
+      "images": [
+        {"src": "images/settings/system-health-overview-light.png", "alt": "Panel de Salud del Sistema con banner de estado, franja de KPIs, actividad en vivo y tarjetas de servicios", "caption": "El panel de Salud del Sistema: banner de estado, KPIs, actividad en vivo y todos los servicios monitoreados en una sola vista", "theme": "light"},
+        {"src": "images/settings/system-health-overview-dark.png", "alt": "Panel de Salud del Sistema con banner de estado, franja de KPIs, actividad en vivo y tarjetas de servicios", "caption": "El panel de Salud del Sistema: banner de estado, KPIs, actividad en vivo y todos los servicios monitoreados en una sola vista", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "read-status-banner",
+      "title": "Lea el banner de estado (y la leyenda de colores)",
+      "content": "<p>El banner superior responde la gran pregunta de un vistazo:</p><ul><li><strong>Estado general</strong> — <strong>All Systems Operational</strong> (Todos los Sistemas Operativos) cuando todo está saludable. Si algo falla, el banner cambia a <strong>Some Systems Degraded</strong> (Algunos Sistemas Degradados), <strong>Partial System Outage</strong> (Interrupción Parcial) o <strong>Major System Outage</strong> (Interrupción Mayor), y el color del banner cambia con él (verde → ámbar → rojo).</li><li><strong>Updated … ago</strong> (Actualizado hace…) — qué tan recientes son los datos. El panel se actualiza solo cada minuto mientras la pestaña está abierta; haga clic en el pequeño icono de <strong>actualizar</strong> para refrescar de inmediato.</li><li><strong>Uptime · last 90 days</strong> (Disponibilidad · últimos 90 días) — el porcentaje de disponibilidad de toda la plataforma, a la derecha.</li><li><strong>1H / 6H / 24H / 7D</strong> — el selector de rango de tiempo. Controla los gráficos de métricas de toda la página, para acercarse desde la última hora hasta la última semana.</li></ul><p>¿No está seguro de qué significa un color? Haga clic en <strong>Legend</strong> (Leyenda) en la esquina superior derecha de la página para ver los cinco estados: <strong>Operational</strong> (Operativo), <strong>Degraded</strong> (Degradado), <strong>Partial Outage</strong> (Interrupción Parcial), <strong>Outage</strong> (Interrupción) y <strong>Unknown</strong> (Desconocido).</p>",
+      "images": [
+        {"src": "images/settings/system-health-hero-light.png", "alt": "Banner de estado mostrando All Systems Operational, disponibilidad de 90 días y el selector de rango de tiempo", "caption": "El banner de estado: estado general, frescura de datos, disponibilidad de 90 días y el selector 1H/6H/24H/7D", "theme": "light"},
+        {"src": "images/settings/system-health-hero-dark.png", "alt": "Banner de estado mostrando All Systems Operational, disponibilidad de 90 días y el selector de rango de tiempo", "caption": "El banner de estado: estado general, frescura de datos, disponibilidad de 90 días y el selector 1H/6H/24H/7D", "theme": "dark"},
+        {"src": "images/settings/system-health-legend-light.png", "alt": "Leyenda de estados con Operational, Degraded, Partial Outage, Outage y Unknown", "caption": "Haga clic en Legend para descifrar los colores de estado", "theme": "light"},
+        {"src": "images/settings/system-health-legend-dark.png", "alt": "Leyenda de estados con Operational, Degraded, Partial Outage, Outage y Unknown", "caption": "Haga clic en Legend para descifrar los colores de estado", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "check-the-kpis",
+      "title": "Revise los cuatro KPIs principales",
+      "content": "<p>Justo debajo del banner, la franja de KPIs le cuenta la historia de salud en cuatro números:</p><ul><li><strong>Platform Uptime</strong> (Disponibilidad de la Plataforma) — disponibilidad general de los últimos 90 días.</li><li><strong>Healthy Services</strong> (Servicios Saludables) — cuántos servicios monitoreados están operativos en este momento (p. ej. <strong>22/22</strong>).</li><li><strong>Incidents</strong> (Incidentes) — el número de incidentes registrados en los últimos 90 días.</li><li><strong>Live Calls</strong> (Llamadas en Vivo) — cuántas llamadas <em>suyas</em> están en curso en este preciso momento.</li></ul><blockquote>💡 <strong>Healthy Services</strong> es la comprobación más rápida de \"¿soy yo o es la plataforma?\". Si muestra todos los servicios saludables pero algo se siente mal en su cuenta, el problema probablemente es local de su configuración — contacte a soporte con los detalles.</blockquote>",
+      "images": [
+        {"src": "images/settings/system-health-kpis-light.png", "alt": "Franja de KPIs con Platform Uptime, Healthy Services, Incidents y Live Calls", "caption": "Cuatro números clave: disponibilidad, servicios saludables, incidentes y sus llamadas en vivo", "theme": "light"},
+        {"src": "images/settings/system-health-kpis-dark.png", "alt": "Franja de KPIs con Platform Uptime, Healthy Services, Incidents y Live Calls", "caption": "Cuatro números clave: disponibilidad, servicios saludables, incidentes y sus llamadas en vivo", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "live-activity",
+      "title": "Observe su actividad en vivo",
+      "content": "<p>La fila <strong>Live Activity</strong> (Actividad en Vivo) es la prueba de que la plataforma está trabajando para <em>usted</em> en este momento — muestra datos de su propia cuenta, no de toda la plataforma:</p><ul><li><strong>calls in progress</strong> (llamadas en curso) — sus llamadas activas en este instante (el icono pulsa mientras hay llamadas en vivo).</li><li><strong>calls today</strong> (llamadas hoy) — su volumen total de llamadas en lo que va del día.</li><li><strong>messages today</strong> (mensajes hoy) — su volumen de mensajes SMS/WhatsApp/correo en lo que va del día.</li></ul>",
+      "images": [
+        {"src": "images/settings/system-health-activity-light.png", "alt": "Fila de Actividad en Vivo con llamadas en curso, llamadas hoy y mensajes hoy", "caption": "Live Activity: sus propias llamadas y mensajes, actualizándose en tiempo real", "theme": "light"},
+        {"src": "images/settings/system-health-activity-dark.png", "alt": "Fila de Actividad en Vivo con llamadas en curso, llamadas hoy y mensajes hoy", "caption": "Live Activity: sus propias llamadas y mensajes, actualizándose en tiempo real", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "browse-services",
+      "title": "Explore los servicios monitoreados",
+      "content": "<p>Debajo de los KPIs, cada servicio monitoreado tiene su propia tarjeta, organizada en tres grupos (los mismos grupos aparecen en el riel izquierdo):</p><ul><li><strong>Application</strong> (Aplicación) — las partes con las que usted interactúa: <strong>Automation</strong>, <strong>Call Recording</strong>, <strong>Core API</strong>, <strong>Dashboard</strong>, <strong>Realtime Media</strong>, <strong>Telephony</strong> y <strong>Voice Agents</strong>.</li><li><strong>Infrastructure</strong> (Infraestructura) — la base sobre la que todo funciona: <strong>Cache &amp; State</strong>, <strong>Database</strong>, <strong>Database Pooler</strong>, <strong>Network Gateway</strong>, <strong>Tracking Proxy</strong>, y más.</li><li><strong>Platform Services</strong> (Servicios de Plataforma) — servicios de soporte como <strong>API Gateway</strong>, <strong>Authentication</strong> y <strong>Data API</strong>.</li></ul><p>Cada tarjeta condensa mucha información en poco espacio:</p><ul><li>Una <strong>etiqueta de estado</strong> (Operational / Degraded / …).</li><li><strong>Uptime · 24h</strong> con una minigráfica del rango de tiempo seleccionado.</li><li>Una mini <strong>barra de disponibilidad de 30 días</strong> — cada bloque es un día; verde significa un día sin problemas.</li><li><strong>Instances</strong> (instancias saludables/deseadas), carga de <strong>CPU</strong> y <strong>Memory</strong> (memoria).</li></ul><p>El riel fijo de la izquierda lista los mismos servicios con su punto de estado en vivo y su disponibilidad de 24 horas — úselo para saltar entre <strong>Overview</strong> y cualquier servicio sin desplazarse.</p>",
+      "images": [
+        {"src": "images/settings/system-health-services-light.png", "alt": "Tarjetas de servicios de Aplicación con estado, minigráfica de disponibilidad, barra de 30 días y métricas de recursos", "caption": "Tarjetas de servicio: estado, minigráfica de disponibilidad de 24h, historial de 30 días y uso de recursos en vivo", "theme": "light"},
+        {"src": "images/settings/system-health-services-dark.png", "alt": "Tarjetas de servicios de Aplicación con estado, minigráfica de disponibilidad, barra de 30 días y métricas de recursos", "caption": "Tarjetas de servicio: estado, minigráfica de disponibilidad de 24h, historial de 30 días y uso de recursos en vivo", "theme": "dark"},
+        {"src": "images/settings/system-health-rail-light.png", "alt": "Riel izquierdo de servicios agrupado en Application, Infrastructure y Platform Services", "caption": "El riel izquierdo: cada servicio, su punto de estado y su disponibilidad de 24h — a un clic de distancia", "theme": "light"},
+        {"src": "images/settings/system-health-rail-dark.png", "alt": "Riel izquierdo de servicios agrupado en Application, Infrastructure y Platform Services", "caption": "El riel izquierdo: cada servicio, su punto de estado y su disponibilidad de 24h — a un clic de distancia", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "drill-into-a-service",
+      "title": "Profundice en un servicio",
+      "content": "<p>¿Quiere la historia completa de un servicio? Abra su vista de detalle:</p><ol><li>Haga clic en cualquier <strong>tarjeta de servicio</strong> de la cuadrícula, o en el nombre del servicio en el riel izquierdo (por ejemplo <strong>Voice Agents</strong>).</li><li>El encabezado muestra el nombre del servicio, su <strong>etiqueta de estado</strong> y cuántas <strong>instancias</strong> están saludables (p. ej. <em>2/2 instances healthy</em>).</li><li>Cinco recuadros resumen el servicio:<ul><li><strong>Uptime · 90d</strong> — disponibilidad a largo plazo, con la cifra de 24 horas debajo.</li><li><strong>Instances</strong> — copias saludables vs. deseadas del servicio.</li><li><strong>Restarts · 24h</strong> — reinicios de contenedores en el último día (0 es lo ideal).</li><li><strong>Avg CPU</strong> (CPU promedio) y <strong>Peak Memory</strong> (memoria pico) — utilización de recursos para el rango de tiempo seleccionado.</li></ul></li><li>La barra <strong>Uptime — last 90 days</strong> muestra un bloque por día, seguida del historial de incidentes del servicio — o un amigable <strong>No incidents in the last 90 days</strong> (Sin incidentes en los últimos 90 días) cuando el historial está limpio.</li></ol><blockquote>💡 Pase el cursor sobre cualquier bloque de día en la barra de disponibilidad para ver el porcentaje exacto de ese día.</blockquote>",
+      "images": [
+        {"src": "images/settings/system-health-detail-light.png", "alt": "Detalle del servicio Voice Agents con estado, recuadros de estadísticas y barra de disponibilidad de 90 días", "caption": "La vista de detalle de un servicio: estado, instancias, reinicios, CPU/memoria y 90 días de disponibilidad", "theme": "light"},
+        {"src": "images/settings/system-health-detail-dark.png", "alt": "Detalle del servicio Voice Agents con estado, recuadros de estadísticas y barra de disponibilidad de 90 días", "caption": "La vista de detalle de un servicio: estado, instancias, reinicios, CPU/memoria y 90 días de disponibilidad", "theme": "dark"},
+        {"src": "images/settings/system-health-detail-uptime-light.png", "alt": "Barra de disponibilidad de los últimos 90 días con mensaje de Sin incidentes", "caption": "Un bloque por día — todo verde significa 90 días impecables", "theme": "light"},
+        {"src": "images/settings/system-health-detail-uptime-dark.png", "alt": "Barra de disponibilidad de los últimos 90 días con mensaje de Sin incidentes", "caption": "Un bloque por día — todo verde significa 90 días impecables", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "resource-metrics",
+      "title": "Explore los gráficos de Resource Metrics",
+      "content": "<p>Debajo del historial de disponibilidad, la sección <strong>Resource Metrics</strong> (Métricas de Recursos) grafica el desempeño del servicio durante el rango de tiempo seleccionado:</p><ul><li><strong>CPU Usage</strong> (Uso de CPU) y <strong>Memory Usage</strong> (Uso de Memoria) — carga a lo largo del tiempo, con los valores actual y promedio en el encabezado de cada gráfico.</li><li><strong>Network In</strong> / <strong>Network Out</strong> (Red Entrante / Saliente) — tráfico que entra y sale del servicio.</li><li><strong>Healthy Instances</strong> (Instancias Saludables) — copias en ejecución vs. la línea objetivo.</li><li><strong>Restarts</strong> (Reinicios) — una línea plana en cero es un servicio saludable.</li></ul><ol><li>Use el selector <strong>1H / 6H / 24H / 7D</strong> del banner de estado para cambiar la ventana de todos los gráficos.</li><li>Si el servicio ejecuta más de una instancia, aparece un menú desplegable en el encabezado de la sección — alterne entre <strong>All instances · aggregate</strong> (Todas las instancias · agregado) y cada instancia individual para detectar una que no esté saludable.</li><li>Pase el cursor sobre cualquier gráfico para leer valores exactos en un punto del tiempo.</li></ol>",
+      "images": [
+        {"src": "images/settings/system-health-detail-metrics-light.png", "alt": "Gráficos de Resource Metrics de CPU, memoria, red, instancias saludables y reinicios", "caption": "Resource Metrics: CPU, memoria, red, instancias y reinicios — con un desplegable por instancia", "theme": "light"},
+        {"src": "images/settings/system-health-detail-metrics-dark.png", "alt": "Gráficos de Resource Metrics de CPU, memoria, red, instancias saludables y reinicios", "caption": "Resource Metrics: CPU, memoria, red, instancias y reinicios — con un desplegable por instancia", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "third-party-providers",
+      "title": "Consulte los proveedores de IA de terceros",
+      "content": "<p>Sus agentes también dependen de servicios de IA externos — e iMash también los vigila. Desplácese hasta el final del <strong>Overview</strong> y encuentre la sección <strong>Third-Party Providers</strong> (Proveedores de Terceros):</p><ul><li>Cada fila muestra un proveedor (como <strong>OpenAI</strong>, <strong>ElevenLabs</strong>, <strong>Cartesia</strong> o <strong>Google Gemini API</strong>) con su <strong>etiqueta de estado</strong> actual.</li><li>La <strong>barra de historial de 30 días</strong> muestra un bloque por día — pase el cursor sobre un bloque para ver los detalles de ese día.</li><li>Haga clic en el icono de <strong>enlace</strong> (o en <strong>Check status</strong>) para abrir la página de estado oficial del propio proveedor.</li></ul><blockquote>⚠️ Si su agente de voz de repente suena raro o responde lento mientras todos los servicios de iMash están en verde, revise esta sección — un proveedor de LLM o TTS degradado es el culpable habitual, y normalmente se recupera del lado del proveedor.</blockquote><p>Eso es todo — ahora tiene una sola página que le dice, en cualquier momento, exactamente cómo está la plataforma que impulsa su negocio.</p>",
+      "images": [
+        {"src": "images/settings/system-health-providers-light.png", "alt": "Sección Third-Party Providers con el historial de estado de OpenAI, ElevenLabs, Cartesia y Google Gemini API", "caption": "Proveedores de IA de terceros con historial de estado de 30 días y enlaces a sus páginas de estado oficiales", "theme": "light"},
+        {"src": "images/settings/system-health-providers-dark.png", "alt": "Sección Third-Party Providers con el historial de estado de OpenAI, ElevenLabs, Cartesia y Google Gemini API", "caption": "Proveedores de IA de terceros con historial de estado de 30 días y enlaces a sus páginas de estado oficiales", "theme": "dark"}
+      ]
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué Sigue?",
+    "description": "Ya sabe que la plataforma está saludable — ahora mantenga la misma mirada atenta sobre su propia operación.",
+    "cards": [
+      {"href": "/settings/audit-log", "title": "Registro de Auditoría", "description": "Vea quién cambió qué en su cuenta — cada cambio de configuración, registrado."},
+      {"href": "/analytics/analytics-dashboard", "title": "Panel de Analíticas", "description": "Monitoree sus llamadas, agentes y campañas con la misma claridad de un vistazo."},
+      {"href": "/phone/call-logs", "title": "Registros de Llamadas", "description": "Profundice en llamadas individuales — grabaciones, transcripciones, resultados y costos."}
+    ]
+  },
+  "support": {
+    "title": "¿Necesita Ayuda?",
+    "content": "<p>Si tiene algún problema o pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+  },
+  "metaTitle": "Salud del Sistema y Disponibilidad | Documentación de iMash",
+  "metaDescription": "Monitoree la salud de la plataforma iMash en tiempo real: estado general, disponibilidad de 90 días, métricas por servicio, historial de incidentes y estado de los proveedores de IA de terceros.",
+  "metaKeywords": "salud del sistema, disponibilidad, página de estado, monitoreo de plataforma, incidentes, estado de servicios, monitor iMash"
+}

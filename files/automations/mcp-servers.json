@@ -1,50 +1,119 @@
 {
-  "title": "Attach an MCP Server",
-  "lede": "A Model Context Protocol (MCP) server bundles external tools and resources your Smart Agent can use during a conversation. Attach one from the agent's Tools / MCP panel.",
-  "timeToComplete": "5 minutes",
+  "title": "MCP Servers",
+  "lede": "Build your own MCP (Model Context Protocol) server — a plug-and-play toolkit of actions from 280+ apps and your own automation flows — and hand it to your Smart Agents so they can actually DO things during a conversation.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
-      "id": "open-tools-mcp",
-      "title": "Open the Tools / MCP Panel",
-      "content": "<ol><li>Go to <strong>Intelligence Center → Smart Agents</strong> and open the agent you want to extend.</li><li>Open the <strong>Tools / MCP</strong> panel in the editor.</li><li>Find the <strong>MCP Server</strong> selector.</li></ol>",
+      "id": "open-mcp",
+      "title": "Open the MCP Manager",
+      "content": "<p>Think of an MCP server as a toolbox you pack once and hand to any AI agent: each tool inside is a real action (send a Slack message, create a calendar event, call an API, run one of your flows) that the agent can fire mid-conversation. Here's where you build that toolbox:</p><ol><li>In the left sidebar, click <strong>Intelligence Center → Automation</strong>.</li><li>The Automation workspace opens with its own mini-sidebar on the left (Flows, Custom Tables, System Tables, MCP, Todos, Connections).</li><li>Click <strong>MCP</strong> in that mini-sidebar.</li><li>You land on the <strong>MCP Servers</strong> page — a table with <strong>Name</strong>, <strong>Tools</strong>, and <strong>Last Modified</strong> columns. On a fresh account it says <strong>No MCP servers have been created yet</strong>.</li></ol><blockquote>💡 <strong>Tip:</strong> MCP servers are separate from your automation flows — a flow runs on a trigger, while an MCP tool waits for an AI agent to decide it's needed. You can even expose flows as MCP tools (covered below), getting the best of both worlds.</blockquote>",
       "images": [
-        { "src": "images/agents/tools-mcp-light.png", "alt": "Tools and MCP panel", "caption": "The Tools / MCP panel, where you pick an MCP server for the agent.", "theme": "light" },
-        { "src": "images/agents/tools-mcp-dark.png", "alt": "Tools and MCP panel", "caption": "The Tools / MCP panel, where you pick an MCP server for the agent.", "theme": "dark" }
+        { "src": "images/automations/mcp-servers-open-light.png", "alt": "MCP Servers page inside the Automation workspace", "caption": "Automation → MCP: the MCP Servers page, ready for your first server.", "theme": "light" },
+        { "src": "images/automations/mcp-servers-open-dark.png", "alt": "MCP Servers page inside the Automation workspace", "caption": "Automation → MCP: the MCP Servers page, ready for your first server.", "theme": "dark" }
       ]
     },
     {
-      "id": "select-server",
-      "title": "Select an MCP Server",
-      "content": "<ol><li>Open the <strong>MCP Server</strong> dropdown to see the servers set up for your account.</li><li>Pick one - selecting it automatically <strong>enables</strong> MCP for this agent and saves the choice.</li><li>To turn it off, clear the selection.</li></ol>",
-      "images": []
+      "id": "create-server",
+      "title": "Create and Name Your Server",
+      "content": "<ol><li>Click <strong>+ New MCP Server</strong> in the top-right.</li><li>A new server is created instantly and you land on its page. It has two tabs: <strong>Configure</strong> (its tools) and <strong>History</strong> (every tool execution).</li><li>Click the server name at the top (or the pencil icon next to it), type a descriptive name like <em>Support Toolkit</em>, and press <strong>Enter</strong>. The rename saves automatically.</li></ol><blockquote>💡 <strong>Tip:</strong> Name servers after the job they do — \"Support Toolkit\", \"Sales Research\", \"Booking Actions\". When you later attach servers to agents, a clear name beats \"Untitled\" every time.</blockquote>",
+      "images": [
+        { "src": "images/automations/mcp-servers-configure-light.png", "alt": "A new MCP server's Configure tab with no tools yet", "caption": "Your new server: the Configure tab starts empty — time to add tools.", "theme": "light" },
+        { "src": "images/automations/mcp-servers-configure-dark.png", "alt": "A new MCP server's Configure tab with no tools yet", "caption": "Your new server: the Configure tab starts empty — time to add tools.", "theme": "dark" }
+      ]
     },
     {
-      "id": "no-servers",
-      "title": "Don't See Any Servers?",
-      "content": "<ol><li>If the list is empty, you first need to set up an MCP server for your account.</li><li>Use the <strong>Setup MCP</strong> link in the panel, then come back and select it here.</li></ol>",
-      "images": []
+      "id": "add-tools",
+      "title": "Add Tools: Two Sources",
+      "content": "<p>On the <strong>Configure</strong> tab, the <strong>Tools</strong> section is where the magic happens.</p><ol><li>Click <strong>Add tool</strong> on the right side of the Tools section.</li><li>A small menu opens with two options:</li></ol><ul><li><strong>From piece</strong> — pick ready-made actions from a catalog of 280+ integrations (Slack, Google Sheets, HubSpot, Stripe, plain HTTP requests, and many more).</li><li><strong>From flow</strong> — expose one of your own automation flows as a tool, so the agent can trigger your custom logic on demand.</li></ul>",
+      "images": [
+        { "src": "images/automations/mcp-servers-add-tool-light.png", "alt": "Add tool menu with From piece and From flow options", "caption": "Add tool → choose From piece (app catalog) or From flow (your own flows).", "theme": "light" },
+        { "src": "images/automations/mcp-servers-add-tool-dark.png", "alt": "Add tool menu with From piece and From flow options", "caption": "Add tool → choose From piece (app catalog) or From flow (your own flows).", "theme": "dark" }
+      ]
     },
     {
-      "id": "test-it",
-      "title": "Test the Agent",
-      "content": "<ol><li>Open <strong>Test Agent</strong> and connect.</li><li>Ask something that should use an MCP tool and confirm the agent can access it.</li></ol>",
+      "id": "pick-an-app",
+      "title": "From Piece: Pick an App",
+      "content": "<ol><li>Click <strong>Add tool → From piece</strong>.</li><li>The <strong>Add Tool</strong> dialog opens with a searchable grid of integrations.</li><li>Type in the <strong>Search</strong> box to filter (e.g. <em>slack</em>, <em>sheets</em>, <em>http</em>).</li><li>Click the app you want — the dialog switches to that app's list of available actions.</li></ol><blockquote>💡 <strong>Tip:</strong> The <strong>HTTP</strong> piece is the Swiss-army knife of the catalog: its <strong>Send HTTP request</strong> action lets your agent call any API on the internet, no dedicated integration required.</blockquote>",
+      "images": [
+        { "src": "images/automations/mcp-servers-piece-dialog-light.png", "alt": "Add Tool dialog with a searchable grid of app integrations", "caption": "The Add Tool dialog: search across 280+ app integrations.", "theme": "light" },
+        { "src": "images/automations/mcp-servers-piece-dialog-dark.png", "alt": "Add Tool dialog with a searchable grid of app integrations", "caption": "The Add Tool dialog: search across 280+ app integrations.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "choose-actions",
+      "title": "Choose Actions and Save",
+      "content": "<ol><li>Inside the app you picked, tick the checkbox next to each action you want the agent to have, or tick <strong>Select all</strong>.</li><li>Click <strong>Save</strong>. The dialog closes and each selected action appears as its own tool on the server.</li><li>Use the <strong>&lt;</strong> back arrow at the top of the dialog if you want to pick a different app first, or <strong>Close</strong> to cancel.</li></ol><blockquote>⚠️ <strong>Important:</strong> Apps that talk to an account (Slack, Gmail, HubSpot…) show a <strong>Connection</strong> dropdown above the action list — the agent needs credentials to act on your behalf. Pick an existing connection or create one under <strong>Connections</strong> in the Automation mini-sidebar first. Simple pieces like <strong>HTTP</strong> need no connection at all.</blockquote>",
+      "images": [
+        { "src": "images/automations/mcp-servers-piece-actions-light.png", "alt": "HTTP piece action list with Send HTTP request selected", "caption": "Tick the actions the agent may use, then click Save.", "theme": "light" },
+        { "src": "images/automations/mcp-servers-piece-actions-dark.png", "alt": "HTTP piece action list with Send HTTP request selected", "caption": "Tick the actions the agent may use, then click Save.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "add-flow-tool",
+      "title": "From Flow: Turn Your Automations into Tools",
+      "content": "<p>This is where MCP gets really powerful: any automation flow you've built can become a tool the agent calls on demand — multi-step logic, branching, database writes and all.</p><ol><li>Click <strong>Add tool → From flow</strong>.</li><li>The <strong>Add Flow Tools</strong> dialog lists your eligible flows. Use <strong>Search flows</strong> to filter.</li><li>Tick the flows you want, then click <strong>Save</strong>.</li><li>No flows yet? Click the <strong>Create New Flow</strong> card to jump straight into the flow builder.</li></ol><blockquote>💡 <strong>Tip:</strong> If the dialog says <strong>No flows available</strong>, your flows may not be published yet or none exist — build and publish a flow under <strong>Automation → Flows</strong> first, then come back.</blockquote>",
+      "images": [
+        { "src": "images/automations/mcp-servers-flow-dialog-light.png", "alt": "Add Flow Tools dialog with search and Create New Flow card", "caption": "Add Flow Tools: expose your own flows as MCP tools.", "theme": "light" },
+        { "src": "images/automations/mcp-servers-flow-dialog-dark.png", "alt": "Add Flow Tools dialog with search and Create New Flow card", "caption": "Add Flow Tools: expose your own flows as MCP tools.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "review-tools",
+      "title": "Review the Tools on Your Server",
+      "content": "<ol><li>Back on the <strong>Configure</strong> tab, every tool is listed as a card showing the app icon, the app name, and the technical action name (e.g. <strong>HTTP / send_request</strong>) — that action name is what the AI sees when deciding which tool to call.</li><li>Keep stacking: click <strong>Add tool</strong> again to combine actions from many apps and flows on the same server — one server can be a complete department toolkit.</li></ol>",
+      "images": [
+        { "src": "images/automations/mcp-servers-tools-list-light.png", "alt": "MCP server Configure tab listing an HTTP send_request tool", "caption": "Each saved action shows up as its own tool card on the server.", "theme": "light" },
+        { "src": "images/automations/mcp-servers-tools-list-dark.png", "alt": "MCP server Configure tab listing an HTTP send_request tool", "caption": "Each saved action shows up as its own tool card on the server.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "remove-tool",
+      "title": "Remove a Tool",
+      "content": "<ol><li>On the tool's card, click the <strong>⋮</strong> (three-dot) menu on the right.</li><li>Click <strong>Delete</strong>.</li><li>A confirmation dialog asks <em>\"Are you sure you want to delete this tool?\"</em> — click <strong>Remove</strong> to confirm, or <strong>Cancel</strong> to keep it.</li></ol><blockquote>⚠️ <strong>Warning:</strong> Removing a tool takes it away from every agent using this server immediately. If an agent's script depends on that action, update the agent too.</blockquote>",
+      "images": [
+        { "src": "images/automations/mcp-servers-delete-tool-light.png", "alt": "Delete tool confirmation dialog with Cancel and Remove buttons", "caption": "Deleting a tool asks for confirmation before removing it.", "theme": "light" },
+        { "src": "images/automations/mcp-servers-delete-tool-dark.png", "alt": "Delete tool confirmation dialog with Cancel and Remove buttons", "caption": "Deleting a tool asks for confirmation before removing it.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "manage-servers",
+      "title": "Manage Your Servers",
+      "content": "<ol><li>Click the <strong>&lt;</strong> back arrow next to the server name to return to the <strong>MCP Servers</strong> list.</li><li>The table shows each server's <strong>Name</strong>, the icons of its <strong>Tools</strong>, and <strong>Last Modified</strong>. Click any row to open that server.</li><li>To rename a server, open it and click the pencil icon next to its name.</li><li>To delete servers, tick the checkbox at the left of one or more rows — a <strong>Delete</strong> button appears above the table. Confirm to remove them.</li><li>Create as many servers as you need with <strong>+ New MCP Server</strong> — for example one per team, one per agent persona, or one per customer workflow.</li></ol>",
+      "images": [
+        { "src": "images/automations/mcp-servers-list-light.png", "alt": "MCP Servers list showing a server row with its tools", "caption": "The MCP Servers list: every server with its tools at a glance.", "theme": "light" },
+        { "src": "images/automations/mcp-servers-list-dark.png", "alt": "MCP Servers list showing a server row with its tools", "caption": "The MCP Servers list: every server with its tools at a glance.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "monitor-history",
+      "title": "Monitor Tool Usage with History",
+      "content": "<p>Once agents start using your server, you get a full audit trail.</p><ol><li>Open a server and click the <strong>History</strong> tab.</li><li>The <strong>Tool Usage History</strong> table logs every execution with its <strong>Action</strong>, <strong>Status</strong>, and <strong>Created At</strong> time.</li><li>Filter with the <strong>Action Name</strong> search or the <strong>Status</strong> filter to zero in on failures.</li></ol><blockquote>💡 <strong>Tip:</strong> Seeing <strong>No tool executions yet</strong>? That's normal until an agent actually calls a tool — come back after your first live test call.</blockquote>",
+      "images": [
+        { "src": "images/automations/mcp-servers-history-light.png", "alt": "Tool Usage History tab with Action, Status and Created At columns", "caption": "The History tab tracks every tool execution your agents make.", "theme": "light" },
+        { "src": "images/automations/mcp-servers-history-dark.png", "alt": "Tool Usage History tab with Action, Status and Created At columns", "caption": "The History tab tracks every tool execution your agents make.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "attach-to-agent",
+      "title": "Put It to Work: Attach the Server to a Smart Agent",
+      "content": "<p>A toolbox only matters in the hands of a worker. The attach side lives in the agent editor:</p><ol><li>Go to <strong>Intelligence Center → Smart Agents</strong> and open an agent.</li><li>In the agent's <strong>Tools / MCP</strong> panel, select your server from the <strong>MCP Server</strong> list — the agent instantly gains every tool on it.</li><li>In the visual node editor you can go further: drop <strong>MCP Server</strong> nodes onto the canvas and wire them into specific Tasks, so different parts of the conversation get different toolkits. The node editor also accepts <strong>custom</strong> MCP servers — any external server by <strong>Server URL</strong> plus an optional auth header — so you can plug in MCP servers hosted outside iMash too.</li><li>Then open <strong>Test Agent</strong>, connect, and ask for something that needs a tool — watch it happen, and watch the run land in your <strong>History</strong> tab.</li></ol><p>The full attach walkthrough (including the custom-URL option) lives in the <a data-href=\"/agents/agent-mcp\">Agent MCP guide</a>.</p>",
       "images": []
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Give your agent more ways to act:",
+    "description": "Your toolbox is packed — now hand it to an agent and keep expanding what your AI can do:",
     "cards": [
-      { "href": "/agents/agent-tools", "title": "Add Tools to Your Agent", "description": "Combine MCP with predefined and custom tools." },
-      { "href": "/automations/custom-tools", "title": "Build Custom Tools", "description": "Create your own HTTP tools for the agent." },
-      { "href": "/agents/advanced-settings", "title": "Advanced Agent Settings", "description": "Control how the agent decides which tools to use." }
+      { "href": "/agents/agent-mcp", "title": "Attach MCP to an Agent", "description": "Wire your MCP server into a Smart Agent and test it live." },
+      { "href": "/automations/smart-flows", "title": "Build Automation Flows", "description": "Create flows you can expose as MCP tools." },
+      { "href": "/automations/custom-tools", "title": "Build Custom Tools", "description": "Another way to give agents abilities: your own HTTP tools." }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Attach an MCP Server | iMash Docs",
-  "metaDescription": "Give your iMash Smart Agent external tools via a Model Context Protocol (MCP) server: open the Tools / MCP panel, select a server, and test the agent.",
-  "metaKeywords": "mcp server, model context protocol, agent tools, external tools, smart agent, tools mcp, imash"
+  "metaTitle": "MCP Servers | iMash Documentation",
+  "metaDescription": "Create and manage MCP (Model Context Protocol) servers in iMash: register a server, add tools from 280+ app integrations or your own flows, monitor tool usage, and attach the server to your Smart Agents.",
+  "metaKeywords": "mcp server, model context protocol, agent tools, integrations, automation, tool usage history, smart agent tools, from piece, from flow, imash"
 }

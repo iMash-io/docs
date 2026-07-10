@@ -1,0 +1,99 @@
+{
+  "title": "Job Sources, Types & Payment Types",
+  "lede": "These three small tabs are the DNA of your dispatch operation: Job Sources tell iMash where work comes from, Job Types tell it what kind of work it is, and Payment Types tell it how customers pay. Set them up once and every job, dispatch text, report, and technician payout automatically falls into place.",
+  "timeToComplete": "15 minutes",
+  "steps": [
+    {
+      "id": "open-config-tabs",
+      "title": "Find the three configuration tabs",
+      "content": "<p>All three catalogs live inside the Dispatch section, right next to your jobs board.</p><ol><li>In the top navigation, click <strong>Dispatch</strong>.</li><li>A strip of pill-shaped sub-tabs appears under the main navigation. Scroll it (use the <strong>‹ ›</strong> arrows if needed) and you'll find <strong>Job Sources</strong>, <strong>Job Types</strong>, and <strong>Payment Types</strong> side by side.</li><li>Click any of the three pills to open that catalog. Each one is a simple table with an <strong>Add</strong> button in the top-right — you'll fill all three in the steps below.</li></ol><blockquote>💡 Why bother? Everything downstream reads these lists: auto-dispatch uses sources and types to decide <em>which technician</em> gets the job, reports group revenue by source and type, and the finance engine uses payment types to work out who is holding the customer's money. Five minutes here saves hours of manual sorting later.</blockquote>",
+      "images": [
+        { "src": "images/dispatch/job-sources-types-tab-strip-light.png", "alt": "Dispatch sub-tab strip with the Job Sources, Job Types and Payment Types pills", "caption": "The Dispatch sub-tab strip — Job Sources, Job Types, and Payment Types sit side by side", "theme": "light" },
+        { "src": "images/dispatch/job-sources-types-tab-strip-dark.png", "alt": "Dispatch sub-tab strip with the Job Sources, Job Types and Payment Types pills", "caption": "The Dispatch sub-tab strip — Job Sources, Job Types, and Payment Types sit side by side", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "job-sources-overview",
+      "title": "Job Sources — your lead-source companies",
+      "content": "<p>A <strong>Job Source</strong> is where a job comes from: a lead-generation partner (HomeAdvisor, Angi, Thumbtack), a marketing channel (Google Ads, your website), or a partner call center that texts you work. Every job you create or receive is stamped with its source, and each source carries its own phone identity, branding, and technician roster.</p><ol><li>Click the <strong>Job Sources</strong> pill. The table lists every source with columns for <strong>Name</strong>, <strong>Phone</strong>, <strong>Email</strong>, <strong>Address</strong>, <strong>SMS Number</strong>, <strong>Masking Number</strong>, <strong>Assistants</strong>, and <strong>Technicians</strong>.</li><li>Use the <strong>Actions</strong> column on the right to <strong>Edit</strong> (pencil) or <strong>Delete</strong> (trash) a source.</li><li>Click <strong>Add Source</strong> in the top-right to create your first one — the next two steps walk through every field in the form.</li></ol><blockquote>⚠️ If a source's <strong>SMS Number</strong> column shows a red <strong>Not set</strong> pill, outbound texts for that source have no dedicated sender — open the source and pick one. iMash won't let you save a source without it.</blockquote>",
+      "images": [
+        { "src": "images/dispatch/job-sources-types-sources-tab-light.png", "alt": "Job Sources tab with the sources table and the Add Source button", "caption": "The Job Sources tab — your list starts empty; click Add Source to create the first one", "theme": "light" },
+        { "src": "images/dispatch/job-sources-types-sources-tab-dark.png", "alt": "Job Sources tab with the sources table and the Add Source button", "caption": "The Job Sources tab — your list starts empty; click Add Source to create the first one", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "source-identity-fields",
+      "title": "Add a source — identity and branding fields",
+      "content": "<p>Click <strong>Add Source</strong> and the source form opens. The top half is the source's identity:</p><ul><li><strong>Name</strong> (required) — the company or channel name, e.g. <em>HomeAdvisor</em>. This exact name appears on jobs, filters, and reports.</li><li><strong>Logo</strong> — click <strong>Upload logo</strong> (PNG or JPG, 500 KB max). The logo is shown on the customer-facing invoice and payment pages for jobs from this source, so the customer sees the brand they called — a subtle but powerful trust boost.</li><li><strong>Phone</strong> — the single phone number this partner texts you jobs from. Inbound texts from this number are automatically attributed to this source.</li><li><strong>Source Group</strong> — instead of a single number, attach an existing <strong>group text thread</strong> (group MMS). Perfect when a lead-source company runs a group chat with your dispatch team: inbound messages from the group create jobs under this source, and status updates go back to the <em>whole group</em>. The group must already exist in <strong>Messages</strong> — receive or create it there first, then select it here. Picking a group disables the single <strong>Phone</strong> field (they're mutually exclusive).</li><li><strong>Email</strong>, <strong>Address</strong>, <strong>Website</strong> — contact details for your records.</li></ul>",
+      "images": [
+        { "src": "images/dispatch/job-sources-types-source-modal-light.png", "alt": "Add Source form showing name, logo, phone, source group, email, address, website, SMS and masking numbers, AI review overrides and assignment fields", "caption": "The Add Source form — identity at the top, phone identities and AI overrides below, team assignments at the bottom", "theme": "light" },
+        { "src": "images/dispatch/job-sources-types-source-modal-dark.png", "alt": "Add Source form showing name, logo, phone, source group, email, address, website, SMS and masking numbers, AI review overrides and assignment fields", "caption": "The Add Source form — identity at the top, phone identities and AI overrides below, team assignments at the bottom", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "source-numbers-and-ai",
+      "title": "Add a source — phone identities, AI review, and team",
+      "content": "<p>Scroll down in the same form for the operational settings (all visible in the screenshot above):</p><ul><li><strong>SMS Phone Number</strong> (required) — the number iMash texts <em>from</em> for this source's jobs (dispatch offers to technicians, customer status updates) and the inbound line it listens on. Only 10DLC-registered numbers appear in the list — carrier rules require registration for business texting. Buy and register numbers under <strong>Phone numbers</strong> first.</li><li><strong>Masking Phone Number</strong> — the caller ID used when iMash bridges a masked call between your technician and the customer (neither side sees the other's real number). Optional; pick any of your numbers.</li><li><strong>AI Post-Call Review — Override</strong> — fine-tune the AI that reviews recorded calls for this source's jobs: <strong>Enabled (override)</strong> lets you <strong>Force ON</strong> / <strong>Force OFF</strong> the review just for this source, <strong>LLM model (override)</strong> swaps the model, and <strong>Review prompt (override)</strong> replaces the review instructions. Leave any field blank to <strong>inherit from tenant default</strong>.</li><li><strong>System Number</strong> — a legacy field kept for older setups; use <strong>SMS Phone Number</strong> and <strong>Masking Phone Number</strong> instead.</li><li><strong>Assigned Assistants</strong> — link one or more AI agents to this source so calls and messages for its jobs are handled by the right agent persona.</li><li><strong>Assigned Technicians</strong> — check every technician allowed to work this source's jobs (use <strong>Select all</strong> / <strong>Deselect all</strong> for speed). Auto-dispatch only offers a job to technicians assigned to its source.</li></ul><p>Click <strong>Add</strong> to save.</p><blockquote>⚠️ A technician with <em>no</em> sources assigned is treated as serving <em>none</em> of them — not all of them. If a tech mysteriously never receives dispatch offers, check their source (and type) assignments first.</blockquote>",
+      "images": []
+    },
+    {
+      "id": "job-types-overview",
+      "title": "Job Types — categorize the work",
+      "content": "<p>A <strong>Job Type</strong> is the kind of work being done — <em>Garage Door Repair</em>, <em>Lock Change</em>, <em>Water Heater Install</em>. Types power scheduling (default duration), triage (default priority), technician matching, and your reports.</p><ol><li>Click the <strong>Job Types</strong> pill. The table shows each type's <strong>Name</strong>, <strong>Duration (min)</strong>, <strong>Priority</strong>, <strong>Description</strong>, and <strong>Custom Fields</strong>.</li><li>Notice the two built-in rows tagged with a purple <strong>System</strong> pill: <strong>Other</strong> (catch-all for jobs that don't match any category) and <strong>Spam</strong> (where AI-classified junk messages land instead of becoming real tickets). Their <strong>Edit</strong> and <strong>Delete</strong> buttons are disabled — they're part of the platform's plumbing and always available.</li><li>Click <strong>Add Type</strong> to create your own categories.</li></ol>",
+      "images": [
+        { "src": "images/dispatch/job-sources-types-types-tab-light.png", "alt": "Job Types tab showing the Other and Spam system types and the Add Type button", "caption": "The Job Types tab — the Other and Spam system types are built in and cannot be edited or deleted", "theme": "light" },
+        { "src": "images/dispatch/job-sources-types-types-tab-dark.png", "alt": "Job Types tab showing the Other and Spam system types and the Add Type button", "caption": "The Job Types tab — the Other and Spam system types are built in and cannot be edited or deleted", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "add-job-type",
+      "title": "Add a job type — duration, priority, and custom fields",
+      "content": "<p>Click <strong>Add Type</strong> and fill in the form:</p><ul><li><strong>Name</strong> (required) — the category label, e.g. <em>Garage Door Repair</em>.</li><li><strong>Duration (minutes)</strong> — how long this work typically takes. Scheduling uses it to block the right amount of calendar time.</li><li><strong>Description</strong> — what falls under this type. Great for keeping your team (and your AI agents) consistent about which type to pick.</li><li><strong>Default Priority</strong> — the priority every new job of this type starts with: <strong>Low</strong>, <strong>Normal</strong>, <strong>High</strong>, <strong>Urgent</strong>, or <strong>Emergency</strong>. An <em>Emergency Lockout</em> type can automatically outrank a <em>Quote Visit</em> the moment the job is created.</li><li><strong>Custom Fields</strong> — click <strong>Add Field</strong> to define extra per-job fields that only make sense for this type. Each field has a <strong>key</strong> (machine name, e.g. <code>gate_code</code>), a <strong>label</strong> (what people see, e.g. <em>Gate Code</em>), and a type (<strong>text</strong>, <strong>number</strong>, or <strong>select</strong>). Remove one with <strong>Delete</strong>.</li></ul><p>Click <strong>Add</strong> to save. Edit or remove your own types any time from the <strong>Actions</strong> column.</p><blockquote>💡 Technicians can be restricted to specific job types (in <strong>Team Members</strong> → technician settings), so a locksmith never gets offered a plumbing job. Auto-dispatch matches on both the job's type <em>and</em> its source.</blockquote>",
+      "images": [
+        { "src": "images/dispatch/job-sources-types-type-modal-light.png", "alt": "Add Type form with name, duration, description, default priority and a custom Gate Code field", "caption": "The Add Type form — duration, default priority, and per-type custom fields like Gate Code", "theme": "light" },
+        { "src": "images/dispatch/job-sources-types-type-modal-dark.png", "alt": "Add Type form with name, duration, description, default priority and a custom Gate Code field", "caption": "The Add Type form — duration, default priority, and per-type custom fields like Gate Code", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "payment-types-overview",
+      "title": "Payment Types — how customers pay",
+      "content": "<p>The <strong>Payment Types</strong> tab lists every way a customer can settle a job. iMash starts you with a full set — <strong>Cash</strong>, <strong>Card</strong>, <strong>Check</strong>, <strong>Wise</strong>, <strong>Venmo</strong>, <strong>PayPal</strong>, <strong>Zelle</strong>, <strong>cashapp</strong>, and <strong>Apple Pay</strong> — and you can toggle, edit, or extend the list.</p><p>Each row has two live switches you can flip right in the table (changes save instantly):</p><ul><li><strong>Processed By</strong> — who actually receives the money when the customer pays: <strong>Company</strong> (funds land in your account — card payments, Zelle to the office) or <strong>Technician</strong> (the tech collects it in hand — cash). This single switch drives the settlement math on every completed job: it decides whether the <em>technician owes the company</em> its share or the <em>company owes the technician</em> their cut. Cash defaults to <strong>Technician</strong>; everything else defaults to <strong>Company</strong>.</li><li><strong>Enabled</strong> — whether this payment type is offered at all when recording payments on jobs and invoices. Turn off anything you don't accept.</li></ul><blockquote>💡 You can also limit which payment methods each individual technician may accept (in <strong>Team Members</strong> → technician settings → allowed payment methods) — the list there is drawn from what you enable here.</blockquote>",
+      "images": [
+        { "src": "images/dispatch/job-sources-types-payments-tab-light.png", "alt": "Payment Types tab listing cash, card, check and other methods with Processed By and Enabled switches", "caption": "The Payment Types tab — flip Processed By and Enabled right in the table; changes save instantly", "theme": "light" },
+        { "src": "images/dispatch/job-sources-types-payments-tab-dark.png", "alt": "Payment Types tab listing cash, card, check and other methods with Processed By and Enabled switches", "caption": "The Payment Types tab — flip Processed By and Enabled right in the table; changes save instantly", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "add-payment-type",
+      "title": "Add or edit a payment type",
+      "content": "<p>Click <strong>Add Payment Type</strong> (or the pencil on an existing row) to open the form:</p><ol><li><strong>ID (slug)</strong> — a short unique machine name in lowercase, e.g. <code>google_pay</code>. Leave it blank when creating and iMash derives one from the label.</li><li><strong>Label</strong> (required) — the display name everyone sees, e.g. <em>Google Pay</em>.</li><li><strong>Processed By</strong> — flip the switch to <strong>Company</strong> or <strong>Technician</strong> (see the previous step for what this means for payouts).</li><li><strong>Enabled</strong> — leave on to make it available immediately.</li><li>Click <strong>Add</strong> (or <strong>Update</strong> when editing).</li></ol><blockquote>⚠️ Deleting a payment type doesn't rewrite history — past jobs keep the method they were paid with — but it disappears as an option for new payments. If you just want to pause a method, flip <strong>Enabled</strong> off instead of deleting it.</blockquote>",
+      "images": [
+        { "src": "images/dispatch/job-sources-types-payment-modal-light.png", "alt": "Add Payment Type form with ID slug, label, Processed By switch and Enabled toggle", "caption": "The Add Payment Type form — slug, label, and the Company/Technician processing switch", "theme": "light" },
+        { "src": "images/dispatch/job-sources-types-payment-modal-dark.png", "alt": "Add Payment Type form with ID slug, label, Processed By switch and Enabled toggle", "caption": "The Add Payment Type form — slug, label, and the Company/Technician processing switch", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "how-it-all-connects",
+      "title": "How the three catalogs work together",
+      "content": "<p>Here's the payoff — one inbound text from a lead partner, handled end to end without a human touching it:</p><ol><li>A partner texts a new job to your source's <strong>SMS Phone Number</strong> (or into its <strong>Source Group</strong>). iMash creates the job, stamped with that <strong>Job Source</strong>.</li><li>The AI classifies the work into a <strong>Job Type</strong> — inheriting its <strong>Default Priority</strong>, <strong>Duration</strong>, and custom fields (spam gets parked under the <strong>Spam</strong> system type instead of becoming a ticket).</li><li>Auto-dispatch shortlists only technicians assigned to <em>both</em> that source and that type, and texts them the offer <em>from the source's own number</em>.</li><li>The tech calls the customer through the source's <strong>Masking Phone Number</strong>, completes the job, and collects payment with one of your enabled <strong>Payment Types</strong> — the <strong>Processed By</strong> setting instantly tells the finance engine who's holding the money and who owes whom.</li><li>Your dispatch reports then slice revenue, close rates, and technician performance by source and type — so you know exactly which lead partners are worth the money.</li></ol><p>That's the whole loop: three small tables, one fully automated dispatch machine.</p>",
+      "images": []
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Your catalogs are set — now put them to work driving automatic dispatch, technician management, and source-by-source reporting.",
+    "cards": [
+      { "href": "/dispatch/auto-dispatch", "title": "Auto Dispatch", "description": "Let iMash text jobs to the right technicians automatically, using your sources and types to pick candidates." },
+      { "href": "/dispatch/technicians", "title": "Team Members", "description": "Assign technicians to job sources and types, and set their allowed payment methods and commission rules." },
+      { "href": "/dispatch/reports", "title": "Dispatch Reports", "description": "Slice revenue and performance by job source and type to see which lead partners actually pay off." },
+      { "href": "/dispatch/jobs", "title": "Jobs Dashboard", "description": "Create and manage jobs — every one stamped with a source, a type, and a payment method." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>Questions about setting up job sources, types, or payment types? Our team is happy to help at <a href=\"mailto:support@imash.io\">support@imash.io</a> — or use the live chat in your iMash dashboard.</p>"
+  },
+  "metaTitle": "Job Sources, Types & Payment Types | iMash Documentation",
+  "metaDescription": "Configure job sources (lead-source companies with per-source SMS numbers, masking caller ID, logos and AI review overrides), job types with default priority and custom fields, and payment types with Company/Technician processing in iMash.",
+  "metaKeywords": "job sources, job types, payment types, lead sources, dispatch configuration, 10DLC SMS number, masking number, source group, default priority, custom fields, processed by technician, iMash dispatch"
+}

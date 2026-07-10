@@ -1,49 +1,118 @@
 {
   "title": "Test Your Agent",
-  "lede": "Try your Smart Agent before it goes live. Talk to it right in the browser with Test Agent, or place a real phone call to hear it end-to-end.",
-  "timeToComplete": "3 minutes",
-  "videoUrl": "https://youtu.be/_Baz0eFGyLI",
-  "videoLength": "1",
+  "lede": "Never launch an agent you haven't talked to. iMash gives you three ways to rehearse: a live in-browser conversation, a one-click Live Test on the node canvas, and a real phone call to your own number — then a full replay of every test in Call Logs.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
-      "id": "open-test-agent",
-      "title": "Open Test Agent",
-      "content": "<ol><li>Go to <strong>Intelligence Center → Smart Agents</strong> and open the agent you want to test.</li><li>Click the <strong>Test Agent</strong> button at the top of the editor to reveal the test panel.</li></ol>",
+      "id": "open-your-agent",
+      "title": "Open the Agent You Want to Test",
+      "content": "<p>Everything starts from your agent list.</p><ol><li>In the left sidebar, under <strong>Intelligence Center</strong>, click <strong>Smart Agents</strong>.</li><li>Find the agent you want to test and click its <strong>name</strong> (or the green eye icon in the <strong>Action</strong> column) to open the agent editor.</li></ol><blockquote>💡 Testing is completely safe — nothing you say in a test call changes the agent's configuration. You can experiment as much as you like.</blockquote>",
       "images": [
-        { "src": "images/agents/test-agent-light.png", "alt": "Test Agent panel", "caption": "The Test Agent panel connects you to a live in-browser conversation.", "theme": "light" },
-        { "src": "images/agents/test-agent-dark.png", "alt": "Test Agent panel", "caption": "The Test Agent panel connects you to a live in-browser conversation.", "theme": "dark" }
+        {"src": "images/agents/test-your-agent-assistants-list-light.png", "alt": "Smart Agents list with agents ready to open", "caption": "Intelligence Center → Smart Agents — click an agent's name to open it.", "theme": "light"},
+        {"src": "images/agents/test-your-agent-assistants-list-dark.png", "alt": "Smart Agents list with agents ready to open", "caption": "Intelligence Center → Smart Agents — click an agent's name to open it.", "theme": "dark"}
       ]
     },
     {
-      "id": "talk-in-browser",
-      "title": "Talk to the Agent in the Browser",
-      "content": "<ol><li>Click <strong>Connect</strong> and allow microphone access if prompted.</li><li>Start speaking. Confirm the greeting, prompt, voice, and any tools behave as expected.</li><li>Edit the agent and reconnect to try changes instantly - no phone required.</li></ol>",
+      "id": "show-test-panel",
+      "title": "Show the Test Agent Panel",
+      "content": "<p>In the agent editor's <strong>Form</strong> view, the test console lives in a dedicated right-hand column.</p><ol><li>Look at the toolbar at the top of the editor. Make sure <strong>Form</strong> is selected in the <strong>Form / Node</strong> switch.</li><li>Click the <strong>Test Agent</strong> button in the top-right of the toolbar. It shows or hides the test column on the right side of the screen.</li></ol><p>The right column shows the test chat with two buttons at the top:</p><ul><li><strong>Connect</strong> — starts a live voice session with your agent, right in the browser.</li><li><strong>Debug</strong> — opens a live event monitor for the session (enabled once you're connected). Great for watching tool calls and transitions as they happen.</li></ul>",
       "images": [
-        { "src": "images/quick-start/test-agent-light.png", "alt": "In-browser agent test", "caption": "Testing the agent directly in the browser.", "theme": "light" },
-        { "src": "images/quick-start/test-agent-dark.png", "alt": "In-browser agent test", "caption": "Testing the agent directly in the browser.", "theme": "dark" }
+        {"src": "images/agents/test-your-agent-header-button-light.png", "alt": "Agent editor toolbar with the Test Agent button", "caption": "The Test Agent button sits at the far right of the editor toolbar.", "theme": "light"},
+        {"src": "images/agents/test-your-agent-header-button-dark.png", "alt": "Agent editor toolbar with the Test Agent button", "caption": "The Test Agent button sits at the far right of the editor toolbar.", "theme": "dark"},
+        {"src": "images/agents/test-your-agent-editor-light.png", "alt": "Agent editor with the Test Agent panel on the right", "caption": "The editor with the Test Agent column visible on the right.", "theme": "light"},
+        {"src": "images/agents/test-your-agent-editor-dark.png", "alt": "Agent editor with the Test Agent panel on the right", "caption": "The editor with the Test Agent column visible on the right.", "theme": "dark"}
       ]
     },
     {
-      "id": "test-by-phone",
-      "title": "Test With a Real Phone Call",
-      "content": "<ol><li>Use the phone/dial control in the header to place an outbound test call.</li><li>Choose the phone number to call <em>from</em> and select the agent to test.</li><li>Enter your own number, start the call, and have a full conversation to verify real-world telephony behavior.</li></ol>",
-      "images": []
+      "id": "connect-and-talk",
+      "title": "Connect and Talk to Your Agent",
+      "content": "<p>This is the magic moment — a real conversation with your AI, no phone number needed.</p><ol><li>Click <strong>Connect</strong> at the top of the test panel.</li><li>Your browser may ask for <strong>microphone permission</strong> — click <strong>Allow</strong>. The panel also reminds you: \"You may be prompted to allow audio in your browser.\"</li><li>Wait a moment while it shows <em>Connecting to Agent...</em>, then just start speaking. You'll hear the agent's greeting and voice exactly as callers will.</li><li>Check the essentials: the greeting message, the voice, how it answers questions, and whether tools (like booking or transfers) trigger when they should.</li></ol><blockquote>⚠️ If you don't hear anything, check that your microphone isn't blocked: click the padlock/settings icon in the browser's address bar and set Microphone to <strong>Allow</strong>, then reconnect.</blockquote><blockquote>💡 Test sessions are real calls — they appear in Call Logs and use your balance just like production calls, so you always test the true experience.</blockquote>",
+      "images": [
+        {"src": "images/agents/test-your-agent-test-panel-light.png", "alt": "Test Agent panel before connecting", "caption": "Click Connect to start — the Debug button unlocks once the session is live.", "theme": "light"},
+        {"src": "images/agents/test-your-agent-test-panel-dark.png", "alt": "Test Agent panel before connecting", "caption": "Click Connect to start — the Debug button unlocks once the session is live.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "chat-mute-debug",
+      "title": "Type, Mute, and Watch the Live Transcript",
+      "content": "<p>While connected, the panel becomes a live transcript of the conversation — every word you say and every agent reply appears as a chat bubble in real time.</p><ul><li><strong>Type a message...</strong> — you can also chat by text: type in the box at the bottom and press <strong>Enter</strong> (or click the send button). Perfect for quiet offices or precise, repeatable test phrases.</li><li><strong>Microphone button</strong> (bottom-left) — mutes or unmutes your mic mid-session.</li><li><strong>Debug</strong> — opens the live event monitor so you can watch what the agent is doing behind the scenes during the call.</li><li><strong>Disconnect</strong> (red) — ends the test session.</li></ul><blockquote>💡 The fastest tuning loop: <strong>Disconnect</strong> → edit the prompt, voice, or tools → save → <strong>Connect</strong> again. Your changes are live on the very next session — no deploy step, ever.</blockquote>",
+      "images": [
+        {"src": "images/agents/test-your-agent-connected-light.png", "alt": "Live test session with a transcript bubble and Disconnect button", "caption": "Connected: your words appear as chat bubbles, and Disconnect ends the session.", "theme": "light"},
+        {"src": "images/agents/test-your-agent-connected-dark.png", "alt": "Live test session with a transcript bubble and Disconnect button", "caption": "Connected: your words appear as chat bubbles, and Disconnect ends the session.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "live-test-node-view",
+      "title": "Live Test From the Node Canvas",
+      "content": "<p>Building your agent in the visual <strong>Node</strong> view? You don't need to switch back to Form view to test.</p><ol><li>In the editor toolbar, switch to <strong>Node</strong> in the <strong>Form / Node</strong> switch.</li><li>Find the <strong>Agent Builder bar</strong> at the bottom of the canvas and flip its toggle to <strong>Live Test</strong>.</li><li>Click <strong>Start</strong> and talk to your agent, exactly like the Form-view test panel.</li></ol><p>The bonus: while a Live Test runs, the canvas <strong>highlights the node your agent is currently on</strong> — you literally watch the conversation travel through your flow, which makes debugging transitions effortless.</p><blockquote>💡 The <strong>AI Builder</strong> side of the same toggle is a different tool — it's an AI that edits your flow for you. Keep the toggle on <strong>Live Test</strong> when you want to talk to the agent itself.</blockquote>",
+      "images": [
+        {"src": "images/agents/test-your-agent-live-test-bar-light.png", "alt": "Agent Builder bar with the Live Test toggle and Start button", "caption": "Node view: flip to Live Test and press Start to talk to the agent on the canvas.", "theme": "light"},
+        {"src": "images/agents/test-your-agent-live-test-bar-dark.png", "alt": "Agent Builder bar with the Live Test toggle and Start button", "caption": "Node view: flip to Live Test and press Start to talk to the agent on the canvas.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "open-web-dialer",
+      "title": "Open the Web Dialer for Phone Testing",
+      "content": "<p>Browser tests prove the brain; a phone test proves the whole pipeline — carrier audio, latency, and caller ID included.</p><ol><li>Click the round <strong>phone icon</strong> in the top-right corner of the header (visible on every page). The web dialer opens as a right-side panel.</li><li>You'll see a dial pad plus four actions: <strong>Call</strong>, <strong>Text</strong>, <strong>AI Agent</strong>, and <strong>Teammate</strong>.</li></ol><ul><li><strong>Call</strong> — places a real outbound phone call to the number you dial.</li><li><strong>Text</strong> — opens a new SMS composer prefilled with the dialed number.</li><li><strong>AI Agent</strong> — starts an in-browser voice call with any of your agents (the same experience as the Test Agent panel, available from anywhere in the app).</li><li><strong>Teammate</strong> — rings a colleague's web dialer for an internal call.</li></ul>",
+      "images": [
+        {"src": "images/agents/test-your-agent-webphone-light.png", "alt": "Web dialer panel with dial pad and Call, Text, AI Agent, Teammate buttons", "caption": "The web dialer: dial pad on top, Call / Text / AI Agent / Teammate actions below.", "theme": "light"},
+        {"src": "images/agents/test-your-agent-webphone-dark.png", "alt": "Web dialer panel with dial pad and Call, Text, AI Agent, Teammate buttons", "caption": "The web dialer: dial pad on top, Call / Text / AI Agent / Teammate actions below.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "test-real-phone-call",
+      "title": "Test With a Real Phone Call to Your Own Number",
+      "content": "<p>Hear your agent exactly as your customers will — through a real carrier, on your own phone.</p><ol><li>In the web dialer, type <strong>your own mobile number</strong> on the dial pad.</li><li>Click <strong>Call</strong>. The <strong>Start Call</strong> window opens.</li><li>Fill in the three settings:<ul><li><strong>Caller ID (dial-out number)</strong> — the number the call is placed from; it's what shows on your phone's screen. Pick one of your iMash phone numbers.</li><li><strong>AI Agent</strong> — the agent that joins the call. Select the agent you're testing.</li><li><strong>Call mode</strong> — choose <strong>AI Mode</strong>: the AI talks and you listen (and answer as the \"customer\"). <strong>Human Mode</strong> is the opposite: you talk while the AI silently transcribes.</li></ul></li><li>Click <strong>Call</strong>. Your phone rings — answer it and have a full conversation with your agent.</li></ol><blockquote>⚠️ To place phone calls you need at least one phone number connected to your account. If the Caller ID list is empty, add a number first (see \"Add a Phone Number\" below).</blockquote>",
+      "images": [
+        {"src": "images/agents/test-your-agent-start-call-light.png", "alt": "Start Call window with Caller ID, AI Agent, and Call mode options", "caption": "Start Call: pick the Caller ID, the AI Agent, and AI Mode — then hit Call.", "theme": "light"},
+        {"src": "images/agents/test-your-agent-start-call-dark.png", "alt": "Start Call window with Caller ID, AI Agent, and Call mode options", "caption": "Start Call: pick the Caller ID, the AI Agent, and AI Mode — then hit Call.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "review-in-call-logs",
+      "title": "Review Every Test in Call Logs",
+      "content": "<p>Every test — browser or phone — is logged like a real call, so you can study it afterwards.</p><ol><li>In the left sidebar, under <strong>Call Center</strong>, click <strong>Call Logs</strong>.</li><li>Your test calls appear at the top of the list. In-browser tests show <strong>Web</strong> in the <strong>Type</strong> column; phone tests show their direction and numbers.</li><li>Use the filters (date range, <strong>Call Type</strong>, <strong>Direction</strong>, <strong>AI Agent</strong>, phone-number search) to isolate your test sessions, and the stat tiles above the table for totals like call count, duration, and cost.</li></ol>",
+      "images": [
+        {"src": "images/agents/test-your-agent-call-logs-light.png", "alt": "Call Logs list showing recent web test calls", "caption": "Call Logs: each test session becomes a row — Web type for in-browser tests.", "theme": "light"},
+        {"src": "images/agents/test-your-agent-call-logs-dark.png", "alt": "Call Logs list showing recent web test calls", "caption": "Call Logs: each test session becomes a row — Web type for in-browser tests.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "read-call-details",
+      "title": "Open Call Details: Transcript, Analysis, and Cost",
+      "content": "<p>This is where you grade your agent's performance.</p><ol><li>In Call Logs, click the green <strong>eye icon</strong> at the end of a row. The <strong>Call Details</strong> panel opens.</li><li>If call recording is enabled for the agent, an <strong>audio player</strong> with a waveform sits at the top — press play to relisten to the whole call.</li><li>Work through the tabs:<ul><li><strong>Call Overview</strong> — call ID, agent name, type &amp; direction, status, duration, and start time.</li><li><strong>Transcripts</strong> — the full written conversation, turn by turn.</li><li><strong>Analysis</strong> — the post-call summary and extracted results (success evaluation, structured data) if configured for the agent.</li><li><strong>Call Cost</strong> — the exact cost breakdown of the call by component.</li><li><strong>Observer Events</strong> — live-monitoring events, when the Observer Agent is enabled.</li></ul></li></ol><blockquote>💡 Found something off in the transcript? That's exactly what testing is for — go back to the editor, adjust the prompt or settings, and run another test. When a full conversation reads clean end-to-end, your agent is ready for real callers.</blockquote>",
+      "images": [
+        {"src": "images/agents/test-your-agent-call-detail-light.png", "alt": "Call Details panel with Call Overview, Transcripts, Analysis and Call Cost tabs", "caption": "Call Details: overview, transcripts, analysis, and cost for every test call.", "theme": "light"},
+        {"src": "images/agents/test-your-agent-call-detail-dark.png", "alt": "Call Details panel with Call Overview, Transcripts, Analysis and Call Cost tabs", "caption": "Call Details: overview, transcripts, analysis, and cost for every test call.", "theme": "dark"}
+      ]
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Once your agent passes testing, take it further:",
+    "description": "Your agent passed the audition — now give it more power and put it in front of the world:",
     "cards": [
-      { "href": "/agents/agent-tools", "title": "Add Tools", "description": "Enable actions like ending calls and booking appointments." },
-      { "href": "/agents/agent-knowledge-base", "title": "Add a Knowledge Base", "description": "Give your agent documents and FAQs to answer from." },
-      { "href": "/agents/embed-agent", "title": "Embed on Your Website", "description": "Publish the agent as a chat/voice widget on your site." }
+      {
+        "href": "/phone/add-phone-number",
+        "title": "Add a Phone Number",
+        "description": "Give your agent a real number so customers can call it 24/7."
+      },
+      {
+        "href": "/agents/agent-tools",
+        "title": "Add Tools",
+        "description": "Enable actions like booking appointments, transfers, and ending calls."
+      },
+      {
+        "href": "/agents/embed-agent",
+        "title": "Embed on Your Website",
+        "description": "Publish the agent as a voice/chat widget on your site."
+      }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Test Your Agent | iMash Docs",
-  "metaDescription": "Test your iMash Smart Agent before launch: talk to it live in the browser with Test Agent, or place a real phone call to verify voice, prompt, and tools.",
-  "metaKeywords": "test agent, imash, smart agent, demo call, in-browser test, voice agent testing"
+  "metaTitle": "Test Your Agent | iMash Documentation",
+  "metaDescription": "Test your iMash Smart Agent before launch: talk to it live in the browser, run a Live Test from the node canvas, call it on a real phone number, and review transcripts, analysis, and cost in Call Logs.",
+  "metaKeywords": "test agent, imash, smart agent, live test, web dialer, test call, transcript, call logs, voice agent testing"
 }

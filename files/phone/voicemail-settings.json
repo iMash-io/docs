@@ -1,0 +1,87 @@
+{
+  "title": "Voicemail Settings",
+  "lede": "Stop paying your AI agents to talk to answering machines. Voicemail Settings is your account-wide control room for voicemail detection: teach the classifier your customers' greetings, decide whether agents hang up or leave a message, and fine-tune detection timing — all in one place.",
+  "timeToComplete": "10 minutes",
+  "steps": [
+    {
+      "id": "open-voicemail-settings",
+      "title": "Open the Voicemail Settings page",
+      "content": "<ol><li>In the top navigation bar, click <strong>Contact Center</strong>.</li><li>In the row of tabs that appears underneath, click <strong>Voicemail Settings</strong> (you may need to scroll the tab row to the right).</li></ol><p>The page has up to three sections, top to bottom:</p><ul><li><strong>Voicemail Classifier Hints</strong> — optional phrases that help the AI recognize <em>your</em> voicemail greetings.</li><li><strong>Override My Agents' Voicemail Settings</strong> — one switch to enforce the same voicemail behavior on every agent you own.</li><li><strong>Override Sub-Account Agents</strong> — the same control applied to all of your sub-accounts' agents (this card only appears if you are a main account that has sub-accounts).</li></ul><blockquote>💡 The <strong>Save</strong> button at the top right applies to the whole page. Nothing you change takes effect until you click it.</blockquote>",
+      "images": [
+        { "src": "images/phone/voicemail-settings-overview-light.png", "alt": "Voicemail Settings page under Contact Center with classifier hints and override panels", "caption": "Voicemail Settings lives under Contact Center. Save (top right) applies every change on the page.", "theme": "light" },
+        { "src": "images/phone/voicemail-settings-overview-dark.png", "alt": "Voicemail Settings page under Contact Center with classifier hints and override panels", "caption": "Voicemail Settings lives under Contact Center. Save (top right) applies every change on the page.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "how-detection-works",
+      "title": "How voicemail detection works",
+      "content": "<p>When one of your agents places an outbound call and the line answers, an AI classifier listens to the first thing it hears — the greeting. Based on what it hears (a live \"Hello?\" versus \"Please leave a message after the tone…\"), it decides whether a human or a machine answered, and your agent reacts instantly: keep talking, hang up, or wait for the beep and leave a message.</p><ul><li><strong>It's automatic.</strong> Detection works out of the box for standard English voicemail and IVR greetings — no setup required.</li><li><strong>Each agent has its own voicemail settings</strong> (in the agent's editor). This page lets you optionally <em>override</em> all of them at once, so you don't have to edit agents one by one.</li><li><strong>Nothing here affects inbound calls</strong> — voicemail detection only matters when your agents are the ones dialing out (for example, dialer campaigns and callbacks).</li></ul>"
+    },
+    {
+      "id": "add-classifier-hints",
+      "title": "Add classifier hint phrases (optional)",
+      "content": "<p>The <strong>Voicemail Classifier Hints</strong> card lets you feed the classifier extra example phrases so it recognizes voicemail greetings specific to your market — Spanish greetings, regional carrier messages, or branded company greetings.</p><ol><li>Type a phrase you hear on your customers' voicemail greetings into the <strong>Add a classifier hint phrase...</strong> box — for example <em>buzón de voz</em> or <em>your call has been forwarded</em>.</li><li>Click <strong>Add</strong> (or press Enter). The phrase appears as a tag above the box.</li><li>To remove a phrase, click the <strong>×</strong> on its tag.</li><li>Click <strong>Save</strong> when you're done.</li></ol><p>The card title shows your usage against the limit (for example <em>24 / 50</em>) — you can store up to <strong>50 phrases</strong>. Once you hit the cap, the input is disabled until you remove a phrase.</p><blockquote>💡 Hints are optional. If you leave the list empty, detection uses its built-in English-language examples — which is plenty for most accounts. Add hints when you call non-English-speaking regions or notice specific greetings slipping through as \"human\".</blockquote>",
+      "images": [
+        { "src": "images/phone/voicemail-settings-hints-light.png", "alt": "Voicemail Classifier Hints card with phrase tags and an add box", "caption": "Each hint is a tag — add with the input box, remove with the ×. The title tracks your count against the 50-phrase limit.", "theme": "light" },
+        { "src": "images/phone/voicemail-settings-hints-dark.png", "alt": "Voicemail Classifier Hints card with phrase tags and an add box", "caption": "Each hint is a tag — add with the input box, remove with the ×. The title tracks your count against the 50-phrase limit.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "enable-override",
+      "title": "Override voicemail settings for all your agents",
+      "content": "<p>Want every agent to behave the same way when it hits a voicemail — without opening each one? That's what the <strong>Override My Agents' Voicemail Settings</strong> card is for.</p><ol><li>Turn on the <strong>Enable Override</strong> switch.</li><li>The override options expand below (covered in the next two steps).</li></ol><ul><li><strong>Switch off</strong> (default): each agent uses the voicemail settings configured in its own editor.</li><li><strong>Switch on</strong>: the settings in this card replace the voicemail configuration on <em>all</em> of your agents.</li></ul><blockquote>⚠️ While the override is on, changes to voicemail settings inside an individual agent's editor have no effect — this card wins. Turn the override off to hand control back to each agent.</blockquote>",
+      "images": [
+        { "src": "images/phone/voicemail-settings-override-off-light.png", "alt": "Override My Agents' Voicemail Settings card with the Enable Override switch off", "caption": "Enable Override replaces every agent's own voicemail configuration with the settings on this card.", "theme": "light" },
+        { "src": "images/phone/voicemail-settings-override-off-dark.png", "alt": "Override My Agents' Voicemail Settings card with the Enable Override switch off", "caption": "Enable Override replaces every agent's own voicemail configuration with the settings on this card.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "choose-behavior",
+      "title": "Choose what happens when voicemail is detected",
+      "content": "<p>With the override enabled, decide how agents should react to answering machines:</p><ol><li>Turn on <strong>Voicemail Detection</strong>. (Leave it off and overridden agents will simply keep talking as if a human answered — usually not what you want on outbound campaigns.)</li><li>Under <strong>When voicemail is detected</strong>, pick one:<ul><li><strong>Hang up</strong> — the agent ends the call immediately. Best for high-volume dialing where a voicemail is just a \"try again later\".</li><li><strong>Leave a message</strong> — the agent waits for the beep and speaks your message.</li></ul></li><li>If you chose <strong>Leave a message</strong>, type the message in the box that appears (for example: <em>\"Hi, this is Sarah from Acme calling about your service appointment — please call us back at your convenience.\"</em>).</li></ol><blockquote>⚠️ Watch the character counter under the message box — voicemail messages are capped at <strong>200 characters</strong>. If you go over, the agent only speaks the first 200.</blockquote>",
+      "images": [
+        { "src": "images/phone/voicemail-settings-behavior-light.png", "alt": "Override card expanded showing Voicemail Detection on, Leave a message selected, message text box and detection tuning fields", "caption": "Voicemail Detection on with Leave a message selected — the message box shows a live character count against the 200-character cap.", "theme": "light" },
+        { "src": "images/phone/voicemail-settings-behavior-dark.png", "alt": "Override card expanded showing Voicemail Detection on, Leave a message selected, message text box and detection tuning fields", "caption": "Voicemail Detection on with Leave a message selected — the message box shows a live character count against the 200-character cap.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "tune-detection",
+      "title": "Fine-tune detection timing (advanced)",
+      "content": "<p>Below the behavior options, the <strong>Detection Tuning (Advanced)</strong> section exposes the timing thresholds the detector uses. All values are in seconds, every field shows its default underneath, and the defaults are right for almost everyone — only adjust these if you see misclassifications.</p><ul><li><strong>No-Speech Timeout</strong> (default 10s) — how long the detector waits for <em>any</em> audio after the call answers before giving up on a silent line. This clock starts after pickup, so it never counts ringing. Raise it if slow answerers stay silent after connecting.</li><li><strong>Detection Timeout</strong> (default 20s) — the hard ceiling for the whole detection; when it elapses, the detector settles with whatever evidence it has. Keep it at or above the No-Speech Timeout.</li><li><strong>Human Speech Threshold</strong> (default 2.5s) — greetings shorter than this (a quick \"Hello?\") are fast-tracked as human; longer greetings go to the AI classifier for a closer look.</li><li><strong>Human Silence Threshold</strong> (default 0.5s) — how much silence after a short greeting confirms \"human\". Lower it to commit faster on quick pickups.</li><li><strong>Machine Silence Threshold</strong> (default 1.5s) — how much silence after machine-like speech is needed before calling it a machine. Higher values give the classifier more of the greeting to work with.</li><li><strong>Interrupt Agent on Machine</strong> (default on) — the instant a machine is detected, the agent stops talking, so it never talks over the greeting or the beep. Leave this on unless you have a specific reason not to.</li></ul><blockquote>💡 Rule of thumb: agents mistaking voicemails for humans → add classifier hints first (step 3). Silent lines getting dropped too early → raise the <strong>No-Speech Timeout</strong>.</blockquote>",
+      "images": [
+        { "src": "images/phone/voicemail-settings-amd-light.png", "alt": "Detection Tuning section with No-Speech Timeout, Detection Timeout, speech and silence thresholds and the Interrupt Agent on Machine switch", "caption": "Every tuning field shows its default value underneath — reset a field by typing the default back in.", "theme": "light" },
+        { "src": "images/phone/voicemail-settings-amd-dark.png", "alt": "Detection Tuning section with No-Speech Timeout, Detection Timeout, speech and silence thresholds and the Interrupt Agent on Machine switch", "caption": "Every tuning field shows its default value underneath — reset a field by typing the default back in.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "override-subaccounts",
+      "title": "Override sub-account agents (main accounts only)",
+      "content": "<p>If you're a main account with sub-accounts, a second override card — <strong>Override Sub-Account Agents</strong> — appears at the bottom of the page.</p><ol><li>Turn on <strong>Enable Override</strong> in this card.</li><li>Configure the same options as in step 5 and 6: <strong>Voicemail Detection</strong>, <strong>Hang up</strong> / <strong>Leave a message</strong>, and <strong>Detection Tuning</strong>.</li></ol><p>This override is the strongest setting on the platform: it takes priority over both each sub-account's own override <em>and</em> their individual agent settings. Use it to guarantee consistent voicemail behavior across your whole organization from one screen.</p>",
+      "images": [
+        { "src": "images/phone/voicemail-settings-subaccounts-light.png", "alt": "Override Sub-Account Agents card with its Enable Override switch", "caption": "The sub-account override outranks both the sub-account's own override and individual agent settings.", "theme": "light" },
+        { "src": "images/phone/voicemail-settings-subaccounts-dark.png", "alt": "Override Sub-Account Agents card with its Enable Override switch", "caption": "The sub-account override outranks both the sub-account's own override and individual agent settings.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "save-and-verify",
+      "title": "Save and verify on real calls",
+      "content": "<ol><li>Click <strong>Save</strong> at the top right. A confirmation appears when your settings are stored.</li><li>Place a test outbound call to a number you know goes to voicemail (your own mobile with the ringer off works great).</li><li>Open <strong>Contact Center → Call Logs</strong> and check the call: it should show the agent detected the machine and either hung up or left your message.</li></ol><p>That's it — from now on, every overridden agent handles answering machines exactly the way you decided, on every single call, automatically.</p>"
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Voicemail handling is locked in — now put your agents to work and watch the results roll in.",
+    "cards": [
+      { "href": "/phone/call-logs", "title": "Review Call Logs", "description": "See every call, how it ended, and confirm voicemail detection is working." },
+      { "href": "/campaigns/create-campaign", "title": "Launch an Outbound Campaign", "description": "Voicemail detection shines on high-volume dialing — start a campaign." },
+      { "href": "/agents/agent-settings", "title": "Per-Agent Settings", "description": "Prefer per-agent control? Configure voicemail on each agent instead of overriding." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Voicemail Settings - Detection, Hints & Overrides | iMash Documentation",
+  "metaDescription": "Configure account-wide voicemail detection for your AI agents: add classifier hint phrases, choose hang-up or leave-a-message behavior, tune detection timing, and override all agents or sub-accounts at once.",
+  "metaKeywords": "voicemail settings, voicemail detection, answering machine detection, AMD, classifier hints, leave a message, hang up, voicemail override, sub-account override, outbound calls"
+}

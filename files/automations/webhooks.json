@@ -1,53 +1,92 @@
 {
-  "title": "Receive Data with Webhooks",
-  "lede": "Use the Catch Webhook trigger in Automation to accept data from any outside system - so an incoming request can start a workflow, create records, or kick off a call.",
-  "timeToComplete": "6 minutes",
+  "title": "Webhooks: Receive & Send Data",
+  "lede": "Webhooks turn iMash into the hub of your whole stack. Point any form, app, or script at a unique URL and it can start an automation the instant something happens — and after every call, iMash can push summaries, transcripts, and extracted data back to your own systems. This guide covers both directions, A to Z.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
-      "id": "add-catch-webhook",
-      "title": "Add a Catch Webhook Trigger",
-      "content": "<ol><li>Go to <strong>Intelligence Center → Automation</strong> and create or open a flow.</li><li>Click the trigger block and choose <strong>Catch Webhook</strong>.</li><li>iMash generates a unique <strong>webhook URL</strong> for this flow.</li></ol>",
+      "id": "open-automation",
+      "title": "Open the Automation Flows Dashboard",
+      "content": "<p>Incoming webhooks live inside the flow builder, so that's where we start.</p><ol><li>In the left sidebar, under <strong>Intelligence Center</strong>, click <strong>Automation</strong> (or use the top tabs: <strong>Automation → Automation Flows</strong>).</li><li>The <strong>Flows</strong> dashboard opens. Here you can see every flow, plus two more tabs:<ul><li><strong>Flows</strong> — your list of automations, with name, steps, folder, last-modified date, and status.</li><li><strong>Runs</strong> — the execution history of every flow, including each webhook delivery.</li><li><strong>Issues</strong> — failed runs that need attention.</li></ul></li><li>On the left of the dashboard you'll also find <strong>Folders</strong> (organize flows), <strong>Custom Tables</strong>, <strong>System Tables</strong>, <strong>MCP</strong>, <strong>Todos</strong>, and <strong>Connections</strong>.</li></ol>",
       "images": [
-        { "src": "images/automations/automation-builder-light.png", "alt": "Automation builder with webhook trigger", "caption": "Catch Webhook is the trigger that starts a flow from incoming data.", "theme": "light" },
-        { "src": "images/automations/automation-builder-dark.png", "alt": "Automation builder with webhook trigger", "caption": "Catch Webhook is the trigger that starts a flow from incoming data.", "theme": "dark" }
+        { "src": "images/automations/webhooks-automation-page-light.png", "alt": "Automation Flows dashboard with the Flows list and Create flow button", "caption": "The Flows dashboard — every webhook-triggered automation starts here.", "theme": "light" },
+        { "src": "images/automations/webhooks-automation-page-dark.png", "alt": "Automation Flows dashboard with the Flows list and Create flow button", "caption": "The Flows dashboard — every webhook-triggered automation starts here.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "create-flow",
+      "title": "Create a New Flow",
+      "content": "<ol><li>Click <strong>Create flow</strong> in the top-right of the dashboard.</li><li>Choose <strong>From scratch</strong>.</li><li>The builder opens with the flow name selected — type a descriptive name (for example <em>Webhook Lead Intake</em>) and press <strong>Enter</strong>.</li></ol><p>You now have an empty canvas with a single step: <strong>1. Select Trigger</strong>. The trigger is what starts the flow — and for webhooks, that trigger is an incoming HTTP request.</p>",
+      "images": []
+    },
+    {
+      "id": "pick-catch-webhook",
+      "title": "Choose the Catch Webhook Trigger",
+      "content": "<ol><li>Click the <strong>1. Select Trigger</strong> step on the canvas. The trigger picker opens.</li><li>Type <strong>webhook</strong> in the <strong>Search</strong> box. You can also browse by category — <strong>All</strong>, <strong>AI</strong>, <strong>Core</strong>, or <strong>Apps</strong>.</li><li>Under the <strong>Webhook</strong> piece, click <strong>Catch Webhook</strong> — it \"receives HTTP requests and triggers flows using unique URLs.\"</li></ol><blockquote>💡 <strong>Tip:</strong> The search also surfaces app-specific webhook triggers (Drupal, Fountain, and more). For a generic \"any system can call this\" endpoint, <strong>Catch Webhook</strong> is the one you want.</blockquote>",
+      "images": [
+        { "src": "images/automations/webhooks-trigger-picker-light.png", "alt": "Trigger picker with 'webhook' typed in the search box and Catch Webhook listed", "caption": "Search \"webhook\" and pick Catch Webhook under the Webhook piece.", "theme": "light" },
+        { "src": "images/automations/webhooks-trigger-picker-dark.png", "alt": "Trigger picker with 'webhook' typed in the search box and Catch Webhook listed", "caption": "Search \"webhook\" and pick Catch Webhook under the Webhook piece.", "theme": "dark" }
       ]
     },
     {
       "id": "copy-url",
-      "title": "Copy and Send the URL",
-      "content": "<ol><li><strong>Copy</strong> the generated webhook URL.</li><li>Paste it into the outside system (a form, another app, or your own code) so it sends a request to that URL.</li><li>Trigger a real request once so iMash can <strong>capture a sample</strong> of the incoming data.</li></ol>",
-      "images": []
-    },
-    {
-      "id": "use-the-data",
-      "title": "Use the Incoming Data",
-      "content": "<ol><li>After the sample arrives, the fields from the request become available to every step below.</li><li>Add actions (for example a <strong>System Tables</strong> action to create a lead or start a call) and map the webhook fields into them.</li><li><strong>Test</strong> the flow, then <strong>Publish</strong> it so the webhook stays live.</li></ol>",
-      "images": []
-    },
-    {
-      "id": "send-data-out",
-      "title": "Sending Data the Other Way",
-      "content": "<ol><li>Webhooks also work outbound: a Smart Agent can <strong>Send Data to URL</strong> during a call to push information to your systems.</li><li>Set that up as a <strong>Custom Tool</strong> with a <code>POST</code> endpoint and attach it to the agent.</li></ol>",
+      "title": "Copy Your Unique Webhook URL",
+      "content": "<p>The moment you select Catch Webhook, iMash generates a URL that belongs to this flow alone. The configuration panel on the right shows everything you need:</p><ul><li><strong>Live URL</strong> — the production endpoint. Click the copy icon next to it. Requests sent here trigger the flow <em>once it's published</em>.</li><li><strong>Test URL</strong> — add <code>/test</code> to the end of the Live URL. Requests sent here are captured as sample data while you build, without publishing anything.</li><li><strong>Synchronous Requests</strong> — if the calling system expects a response back, add <code>/sync</code> to the end of the URL. The flow then has up to 30 seconds to answer (otherwise the caller receives a <code>408 Request Timeout</code>). To return data, add a <strong>Webhook</strong> step with the <strong>Return Response</strong> action at the end of your flow.</li></ul><ol><li>Copy the <strong>Live URL</strong>.</li><li>Paste it into the outside system that should trigger this flow — a website form, Zapier, your CRM, or your own code. Any HTTP method with JSON, form data, or query parameters works.</li></ol><blockquote>⚠️ <strong>Heads-up:</strong> The Live URL only fires after you <strong>Publish</strong> the flow. While building, use the <code>/test</code> URL to capture sample requests.</blockquote>",
       "images": [
-        { "src": "images/agents/webhooks-post-light.png", "alt": "Send data to a URL", "caption": "Agents can POST data to your own URL mid-conversation.", "theme": "light" },
-        { "src": "images/agents/webhooks-post-dark.png", "alt": "Send data to a URL", "caption": "Agents can POST data to your own URL mid-conversation.", "theme": "dark" }
+        { "src": "images/automations/webhooks-catch-config-light.png", "alt": "Catch Webhook configuration panel showing the Live URL, Synchronous Requests note, and Test Trigger button", "caption": "The Catch Webhook panel: Live URL, /sync behavior, and Generate Sample Data.", "theme": "light" },
+        { "src": "images/automations/webhooks-catch-config-dark.png", "alt": "Catch Webhook configuration panel showing the Live URL, Synchronous Requests note, and Test Trigger button", "caption": "The Catch Webhook panel: Live URL, /sync behavior, and Generate Sample Data.", "theme": "dark" }
       ]
+    },
+    {
+      "id": "capture-sample",
+      "title": "Send a Test Request & Capture Sample Data",
+      "content": "<p>Before you can map incoming fields into actions, iMash needs to see one real example of the data.</p><ol><li>In the <strong>Generate Sample Data</strong> section at the bottom of the panel, click <strong>Test Trigger</strong>.</li><li>From the outside system (or a quick <code>curl</code>), send a request to the <strong>Test URL</strong> (the Live URL + <code>/test</code>). For example:<br><code>curl -X POST &lt;your-test-url&gt; -H \"Content-Type: application/json\" -d '{\"first_name\":\"Dana\",\"phone\":\"+1 555 010 7788\"}'</code></li><li>The captured request appears as <strong>Result #1</strong>, broken down into <strong>headers</strong>, <strong>body</strong>, <strong>queryParams</strong>, and <strong>rawBody</strong>.</li></ol><p>Every field you see here — <code>body.first_name</code>, <code>body.phone</code>, and so on — is now available to every later step through the <strong>Data Selector</strong>.</p>",
+      "images": [
+        { "src": "images/automations/webhooks-sample-data-light.png", "alt": "Captured webhook sample showing the parsed body fields of the test request", "caption": "The captured request: every body field becomes mappable data for your flow steps.", "theme": "light" },
+        { "src": "images/automations/webhooks-sample-data-dark.png", "alt": "Captured webhook sample showing the parsed body fields of the test request", "caption": "The captured request: every body field becomes mappable data for your flow steps.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "build-and-publish",
+      "title": "Add Actions & Publish",
+      "content": "<p>Now make the webhook <em>do</em> something.</p><ol><li>Click the <strong>+</strong> button under the trigger step to add an action — for example a <strong>System Tables</strong> action to create a lead, an outbound call action to have a Smart Agent dial the new contact, or an SMS step.</li><li>In each action's fields, use the <strong>Data Selector</strong> to map the webhook's fields (like <code>body.first_name</code>) into the action.</li><li>Use <strong>Test Flow</strong> at the top of the canvas to run the whole flow against your sample data.</li><li>When it works, click <strong>Publish</strong> in the top-right. From this moment the <strong>Live URL</strong> is armed — every request starts a run.</li></ol><blockquote>💡 <strong>Tip:</strong> Check the <strong>Runs</strong> tab on the Flows dashboard to see each incoming request and exactly what every step did with it — perfect for debugging a misbehaving integration.</blockquote>",
+      "images": [
+        { "src": "images/automations/webhooks-flow-canvas-light.png", "alt": "Flow builder canvas with the Catch Webhook trigger configured and the Publish button visible", "caption": "Catch Webhook in place — add actions below it, test, then Publish.", "theme": "light" },
+        { "src": "images/automations/webhooks-flow-canvas-dark.png", "alt": "Flow builder canvas with the Catch Webhook trigger configured and the Publish button visible", "caption": "Catch Webhook in place — add actions below it, test, then Publish.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "post-call-webhooks",
+      "title": "Send Data OUT: Post-Call Webhooks",
+      "content": "<p>Webhooks flow the other way too — after every call, your Smart Agent can POST rich results to any URL you own.</p><ol><li>Go to <strong>Intelligence Center → Smart Agents</strong> and open your agent.</li><li>Scroll to the <strong>Webhooks Post Processing</strong> row and click it.</li><li>In <strong>Server URL &amp; Events</strong>, paste the endpoint that should receive the data, then tick the <strong>Webhook Events</strong> you want delivered:<ul><li><strong>Summary</strong> — an AI-written recap of the call.</li><li><strong>Success Evaluation</strong> — whether the call met its goal, scored by your chosen rubric.</li><li><strong>Structured Data</strong> — custom JSON fields extracted from the transcript using your own schema.</li><li><strong>Transcript</strong> — the full conversation text.</li><li><strong>Status Updates</strong> — real-time events like call started and call ended.</li><li><strong>Tool Calls</strong> — details of every tool the agent used mid-conversation.</li></ul></li></ol><p>For the full walkthrough of prompts, rubrics, and the data schema builder, see <strong>Post-Call Processing &amp; Webhooks</strong> in the Smart Agents section.</p>",
+      "images": [
+        { "src": "images/agents/webhooks-post-light.png", "alt": "Webhooks Post Processing modal on a Smart Agent with Server URL & Events selected", "caption": "The agent-side webhook hub: Server URL & Events, Summary, Success Evaluation, Structured Data.", "theme": "light" },
+        { "src": "images/agents/webhooks-post-dark.png", "alt": "Webhooks Post Processing modal on a Smart Agent with Server URL & Events selected", "caption": "The agent-side webhook hub: Server URL & Events, Summary, Success Evaluation, Structured Data.", "theme": "dark" },
+        { "src": "images/agents/advanced-settings-events-light.png", "alt": "Server URL field and the list of webhook event checkboxes", "caption": "Pick exactly which events get POSTed to your Server URL.", "theme": "light" },
+        { "src": "images/agents/advanced-settings-events-dark.png", "alt": "Server URL field and the list of webhook event checkboxes", "caption": "Pick exactly which events get POSTed to your Server URL.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "mid-call-sends",
+      "title": "Bonus: Send Data MID-Call with Custom Tools",
+      "content": "<p>Post-call webhooks fire after the conversation ends. If you need data pushed <em>while the caller is still on the line</em> — booking a slot, checking an order, notifying your team — give the agent a <strong>Custom Tool</strong>:</p><ol><li>Create a Custom Tool with a <code>POST</code> endpoint pointing at your system.</li><li>Define the parameters the AI should fill from the conversation (name, callback time, issue description…).</li><li>Attach the tool to your agent — it will call your URL live, mid-conversation, whenever the moment is right.</li></ol><p>And here's the beautiful part: point that Custom Tool at a <strong>Catch Webhook</strong> URL from step 4, and your agents and automations talk to each other — a closed loop with zero code.</p>",
+      "images": []
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Turn incoming data into automated actions:",
+    "description": "Your webhook is live — now put the data to work:",
     "cards": [
-      { "href": "/automations/smart-flows", "title": "Build an Automation", "description": "Chain actions after your webhook trigger." },
-      { "href": "/automations/custom-tools", "title": "Build Custom Tools", "description": "Create the POST endpoint your agent sends data to." },
-      { "href": "/automations/integrations", "title": "Connect Integrations", "description": "Link the systems on both ends of your webhook." }
+      { "href": "/automations/smart-flows", "title": "Build an Automation", "description": "Chain actions — create leads, start calls, send SMS — after your webhook trigger." },
+      { "href": "/agents/advanced-settings", "title": "Post-Call Processing & Webhooks", "description": "Deep dive into summaries, success evaluation, and structured data extraction." },
+      { "href": "/automations/custom-tools", "title": "Build Custom Tools", "description": "Let your agent call your APIs live, mid-conversation." },
+      { "href": "/automations/integrations", "title": "Connect Integrations", "description": "Link Google Sheets, Slack, CRMs, and more on both ends of your webhook." }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Receive Data with Webhooks | iMash Docs",
-  "metaDescription": "Use the Catch Webhook trigger in iMash Automation to accept data from outside systems, map it into actions, and publish the flow. Includes outbound Send Data to URL.",
-  "metaKeywords": "webhooks, catch webhook, automation trigger, send data to url, incoming data, integration, imash"
+  "metaTitle": "Webhooks: Receive & Send Data | iMash Documentation",
+  "metaDescription": "Receive data into iMash with the Catch Webhook trigger — unique URLs, test requests, sample data — and send call results out with post-call webhooks and mid-call Custom Tools.",
+  "metaKeywords": "webhooks, catch webhook, webhook trigger, webhook url, sync webhook, post-call webhook, server url, webhook events, automation, integration, imash"
 }

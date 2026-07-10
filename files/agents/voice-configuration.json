@@ -1,55 +1,110 @@
 {
   "title": "Configure the Voice (TTS) for Your Agent",
-  "lede": "Choose the voice your Smart Agent speaks with. Pick a text-to-speech (TTS) provider, preview voices, filter by gender, accent, and age, and set a backup voice.",
-  "timeToComplete": "5 minutes",
-  "videoUrl": "https://youtu.be/C3Rkclp_KKQ",
-  "videoLength": "2",
+  "lede": "Your Smart Agent's voice is its first impression — and iMash gives you hundreds to choose from. Pick a text-to-speech (TTS) provider, preview and filter voices by gender, accent, and age, fine-tune speed and emotion, set a backup voice, and even clone your own voice from a 10-second sample.",
+  "timeToComplete": "10 minutes",
   "steps": [
+    {
+      "id": "open-agent-editor",
+      "title": "Open Your Agent in the Editor",
+      "content": "<ol><li>In the left sidebar, click <strong>Smart Agents</strong> (under <strong>Intelligence Center</strong>).</li><li>Click the name of the agent you want to configure. The agent editor opens.</li><li>If the editor opens in the node canvas, click <strong>Form</strong> in the view toggle to switch to the form view used in this guide.</li></ol><blockquote>💡 The middle column of the form view lists every capability panel of your agent — Knowledge Base, Transcriber (STT), Voice (TTS), Brains (LLM), and more. Each row shows its current selection as a green pill and an <strong>ON</strong>/<strong>OFF</strong> toggle.</blockquote>",
+      "images": [
+        {"src": "images/agents/assistant-editor-light.png", "alt": "Smart Agent editor with the capability panels in the middle column", "caption": "The agent editor. The Voice (TTS) panel sits in the middle column.", "theme": "light"},
+        {"src": "images/agents/assistant-editor-dark.png", "alt": "Smart Agent editor with the capability panels in the middle column", "caption": "The agent editor. The Voice (TTS) panel sits in the middle column.", "theme": "dark"}
+      ]
+    },
     {
       "id": "open-voice-panel",
       "title": "Open the Voice (TTS) Panel",
-      "content": "<ol><li>Go to <strong>Intelligence Center → Smart Agents</strong> and open your agent.</li><li>In the middle column, click the <strong>Voice (TTS)</strong> panel. Make sure its toggle is on.</li></ol>",
+      "content": "<ol><li>In the middle column, find the <strong>Voice (TTS)</strong> row. The green pill next to it shows the current provider and voice (for example <strong>cartesia / Mexican Woman</strong>), followed by the backup voice if one is set.</li><li>Make sure its toggle is set to <strong>ON</strong> — an agent with the voice turned off cannot speak on calls.</li><li>Click the <strong>Voice (TTS)</strong> row. The voice picker opens as a large popup.</li></ol>",
       "images": [
-        { "src": "images/agents/assistant-editor-light.png", "alt": "Agent editor feature panels", "caption": "The Voice (TTS) panel sits in the middle column of the editor.", "theme": "light" },
-        { "src": "images/agents/assistant-editor-dark.png", "alt": "Agent editor feature panels", "caption": "The Voice (TTS) panel sits in the middle column of the editor.", "theme": "dark" }
+        {"src": "images/agents/voice-configuration-panel-light.png", "alt": "Capability list zoomed on the Voice (TTS) row with its provider pill and ON toggle", "caption": "Click the Voice (TTS) row to open the voice picker. The pill shows the current provider and voice.", "theme": "light"},
+        {"src": "images/agents/voice-configuration-panel-dark.png", "alt": "Capability list zoomed on the Voice (TTS) row with its provider pill and ON toggle", "caption": "Click the Voice (TTS) row to open the voice picker. The pill shows the current provider and voice.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "tour-voice-picker",
+      "title": "Get to Know the Voice Picker",
+      "content": "<p>The <strong>Voice (TTS)</strong> popup is your voice studio. It has four zones:</p><ul><li><strong>Left rail</strong> — the list of TTS providers, each with a one-line tagline (e.g. \"Ultra-low latency · Real-time\"). The <strong>Clone Voice</strong> entry sits at the bottom of the rail.</li><li><strong>Provider header</strong> (top of the right pane) — shows the active provider and hosts the <strong>Advanced Settings</strong> button (plus <strong>Cloned Voices</strong> when iMash TTS is active).</li><li><strong>Filters and current voice</strong> — the <strong>Gender</strong>, <strong>Accent</strong>, and <strong>Age</strong> dropdowns on the left; the currently selected voice with its own play button on the right.</li><li><strong>Voice list</strong> — a pageable table of every voice the active provider offers.</li></ul><p>In the top-right corner, the <strong>Production | Backup</strong> switch lets you configure the main voice or the automatic fallback voice (more on that below).</p>",
+      "images": [
+        {"src": "images/agents/voice-configuration-picker-light.png", "alt": "Voice (TTS) picker popup with provider rail, filters, current voice, and voice table", "caption": "The voice picker: providers on the left, filters and the voice list on the right.", "theme": "light"},
+        {"src": "images/agents/voice-configuration-picker-dark.png", "alt": "Voice (TTS) picker popup with provider rail, filters, current voice, and voice table", "caption": "The voice picker: providers on the left, filters and the voice list on the right.", "theme": "dark"}
       ]
     },
     {
       "id": "pick-provider",
       "title": "Pick a Voice Provider",
-      "content": "<ol><li>Use the provider tabs at the top of the panel to choose a provider. Available providers include <strong>iMash TTS</strong>, <strong>Cartesia</strong>, <strong>ElevenLabs</strong>, <strong>Rime</strong>, <strong>Playht</strong>, <strong>Deepgram</strong>, <strong>OpenAI</strong>, <strong>Azure</strong>, <strong>Resemble</strong>, <strong>MiniMax</strong>, and <strong>Google</strong>.</li><li>Note that realtime (speech-to-speech) models come with their own built-in voices; when using one you pick from that model's voice set.</li></ol>",
-      "images": [
-        { "src": "images/agents/voice-config-light.png", "alt": "Voice configuration panel", "caption": "The Voice panel: provider tabs, filters, a searchable voice list, and preview.", "theme": "light" },
-        { "src": "images/agents/voice-config-dark.png", "alt": "Voice configuration panel", "caption": "The Voice panel: provider tabs, filters, a searchable voice list, and preview.", "theme": "dark" }
-      ]
-    },
-    {
-      "id": "filter-preview",
-      "title": "Filter, Preview, and Select a Voice",
-      "content": "<ol><li>Narrow the list with the <strong>Gender</strong>, <strong>Accent</strong>, and <strong>Age</strong> filters.</li><li>Click the play button next to a voice to hear a sample.</li><li>When you find the one you want, tick its checkbox in the last column to make it the agent's voice.</li></ol>",
+      "content": "<p>Click a provider in the left rail to browse its voices. Providers differ in style, latency, and language coverage:</p><ul><li><strong>iMash TTS</strong> — self-hosted, fully tunable, and the home of voice cloning.</li><li><strong>Cartesia</strong> — ultra-low latency, real-time voices with emotion control.</li><li><strong>ElevenLabs</strong> — studio-grade, highly expressive streaming voices.</li><li><strong>Rime</strong> — natural, dialog-style voices.</li><li><strong>Playht</strong> and <strong>Deepgram</strong> — solid general-purpose text-to-speech.</li><li><strong>OpenAI</strong> — Whisper-tier multilingual voices.</li><li><strong>Azure</strong> — Microsoft neural voices with wide language coverage.</li><li><strong>Resemble</strong> — cloned and custom voices.</li><li><strong>MiniMax</strong> — deeply configurable, multi-language voices.</li><li><strong>Google</strong> — WaveNet cloud voices.</li><li><strong>Inworld</strong> — character and persona voices.</li></ul><blockquote>⚠️ If your agent's brain is a <strong>Google realtime</strong> (speech-to-speech) model, only <strong>Google</strong> voices are selectable — realtime models speak through their own built-in voice set, so every other provider (and Clone Voice) appears grayed out. Conversely, with any other model the Google entry is disabled.</blockquote>",
       "images": []
     },
     {
-      "id": "advanced-and-backup",
-      "title": "Tune the Voice and Set a Backup",
-      "content": "<ul><li>Some providers expose extra controls under <strong>Advanced Settings</strong> - for example ElevenLabs offers Stability, Clarity, Style Exaggeration, and Speed; Cartesia offers Emotion, Speed, and Volume.</li><li>You can also configure a <strong>Backup</strong> voice/provider that takes over automatically if the primary provider is unavailable.</li></ul>",
+      "id": "filter-preview-select",
+      "title": "Filter, Preview, and Select a Voice",
+      "content": "<ol><li>Narrow the list with the <strong>Gender</strong>, <strong>Accent</strong>, and <strong>Age</strong> dropdowns — for example <strong>Female</strong> + <strong>English (US)</strong> + <strong>Adult</strong>.</li><li>Click the blue <strong>play</strong> button on any row to hear a short sample. Click it again to pause.</li><li>The table shows each voice's <strong>Name</strong>, <strong>Provider</strong>, <strong>Gender</strong>, <strong>Accent</strong> (with a language flag), and <strong>Age</strong>. Use the pagination controls at the bottom to browse — large catalogs run to hundreds of voices.</li><li>When you find the one, tick the <strong>checkbox</strong> in the last column of its row. The card above the table updates to show your new selection — the choice is saved to your agent immediately.</li></ol><blockquote>💡 The card to the right of the filters always shows the voice your agent is currently using, with its own play button — a handy sanity check before you hang your brand on it.</blockquote>",
+      "images": [
+        {"src": "images/agents/voice-configuration-filters-light.png", "alt": "Filters, current-voice card with play button, and the voice table with play buttons and select checkboxes", "caption": "Filter by Gender, Accent, and Age; preview with the play button; select with the checkbox in the last column.", "theme": "light"},
+        {"src": "images/agents/voice-configuration-filters-dark.png", "alt": "Filters, current-voice card with play button, and the voice table with play buttons and select checkboxes", "caption": "Filter by Gender, Accent, and Age; preview with the play button; select with the checkbox in the last column.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "advanced-settings",
+      "title": "Fine-Tune with Advanced Settings",
+      "content": "<p>Click <strong>Advanced Settings</strong> in the provider header to open the tuning popup. The knobs depend on the active provider:</p><ul><li><strong>Cartesia</strong> — <strong>Model</strong>, <strong>Emotion</strong> (dozens of moods from <em>happy</em> to <em>sarcastic</em>), <strong>Speed</strong> (0.5×–2×), and <strong>Volume</strong>.</li><li><strong>ElevenLabs</strong> — <strong>Model</strong>, <strong>Stability</strong>, <strong>Clarity and Similarity</strong>, <strong>Style Exaggeration</strong>, <strong>Speed</strong> (0.8–1.2), <strong>Streaming Latency</strong>, and <strong>Use Speaker Boost</strong>.</li><li><strong>MiniMax</strong> — <strong>Model</strong>, <strong>Speed</strong>, <strong>Volume</strong>, <strong>Pitch</strong>, <strong>Emotion</strong>, <strong>Text Normalization</strong> (better digit reading), <strong>Intensity</strong>, and <strong>Timbre</strong>.</li><li><strong>Inworld</strong> — <strong>Model</strong>, <strong>Speed</strong>, <strong>Pitch</strong>, and <strong>Temperature</strong>.</li><li><strong>Playht, Deepgram, OpenAI, Azure</strong> — a <strong>Speed</strong> slider.</li><li><strong>iMash TTS</strong> — a <strong>Custom advanced settings</strong> switch. Off (the default) uses the platform's tuned server defaults; on unlocks creative knobs like <strong>Output level</strong>, <strong>Exaggeration</strong> (emotion intensity), <strong>Temperature</strong>, and <strong>CFG scale</strong>.</li></ul><ol><li>Adjust the sliders, then click <strong>Done</strong> to close the popup — changes apply to your agent right away.</li></ol><blockquote>💡 Start with small adjustments. A speed of 1.05 or an exaggeration bump of 0.1 is often all it takes to make a voice feel alive without becoming unstable.</blockquote>",
+      "images": [
+        {"src": "images/agents/voice-configuration-advanced-light.png", "alt": "Advanced Voice Settings popup showing Model, Emotion, Speed, and Volume controls for Cartesia", "caption": "Advanced Voice Settings for Cartesia: Model, Emotion, Speed, and Volume. Each provider exposes its own knobs.", "theme": "light"},
+        {"src": "images/agents/voice-configuration-advanced-dark.png", "alt": "Advanced Voice Settings popup showing Model, Emotion, Speed, and Volume controls for Cartesia", "caption": "Advanced Voice Settings for Cartesia: Model, Emotion, Speed, and Volume. Each provider exposes its own knobs.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "backup-voice",
+      "title": "Set a Backup Voice (Failover)",
+      "content": "<p>Even the best cloud provider has a bad day. A backup voice keeps your agent talking if the primary TTS provider errors or times out mid-call.</p><ol><li>In the top-right of the voice picker, switch <strong>Production | Backup</strong> to <strong>Backup</strong>. A yellow banner confirms: <em>\"You're configuring the Backup Voice.\"</em></li><li>Pick a provider and tick a voice exactly like you did for production — the picker works the same, but everything you choose here applies only to the fallback.</li><li>Switch back to <strong>Production</strong> when you're done.</li></ol><blockquote>💡 Choose a backup from a <em>different</em> provider than your production voice — that's the whole point of failover. Pick one that sounds similar so callers barely notice the switch. The configured backup then shows next to the pill on the Voice (TTS) row (e.g. \"Backup: cartesia\").</blockquote>",
+      "images": [
+        {"src": "images/agents/voice-configuration-backup-light.png", "alt": "Voice picker in Backup mode with a warning banner and a backup voice selected", "caption": "Backup mode: choices made here only apply when the production voice fails.", "theme": "light"},
+        {"src": "images/agents/voice-configuration-backup-dark.png", "alt": "Voice picker in Backup mode with a warning banner and a backup voice selected", "caption": "Backup mode: choices made here only apply when the production voice fails.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "clone-voice",
+      "title": "Clone Your Own Voice",
+      "content": "<p>Want your agent to sound like <em>you</em> (or your best rep)? Clone a voice from a short audio sample:</p><ol><li>Click <strong>Clone Voice</strong> at the bottom of the left rail.</li><li>In the <strong>Clone Your Voice</strong> card, enter a <strong>Voice Name</strong> (e.g. \"My Voice\") and an optional <strong>Description</strong>.</li><li>Choose the <strong>Language</strong> the sample is spoken in.</li><li>Under <strong>Audio Sample</strong>, either click <strong>Record Audio</strong> and speak into your microphone (click <strong>Stop Recording</strong> when done), or click <strong>Upload File</strong> to use an existing audio clip. Use <strong>Clear &amp; Re-record</strong> if you want another take.</li><li>Click <strong>Clone Voice</strong>. A progress bar runs while the clone is created, and the new voice appears in the <strong>Your Cloned Voices</strong> list on the right, where you can play, select, or delete it.</li></ol><blockquote>💡 For best results, record 5–10 seconds of clear, natural speech in a quiet room — the recording must be at least 3 seconds long. Your cloned voices also appear under the <strong>iMash TTS</strong> provider, and when iMash TTS is active a <strong>Cloned Voices</strong> button in the provider header manages them without leaving the tab.</blockquote>",
+      "images": [
+        {"src": "images/agents/voice-configuration-clone-light.png", "alt": "Clone Voice pane with the Clone Your Voice form and the Your Cloned Voices list", "caption": "Clone Voice: name it, record or upload a sample, and click Clone Voice. Your clones are listed on the right.", "theme": "light"},
+        {"src": "images/agents/voice-configuration-clone-dark.png", "alt": "Clone Voice pane with the Clone Your Voice form and the Your Cloned Voices list", "caption": "Clone Voice: name it, record or upload a sample, and click Clone Voice. Your clones are listed on the right.", "theme": "dark"}
+      ]
+    },
+    {
+      "id": "finish-and-test",
+      "title": "Finish and Hear It Live",
+      "content": "<ol><li>Click <strong>Done</strong> in the bottom-right of the voice picker to close it. Voice picks and tuning changes are saved as you make them, so there's nothing else to submit.</li><li>Back in the editor, click <strong>Test Agent</strong> in the top-right (or <strong>Connect</strong> in the chat pane) and talk to your agent to hear the new voice on a real conversation.</li></ol><p>That's it — your agent now answers every call in exactly the voice you chose, with a failover standing by. 🎙️</p>",
       "images": []
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "After picking a voice, keep tuning your agent:",
+    "description": "The voice is set — now sharpen the rest of your agent and put it on the line:",
     "cards": [
-      { "href": "/agents/llm-settings", "title": "Choose the Brain (LLM)", "description": "Understand realtime vs. text models and pick the LLM that powers replies." },
-      { "href": "/agents/agent-settings", "title": "Agent Settings", "description": "Adjust timeouts, idle messages, and voicemail handling." },
-      { "href": "/agents/test-agent", "title": "Test Your Agent", "description": "Hear the voice live in the browser or over a phone call." }
+      {
+        "href": "/agents/llm-settings",
+        "title": "Choose the Brain (LLM)",
+        "description": "Understand realtime vs. text models and pick the LLM that powers replies."
+      },
+      {
+        "href": "/agents/test-your-agent",
+        "title": "Test Your Agent",
+        "description": "Hear the voice live in the browser or over a phone call."
+      },
+      {
+        "href": "/agents/agent-settings",
+        "title": "Agent Settings",
+        "description": "Adjust timeouts, idle messages, and voicemail handling."
+      }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Configure the Voice (TTS) for Your Agent | iMash Docs",
-  "metaDescription": "Choose your iMash Smart Agent's voice: pick a TTS provider (iMash TTS, Cartesia, ElevenLabs, OpenAI, Google and more), filter by gender, accent and age, preview and set a backup.",
-  "metaKeywords": "voice configuration, TTS, imash, smart agent, elevenlabs, cartesia, google voices, openai voices, imash tts, backup voice"
+  "metaTitle": "Configure the Voice (TTS) for Your Agent | iMash Documentation",
+  "metaDescription": "Choose your iMash Smart Agent's voice: pick a TTS provider (iMash TTS, Cartesia, ElevenLabs, OpenAI, Google and more), filter by gender, accent and age, preview voices, tune speed and emotion, set a backup voice, and clone your own voice.",
+  "metaKeywords": "voice configuration, TTS, text to speech, imash, smart agent, voice cloning, clone voice, elevenlabs, cartesia, minimax, google voices, openai voices, imash tts, backup voice, voice preview"
 }

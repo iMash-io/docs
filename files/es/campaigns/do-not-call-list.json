@@ -1,47 +1,87 @@
 {
-  "title": "Administra la lista de No llamar",
-  "lede": "Agrega números que nunca debes marcar. Cualquier número en esta lista es omitido automáticamente por tus campañas, para que te mantengas en cumplimiento sin trabajo extra.",
-  "timeToComplete": "5 minutos",
+  "title": "Administre la lista de No Llamar",
+  "lede": "Una sola lista, cero llamadas accidentales. Cada llamada saliente que iMash realiza — llamadas de campañas, de flujos de trabajo o por API — se verifica primero contra su lista de No Llamar, de modo que un número bloqueado aquí nunca podrá volver a marcarse. Aquí le mostramos cómo crearla y mantenerla en minutos.",
+  "timeToComplete": "10 minutos",
   "steps": [
     {
       "id": "open-dnc",
-      "title": "Abre la lista de No llamar",
-      "content": "<ol><li>En el menú de la izquierda, bajo <strong>Call Center</strong>, abre <strong>Do Not Call</strong> (No llamar).</li><li>Verás cada número bloqueado, cuándo se agregó y cualquier contacto, prospecto o registro de llamada que coincida.</li></ol>",
+      "title": "Abra la lista de No Llamar",
+      "content": "<p>Su lista de No Llamar (DNC) es la red de seguridad de toda su cuenta para el cumplimiento en llamadas. Primero, encontrémosla.</p><ol><li>En la barra de navegación superior, haga clic en <strong>Contact Center</strong> (Centro de Contacto).</li><li>En la franja de pestañas que aparece debajo, haga clic en <strong>Do Not Call</strong> (No Llamar) — la pestaña roja, que además muestra un contador en vivo de números bloqueados.</li></ol><p>Se abre la página <strong>Do Not Call List</strong> (Lista de No Llamar). Cada fila es un número de teléfono bloqueado, con estas columnas:</p><ul><li><strong>Phone Number</strong> (Número de teléfono) — el número bloqueado. Haga clic en el encabezado de la columna para ordenar.</li><li><strong>Added Date</strong> (Fecha de adición) — cuándo se agregó el número a la lista.</li><li><strong>Contact ID</strong> / <strong>Lead ID</strong> (ID de contacto / ID de prospecto) — si el número coincide con un contacto o prospecto de su CRM, su ID aparece como un enlace clicable (más sobre esto en un paso posterior). Un guion significa que no hay coincidencia.</li><li><strong>Call Log</strong> (Registro de llamada) — aparece un ícono verde de ojo si existe una llamada previa a ese número; haga clic para revisar esa llamada.</li><li><strong>Owner</strong> (Propietario) — a qué cuenta o miembro del equipo pertenece la entrada. Haga clic en el ícono de lápiz para reasignarla.</li><li><strong>Actions</strong> (Acciones) — el ícono rojo de papelera elimina el número de la lista.</li></ul>",
       "images": [
-        { "src": "images/campaigns/do-not-call-light.png", "alt": "Lista de No llamar", "caption": "La lista Do Not Call con búsqueda, importación y acciones por fila", "theme": "light" },
-        { "src": "images/campaigns/do-not-call-dark.png", "alt": "Lista de No llamar", "caption": "La lista Do Not Call con búsqueda, importación y acciones por fila", "theme": "dark" }
+        { "src": "images/campaigns/do-not-call-light.png", "alt": "La página de la Lista de No Llamar mostrando números bloqueados con sus fechas de adición, coincidencias de CRM, propietarios y acciones", "caption": "La lista de No Llamar — cada número aquí queda bloqueado automáticamente en toda la marcación saliente", "theme": "light" },
+        { "src": "images/campaigns/do-not-call-dark.png", "alt": "La página de la Lista de No Llamar mostrando números bloqueados con sus fechas de adición, coincidencias de CRM, propietarios y acciones", "caption": "La lista de No Llamar — cada número aquí queda bloqueado automáticamente en toda la marcación saliente", "theme": "dark" }
       ]
     },
     {
-      "id": "import",
-      "title": "Agrega números (impórtalos o escríbelos)",
-      "content": "<ol><li>Haz clic en <strong>Import Numbers</strong> (Importar números) en la parte superior derecha.</li><li>Elige <strong>Upload File</strong> (Subir archivo) para arrastrar un .txt o .csv (un número por línea, o separados por coma o punto y coma), luego haz clic en <strong>Import Numbers</strong>.</li><li>O elige <strong>Manual Input</strong> (Entrada manual), pega o escribe los números y haz clic en <strong>Add Numbers</strong> (Agregar números).</li></ol><p>Los números duplicados se manejan automáticamente, así que es seguro reimportar una lista.</p>"
+      "id": "toolbar",
+      "title": "Conozca la barra de herramientas",
+      "content": "<p>Todo lo que usará en el día a día está en una sola fila encima de la tabla:</p><ul><li><strong>Search phone numbers</strong> (Buscar números de teléfono) — escriba cualquier parte de un número para filtrar la lista al instante. Ideal para una verificación rápida de \"¿está bloqueado este número?\" antes de una llamada.</li><li><strong>Filter by owner</strong> (Filtrar por propietario) — limite la lista a las entradas de un miembro del equipo o subcuenta específica.</li><li><strong>Import Numbers</strong> (Importar números) — agregue números en masa desde un archivo o escribiéndolos (los dos pasos siguientes).</li><li><strong>API Info</strong> (Información de API) — abre una guía de API lista para usar para agregar, listar, actualizar y eliminar números DNC de forma programática.</li><li><strong>Delete Selected</strong> (Eliminar seleccionados) — este botón aparece solo después de marcar una o más casillas de fila, y los elimina todos a la vez.</li></ul>",
+      "images": [
+        { "src": "images/campaigns/do-not-call-list-toolbar-light.png", "alt": "La barra de herramientas de No Llamar con el cuadro de búsqueda de números, el filtro por propietario, el botón Import Numbers y el botón API Info", "caption": "Búsqueda, filtro por propietario, Import Numbers y API Info — su kit de herramientas DNC", "theme": "light" },
+        { "src": "images/campaigns/do-not-call-list-toolbar-dark.png", "alt": "La barra de herramientas de No Llamar con el cuadro de búsqueda de números, el filtro por propietario, el botón Import Numbers y el botón API Info", "caption": "Búsqueda, filtro por propietario, Import Numbers y API Info — su kit de herramientas DNC", "theme": "dark" }
+      ]
     },
     {
-      "id": "search-remove",
-      "title": "Busca y elimina números",
-      "content": "<ul><li>Usa el cuadro <strong>Search phone numbers</strong> (Buscar números de teléfono) para encontrar un número específico.</li><li>Haz clic en el ícono rojo <strong>Remove</strong> (Eliminar) de una fila para borrar un solo número.</li><li>Marca varias filas y usa <strong>Delete Selected</strong> (Eliminar seleccionados) para quitarlos de forma masiva.</li></ul>"
+      "id": "import-file",
+      "title": "Importe números desde un archivo",
+      "content": "<p>¿Ya tiene una lista de supresión? Cárguela de una sola vez:</p><ol><li>Haga clic en <strong>Import Numbers</strong> (Importar números) en la parte superior derecha de la página.</li><li>En la ventana <strong>Import Do Not Call Numbers</strong> (Importar números de No Llamar), permanezca en la pestaña <strong>Upload File</strong> (Subir archivo).</li><li>Haga clic o arrastre un archivo <strong>.txt</strong> o <strong>.csv</strong> al área de carga. El archivo solo necesita números de teléfono — uno por línea, o separados por comas o punto y coma.</li><li>Haga clic en <strong>Import Numbers</strong>. Un mensaje de éxito confirma cuántos números se agregaron.</li></ol><blockquote>💡 <strong>Consejo:</strong> Los duplicados se omiten automáticamente, así que es totalmente seguro volver a importar la misma lista después de agregarle números nuevos — nada se cuenta dos veces.</blockquote>",
+      "images": [
+        { "src": "images/campaigns/do-not-call-list-import-upload-light.png", "alt": "La ventana Import Do Not Call Numbers en la pestaña Upload File con un área para arrastrar y soltar archivos .txt o .csv", "caption": "Arrastre un archivo .txt o .csv y luego haga clic en Import Numbers", "theme": "light" },
+        { "src": "images/campaigns/do-not-call-list-import-upload-dark.png", "alt": "La ventana Import Do Not Call Numbers en la pestaña Upload File con un área para arrastrar y soltar archivos .txt o .csv", "caption": "Arrastre un archivo .txt o .csv y luego haga clic en Import Numbers", "theme": "dark" }
+      ]
     },
     {
-      "id": "how-it-works",
-      "title": "Cómo protege tus campañas",
-      "content": "<p>Cada campaña revisa automáticamente esta lista antes de marcar &mdash; los números que coinciden se omiten, así no tienes que depurar tus listas de marcación a mano. También puedes marcar un contacto o prospecto como <strong>Do Not Call</strong> (No llamar) desde su registro, y usar el botón <strong>API Info</strong> (Información de API) para agregar números de forma programática.</p>"
+      "id": "import-manual",
+      "title": "Agregue números escribiéndolos o pegándolos",
+      "content": "<p>Para adiciones puntuales — por ejemplo, un cliente acaba de pedir que dejen de llamarle — la entrada manual es lo más rápido:</p><ol><li>Haga clic en <strong>Import Numbers</strong> (Importar números).</li><li>Cambie a la pestaña <strong>Manual Input</strong> (Entrada manual).</li><li>Escriba o pegue los números en el cuadro de texto — uno por línea, o separados por comas o punto y coma. Cualquier formato común funciona (dígitos, +, guiones, paréntesis, espacios).</li><li>Haga clic en <strong>Add Numbers</strong> (Agregar números).</li></ol><p>Los números nuevos aparecen de inmediato al inicio de la lista y quedan bloqueados desde ese momento.</p>",
+      "images": [
+        { "src": "images/campaigns/do-not-call-list-import-manual-light.png", "alt": "La ventana Import Do Not Call Numbers en la pestaña Manual Input con un cuadro de texto grande para escribir o pegar números de teléfono", "caption": "Pegue los números en la pestaña Manual Input y haga clic en Add Numbers", "theme": "light" },
+        { "src": "images/campaigns/do-not-call-list-import-manual-dark.png", "alt": "La ventana Import Do Not Call Numbers en la pestaña Manual Input con un cuadro de texto grande para escribir o pegar números de teléfono", "caption": "Pegue los números en la pestaña Manual Input y haga clic en Add Numbers", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "investigate-matches",
+      "title": "Vea quién está detrás de un número bloqueado",
+      "content": "<p>La lista no solo almacena números — los conecta con su CRM para que siempre sepa quién pidió no ser llamado:</p><ul><li>Haga clic en un enlace azul de ID en la columna <strong>Contact ID</strong> o <strong>Lead ID</strong> para abrir el registro completo de ese contacto o prospecto en un panel lateral — sus datos, actividad e historial — sin salir de la página. Si un número coincide con varios registros, verá un enlace por cada coincidencia.</li><li>Haga clic en el ícono verde de ojo en la columna <strong>Call Log</strong> para abrir la llamada más reciente a ese número, incluidos la grabación y la transcripción — muy útil para verificar exactamente cuándo y cómo la persona pidió darse de baja.</li></ul>"
+    },
+    {
+      "id": "remove-numbers",
+      "title": "Elimine números de la lista",
+      "content": "<p>Si alguien vuelve a dar su consentimiento, o un número se bloqueó por error:</p><ol><li><strong>Un solo número:</strong> haga clic en el ícono rojo de papelera en la columna <strong>Actions</strong> (Acciones) y confirme con <strong>Yes, Delete</strong> (Sí, eliminar).</li><li><strong>Varios a la vez:</strong> marque la casilla de cada fila (use primero <strong>Search phone numbers</strong> para encontrarlas) y luego haga clic en <strong>Delete Selected</strong> (Eliminar seleccionados) y confirme.</li></ol><blockquote>⚠️ <strong>Advertencia:</strong> Eliminar un número lo hace inmediatamente marcable de nuevo por todas las campañas y flujos de trabajo. Elimine un número solo cuando esté seguro de que la persona ha consentido volver a ser contactada.</blockquote>",
+      "images": [
+        { "src": "images/campaigns/do-not-call-list-delete-confirm-light.png", "alt": "El cuadro de confirmación Delete Number pidiendo confirmar la eliminación de un número de teléfono de la lista de No Llamar", "caption": "Las eliminaciones siempre piden confirmación antes de que el número vuelva a ser marcable", "theme": "light" },
+        { "src": "images/campaigns/do-not-call-list-delete-confirm-dark.png", "alt": "El cuadro de confirmación Delete Number pidiendo confirmar la eliminación de un número de teléfono de la lista de No Llamar", "caption": "Las eliminaciones siempre piden confirmación antes de que el número vuelva a ser marcable", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "how-blocking-works",
+      "title": "Cómo funciona el bloqueo (lo mejor: es automático)",
+      "content": "<p>Aquí está la magia — nunca más tendrá que depurar una lista de marcación a mano. Absolutamente cada llamada saliente realizada a través de iMash pasa una verificación DNC <em>antes</em> de marcar:</p><ul><li><strong>Llamadas de campaña</strong> — el marcador de IA omite cualquier entrada de la lista cuyo número esté bloqueado.</li><li><strong>Llamadas de flujos de trabajo y automatizaciones</strong> — las llamadas activadas por sus Smart Flows también se verifican.</li><li><strong>Llamadas por API</strong> — las llamadas iniciadas de forma programática pasan por el mismo control.</li></ul><p>Cuando se encuentra un número bloqueado, la llamada se detiene antes de que llegue a sonar, y se registra una entrada en el historial de llamadas con el motivo de finalización <strong>Do Not Call</strong> — así tiene un rastro de auditoría que demuestra que el número fue suprimido, no omitido por accidente.</p><p>La coincidencia es inteligente con los formatos: <strong>+1 (555) 123-4567</strong>, <strong>15551234567</strong> y <strong>5551234567</strong> se tratan como el mismo número, por lo que no necesita normalizar sus importaciones.</p><blockquote>💡 <strong>Consejo de cumplimiento:</strong> Importe su lista de supresión existente <em>antes</em> de lanzar su primera campaña, y agregue las solicitudes de baja en cuanto lleguen. Respetar las solicitudes de no llamar con prontitud es un requisito legal en la mayoría de las regiones (TCPA en EE. UU.), y esta lista es su única fuente de verdad para ello.</blockquote>"
+    },
+    {
+      "id": "auto-add-and-api",
+      "title": "Deje que su agente de IA y la API hagan crecer la lista",
+      "content": "<p>La lista también se mantiene sola:</p><ul><li><strong>Bajas detectadas por la IA:</strong> cuando alguien le dice a su agente de voz de IA que deje de llamar, la llamada se clasifica en la etapa <strong>Do Not Call</strong> (No Llamar) y el número se agrega a esta lista automáticamente — sin necesidad de acción humana. El prospecto o contacto correspondiente también conserva su etapa roja <strong>Do Not Call</strong> en el CRM.</li><li><strong>API:</strong> haga clic en <strong>API Info</strong> (Información de API) en la parte superior derecha para abrir una referencia interactiva del endpoint DNC. Muestra la URL de su endpoint, las operaciones admitidas (<strong>ADD</strong>, <strong>LIST</strong>, <strong>UPDATE</strong>, <strong>DELETE</strong>), un constructor de solicitudes y ejemplos de código listos para copiar en cURL, JavaScript, Python, PHP, Ruby y Go. Úsela para sincronizar listas de supresión desde otro sistema de forma programada.</li></ul><p>Con importaciones, adiciones automáticas de la IA y la API alimentando una sola lista, el cumplimiento deja de ser una tarea pesada — simplemente funciona en segundo plano mientras usted marca con confianza.</p>",
+      "images": [
+        { "src": "images/campaigns/do-not-call-list-api-info-light.png", "alt": "La ventana API Info para la Lista de No Llamar mostrando la URL del endpoint, las operaciones admitidas, el constructor de solicitudes y ejemplos de código", "caption": "La ventana API Info — todo lo necesario para administrar la lista DNC de forma programática", "theme": "light" },
+        { "src": "images/campaigns/do-not-call-list-api-info-dark.png", "alt": "La ventana API Info para la Lista de No Llamar mostrando la URL del endpoint, las operaciones admitidas, el constructor de solicitudes y ejemplos de código", "caption": "La ventana API Info — todo lo necesario para administrar la lista DNC de forma programática", "theme": "dark" }
+      ]
     }
   ],
   "nextSteps": {
     "title": "¿Qué sigue?",
-    "description": "Sigue marcando de forma segura y efectiva.",
+    "description": "Su red de seguridad ya está lista — ahora ponga a trabajar su capacidad de marcación.",
     "cards": [
-      { "href": "/campaigns/create-campaign", "title": "Crea una campaña", "description": "Inicia una campaña de llamadas automatizada." },
-      { "href": "/campaigns/dial-lists", "title": "Administra la lista de marcación", "description": "Controla exactamente a quién se llama." },
-      { "href": "/crm/contacts", "title": "Administra contactos", "description": "Marca registros como No llamar desde el origen." }
+      { "href": "/campaigns/create-campaign", "title": "Cree una campaña", "description": "Lance una campaña de llamadas con IA — cada marcación se verifica automáticamente contra la lista DNC." },
+      { "href": "/campaigns/dial-lists", "title": "Administre las listas de marcación", "description": "Controle exactamente a quién se llama y en qué orden." },
+      { "href": "/crm/contacts", "title": "Administre contactos", "description": "Revise los contactos y prospectos vinculados a sus números bloqueados." }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+    "title": "¿Necesita ayuda?",
+    "content": "<p>Si tiene algún problema o pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Administra la lista de No llamar | Documentación de iMash",
-  "metaDescription": "Agrega números a la lista de No llamar de iMash por importación o entrada manual. Los números bloqueados se omiten automáticamente en tus campañas para mantener la marcación en cumplimiento.",
-  "metaKeywords": "no llamar, lista dnc, lista de supresión, bloquear números, cumplimiento de llamadas, tcpa, campañas imash"
+  "metaTitle": "Administre la lista de No Llamar | Documentación de iMash",
+  "metaDescription": "Cree y mantenga su lista de No Llamar de iMash: importe números desde un archivo, agréguelos manualmente, deje que su agente de IA capture las bajas automáticamente y bloquee cada llamada saliente de campañas, flujos de trabajo y API a números suprimidos.",
+  "metaKeywords": "no llamar, lista dnc, lista de supresión, bloquear números, cumplimiento de llamadas, tcpa, baja, campañas imash, api dnc"
 }

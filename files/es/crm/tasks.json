@@ -1,0 +1,115 @@
+{
+  "title": "Tareas y Kanban",
+  "lede": "No vuelva a dejar escapar un seguimiento. Las Tareas de iMash le dan a su equipo una lista de pendientes compartida con prioridades, fechas límite, checklists, control de tiempo y comentarios — además de un Kanban de Proyecto con arrastrar y soltar que muestra todo su pipeline de un vistazo.",
+  "timeToComplete": "10 minutos",
+  "steps": [
+    {
+      "id": "open-tasks",
+      "title": "Abra la lista de Tareas",
+      "content": "<ol><li>En la navegación superior, haga clic en <strong>CRM</strong> y luego en la pestaña <strong>Tasks</strong> (Tareas) — o vaya directamente a <code>/crm/tasks</code>. El contador de la pestaña muestra el total de tareas.</li><li>Todas las tareas aparecen en una tabla con búsqueda. Las columnas son:</li></ol><ul><li><strong>Task</strong> (Tarea) — el título (haga clic para abrir la tarea) más una vista previa de la descripción. Un icono de reloj rojo significa que la tarea está <strong>vencida</strong>.</li><li><strong>Status</strong> (Estado) — TODO, IN PROGRESS, BLOCKED, REVIEW, COMPLETED o CANCELLED.</li><li><strong>Priority</strong> (Prioridad) — LOW, MEDIUM, HIGH o URGENT.</li><li><strong>Assigned To</strong> (Asignada a) — el miembro del equipo responsable (o <em>Unassigned</em>, sin asignar).</li><li><strong>Progress</strong> (Progreso) — una barra de porcentaje que se llena automáticamente a medida que se completan los elementos del checklist.</li><li><strong>Comments</strong> (Comentarios) — cuántos comentarios tiene la tarea.</li><li><strong>Active</strong> (Activa) — muestra <em>Running · X min</em> cuando usted tiene un temporizador de trabajo en marcha en esa tarea.</li><li><strong>Actions</strong> (Acciones) — botones de Ver, Editar, Copiar y Eliminar en cada fila.</li></ul>",
+      "images": [
+        { "src": "images/crm/tasks-list-light.png", "alt": "Lista de tareas en vista de tabla", "caption": "La lista de Tareas — estado, prioridad, asignación, progreso y comentarios de cada tarea", "theme": "light" },
+        { "src": "images/crm/tasks-list-dark.png", "alt": "Lista de tareas en vista de tabla", "caption": "La lista de Tareas — estado, prioridad, asignación, progreso y comentarios de cada tarea", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "create-task",
+      "title": "Cree una tarea",
+      "content": "<ol><li>Haga clic en <strong>+ Add Task</strong> (Agregar tarea) en la esquina superior derecha de la lista.</li><li>Complete el formulario:</li></ol><ul><li><strong>Task Title</strong> (Título, obligatorio) — un nombre corto y accionable como \"Devolver la llamada a Sarah por la cotización\".</li><li><strong>Description</strong> (Descripción) — detalles, contexto, enlaces. Haga clic en <strong>Enhance Description</strong> (Mejorar descripción) y la IA integrada convierte sus notas en una descripción clara y pulida.</li><li><strong>Priority</strong> (Prioridad) — Low, Medium, High o Urgent (Medium por defecto).</li><li><strong>Status</strong> (Estado) — To Do, In Progress, Review o Blocked (To Do por defecto).</li><li><strong>Assign To</strong> (Asignar a) — elija al miembro del equipo responsable de la tarea.</li><li><strong>Category</strong> (Categoría) — Follow Up, Meeting, Call, Email, Research, Development, Review u Other. Muy útil para filtrar después.</li><li><strong>Start Date</strong> y <strong>Due Date</strong> (Fecha de inicio y límite) — las tareas que pasan su fecha límite se marcan automáticamente como <strong>OVERDUE</strong> (vencidas).</li><li><strong>Estimated Hours</strong> (Horas estimadas) — su presupuesto de tiempo; se compara con el tiempo real registrado.</li><li><strong>Tags</strong> (Etiquetas) — etiquetas libres para agrupar tareas relacionadas.</li></ul>",
+      "images": [
+        { "src": "images/crm/tasks-create-form-light.png", "alt": "Formulario Create New Task", "caption": "El formulario Create New Task — título, descripción mejorada con IA, prioridad, estado, fechas y etiquetas", "theme": "light" },
+        { "src": "images/crm/tasks-create-form-dark.png", "alt": "Formulario Create New Task", "caption": "El formulario Create New Task — título, descripción mejorada con IA, prioridad, estado, fechas y etiquetas", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "checklist-related",
+      "title": "Agregue un checklist y vincule la tarea a un registro del CRM",
+      "content": "<p>Desplácese hacia abajo en el mismo formulario para dos funciones potentes:</p><ol><li><strong>Checklist</strong> — divida la tarea en sub-pasos:<ul><li>Haga clic en <strong>Add Checklist Item</strong> (Agregar elemento) y escriba cada paso (marque cualquiera como <strong>Done</strong> si ya está hecho, o use <strong>Remove</strong> para quitarlo).</li><li>O haga clic en <strong>Generate with AI</strong> (Generar con IA) — iMash lee su título y descripción y redacta el checklist por usted.</li><li>El porcentaje de <strong>Progress</strong> de la tarea se calcula automáticamente a partir de los elementos completados.</li></ul></li><li><strong>Related To</strong> (Relacionada con) — adjunte la tarea al registro del que trata:<ul><li><strong>Related To Type</strong> — Lead, Contact, Account, Campaign, Call u Opportunity.</li><li><strong>Related Entity</strong> — busque y elija el registro exacto.</li><li>En la página de la tarea verá una tarjeta <strong>Related</strong> con un botón <strong>View Details</strong> (Ver detalles) que salta directo a ese lead, contacto, cuenta, campaña o llamada.</li></ul></li><li>Haga clic en <strong>Create Task</strong> (Crear tarea) para guardar (o <strong>Cancel</strong> para descartar).</li></ol><blockquote>💡 Vincular una tarea a un lead o a una llamada mantiene toda la historia en un solo lugar — quien retome la tarea ve exactamente de quién se trata sin buscar por todo el CRM.</blockquote>",
+      "images": [
+        { "src": "images/crm/tasks-create-checklist-light.png", "alt": "Secciones Checklist y Related To del formulario de tarea", "caption": "Elementos del checklist (con generación por IA) y el vínculo Related To al final del formulario", "theme": "light" },
+        { "src": "images/crm/tasks-create-checklist-dark.png", "alt": "Secciones Checklist y Related To del formulario de tarea", "caption": "Elementos del checklist (con generación por IA) y el vínculo Related To al final del formulario", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "search-filter",
+      "title": "Busque, filtre y ordene la lista",
+      "content": "<ol><li>Escriba en el cuadro <strong>Search tasks...</strong> (Buscar tareas) para buscar en títulos y descripciones.</li><li>Abra el desplegable <strong>Filter By</strong> (Filtrar por) y elija uno o más tipos de filtro — aparece un selector dedicado para cada uno:</li></ol><ul><li><strong>Status</strong> — mostrar solo ciertos estados (selección múltiple).</li><li><strong>Priority</strong> — por ejemplo solo HIGH y URGENT (selección múltiple).</li><li><strong>Assigned</strong> — <em>Assigned to Me</em> (asignadas a mí), <em>Unassigned</em> (sin asignar) o un miembro específico del equipo.</li><li><strong>Due Date</strong> — <em>Overdue</em> (vencidas), <em>Due Today</em> (vencen hoy) o <em>Due This Week</em> (vencen esta semana).</li><li><strong>Category</strong> — filtrar por la categoría de la tarea.</li><li><strong>Owner</strong> — filtrar por la cuenta (principal o subcuenta) dueña de la tarea.</li></ul><blockquote>💡 Empiece cada mañana con <strong>Filter By → Assigned → Assigned to Me</strong> más <strong>Due Date → Overdue</strong> — esa es su vista instantánea de \"qué urge\".</blockquote>",
+      "images": [
+        { "src": "images/crm/tasks-toolbar-light.png", "alt": "Barra de herramientas de Tareas", "caption": "La barra de herramientas: búsqueda, Filter By, selector de vista y Add Task", "theme": "light" },
+        { "src": "images/crm/tasks-toolbar-dark.png", "alt": "Barra de herramientas de Tareas", "caption": "La barra de herramientas: búsqueda, Filter By, selector de vista y Add Task", "theme": "dark" },
+        { "src": "images/crm/tasks-filters-light.png", "alt": "Desplegable Filter By abierto", "caption": "Filter By ofrece filtros de Status, Priority, Assigned, Due Date, Category y Owner", "theme": "light" },
+        { "src": "images/crm/tasks-filters-dark.png", "alt": "Desplegable Filter By abierto", "caption": "Filter By ofrece filtros de Status, Priority, Assigned, Due Date, Category y Owner", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "board-view",
+      "title": "Cambie a la vista de tablero",
+      "content": "<ol><li>En la barra de herramientas, cambie el selector de vista de <strong>Table View</strong> a <strong>Board View</strong> (vista de tablero).</li><li>Sus tareas se reagrupan en cinco columnas por estado: <strong>TODO</strong>, <strong>IN PROGRESS</strong>, <strong>REVIEW</strong>, <strong>BLOCKED</strong> y <strong>COMPLETED</strong>, cada una con su contador en vivo.</li><li>Cada tarjeta muestra la etiqueta de prioridad, un icono de reloj si está vencida, la barra de progreso del checklist, el avatar de la persona asignada y cuánto falta para su vencimiento.</li><li>Haga clic en cualquier tarjeta para abrir la página completa de la tarea.</li></ol><blockquote>💡 La vista de tablero es perfecta para las reuniones diarias — un vistazo le dice qué está atascado en BLOCKED y qué espera en REVIEW. Para mover una tarea a otra columna, ábrala y cambie su estado (vea la página de la tarea más abajo).</blockquote>",
+      "images": [
+        { "src": "images/crm/tasks-board-light.png", "alt": "Vista de tablero de tareas", "caption": "Board View agrupa las tareas en columnas TODO, IN PROGRESS, REVIEW, BLOCKED y COMPLETED", "theme": "light" },
+        { "src": "images/crm/tasks-board-dark.png", "alt": "Vista de tablero de tareas", "caption": "Board View agrupa las tareas en columnas TODO, IN PROGRESS, REVIEW, BLOCKED y COMPLETED", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "task-page",
+      "title": "Abra una tarea y controle su tiempo",
+      "content": "<ol><li>Haga clic en el título de una tarea (o en el botón verde de ojo <strong>View</strong> en la columna Actions) para abrir su página.</li><li>El encabezado muestra el título, las etiquetas de estado / prioridad / OVERDUE, sus etiquetas personalizadas, la descripción y la barra de progreso del checklist.</li><li>Haga clic en <strong>Start Timer</strong> (Iniciar temporizador) para empezar a registrar tiempo de trabajo — un cronómetro en vivo <em>Timer Running</em> aparece en el encabezado, y la lista de Tareas muestra <em>Running · X min</em> en la columna Active.</li><li>Haga clic en <strong>Stop Timer</strong> (Detener temporizador) al terminar. La sesión se guarda en la pestaña <strong>Time Logs</strong> y se suma al <strong>Time Spent</strong> (tiempo total) de la tarea.</li><li>Haga clic en <strong>Edit Task</strong> (Editar tarea) para cambiar cualquier campo del formulario de creación.</li></ol>",
+      "images": [
+        { "src": "images/crm/tasks-detail-light.png", "alt": "Página de detalle de una tarea", "caption": "La página de la tarea — encabezado con Start Timer y Edit Task, pestaña de checklist y las tarjetas laterales", "theme": "light" },
+        { "src": "images/crm/tasks-detail-dark.png", "alt": "Página de detalle de una tarea", "caption": "La página de la tarea — encabezado con Start Timer y Edit Task, pestaña de checklist y las tarjetas laterales", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "work-tabs",
+      "title": "Trabaje con las pestañas: Checklist, Comments, Activity, Files, Time Logs",
+      "content": "<p>El panel principal de la página de la tarea tiene cinco pestañas:</p><ul><li><strong>Checklist</strong> — marque los elementos a medida que los completa; la barra de progreso se actualiza al instante. Cada elemento tiene su propio hilo de comentarios 💬 y archivos adjuntos 📄, así la evidencia queda junto al paso al que pertenece.</li><li><strong>Comments</strong> (Comentarios) — escriba en <strong>Add a comment...</strong> y haga clic en <strong>Add Comment</strong>. Después puede editar o eliminar sus propios comentarios.</li><li><strong>Activity</strong> (Actividad) — un historial automático de todo: cambios de estado, inicios de temporizador, elementos marcados, comentarios.</li><li><strong>Files</strong> (Archivos) — suba documentos a la tarea y vea qué elementos del checklist tienen archivos adjuntos.</li><li><strong>Time Logs</strong> (Registros de tiempo) — cada sesión del temporizador con quién trabajó, cuándo y por cuánto tiempo.</li></ul>",
+      "images": [
+        { "src": "images/crm/tasks-detail-comments-light.png", "alt": "Pestaña de comentarios de una tarea", "caption": "La pestaña Comments — agregue, edite y elimine comentarios; las otras pestañas cubren checklist, actividad, archivos y registros de tiempo", "theme": "light" },
+        { "src": "images/crm/tasks-detail-comments-dark.png", "alt": "Pestaña de comentarios de una tarea", "caption": "La pestaña Comments — agregue, edite y elimine comentarios; las otras pestañas cubren checklist, actividad, archivos y registros de tiempo", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "status-sidebar",
+      "title": "Actualice el estado y consulte la barra lateral",
+      "content": "<p>La columna derecha de la página de la tarea mantiene los datos vitales a la vista:</p><ul><li><strong>Status &amp; Actions</strong> — un desplegable para mover la tarea por 📋 To Do → 🚀 In Progress → 👀 Review → 🚫 Blocked → ✅ Completed → ❌ Cancelled. Cambiarlo aquí actualiza la lista y el tablero de inmediato.</li><li><strong>Task Details</strong> — % de progreso, persona asignada, fecha límite (en rojo si está vencida), tiempo invertido frente al estimado, propietario, fechas de creación y actualización, y categoría.</li><li><strong>Related</strong> — si la tarea está vinculada a un lead, contacto, cuenta, campaña o llamada, esta tarjeta lo nombra y el botón <strong>View Details</strong> salta directamente a él.</li></ul>",
+      "images": [
+        { "src": "images/crm/tasks-detail-sidebar-light.png", "alt": "Tarjeta lateral Task Details", "caption": "La tarjeta Task Details — progreso, asignación, fecha límite, tiempo invertido y propiedad de un vistazo", "theme": "light" },
+        { "src": "images/crm/tasks-detail-sidebar-dark.png", "alt": "Tarjeta lateral Task Details", "caption": "La tarjeta Task Details — progreso, asignación, fecha límite, tiempo invertido y propiedad de un vistazo", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "copy-delete-bulk",
+      "title": "Copiar, eliminar y acciones masivas",
+      "content": "<ul><li><strong>Copy</strong> (el icono gris en la columna Actions) duplica una tarea como un nuevo <em>To Do</em> — mismo título, descripción, checklist (todo sin marcar) y asignación, con el progreso y los registros de tiempo en cero. Perfecto para trabajo recurrente como informes semanales.</li><li><strong>Delete</strong> (el icono rojo) elimina una tarea tras una confirmación.</li><li><strong>Eliminación masiva</strong> — marque las casillas de varias filas y aparecerá un botón <strong>Delete Selected (N)</strong> en la barra de herramientas.</li></ul><blockquote>⚠️ Eliminar es para tareas creadas por error. Para el trabajo terminado, cambie el estado a <strong>Completed</strong> — así conserva el historial, los registros de tiempo y la trazabilidad en los reportes.</blockquote>",
+      "images": [
+        { "src": "images/crm/tasks-row-actions-light.png", "alt": "Botones de acción de la fila: Ver, Editar, Copiar, Eliminar", "caption": "La columna Actions en cada fila — View (ojo), Edit (lápiz), Copy y Delete", "theme": "light" },
+        { "src": "images/crm/tasks-row-actions-dark.png", "alt": "Botones de acción de la fila: Ver, Editar, Copiar, Eliminar", "caption": "La columna Actions en cada fila — View (ojo), Edit (lápiz), Copy y Delete", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "project-kanban",
+      "title": "El Kanban de Proyecto: su pipeline en un solo tablero",
+      "content": "<p>Las tareas no son el único tablero. El <strong>Project Kanban</strong> convierte todo su pipeline de leads y contactos en un tablero de arrastrar y soltar.</p><ol><li>En la navegación superior, haga clic en <strong>CRM</strong> y luego en la pestaña <strong>Kanban</strong>, al final de la franja de pestañas — o vaya directamente a <code>/crm/kanban</code>.</li><li>Cada columna es una de las etapas del ciclo de vida de su CRM (New, Contacted, No Answer, Voicemail y cualquier etapa personalizada que haya definido en CRM Settings), con un contador total y contadores separados de leads / contactos.</li><li>Cada tarjeta es un <strong>lead</strong> (avatar azul) o un <strong>contacto</strong> (avatar verde) con su fecha de creación.</li><li><strong>Arrastre una tarjeta a otra columna</strong> para cambiar la etapa del ciclo de vida de esa persona — el registro del CRM se actualiza al instante.</li><li>Haga clic en el nombre de una tarjeta para abrir los detalles completos del lead o contacto en un panel lateral.</li><li>Las columnas cargan más tarjetas automáticamente a medida que se desplaza hacia abajo.</li></ol><blockquote>💡 Las columnas provienen de su configuración de etapas en <strong>CRM Settings</strong> — renombre, cambie el color o agregue etapas allí y el tablero las reflejará.</blockquote>",
+      "images": [
+        { "src": "images/crm/tasks-kanban-light.png", "alt": "Tablero Project Kanban", "caption": "El Project Kanban — leads y contactos agrupados por etapa del ciclo de vida; arrastre las tarjetas para moverlas entre etapas", "theme": "light" },
+        { "src": "images/crm/tasks-kanban-dark.png", "alt": "Tablero Project Kanban", "caption": "El Project Kanban — leads y contactos agrupados por etapa del ciclo de vida; arrastre las tarjetas para moverlas entre etapas", "theme": "dark" }
+      ]
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Ya tiene un motor de tareas para su equipo y un tablero de pipeline en vivo. Ahora conéctelos con el resto de su CRM.",
+    "cards": [
+      { "href": "/crm/calendar", "title": "Calendario y Agenda", "description": "Lleve fechas límite y citas a un calendario compartido con recordatorios." },
+      { "href": "/crm/crm-settings", "title": "Configuración del CRM", "description": "Personalice las etapas del ciclo de vida que alimentan las columnas del Project Kanban." },
+      { "href": "/crm/leads", "title": "Leads", "description": "Administre los leads cuyas tarjetas acaba de arrastrar por el tablero." }
+    ]
+  },
+  "support": {
+    "title": "¿Necesita ayuda?",
+    "content": "<p>Si tiene algún problema o pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
+  },
+  "metaTitle": "Tareas y Kanban - CRM | Documentación de iMash",
+  "metaDescription": "Cree y asigne tareas con prioridades, fechas límite, checklists generados por IA, comentarios, archivos y control de tiempo en iMash — además del Project Kanban de arrastrar y soltar para su pipeline de leads y contactos.",
+  "metaKeywords": "tareas, gestión de tareas, kanban, project kanban, pendientes, checklist, control de tiempo, tablero de tareas, asignación de tareas, tareas CRM, tablero de pipeline"
+}

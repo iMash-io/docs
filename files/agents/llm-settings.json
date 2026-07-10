@@ -1,55 +1,205 @@
 {
   "title": "Choose the Brain (LLM) for Your Agent",
-  "lede": "Pick the model that powers your Smart Agent's replies. Learn the difference between realtime (speech-to-speech) models and text (LLM + transcriber) models, and how to configure each.",
-  "timeToComplete": "6 minutes",
-  "videoUrl": "https://youtu.be/bDy0w1hEz7I",
-  "videoLength": "2",
+  "lede": "The model you pick is your agent's brain — it decides how smart, how fast, and how natural every conversation feels. This guide walks you through the Brains (LLM) picker, realtime vs. text models, temperature, backup models, and the Transcriber (STT) that turns callers' speech into text.",
+  "timeToComplete": "8 minutes",
   "steps": [
     {
-      "id": "open-brains",
-      "title": "Open the Brains (LLM) Panel",
-      "content": "<ol><li>Go to <strong>Intelligence Center → Smart Agents</strong> and open your agent.</li><li>In the middle column, click the <strong>Brains (LLM)</strong> panel. The pill shows the current provider and model.</li></ol>",
+      "id": "open-agent",
+      "title": "Open Your Agent",
+      "content": "<p>Every model setting lives inside an individual agent, so start by opening one:</p><ol><li>In the left sidebar, click <strong>Intelligence Center → Smart Agents</strong>.</li><li>Look at the list: the <strong>LLM</strong>, <strong>STT</strong>, and <strong>TTS</strong> columns show at a glance which brain, transcriber, and voice each agent uses.</li><li>Click the <strong>name</strong> of the agent you want to configure. The agent editor opens.</li></ol>",
       "images": [
-        { "src": "images/agents/llm-settings-light.png", "alt": "LLM model picker", "caption": "The Brains (LLM) panel: choose the model that powers replies.", "theme": "light" },
-        { "src": "images/agents/llm-settings-dark.png", "alt": "LLM model picker", "caption": "The Brains (LLM) panel: choose the model that powers replies.", "theme": "dark" }
+        {
+          "src": "images/agents/llm-settings-agents-list-light.png",
+          "alt": "Smart Agents list with LLM, STT, and TTS columns",
+          "caption": "The Smart Agents list — the LLM column shows each agent's current brain.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/llm-settings-agents-list-dark.png",
+          "alt": "Smart Agents list with LLM, STT, and TTS columns",
+          "caption": "The Smart Agents list — the LLM column shows each agent's current brain.",
+          "theme": "dark"
+        }
       ]
     },
     {
-      "id": "model-types",
-      "title": "Understand the Two Model Types",
-      "content": "<ul><li><strong>Realtime models</strong> (grouped under <em>Realtime Agent</em>): a single model handles audio in and audio out (speech-to-speech). Turn detection and transcription are built in.</li><li><strong>Text (LLM) models</strong>: the flow is Speech → Text → LLM → Voice. These pair with a separate <strong>Transcriber (STT)</strong> for speech recognition and a <strong>Voice (TTS)</strong> for the reply.</li></ul>",
+      "id": "find-panels",
+      "title": "Find the Three Engine Panels",
+      "content": "<p>In the editor's middle column, three panels together power every conversation:</p><ul><li><strong>Transcriber (STT)</strong> — turns the caller's speech into text (speech-to-text).</li><li><strong>Brains (LLM)</strong> — the language model that reads the conversation and decides what to say.</li><li><strong>Voice (TTS)</strong> — speaks the reply out loud (text-to-speech).</li></ul><p>Each row shows a green pill with the current provider and model (for example <strong>google / gemini-3.1-flash-lite</strong>), a gray <em>Backup:</em> note if a fallback is configured, and an <strong>ON/OFF</strong> switch.</p><blockquote>⚠️ Voice, Transcriber, and LLM are critical for voice calls — leave their switches <strong>ON</strong>. If one is off, its status pill in the page header turns red and the agent can't handle calls properly.</blockquote>",
       "images": [
-        { "src": "images/agents/assistant-editor-light.png", "alt": "Agent editor panels", "caption": "Text models use separate Transcriber (STT) and Voice (TTS) panels.", "theme": "light" },
-        { "src": "images/agents/assistant-editor-dark.png", "alt": "Agent editor panels", "caption": "Text models use separate Transcriber (STT) and Voice (TTS) panels.", "theme": "dark" }
+        {
+          "src": "images/agents/llm-settings-editor-light.png",
+          "alt": "Agent editor with Transcriber, Voice, and Brains panels in the middle column",
+          "caption": "The agent editor — Transcriber (STT), Voice (TTS), and Brains (LLM) sit in the middle column.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/llm-settings-editor-dark.png",
+          "alt": "Agent editor with Transcriber, Voice, and Brains panels in the middle column",
+          "caption": "The agent editor — Transcriber (STT), Voice (TTS), and Brains (LLM) sit in the middle column.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "open-brains",
+      "title": "Open the Brains (LLM) Picker",
+      "content": "<ol><li>Click the <strong>Brains (LLM)</strong> row. The model picker opens.</li><li>On the <strong>left rail</strong> you'll see the provider groups available on your account — for example <strong>Realtime Agent</strong>, <strong>Google</strong> (Gemini family), <strong>OpenAI</strong> (GPT family), and <strong>Anthropic</strong> (Claude family). Each group lists its model count and a one-line specialty.</li><li>Click a provider group to browse its models in the <strong>Model</strong> grid on the right. Browsing groups never changes anything — only clicking a model card does.</li><li>When you're finished, click <strong>Done</strong> to close the picker.</li></ol><blockquote>💡 Every pick saves instantly — there is no separate Save button. <strong>Done</strong> simply closes the window.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/llm-settings-light.png",
+          "alt": "Brains (LLM) picker with provider groups on the left and model grid on the right",
+          "caption": "The Brains (LLM) picker — provider groups on the left, model cards and Temperature on the right.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/llm-settings-dark.png",
+          "alt": "Brains (LLM) picker with provider groups on the left and model grid on the right",
+          "caption": "The Brains (LLM) picker — provider groups on the left, model cards and Temperature on the right.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "realtime-vs-text",
+      "title": "Realtime vs. Text Models — Pick the Right Type",
+      "content": "<p>The picker offers two fundamentally different kinds of brain:</p><ul><li><strong>Realtime models</strong> (the <strong>Realtime Agent</strong> group — e.g. <strong>gpt-realtime-1.5</strong> or <strong>gemini-2.5-flash-native-audio</strong>): one single model listens to audio and speaks back directly (speech-to-speech). Transcription and turn detection are built in, so the <strong>Transcriber (STT)</strong> panel disappears from the editor. Best for: the most natural, lowest-latency conversations.</li><li><strong>Text (LLM) models</strong> (every other group): the classic pipeline — <em>Speech → Transcriber (STT) → LLM → Voice (TTS)</em>. You choose each stage yourself, including any TTS voice on the platform. Best for: full control, voice cloning, wider model choice, and predictable cost.</li></ul><blockquote>💡 Picking a Google realtime model automatically switches your agent to a compatible built-in Google voice — and switching back to a text model restores your previous voice. iMash handles the swap for you.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/llm-settings-realtime-light.png",
+          "alt": "Realtime Agent group showing speech-to-speech models",
+          "caption": "The Realtime Agent group — single-stream speech-to-speech models.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/llm-settings-realtime-dark.png",
+          "alt": "Realtime Agent group showing speech-to-speech models",
+          "caption": "The Realtime Agent group — single-stream speech-to-speech models.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "pick-model",
+      "title": "Select a Model",
+      "content": "<ol><li>Click the provider group you want on the left rail.</li><li>Click a <strong>model card</strong> in the grid. The card highlights with a blue check mark, and the change saves immediately.</li><li>Close the picker with <strong>Done</strong> — the <strong>Brains (LLM)</strong> row now shows your new pick in its green pill.</li></ol><p>Quick guidance on choosing:</p><ul><li><strong>Fast + affordable</strong> (high call volume): light models like <strong>gemini-3.1-flash-lite</strong> or <strong>gpt-5-mini</strong>.</li><li><strong>Strong reasoning</strong> (complex scripts, many tools): larger models like <strong>gpt-5</strong> or the <strong>Anthropic</strong> Claude models.</li><li><strong>Most human feel</strong>: a <strong>Realtime Agent</strong> model.</li></ul>",
+      "images": [
+        {
+          "src": "images/agents/llm-settings-panels-light.png",
+          "alt": "Engine panels showing the selected provider and model pills",
+          "caption": "After picking, the panel pills reflect your provider and model choices.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/llm-settings-panels-dark.png",
+          "alt": "Engine panels showing the selected provider and model pills",
+          "caption": "After picking, the panel pills reflect your provider and model choices.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "set-temperature",
+      "title": "Tune the Temperature",
+      "content": "<p>Below the model grid sits the <strong>Temperature</strong> slider (0 to 2). It controls how adventurous the model's replies are:</p><ul><li><strong>Lower (0 – 0.4)</strong> — deterministic and on-script. Ideal for support agents, dispatchers, and anything that must follow rules precisely.</li><li><strong>Middle (0.4 – 0.8)</strong> — the sweet spot for most voice agents: natural variety without going off the rails.</li><li><strong>Higher (0.8 – 2)</strong> — creative and unpredictable. Rarely what you want on a phone call.</li></ul><ol><li>Drag the slider to your value — it saves as you release it.</li></ol>",
+      "images": [
+        {
+          "src": "images/agents/llm-settings-temperature-light.png",
+          "alt": "Temperature slider in the Brains picker",
+          "caption": "Temperature: lower = more deterministic, higher = more creative.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/llm-settings-temperature-dark.png",
+          "alt": "Temperature slider in the Brains picker",
+          "caption": "Temperature: lower = more deterministic, higher = more creative.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "configure-backup",
+      "title": "Set a Backup Model (Recommended)",
+      "content": "<p>Providers occasionally have outages. A backup model keeps your agent talking when the primary fails:</p><ol><li>In the Brains (LLM) picker header, switch the toggle from <strong>Production</strong> to <strong>Backup</strong>. A yellow banner confirms: <em>\"You're configuring the Backup LLM.\"</em></li><li>Pick a provider and model exactly as before — but choose a <strong>different provider</strong> than your production model, so one provider's outage can't take both down.</li><li>Switch back to <strong>Production</strong> and click <strong>Done</strong>.</li></ol><p>During calls, the agent always uses the Production model first and only fails over to the Backup if the primary errors or times out. The panel row shows a gray <em>Backup:</em> note once one is set.</p><blockquote>💡 The same Production/Backup toggle exists in the <strong>Transcriber (STT)</strong> and <strong>Voice (TTS)</strong> pickers — set all three for a fully failover-proof agent.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/llm-settings-backup-light.png",
+          "alt": "Backup LLM view with warning banner and model selection",
+          "caption": "Backup view — picks here only apply when the production model fails.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/llm-settings-backup-dark.png",
+          "alt": "Backup LLM view with warning banner and model selection",
+          "caption": "Backup view — picks here only apply when the production model fails.",
+          "theme": "dark"
+        }
       ]
     },
     {
       "id": "configure-transcriber",
-      "title": "Configure the Transcriber (Text Models)",
-      "content": "<ol><li>When you choose a text LLM, open the <strong>Transcriber (STT)</strong> panel.</li><li>Pick the transcription provider and set the input language for accurate recognition.</li><li>You can also set a backup transcriber that takes over if the primary is unavailable.</li></ol>",
-      "images": []
+      "title": "Configure the Transcriber (Text Models Only)",
+      "content": "<p>If you chose a text LLM, the agent needs a speech-to-text engine to hear the caller. Click the <strong>Transcriber (STT)</strong> row to open its picker:</p><ol><li>Choose a provider on the left rail. Each card shows its specialty and a live <strong>latency chip</strong> (lower is snappier):<ul><li><strong>Deepgram</strong> — multi-language, configurable model, low latency. The default and best all-rounder.</li><li><strong>Speechmatics</strong> — real-time with <strong>Speaker Diarization</strong> (a toggle that separates speakers in the transcript); requires an explicit language.</li><li><strong>AssemblyAI</strong> — English-only transcription.</li><li><strong>Groq</strong> — fast inference; requires an explicit ISO-639-1 language code (e.g. <em>en</em>, <em>es</em>).</li></ul></li><li>Set the <strong>Language</strong> the caller will speak — pick <strong>Multilingual</strong> (Deepgram) if calls arrive in mixed languages, or a specific language for the best accuracy.</li><li>With Deepgram, also pick the <strong>Model</strong> (e.g. <strong>Flux (Multilingual)</strong> or a Nova model) and optionally add <strong>Keyword Boost</strong> terms — domain-specific words like product names or model numbers that the transcriber should recognize more reliably.</li><li>Click <strong>Done</strong> when finished.</li></ol><blockquote>⚠️ Using a <strong>Realtime Agent</strong> model? The Transcriber panel is hidden — realtime models transcribe on their own, so there's nothing to configure here.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/llm-settings-transcriber-light.png",
+          "alt": "Transcriber Provider picker with provider list and settings",
+          "caption": "The Transcriber Provider picker — providers on the left, language and model settings on the right.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/llm-settings-transcriber-dark.png",
+          "alt": "Transcriber Provider picker with provider list and settings",
+          "caption": "The Transcriber Provider picker — providers on the left, language and model settings on the right.",
+          "theme": "dark"
+        },
+        {
+          "src": "images/agents/llm-settings-transcriber-settings-light.png",
+          "alt": "Deepgram transcriber settings: language, model, and keyword boost",
+          "caption": "Deepgram settings — Language, Model, and Keyword Boost for domain-specific terms.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/llm-settings-transcriber-settings-dark.png",
+          "alt": "Deepgram transcriber settings: language, model, and keyword boost",
+          "caption": "Deepgram settings — Language, Model, and Keyword Boost for domain-specific terms.",
+          "theme": "dark"
+        }
+      ]
     },
     {
-      "id": "advanced",
-      "title": "Advanced LLM Parameters (Optional)",
-      "content": "<ul><li>Open <strong>Advanced LLM Parameters</strong> to fine-tune behavior: <strong>Max Tool Steps</strong>, <strong>Parallel Tool Calls</strong>, <strong>Top-P</strong>, <strong>Max Output Tokens</strong>, and penalties.</li><li>Note: with a realtime model, some advanced interruption settings are ignored - the model manages turns itself.</li></ul>",
+      "id": "test-and-compare",
+      "title": "Test Your New Brain",
+      "content": "<p>Models feel different in conversation — a spec sheet never tells the whole story. Compare them live:</p><ol><li>Click <strong>Connect</strong> in the test panel on the right side of the editor (or <strong>Test Agent</strong> in the header) and have a short conversation.</li><li>Swap the model in <strong>Brains (LLM)</strong>, reconnect, and ask the same questions again.</li><li>Judge latency, tone, and how well the agent follows your prompt — then keep the winner.</li></ol><p>That's it — your agent now thinks with exactly the brain you chose, with a safety net behind it. 🚀</p><blockquote>💡 Working in the <strong>Node</strong> view instead? The LLM and Transcriber canvas nodes open these same pickers — everything in this guide applies there too.</blockquote>",
       "images": []
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Match the voice and behavior to your chosen model:",
+    "description": "Your agent has its brain — now match the voice and fine-tune the conversation:",
     "cards": [
-      { "href": "/agents/voice-configuration", "title": "Configure the Voice", "description": "Pick a TTS voice for text models or the model's built-in voice." },
-      { "href": "/agents/agent-settings", "title": "Agent Settings", "description": "Tune interruptions, turn detection, and timeouts." },
-      { "href": "/agents/test-agent", "title": "Test Your Agent", "description": "Compare models live to find the best fit." }
+      {
+        "href": "/agents/voice-configuration",
+        "title": "Configure the Voice",
+        "description": "Pick a TTS voice for text models — or clone your own."
+      },
+      {
+        "href": "/agents/agent-settings",
+        "title": "Agent Settings",
+        "description": "Tune interruptions, turn detection, and timeouts."
+      },
+      {
+        "href": "/agents/test-your-agent",
+        "title": "Test Your Agent",
+        "description": "Compare models live to find the best fit."
+      }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Choose the Brain (LLM) for Your Agent | iMash Docs",
-  "metaDescription": "Pick your iMash Smart Agent's model. Learn realtime (speech-to-speech) vs. text (LLM + transcriber) models, configure the transcriber, and tune advanced LLM parameters.",
-  "metaKeywords": "llm settings, imash, smart agent, realtime model, transcriber, stt, speech-to-speech, model selection"
+  "metaTitle": "Choose the Brain (LLM) for Your Agent | iMash Documentation",
+  "metaDescription": "Pick your iMash Smart Agent's model: realtime speech-to-speech vs. text LLMs, provider groups (OpenAI, Google, Anthropic), temperature, backup failover models, and the Transcriber (STT) settings.",
+  "metaKeywords": "llm settings, imash, smart agent, realtime model, transcriber, stt, speech-to-speech, model selection, temperature, backup model, deepgram, gemini, gpt, claude"
 }

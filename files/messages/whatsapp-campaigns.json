@@ -1,0 +1,238 @@
+{
+  "title": "WhatsApp Bots, Flows & Campaigns",
+  "lede": "Go beyond the inbox: build native WhatsApp forms (Flows), deterministic chat bots, a shoppable product catalog, and bulk template campaigns with per-recipient personalization — all from one hub. This guide walks every power tab from A to Z.",
+  "timeToComplete": "12 minutes",
+  "steps": [
+    {
+      "id": "open-whatsapp-hub",
+      "title": "Open the WhatsApp hub and meet the power tabs",
+      "content": "<p>Everything WhatsApp lives on one page — and the tabs on the right side of its tab bar are where the automation magic happens.</p><ol><li>In the left sidebar, under <strong>Messages</strong>, click <strong>WhatsApp</strong> (or use the top navigation: <strong>Messages → WhatsApp</strong>).</li><li>Look at the tab bar across the top of the page. This guide covers the five \"power\" tabs:</li></ol><ul><li><strong>Flows</strong> — Meta-native, multi-screen forms that open <em>inside</em> WhatsApp (lead capture, appointment booking, sign-ups).</li><li><strong>Catalog</strong> — your product catalog on WhatsApp: send product messages, receive orders, and track customer inquiries.</li><li><strong>Bots</strong> — a visual builder for deterministic, scripted conversations that answer instantly without an LLM.</li><li><strong>Lists</strong> — phone-number recipient lists that feed your campaigns.</li><li><strong>Campaigns</strong> — bulk template sends with per-recipient personalization, pacing, scheduling, and a live report.</li></ul><blockquote>💡 The <strong>Messages</strong>, <strong>Numbers</strong>, and <strong>Templates</strong> tabs (the day-to-day inbox, connecting numbers, and creating message templates) are covered in the companion guide <em>WhatsApp Business Messaging</em> — see What's Next below.</blockquote>",
+      "images": [
+        {
+          "src": "images/messages/whatsapp-campaigns-flows-tab-light.png",
+          "alt": "WhatsApp hub page with the Flows tab selected, showing the tab bar with Messages, Numbers, Templates, Flows, Catalog, Bots, Lists and Campaigns",
+          "caption": "Messages → WhatsApp: the Flows, Catalog, Bots, Lists and Campaigns tabs are the power surface of the hub",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-flows-tab-dark.png",
+          "alt": "WhatsApp hub page with the Flows tab selected, showing the tab bar with Messages, Numbers, Templates, Flows, Catalog, Bots, Lists and Campaigns",
+          "caption": "Messages → WhatsApp: the Flows, Catalog, Bots, Lists and Campaigns tabs are the power surface of the hub",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "connect-first",
+      "title": "Prerequisite: connect a WhatsApp Business Account",
+      "content": "<p>Flows, Catalog, and Bots are scoped to a <strong>WhatsApp Business Account</strong> (WABA). Until one is connected, those three tabs show a friendly gate instead of their tools.</p><ol><li>If you see <strong>Connect a WhatsApp Business Account first</strong>, click <strong>Go to Numbers</strong> — or click the blue <strong>Connect WhatsApp</strong> button in the top-right corner (it is visible from every tab).</li><li>Complete Meta's Embedded Signup in the popup: pick or create your WhatsApp Business Account and link a phone number.</li><li>Once at least one number shows <strong>Ready to send</strong> on the Numbers tab, come back — the Flows, Catalog, and Bots tabs unlock automatically.</li></ol><blockquote>⚠️ If your business has <em>multiple</em> WABAs connected, each of these tabs shows its own <strong>Account</strong> picker at the top — flows, catalogs, and bots created under one Business Account do not appear under another, so always check which account is selected.</blockquote>",
+      "images": [
+        {
+          "src": "images/messages/whatsapp-campaigns-flows-empty-light.png",
+          "alt": "Flows tab empty state saying Connect a WhatsApp Business Account first, with a Go to Numbers button",
+          "caption": "Flows, Catalog and Bots wait behind this gate until a WhatsApp Business Account is connected",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-flows-empty-dark.png",
+          "alt": "Flows tab empty state saying Connect a WhatsApp Business Account first, with a Go to Numbers button",
+          "caption": "Flows, Catalog and Bots wait behind this gate until a WhatsApp Business Account is connected",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "design-flows",
+      "title": "Flows — build native in-chat forms",
+      "content": "<p>A WhatsApp Flow is a multi-screen form that opens <em>inside</em> the chat — no website, no friction. Customers book appointments, request quotes, or sign up without ever leaving WhatsApp.</p><ol><li>Open the <strong>Flows</strong> tab.</li><li>Click <strong>New flow</strong> (green button, top-right of the toolbar). A draft is created instantly and the <strong>visual designer</strong> opens, where you add screens, fields, and buttons, rename the flow, and pick its categories.</li><li>Already built flows in Meta's WhatsApp Manager? Click <strong>Sync</strong> to mirror them here.</li></ol><p>Each row in the flows table shows:</p><ul><li><strong>Status</strong> — <strong>DRAFT</strong> (editable), <strong>PUBLISHED</strong> (sendable, locked), <strong>DEPRECATED</strong> (sunset), plus Meta-flagged <strong>BLOCKED</strong> / <strong>THROTTLED</strong> states. A red badge counts validation errors — open the designer to fix them.</li><li><strong>Categories</strong> — e.g. Lead generation, Appointment booking, Sign up.</li><li><strong>Responses</strong> — how many customers submitted the form; click the number to read every submission.</li></ul><p>Per-row action icons (left to right): <strong>Preview in Meta</strong> (opens a live interactive preview), <strong>Analytics</strong>, <strong>Open visual designer</strong>, <strong>Quick edit</strong> (metadata + raw JSON), <strong>Publish</strong> (drafts only), <strong>Deprecate</strong> (published only), and <strong>Delete</strong>. Use the <strong>Status</strong> and <strong>Category</strong> filters or the search box to find a flow fast.</p><blockquote>⚠️ Publishing is one-way: a <strong>PUBLISHED</strong> flow can be sent to customers but can never be edited again — you would clone it to make changes. Deleting a draft removes it at Meta too; deleting a published flow only removes your local copy.</blockquote>"
+    },
+    {
+      "id": "build-bots",
+      "title": "Bots — script instant, deterministic conversations",
+      "content": "<p>Bots answer in milliseconds and never improvise. They are perfect for menus, FAQs, opening hours, and structured intake — and they can run <em>before or instead of</em> your AI Smart Agent.</p><ol><li>Open the <strong>Bots</strong> tab and click <strong>New bot</strong>.</li><li>Give it a name and description, then save — you land in the <strong>visual designer</strong>, where you chain message nodes, wait-for-reply nodes, branches, and variable captures into a conversation tree.</li><li>Back in the list, use the per-row buttons:<ul><li><strong>Edit</strong> — reopen the visual designer.</li><li><strong>Test (simulator)</strong> — chat with the bot right in a modal. It runs the exact program the live runner uses, but nothing is really sent — type a customer message, press <strong>Send</strong>, and inspect the reply plus a step-by-step trace.</li><li><strong>Analytics</strong> — conversation stats for this bot.</li><li><strong>Bind to phone numbers</strong> — attach the bot to one or more WhatsApp numbers (or SMS numbers, if the bot has the SMS channel enabled). A bound number runs the bot for every inbound message as the phone-level default.</li><li><strong>Publish</strong> (lightning icon, drafts only) — make it live. Publishing is blocked while the bot has compile errors (a red badge shows the count).</li><li><strong>Archive</strong> (published bots) — takes it offline and severs its phone bindings.</li><li><strong>Delete</strong> — removes the bot and its bindings.</li></ul></li></ol><blockquote>💡 Recommended rhythm: build → <strong>Test (simulator)</strong> until every branch behaves → <strong>Publish</strong> → <strong>Bind to phone numbers</strong>. A bot only answers real customers once it is both published and bound.</blockquote>",
+      "images": [
+        {
+          "src": "images/messages/whatsapp-campaigns-bots-empty-light.png",
+          "alt": "Bots tab empty state explaining bots are scoped to a WhatsApp Business Account",
+          "caption": "The Bots tab before a WABA is connected — once unlocked, New bot opens the visual conversation designer",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-bots-empty-dark.png",
+          "alt": "Bots tab empty state explaining bots are scoped to a WhatsApp Business Account",
+          "caption": "The Bots tab before a WABA is connected — once unlocked, New bot opens the visual conversation designer",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "sell-with-catalog",
+      "title": "Catalog — sell products directly in the chat",
+      "content": "<p>The Catalog tab turns WhatsApp into a storefront: customers browse your products, tap to inquire, and place orders that land straight in your CRM.</p><ol><li>Open the <strong>Catalog</strong> tab.</li><li>Set up your first catalog with one of three buttons:<ul><li><strong>Create catalog</strong> — creates a product catalog under your Meta Business Manager, links it to this WABA, and sets it as the default, all in one click.</li><li><strong>Link existing</strong> — attach a catalog you already have in your Business Manager.</li><li><strong>Sync from Meta</strong> — mirror catalogs (and their products) you manage in Meta's Commerce Manager.</li></ul></li><li>Once a catalog is active, a stats banner tracks <strong>Catalogs</strong>, <strong>Synced products</strong>, <strong>Orders (30d)</strong>, <strong>Inquiries (30d)</strong>, and <strong>Revenue (30d)</strong>, and four sub-tabs appear:<ul><li><strong>Products</strong> — browse, add, and edit the items in the selected catalog.</li><li><strong>Orders</strong> — inbound WhatsApp orders, with open-order count badges; each can flow into your CRM pipeline.</li><li><strong>Inquiries</strong> — a signal log of every product a customer tapped or asked about — warm leads on a silver platter.</li><li><strong>Catalogs</strong> — manage all catalogs linked to this WABA and choose the default.</li></ul></li></ol><blockquote>💡 The <strong>Commerce Manager</strong> button in the toolbar opens Meta's canonical catalog UI in a new tab — handy for bulk product uploads or anything the in-app editor doesn't cover. If you have more than one catalog, the <strong>Catalog:</strong> picker in the toolbar switches between them.</blockquote>",
+      "images": [
+        {
+          "src": "images/messages/whatsapp-campaigns-catalog-empty-light.png",
+          "alt": "Catalog tab empty state explaining catalog inventory and commerce signals are scoped to a WhatsApp Business Account",
+          "caption": "The Catalog tab gate — after connecting, Create catalog wires a Meta catalog to your WABA in one click",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-catalog-empty-dark.png",
+          "alt": "Catalog tab empty state explaining catalog inventory and commerce signals are scoped to a WhatsApp Business Account",
+          "caption": "The Catalog tab gate — after connecting, Create catalog wires a Meta catalog to your WABA in one click",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "create-recipient-list",
+      "title": "Lists — create a recipient list",
+      "content": "<p>Campaigns don't send to ad-hoc numbers — they send to <strong>recipient lists</strong>. Build the list once, reuse it for every blast.</p><ol><li>Open the <strong>Lists</strong> tab.</li><li>Click <strong>New list</strong> (top-right of the Recipient lists card).</li><li>Enter a <strong>Name</strong> (required — e.g. \"Spring promo — leads with phone\") and an optional <strong>Description</strong>, then click <strong>Create</strong>.</li></ol><p>The table shows each list's <strong>Name</strong>, <strong>Description</strong>, <strong>Members</strong> count, and <strong>Created</strong> date. Click a list's name (or its <strong>Manage</strong> button) to open the members drawer, or the red trash icon to delete it.</p>",
+      "images": [
+        {
+          "src": "images/messages/whatsapp-campaigns-lists-tab-light.png",
+          "alt": "Lists tab showing the Recipient lists table with a demo list and the New list button",
+          "caption": "The Lists tab — every campaign starts with a recipient list",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-lists-tab-dark.png",
+          "alt": "Lists tab showing the Recipient lists table with a demo list and the New list button",
+          "caption": "The Lists tab — every campaign starts with a recipient list",
+          "theme": "dark"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-new-list-modal-light.png",
+          "alt": "New recipient list modal with Name and Description fields",
+          "caption": "New list: a name is all it takes",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-new-list-modal-dark.png",
+          "alt": "New recipient list modal with Name and Description fields",
+          "caption": "New list: a name is all it takes",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "fill-the-list",
+      "title": "Fill the list — pull from your CRM or paste a CSV",
+      "content": "<p>Open a list (click its name) to manage members. Two import paths live in the drawer header:</p><p><strong>Option A — Add from CRM</strong> (the smart way):</p><ol><li>Click <strong>Add from CRM</strong>.</li><li>Switch between <strong>Contacts</strong> and <strong>Leads</strong> with the toggle at the top.</li><li>Narrow the audience with the filters: <strong>Name or phone</strong> search, <strong>Tags</strong>, <strong>Accounts</strong>, <strong>State</strong>, <strong>City</strong> — and for leads, <strong>Status</strong> and <strong>Source</strong>. Click <strong>Apply</strong>.</li><li>Tick individual rows and click <strong>Add selected</strong>, or click <strong>Add all matching</strong> to snapshot <em>every</em> record that matches the current filters (one recipient per phone number).</li></ol><p><strong>Option B — Paste CSV</strong>: click <strong>Paste CSV</strong> and paste one recipient per line in the format <code>phone, first name, last name</code> (e.g. <code>+15551234567, Jane, Doe</code>), then click <strong>Import</strong>. A header row starting with \"phone\" is ignored automatically.</p><ul><li>Only records that have a phone number are shown in the picker — recipients without a phone are skipped at import (the success message tells you how many).</li><li>Each member row shows its <strong>Source</strong> (lead / contact / csv), and an <strong>opted out</strong> tag if that number has unsubscribed.</li><li>Select members and click <strong>Remove</strong> to prune the list; use the <strong>Search phone</strong> box to find someone fast.</li></ul><blockquote>💡 Opted-out numbers stay visible in the list but are skipped automatically at send time for marketing templates — you never have to clean them out by hand, and you stay compliant by default.</blockquote>",
+      "images": [
+        {
+          "src": "images/messages/whatsapp-campaigns-members-drawer-light.png",
+          "alt": "Members drawer for a recipient list showing phone numbers, names, source tags and the Add from CRM and Paste CSV buttons",
+          "caption": "The members drawer — Add from CRM and Paste CSV both land here",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-members-drawer-dark.png",
+          "alt": "Members drawer for a recipient list showing phone numbers, names, source tags and the Add from CRM and Paste CSV buttons",
+          "caption": "The members drawer — Add from CRM and Paste CSV both land here",
+          "theme": "dark"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-crm-picker-light.png",
+          "alt": "Add recipients from CRM modal with Contacts/Leads toggle, filters, a record table and Add all matching / Add selected buttons",
+          "caption": "The CRM picker — filter by tags, account, or location, then Add selected or Add all matching",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-crm-picker-dark.png",
+          "alt": "Add recipients from CRM modal with Contacts/Leads toggle, filters, a record table and Add all matching / Add selected buttons",
+          "caption": "The CRM picker — filter by tags, account, or location, then Add selected or Add all matching",
+          "theme": "dark"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-paste-csv-light.png",
+          "alt": "Paste recipients modal with a large text area, one recipient per line in phone, first name, last name format, and an Import button",
+          "caption": "Paste CSV: one recipient per line — phone, first name, last name — then Import",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-paste-csv-dark.png",
+          "alt": "Paste recipients modal with a large text area, one recipient per line in phone, first name, last name format, and an Import button",
+          "caption": "Paste CSV: one recipient per line — phone, first name, last name — then Import",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "build-campaign",
+      "title": "Campaigns — build a bulk template send",
+      "content": "<p>This is the payoff: one approved template, thousands of personalized messages, delivered at exactly the pace you choose.</p><ol><li>Open the <strong>Campaigns</strong> tab and click <strong>New campaign</strong>.</li><li>Fill in the builder drawer:<ul><li><strong>Campaign name</strong> — internal label, e.g. \"Spring promo blast\".</li><li><strong>Recipient list</strong> — pick one of your lists (the member count shows next to each name).</li><li><strong>Send from</strong> — the connected, registered WhatsApp number that will send. </li><li><strong>Template</strong> — choose an <em>approved</em> template from that number's Business Account (templates load after you pick a number).</li><li><strong>Send speed</strong> — 🐢 <strong>Trickle (300/hr)</strong>, 🚶 <strong>Steady (3k/hr)</strong>, 🏃 <strong>Fast (15k/hr)</strong>, 🚀 <strong>Rapid (60k/hr)</strong>, or ⚡ <strong>Max</strong>.</li><li><strong>Schedule (optional)</strong> — pick a date and time, or leave empty to send immediately.</li></ul></li><li>If the template contains variables, a <strong>Template variables</strong> card appears. WhatsApp templates use positional slots like <code>{{1}}</code> — map each one to a CRM token (<code>{first_name}</code>, <code>{last_name}</code>, <code>{full_name}</code>, <code>{phone}</code>, <code>{city}</code>, <code>{state}</code>, <code>{account_name}</code>, or any custom field key) or type literal text. Tokens are filled per recipient at send time.</li><li>If the template has an image, video, or document header, supply a public <strong>URL</strong> for the media (same file for all recipients; documents can also take a filename).</li><li>Click <strong>Build &amp; send</strong> to launch (or schedule) — or <strong>Save draft</strong> to finish later.</li></ol><blockquote>⚠️ Start with a slower speed tier on a fresh number. Meta assigns each number a daily messaging limit tier that grows with good engagement — blasting at ⚡ Max from day one risks quality-rating drops. For marketing-category templates, opted-out recipients are skipped automatically.</blockquote>",
+      "images": [
+        {
+          "src": "images/messages/whatsapp-campaigns-campaigns-tab-light.png",
+          "alt": "Campaigns tab with the campaigns table and the New campaign button",
+          "caption": "The Campaigns tab — every send starts at New campaign",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-campaigns-tab-dark.png",
+          "alt": "Campaigns tab with the campaigns table and the New campaign button",
+          "caption": "The Campaigns tab — every send starts at New campaign",
+          "theme": "dark"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-new-campaign-drawer-light.png",
+          "alt": "New WhatsApp campaign drawer with Campaign name, Recipient list, Send from, Template, Send speed and Schedule fields",
+          "caption": "The campaign builder: list + number + template + speed, then Build & send",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-new-campaign-drawer-dark.png",
+          "alt": "New WhatsApp campaign drawer with Campaign name, Recipient list, Send from, Template, Send speed and Schedule fields",
+          "caption": "The campaign builder: list + number + template + speed, then Build & send",
+          "theme": "dark"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-send-speed-light.png",
+          "alt": "Send speed dropdown open showing the five tiers: Trickle 300 per hour, Steady 3k per hour, Fast 15k per hour, Rapid 60k per hour, and Max",
+          "caption": "The five send-speed tiers — start slow on a fresh number, scale up as your quality rating grows",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-send-speed-dark.png",
+          "alt": "Send speed dropdown open showing the five tiers: Trickle 300 per hour, Steady 3k per hour, Fast 15k per hour, Rapid 60k per hour, and Max",
+          "caption": "The five send-speed tiers — start slow on a fresh number, scale up as your quality rating grows",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "track-and-report",
+      "title": "Track, pause, and read the live report",
+      "content": "<p>Once launched, the campaign row keeps you in control:</p><ul><li><strong>Status</strong> — <strong>draft</strong>, <strong>scheduled</strong>, <strong>sending</strong>, <strong>paused</strong>, <strong>sent</strong>, or <strong>cancelled</strong>, with a live <strong>Progress</strong> bar.</li><li><strong>Send</strong> — launches a draft (builds the recipient queue and starts sending).</li><li><strong>Pause</strong> / <strong>Resume</strong> — freeze and continue a sending or scheduled campaign at any time.</li><li><strong>Report</strong> — opens the live report drawer.</li><li>The trash icon deletes a draft, sent, or cancelled campaign.</li></ul><p>Inside the <strong>Report</strong> drawer you get:</p><ol><li>A progress bar plus counters for <strong>Sent</strong>, <strong>Delivered</strong>, <strong>Read</strong>, <strong>Replied</strong>, <strong>Failed</strong>, <strong>Opted out</strong>, and <strong>Skipped (cooldown)</strong> — and once sending starts, live <strong>Delivery rate</strong>, <strong>Read rate</strong>, and <strong>Reply rate</strong> percentages.</li><li>A per-recipient table with a status filter (queued, sending, sent, delivered, read, failed, opted_out, skipped) and a detail column showing timestamps, error messages, or \"Must wait Xh before sending again\" for frequency-capped numbers.</li><li>A <strong>Retry failed</strong> button that re-queues every failed recipient in one click.</li></ol><blockquote>💡 \"Skipped (cooldown)\" is a built-in frequency cap protecting your number: a recipient who was messaged very recently is held back instead of spammed. Replies to your campaign land in the <strong>Messages</strong> tab like any other conversation — have your bot or Smart Agent ready to catch them, and the reply rate becomes revenue.</blockquote>"
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "You now command the full WhatsApp automation arsenal — forms, bots, commerce, and campaigns. Round out your messaging stack next.",
+    "cards": [
+      {
+        "href": "/messages/whatsapp",
+        "title": "WhatsApp Business Messaging",
+        "description": "Connect numbers, create approved templates, and work the shared WhatsApp inbox."
+      },
+      {
+        "href": "/messages/email-marketing",
+        "title": "Email Marketing",
+        "description": "The same list + campaign playbook, on the email channel — with open and click tracking."
+      },
+      {
+        "href": "/messages/sms",
+        "title": "SMS Messaging",
+        "description": "Two-way texting, SMS agents, and job-linked message threads."
+      }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>Questions about WhatsApp flows, bots, catalogs, or campaign sends? Contact our support team at <a href=\"mailto:support@imash.io\">support@imash.io</a> and we'll help you get your first campaign out the door.</p>"
+  },
+  "metaTitle": "WhatsApp Bots, Flows & Campaigns | iMash Documentation",
+  "metaDescription": "Build WhatsApp Flows (native in-chat forms), deterministic bots, a shoppable product catalog, recipient lists, and bulk template campaigns with per-recipient personalization in iMash.",
+  "metaKeywords": "whatsapp flows, whatsapp bots, whatsapp catalog, whatsapp campaigns, bulk whatsapp, whatsapp template send, recipient lists, whatsapp commerce, whatsapp automation"
+}

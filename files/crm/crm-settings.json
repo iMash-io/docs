@@ -1,0 +1,126 @@
+{
+  "title": "CRM Settings",
+  "lede": "This is the control room of your entire CRM. In one screen you define the lifecycle stages your AI updates after every call, your deal pipelines, default invoice and quote terms, company branding, and sales tax — set it up once and every lead, deal, and invoice follows your rules automatically.",
+  "timeToComplete": "15 minutes",
+  "steps": [
+    {
+      "id": "open-crm-settings",
+      "title": "Open CRM Settings",
+      "content": "<ol><li>In the top navigation, click <strong>CRM</strong>.</li><li>In the CRM tab strip, scroll to the far right and click the gear tab labeled <strong>Settings</strong> (or go directly to <code>/crm/settings</code>).</li><li>The page opens on the <strong>Stages</strong> tab, showing your <strong>Lifecycle Stages</strong> — the colored bar of stages every lead and contact moves through.</li></ol><blockquote>💡 Everything you configure here ripples through the whole platform: the stages feed your Leads list, Contacts, and the Project Kanban; the pipelines drive your Deals board; the terms, tax, and fee settings pre-fill every new invoice and quote.</blockquote>",
+      "images": [
+        { "src": "images/crm/crm-settings-stages-light.png", "alt": "CRM Settings page open on the Stages tab", "caption": "CRM Settings opens on the Stages tab — your Lifecycle Stages bar with Load Preset and + Add in the top-right", "theme": "light" },
+        { "src": "images/crm/crm-settings-stages-dark.png", "alt": "CRM Settings page open on the Stages tab", "caption": "CRM Settings opens on the Stages tab — your Lifecycle Stages bar with Load Preset and + Add in the top-right", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "tour-the-tabs",
+      "title": "Know the six tabs",
+      "content": "<p>CRM Settings is organized into tabs along the top — each one controls a different part of your CRM:</p><ul><li><strong>Stages</strong> — the lifecycle stages for leads and contacts, with descriptions the AI reads to update stages automatically after calls.</li><li><strong>Pipeline</strong> — your deal pipelines and the product / service categories used across your catalogs.</li><li><strong>Invoices &amp; Quotes</strong> — default payment terms, terms &amp; conditions, footer text, and the optional customer processing fee.</li><li><strong>Company</strong> — your company logo, details, and contact information (this is what appears on quotes, invoices, and PDFs).</li><li><strong>Sales Tax</strong> — how tax is calculated on invoices: flat rate, by state, what it applies to, and rounding.</li><li><strong>Email</strong> — a pointer to the new home of mailbox and sending-domain setup (see the last step).</li></ul><blockquote>💡 Accounts with white-label enabled see an extra <strong>White Label</strong> tab here for uploading a custom logo, name image, and custom domain with DNS instructions.</blockquote>",
+      "images": [
+        { "src": "images/crm/crm-settings-tabs-light.png", "alt": "The CRM Settings tab strip", "caption": "The tab strip: Stages, Pipeline, Invoices & Quotes, Company, Sales Tax, and Email", "theme": "light" },
+        { "src": "images/crm/crm-settings-tabs-dark.png", "alt": "The CRM Settings tab strip", "caption": "The tab strip: Stages, Pipeline, Invoices & Quotes, Company, Sales Tax, and Email", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "load-stage-preset",
+      "title": "Stages: load an industry preset in one click",
+      "content": "<p>Don't build your stage list from scratch — iMash ships ready-made stage sets for dozens of industries.</p><ol><li>On the <strong>Stages</strong> tab, click <strong>Load Preset</strong> in the top-right of the Lifecycle Stages card.</li><li>Browse the categories — <strong>Sales &amp; Marketing</strong>, <strong>Real Estate</strong>, <strong>Home Services &amp; Trades</strong>, <strong>Healthcare &amp; Wellness</strong>, <strong>Professional Services</strong>, <strong>Financial Services</strong>, <strong>Collections &amp; Debt Recovery</strong>, and more — or type in <strong>Search presets...</strong> to filter.</li><li>Click a category to expand it, then click the preset that matches your business. Each card shows a description and how many stages it contains.</li><li>Confirm by clicking <strong>Load Preset</strong> in the dialog.</li></ol><blockquote>⚠️ Loading a preset <strong>replaces all of your current stages</strong> and cannot be undone. Do this first, before you invest time customizing stages manually.</blockquote>",
+      "images": [
+        { "src": "images/crm/crm-settings-preset-modal-light.png", "alt": "Load Stage Preset dialog with industry categories", "caption": "The Load Stage Preset dialog — pick an industry category and load a full stage set in one click", "theme": "light" },
+        { "src": "images/crm/crm-settings-preset-modal-dark.png", "alt": "Load Stage Preset dialog with industry categories", "caption": "The Load Stage Preset dialog — pick an industry category and load a full stage set in one click", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "manage-stages",
+      "title": "Stages: add, edit, and describe your stages (the AI reads them!)",
+      "content": "<p>Each colored bar in the Lifecycle Stages strip is a <strong>category</strong> (like <em>Contacted</em> or <em>Qualified</em>) that groups related <strong>substages</strong> — click a category's arrow to see and select them. Here's the magic: after every analyzed call, the AI reads each stage's <strong>description</strong> to decide which stage the lead or contact should move to. Clear descriptions = accurate automatic stage updates.</p><ol><li>Click <strong>+ Add</strong> in the top-right of the Lifecycle Stages card.</li><li>Choose <strong>Add to Existing</strong> to add a substage under a <strong>Parent Stage</strong>, or <strong>New Category</strong> to create a whole new column.</li><li>Fill in the <strong>Stage Name</strong>, pick a color from the color dropdown, and write a clear, specific <strong>Stage Description</strong> — for example: \"Customer asked for pricing and wants a follow-up call\".</li><li>Click <strong>Save</strong>.</li><li>To edit an existing stage, click its bar to select it — you can rename it, recolor it, rewrite its description, drag substages to reorder them, or set a substage as the default for its category.</li><li>Scroll down to <strong>Transition Rules (Advanced)</strong> to control which stage changes the AI is allowed to make: for each current stage, click the stage tags to toggle them — a strikethrough tag is <strong>blocked</strong>, so the AI will never move a contact to that stage even if it's detected in the call.</li><li>When you're done, click <strong>Save Changes</strong> at the bottom of the stages section.</li></ol><blockquote>💡 The <strong>New</strong> stage is a system default and can't be edited — it's where every fresh lead lands. ⚠️ Stage edits are held locally until you click <strong>Save Changes</strong>, so don't navigate away with unsaved work.</blockquote>",
+      "images": [
+        { "src": "images/crm/crm-settings-add-stage-light.png", "alt": "Add New Substage panel", "caption": "The add-stage panel — Add to Existing vs New Category, parent stage, name, color, and the description the AI reads", "theme": "light" },
+        { "src": "images/crm/crm-settings-add-stage-dark.png", "alt": "Add New Substage panel", "caption": "The add-stage panel — Add to Existing vs New Category, parent stage, name, color, and the description the AI reads", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "pipelines",
+      "title": "Pipeline: manage your deal pipelines",
+      "content": "<p>Pipelines are the stage boards your <strong>Deals</strong> move through. Most teams run one sales pipeline, but you can create as many as you need.</p><ol><li>Click the <strong>Pipeline</strong> tab.</li><li>The <strong>Pipelines</strong> card lists every pipeline as a tile showing its name, description, and how many stages it has. Your <strong>Sales Pipeline</strong> is tagged <strong>Default</strong> — it can be edited but not deleted.</li><li>Click <strong>Create Pipeline</strong> to add a new one. Enter a <strong>Pipeline Name</strong> (e.g. \"Sales Pipeline\") and a <strong>Description</strong>, then click <strong>OK</strong>.</li><li>Use the pencil icon on a tile to rename or re-describe a pipeline, or the trash icon to delete a non-default one.</li><li>Click <strong>Save Changes</strong> in the card header to persist your edits — a yellow <strong>• Unsaved changes</strong> marker appears next to the title until you do. <strong>Refresh</strong> discards local edits and reloads what's saved.</li></ol>",
+      "images": [
+        { "src": "images/crm/crm-settings-pipeline-light.png", "alt": "Pipeline tab with Pipelines and Categories cards", "caption": "The Pipeline tab — pipeline tiles with a Create Pipeline button, and the Categories card below", "theme": "light" },
+        { "src": "images/crm/crm-settings-pipeline-dark.png", "alt": "Pipeline tab with Pipelines and Categories cards", "caption": "The Pipeline tab — pipeline tiles with a Create Pipeline button, and the Categories card below", "theme": "dark" },
+        { "src": "images/crm/crm-settings-create-pipeline-light.png", "alt": "Create Pipeline dialog", "caption": "The Create Pipeline dialog — just a name and a description to get started", "theme": "light" },
+        { "src": "images/crm/crm-settings-create-pipeline-dark.png", "alt": "Create Pipeline dialog", "caption": "The Create Pipeline dialog — just a name and a description to get started", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "categories",
+      "title": "Pipeline: define product & service categories",
+      "content": "<p>Below the pipelines lives the <strong>Categories</strong> card — the labels you'll use to organize your Products and Services catalogs.</p><ol><li>Still on the <strong>Pipeline</strong> tab, scroll to the <strong>Categories</strong> card.</li><li>Switch between the <strong>Product Categories</strong> and <strong>Service Categories</strong> sub-tabs.</li><li>Type a category name in the input (e.g. \"Garage Doors\" or \"Installation\") and click <strong>+ Add</strong> (or press Enter).</li><li>Each category appears as a tag — click a tag's <strong>×</strong> to remove it.</li><li>Click <strong>Save Changes</strong> in the card header to save.</li></ol><blockquote>💡 These categories show up as filters and grouping options when you build your catalogs under <strong>Pipeline → Products</strong> and <strong>Pipeline → Services</strong>, and when you pick line items on quotes, invoices, and jobs.</blockquote>",
+      "images": [
+        { "src": "images/crm/crm-settings-categories-light.png", "alt": "Categories card with Product and Service Categories tabs", "caption": "The Categories card — add product and service categories that organize your catalogs", "theme": "light" },
+        { "src": "images/crm/crm-settings-categories-dark.png", "alt": "Categories card with Product and Service Categories tabs", "caption": "The Categories card — add product and service categories that organize your catalogs", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "invoice-quote-defaults",
+      "title": "Invoices & Quotes: set your default terms",
+      "content": "<p>Stop retyping the same fine print. These defaults pre-fill the Terms step every time you create a new invoice or quote — and you can still edit them per document.</p><ol><li>Click the <strong>Invoices &amp; Quotes</strong> tab.</li><li>The <strong>Default Terms</strong> card has two columns — <strong>Invoices</strong> on the left and <strong>Quotes</strong> on the right — each with three fields:</li></ol><ul><li><strong>Payment Terms</strong> — e.g. \"Payment due within 30 days\" or \"Net 30\".</li><li><strong>Terms &amp; Conditions</strong> — your standard legal text, warranty language, or cancellation policy.</li><li><strong>Footer Text</strong> — a closing line printed at the bottom, e.g. \"Thank you for your business!\".</li></ul><ol start=\"3\"><li>Click <strong>Save Changes</strong> in the card header (it lights up as soon as you've edited something).</li></ol>",
+      "images": [
+        { "src": "images/crm/crm-settings-invoices-quotes-light.png", "alt": "Default Terms card with Invoices and Quotes columns", "caption": "Default Terms — payment terms, terms & conditions, and footer text for invoices and quotes side by side", "theme": "light" },
+        { "src": "images/crm/crm-settings-invoices-quotes-dark.png", "alt": "Default Terms card with Invoices and Quotes columns", "caption": "Default Terms — payment terms, terms & conditions, and footer text for invoices and quotes side by side", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "processing-fee",
+      "title": "Invoices & Quotes: pass a processing fee to the customer",
+      "content": "<p>Card fees eating your margin? Scroll down to the <strong>Processing Fee</strong> card and pass them through automatically.</p><ol><li>Turn on <strong>Pass a processing fee to the customer</strong>. This adds a non-taxable \"Processing Fee\" line to invoices, tenant-wide — for invoices created in the back office <em>and</em> by technicians in the field.</li><li>Pick the <strong>Fee Type</strong>: <strong>Percentage</strong> (e.g. 3%) or <strong>Fixed amount</strong> (e.g. $5), and enter the <strong>Rate</strong> or <strong>Amount</strong>.</li><li>Decide on <strong>Allow technicians to remove the fee</strong>: when on, a technician invoicing in the field can drop the fee for that one invoice; when off, the fee is always applied and they can't remove it (back-office admins can always override).</li><li>Click <strong>Save Changes</strong>.</li></ol>",
+      "images": [
+        { "src": "images/crm/crm-settings-processing-fee-light.png", "alt": "Processing Fee card with the fee enabled", "caption": "The Processing Fee card — fee type, rate, and the technician-override toggle", "theme": "light" },
+        { "src": "images/crm/crm-settings-processing-fee-dark.png", "alt": "Processing Fee card with the fee enabled", "caption": "The Processing Fee card — fee type, rate, and the technician-override toggle", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "company-info",
+      "title": "Company: your branding on every document",
+      "content": "<p>What you enter here is what your customers see on quotes, invoices, and PDFs.</p><ol><li>Click the <strong>Company</strong> tab.</li><li><strong>Company Logo</strong> — click <strong>Upload Logo</strong> and pick a PNG or JPG. The logo appears on your quotes and PDFs. Use <strong>Delete Logo</strong> to remove it (a confirmation asks first).</li><li><strong>Public Invoice Branding</strong> — by default, an invoice linked to a Job Source shows that source's name &amp; logo on the public invoice / payment page. Turn on <strong>Always use Company branding on public invoice / payment pages</strong> to always show your own company name &amp; logo instead.</li><li><strong>Company Details</strong> — fill in your <strong>Company Name</strong> (required), <strong>Company Slogan</strong>, and a short <strong>Company Description</strong>.</li><li><strong>Contact Information</strong> — your <strong>Address</strong>, <strong>Phone Number</strong>, <strong>Email</strong>, and <strong>Website</strong>.</li><li>Click <strong>Save Company Info</strong> in the top-right of the card.</li></ol><blockquote>💡 A complete Company profile makes every quote and invoice look instantly professional — customers see your logo, address, and phone number on the documents and public payment pages.</blockquote>",
+      "images": [
+        { "src": "images/crm/crm-settings-company-light.png", "alt": "Company tab with logo upload, branding toggle, and company details", "caption": "The Company tab — logo upload, the Public Invoice Branding override, and your company details", "theme": "light" },
+        { "src": "images/crm/crm-settings-company-dark.png", "alt": "Company tab with logo upload, branding toggle, and company details", "caption": "The Company tab — logo upload, the Public Invoice Branding override, and your company details", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "sales-tax",
+      "title": "Sales Tax: configure tax once, calculate it forever",
+      "content": "<p>Set your tax rules here and every invoice computes tax automatically.</p><ol><li>Click the <strong>Sales Tax</strong> tab.</li><li><strong>Tax Mode</strong> — pick one:<ul><li><strong>None — no tax</strong> — invoices carry no tax at all.</li><li><strong>Flat rate</strong> — one default rate (%) applied to every invoice.</li><li><strong>By state (US default)</strong> — the rate depends on the customer's state; the rate field becomes the fallback when no state matches.</li></ul></li><li>If you chose <strong>By state</strong>, a <strong>Per-state rates</strong> table appears: type a two-letter <strong>State code (e.g. CA)</strong> and a <strong>Rate %</strong>, then click <strong>Add state</strong>. Edit rates inline anytime, or remove a row with the trash icon. The lookup is case-insensitive and resolves the state from the job's service address (or the customer's billing address).</li><li><strong>Tax Applies To</strong> — <strong>All line items</strong>, <strong>Parts only (products)</strong>, or <strong>Services only</strong>. Per-line \"tax: yes/no\" overrides set on an individual invoice line always win over this default.</li><li><strong>Address Resolution (for by-state lookup)</strong> — where to look for the state: <strong>Job address, then customer address</strong>; <strong>Job address only</strong>; or <strong>Skip address — use default rate</strong> (handy when you bill from a single jurisdiction).</li><li><strong>Price Display</strong> — <strong>Tax exclusive (US default — added on top)</strong>: line prices are pre-tax and tax is added to the total; or <strong>Tax inclusive (EU/SA — already in price)</strong>: prices already contain tax and iMash extracts the pre-tax slice for the breakdown.</li><li><strong>Rounding</strong> — <strong>Per line, then sum (US default)</strong> makes line amounts add up to the total exactly; <strong>Sum, then round at the end</strong> avoids cumulative-rounding drift some EU locales prefer.</li><li>Click <strong>Save Sales Tax</strong> in the top-right.</li></ol><blockquote>⚠️ Tax settings apply to invoices created <em>after</em> you save — always double-check one test invoice after changing tax mode or rates.</blockquote>",
+      "images": [
+        { "src": "images/crm/crm-settings-sales-tax-light.png", "alt": "Sales Tax tab with Tax Mode, Tax Applies To, and Address Resolution", "caption": "The Sales Tax tab — tax mode, what it applies to, and how the state is resolved", "theme": "light" },
+        { "src": "images/crm/crm-settings-sales-tax-dark.png", "alt": "Sales Tax tab with Tax Mode, Tax Applies To, and Address Resolution", "caption": "The Sales Tax tab — tax mode, what it applies to, and how the state is resolved", "theme": "dark" },
+        { "src": "images/crm/crm-settings-tax-by-state-light.png", "alt": "Per-state rates table in By state mode", "caption": "By-state mode — add a state code and rate per state; edit inline anytime", "theme": "light" },
+        { "src": "images/crm/crm-settings-tax-by-state-dark.png", "alt": "Per-state rates table in By state mode", "caption": "By-state mode — add a state code and rate per state; edit inline anytime", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "email-tab",
+      "title": "Email: setup has a new home",
+      "content": "<p>The <strong>Email</strong> tab is now just a signpost: mailbox connections (Gmail / Outlook / IMAP) and branded sending domains (Amazon SES) are managed under <strong>Messages → Email → Sending</strong>.</p><ol><li>Click the <strong>Email</strong> tab.</li><li>Click <strong>Open Email Sending</strong> to jump straight to the new location.</li></ol>",
+      "images": [
+        { "src": "images/crm/crm-settings-email-light.png", "alt": "Email tab pointing to Messages, Email, Sending", "caption": "The Email tab points you to Messages → Email → Sending for mailboxes and sending domains", "theme": "light" },
+        { "src": "images/crm/crm-settings-email-dark.png", "alt": "Email tab pointing to Messages, Email, Sending", "caption": "The Email tab points you to Messages → Email → Sending for mailboxes and sending domains", "theme": "dark" }
+      ]
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "Your CRM now runs on your rules — stages, pipelines, terms, branding, and tax are all dialed in. Time to put them to work.",
+    "cards": [
+      { "href": "/crm/leads", "title": "Leads", "description": "Watch your new lifecycle stages in action as the AI moves leads through them after every call." },
+      { "href": "/pipeline/deals", "title": "Deals", "description": "Run opportunities through the pipelines you just configured." },
+      { "href": "/pipeline/invoices", "title": "Invoices & Getting Paid", "description": "Create an invoice and see your default terms, processing fee, and tax rules applied automatically." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "CRM Settings - Stages, Pipelines, Tax & Branding | iMash Documentation",
+  "metaDescription": "Configure your iMash CRM: AI-driven lifecycle stages with industry presets, deal pipelines, product and service categories, default invoice and quote terms, processing fees, company branding, and sales tax.",
+  "metaKeywords": "CRM settings, lifecycle stages, stage presets, deal pipeline, product categories, service categories, invoice terms, quote terms, processing fee, company logo, sales tax, tax by state"
+}

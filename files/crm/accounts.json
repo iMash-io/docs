@@ -1,47 +1,129 @@
 {
   "title": "Accounts",
-  "lede": "Accounts are the companies and organizations you work with. Group the contacts and leads that belong to a business under one account so you can see everything in one place.",
-  "timeToComplete": "5 minutes",
+  "lede": "Accounts are the companies you do business with. Group every contact, lead, call, email, and file that belongs to one organization under a single company profile — so the next time that business calls, your whole team (and your AI agents) see the full picture instantly.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
       "id": "open-accounts",
       "title": "Open the Accounts list",
-      "content": "<ol><li>In the left navigation, open <strong>CRM</strong> and click <strong>Accounts</strong> (or go to <code>/crm/accounts</code>).</li><li>Each row is a company, showing its <strong>Name</strong>, <strong>Stage</strong>, and details.</li><li>Click a company name to open its profile and see the contacts and leads linked to it.</li></ol><p>Use accounts when you sell to businesses: one account (the company) can have many contacts (the people who work there).</p>",
+      "content": "<p>If you sell to businesses, Accounts are your home base: one account (the company) holds many contacts (the people who work there) and all the leads, calls, and messages tied to it.</p><ol><li>In the header, click the <strong>CRM</strong> section, then click the <strong>Accounts</strong> sub-tab (or go directly to <code>/crm/accounts</code>). The counter on the tab shows your total number of accounts.</li><li>Each row is one company. The columns are:<ul><li><strong>Logo</strong> — the company logo (a colored monogram until you upload one).</li><li><strong>Name</strong> — click it to open the company profile.</li><li><strong>Contacts</strong> / <strong>Leads</strong> — how many people and prospects are linked to this account.</li><li><strong>Phone</strong> — the account's first phone number; click it to call through the web dialer. A <strong>+N more</strong> pill lists additional numbers.</li><li><strong>Stage</strong> — the lifecycle stage pill (stages come from your CRM Settings).</li><li><strong>Last Updated</strong> — when the record last changed.</li><li><strong>Actions</strong> — 👁 view the profile, 📞 call the account, 🗑 delete it.</li></ul></li></ol><blockquote>⚠️ <strong>Careful with delete:</strong> deleting an account also removes the contacts and leads associated with it. iMash asks you to confirm first.</blockquote>",
       "images": [
-        { "src": "images/crm/accounts-light.png", "alt": "Accounts list", "caption": "The Accounts list of companies with search and filters", "theme": "light" },
-        { "src": "images/crm/accounts-dark.png", "alt": "Accounts list", "caption": "The Accounts list of companies with search and filters", "theme": "dark" }
+        { "src": "images/crm/accounts-light.png", "alt": "Accounts list showing companies with contacts, leads, phone, and stage columns", "caption": "The Accounts list — every company with its linked contacts, leads, phone, and stage", "theme": "light" },
+        { "src": "images/crm/accounts-dark.png", "alt": "Accounts list showing companies with contacts, leads, phone, and stage columns", "caption": "The Accounts list — every company with its linked contacts, leads, phone, and stage", "theme": "dark" }
       ]
     },
     {
       "id": "add-account",
-      "title": "Add a new account",
-      "content": "<ol><li>Click <strong>Create</strong> (New Account) at the top of the list.</li><li>Enter the company <strong>Name</strong>.</li><li>Fill in optional details such as the address, <strong>Stage</strong>, and any custom fields.</li><li>Click <strong>Save</strong>.</li></ol>"
+      "title": "Create a new account",
+      "content": "<ol><li>Click <strong>+ Add Account</strong> at the top-right of the list. The <strong>Create Company</strong> drawer opens.</li><li>Enter the <strong>Company Name</strong> — this is the only required field.</li><li>Fill in the optional details:<ul><li><strong>Website</strong> — the company's site URL.</li><li><strong>Phone Numbers</strong> — click <strong>Add Phone Number</strong>, type the number, and pick a label (<strong>Office</strong>, <strong>Main</strong>, <strong>Headquarters</strong>, <strong>Branch</strong>, <strong>Fax</strong>, <strong>Support</strong>, <strong>Sales</strong>, or <strong>Other</strong>). Add as many as you need.</li><li><strong>Industry</strong> — pick from the industry list.</li><li><strong>Emails</strong> — click <strong>Add Email</strong>; you can store several addresses, and the first one becomes the account's primary email.</li><li><strong>Street Address</strong>, <strong>Apartment/Suite</strong>, <strong>City</strong>, <strong>State/Province</strong>, <strong>Postal Code</strong>, <strong>Country</strong> — the company's address. Selecting <strong>United States</strong> as the country turns State/Province into a state picker.</li></ul></li><li>Click <strong>Save</strong>. The drawer closes and your new company appears in the list.</li></ol><blockquote>💡 Don't worry about getting everything perfect now — every field (and more) can be edited later, right on the account profile.</blockquote>",
+      "images": [
+        { "src": "images/crm/accounts-create-light.png", "alt": "Create Company drawer with name, website, phone numbers, industry, emails, and address fields", "caption": "The Create Company drawer — only the Company Name is required", "theme": "light" },
+        { "src": "images/crm/accounts-create-dark.png", "alt": "Create Company drawer with name, website, phone numbers, industry, emails, and address fields", "caption": "The Create Company drawer — only the Company Name is required", "theme": "dark" }
+      ]
     },
     {
-      "id": "link-contacts",
-      "title": "Link contacts and leads to an account",
-      "content": "<ul><li>When you create or edit a <strong>Contact</strong> or <strong>Lead</strong>, pick the company in the <strong>Account</strong> field.</li><li>From the Leads or Contacts list, select records and use <strong>Assign to an Account</strong> to link many at once.</li><li>Open an account to see all of its people together, and jump to that company's leads by clicking through from the account.</li></ul>"
+      "id": "search-sort",
+      "title": "Search and sort the list",
+      "content": "<ol><li>Use the dropdown to the left of the search box to choose what to search by: <strong>Name</strong>, <strong>Email</strong>, <strong>Phone</strong>, or <strong>Address</strong>.</li><li>Type in the <strong>Search Accounts</strong> box — results update as you type. Phone search is smart: it matches digits even if the stored number is formatted differently.</li><li>Click a column header (<strong>Name</strong>, <strong>Stage</strong>, <strong>Last Updated</strong>, and more) to sort by it; click again to flip between ascending ↑ and descending ↓.</li><li>Use the pagination controls under the table to move between pages and change the page size.</li></ol>",
+      "images": [
+        { "src": "images/crm/accounts-toolbar-light.png", "alt": "Accounts toolbar with search field selector, search box, Filter By dropdown, import, and Add Account buttons", "caption": "The toolbar: search-by selector, search box, Filter By, import, Add Account, and API buttons", "theme": "light" },
+        { "src": "images/crm/accounts-toolbar-dark.png", "alt": "Accounts toolbar with search field selector, search box, Filter By dropdown, import, and Add Account buttons", "caption": "The toolbar: search-by selector, search box, Filter By, import, Add Account, and API buttons", "theme": "dark" }
+      ]
     },
     {
-      "id": "search-filter",
-      "title": "Search, filter, and tag",
-      "content": "<ul><li>Use the <strong>search box</strong> to find a company by name, email, or phone.</li><li>Add filters for <strong>Stage</strong>, <strong>Tags</strong>, <strong>Address</strong>, <strong>City</strong>, or <strong>Owner</strong>.</li><li>Add <strong>tags</strong> to group companies (for example by territory or industry), then filter by them.</li></ul>"
+      "id": "filter",
+      "title": "Filter by stage, tags, address, city, or owner",
+      "content": "<ol><li>Click the <strong>Filter By</strong> dropdown and tick one or more filter types:<ul><li><strong>Stage</strong> — adds a <strong>Select Stage</strong> dropdown listing your lifecycle stages.</li><li><strong>Tags</strong> — adds a searchable <strong>Select Tag</strong> dropdown with every tag used on your accounts. Great for grouping companies by territory, industry, or priority.</li><li><strong>Address</strong> — adds a free-text box that matches street, city, state, postal code, or country.</li><li><strong>City</strong> — adds a city search box.</li><li><strong>Owner</strong> — filters by which team member owns the record.</li></ul></li><li>Each filter you enable also adds its matching column to the table (Tags, Address, City), so you can see the values at a glance.</li><li>Clear a filter by unticking it in <strong>Filter By</strong>, or clear its value with the ✕ in its control.</li></ol>",
+      "images": [
+        { "src": "images/crm/accounts-filters-light.png", "alt": "Toolbar with Stage and Tags filters enabled showing the extra filter dropdowns", "caption": "Enable Stage and Tags in Filter By and their dropdowns appear next to the search box", "theme": "light" },
+        { "src": "images/crm/accounts-filters-dark.png", "alt": "Toolbar with Stage and Tags filters enabled showing the extra filter dropdowns", "caption": "Enable Stage and Tags in Filter By and their dropdowns appear next to the search box", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "open-profile",
+      "title": "Open the account profile",
+      "content": "<p>The account profile is mission control for one company — everything your team knows about the business on a single screen.</p><ol><li>Click the account's <strong>Name</strong> (or the 👁 view icon) in the list.</li><li>At the top you'll see the company logo and name:<ul><li>Hover over the logo and click the camera icon to <strong>upload a logo</strong> (you can remove it later).</li><li>Click the ✏️ pencil next to the name to <strong>rename</strong> the account, then click <strong>Save</strong>.</li></ul></li><li>The page is split in two: <strong>tabs on the left</strong> (Call Logs, Contacts, Leads, Email, Files, Payment Methods) with a Notes card below, and <strong>info cards on the right</strong> (Custom Fields, Contact Information, Address, Sales Tax, Account Details).</li></ol>",
+      "images": [
+        { "src": "images/crm/accounts-detail-light.png", "alt": "Account profile page with tabs on the left and information cards on the right", "caption": "The account profile: activity tabs on the left, company info cards on the right", "theme": "light" },
+        { "src": "images/crm/accounts-detail-dark.png", "alt": "Account profile page with tabs on the left and information cards on the right", "caption": "The account profile: activity tabs on the left, company info cards on the right", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "link-contacts-leads",
+      "title": "Link contacts and leads to the account",
+      "content": "<p>This is where accounts earn their keep — all the people and prospects of one company, together.</p><ol><li>Open the <strong>Contacts</strong> tab and click <strong>Add Contact</strong> to link a person to this company. Each row shows their name, phone (click to call), and stage, with a <strong>View</strong> button that jumps to their contact profile. <strong>View All Contacts for this Account</strong> opens the filtered Contacts list.</li><li>The <strong>Leads</strong> tab works exactly the same — click <strong>Add Lead</strong> to attach prospects, and open any lead with <strong>View</strong>.</li><li>You can also link from the other side: when creating or editing a <strong>Contact</strong> or <strong>Lead</strong>, pick the company in its <strong>Account</strong> field — or select several records in the Leads/Contacts list and assign them to an account in bulk.</li></ol><blockquote>💡 The <strong>Contacts</strong> and <strong>Leads</strong> counters on the Accounts list update automatically as you link people — a quick health check of how well-mapped each company is.</blockquote>",
+      "images": [
+        { "src": "images/crm/accounts-detail-contacts-light.png", "alt": "Contacts tab of an account showing a linked contact with phone, stage, and View button", "caption": "The Contacts tab: everyone who works at this company, one click from their profile", "theme": "light" },
+        { "src": "images/crm/accounts-detail-contacts-dark.png", "alt": "Contacts tab of an account showing a linked contact with phone, stage, and View button", "caption": "The Contacts tab: everyone who works at this company, one click from their profile", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "activity-tabs",
+      "title": "Review calls, emails, files, and payment methods",
+      "content": "<p>The remaining tabs collect every interaction with the company automatically:</p><ul><li><strong>Call Logs</strong> — every AI and human call with anyone at this account: date, caller, number, stage transition, duration, and status. Click the refresh icon to pull the latest calls.</li><li><strong>Email</strong> — the email conversation history with this account. A blue badge shows the total message count and a green badge highlights unread messages.</li><li><strong>Files</strong> — documents attached to the account (contracts, proposals, photos). Upload here and they stay with the company record.</li><li><strong>Payment Methods</strong> — cards saved for this account, used for invoices and subscriptions.</li></ul>",
+      "images": [
+        { "src": "images/crm/accounts-detail-tabs-light.png", "alt": "Account profile tab strip showing Call Logs, Contacts, Leads, Email, Files, and Payment Methods", "caption": "One tab strip, the whole relationship: calls, people, emails, files, and payment methods", "theme": "light" },
+        { "src": "images/crm/accounts-detail-tabs-dark.png", "alt": "Account profile tab strip showing Call Logs, Contacts, Leads, Email, Files, and Payment Methods", "caption": "One tab strip, the whole relationship: calls, people, emails, files, and payment methods", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "contact-info-address",
+      "title": "Edit contact information and address",
+      "content": "<p>The right-hand cards are edit-in-place — click the ✏️ pencil on any row, change the value, and confirm with the ✓ button.</p><ol><li>In the <strong>Contact Information</strong> card:<ul><li><strong>Phone Numbers</strong> — pick a label, type the number, and click <strong>Add</strong>. Each saved number shows as a pill with its label; click the 🗑 icon to remove one.</li><li><strong>Emails</strong> — click <strong>Add Email</strong> to store addresses; the first is the primary.</li><li><strong>Industry</strong> and <strong>Website</strong> — click the pencil to edit.</li></ul></li><li>In the <strong>Address</strong> card, edit <strong>Street Address</strong>, <strong>Apartment Suite</strong>, <strong>City</strong>, <strong>State Province</strong>, <strong>Postal Code</strong>, and <strong>Country</strong> the same way.</li></ol>",
+      "images": [
+        { "src": "images/crm/accounts-detail-info-light.png", "alt": "Contact Information card with phone numbers, emails, industry, and website", "caption": "Contact Information: phones with labels, emails, industry, and website", "theme": "light" },
+        { "src": "images/crm/accounts-detail-info-dark.png", "alt": "Contact Information card with phone numbers, emails, industry, and website", "caption": "Contact Information: phones with labels, emails, industry, and website", "theme": "dark" },
+        { "src": "images/crm/accounts-detail-address-light.png", "alt": "Address card with street, city, state, postal code, and country fields", "caption": "The Address card — every field edits in place", "theme": "light" },
+        { "src": "images/crm/accounts-detail-address-dark.png", "alt": "Address card with street, city, state, postal code, and country fields", "caption": "The Address card — every field edits in place", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "account-details-tax",
+      "title": "Fill in company details and sales tax",
+      "content": "<ol><li>The <strong>Account Details</strong> card holds the business profile — click the pencil on any row to set it:<ul><li><strong>Company Size</strong> — employee-count range.</li><li><strong>Total Revenue</strong> — annual revenue.</li><li><strong>Primary Contact</strong> — your main point of contact.</li><li><strong>Year Founded</strong>, <strong>Tax Registration</strong>, <strong>Lead Source</strong>, <strong>Tags</strong>, <strong>Social Media</strong>.</li></ul></li><li>In the <strong>Sales Tax</strong> card, switch on <strong>Tax-exempt customer</strong> if this company shouldn't be charged sales tax — quotes and invoices for this account will respect it automatically.</li></ol><blockquote>💡 Add <strong>Tags</strong> here (for example <em>VIP</em>, <em>West Coast</em>, <em>Reseller</em>) and they become filterable from the Accounts list via <strong>Filter By → Tags</strong>.</blockquote>",
+      "images": [
+        { "src": "images/crm/accounts-detail-company-light.png", "alt": "Account Details card with company size, total revenue, primary contact, year founded, tax registration, lead source, tags, and social media", "caption": "Account Details: the full business profile, editable in place", "theme": "light" },
+        { "src": "images/crm/accounts-detail-company-dark.png", "alt": "Account Details card with company size, total revenue, primary contact, year founded, tax registration, lead source, tags, and social media", "caption": "Account Details: the full business profile, editable in place", "theme": "dark" },
+        { "src": "images/crm/accounts-detail-tax-light.png", "alt": "Sales Tax card with the tax-exempt customer toggle", "caption": "Flip Tax-exempt customer and billing documents for this account skip sales tax", "theme": "light" },
+        { "src": "images/crm/accounts-detail-tax-dark.png", "alt": "Sales Tax card with the tax-exempt customer toggle", "caption": "Flip Tax-exempt customer and billing documents for this account skip sales tax", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "notes-custom-fields",
+      "title": "Add notes and custom fields",
+      "content": "<ol><li>Below the tabs, type in the <strong>Add your note</strong> box and press Enter to log a note on the account. Notes keep a running team journal — every entry shows who wrote it and when, and can be edited or deleted later.</li><li>In the <strong>Custom Fields</strong> card (top-right), click <strong>Add Field</strong>, give it a <strong>Field Name</strong> and <strong>Field Value</strong>, and click Add. Use custom fields for anything iMash doesn't have a built-in field for — contract renewal dates, account tiers, internal IDs.</li><li>Edit or remove a custom field with the ✏️ and 🗑 icons on its row.</li></ol>",
+      "images": [
+        { "src": "images/crm/accounts-detail-notes-light.png", "alt": "Notes card with the add-your-note input", "caption": "The Notes card — a running journal on the company", "theme": "light" },
+        { "src": "images/crm/accounts-detail-notes-dark.png", "alt": "Notes card with the add-your-note input", "caption": "The Notes card — a running journal on the company", "theme": "dark" },
+        { "src": "images/crm/accounts-detail-custom-fields-light.png", "alt": "Custom Fields card with Add Field button and existing custom fields", "caption": "Custom Fields: store anything that matters to your business", "theme": "light" },
+        { "src": "images/crm/accounts-detail-custom-fields-dark.png", "alt": "Custom Fields card with Add Field button and existing custom fields", "caption": "Custom Fields: store anything that matters to your business", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "import-bulk-api",
+      "title": "Import accounts in bulk, clean up, and use the API",
+      "content": "<ol><li>To bring in a whole book of business at once, click the <strong>⬆ import</strong> button (next to <strong>+ Add Account</strong>). The <strong>Import Accounts from CSV</strong> modal opens — drag in a CSV with headers in the first row. Required fields: <strong>Name</strong> plus either <strong>Email</strong> or <strong>Phone</strong>. Click <strong>Next</strong> to map your columns and finish the import.</li><li>To delete several accounts, tick their checkboxes in the list and click <strong>Delete Selected</strong>. Remember: this also removes their linked contacts and leads.</li><li>Developers: click the 🔗 <strong>API Info</strong> button to see ready-made API examples for reading and writing accounts programmatically.</li></ol><p>That's it — your companies now live in one organized, call-ready CRM. Every new call, message, and deal will attach itself to the right account from here on.</p>",
+      "images": [
+        { "src": "images/crm/accounts-import-light.png", "alt": "Import Accounts from CSV modal with drag-and-drop upload area", "caption": "Import Accounts from CSV — Name plus Email or Phone is all a row needs", "theme": "light" },
+        { "src": "images/crm/accounts-import-dark.png", "alt": "Import Accounts from CSV modal with drag-and-drop upload area", "caption": "Import Accounts from CSV — Name plus Email or Phone is all a row needs", "theme": "dark" }
+      ]
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Fill your accounts with people and reach out.",
+    "description": "Your companies are in place — now fill them with people, prospects, and revenue.",
     "cards": [
-      { "href": "/crm/contacts", "title": "Contacts", "description": "Add the people who work at each company." },
-      { "href": "/crm/leads", "title": "Leads", "description": "Track prospects tied to an account." },
-      { "href": "/campaigns/create-campaign", "title": "Create a Campaign", "description": "Target an account's contacts with calls or messages." }
+      { "href": "/crm/contacts", "title": "Contacts", "description": "Add the people who work at each company and link them to their account." },
+      { "href": "/crm/leads", "title": "Leads", "description": "Track prospects tied to an account and let AI calls update them." },
+      { "href": "/pipeline/deals", "title": "Deals", "description": "Open deals against an account and move them through your pipeline." },
+      { "href": "/crm/import-export-data", "title": "Import & Export Data", "description": "Bulk-import your existing CRM data with field mapping and dedup." }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Accounts - CRM | iMash Docs",
-  "metaDescription": "Create company accounts in the iMash CRM and link contacts and leads to them. Search, filter, tag, and manage B2B relationships in one place.",
-  "metaKeywords": "accounts, companies, organizations, B2B CRM, account management, link contacts, business relationships"
+  "metaTitle": "Accounts - CRM | iMash Documentation",
+  "metaDescription": "Create company accounts in the iMash CRM, link contacts and leads, track calls and emails per company, edit company details in place, and import accounts from CSV.",
+  "metaKeywords": "accounts, companies, organizations, B2B CRM, account management, link contacts, link leads, CSV import, custom fields, tax exempt, account profile"
 }

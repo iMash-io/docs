@@ -1,47 +1,105 @@
 {
-  "title": "Call Logs",
-  "lede": "Every call your AI agents make or receive is recorded here. Use Call Logs to see who called, which agent handled it, how long it lasted, how it ended, and what it cost.",
-  "timeToComplete": "3 minutes",
+  "title": "Call Logs & Recordings",
+  "lede": "Every call your AI agents make or receive — who called, how it went, what was said, and what it cost — lives in one searchable place. Here's how to read, filter, and mine your Call Logs like a pro.",
+  "timeToComplete": "8 minutes",
   "steps": [
     {
       "id": "open-call-logs",
       "title": "Open Call Logs",
-      "content": "<ol><li>In the left menu, go to <strong>Call Center → Call Logs</strong>.</li><li>The table lists calls newest-first. A small arrow next to each date shows direction — up/green for <strong>outbound</strong>, down/red for <strong>inbound</strong>.</li></ol>",
+      "content": "<p>Call Logs is your flight recorder: every inbound and outbound call is captured automatically, with nothing to configure.</p><ol><li>In the left sidebar, scroll to the <strong>Call Center</strong> section and click <strong>Call Logs</strong>. (You can also click the <strong>Contact Center</strong> tab at the top of the page and select the <strong>Call Logs</strong> shortcut chip.)</li><li>The table lists calls newest-first. The small arrow next to each date shows direction — a green up-right arrow means <strong>outbound</strong>, a red down-left arrow means <strong>inbound</strong>.</li><li>By default the page shows <strong>This Week</strong>. We'll change that in the next step.</li></ol>",
       "images": [
-        { "src": "images/phone/call-logs-light.png", "alt": "Call Logs table", "caption": "Call Center → Call Logs shows every inbound and outbound call.", "theme": "light" },
-        { "src": "images/phone/call-logs-dark.png", "alt": "Call Logs table", "caption": "Call Center → Call Logs shows every inbound and outbound call.", "theme": "dark" }
+        { "src": "images/phone/call-logs-light.png", "alt": "Call Logs page with filters, metric tiles, and the call table", "caption": "Call Center → Call Logs: filters on top, live metrics in the middle, every call below.", "theme": "light" },
+        { "src": "images/phone/call-logs-dark.png", "alt": "Call Logs page with filters, metric tiles, and the call table", "caption": "Call Center → Call Logs: filters on top, live metrics in the middle, every call below.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "filter",
+      "title": "Filter and search for the calls you need",
+      "content": "<p>The filter bar at the top narrows the table, the metric tiles, AND the CSV export all at once. Combine as many filters as you like:</p><ul><li><strong>Date range</strong> — pick exact start/end dates in the calendar, or use the preset dropdown: <strong>Today</strong>, <strong>This Week</strong>, <strong>This Month</strong>, or <strong>Custom Range</strong>.</li><li><strong>Call Type</strong> — <strong>Phone</strong> (regular telephone calls) or <strong>Web</strong> (browser/widget calls).</li><li><strong>Direction</strong> — <strong>Inbound</strong> or <strong>Outbound</strong>.</li><li><strong>Ended reason</strong> — how the call finished (searchable list; see the status guide later in this guide).</li><li><strong>AI Agent</strong> — only calls handled by a specific agent.</li><li><strong>Campaign</strong> — only calls that belonged to a campaign.</li><li><strong>Search by phone number</strong> — matches either side of the call.</li><li><strong>Search by Call ID (UUID)</strong> — paste the exact call ID (from a webhook, the API, or support) to jump straight to one call. The box turns red if the ID isn't a valid UUID.</li><li><strong>Contact/Lead Name or Email</strong>, <strong>Account name</strong>, <strong>Search by address</strong> — find calls by the CRM record they matched.</li><li><strong>Owner (email)</strong> — for accounts with team members: show only calls owned by a specific user. When an owner is selected, an <strong>Include sub-accounts</strong> checkbox appears above the table to roll the view up to that owner's whole team.</li><li><strong>Lifecycle Stage</strong> — only calls where the matched contact/lead is in a given stage.</li></ul><blockquote>💡 Press the magnifier (or Enter) in the text search boxes to apply them — they don't filter as you type.</blockquote>",
+      "images": [
+        { "src": "images/phone/call-logs-filters-light.png", "alt": "Call Logs filter bar with date range, type, direction, ended reason, agent, campaign, and search boxes", "caption": "Stack filters freely — the table, metrics, and exports all follow the same selection.", "theme": "light" },
+        { "src": "images/phone/call-logs-filters-dark.png", "alt": "Call Logs filter bar with date range, type, direction, ended reason, agent, campaign, and search boxes", "caption": "Stack filters freely — the table, metrics, and exports all follow the same selection.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "metrics",
+      "title": "Read the metrics strip",
+      "content": "<p>The tile strip between the filters and the table totals up <em>every</em> call matching your filters — not just the rows on the current page. Swipe or scroll horizontally to see them all:</p><ul><li><strong>Calls</strong> — total number of matching calls.</li><li><strong>Duration</strong> — combined talk time in minutes.</li><li><strong>Avg $/min</strong> — your average cost per minute of talk time.</li><li><strong>Inbound / Outbound</strong> — the split between received and placed calls.</li><li><strong>Cost tiles</strong> (<strong>Total Price</strong>, <strong>Total mCost</strong>, <strong>Profit</strong>, <strong>Profit %</strong>) — money totals for the filtered set. Exactly which cost tiles you see depends on your account type; hover the small ⓘ next to any tile title for a plain-language explanation of that number.</li></ul><blockquote>💡 Profit turns green when positive and red when negative — a one-glance health check for resellers.</blockquote>",
+      "images": [
+        { "src": "images/phone/call-logs-metrics-light.png", "alt": "Metric tiles showing Profit, Total Price, Calls, Duration and more", "caption": "Totals always reflect the full filtered result set, not just the visible page.", "theme": "light" },
+        { "src": "images/phone/call-logs-metrics-dark.png", "alt": "Metric tiles showing Profit, Total Price, Calls, Duration and more", "caption": "Totals always reflect the full filtered result set, not just the visible page.", "theme": "dark" }
       ]
     },
     {
       "id": "read-columns",
-      "title": "Read the columns",
-      "content": "<p>Each row summarizes one call:</p><ul><li><strong>Date &amp; Direction</strong> — when the call happened and whether it was inbound or outbound.</li><li><strong>From / To</strong> — the two phone numbers on the call.</li><li><strong>Duration</strong> — how long the call lasted.</li><li><strong>AI Agent</strong> — which agent handled it.</li><li><strong>Campaign</strong> — the campaign the call belonged to, if any.</li><li><strong>Related Entities</strong> — the matched Contact or Lead in your CRM.</li><li><strong>Ended Reason</strong> — why the call ended (customer hung up, agent ended, silence timeout, etc.).</li><li><strong>Cost</strong> — the billed amount for that call.</li></ul>"
+      "title": "Understand every column in the table",
+      "content": "<p>Each row summarizes one call:</p><ul><li><strong>Date</strong> — when the call happened, with the direction arrow (green ↗ outbound, red ↙ inbound).</li><li><strong>AI Agent</strong> — which agent handled the call.</li><li><strong>Previous Call Transition</strong> — if the call moved the matched contact/lead between lifecycle stages, the before → after is shown here.</li><li><strong>Type</strong> — <strong>Phone</strong> or <strong>Web</strong>.</li><li><strong>Direction</strong> — Inbound or Outbound as a pill.</li><li><strong>Cost/Price</strong> — what the call cost, with the billed price stacked beneath. Hover a value to see that call's full dollar breakdown.</li><li><strong>Profit</strong> — margin on the call in dollars and percent (shown for account owners).</li><li><strong>Ended Reason</strong> — how the call finished (see the status guide below).</li><li><strong>Related Entities</strong> — the Contact, Lead, Account, or Campaign the call was matched to. Click one to open that record right from the log.</li><li><strong>From / To</strong> — the two numbers on the call. Clicking a number opens the web dialer ready to call it back.</li><li><strong>Owner</strong> — which team member's account the call belongs to.</li><li><strong>Duration</strong> — call length as HH:MM:SS.</li></ul><p><strong>Ended Reason — what the statuses mean:</strong></p><ul><li><em>Completed</em> — <strong>Ended</strong>, <strong>Agent Ended Call</strong>, <strong>User Hang up</strong>, <strong>Silence Timeout</strong>, <strong>Max call duration reached</strong>: the conversation happened and finished.</li><li><em>No contact</em> — <strong>No Answer</strong>, <strong>Unavailable</strong>, <strong>Ringing Timeout</strong>, <strong>Outbound Call Timeout</strong>: nobody picked up.</li><li><em>Voicemail</em> — the call hit an answering machine (with or without leaving a message).</li><li><em>Transfer / forward</em> — <strong>Call Transfered</strong>, <strong>Call Forwarded</strong>: the AI handed the call to a human or another number.</li><li><em>SIP failure</em> — <strong>SIP Code (486)</strong> busy, <strong>SIP Code (404)</strong> number not found, <strong>SIP Code (603)</strong> declined, and similar carrier-level failures.</li><li><em>System</em> — <strong>Negative Balance</strong> (add funds!), <strong>No Agent Assigned</strong> (the number has no agent routed), <strong>Do Not Call</strong> (the number is on your DNC list).</li></ul><blockquote>⚠️ Seeing lots of <strong>Negative Balance</strong> or <strong>No Agent Assigned</strong>? Those calls never reached your AI — top up your balance or fix the number's routing first.</blockquote>"
+    },
+    {
+      "id": "choose-columns",
+      "title": "Pick your columns",
+      "content": "<p>Too many columns? Show only what you care about:</p><ol><li>Click <strong>Columns</strong> in the top-right of the page.</li><li>In the <strong>Choose columns</strong> dialog, uncheck anything you want to hide. The choice applies to the on-screen table <em>and</em> to the CSV export.</li><li>Click <strong>Done</strong> to apply, or <strong>Reset to default</strong> to bring everything back.</li></ol><blockquote>💡 The selection lasts for your current visit — reloading the page re-checks every column, so newly added columns are never silently hidden.</blockquote>",
+      "images": [
+        { "src": "images/phone/call-logs-columns-light.png", "alt": "Choose columns dialog listing every available column with checkboxes", "caption": "Columns → uncheck what you don't need — the CSV export follows the same selection.", "theme": "light" },
+        { "src": "images/phone/call-logs-columns-dark.png", "alt": "Choose columns dialog listing every available column with checkboxes", "caption": "Columns → uncheck what you don't need — the CSV export follows the same selection.", "theme": "dark" }
+      ]
     },
     {
       "id": "open-detail",
-      "title": "Open a call for full detail",
-      "content": "<ol><li>Click a row to open the call's details.</li><li>Review the full <strong>transcript</strong>, per-leg breakdown, and any recording captured for that call.</li><li>Use this to check how an agent handled a specific conversation or to troubleshoot a call that ended early.</li></ol>"
+      "title": "Open a call — recording and overview",
+      "content": "<p>This is where Call Logs gets powerful: every call opens into a full drawer with the recording, the word-for-word transcript, and the complete cost trail.</p><ol><li>Click any row (or its green eye icon on the right) to open the <strong>Call Details</strong> drawer.</li><li>At the top you'll see where the <strong>Recording</strong> and <strong>Call Data</strong> are stored (Local or your own S3 bucket), plus the call ID with a copy button.</li><li>If recording was enabled for the agent, a waveform player appears first — press <strong>play/pause</strong>, jump with the <strong>skip</strong> buttons, or hit the <strong>download</strong> icon to save the audio file. If not, you'll see <em>“Recording not enabled for this call.”</em></li><li>The <strong>Call Overview</strong> tab shows the essentials: <strong>Call ID</strong>, <strong>Agent Name</strong>, <strong>Type &amp; Direction</strong>, <strong>Status</strong>, <strong>Phone Numbers</strong>, <strong>Duration</strong>, and <strong>Started Time</strong> — plus any <strong>Associated CRM Entities</strong> (click a contact or lead name to open it) and lifecycle stage changes.</li></ol><blockquote>💡 Want recordings on future calls? Turn on call recording in your agent's settings — see the Agent Settings guide.</blockquote>",
+      "images": [
+        { "src": "images/phone/call-logs-detail-light.png", "alt": "Call Details drawer showing the Call Overview tab with call information", "caption": "Click any row to open the Call Details drawer — recording on top, tabs beneath.", "theme": "light" },
+        { "src": "images/phone/call-logs-detail-dark.png", "alt": "Call Details drawer showing the Call Overview tab with call information", "caption": "Click any row to open the Call Details drawer — recording on top, tabs beneath.", "theme": "dark" }
+      ]
     },
     {
-      "id": "filter",
-      "title": "Filter and find calls",
-      "content": "<ol><li>Sort by any column header (date, duration, cost, and more).</li><li>Narrow the list by <strong>agent</strong>, <strong>campaign</strong>, direction, or date range to find the calls you care about.</li><li>Open a linked <strong>Contact</strong> or <strong>Lead</strong> straight from the row to see that person's full history.</li></ol>"
+      "id": "transcript-analysis",
+      "title": "Read the transcript and AI analysis",
+      "content": "<p>Two tabs turn each call into insight:</p><ol><li>Click <strong>Transcripts</strong> to read the conversation word for word. Each line is tagged by speaker (<strong>ASSISTANT</strong>, <strong>USER</strong>, <strong>TOOL</strong> and so on) with timestamps, and on richer calls you'll also see response-latency metrics per reply.</li><li>Click <strong>Analysis</strong> for the AI's post-call work:</li></ol><ul><li><strong>Call Summary</strong> — a short natural-language recap of the call.</li><li><strong>Success Evaluation</strong> — did the call achieve its goal, per your agent's success criteria.</li><li><strong>Structured Data</strong> — the exact fields your agent was asked to extract (appointment time, budget, etc.) as clean JSON.</li><li><strong>Contact Info Results</strong> — names, emails, and numbers the AI captured from the conversation.</li><li><strong>Tool Usage</strong> — which tools the agent invoked during the call.</li><li><strong>Lifecycle Stage</strong> — the stage decision the call produced.</li></ul><blockquote>💡 If a section says it was disabled for this call, switch it on in <strong>Smart Agents → your agent → Webhooks</strong> (summary, evaluation, structured data) or in <strong>CRM Settings</strong> (contact info, lifecycle stage) — future calls will fill it automatically.</blockquote>",
+      "images": [
+        { "src": "images/phone/call-logs-analysis-light.png", "alt": "Analysis tab with Call Summary, Success Evaluation, Structured Data, Contact Info Results, Tool Usage and Lifecycle Stage sections", "caption": "The Analysis tab — each section fills automatically once enabled for your agent.", "theme": "light" },
+        { "src": "images/phone/call-logs-analysis-dark.png", "alt": "Analysis tab with Call Summary, Success Evaluation, Structured Data, Contact Info Results, Tool Usage and Lifecycle Stage sections", "caption": "The Analysis tab — each section fills automatically once enabled for your agent.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "cost-breakdown",
+      "title": "See exactly where every cent went",
+      "content": "<p>No mystery billing — the <strong>Call Cost</strong> tab itemizes the whole call:</p><ol><li>In the Call Details drawer, click <strong>Call Cost</strong>.</li><li>The <strong>Total Cost</strong> card shows the call's full amount, followed by one card per service: <strong>LLM</strong> (the AI model, with input/output tokens), <strong>TTS</strong> (voice synthesis), <strong>STT</strong> (speech recognition), <strong>Observer</strong>, <strong>Webhooks</strong> (post-call analysis), and <strong>Avatar</strong> — each with its provider, model, usage, and whether it ran on iMash credentials or your own keys.</li><li>Services that weren't part of the call are marked <strong>Not Used</strong>.</li></ol><p>Two more tabs round out the drawer:</p><ul><li><strong>Observer Events</strong> — moments your Observer agent flagged in real time (with timestamps and confidence scores). The tab is grayed out when no events were detected.</li><li><strong>Call Quality</strong> — network and audio statistics for the call's phone and web legs, great for chasing down choppy-audio complaints.</li></ul>",
+      "images": [
+        { "src": "images/phone/call-logs-cost-light.png", "alt": "Call Cost tab showing Total Cost and per-service cards for LLM, TTS, STT, Observer, Webhooks and Avatar", "caption": "Call Cost itemizes the call service by service — tokens, seconds, and dollars.", "theme": "light" },
+        { "src": "images/phone/call-logs-cost-dark.png", "alt": "Call Cost tab showing Total Cost and per-service cards for LLM, TTS, STT, Observer, Webhooks and Avatar", "caption": "Call Cost itemizes the call service by service — tokens, seconds, and dollars.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "summary-view",
+      "title": "Switch to the Summary view for per-owner totals",
+      "content": "<p>Managing a team or reselling minutes? Roll the whole log up to one line per account:</p><ol><li>Above the table on the right, next to <strong>View</strong>, click <strong>Summary</strong> (the toggle next to <strong>Rows</strong>).</li><li>Each row now aggregates one owner: <strong>Calls</strong>, <strong>In / Out</strong>, <strong>Duration</strong>, <strong>Avg $/min</strong>, cost and <strong>Profit</strong> columns — all still respecting your filters and date range.</li><li>The export button changes to <strong>Export Summary</strong> — click it and choose <strong>Summary as CSV</strong> or <strong>Summary as PDF</strong> for a ready-to-send report.</li><li>Click <strong>Rows</strong> to switch back to the per-call view.</li></ol>",
+      "images": [
+        { "src": "images/phone/call-logs-summary-light.png", "alt": "Summary view showing one aggregated row per owner with calls, duration and cost totals", "caption": "Summary view: one line per account owner — perfect for weekly reporting.", "theme": "light" },
+        { "src": "images/phone/call-logs-summary-dark.png", "alt": "Summary view showing one aggregated row per owner with calls, duration and cost totals", "caption": "Summary view: one line per account owner — perfect for weekly reporting.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "export-api",
+      "title": "Export your data or pull it via API",
+      "content": "<p>Your call data is yours — take it anywhere:</p><ol><li>In the Rows view, click <strong>Export to CSV (Max 50,000)</strong> in the top-right. The file contains every call matching your current filters (up to 50,000 rows), with exactly the columns you selected in the <strong>Columns</strong> picker.</li><li>In the Summary view, use <strong>Export Summary</strong> for the aggregated report instead.</li><li>Prefer automation? Click <strong>API Info</strong> to see ready-made API examples for fetching call logs programmatically — ideal for BI dashboards and data warehouses.</li></ol><p>That's it — you now have full visibility into every conversation your AI has. Review a few calls a day and feed what you learn back into your agent's prompt: it's the fastest improvement loop in the platform.</p>"
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Turn what you learn from the logs into better calls.",
+    "description": "Turn what the logs tell you into better, cheaper, smarter calls.",
     "cards": [
       { "href": "/phone/call-routing", "title": "Adjust Call Routing", "description": "Send calls to a different or better-tuned agent." },
-      { "href": "/agents/create-agent", "title": "Improve Your Agent", "description": "Refine the agent based on real transcripts." },
-      { "href": "/phone/add-phone-number", "title": "Add a Phone Number", "description": "Add more numbers to handle call volume." }
+      { "href": "/analytics/cost-management", "title": "Manage Costs", "description": "Track spend trends and set up billing alerts." },
+      { "href": "/agents/observer-agent", "title": "Set Up an Observer Agent", "description": "Detect key moments in calls automatically — they show up in the Observer Events tab." }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Call Logs - Review AI Agent Call History | iMash Docs",
-  "metaDescription": "Review every inbound and outbound call: caller, agent, campaign, contact or lead, duration, ended reason, cost, transcript, and recording.",
-  "metaKeywords": "call logs, call history, transcripts, recordings, ended reason, call cost, inbound, outbound, agent, campaign, contact, lead"
+  "metaTitle": "Call Logs & Recordings - Review AI Agent Call History | iMash Documentation",
+  "metaDescription": "Filter and search every inbound and outbound call, open the full call detail drawer with recording, transcript, AI analysis, and cost breakdown, and export to CSV, PDF, or the API.",
+  "metaKeywords": "call logs, call history, call recordings, transcripts, ended reason, call cost breakdown, inbound, outbound, AI agent calls, export CSV, summary report, observer events, call quality"
 }

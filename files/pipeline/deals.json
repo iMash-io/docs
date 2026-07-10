@@ -1,0 +1,111 @@
+{
+  "title": "Deals",
+  "lede": "Deals turn conversations into revenue you can see coming. Track every opportunity through your pipeline — value, probability, stage, and the people behind it — then convert winners into quotes, invoices, and jobs without ever re-typing a thing.",
+  "timeToComplete": "10 minutes",
+  "steps": [
+    {
+      "id": "open-deals",
+      "title": "Open the Deals list",
+      "content": "<p>Your pipeline lives here: every open opportunity, its dollar value, and how likely it is to close — all on one screen.</p><ol><li>In the top navigation, click <strong>CRM</strong>, then click the <strong>Deals</strong> tab (or go directly to <code>/pipeline/deals</code>).</li><li>Every deal appears as a row with these columns: <strong>Deal Name</strong>, <strong>Value</strong>, <strong>Probability</strong> (color-coded: green = hot, red = long shot), <strong>Stage</strong> (a colored pill like <em>Proposal</em> or <em>Negotiation</em>), <strong>Account</strong>, <strong>Contacts</strong>, <strong>Leads</strong>, <strong>Expected Close</strong>, <strong>Source</strong>, <strong>Tags</strong>, <strong>Status</strong> (Open / Won / Lost), <strong>Owner</strong>, and <strong>Actions</strong>.</li><li>The table scrolls sideways for the extra columns; the total (<em>Total N deals</em>) shows under the table with page controls.</li><li>Click a deal's name (or the green eye icon in <strong>Actions</strong>) to open its full detail page. Clicking an <strong>Account</strong> or a <strong>Contact</strong> in a row jumps straight to that record.</li></ol><p>A <strong>deal</strong> is one potential sale — \"Rooftop solar for Brightline HQ, $12,500, 50% likely to close this month.\" Leads and contacts are the people; the deal is the money conversation you're having with them.</p>",
+      "images": [
+        { "src": "images/pipeline/deals-list-light.png", "alt": "Deals list showing deal rows with value, probability, stage pills, account and contacts columns", "caption": "The Deals list — your whole pipeline with values, probabilities, and stage pills at a glance", "theme": "light" },
+        { "src": "images/pipeline/deals-list-dark.png", "alt": "Deals list showing deal rows with value, probability, stage pills, account and contacts columns", "caption": "The Deals list — your whole pipeline with values, probabilities, and stage pills at a glance", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "create-deal",
+      "title": "Create a deal",
+      "content": "<ol><li>Click <strong>Create Deal</strong> in the top-right of the list. The <strong>Create New Deal</strong> form opens.</li><li>Enter a <strong>Deal Name</strong> (required) — make it self-explanatory, like <em>\"Rooftop Solar Installation — Brightline HQ\"</em>.</li><li>Optionally add a <strong>Description</strong> with the scope or context.</li><li>Pick the <strong>Pipeline</strong> and the <strong>Stage</strong> (both required). Choosing a stage auto-sets the <strong>Probability (%)</strong> to that stage's default — you can still drag the slider or type an exact percentage.</li><li>Enter the <strong>Deal Value</strong> and pick the currency (USD, EUR, GBP, and more) from the dropdown on its left.</li><li>Set the <strong>Expected Close Date</strong> — this powers your forecast and the <em>Expected Close</em> column.</li><li>Link the people: <strong>Associated Account</strong> (the company), <strong>Associated Contacts</strong>, and <strong>Associated Leads</strong> (both multi-select). The <strong>+</strong> button next to each picker creates a brand-new account, contact, or lead on the spot without leaving the form.</li><li>Optionally pick a <strong>Source</strong> (<strong>Website</strong>, <strong>Referral</strong>, <strong>Cold Call</strong>, <strong>Email Campaign</strong>, <strong>Social Media</strong>, <strong>Event</strong>, <strong>Other</strong>) and add <strong>Tags</strong> (type and press Enter).</li><li>Click <strong>Create Deal</strong> in the top-right.</li></ol><blockquote>⚠️ Every deal must be linked to at least one <strong>Account</strong>, <strong>Contact</strong>, or <strong>Lead</strong> — a deal with nobody behind it can't be saved. If saving fails, link a person or company and try again.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/deals-create-light.png", "alt": "Create New Deal form filled with name, description, pipeline, stage, value, close date, account, contact, source and tags", "caption": "The Create New Deal form — stage picks set the probability automatically, and + buttons quick-create accounts, contacts, or leads", "theme": "light" },
+        { "src": "images/pipeline/deals-create-dark.png", "alt": "Create New Deal form filled with name, description, pipeline, stage, value, close date, account, contact, source and tags", "caption": "The Create New Deal form — stage picks set the probability automatically, and + buttons quick-create accounts, contacts, or leads", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "search-filter",
+      "title": "Search, filter, and sort the pipeline",
+      "content": "<p>Slice the pipeline any way you need:</p><ol><li>Click <strong>Show Filters</strong> (top-right, next to Create Deal). A filter row appears:</li></ol><ul><li><strong>Search deals...</strong> — type part of a deal name and press Enter.</li><li><strong>Filter by pipeline</strong> — pick a pipeline; this unlocks <strong>Filter by stage</strong> to narrow to one stage of that pipeline.</li><li><strong>Start date → End date</strong> — limit to deals created in a date range.</li><li><strong>Filter by owner</strong> — see one teammate's deals only.</li></ul><p>Two more tricks live in the table itself:</p><ul><li><strong>Sorting</strong> — click the <strong>Value</strong>, <strong>Probability</strong>, or <strong>Expected Close</strong> header to sort the whole pipeline (not just the current page); click again to flip direction.</li><li><strong>Status filter</strong> — the small filter icon on the <strong>Status</strong> column header lets you show only <strong>Open</strong>, <strong>Won</strong>, or <strong>Lost</strong> deals.</li></ul><blockquote>💡 Sort by <strong>Value</strong> descending with the Status filter on <strong>Open</strong> — instant \"biggest deals on the table\" view for your Monday pipeline review.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/deals-filters-light.png", "alt": "Filter row with search box, pipeline filter, stage filter, date range and owner filter", "caption": "The filter row — search, pipeline + stage, date range, and owner", "theme": "light" },
+        { "src": "images/pipeline/deals-filters-dark.png", "alt": "Filter row with search box, pipeline filter, stage filter, date range and owner filter", "caption": "The filter row — search, pipeline + stage, date range, and owner", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "deal-detail",
+      "title": "Open a deal — the Overview tab",
+      "content": "<p>Click any deal to open its detail page. The <strong>Overview</strong> tab starts with four stat tiles:</p><ul><li><strong>Deal Value</strong> — the full amount if you win.</li><li><strong>Weighted Value</strong> — value × probability. A $12,500 deal at 50% counts as $6,250 of realistic pipeline — add these up across deals and you have an honest forecast.</li><li><strong>Probability</strong> — color-coded from red (≤25%) to green (≥75%).</li><li><strong>Current Stage</strong> — where the deal sits in the pipeline.</li></ul><p>Below the tiles sit the <strong>Related Entities</strong> card (next step) and the full details table: name, description, value, probability, pipeline, stage, <strong>Account</strong> / <strong>Contacts</strong> / <strong>Leads</strong> (all clickable — contacts and leads open in a side drawer), <strong>Source</strong>, <strong>Expected Close</strong> and <strong>Actual Close</strong>, <strong>Status</strong>, <strong>Loss Reason</strong>, <strong>Tags</strong>, and created/updated dates.</p><p>One field deserves a callout: <strong>Primary Recipient</strong>. When you send a quote or invoice created from this deal, this dropdown decides who it's addressed to — the linked account, or a specific contact or lead. Change it any time.</p>",
+      "images": [
+        { "src": "images/pipeline/deals-detail-light.png", "alt": "Deal detail page with stat tiles for deal value, weighted value, probability and current stage", "caption": "The deal detail page — stat tiles up top, Related Entities and the details table below", "theme": "light" },
+        { "src": "images/pipeline/deals-detail-dark.png", "alt": "Deal detail page with stat tiles for deal value, weighted value, probability and current stage", "caption": "The deal detail page — stat tiles up top, Related Entities and the details table below", "theme": "dark" },
+        { "src": "images/pipeline/deals-detail-info-light.png", "alt": "Deal details table with pipeline, stage, account, contacts, leads, primary recipient, source, dates, status and tags", "caption": "The details table — every field in one place, including the Primary Recipient picker for quotes and invoices", "theme": "light" },
+        { "src": "images/pipeline/deals-detail-info-dark.png", "alt": "Deal details table with pipeline, stage, account, contacts, leads, primary recipient, source, dates, status and tags", "caption": "The details table — every field in one place, including the Primary Recipient picker for quotes and invoices", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "move-stage-edit",
+      "title": "Move the stage and edit the deal",
+      "content": "<p>The header of every open deal has your day-to-day controls:</p><ol><li><strong>Stage dropdown</strong> — pick a new stage (for example <em>Proposal → Negotiation</em>) and the deal moves instantly. Every move is recorded in the <strong>Activities</strong> timeline.</li><li><strong>Edit</strong> — flips the whole Overview into edit mode: name, description, value, probability, pipeline, stage, account, contacts, leads, source, expected close date, and tags all become editable in place. Click <strong>Save</strong> to apply or <strong>Cancel</strong> to discard.</li></ol><blockquote>💡 Changing the <strong>Pipeline</strong> while editing resets the stage to the new pipeline's first stage — double-check the stage before saving.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/deals-detail-header-light.png", "alt": "Deal header controls with stage dropdown, Mark as Won, Mark as Lost and Edit buttons", "caption": "The header controls — move the stage, Mark as Won / Mark as Lost, and Edit", "theme": "light" },
+        { "src": "images/pipeline/deals-detail-header-dark.png", "alt": "Deal header controls with stage dropdown, Mark as Won, Mark as Lost and Edit buttons", "caption": "The header controls — move the stage, Mark as Won / Mark as Lost, and Edit", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "related-entities",
+      "title": "Create quotes, invoices, and jobs from the deal",
+      "content": "<p>This is where the pipeline meets paperwork — and where iMash saves you from re-typing. The <strong>Related Entities</strong> card on the Overview tab shows counters for <strong>Quotes</strong>, <strong>Invoices</strong>, <strong>Jobs</strong>, and their combined <strong>Total Value</strong>.</p><ol><li>Click <strong>Create Quote</strong>, <strong>Create Invoice</strong>, or <strong>Create Job</strong> in the card's top-right.</li><li>The full builder opens in a window, already linked to this deal — build the document and save. See <a data-href=\"/pipeline/quotes\">Quotes</a> and <a data-href=\"/pipeline/invoices\">Invoices</a> for the builders themselves.</li><li>Each linked record appears as a row with its <strong>Number</strong>, <strong>Title</strong>, <strong>Status</strong>, <strong>Amount</strong>, and <strong>Date</strong>. The eye icon under <strong>Actions</strong> opens it for viewing or editing right from the deal.</li></ol><p>The link works in both directions, automatically: create a quote or invoice anywhere else in iMash and the platform creates (or updates) a matching deal for it — you'll spot these as <em>[Auto]</em> deals in the list. Your pipeline reflects reality even when your team skips a step.</p>",
+      "images": [
+        { "src": "images/pipeline/deals-related-light.png", "alt": "Related Entities card with counters for quotes, invoices, jobs and total value plus Create Quote, Create Invoice and Create Job buttons", "caption": "Related Entities on a fresh deal — one click creates a quote, invoice, or job that's linked automatically", "theme": "light" },
+        { "src": "images/pipeline/deals-related-dark.png", "alt": "Related Entities card with counters for quotes, invoices, jobs and total value plus Create Quote, Create Invoice and Create Job buttons", "caption": "Related Entities on a fresh deal — one click creates a quote, invoice, or job that's linked automatically", "theme": "dark" },
+        { "src": "images/pipeline/deals-related-linked-light.png", "alt": "Related Entities card showing a linked quote row with number, title, status, amount and date", "caption": "A linked quote on the deal — number, status, amount, and a one-click view/edit action", "theme": "light" },
+        { "src": "images/pipeline/deals-related-linked-dark.png", "alt": "Related Entities card showing a linked quote row with number, title, status, amount and date", "caption": "A linked quote on the deal — number, status, amount, and a one-click view/edit action", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "activities-notes-files",
+      "title": "Activities, Notes, and Files",
+      "content": "<p>Three more tabs keep the deal's whole story in one place:</p><ul><li><strong>Activities</strong> — an automatic timeline: <em>Deal Created</em>, every <em>Stage Changed</em> move, edits, and win/loss events, each timestamped. Nobody has to \"log\" anything — it just happens.</li><li><strong>Notes</strong> — type in <strong>Add a note...</strong> and click <strong>Add Note</strong> (or press Enter). Notes show the author and time; the <strong>⋮</strong> menu on each note lets you <strong>Edit</strong> or <strong>Delete</strong> it. Perfect for \"asked for battery-backup pricing — following up Thursday\".</li><li><strong>Files</strong> — attach proposals, site photos, or signed documents directly to the deal.</li></ul>",
+      "images": [
+        { "src": "images/pipeline/deals-activities-light.png", "alt": "Activities timeline showing Deal Created and Stage Changed entries with timestamps", "caption": "Activities — every stage move and edit is logged automatically", "theme": "light" },
+        { "src": "images/pipeline/deals-activities-dark.png", "alt": "Activities timeline showing Deal Created and Stage Changed entries with timestamps", "caption": "Activities — every stage move and edit is logged automatically", "theme": "dark" },
+        { "src": "images/pipeline/deals-notes-light.png", "alt": "Notes tab with Add a note input and two timestamped notes with author names", "caption": "Notes — a running journal on the deal, with edit and delete on every entry", "theme": "light" },
+        { "src": "images/pipeline/deals-notes-dark.png", "alt": "Notes tab with Add a note input and two timestamped notes with author names", "caption": "Notes — a running journal on the deal, with edit and delete on every entry", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "close-deal",
+      "title": "Close the deal — Won or Lost",
+      "content": "<p>Every deal ends one of two ways, and both are one click from the header:</p><ol><li><strong>Mark as Won</strong> 🏆 — a confirmation window shows the deal value; click <strong>Confirm Win</strong>. The deal gets a green <strong>Won</strong> badge, its <strong>Actual Close</strong> date is stamped, and it's counted in your won revenue.</li><li><strong>Mark as Lost</strong> — pick a <strong>Loss Reason</strong> (required: <strong>Price Too High</strong>, <strong>Lost to Competitor</strong>, <strong>Bad Timing</strong>, <strong>No Budget</strong>, <strong>No Decision Made</strong>, or <strong>Other</strong>), optionally add <strong>Additional Details</strong>, then click <strong>Confirm Loss</strong>. The reason is saved on the deal — gold for spotting patterns later.</li></ol><p>Closed deals are read-only: the stage dropdown and Won/Lost buttons disappear and <strong>Edit</strong> is disabled, so your history stays clean. Filter the list's <strong>Status</strong> column by <strong>Won</strong> or <strong>Lost</strong> to review closed business any time.</p><blockquote>⚠️ Closing a deal can't be un-clicked from the header, so confirm the right deal is open before you hit <strong>Confirm Win</strong> or <strong>Confirm Loss</strong>.</blockquote>",
+      "images": [
+        { "src": "images/pipeline/deals-win-modal-light.png", "alt": "Mark Deal as Won confirmation window showing the deal value and Confirm Win button", "caption": "Mark as Won — one confirmation and the revenue is booked", "theme": "light" },
+        { "src": "images/pipeline/deals-win-modal-dark.png", "alt": "Mark Deal as Won confirmation window showing the deal value and Confirm Win button", "caption": "Mark as Won — one confirmation and the revenue is booked", "theme": "dark" },
+        { "src": "images/pipeline/deals-lost-modal-light.png", "alt": "Mark Deal as Lost window with required Loss Reason dropdown and Additional Details text area", "caption": "Mark as Lost — the required loss reason becomes your competitive intelligence", "theme": "light" },
+        { "src": "images/pipeline/deals-lost-modal-dark.png", "alt": "Mark Deal as Lost window with required Loss Reason dropdown and Additional Details text area", "caption": "Mark as Lost — the required loss reason becomes your competitive intelligence", "theme": "dark" },
+        { "src": "images/pipeline/deals-won-header-light.png", "alt": "Closed deal header showing the Won badge and disabled Edit button", "caption": "A won deal — green badge, locked for editing, history preserved", "theme": "light" },
+        { "src": "images/pipeline/deals-won-header-dark.png", "alt": "Closed deal header showing the Won badge and disabled Edit button", "caption": "A won deal — green badge, locked for editing, history preserved", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "customize-pipeline",
+      "title": "Make the pipeline yours",
+      "content": "<p>The stages you saw (<em>Prospecting → Qualification → Proposal → Negotiation → Closed Won / Closed Lost</em>) are just the default <strong>Sales Pipeline</strong>. In <a data-href=\"/crm/crm-settings\">CRM Settings</a> you can rename stages, change their colors and default probabilities, and even run multiple pipelines side by side (say, one for new business and one for renewals) — the Deals list and every deal form pick the changes up instantly.</p><p>Set your stages once, keep probabilities honest, and the <strong>Weighted Value</strong> tiles across your deals become a forecast you can actually plan a business around. That's the whole game.</p>"
+    }
+  ],
+  "nextSteps": {
+    "title": "What's Next?",
+    "description": "A deal is a promise — quotes, invoices, and jobs are how you deliver on it.",
+    "cards": [
+      { "href": "/pipeline/quotes", "title": "Quotes", "description": "Build and send a professional quote from your deal." },
+      { "href": "/pipeline/invoices", "title": "Invoices & Getting Paid", "description": "Turn the won deal into an invoice with a pay link." },
+      { "href": "/dispatch/jobs", "title": "Creating & Managing Jobs", "description": "Schedule the field work behind the deal." },
+      { "href": "/crm/crm-settings", "title": "CRM Settings", "description": "Customize your pipelines, stages, and probabilities." }
+    ]
+  },
+  "support": {
+    "title": "Need Help?",
+    "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
+  },
+  "metaTitle": "Deals - Sales Pipeline | iMash Documentation",
+  "metaDescription": "Complete guide to deals in iMash: create deals, move them through pipeline stages, forecast with weighted values, link quotes, invoices and jobs, and close deals as won or lost.",
+  "metaKeywords": "deals, sales pipeline, deal stages, deal probability, weighted pipeline, win deal, lose deal, loss reason, deal quotes, deal invoices, deal jobs, CRM deals"
+}

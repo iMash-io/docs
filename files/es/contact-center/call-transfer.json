@@ -1,47 +1,102 @@
 {
-  "title": "Ajustes de transferencia de llamadas",
-  "lede": "Call Transfer (Transferencia de llamadas) es un ajuste a nivel de tenant que permite a los operadores mover una llamada en vivo del web dialer (marcador web) a un compañero o a un número saliente. Está desactivado por defecto. Esta guía cubre cómo activarlo y elegir quién puede transferir.",
-  "timeToComplete": "4 minutos",
+  "title": "Configuración de Transferencia de Llamadas",
+  "lede": "Ningún cliente debería quedarse sin salida. iMash permite que su agente de IA pase una llamada en vivo a su equipo humano, que los compañeros se transfieran llamadas entre sí (o hagan una conferencia con todos), y que los clientes esperen en una cola con música de espera y enrutamiento por habilidades. Esta guía le muestra cómo habilitar las transferencias, cada tipo de transferencia y exactamente qué escucha cada parte durante el proceso.",
+  "timeToComplete": "10 minutos",
   "steps": [
     {
       "id": "open-call-transfer",
-      "title": "Abre la pestaña Call Transfer (Transferencia de llamadas)",
-      "content": "<ol><li>Ve a <strong>Call Center &rarr; Contact Center</strong>.</li><li>Haz clic en la pestaña <strong>Call Transfer</strong> (Transferencia de llamadas) (disponible para la cuenta principal o un admin del Contact Center).</li></ol>",
+      "title": "Abra la pestaña Call Transfer",
+      "content": "<p>La transferencia de llamadas es un interruptor a nivel de cuenta: una sola configuración que habilita las transferencias para todo su equipo. Para encontrarla:</p><ol><li>En la barra lateral izquierda, bajo <strong>Call Center</strong>, haga clic en <strong>Contact Center</strong>.</li><li>En la parte superior de la página, haga clic en la pestaña <strong>Call Transfer</strong> (Transferencia de llamadas), junto a <strong>Live Monitor</strong>, <strong>Reporting</strong> y <strong>Groups</strong>.</li></ol><blockquote>💡 Esta pestaña es visible para la <strong>cuenta principal</strong> y para cualquier subcuenta con el rol de <strong>administrador del Contact Center</strong>. El resto de los usuarios ve un aviso de <strong>Not available</strong> (No disponible) que les indica contactar al propietario de la cuenta.</blockquote>",
       "images": [
-        { "src": "images/contact-center/cc-call-transfer-light.png", "alt": "Ajustes de Call Transfer", "caption": "Call Transfer: activa las transferencias y elige quién puede usarlas.", "theme": "light" },
-        { "src": "images/contact-center/cc-call-transfer-dark.png", "alt": "Ajustes de Call Transfer", "caption": "Call Transfer: activa las transferencias y elige quién puede usarlas.", "theme": "dark" }
+        { "src": "images/contact-center/cc-call-transfer-light.png", "alt": "La pestaña Call Transfer dentro de Contact Center", "caption": "Contact Center → Call Transfer — las transferencias están desactivadas de forma predeterminada hasta que active el interruptor.", "theme": "light" },
+        { "src": "images/contact-center/cc-call-transfer-dark.png", "alt": "La pestaña Call Transfer dentro de Contact Center", "caption": "Contact Center → Call Transfer — las transferencias están desactivadas de forma predeterminada hasta que active el interruptor.", "theme": "dark" }
       ]
     },
     {
       "id": "enable-transfer",
-      "title": "Permite a los operadores transferir llamadas en vivo",
-      "content": "<p>Activa <strong>Allow operators to transfer live calls</strong> (Permitir a los operadores transferir llamadas en vivo). Esto permite a los usuarios mover una llamada del web dialer a un compañero o a un número saliente (incluido en el Human Dialer, marcador humano). Está desactivado por defecto.</p>"
+      "title": "Active \"Allow operators to transfer live calls\"",
+      "content": "<p>Active el interruptor en la parte superior de la tarjeta:</p><ol><li>Encienda <strong>Allow operators to transfer live calls</strong> (Permitir que los operadores transfieran llamadas en vivo).</li><li>Aparecen dos secciones nuevas debajo: <strong>Who can transfer</strong> (Quién puede transferir) e <strong>Internal teammate calls</strong> (Llamadas internas entre compañeros); las veremos a continuación.</li></ol><p>Con esto activado, su equipo puede mover una llamada en vivo del marcador web a un compañero, a una cola, a un número externo, o incluso sumar un agente de IA a la llamada — y también funciona dentro del Human Dialer. Además habilita el botón <strong>Teammate</strong> (Compañero) en el marcador web para llamadas directas entre compañeros.</p><blockquote>⚠️ La opción está <strong>desactivada de forma predeterminada</strong>. Nada surte efecto hasta que haga clic en <strong>Save</strong> (Guardar) en la esquina superior derecha de la tarjeta.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/call-transfer-enabled-light.png", "alt": "Tarjeta Call Transfer con el interruptor principal activado", "caption": "Al activar el interruptor se muestran las opciones de alcance y de llamadas internas.", "theme": "light" },
+        { "src": "images/contact-center/call-transfer-enabled-dark.png", "alt": "Tarjeta Call Transfer con el interruptor principal activado", "caption": "Al activar el interruptor se muestran las opciones de alcance y de llamadas internas.", "theme": "dark" }
+      ]
     },
     {
       "id": "who-can-transfer",
-      "title": "Elige quién puede transferir",
-      "content": "<p>En <strong>Who can transfer</strong> (Quién puede transferir), elige una opción:</p><ul><li><strong>All sub-accounts</strong> (Todas las subcuentas).</li><li><strong>Only specific sub-accounts</strong> (Solo subcuentas específicas) — luego selecciona los usuarios autorizados a transferir.</li></ul>"
+      "title": "Elija quién puede transferir",
+      "content": "<p>Bajo <strong>Who can transfer</strong> (Quién puede transferir), elija el alcance:</p><ul><li><strong>All sub-accounts</strong> (Todas las subcuentas) — todos los usuarios de su cuenta pueden transferir llamadas en vivo.</li><li><strong>Only specific sub-accounts</strong> (Solo subcuentas específicas) — aparece un selector; elija exactamente qué usuarios tendrán los controles de transferencia. El resto conserva un marcador normal sin botones de transferencia.</li></ul><ol><li>Seleccione un alcance.</li><li>Si eligió <strong>Only specific sub-accounts</strong>, haga clic en <strong>Select sub-accounts allowed to transfer</strong> (Seleccionar subcuentas autorizadas a transferir) y elija a sus usuarios.</li></ol>",
+      "images": [
+        { "src": "images/contact-center/call-transfer-specific-light.png", "alt": "Who can transfer configurado en solo subcuentas específicas", "caption": "Limite las transferencias a una lista seleccionada de usuarios.", "theme": "light" },
+        { "src": "images/contact-center/call-transfer-specific-dark.png", "alt": "Who can transfer configurado en solo subcuentas específicas", "caption": "Limite las transferencias a una lista seleccionada de usuarios.", "theme": "dark" }
+      ]
     },
     {
       "id": "internal-recording",
-      "title": "Opcionalmente graba las llamadas internas",
-      "content": "<p>Las llamadas de compañero a compañero (\"Call a teammate\" / Llamar a un compañero) siempre se registran con su resultado. En la casilla <strong>Internal teammate calls</strong> (Llamadas internas entre compañeros) también puedes activar <strong>Record internal calls</strong> (Grabar llamadas internas) y <strong>Transcribe internal calls (multi-party)</strong> (Transcribir llamadas internas [multipartitas]) para capturarlas con un agente grabador que se une cuando el compañero contesta. Haz clic en <strong>Save</strong> (Guardar).</p>"
+      "title": "Opcional: grabe las llamadas internas y haga clic en Save",
+      "content": "<p>El recuadro <strong>Internal teammate calls</strong> (Llamadas internas entre compañeros) controla qué ocurre en las llamadas de compañero a compañero (la función \"Call a teammate\"). Estas llamadas <em>siempre</em> quedan registradas con su resultado — contestada, perdida o rechazada — sin importar lo que elija aquí. Los interruptores añaden una captura más completa:</p><ul><li><strong>Record internal calls</strong> (Grabar llamadas internas) — un grabador se une en el momento en que el compañero contesta y guarda la grabación de audio en sus registros de llamadas.</li><li><strong>Transcribe internal calls (multi-party)</strong> (Transcribir llamadas internas, multi-parte) — el mismo grabador genera además una transcripción con etiquetas por hablante.</li></ul><ol><li>Active uno de los interruptores (o ambos) si desea capturar las llamadas internas.</li><li>Haga clic en <strong>Save</strong> (Guardar) en la esquina superior derecha de la tarjeta. Verá la confirmación \"Call transfer settings saved\".</li></ol>",
+      "images": [
+        { "src": "images/contact-center/call-transfer-internal-light.png", "alt": "Interruptores de grabación y transcripción de llamadas internas", "caption": "Las llamadas internas siempre se registran; la grabación y la transcripción son opcionales.", "theme": "light" },
+        { "src": "images/contact-center/call-transfer-internal-dark.png", "alt": "Interruptores de grabación y transcripción de llamadas internas", "caption": "Las llamadas internas siempre se registran; la grabación y la transcripción son opcionales.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "dialer-button",
+      "title": "Dónde viven las transferencias: el marcador web",
+      "content": "<p>Una vez guardado, cada usuario autorizado recibe controles nuevos en su marcador web (el panel telefónico que usa su equipo — vea la <a data-href=\"/contact-center/agent-guide\">Guía del Agente Humano</a> para un recorrido completo):</p><ul><li>Botón <strong>Teammate</strong> (Compañero) — con el marcador en reposo, inicia una llamada interna directa a un colega.</li><li>Botón <strong>Conference/Transfer</strong> (Conferencia/Transferencia) — durante una llamada en vivo, mueve o comparte la llamada: entréguela a un compañero, déjela en una cola, envíela a un número externo o agregue un agente de IA.</li></ul><blockquote>💡 Si un usuario no ve el botón <strong>Teammate</strong>, verifique que las transferencias estén habilitadas y que el usuario esté incluido en el alcance de <strong>Who can transfer</strong>.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/call-transfer-dialer-button-light.png", "alt": "Teclado del marcador web con el botón Teammate", "caption": "El botón Teammate aparece en el marcador cuando las transferencias están habilitadas.", "theme": "light" },
+        { "src": "images/contact-center/call-transfer-dialer-button-dark.png", "alt": "Teclado del marcador web con el botón Teammate", "caption": "El botón Teammate aparece en el marcador cuando las transferencias están habilitadas.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "teammate-call",
+      "title": "Llame a un compañero directamente (llamadas internas)",
+      "content": "<p>Sin un cliente en la línea, el botón <strong>Teammate</strong> simplemente inicia una llamada interna:</p><ol><li>En el marcador web, haga clic en <strong>Teammate</strong>.</li><li>En la ventana <strong>Call a teammate</strong> (Llamar a un compañero), elija un colega en <strong>Select a teammate</strong> (Seleccionar un compañero). Solo se muestran los compañeros que tienen el marcador web abierto en ese momento.</li><li>Haga clic en <strong>Call teammate</strong> — su marcador web suena como cualquier llamada entrante.</li></ol><p>Estas llamadas aparecen en sus registros como llamadas internas, y se graban/transcriben si lo habilitó en el paso anterior.</p>",
+      "images": [
+        { "src": "images/contact-center/call-transfer-teammate-modal-light.png", "alt": "Ventana Call a teammate con el selector de compañeros", "caption": "Elija cualquier compañero en línea — su marcador suena al instante.", "theme": "light" },
+        { "src": "images/contact-center/call-transfer-teammate-modal-dark.png", "alt": "Ventana Call a teammate con el selector de compañeros", "caption": "Elija cualquier compañero en línea — su marcador suena al instante.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "live-transfer-options",
+      "title": "Transfiera una llamada en vivo: compañero, número o conferencia",
+      "content": "<p>Durante una llamada en vivo, el mismo botón abre la ventana <strong>Conference / Transfer</strong> con cuatro pestañas. Esto hace cada una:</p><ul><li><strong>A teammate</strong> (Un compañero) — elija un colega en línea. Filtre la lista por grupo de permisos (etiquetas en la parte superior) o por habilidad (<strong>Filter by skill…</strong>) — escribir un nombre, una habilidad o un grupo en el buscador funciona por igual. Las habilidades se asignan por miembro en <strong>User Management → Groups → ⚙️</strong>.</li><li><strong>A number</strong> (Un número) — marque cualquier número externo hacia la llamada. Elija su identificador de llamada saliente en <strong>Call from</strong> (Llamar desde) y escriba el número.</li><li><strong>AI Agent</strong> (Agente de IA) — agregue uno de sus agentes de IA a la llamada como participante adicional. Todos permanecen en la línea, y usted puede colgar cuando quiera para dejar a la IA con el cliente.</li><li><strong>A queue</strong> (Una cola) — deje al cliente en la cola de un grupo (siguiente paso).</li></ul><p><strong>Cálida vs. ciega — la decisión clave.</strong> Para transferencias a compañeros y números, el interruptor <strong>Hand off &amp; drop when they join (blind transfer)</strong> (Entregar y salir cuando se unan — transferencia ciega) define su destino:</p><ul><li><strong>Apagado (conferencia, predeterminado)</strong> — el botón dice <strong>Add to call</strong> (Agregar a la llamada). Usted permanece en la línea, todos se escuchan entre sí y puede seguir agregando participantes. Perfecto para presentaciones cálidas.</li><li><strong>Encendido (transferencia ciega)</strong> — el botón dice <strong>Transfer &amp; leave</strong> (Transferir y salir). En cuanto la nueva parte se une, usted sale automáticamente — una entrega limpia en un solo sentido.</li></ul><p>Mientras se agrega una parte, una línea de estado en vivo muestra <strong>Dialing…</strong> (Marcando), <strong>Ringing…</strong> (Sonando) y luego <strong>Joined</strong> (Unido) — o <strong>No answer</strong> / <strong>Failed</strong> — para que nunca esté adivinando. El cliente permanece en la llamada y lo escucha a usted durante toda una adición cálida.</p><blockquote>💡 Las transferencias también funcionan en llamadas gestionadas con el <a data-href=\"/campaigns/human-dialer\">Human Dialer</a> — la misma ventana, las mismas pestañas.</blockquote>"
+    },
+    {
+      "id": "queue-transfers",
+      "title": "Deje a un cliente en una cola",
+      "content": "<p>La pestaña <strong>A queue</strong> (Una cola) es su válvula de escape cuando la persona indicada aún no está libre. Deja al cliente en la cola de un grupo de permisos: escucha la música de espera del grupo mientras el sistema hace sonar a los agentes en línea del grupo hasta que uno conteste — incluso si nadie está en línea en ese momento.</p><ol><li>En la ventana <strong>Conference / Transfer</strong>, haga clic en <strong>A queue</strong>.</li><li>Elija un grupo en <strong>Select a queue (group)</strong> (Seleccionar una cola — grupo).</li><li>Opcionalmente afínelo con el filtro de habilidades — solo sonarán los miembros que tengan <em>todas</em> las habilidades seleccionadas.</li><li>Decida con <strong>Leave the call after placing in queue</strong> (Salir de la llamada tras dejarla en cola): activado, usted sale de inmediato (<strong>Queue &amp; leave</strong>) y el sistema retiene al cliente; desactivado, usted permanece en la línea mientras la cola suena (<strong>Place in queue</strong>) y puede colgar cuando quiera.</li></ol><p>El tiempo máximo de espera, la música de espera, los mensajes periódicos de \"gracias por esperar\" y lo que ocurre al agotarse el tiempo (colgar o pasar al cliente a un agente de IA) provienen de la configuración de cola del grupo — vea <a data-href=\"/contact-center/queue-settings\">Configuración de Colas</a> y <a data-href=\"/contact-center/wait-hold\">Audio de Espera</a>.</p>"
+    },
+    {
+      "id": "ai-transfer-tool",
+      "title": "Permita que su agente de IA transfiera clientes a humanos",
+      "content": "<p>Aquí está la magia: su IA contesta 24/7 y, en cuanto el cliente pide hablar con una persona, lo pasa a su equipo. Esa es la herramienta <strong>Internal Transfer</strong> (Transferencia Interna):</p><ol><li>Vaya a <strong>Smart Agents</strong>, abra su agente y haga clic en la fila <strong>Tools / MCP</strong> (Herramientas / MCP).</li><li>Haga clic en <strong>Add Tool</strong> (Agregar herramienta) y elija <strong>Internal Transfer</strong>.</li><li>Configure la herramienta:</li></ol><ul><li><strong>Description</strong> (Descripción) — le indica a la IA <em>cuándo</em> transferir (p. ej., \"cuando el cliente pida un humano o usted no pueda ayudar\"). Edítela según su política.</li><li><strong>Transfer mode</strong> (Modo de transferencia) — <strong>Ring the group (wait for an answer)</strong>: la IA hace sonar al grupo y, si nadie contesta, retoma la conversación sin cortes. <strong>Send to queue &amp; leave</strong>: el cliente queda en la cola del grupo (música de espera + timbrado) y la IA se retira sin esperar.</li><li><strong>Permission Group</strong> (Grupo de permisos) — el equipo que sonará. Todos los miembros del grupo que estén <strong>Online</strong> en el marcador web suenan a la vez; el primero en contestar toma la llamada.</li><li><strong>Skills (optional)</strong> (Habilidades, opcional) — solo suenan los miembros que tengan <em>todas</em> las habilidades seleccionadas.</li><li><strong>No-Answer Timeout (seconds)</strong> (Tiempo sin respuesta, segundos) — cuánto tiempo sonar antes de que la IA desista y retome (solo modo ring; 5–600, predeterminado 25).</li><li><strong>What the caller hears while waiting</strong> (Qué escucha el cliente mientras espera) — <strong>Ringtone</strong> (tono estándar), <strong>Hold music</strong> (la música de esta herramienta, la del grupo o una predeterminada) o <strong>No sound</strong> (silencio).</li><li><strong>Override group settings (optional)</strong> (Anular la configuración del grupo) — suba música de espera propia, defina un mensaje periódico hablado (\"Gracias por esperar — un agente lo atenderá en breve.\") y su intervalo, solo para esta herramienta.</li><li><strong>Agent Speaks While Connecting (hold message)</strong> (La IA habla mientras conecta) — haga que la IA diga una frase como \"Un momento mientras lo comunico con nuestro equipo…\" al empezar a timbrar.</li></ul><blockquote>💡 ¿Necesita que la IA envíe a los clientes a un número <em>externo</em> (un servicio de contestación, el celular de un gerente)? Agregue la herramienta <strong>SIP Transfer</strong> de la misma manera — vea <a data-href=\"/agents/agent-tools\">Herramientas del Agente</a>.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/call-transfer-ai-tool-light.png", "alt": "Formulario de configuración de la herramienta Internal Transfer", "caption": "La herramienta Internal Transfer — elija un grupo, un modo y qué escucha el cliente.", "theme": "light" },
+        { "src": "images/contact-center/call-transfer-ai-tool-dark.png", "alt": "Formulario de configuración de la herramienta Internal Transfer", "caption": "La herramienta Internal Transfer — elija un grupo, un modo y qué escucha el cliente.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "what-each-party-hears",
+      "title": "Qué escucha cada parte (referencia rápida)",
+      "content": "<p>Una transferencia se siente profesional cuando nadie escucha silencio incómodo. Este es el mapa de sonido:</p><ul><li><strong>IA → humano (modo ring):</strong> el cliente escucha el audio de espera elegido (tono, música o silencio) — más el mensaje de la IA si lo habilitó. Los marcadores web de los agentes suenan; el primero en contestar entra a la llamada. Si nadie contesta antes del tiempo límite, la IA retoma la conversación con naturalidad.</li><li><strong>IA → cola / agente → cola:</strong> el cliente escucha la música de espera del grupo con su mensaje periódico en bucle, mientras los marcadores de los agentes en línea suenan hasta que alguien conteste. Al agotarse el tiempo, la configuración de cola del grupo decide: colgar o pasar a un agente de IA.</li><li><strong>Adición cálida (conferencia):</strong> el cliente sigue escuchándolo a usted mientras la nueva línea marca y suena — cuando se une, todos quedan en la misma llamada.</li><li><strong>Transferencia ciega:</strong> el cliente habla con usted hasta que la nueva parte se une; usted sale en silencio en ese instante.</li><li><strong>Llamada interna entre compañeros:</strong> el marcador web del compañero suena como cualquier llamada entrante; no hay ningún cliente involucrado.</li></ul><p>Eso es todo — sus clientes ahora siempre pueden llegar a un humano, y su equipo puede pasar llamadas como un call center experimentado. 🎉</p>"
     }
   ],
   "nextSteps": {
     "title": "¿Qué sigue?",
-    "description": "Completa la configuración de tu Contact Center.",
+    "description": "Las transferencias brillan más con buenos equipos y colas detrás — configúrelos a continuación.",
     "cards": [
-      { "href": "/contact-center/overview", "title": "Visión general del Contact Center", "description": "El Live Monitor y los controles de supervisor." },
-      { "href": "/contact-center/groups", "title": "Grupos de permisos", "description": "Crea equipos y dirige llamadas hacia ellos." },
-      { "href": "/contact-center/agent-guide", "title": "La experiencia del agente", "description": "Cómo los agentes transfieren y manejan llamadas." }
+      { "href": "/contact-center/groups", "title": "Grupos de Permisos", "description": "Cree los equipos que sus transferencias y colas harán sonar." },
+      { "href": "/contact-center/queue-settings", "title": "Configuración de Colas", "description": "Espera máxima, acciones por tiempo agotado y comportamiento de la cola por grupo." },
+      { "href": "/contact-center/wait-hold", "title": "Audio de Espera", "description": "Música de espera, audio de timbrado y mensajes periódicos." },
+      { "href": "/contact-center/agent-guide", "title": "La Experiencia del Agente", "description": "Cómo sus agentes humanos contestan, retienen y transfieren día a día." }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
+    "title": "¿Necesita ayuda?",
+    "content": "<p>Si tiene algún problema o pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Ajustes de transferencia de llamadas | iMash Docs",
-  "metaDescription": "Activa la transferencia de llamadas a nivel de tenant en el Contact Center de iMash: permite a los operadores transferir llamadas en vivo a compañeros o números salientes, define quién puede hacerlo y graba las llamadas internas.",
-  "metaKeywords": "transferencia de llamadas, transferencia de operador, compañero, saliente, grabación de llamadas internas, contact center, web dialer"
+  "metaTitle": "Configuración de Transferencia de Llamadas | Documentación de iMash",
+  "metaDescription": "Habilite las transferencias de llamadas en iMash: entregas de IA a humano con la herramienta Internal Transfer, transferencias entre compañeros y conferencias desde el marcador web, colas con música de espera y grabación de llamadas internas.",
+  "metaKeywords": "transferencia de llamadas, transferencia de IA a humano, transferir a grupo, llamada en conferencia, transferencia ciega, transferencia cálida, transferencia a cola, música de espera, llamadas internas, contact center, marcador web"
 }

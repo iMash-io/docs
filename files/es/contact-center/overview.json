@@ -1,56 +1,106 @@
 {
-  "title": "Visión general del Contact Center",
-  "lede": "El Contact Center es donde tus agentes humanos reciben y hacen llamadas telefónicas. Esta guía te muestra las cuatro pestañas, el Live Monitor (Monitor en vivo) y cómo los supervisores pueden escuchar las llamadas en vivo.",
-  "timeToComplete": "6 minutos",
+  "title": "Visión General del Contact Center",
+  "lede": "El Contact Center es su centro de mando para las llamadas humanas: una sola pantalla donde observa cada llamada en vivo en tiempo real, ve qué agentes están disponibles, escucha con Monitor/Whisper/Barge y administra sus equipos. Esta guía le muestra cada pestaña, indicador y botón.",
+  "timeToComplete": "8 minutos",
   "steps": [
     {
       "id": "open-contact-center",
-      "title": "Abre el Contact Center",
-      "content": "<ol><li>En la navegación izquierda, abre <strong>Call Center</strong> (Centro de llamadas).</li><li>Haz clic en <strong>Contact Center</strong>.</li><li>Llegas a un espacio de trabajo con hasta cuatro pestañas en la parte superior: <strong>Live Monitor</strong> (Monitor en vivo), <strong>Reporting</strong> (Reportes), <strong>Groups</strong> (Grupos) y <strong>Call Transfer</strong> (Transferencia de llamadas).</li></ol><p>Las pestañas que ves dependen de tu rol en el Contact Center. Los agentes solo ven Live Monitor (como vista de cola), Monitor/QA también ve Reporting, y los Admins ven las cuatro incluyendo Groups y Call Transfer.</p>"
-    },
-    {
-      "id": "live-monitor",
-      "title": "Observa las llamadas en vivo en Live Monitor",
-      "content": "<p>La pestaña <strong>Live Monitor</strong> (Monitor en vivo) es tu tablero en tiempo real:</p><ul><li>Los mosaicos de estadísticas en la parte superior muestran los conteos de <strong>Ringing / queued</strong> (Sonando / en cola), <strong>On calls</strong> (En llamada), <strong>Agents online</strong> (Agentes en línea), <strong>On break</strong> (En descanso), <strong>Busy</strong> (Ocupado) y <strong>On queue</strong> (En cola).</li><li><strong>Live Calls</strong> (Llamadas en vivo) lista cada llamada activa con sus participantes, la dirección y un cronómetro en marcha. <strong>On Queue</strong> (En cola) lista a las personas que esperan a un agente.</li><li>La lista <strong>Human Agents</strong> (Agentes humanos) a la derecha muestra a cada agente con un punto de estado de color: verde = <strong>online</strong> (en línea), ámbar = <strong>break</strong> (descanso), azul = <strong>busy</strong> (ocupado), gris = <strong>offline</strong> (desconectado).</li></ul>",
+      "title": "Abra el Contact Center",
+      "content": "<p>Todo lo que cubre esta guía vive en una sola página — primero lleguemos ahí.</p><ol><li>En la barra lateral izquierda, desplácese hasta la sección <strong>CALL CENTER</strong> y haga clic en <strong>Contact Center</strong>. (También puede hacer clic en <strong>Contact Center</strong> en la barra de navegación superior.)</li><li>Llegará a un espacio de trabajo con hasta cuatro pestañas en la parte superior: <strong>Live Monitor</strong> (Monitor en Vivo), <strong>Reporting</strong> (Reportes), <strong>Groups</strong> (Grupos) y <strong>Call Transfer</strong> (Transferencia de Llamadas).</li></ol><p>Las pestañas que ve dependen de su rol en el Contact Center:</p><ul><li><strong>Agent</strong> (Agente) — solo ve Live Monitor, como una vista limpia de solo cola (sin herramientas de supervisor).</li><li><strong>Monitor / QA</strong> — ve Live Monitor y Reporting, y puede escuchar llamadas en silencio.</li><li><strong>Supervisor</strong> — todo lo anterior, más Whisper/Barge, silenciar, terminar y los controles de forzar estado.</li><li><strong>Admin</strong> (y la cuenta principal) — las cuatro pestañas, incluidas Groups y Call Transfer.</li></ul><blockquote>💡 Los roles se asignan por miembro dentro de cada grupo de permisos — consulte la guía <em>Miembros y Roles</em> para configurarlos.</blockquote>",
       "images": [
-        { "src": "images/contact-center/cc-live-monitor-light.png", "alt": "Pestaña Live Monitor", "caption": "Live Monitor: mosaicos del tablero, llamadas en vivo y la lista de Human Agents.", "theme": "light" },
-        { "src": "images/contact-center/cc-live-monitor-dark.png", "alt": "Pestaña Live Monitor", "caption": "Live Monitor: mosaicos del tablero, llamadas en vivo y la lista de Human Agents.", "theme": "dark" }
+        { "src": "images/contact-center/cc-live-monitor-light.png", "alt": "La página del Contact Center con la pestaña Live Monitor abierta", "caption": "El Contact Center: cuatro pestañas arriba, el tablero, las llamadas en vivo y la lista de Human Agents.", "theme": "light" },
+        { "src": "images/contact-center/cc-live-monitor-dark.png", "alt": "La página del Contact Center con la pestaña Live Monitor abierta", "caption": "El Contact Center: cuatro pestañas arriba, el tablero, las llamadas en vivo y la lista de Human Agents.", "theme": "dark" }
       ]
     },
     {
-      "id": "supervisor-controls",
-      "title": "Monitorea, susurra o interviene en una llamada",
-      "content": "<p>Los supervisores y admins pueden unirse a cualquier llamada en vivo desde su tarjeta:</p><ul><li><strong>Monitor</strong> (Monitorear) — escucha en silencio; nadie en la llamada te oye.</li><li><strong>Whisper</strong> (Susurrar) — habla en privado con tu agente (el cliente nunca te oye).</li><li><strong>Barge</strong> (Intervenir) — únete a la conversación como participante en una llamada a tres.</li></ul><p>También puedes usar <strong>Mute AI agent</strong> (Silenciar agente de IA) o <strong>Terminate</strong> (Terminar) la llamada. Los usuarios Monitor/QA obtienen solo el Monitor de escucha; los agentes no tienen controles de supervisor.</p>"
+      "id": "read-the-wallboard",
+      "title": "Lea el tablero de un vistazo",
+      "content": "<p>Los seis indicadores en la parte superior de <strong>Live Monitor</strong> son su tablero en tiempo real — se actualizan automáticamente, sin necesidad de refrescar:</p><ul><li><strong>Ringing / queued</strong> (Timbrando / en cola) — llamadas marcando o timbrando que nadie ha contestado aún.</li><li><strong>On calls</strong> (En llamada) — llamadas conectadas y activas en este momento.</li><li><strong>Agents online</strong> (Agentes en línea) — agentes humanos conectados y listos para recibir llamadas.</li><li><strong>On break</strong> (En pausa) — agentes conectados pero que temporalmente no reciben llamadas.</li><li><strong>Busy</strong> (Ocupado) — agentes actualmente en una llamada.</li><li><strong>On queue</strong> (En cola) — clientes en espera en una cola de grupo de habilidades, aguardando un agente.</li></ul>",
+      "images": [
+        { "src": "images/contact-center/overview-wallboard-light.png", "alt": "Los seis indicadores del tablero", "caption": "El tablero: timbrando, en llamada, agentes en línea, en pausa, ocupados y en cola — todo en vivo.", "theme": "light" },
+        { "src": "images/contact-center/overview-wallboard-dark.png", "alt": "Los seis indicadores del tablero", "caption": "El tablero: timbrando, en llamada, agentes en línea, en pausa, ocupados y en cola — todo en vivo.", "theme": "dark" }
+      ]
     },
     {
-      "id": "agent-status",
-      "title": "Comprende los estados del agente",
-      "content": "<p>Cada agente configura su propia disponibilidad desde el web dialer (marcador web):</p><ul><li><strong>Online</strong> (En línea) — listo para recibir llamadas en cola y entrantes.</li><li><strong>On break</strong> (En descanso) — con sesión iniciada pero sin recibir llamadas.</li><li><strong>Offline</strong> (Desconectado) — fuera de la cola.</li></ul><p>Los supervisores pueden forzar a un agente a Ready (Listo), Not Ready (No listo / descanso) o cerrarle la sesión desde los botones de acción de la lista.</p>"
+      "id": "watch-live-calls",
+      "title": "Observe las llamadas en vivo mientras suceden",
+      "content": "<p>El panel principal tiene un selector <strong>Live Calls</strong> (Llamadas en Vivo) / <strong>On Queue</strong> (En Cola). Con <strong>Live Calls</strong> seleccionado, una franja de desglose cuenta <strong>Live Calls</strong>, <strong>Dialing</strong> (Marcando), <strong>Ongoing</strong> (En curso), <strong>Transferred</strong> (Transferidas) y <strong>Events Flagged</strong> (Eventos Marcados), y debajo cada llamada activa tiene su propia tarjeta que muestra:</p><ul><li><strong>Etiquetas de estado</strong> — el estado de la llamada (Dialing, Ringing, Ongoing…), <strong>↘ Inbound</strong> (entrante) u <strong>↗ Outbound</strong> (saliente), y el tipo de llamada (Phone o Web).</li><li><strong>Chips de cola/grupo y campaña</strong> — a qué número de grupo llamaron, o qué campaña originó la llamada.</li><li><strong>Un reloj en marcha</strong> — el tiempo transcurrido en vivo desde que empezó la llamada.</li><li><strong>El número del cliente</strong> y el número al que llamó (o desde el que fue llamado).</li><li><strong>Parties</strong> (Participantes) — todos los que están en la línea en una fila: el agente de IA, los agentes humanos y las líneas telefónicas adicionales. Una campana pulsante muestra a quién está timbrando la llamada en este momento, y un icono de ojo cuenta los supervisores que monitorean.</li><li><strong>Etiquetas de eventos del observador</strong> — si un Observer Agent vigila sus llamadas, los eventos detectados por IA (como un cliente molesto) aparecen como etiquetas de color, y la tarjeta recibe un acento de color para que resalte.</li></ul><blockquote>💡 El borde izquierdo de la tarjeta usa un código de colores: ámbar = timbrando, verde = hay un humano en la línea, azul = llamada de IA en curso, y un evento del observador los anula a todos con su propio color.</blockquote>"
+    },
+    {
+      "id": "monitor-whisper-barge",
+      "title": "Monitor, Whisper o Barge en una llamada",
+      "content": "<p>Este es el superpoder del Live Monitor: únase a cualquier llamada en vivo sin que el cliente lo sepa — o entre de lleno cuando su agente necesite refuerzos.</p><ol><li>En la tarjeta de una llamada en vivo, haga clic en <strong>Monitor</strong>. Su navegador se conecta al audio de la llamada en silencio.</li><li>Una vez conectado, aparece un selector de tres modos. Elija el suyo — el cambio es instantáneo, sin reconexión:<ul><li><strong>Monitor</strong> — usted escucha todo; nadie lo escucha a usted.</li><li><strong>Whisper</strong> (Susurro) — usted puede hablar, pero solo sus agentes lo escuchan. El cliente nunca — perfecto para coaching en vivo.</li><li><strong>Barge</strong> (Intervenir) — se une como participante pleno; todos lo escuchan (una conversación a tres).</li></ul></li><li>Junto al selector de modo también tiene:<ul><li><strong>Mute AI agent</strong> (Silenciar agente de IA — icono de altavoz) — silencie la IA a mitad de llamada, p. ej. cuando un humano ya tomó el control.</li><li><strong>Leave</strong> (Salir) — desconecta su sesión de escucha (la llamada continúa).</li></ul></li><li>El botón rojo de <strong>detener</strong> finaliza la llamada para <em>todos</em> — se le pedirá confirmar <strong>Terminate</strong> (Terminar).</li></ol><blockquote>⚠️ Los usuarios Monitor/QA solo tienen <strong>Monitor</strong> de escucha — Whisper, Barge, silenciar y terminar requieren el rol Supervisor o Admin.</blockquote>"
+    },
+    {
+      "id": "on-queue",
+      "title": "Revise quién espera en la cola",
+      "content": "<p>Haga clic en <strong>On Queue</strong> (En Cola) en el selector del panel para ver a cada cliente actualmente en espera en una cola de grupo de habilidades (escuchando música de espera mientras se busca un agente):</p><ul><li><strong>Waiting</strong> (Esperando) o <strong>Ringing agents</strong> (Timbrando a agentes) — si la cola aún retiene al cliente o está timbrando activamente a los agentes elegibles.</li><li><strong>In line #</strong> — la posición del cliente en la cola.</li><li><strong>Etiquetas de habilidades</strong> — las habilidades que un agente debe tener para recibir esta llamada.</li><li><strong>→ AI on timeout</strong> / <strong>→ Hang up on timeout</strong> — qué sucede si ningún agente contesta antes de la espera máxima de la cola.</li><li><strong>El reloj de espera</strong> — cuánto lleva el cliente en espera; se pone rojo después de dos minutos.</li><li><strong>Agents matched</strong> (Agentes compatibles) — cuántos agentes en línea califican para esta llamada, y quién la puso en cola (si un compañero la transfirió).</li></ul>",
+      "images": [
+        { "src": "images/contact-center/overview-queue-light.png", "alt": "La pestaña On Queue del Live Monitor", "caption": "On Queue: cada cliente en espera con su posición, habilidades, tiempo de espera y acción al agotarse el tiempo.", "theme": "light" },
+        { "src": "images/contact-center/overview-queue-dark.png", "alt": "La pestaña On Queue del Live Monitor", "caption": "On Queue: cada cliente en espera con su posición, habilidades, tiempo de espera y acción al agotarse el tiempo.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "agent-roster",
+      "title": "Administre agentes desde la lista Human Agents",
+      "content": "<p>El panel <strong>Human Agents</strong> (Agentes Humanos) a la derecha lista a cada miembro de su contact center con presencia en vivo — se actualiza cada pocos segundos:</p><ul><li><strong>Agent</strong> — nombre, con un punto de estado de color y una etiqueta dorada <strong>Main</strong> para el dueño de la cuenta.</li><li><strong>Group</strong> — el/los grupo(s) de permisos — es decir, las colas — que este agente atiende.</li><li><strong>Role</strong> — su rol asignado en el Contact Center.</li><li><strong>Status</strong> — <strong>online</strong> (verde, listo para llamadas), <strong>break</strong> (ámbar, conectado pero sin recibir), <strong>busy</strong> (azul, en una llamada) u <strong>offline</strong> (gris).</li></ul><p>Los supervisores y administradores también tienen una columna <strong>Actions</strong> para cambiar el estado de un agente de forma remota:</p><ol><li>Haga clic en el check verde — <strong>Force Ready (Online)</strong> — para devolver a un agente a la rotación.</li><li>Haga clic en la pausa ámbar — <strong>Force Not Ready (Break)</strong> — para sacarlo de la cola.</li><li>Haga clic en el icono rojo de encendido — <strong>Force Logout</strong> — y confirme <strong>Log out</strong> para cerrar su sesión por completo.</li></ol><blockquote>💡 Normalmente los agentes fijan su propio estado con el interruptor Available del marcador web — forzar el estado es su herramienta para cuando alguien olvidó cerrar sesión o hay que incorporarlo durante una hora pico.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/overview-roster-light.png", "alt": "La lista Human Agents con estado y acciones de forzar estado", "caption": "La lista: estado en vivo por agente, sus grupos y roles, y las acciones de forzar Ready / Break / Logout.", "theme": "light" },
+        { "src": "images/contact-center/overview-roster-dark.png", "alt": "La lista Human Agents con estado y acciones de forzar estado", "caption": "La lista: estado en vivo por agente, sus grupos y roles, y las acciones de forzar Ready / Break / Logout.", "theme": "dark" }
+      ]
     },
     {
       "id": "reporting-tab",
-      "title": "Revisa el desempeño en Reporting",
-      "content": "<p>La pestaña <strong>Reporting</strong> (Reportes) resume la actividad de llamadas en seis categorías — <strong>General</strong>, <strong>Human Agents</strong> (Agentes humanos), <strong>AI Agents</strong> (Agentes de IA), <strong>Smart Campaigns</strong> (Campañas inteligentes), <strong>Human Campaigns</strong> (Campañas humanas) y <strong>Queue</strong> (Cola) — con KPIs como total de llamadas, tasa de conexión, tiempo promedio de manejo y costo. Elige un preajuste de fechas y exporta cualquier pestaña a CSV.</p>",
+      "title": "Revise el rendimiento en Reporting",
+      "content": "<p>Haga clic en la pestaña <strong>Reporting</strong> (Reportes) para convertir toda esa actividad en vivo en números. Seis vistas por categoría — <strong>General</strong>, <strong>Human Agents</strong>, <strong>AI Agents</strong>, <strong>Smart Campaigns</strong>, <strong>Human Campaigns</strong> y <strong>Queue</strong> — cubren KPIs como llamadas totales, tasa de conexión, tiempo medio de gestión, disponibilidad de agentes y costo.</p><ol><li>Elija un rango de fechas — <strong>Today</strong> (Hoy), <strong>This week</strong> (Esta semana), <strong>This month</strong> (Este mes), <strong>Last 7 days</strong> (Últimos 7 días), <strong>Last 30 days</strong> (Últimos 30 días) o <strong>Custom</strong> (Personalizado).</li><li>Afine los datos con la fila de filtros (llamadas, asistentes, campañas, propietarios, tipos de llamada, número de teléfono, contacto o UUID de llamada).</li><li>Haga clic en <strong>Export</strong> para descargar la vista activa como CSV.</li></ol><p>Para un recorrido campo por campo de cada columna, consulte la guía dedicada de <em>Reportes</em> enlazada abajo.</p>",
       "images": [
-        { "src": "images/contact-center/cc-reporting-light.png", "alt": "Pestaña Reporting", "caption": "Reporting: tarjetas de KPI, pestañas de categorías, preajustes de fechas y exportación a CSV.", "theme": "light" },
-        { "src": "images/contact-center/cc-reporting-dark.png", "alt": "Pestaña Reporting", "caption": "Reporting: tarjetas de KPI, pestañas de categorías, preajustes de fechas y exportación a CSV.", "theme": "dark" }
+        { "src": "images/contact-center/cc-reporting-light.png", "alt": "La pestaña Reporting", "caption": "Reporting: seis pestañas de categoría, rangos de fechas, filtros y exportación a CSV.", "theme": "light" },
+        { "src": "images/contact-center/cc-reporting-dark.png", "alt": "La pestaña Reporting", "caption": "Reporting: seis pestañas de categoría, rangos de fechas, filtros y exportación a CSV.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "groups-tab",
+      "title": "Construya sus equipos en Groups",
+      "content": "<p>La pestaña <strong>Groups</strong> (Grupos — solo Admin) es donde viven los equipos de su contact center. Cada grupo de permisos funciona también como una cola de llamadas: sus miembros, números entrantes, estrategia de timbrado y experiencia de espera se configuran aquí.</p><ol><li>Haga clic en <strong>+ New Group</strong> (Nuevo Grupo) arriba a la derecha para crear un equipo.</li><li>Seleccione cualquier grupo en la lista izquierda para administrar sus miembros y su configuración de call center (números entrantes, tiempo de timbrado, audio de espera y más).</li></ol><p>La configuración de grupos es un tema en sí mismo — siga la guía <em>Crear un Grupo de Permisos</em> en Próximos Pasos para el recorrido completo de la A a la Z.</p>",
+      "images": [
+        { "src": "images/contact-center/overview-groups-light.png", "alt": "La pestaña Groups con la lista de grupos de permisos", "caption": "Groups: cree equipos y luego seleccione uno para administrar miembros y ajustes de cola.", "theme": "light" },
+        { "src": "images/contact-center/overview-groups-dark.png", "alt": "La pestaña Groups con la lista de grupos de permisos", "caption": "Groups: cree equipos y luego seleccione uno para administrar miembros y ajustes de cola.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "call-transfer-tab",
+      "title": "Habilite transferencias en Call Transfer",
+      "content": "<p>La pestaña <strong>Call Transfer</strong> (Transferencia de Llamadas — solo Admin) controla si los operadores pueden pasar una llamada en vivo a un compañero o a un número externo. Está desactivada por defecto:</p><ol><li>Active <strong>Allow operators to transfer live calls</strong> (Permitir a los operadores transferir llamadas en vivo).</li><li>En <strong>Who can transfer</strong> (Quién puede transferir), elija <strong>All sub-accounts</strong> (Todas las subcuentas) u <strong>Only specific sub-accounts</strong> (Solo subcuentas específicas — y luego seleccione los usuarios permitidos).</li><li>En <strong>Internal teammate calls</strong> (Llamadas internas entre compañeros), habilite opcionalmente <strong>Record internal calls</strong> (Grabar llamadas internas) y <strong>Transcribe internal calls (multi-party)</strong> (Transcribir llamadas internas) — las llamadas entre compañeros siempre quedan registradas con su resultado de todos modos.</li><li>Haga clic en <strong>Save</strong> (Guardar) arriba a la derecha.</li></ol>",
+      "images": [
+        { "src": "images/contact-center/overview-call-transfer-light.png", "alt": "La pestaña de configuración Call Transfer", "caption": "Call Transfer: habilite transferencias, delimite quién puede usarlas y capture las llamadas internas.", "theme": "light" },
+        { "src": "images/contact-center/overview-call-transfer-dark.png", "alt": "La pestaña de configuración Call Transfer", "caption": "Call Transfer: habilite transferencias, delimite quién puede usarlas y capture las llamadas internas.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "live-calls-page",
+      "title": "Explore la página independiente Live Calls",
+      "content": "<p>¿Prefiere una vista dedicada a pantalla completa del tráfico de llamadas? La página <strong>Live Calls</strong> (Llamadas en Vivo) ofrece la misma visibilidad en tiempo real en un formato de tablero:</p><ol><li>En la barra lateral izquierda, bajo <strong>CALL CENTER</strong>, haga clic en <strong>Live Calls</strong> (también disponible como el chip <strong>LIVE CALLS</strong> en la barra de sección del Contact Center).</li><li>Los indicadores cuentan <strong>Live Calls</strong>, <strong>Dialing</strong>, <strong>Ongoing</strong>, <strong>Transferred</strong>, <strong>Events Flagged</strong> y <strong>Finished</strong> (Finalizadas).</li><li>Cambie entre <strong>Tabs</strong> (una tabla con pestañas <strong>All Live</strong> / <strong>Finished</strong>) y <strong>Columns</strong> (un tablero kanban donde las llamadas avanzan por etapas) con los botones de arriba a la derecha.</li><li>Cada fila de llamada ofrece las mismas acciones que el Live Monitor — el icono de ojo para <strong>Monitor</strong> (y luego Whisper / Barge), un icono de mensaje para la <strong>transcripción en vivo</strong> mientras la llamada transcurre, y el botón rojo para finalizarla.</li></ol><blockquote>💡 Use el Live Monitor del Contact Center para supervisar a su equipo humano (lista + cola + forzar estado), y la página Live Calls cuando quiera un gran tablero de todas las llamadas — incluidas las finalizadas — con la transcripción en vivo a mano.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/overview-live-calls-page-light.png", "alt": "La página independiente Live Calls", "caption": "Live Calls: indicadores, vistas Tabs/Columns y acciones por llamada de monitoreo, transcripción y finalización.", "theme": "light" },
+        { "src": "images/contact-center/overview-live-calls-page-dark.png", "alt": "La página independiente Live Calls", "caption": "Live Calls: indicadores, vistas Tabs/Columns y acciones por llamada de monitoreo, transcripción y finalización.", "theme": "dark" }
       ]
     }
   ],
   "nextSteps": {
-    "title": "¿Qué sigue?",
-    "description": "Configura tus equipos y comprende lo que los agentes ven día a día.",
+    "title": "¿Qué Sigue?",
+    "description": "Ya conoce su centro de mando — ahora toca construir el equipo que lo opera.",
     "cards": [
-      { "href": "/contact-center/groups", "title": "Crear un grupo de permisos", "description": "Arma un equipo o grupo de habilidad de agentes humanos." },
-      { "href": "/contact-center/agent-guide", "title": "La experiencia del agente", "description": "Mira cómo los agentes toman llamadas con el web dialer." },
-      { "href": "/contact-center/reporting", "title": "Reportes", "description": "Profundiza en los KPIs y las exportaciones a CSV." }
+      { "href": "/contact-center/groups", "title": "Crear un Grupo de Permisos", "description": "Construya un equipo o grupo de habilidades de agentes humanos con su propia cola." },
+      { "href": "/contact-center/members-roles", "title": "Miembros y Roles", "description": "Agregue agentes y asigne los roles Agent, Monitor, Supervisor o Admin." },
+      { "href": "/contact-center/agent-guide", "title": "La Experiencia del Agente", "description": "Vea cómo los agentes atienden llamadas día a día con el marcador web." },
+      { "href": "/contact-center/reporting", "title": "Reportes", "description": "Profundice en cada KPI, filtro y exportación a CSV." }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
+    "title": "¿Necesita Ayuda?",
+    "content": "<p>Si tiene algún problema o alguna pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
   },
-  "metaTitle": "Visión general del Contact Center | iMash Docs",
-  "metaDescription": "Conoce el Contact Center de iMash: las pestañas Live Monitor, Reporting, Groups y Call Transfer, los estados del agente y los controles de supervisor Monitor/Whisper/Barge.",
-  "metaKeywords": "contact center, live monitor, supervisor, whisper, barge, estado del agente, call center, agentes humanos"
+  "metaTitle": "Visión General del Contact Center | Documentación de iMash",
+  "metaDescription": "Conozca el Contact Center de iMash: el tablero en vivo, los controles de supervisor Monitor/Whisper/Barge, la cola de grupos de habilidades, la lista de agentes con forzar estado, Reportes, Grupos, Transferencia de Llamadas y la página independiente Live Calls.",
+  "metaKeywords": "contact center, monitor en vivo, tablero, supervisor, monitor, whisper, barge, cola, estado del agente, forzar estado, transferencia de llamadas, llamadas en vivo, reportes, call center, agentes humanos"
 }

@@ -1,47 +1,89 @@
 {
   "title": "Ring Strategy",
-  "lede": "Control how a group's online members are rung, how long the group rings before falling back to AI, and a few call-handling behaviors like force auto-answer. These settings apply to inbound calls, AI transfers, and queues alike.",
-  "timeToComplete": "6 minutes",
+  "lede": "Decide exactly how your team gets rung — everyone at once in a race to answer, or one member at a time in a smart rotation — plus how long the group rings before your AI agent steps in. One tab controls it all, and it applies to inbound calls, AI transfers, and queues alike.",
+  "timeToComplete": "7 minutes",
   "steps": [
     {
       "id": "open-ring",
       "title": "Open the Ring strategy tab",
-      "content": "<ol><li>Go to <strong>Call Center &rarr; Contact Center &rarr; Groups</strong> and select a group.</li><li>Open the <strong>Ring strategy</strong> tab.</li></ol>",
+      "content": "<p>Ring strategy is configured per group, so every team can ring its own way.</p><ol><li>In the left sidebar, click <strong>Contact Center</strong> (under <em>Call Center</em>).</li><li>Click the <strong>Groups</strong> tab at the top (visible to Contact Center admins and the main account).</li><li>In the <strong>Groups</strong> list on the left, click the group you want to configure.</li><li>In the group's panel on the right, open the <strong>Ring strategy</strong> inner tab.</li></ol><p>You'll see three cards: <strong>Ring strategy</strong> (how and how long members ring), <strong>Call handling</strong> (behavior toggles), and <strong>When no one answers</strong> (the AI fallback).</p><blockquote>💡 Don't have a group yet? Create one first — see the <em>Create a Permission Group</em> guide — and add members before tuning how it rings.</blockquote>",
       "images": [
-        { "src": "images/contact-center/cc-group-ring-strategy-light.png", "alt": "Ring strategy tab", "caption": "Ring strategy: how members are rung, the AI fallback, and call handling.", "theme": "light" },
-        { "src": "images/contact-center/cc-group-ring-strategy-dark.png", "alt": "Ring strategy tab", "caption": "Ring strategy: how members are rung, the AI fallback, and call handling.", "theme": "dark" }
+        { "src": "images/contact-center/cc-group-ring-strategy-light.png", "alt": "Ring strategy tab inside a group's settings", "caption": "The Ring strategy tab: ring strategy, call handling, and the AI fallback for the selected group.", "theme": "light" },
+        { "src": "images/contact-center/cc-group-ring-strategy-dark.png", "alt": "Ring strategy tab inside a group's settings", "caption": "The Ring strategy tab: ring strategy, call handling, and the AI fallback for the selected group.", "theme": "dark" }
       ]
     },
     {
       "id": "when-ringing",
       "title": "Choose how the group is rung",
-      "content": "<p>Under <strong>When ringing the group</strong>, pick a strategy:</p><ul><li><strong>Ring all at once</strong> — every online member rings; first to answer wins (default).</li><li><strong>Round-robin</strong> — one member at a time, rotating between members.</li><li><strong>Linear</strong> — one at a time, always starting from the top of the member list.</li><li><strong>Longest idle</strong> — ring whoever has waited longest since their last call.</li></ul><p>For the one-at-a-time strategies, set <strong>Ring each member for (seconds)</strong> before the call advances.</p>"
+      "content": "<p>In the <strong>Ring strategy</strong> card, open the <strong>When ringing the group</strong> dropdown and pick one of four strategies:</p><ul><li><strong>Ring all at once — first to answer wins (default)</strong> — every online member's dialer rings simultaneously. Fastest pickup, ideal for small teams.</li><li><strong>Round-robin — one at a time, rotating between members</strong> — each new call starts with the next member in the rotation, spreading calls evenly across the team.</li><li><strong>Linear — one at a time, always from the top of the member list</strong> — every call tries the same order, so your best or most senior agent always gets first crack.</li><li><strong>Longest idle — ring whoever has waited longest since their last call</strong> — the fairest option: the member who has been free the longest rings first.</li></ul><p>Whichever you choose applies everywhere this group is rung — inbound calls to its numbers, AI transfers to the group, and queued callers.</p><blockquote>💡 Only <strong>online</strong> members are rung — a member counts as online when their web dialer is open and set to <strong>Available</strong>. Offline members are simply skipped.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/ring-strategy-policy-options-light.png", "alt": "When ringing the group dropdown options", "caption": "The four ring strategies: all at once, round-robin, linear, and longest idle.", "theme": "light" },
+        { "src": "images/contact-center/ring-strategy-policy-options-dark.png", "alt": "When ringing the group dropdown options", "caption": "The four ring strategies: all at once, round-robin, linear, and longest idle.", "theme": "dark" }
+      ]
     },
     {
-      "id": "ring-seconds",
-      "title": "Set how long before routing to AI",
-      "content": "<p>Set <strong>Ring the group for (seconds) before routing to AI</strong>. This is the total time the group is rung. If no member answers within it, the call follows the <strong>When no one answers</strong> option: route to the number's assigned AI agent, route to a different AI agent, or hang up.</p>"
+      "id": "sequential",
+      "title": "Set the per-member ring time (one-at-a-time strategies)",
+      "content": "<p>If you picked <strong>Round-robin</strong>, <strong>Linear</strong>, or <strong>Longest idle</strong>, an extra field appears:</p><ol><li>Set <strong>Ring each member for (seconds) before moving on</strong> — how long each member's phone rings before the call advances to the next member (5–120 seconds; 20 is a solid default).</li></ol><p>The call keeps cycling through your online members, one at a time, until someone answers or the overall ring window (next step) runs out.</p><blockquote>⚠️ Keep the per-member time shorter than the overall <strong>Ring the group for (seconds)</strong> window — otherwise the call may never reach the second member before falling back to AI.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/ring-strategy-sequential-light.png", "alt": "Ring strategy card with Round-robin selected and the per-member seconds field", "caption": "Pick a one-at-a-time strategy and the per-member ring time appears.", "theme": "light" },
+        { "src": "images/contact-center/ring-strategy-sequential-dark.png", "alt": "Ring strategy card with Round-robin selected and the per-member seconds field", "caption": "Pick a one-at-a-time strategy and the per-member ring time appears.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "ring-window",
+      "title": "Set the total ring window before AI takes over",
+      "content": "<p>Set <strong>Ring the group for (seconds) before routing to AI</strong> — the total time the group is rung before the call falls back to the <strong>When no one answers</strong> action (step 7).</p><ul><li>With <strong>Ring all at once</strong>, this is simply how long everyone's dialer rings.</li><li>With a one-at-a-time strategy, this is the overall window the call cycles through members within.</li><li>Minimum 3 seconds, no upper limit — set whatever fits your team. The default is 15.</li></ul><p><strong>What the caller hears while the group rings:</strong> by default, normal phone ringing. Prefer to greet them with music and a spoken message instead? Flip <strong>Play wait audio during the initial group ring</strong> on the group's <strong>Wait &amp; Hold experience</strong> tab — the call answers immediately and plays your wait music while your team is rung.</p>",
+      "images": [
+        { "src": "images/contact-center/ring-strategy-card-light.png", "alt": "Ring strategy card with the total ring window field", "caption": "The total ring window: how long the group rings before the AI fallback runs.", "theme": "light" },
+        { "src": "images/contact-center/ring-strategy-card-dark.png", "alt": "Ring strategy card with the total ring window field", "caption": "The total ring window: how long the group rings before the AI fallback runs.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "first-answer-wins",
+      "title": "Understand first-answer-wins",
+      "content": "<p>Group ringing is a friendly race:</p><ul><li>When the group rings, each online member sees an incoming-call card in their web dialer with <strong>Accept</strong> and <strong>Decline</strong> buttons.</li><li>The <strong>first member to accept wins the call</strong> — the moment they connect, everyone else's ring is released automatically. No double-answers, no awkward three-way pickups.</li><li>With a one-at-a-time strategy only one member rings at a time, so the \"race\" is simply whoever is currently being tried.</li></ul><p>This same mechanic powers inbound calls, AI-to-human transfers, and queued callers ringing out to freed-up agents.</p>"
     },
     {
       "id": "call-handling",
-      "title": "Set call-handling behaviors",
-      "content": "<p>In the <strong>Call handling</strong> card, toggle:</p><ul><li><strong>Force auto-answer</strong> — every online member auto-connects group calls without clicking Accept; the first to win takes it.</li><li><strong>Force auto-open lead/contact</strong> — each member's screen opens the caller's lead/contact record as the call rings.</li><li><strong>Disable auto-leave when the caller hangs up</strong> — keep the member on the line after the caller hangs up (special cases only).</li><li><strong>Hold callers in a queue when no agent is free</strong> — on by default; see Queue Settings.</li></ul><p>Click <strong>Save</strong> when finished.</p>"
+      "title": "Tune the Call handling toggles",
+      "content": "<p>The <strong>Call handling</strong> card holds four behavior switches:</p><ul><li><strong>Force auto-answer</strong> — every online member auto-connects group calls without clicking Accept. The first to win the race takes the call; the rest are released. Great for high-volume teams where every second counts.</li><li><strong>Force auto-open lead/contact</strong> — as the group call rings, each member's screen automatically opens the caller's lead/contact record (when the number matches one), overriding their personal Auto-open preference. Your agents greet callers by name with full context already on screen.</li><li><strong>Disable auto-leave when the caller hangs up</strong> — by default, when the last real (non-AI) party leaves the call, the member's web dialer automatically leaves too. Turn this on only for special cases where the member should stay on the line after the caller hangs up.</li><li><strong>Hold callers in a queue when no agent is free</strong> — on by default. If no member is free, the caller is held in a queue (hold music + their position in line) and rings out the moment an agent frees up, up to the queue max-wait — then the <strong>When no one answers</strong> fallback runs. Turn it off and calls only ring the online members once; if nobody answers, the fallback runs immediately and callers are never queued.</li></ul><blockquote>💡 The queue's max wait, timeout action, and on-hold audio live on the group's <strong>Queue Settings</strong> tab.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/ring-strategy-call-handling-light.png", "alt": "Call handling card with four behavior toggles", "caption": "Call handling: force auto-answer, auto-open lead/contact, disable auto-leave, and queue holding.", "theme": "light" },
+        { "src": "images/contact-center/ring-strategy-call-handling-dark.png", "alt": "Call handling card with four behavior toggles", "caption": "Call handling: force auto-answer, auto-open lead/contact, disable auto-leave, and queue holding.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "fallback",
+      "title": "Choose what happens when no one answers",
+      "content": "<p>Nobody available? No caller left behind. In the <strong>When no one answers</strong> card, choose what happens after the ring window expires — or when no member is online at all:</p><ul><li><strong>Route to the number's assigned AI agent</strong> — the AI agent already assigned to the dialed phone number answers, exactly as if the group weren't involved (default).</li><li><strong>Route to a different AI agent</strong> — pick a specific assistant in the <strong>AI assistant to take the call</strong> dropdown that appears. Perfect for a dedicated \"overflow\" or after-hours agent.</li><li><strong>Hang up the call</strong> — end the call with no AI fallback. Use sparingly — most teams want the AI safety net.</li></ul><blockquote>⚠️ If you pick <strong>Route to a different AI agent</strong>, you must select an assistant — <strong>Save</strong> will refuse until one is chosen.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/ring-strategy-fallback-light.png", "alt": "When no one answers card", "caption": "The AI fallback: what happens after the ring window — or when nobody is online.", "theme": "light" },
+        { "src": "images/contact-center/ring-strategy-fallback-dark.png", "alt": "When no one answers card", "caption": "The AI fallback: what happens after the ring window — or when nobody is online.", "theme": "dark" },
+        { "src": "images/contact-center/ring-strategy-fallback-options-light.png", "alt": "Fallback dropdown options", "caption": "Three fallback choices: the number's AI, a different AI agent, or hang up.", "theme": "light" },
+        { "src": "images/contact-center/ring-strategy-fallback-options-dark.png", "alt": "Fallback dropdown options", "caption": "Three fallback choices: the number's AI, a different AI agent, or hang up.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "save-test",
+      "title": "Save and test your setup",
+      "content": "<ol><li>Click <strong>Save</strong> at the bottom-right — one Save commits every tab of the group's settings.</li><li>Have a team member open the web dialer and set themselves to <strong>Available</strong>.</li><li>Call one of the group's inbound numbers (set on the <strong>Inbound SIP Routing</strong> tab) and watch the ring follow your strategy.</li><li>Then let it ring out on purpose to confirm the <strong>When no one answers</strong> fallback kicks in.</li></ol><p>That's it — your callers now get a human first, in exactly the order you designed, with an AI agent standing by so no call ever goes unanswered.</p>"
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Shape what callers hear and what happens if they wait.",
+    "description": "You control who rings and when — now shape what callers hear while they wait, and what happens if they keep waiting.",
     "cards": [
-      { "href": "/contact-center/wait-hold", "title": "Wait & Hold Experience", "description": "Set the music and messages callers hear." },
-      { "href": "/contact-center/queue-settings", "title": "Queue Settings", "description": "Max wait and on-timeout behavior." },
-      { "href": "/agents/create-agent", "title": "Create an AI Agent", "description": "Build the AI that answers on fallback." }
+      { "href": "/contact-center/wait-hold", "title": "Wait & Hold Experience", "description": "Wait music, hold music, and spoken periodic messages." },
+      { "href": "/contact-center/queue-settings", "title": "Queue Settings", "description": "Max wait, timeout action, and on-hold audio for queued callers." },
+      { "href": "/contact-center/inbound-sip-routing", "title": "Inbound SIP Routing", "description": "Point phone numbers at this group so it rings." }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Ring Strategy | iMash Docs",
-  "metaDescription": "Configure how a Contact Center group rings in iMash — ring all at once or sequentially, seconds before AI fallback, force auto-answer, and auto-open lead/contact.",
-  "metaKeywords": "ring strategy, round robin, ring all, force auto-answer, auto-open contact, ai fallback, contact center"
+  "metaTitle": "Ring Strategy | iMash Documentation",
+  "metaDescription": "Configure how a Contact Center group rings in iMash — ring all at once or one at a time (round-robin, linear, longest idle), per-member and total ring windows, first-answer-wins, call-handling toggles, and the AI fallback when no one answers.",
+  "metaKeywords": "ring strategy, ring all at once, round robin, linear, longest idle, first to answer wins, ring window, force auto-answer, auto-open contact, queue, ai fallback, contact center"
 }

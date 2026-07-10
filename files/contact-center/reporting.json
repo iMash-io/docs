@@ -1,47 +1,123 @@
 {
   "title": "Contact Center Reporting",
-  "lede": "The Reporting tab summarizes call activity across your human agents, AI agents, and campaigns. Filter by date, drill into six report categories, and export any view to CSV.",
-  "timeToComplete": "6 minutes",
+  "lede": "One reporting hub for your entire call operation — human agents, AI agents, dialer campaigns, and queues. Learn every KPI, chart, filter, and how to export any view to CSV in seconds.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
       "id": "open-reporting",
       "title": "Open the Reporting tab",
-      "content": "<ol><li>Go to <strong>Call Center &rarr; Contact Center</strong>.</li><li>Click the <strong>Reporting</strong> tab (available to Monitor/QA and above).</li></ol>",
+      "content": "<p>Everything your call center did — who called, who answered, how long it took, and what it cost — lives in one screen. Here's how to get there:</p><ol><li>In the left sidebar, click <strong>Contact Center</strong> (under the <strong>Call Center</strong> section).</li><li>At the top of the page, click the <strong>Reporting</strong> tab (next to <strong>Live Monitor</strong>).</li></ol><blockquote>💡 The Reporting tab is visible to supervisors and admins (Monitor/QA role and above). If you don't see it, ask your administrator to raise your contact-center role — see <a data-href=\"/contact-center/role-mapping\">Role Mapping</a>.</blockquote>",
       "images": [
-        { "src": "images/contact-center/cc-reporting-light.png", "alt": "Reporting tab", "caption": "Reporting: category tabs, date presets, filters, and KPIs.", "theme": "light" },
-        { "src": "images/contact-center/cc-reporting-dark.png", "alt": "Reporting tab", "caption": "Reporting: category tabs, date presets, filters, and KPIs.", "theme": "dark" }
+        { "src": "images/contact-center/cc-reporting-light.png", "alt": "The Reporting tab inside Contact Center", "caption": "The Reporting tab: category pills, date presets, filters, KPI tiles, and charts — all in one view.", "theme": "light" },
+        { "src": "images/contact-center/cc-reporting-dark.png", "alt": "The Reporting tab inside Contact Center", "caption": "The Reporting tab: category pills, date presets, filters, KPI tiles, and charts — all in one view.", "theme": "dark" }
       ]
     },
     {
-      "id": "categories",
+      "id": "pick-category",
       "title": "Pick a report category",
-      "content": "<p>Use the pill tabs to switch between the six categories:</p><ul><li><strong>General</strong> — overall call volume, connect and answer rates, average talk time.</li><li><strong>Human Agents</strong> — handled calls, AHT, occupancy, and supervision activity.</li><li><strong>AI Agents</strong> — per-assistant calls, containment, escalations, and cost.</li><li><strong>Smart Campaigns</strong> — AI dialer campaigns.</li><li><strong>Human Campaigns</strong> — predictive-dialer calls by dial list.</li><li><strong>Queue</strong> — skill-group queue waits and outcomes.</li></ul>"
+      "content": "<p>The pill bar at the top switches between six report categories — each one slices the same call data from a different angle:</p><ul><li><strong>General</strong> — the big picture: total volume, connect and answer rates, talk time, outcomes, and daily/hourly charts.</li><li><strong>Human Agents</strong> — per-agent scorecards: calls handled, handle time, availability, missed rings, and supervision activity.</li><li><strong>AI Agents</strong> — per-assistant performance: containment, escalations, transfers, and cost.</li><li><strong>Smart Campaigns</strong> — your AI dialer campaigns, with the same metrics grouped by campaign.</li><li><strong>Human Campaigns</strong> — predictive-dialer (Human Dialer) calls grouped by dial list, with operator handle time.</li><li><strong>Queue</strong> — skill-group queue transfers: waits, answer rates, and per-call outcomes.</li></ul><p>Click any pill to switch — the date range and filters you set stay applied across all six.</p>",
+      "images": [
+        { "src": "images/contact-center/reporting-categories-light.png", "alt": "The six report category pills", "caption": "Six categories: General, Human Agents, AI Agents, Smart Campaigns, Human Campaigns, and Queue.", "theme": "light" },
+        { "src": "images/contact-center/reporting-categories-dark.png", "alt": "The six report category pills", "caption": "Six categories: General, Human Agents, AI Agents, Smart Campaigns, Human Campaigns, and Queue.", "theme": "dark" }
+      ]
     },
     {
-      "id": "date-filters",
-      "title": "Set the date range and filters",
-      "content": "<ol><li>Choose a date preset: <strong>Today</strong>, <strong>This week</strong>, <strong>This month</strong>, <strong>Last 7 days</strong>, <strong>Last 30 days</strong>, or <strong>Custom</strong>.</li><li>Open the <strong>Filters</strong> bar to narrow by direction, assistant, campaign, owner, human agent, call type, phone number, contact/lead, or call UUID.</li><li>Click <strong>Refresh</strong> to reload, or <strong>Clear filters</strong> to reset.</li></ol>"
+      "id": "date-range",
+      "title": "Set the date range",
+      "content": "<p>The date controls sit in the top-right corner and apply to every category:</p><ol><li>Click a preset: <strong>Today</strong>, <strong>This week</strong>, <strong>This month</strong> (the default), <strong>Last 7 days</strong>, or <strong>Last 30 days</strong>.</li><li>For an exact window, click <strong>Custom</strong> — a <strong>Start date → End date</strong> picker appears next to the presets.</li><li>Click the circular <strong>Refresh</strong> button any time to reload the numbers.</li></ol><blockquote>💡 All times are shown in your account's timezone — the \"Calls by hour of day\" chart even prints the timezone in its title so there's never any guesswork.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/reporting-daterange-light.png", "alt": "Date presets, custom range picker, refresh, and export buttons", "caption": "Date presets with Custom selected: a Start/End date picker appears, plus Refresh and Export.", "theme": "light" },
+        { "src": "images/contact-center/reporting-daterange-dark.png", "alt": "Date presets, custom range picker, refresh, and export buttons", "caption": "Date presets with Custom selected: a Start/End date picker appears, plus Refresh and Export.", "theme": "dark" }
+      ]
     },
     {
-      "id": "export",
-      "title": "Export to CSV",
-      "content": "<p>Click <strong>Export</strong> (the download icon) to download the current tab as a CSV. The columns match whichever category you're viewing — for example, per-agent handling metrics for Human Agents, or per-assistant containment for AI Agents.</p>"
+      "id": "filters",
+      "title": "Narrow the data with filters",
+      "content": "<p>The filter bar under the category pills refines every tab at once. Each control does one thing:</p><ul><li><strong>All calls</strong> — limit to <strong>Inbound</strong> or <strong>Outbound</strong> only.</li><li><strong>All assistants</strong> — a single AI agent.</li><li><strong>All campaigns</strong> — a single campaign.</li><li><strong>All owners</strong> — calls belonging to one team member's account.</li><li><strong>All human agents</strong> — calls a specific human agent handled (disabled if no human agents took calls in the range).</li><li><strong>All call types</strong> — e.g. web calls, phone calls, internal calls.</li><li><strong>Phone number</strong> — match a caller or destination number.</li><li><strong>Contact / lead</strong> — match by the CRM contact or lead on the call.</li><li><strong>Call UUID</strong> — jump straight to one specific call by its ID.</li></ul><p>When any filter is active, a <strong>Clear filters</strong> link appears at the end of the bar to reset everything in one click.</p><blockquote>⚠️ Seeing \"No calls match your filters\"? A leftover filter is usually the culprit — click <strong>Clear filters</strong> before assuming there's no data.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/reporting-filters-light.png", "alt": "The Reporting filter bar", "caption": "Filters: direction, assistant, campaign, owner, human agent, call type, phone, contact/lead, and call UUID.", "theme": "light" },
+        { "src": "images/contact-center/reporting-filters-dark.png", "alt": "The Reporting filter bar", "caption": "Filters: direction, assistant, campaign, owner, human agent, call type, phone, contact/lead, and call UUID.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "general-kpis",
+      "title": "Read the General KPI tiles",
+      "content": "<p>The <strong>General</strong> category opens with a row of KPI tiles — your call center's vital signs for the selected range:</p><ul><li><strong>Total calls</strong> — every call in the range, all sources combined.</li><li><strong>Connected</strong> / <strong>Connect rate</strong> — calls that reached a live conversation.</li><li><strong>Answer rate</strong> — share of calls that were picked up (by a person or a machine).</li><li><strong>Voicemail rate</strong> — share that landed in voicemail.</li><li><strong>Abandon rate</strong> — calls that rang a human agent or group but were never answered by a person.</li><li><strong>Avg talk (AHT)</strong> — average talk time per connected call.</li><li><strong>Total talk time</strong> — all talk time added up.</li><li><strong>Inbound</strong> / <strong>Outbound</strong> — the direction split.</li><li><strong>Total cost</strong> — combined call cost (shown when cost data is available for the range).</li></ul><blockquote>💡 Hover any KPI label with a dotted underline to see exactly how it's calculated.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/reporting-kpis-light.png", "alt": "General KPI tiles", "caption": "The General KPI row: volume, connect/answer/voicemail/abandon rates, talk time, direction split, and cost.", "theme": "light" },
+        { "src": "images/contact-center/reporting-kpis-dark.png", "alt": "General KPI tiles", "caption": "The General KPI row: volume, connect/answer/voicemail/abandon rates, talk time, direction split, and cost.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "general-charts",
+      "title": "Explore the General charts and panels",
+      "content": "<p>Below the KPIs, the General view packs the story of your range into a few visual panels:</p><ul><li><strong>AI agent performance</strong>, <strong>Smart campaigns</strong>, and <strong>Human campaigns</strong> — compact preview tables of each category (the dedicated tabs show the full versions).</li><li><strong>Call volume by day</strong> — a bar chart of all calls vs. connected calls per day. Spot busy days and dead days at a glance.</li><li><strong>Calls by hour of day</strong> — when your phones actually ring, in your timezone. Perfect for staffing decisions.</li><li><strong>Outcomes</strong> — a donut of how calls ended: Completed, SIP Transfers, Internal Transfers, Voicemail, No Answer, Abandoned, Failed, or Other — with counts and percentages listed below it.</li><li><strong>Top human agents</strong> — your five busiest agents ranked by calls handled, with their average handle time.</li><li><strong>Group ring activity</strong> — how often the AI rang your permission groups and how many of those rings a human answered (appears when group transfers happened).</li><li><strong>Dispositions logged</strong> — a tag cloud of the outcomes agents logged after their calls (appears when agents log dispositions).</li></ul>",
+      "images": [
+        { "src": "images/contact-center/reporting-volume-light.png", "alt": "Call volume by day chart", "caption": "Call volume by day — all calls vs. connected, one bar pair per day.", "theme": "light" },
+        { "src": "images/contact-center/reporting-volume-dark.png", "alt": "Call volume by day chart", "caption": "Call volume by day — all calls vs. connected, one bar pair per day.", "theme": "dark" },
+        { "src": "images/contact-center/reporting-outcomes-light.png", "alt": "Outcomes donut chart", "caption": "The Outcomes donut — how every call in the range ended.", "theme": "light" },
+        { "src": "images/contact-center/reporting-outcomes-dark.png", "alt": "Outcomes donut chart", "caption": "The Outcomes donut — how every call in the range ended.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "human-agents",
+      "title": "Measure your team in Human Agents",
+      "content": "<p>Click <strong>Human Agents</strong> for the deepest view in the whole report — a full scorecard per agent. The KPI row totals it up: <strong>Active agents</strong>, <strong>Calls handled</strong>, <strong>Avg handle (AHT)</strong>, <strong>Occupancy</strong>, <strong>Online time</strong>, <strong>Break time</strong>, <strong>Wrap-up (ACW)</strong>, <strong>Logins</strong>, <strong>Total handle time</strong>, <strong>Calls supervised</strong>, <strong>Whisper / barge</strong>, <strong>Missed calls</strong>, and <strong>Rejected</strong>.</p><p>The <strong>Human agent performance</strong> table then breaks each agent down into column groups:</p><ul><li><strong>Handling</strong> — <strong>Handled</strong> (calls they took), <strong>Connect %</strong>, <strong>AHT</strong>, <strong>On call</strong> (total time), and <strong>Spoke %</strong> (calls where they actually talked).</li><li><strong>Availability</strong> — <strong>Online</strong>, <strong>Idle</strong>, <strong>Break</strong>, <strong>Wrap-up</strong> (after-call work in the disposition picker), <strong>Occupancy</strong> (on-call time ÷ online time), <strong>Logins</strong>, and <strong>Last seen</strong>.</li><li><strong>Group offers</strong> — group rings offered to the agent: <strong>Offered</strong>, <strong>Answered</strong>, <strong>Answer %</strong>, <strong>Rejected</strong> (manually declined), <strong>Solo miss</strong> (only agent rung, no action), <strong>Shared miss</strong> (several rung, nobody answered), and <strong>Missed calls</strong>.</li><li><strong>Supervision</strong> — <strong>Monitor</strong>, <strong>Whisper</strong>, and <strong>Barge</strong> sessions, each shown as count · total time.</li><li><strong>Dispositions</strong> — the outcomes the agent logged on their calls.</li></ul><blockquote>💡 Hover any column header for a plain-language definition, and click a header to sort the table by that metric.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/reporting-human-light.png", "alt": "Human Agents report tab", "caption": "Human Agents: team KPI tiles plus a per-agent table with Handling, Availability, Group offers, and Supervision columns.", "theme": "light" },
+        { "src": "images/contact-center/reporting-human-dark.png", "alt": "Human Agents report tab", "caption": "Human Agents: team KPI tiles plus a per-agent table with Handling, Availability, Group offers, and Supervision columns.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "ai-agents",
+      "title": "Track AI performance in AI Agents",
+      "content": "<p>Click <strong>AI Agents</strong> to see how your AI workforce is performing. The KPI row shows <strong>AI agents</strong>, <strong>AI calls</strong>, <strong>Containment</strong>, <strong>Escalated to human</strong>, <strong>Connect rate</strong>, <strong>Avg handle</strong>, and <strong>Total cost</strong>.</p><p>The per-assistant table adds <strong>Calls</strong>, <strong>Connect %</strong>, <strong>Answer %</strong>, <strong>Voicemail %</strong>, <strong>Containment %</strong>, <strong>Escalated</strong>, <strong>SIP xfer</strong>, <strong>Avg talk</strong>, and <strong>Cost</strong>. Three definitions to know:</p><ul><li><strong>Containment</strong> — calls the AI handled fully on its own, without transferring out. Higher is better: it's the work your team never had to touch.</li><li><strong>Escalated</strong> — calls the AI handed off to a human agent.</li><li><strong>SIP xfer</strong> — calls the AI transferred to an external phone number.</li></ul>",
+      "images": [
+        { "src": "images/contact-center/reporting-ai-light.png", "alt": "AI Agents report tab", "caption": "AI Agents: containment, escalations, transfers, talk time, and cost per assistant.", "theme": "light" },
+        { "src": "images/contact-center/reporting-ai-dark.png", "alt": "AI Agents report tab", "caption": "AI Agents: containment, escalations, transfers, talk time, and cost per assistant.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "campaign-tabs",
+      "title": "Compare campaigns: Smart vs. Human",
+      "content": "<p>Two categories cover your outbound dialers:</p><ol><li><strong>Smart Campaigns</strong> — AI dialer campaigns, with the same metric set as AI Agents (containment, escalations, SIP transfers, cost) but grouped <em>by campaign</em>. Perfect for A/B-comparing scripts or lists.</li><li><strong>Human Campaigns</strong> — predictive-dialer (Human Dialer) sessions grouped <em>by dial list</em>: <strong>Calls</strong>, <strong>Connect %</strong>, <strong>Answer %</strong>, <strong>Avg handle</strong> (mean operator time on a connected call), <strong>Total handle</strong>, and <strong>Cost</strong>.</li></ol><blockquote>💡 Not running campaigns yet? These tabs simply show an empty state until your first campaign dials out. See <a data-href=\"/campaigns/create-campaign\">Create a Smart Dialer Campaign</a> and <a data-href=\"/campaigns/human-dialer\">Human Dialer</a> to get started.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/reporting-smart-light.png", "alt": "Smart Campaigns report tab", "caption": "Smart Campaigns: AI dialer performance grouped by campaign.", "theme": "light" },
+        { "src": "images/contact-center/reporting-smart-dark.png", "alt": "Smart Campaigns report tab", "caption": "Smart Campaigns: AI dialer performance grouped by campaign.", "theme": "dark" },
+        { "src": "images/contact-center/reporting-humancampaigns-light.png", "alt": "Human Campaigns report tab", "caption": "Human Campaigns: predictive-dialer calls grouped by dial list, with operator handle time.", "theme": "light" },
+        { "src": "images/contact-center/reporting-humancampaigns-dark.png", "alt": "Human Campaigns report tab", "caption": "Human Campaigns: predictive-dialer calls grouped by dial list, with operator handle time.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "queue",
+      "title": "Audit hold times in Queue",
+      "content": "<p>Click <strong>Queue</strong> to review skill-group queue transfers — the calls a human agent parked in a group queue (with hold music) while skill-matched online agents were rung until one answered. KPI tiles: <strong>Queued calls</strong>, <strong>Answered</strong>, <strong>Timed out</strong>, <strong>Abandoned</strong>, <strong>Answer rate</strong>, <strong>Avg wait</strong>, and <strong>Longest wait</strong>.</p><p>The <strong>Queue calls</strong> table lists every queued call:</p><ul><li><strong>Queued</strong> / <strong>Customer</strong> — when it entered the queue and the caller's number.</li><li><strong>Group</strong> / <strong>Skills</strong> — which permission group it waited in and any skill filter applied.</li><li><strong>Status</strong> — <strong>answered</strong>, <strong>timeout</strong>, or <strong>abandoned</strong> (filterable from the column header).</li><li><strong>Wait</strong> — how long the customer held before an answer or timeout.</li><li><strong>Answered by</strong> / <strong>Queued by</strong> — who picked it up, and which agent parked it.</li><li><strong>Matched</strong> — how many eligible agents were available.</li><li><strong>On timeout</strong> — what happened when nobody answered: <strong>AI agent</strong> took over or <strong>Hang up</strong>.</li><li><strong>Call</strong> — click <strong>Open</strong> to slide out the full call detail (recording, transcript, logs) without leaving the report.</li></ul><blockquote>⚠️ A creeping <strong>Longest wait</strong> or rising <strong>Timed out</strong> count is your early-warning signal to add agents to that group or tune the queue timeout — see <a data-href=\"/contact-center/queue-settings\">Queue Settings</a>.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/reporting-queue-light.png", "alt": "Queue report tab", "caption": "Queue: wait-time KPIs plus a per-call table with status, wait, and who answered.", "theme": "light" },
+        { "src": "images/contact-center/reporting-queue-dark.png", "alt": "Queue report tab", "caption": "Queue: wait-time KPIs plus a per-call table with status, wait, and who answered.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "export-csv",
+      "title": "Export any view to CSV",
+      "content": "<p>Every category exports with one click — and the file always matches what you're looking at:</p><ol><li>Open the category you want to export (for example <strong>Human Agents</strong>).</li><li>Click <strong>Export</strong> (the download button in the top-right, next to Refresh).</li><li>A CSV downloads instantly, named after the tab and date range — e.g. <em>contact-center-human-agents-2026-06-10-to-2026-07-10.csv</em>.</li></ol><p>The columns are tab-specific: General exports the day-by-day volume, AI Agents/Smart Campaigns export the full per-assistant metric set, Human Campaigns export per-dial-list handle stats, and Human Agents export the complete scorecard — handling, availability, group offers, supervision, and top dispositions per agent. That's a board-ready report in one click.</p><blockquote>💡 The export honors your current date range <em>and</em> filters, so you can produce a per-team or per-campaign file just by filtering first.</blockquote>"
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Watch calls live and understand what agents do.",
+    "description": "You can read the numbers — now go improve them. Watch calls live, coach your agents, and tune the teams behind every metric.",
     "cards": [
-      { "href": "/contact-center/overview", "title": "Contact Center Overview", "description": "The Live Monitor and supervisor controls." },
-      { "href": "/contact-center/agent-guide", "title": "The Agent Experience", "description": "How agents handle calls and set dispositions." },
-      { "href": "/contact-center/groups", "title": "Permission Groups", "description": "Manage the teams these reports break down by." }
+      { "href": "/contact-center/overview", "title": "Contact Center Overview", "description": "The Live Monitor and supervisor controls — monitor, whisper, and barge in real time." },
+      { "href": "/contact-center/agent-guide", "title": "The Agent Experience", "description": "How agents take calls, go on break, and log the dispositions you see in reports." },
+      { "href": "/contact-center/groups", "title": "Permission Groups", "description": "Manage the teams and queues these reports break down by." },
+      { "href": "/campaigns/campaign-analytics", "title": "Campaign Reports & Stats", "description": "Deeper campaign-level funnels and outcome analytics." }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Contact Center Reporting | iMash Docs",
-  "metaDescription": "Use iMash Contact Center Reporting: six categories (General, Human Agents, AI Agents, Smart/Human Campaigns, Queue), KPIs, date presets, filters, and CSV export.",
-  "metaKeywords": "contact center reporting, kpis, connect rate, aht, csv export, human agents, ai agents, queue report"
+  "metaTitle": "Contact Center Reporting | iMash Documentation",
+  "metaDescription": "Master iMash Contact Center Reporting: six report categories (General, Human Agents, AI Agents, Smart Campaigns, Human Campaigns, Queue), every KPI explained, date presets, filters, and one-click CSV export.",
+  "metaKeywords": "contact center reporting, call center analytics, agent performance, KPI, connect rate, AHT, occupancy, containment, queue report, csv export, human agents, ai agents"
 }

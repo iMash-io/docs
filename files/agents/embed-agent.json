@@ -1,55 +1,244 @@
 {
   "title": "Embed Your Agent on Your Website",
-  "lede": "Turn a Smart Agent into a website widget or popup with text, voice, and optional avatar, then paste one snippet of code to go live.",
-  "timeToComplete": "8 minutes",
-  "videoUrl": "https://youtu.be/3JS-ncMsZ7s",
-  "videoLength": "4",
+  "lede": "Your Smart Agent doesn't have to wait by the phone — put it right on your website as a chat-and-voice widget. One toggle, a few style choices, one copy-pasted snippet, and every visitor gets an instant AI receptionist, 24/7.",
+  "timeToComplete": "10 minutes",
   "steps": [
     {
-      "id": "prepare-agent",
-      "title": "Prepare the Agent",
-      "content": "<ol><li>Go to <strong>Intelligence Center → Smart Agents</strong> and open (or create) the agent you want on your site.</li><li>Write a prompt tailored to your product and, optionally, attach a <strong>Knowledge Base</strong> so it answers accurately.</li><li>Pick the brain (LLM) and a voice if you want voice replies.</li></ol>",
+      "id": "open-your-agent",
+      "title": "Open the Agent You Want on Your Site",
+      "content": "<p>Everything starts from the agent editor. The agent you embed uses the same prompt, knowledge base, voice, and tools you already configured — the website widget is just another door into it.</p><ol><li>In the left sidebar, under <strong>Intelligence Center</strong>, click <strong>Smart Agents</strong>.</li><li>Click the <strong>name</strong> of the agent you want to publish on your website. The agent editor opens.</li><li>If you haven't built an agent yet, click <strong>Create New Agent</strong> first and give it a prompt tailored to your product — see <a data-href=\"/agents/create-agent\">Create Your First Agent</a>.</li></ol><blockquote>💡 <strong>Tip:</strong> Attach a <strong>Knowledge Base</strong> with your product docs and FAQs before embedding — a widget that answers real product questions accurately is what turns visitors into leads.</blockquote>",
       "images": [
-        { "src": "images/agents/assistant-editor-light.png", "alt": "Agent editor", "caption": "Configure the agent first, then publish it as a website widget.", "theme": "light" },
-        { "src": "images/agents/assistant-editor-dark.png", "alt": "Agent editor", "caption": "Configure the agent first, then publish it as a website widget.", "theme": "dark" }
+        {
+          "src": "images/agents/embed-agent-list-light.png",
+          "alt": "Smart Agents list under Intelligence Center",
+          "caption": "Intelligence Center → Smart Agents: click an agent's name to open its editor.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/embed-agent-list-dark.png",
+          "alt": "Smart Agents list under Intelligence Center",
+          "caption": "Intelligence Center → Smart Agents: click an agent's name to open its editor.",
+          "theme": "dark"
+        }
       ]
     },
     {
       "id": "enable-widget",
-      "title": "Enable the Website Widget",
-      "content": "<ol><li>Open the <strong>Website Widget</strong> panel and turn on <strong>Enable Website Widget</strong>.</li><li>Under <strong>Capabilities</strong>, choose how visitors interact: <strong>Text</strong>, <strong>Voice</strong>, and optionally an <strong>Avatar</strong> (avatar requires voice).</li></ol>",
+      "title": "Turn On the Website Widget",
+      "content": "<p>In the agent editor's <strong>Form</strong> view, the middle column lists all the agent's add-ons (Knowledge Base, Webhooks, Observer Agent, and so on).</p><ol><li>Find the <strong>Website Widget</strong> row in that list.</li><li>Flip its pill toggle to <strong>ON</strong>.</li><li>Click anywhere on the <strong>Website Widget</strong> row itself (not the toggle) to open the full configuration window.</li></ol><p>The window that opens has a section menu on the left — <strong>Capabilities</strong>, <strong>Avatar</strong>, <strong>Theme &amp; Header</strong>, <strong>Layout &amp; Position</strong>, <strong>Launch Button</strong>, <strong>Behavior</strong>, <strong>Page Access</strong>, and <strong>Embed Code &amp; Preview</strong> — and two master switches pinned at the top:</p><ul><li><strong>Enable Website Widget</strong> — the same master switch as the row toggle. Nothing renders on your site while this is off.</li><li><strong>Collect web visitor data</strong> — stores a small cookie and the visitor's referrer/page URL so returning visitors are recognized and web calls are attributed to the right CRM lead. Turn it off if your privacy policy requires zero visitor tracking.</li></ul><blockquote>💡 <strong>Tip:</strong> Every change in this window saves automatically the moment you make it — there is no separate Save button. If you use the <strong>Node</strong> canvas view instead of Form view, the same window opens from the <strong>Widget</strong> chip in the top toolbar.</blockquote>",
       "images": [
-        { "src": "images/agents/website-widget-light.png", "alt": "Website widget settings", "caption": "The Website Widget panel: capabilities, avatar, theme, layout, and embed code.", "theme": "light" },
-        { "src": "images/agents/website-widget-dark.png", "alt": "Website widget settings", "caption": "The Website Widget panel: capabilities, avatar, theme, layout, and embed code.", "theme": "dark" }
+        {
+          "src": "images/agents/embed-agent-widget-row-light.png",
+          "alt": "Website Widget row with its toggle switched on",
+          "caption": "The Website Widget row in the agent editor — toggle it ON, then click the row to configure.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/embed-agent-widget-row-dark.png",
+          "alt": "Website Widget row with its toggle switched on",
+          "caption": "The Website Widget row in the agent editor — toggle it ON, then click the row to configure.",
+          "theme": "dark"
+        }
       ]
     },
     {
-      "id": "design",
-      "title": "Style the Widget",
-      "content": "<ul><li><strong>Avatar</strong>: choose a display mode (<em>Avatar Only</em> or <em>Side by Side</em>) and pick or upload an avatar image.</li><li><strong>Theme &amp; Header</strong>: set Light, Dark, Auto, or Custom colors and a header title.</li><li><strong>Layout &amp; Position</strong>: choose <em>Widget</em> (docked to a corner) or <em>Popup</em>, and set its screen position or size.</li><li><strong>Behavior</strong>: decide whether it auto-opens and whether the agent starts talking when opened.</li></ul>",
-      "images": []
+      "id": "capabilities",
+      "title": "Capabilities — Choose How Visitors Interact",
+      "content": "<p>The <strong>Capabilities</strong> section decides what the widget can do. Toggle any combination of the four cards:</p><ul><li><strong>Text</strong> — visitors can type messages and read the agent's replies in a chat transcript. The classic chat-bubble experience.</li><li><strong>Voice</strong> — visitors can talk to the agent through their microphone and hear it answer with its configured voice. A live voice bar visualizes who is speaking.</li><li><strong>Avatar</strong> — the agent appears as a talking video avatar instead of a plain chat window. Configured in the next section.</li><li><strong>Transcriber</strong> — speech-to-text for the visitor's microphone. Leave this on whenever Voice is on so the agent can understand spoken input.</li></ul><blockquote>⚠️ <strong>Avatar requires Voice.</strong> Turning <strong>Avatar</strong> on auto-enables <strong>Voice</strong>; turning <strong>Voice</strong> off auto-disables <strong>Avatar</strong>. If you disable both Text and Voice, the widget renders an \"Interaction Disabled\" notice — always keep at least one on.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/embed-agent-capabilities-light.png",
+          "alt": "Capabilities section with Text, Voice, Avatar and Transcriber toggles",
+          "caption": "Capabilities: mix and match Text, Voice, Avatar, and Transcriber.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/embed-agent-capabilities-dark.png",
+          "alt": "Capabilities section with Text, Voice, Avatar and Transcriber toggles",
+          "caption": "Capabilities: mix and match Text, Voice, Avatar, and Transcriber.",
+          "theme": "dark"
+        }
+      ]
     },
     {
-      "id": "embed",
-      "title": "Preview and Embed",
-      "content": "<ol><li>Open the <strong>Embed Code &amp; Preview</strong> section to see a live preview.</li><li>Copy the generated <code>&lt;script&gt;</code> snippet.</li><li>Paste it into your site's HTML where you want the agent to appear, then reload the page and test it.</li></ol>",
-      "images": []
+      "id": "avatar",
+      "title": "Avatar — Give Your Agent a Face (Optional)",
+      "content": "<p>Want a wow factor? Click <strong>Avatar</strong> in the left menu to turn your agent into a talking video presence.</p><ol><li>Pick a <strong>Display mode</strong>:<ul><li><strong>Avatar Only</strong> — the agent's avatar video appears above the conversation. Compact; works at any widget size.</li><li><strong>Side by Side</strong> — the agent's video and the visitor's own camera appear next to each other, like a video call. Requires a widget at least <strong>650&nbsp;px</strong> wide (the width is raised automatically when you pick it).</li></ul></li><li>Under <strong>Avatar Selection</strong>, click a <strong>System avatar</strong> to use a ready-made face, or click <strong>Upload New Avatar</strong> to add your own image (your uploads appear under \"Your avatars\").</li></ol><blockquote>💡 <strong>Tip:</strong> If this section shows \"Avatar is currently off\", click <strong>Enable Avatar</strong> right there — it switches the capability on (and enables Voice with it) without going back to Capabilities.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/embed-agent-avatar-light.png",
+          "alt": "Avatar section with display modes and the avatar gallery",
+          "caption": "Avatar: choose Avatar Only or Side by Side, then pick or upload a face.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/embed-agent-avatar-dark.png",
+          "alt": "Avatar section with display modes and the avatar gallery",
+          "caption": "Avatar: choose Avatar Only or Side by Side, then pick or upload a face.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "theme-header",
+      "title": "Theme & Header — Match Your Brand",
+      "content": "<p>Click <strong>Theme &amp; Header</strong> to control the widget's look:</p><ul><li><strong>Theme</strong> — pick one of four options:<ul><li><strong>Light</strong> — white chat surface, dark text.</li><li><strong>Dark</strong> — near-black surface, white text.</li><li><strong>Auto</strong> — follows each visitor's operating-system preference automatically.</li><li><strong>Custom</strong> — unlocks three color pickers: <strong>Primary</strong> (buttons, header, your message bubbles), <strong>Background</strong>, and <strong>Text</strong>. Use your exact brand colors.</li></ul></li><li><strong>Show title</strong> — toggles the header bar at the top of the chat window.</li><li><strong>Header title</strong> — the name visitors see, e.g. \"Acme Support\". If you leave it empty, the agent's name is used.</li></ul>",
+      "images": [
+        {
+          "src": "images/agents/embed-agent-theme-light.png",
+          "alt": "Theme and Header section with theme picker and header title field",
+          "caption": "Theme & Header: Light, Dark, Auto, or fully Custom brand colors, plus the header title.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/embed-agent-theme-dark.png",
+          "alt": "Theme and Header section with theme picker and header title field",
+          "caption": "Theme & Header: Light, Dark, Auto, or fully Custom brand colors, plus the header title.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "layout-position",
+      "title": "Layout & Position — Widget or Popup, and Where It Lives",
+      "content": "<p>Click <strong>Layout &amp; Position</strong> to decide how the chat window appears on your page:</p><ul><li><strong>Display mode</strong>:<ul><li><strong>Widget</strong> — a docked chat panel that opens from a floating launch button. The standard support-bubble experience.</li><li><strong>Pop Up</strong> — a full-screen modal that opens centered over a darkened page. Immersive; great for avatar agents and landing pages.</li></ul></li><li><strong>Width (px)</strong> / <strong>Height (px)</strong> — the chat panel's size in Widget mode (default 375 × 600; Side-by-Side avatar needs ≥ 650 wide).</li><li><strong>Widget position</strong> — where the panel (or, in Pop Up mode, the launch icon) sits: <strong>Bottom Right</strong>, <strong>Bottom Left</strong>, <strong>Top Right</strong>, <strong>Top Left</strong>, <strong>Center</strong>, <strong>Inline</strong> (renders in the flow of your page instead of floating), or <strong>Manual</strong> (you position it with your own CSS).</li></ul><blockquote>💡 <strong>Tip:</strong> Bottom Right is what web users instinctively look for. Only move it if something else already occupies that corner of your site.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/embed-agent-layout-light.png",
+          "alt": "Layout and Position section with Widget vs Pop Up, size fields and position picker",
+          "caption": "Layout & Position: Widget or Pop Up, exact size, and the on-screen position.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/embed-agent-layout-dark.png",
+          "alt": "Layout and Position section with Widget vs Pop Up, size fields and position picker",
+          "caption": "Layout & Position: Widget or Pop Up, exact size, and the on-screen position.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "launch-button",
+      "title": "Launch Button — The Little Bubble That Starts It All",
+      "content": "<p>The launch button is the floating icon visitors click to open the widget — make it unmistakably yours. Click <strong>Launch Button</strong>:</p><ul><li><strong>Upload custom icon</strong> — click <strong>Upload New Icon</strong> and add your logo or any <strong>PNG, JPG, or SVG</strong>. Uploaded icons appear under \"Your custom icons\" so you can switch back anytime.</li><li><strong>System icon</strong> — click the default iMash icon to use the built-in look.</li><li><strong>Icon size</strong> — drag the slider to scale the launch button (default 75&nbsp;px).</li></ul>",
+      "images": [
+        {
+          "src": "images/agents/embed-agent-launch-light.png",
+          "alt": "Launch Button section with icon upload and size slider",
+          "caption": "Launch Button: upload your own icon and set its size.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/embed-agent-launch-dark.png",
+          "alt": "Launch Button section with icon upload and size slider",
+          "caption": "Launch Button: upload your own icon and set its size.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "behavior",
+      "title": "Behavior — Auto-Open and Auto-Start",
+      "content": "<p>Click <strong>Behavior</strong> to control how proactive the widget is:</p><ul><li><strong>Auto-open on page load</strong> — the chat window opens by itself when the page loads, instead of waiting for a click on the launch button.</li><li><strong>Delay before opening (sec)</strong> — how many seconds to wait before auto-opening (0–60). A 5–10 second delay feels helpful; 0 can feel pushy.</li><li><strong>Auto-start when opened</strong> — the conversation connects immediately when the widget opens, so the agent greets the visitor without anyone pressing <strong>Start</strong>.</li></ul><blockquote>⚠️ <strong>Heads-up:</strong> browsers require a user interaction before they allow audio to play. With voice enabled, an auto-started conversation may stay silent until the visitor clicks or the browser prompts for microphone access — test the combination on your own site before rolling it out.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/embed-agent-behavior-light.png",
+          "alt": "Behavior section with auto-open, delay and auto-start options",
+          "caption": "Behavior: auto-open on page load, an optional delay, and auto-start.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/embed-agent-behavior-dark.png",
+          "alt": "Behavior section with auto-open, delay and auto-start options",
+          "caption": "Behavior: auto-open on page load, an optional delay, and auto-start.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "page-access",
+      "title": "Page Access — Let the Agent See and Drive Your Page (Advanced)",
+      "content": "<p>This is where the widget goes from chatbot to co-pilot. <strong>Page Access</strong> lets the agent interact with the very page the visitor is on — \"I'll fill that form in for you\" becomes literal. All three switches are <strong>off by default</strong>:</p><ul><li><strong>Page Viewing</strong> — the agent can read the current page: its URL, visible text, an outline of interactive elements, recent console logs, and it can take a visual screenshot. (Screenshots require an LLM that supports image input.)</li><li><strong>Page Control</strong> — the agent can act: click buttons, fill fields, scroll, submit forms, and navigate on the visitor's page.</li><li><strong>Allow Raw JavaScript</strong> — only available when Page Control is on. Lets the agent run arbitrary JavaScript in your page's context, with full DOM and cookie access.</li></ul><blockquote>⚠️ <strong>Warning:</strong> Page Control acts on the visitor's live page, and Raw JavaScript is full programmatic access — enable these only for agents you have tested thoroughly, on sites you control and trust. Page Access works only when the widget is installed with the script snippet from the next step (it bridges through the loader on your page).</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/embed-agent-page-access-light.png",
+          "alt": "Page Access section with Page Viewing, Page Control and Raw JavaScript toggles",
+          "caption": "Page Access: opt-in tiers for reading the page, controlling it, and running raw JavaScript.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/embed-agent-page-access-dark.png",
+          "alt": "Page Access section with Page Viewing, Page Control and Raw JavaScript toggles",
+          "caption": "Page Access: opt-in tiers for reading the page, controlling it, and running raw JavaScript.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "embed-code",
+      "title": "Copy the Snippet and Go Live",
+      "content": "<p>The moment you've been building toward. Click <strong>Embed Code &amp; Preview</strong>:</p><ol><li>Click the <strong>copy</strong> button in the top-right corner of the code box to copy the generated <code>&lt;script&gt;</code> snippet.</li><li>Paste it into your website's HTML — ideally just before the closing <code>&lt;/body&gt;</code> tag. It works on any platform that accepts custom HTML: WordPress, Shopify, Webflow, Wix, or hand-written pages.</li><li>Publish your site, reload the page, and your launch button appears in the position you chose.</li></ol><p>Two helper buttons below the code box:</p><ul><li><strong>Preview Widget</strong> — injects the widget onto the dashboard page you're on right now, so you can see the launcher and open a real conversation without touching your website. After changing settings, click it again (<strong>Update Preview</strong>) to refresh.</li><li><strong>Reset to Defaults</strong> — reverts every design and behavior setting in this window to the factory values.</li></ul><blockquote>💡 <strong>Paste once, restyle forever.</strong> The snippet only contains your agent's ID — every design, capability, and behavior setting is loaded live from iMash each time the page opens. Change the theme or greeting next month and your website updates instantly, no re-pasting required.</blockquote>",
+      "images": [
+        {
+          "src": "images/agents/embed-agent-embed-code-light.png",
+          "alt": "Embed Code and Preview section with the generated script snippet",
+          "caption": "Embed Code & Preview: copy the snippet, then test it with Preview Widget.",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/embed-agent-embed-code-dark.png",
+          "alt": "Embed Code and Preview section with the generated script snippet",
+          "caption": "Embed Code & Preview: copy the snippet, then test it with Preview Widget.",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "visitor-view",
+      "title": "What Your Visitors See",
+      "content": "<p>Here's the payoff. When a visitor clicks your launch button, the chat window opens with your header title and theme:</p><ul><li>They click <strong>Start</strong> to begin the conversation (the browser may ask to allow audio or the microphone if voice is on).</li><li>With <strong>Text</strong> enabled, they type in the <strong>Type a message...</strong> box and see the full transcript — including live transcription of what they say out loud.</li><li>With <strong>Voice</strong> enabled, they just talk; an animated voice bar shows when the agent is speaking, and a mute button sits next to the message box.</li><li>With an <strong>Avatar</strong>, the agent's video appears at the top and does the talking face-to-face.</li><li>When they're done, <strong>End</strong> closes the conversation.</li></ul><p>Every widget conversation lands in your <a data-href=\"/phone/call-logs\">Call Logs</a> with a transcript, and — with visitor data collection on — is matched to a new or returning lead in your CRM automatically. Your website just became your hardest-working employee.</p>",
+      "images": [
+        {
+          "src": "images/agents/embed-agent-visitor-view-light.png",
+          "alt": "The embedded chat widget as a website visitor sees it",
+          "caption": "The visitor's view: header title, Start button, and the message box (light widget theme).",
+          "theme": "light"
+        },
+        {
+          "src": "images/agents/embed-agent-visitor-view-dark.png",
+          "alt": "The embedded chat widget as a website visitor sees it in dark theme",
+          "caption": "The visitor's view with the widget's Dark theme selected.",
+          "theme": "dark"
+        }
+      ]
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "Improve the on-site experience:",
+    "description": "Your agent is live on your site — now make every conversation count:",
     "cards": [
-      { "href": "/agents/agent-knowledge-base", "title": "Add a Knowledge Base", "description": "Help the widget answer product questions accurately." },
-      { "href": "/agents/agent-tools", "title": "Add Tools", "description": "Let the widget book meetings or call your APIs." },
-      { "href": "/agents/agent-privacy", "title": "Privacy & Recording", "description": "Decide what conversation data is stored." }
+      {
+        "href": "/agents/agent-knowledge-base",
+        "title": "Add a Knowledge Base",
+        "description": "Feed it your docs and FAQs so the widget answers product questions accurately."
+      },
+      {
+        "href": "/agents/agent-tools",
+        "title": "Add Tools",
+        "description": "Let the widget book meetings, create leads, or call your APIs mid-chat."
+      },
+      {
+        "href": "/agents/agent-privacy",
+        "title": "Privacy & Recording",
+        "description": "Decide what conversation and visitor data is stored."
+      }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Embed Your Agent on Your Website | iMash Docs",
-  "metaDescription": "Publish an iMash Smart Agent as a website widget or popup with text, voice, and avatar. Configure capabilities, theme, and layout, then paste the embed code to go live.",
-  "metaKeywords": "embed agent, website widget, imash, smart agent, popup, avatar, voice widget, embed code"
+  "metaTitle": "Embed Your Agent on Your Website | iMash Documentation",
+  "metaDescription": "Publish an iMash Smart Agent as a website chat and voice widget: enable it, choose capabilities and an avatar, brand the theme and launch button, set auto-open behavior, grant optional page access, and go live with one script snippet.",
+  "metaKeywords": "embed agent, website widget, imash, smart agent, web chat, voice widget, avatar, embed code, page access, launch button, popup widget"
 }

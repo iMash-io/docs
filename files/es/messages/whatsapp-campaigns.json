@@ -1,0 +1,238 @@
+{
+  "title": "Bots, Flujos y Campañas de WhatsApp",
+  "lede": "Vaya más allá de la bandeja de entrada: cree formularios nativos de WhatsApp (Flows), bots de chat deterministas, un catálogo de productos comprable y campañas masivas con plantillas personalizadas por destinatario — todo desde un solo centro de control. Esta guía recorre cada pestaña avanzada de la A a la Z.",
+  "timeToComplete": "12 minutos",
+  "steps": [
+    {
+      "id": "open-whatsapp-hub",
+      "title": "Abra el centro de WhatsApp y conozca las pestañas avanzadas",
+      "content": "<p>Todo lo relacionado con WhatsApp vive en una sola página — y las pestañas del lado derecho de su barra de pestañas son donde ocurre la magia de la automatización.</p><ol><li>En la barra lateral izquierda, bajo <strong>Messages</strong> (Mensajes), haga clic en <strong>WhatsApp</strong> (o use la navegación superior: <strong>Messages → WhatsApp</strong>).</li><li>Observe la barra de pestañas en la parte superior de la página. Esta guía cubre las cinco pestañas \"avanzadas\":</li></ol><ul><li><strong>Flows</strong> (Flujos) — formularios nativos de Meta con varias pantallas que se abren <em>dentro</em> de WhatsApp (captura de leads, reserva de citas, registros).</li><li><strong>Catalog</strong> (Catálogo) — su catálogo de productos en WhatsApp: envíe mensajes de producto, reciba pedidos y siga las consultas de los clientes.</li><li><strong>Bots</strong> — un constructor visual de conversaciones deterministas y guionadas que responden al instante sin un LLM.</li><li><strong>Lists</strong> (Listas) — listas de destinatarios por número de teléfono que alimentan sus campañas.</li><li><strong>Campaigns</strong> (Campañas) — envíos masivos de plantillas con personalización por destinatario, control de velocidad, programación y un informe en vivo.</li></ul><blockquote>💡 Las pestañas <strong>Messages</strong>, <strong>Numbers</strong> y <strong>Templates</strong> (la bandeja de entrada diaria, la conexión de números y la creación de plantillas de mensajes) se cubren en la guía complementaria <em>Mensajería de WhatsApp Business</em> — consulte Qué sigue más abajo.</blockquote>",
+      "images": [
+        {
+          "src": "images/messages/whatsapp-campaigns-flows-tab-light.png",
+          "alt": "Página del centro de WhatsApp con la pestaña Flows seleccionada, mostrando la barra de pestañas con Messages, Numbers, Templates, Flows, Catalog, Bots, Lists y Campaigns",
+          "caption": "Messages → WhatsApp: las pestañas Flows, Catalog, Bots, Lists y Campaigns son la superficie avanzada del centro",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-flows-tab-dark.png",
+          "alt": "Página del centro de WhatsApp con la pestaña Flows seleccionada, mostrando la barra de pestañas con Messages, Numbers, Templates, Flows, Catalog, Bots, Lists y Campaigns",
+          "caption": "Messages → WhatsApp: las pestañas Flows, Catalog, Bots, Lists y Campaigns son la superficie avanzada del centro",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "connect-first",
+      "title": "Requisito previo: conecte una cuenta de WhatsApp Business",
+      "content": "<p>Flows, Catalog y Bots están vinculados a una <strong>cuenta de WhatsApp Business</strong> (WABA). Hasta que conecte una, esas tres pestañas muestran una puerta amigable en lugar de sus herramientas.</p><ol><li>Si ve <strong>Connect a WhatsApp Business Account first</strong> (Conecte primero una cuenta de WhatsApp Business), haga clic en <strong>Go to Numbers</strong> (Ir a Números) — o en el botón azul <strong>Connect WhatsApp</strong> (Conectar WhatsApp) en la esquina superior derecha (visible desde cualquier pestaña).</li><li>Complete el registro integrado de Meta en la ventana emergente: elija o cree su cuenta de WhatsApp Business y vincule un número de teléfono.</li><li>Cuando al menos un número muestre <strong>Ready to send</strong> (Listo para enviar) en la pestaña Numbers, regrese — las pestañas Flows, Catalog y Bots se desbloquean automáticamente.</li></ol><blockquote>⚠️ Si su negocio tiene <em>varias</em> WABAs conectadas, cada una de estas pestañas muestra su propio selector <strong>Account</strong> (Cuenta) en la parte superior — los flujos, catálogos y bots creados bajo una cuenta de negocio no aparecen bajo otra, así que verifique siempre qué cuenta está seleccionada.</blockquote>",
+      "images": [
+        {
+          "src": "images/messages/whatsapp-campaigns-flows-empty-light.png",
+          "alt": "Estado vacío de la pestaña Flows que dice Connect a WhatsApp Business Account first, con un botón Go to Numbers",
+          "caption": "Flows, Catalog y Bots esperan detrás de esta puerta hasta que se conecte una cuenta de WhatsApp Business",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-flows-empty-dark.png",
+          "alt": "Estado vacío de la pestaña Flows que dice Connect a WhatsApp Business Account first, con un botón Go to Numbers",
+          "caption": "Flows, Catalog y Bots esperan detrás de esta puerta hasta que se conecte una cuenta de WhatsApp Business",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "design-flows",
+      "title": "Flows — cree formularios nativos dentro del chat",
+      "content": "<p>Un WhatsApp Flow es un formulario de varias pantallas que se abre <em>dentro</em> del chat — sin sitio web, sin fricción. Los clientes reservan citas, piden cotizaciones o se registran sin salir nunca de WhatsApp.</p><ol><li>Abra la pestaña <strong>Flows</strong>.</li><li>Haga clic en <strong>New flow</strong> (Nuevo flujo — botón verde, arriba a la derecha de la barra de herramientas). Se crea un borrador al instante y se abre el <strong>diseñador visual</strong>, donde agrega pantallas, campos y botones, renombra el flujo y elige sus categorías.</li><li>¿Ya creó flujos en el WhatsApp Manager de Meta? Haga clic en <strong>Sync</strong> (Sincronizar) para reflejarlos aquí.</li></ol><p>Cada fila de la tabla de flujos muestra:</p><ul><li><strong>Status</strong> (Estado) — <strong>DRAFT</strong> (editable), <strong>PUBLISHED</strong> (enviable, bloqueado), <strong>DEPRECATED</strong> (retirado), más los estados marcados por Meta <strong>BLOCKED</strong> / <strong>THROTTLED</strong>. Una insignia roja cuenta los errores de validación — abra el diseñador para corregirlos.</li><li><strong>Categories</strong> (Categorías) — p. ej. generación de leads, reserva de citas, registro.</li><li><strong>Responses</strong> (Respuestas) — cuántos clientes enviaron el formulario; haga clic en el número para leer cada envío.</li></ul><p>Iconos de acción por fila (de izquierda a derecha): <strong>Preview in Meta</strong> (vista previa interactiva en vivo), <strong>Analytics</strong> (Analítica), <strong>Open visual designer</strong> (Abrir diseñador visual), <strong>Quick edit</strong> (edición rápida de metadatos + JSON), <strong>Publish</strong> (Publicar — solo borradores), <strong>Deprecate</strong> (Retirar — solo publicados) y <strong>Delete</strong> (Eliminar). Use los filtros <strong>Status</strong> y <strong>Category</strong> o el cuadro de búsqueda para encontrar un flujo rápidamente.</p><blockquote>⚠️ La publicación es irreversible: un flujo <strong>PUBLISHED</strong> puede enviarse a los clientes pero nunca puede editarse de nuevo — tendría que clonarlo para hacer cambios. Eliminar un borrador lo elimina también en Meta; eliminar un flujo publicado solo elimina su copia local.</blockquote>"
+    },
+    {
+      "id": "build-bots",
+      "title": "Bots — guione conversaciones instantáneas y deterministas",
+      "content": "<p>Los bots responden en milisegundos y nunca improvisan. Son perfectos para menús, preguntas frecuentes, horarios y captura estructurada de datos — y pueden ejecutarse <em>antes o en lugar de</em> su Smart Agent de IA.</p><ol><li>Abra la pestaña <strong>Bots</strong> y haga clic en <strong>New bot</strong> (Nuevo bot).</li><li>Asigne un nombre y una descripción y guarde — aterrizará en el <strong>diseñador visual</strong>, donde encadena nodos de mensaje, nodos de espera de respuesta, ramas y capturas de variables en un árbol de conversación.</li><li>De vuelta en la lista, use los botones por fila:<ul><li><strong>Edit</strong> (Editar) — reabre el diseñador visual.</li><li><strong>Test (simulator)</strong> (Probar — simulador) — chatee con el bot directamente en un modal. Ejecuta exactamente el mismo programa que el motor en vivo, pero no se envía nada real — escriba un mensaje de cliente, pulse <strong>Send</strong> (Enviar) e inspeccione la respuesta junto con una traza paso a paso.</li><li><strong>Analytics</strong> (Analítica) — estadísticas de conversación de este bot.</li><li><strong>Bind to phone numbers</strong> (Vincular a números de teléfono) — asocie el bot a uno o más números de WhatsApp (o números SMS, si el bot tiene el canal SMS habilitado). Un número vinculado ejecuta el bot para cada mensaje entrante como respuesta predeterminada del teléfono.</li><li><strong>Publish</strong> (Publicar — icono de rayo, solo borradores) — póngalo en producción. La publicación se bloquea mientras el bot tenga errores de compilación (una insignia roja muestra el conteo).</li><li><strong>Archive</strong> (Archivar — bots publicados) — lo desconecta y corta sus vinculaciones de teléfono.</li><li><strong>Delete</strong> (Eliminar) — elimina el bot y sus vinculaciones.</li></ul></li></ol><blockquote>💡 Ritmo recomendado: construir → <strong>Test (simulator)</strong> hasta que cada rama se comporte bien → <strong>Publish</strong> → <strong>Bind to phone numbers</strong>. Un bot solo responde a clientes reales cuando está publicado Y vinculado.</blockquote>",
+      "images": [
+        {
+          "src": "images/messages/whatsapp-campaigns-bots-empty-light.png",
+          "alt": "Estado vacío de la pestaña Bots explicando que los bots están vinculados a una cuenta de WhatsApp Business",
+          "caption": "La pestaña Bots antes de conectar una WABA — una vez desbloqueada, New bot abre el diseñador visual de conversaciones",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-bots-empty-dark.png",
+          "alt": "Estado vacío de la pestaña Bots explicando que los bots están vinculados a una cuenta de WhatsApp Business",
+          "caption": "La pestaña Bots antes de conectar una WABA — una vez desbloqueada, New bot abre el diseñador visual de conversaciones",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "sell-with-catalog",
+      "title": "Catalog — venda productos directamente en el chat",
+      "content": "<p>La pestaña Catalog convierte WhatsApp en un escaparate: los clientes exploran sus productos, tocan para consultar y hacen pedidos que llegan directamente a su CRM.</p><ol><li>Abra la pestaña <strong>Catalog</strong>.</li><li>Configure su primer catálogo con uno de estos tres botones:<ul><li><strong>Create catalog</strong> (Crear catálogo) — crea un catálogo de productos bajo su Meta Business Manager, lo vincula a esta WABA y lo establece como predeterminado, todo en un clic.</li><li><strong>Link existing</strong> (Vincular existente) — asocie un catálogo que ya tiene en su Business Manager.</li><li><strong>Sync from Meta</strong> (Sincronizar desde Meta) — refleje los catálogos (y sus productos) que administra en el Commerce Manager de Meta.</li></ul></li><li>Con un catálogo activo, un panel de estadísticas rastrea <strong>Catalogs</strong> (Catálogos), <strong>Synced products</strong> (Productos sincronizados), <strong>Orders (30d)</strong> (Pedidos), <strong>Inquiries (30d)</strong> (Consultas) y <strong>Revenue (30d)</strong> (Ingresos), y aparecen cuatro sub-pestañas:<ul><li><strong>Products</strong> (Productos) — explore, agregue y edite los artículos del catálogo seleccionado.</li><li><strong>Orders</strong> (Pedidos) — pedidos entrantes de WhatsApp, con insignias de pedidos abiertos; cada uno puede fluir a su pipeline de CRM.</li><li><strong>Inquiries</strong> (Consultas) — un registro de cada producto que un cliente tocó o preguntó — leads calientes en bandeja de plata.</li><li><strong>Catalogs</strong> (Catálogos) — administre todos los catálogos vinculados a esta WABA y elija el predeterminado.</li></ul></li></ol><blockquote>💡 El botón <strong>Commerce Manager</strong> de la barra de herramientas abre la interfaz canónica de catálogos de Meta en una pestaña nueva — útil para cargas masivas de productos o cualquier cosa que el editor integrado no cubra. Si tiene más de un catálogo, el selector <strong>Catalog:</strong> de la barra de herramientas cambia entre ellos.</blockquote>",
+      "images": [
+        {
+          "src": "images/messages/whatsapp-campaigns-catalog-empty-light.png",
+          "alt": "Estado vacío de la pestaña Catalog explicando que el inventario del catálogo y las señales de comercio están vinculados a una cuenta de WhatsApp Business",
+          "caption": "La puerta de la pestaña Catalog — tras conectar, Create catalog enlaza un catálogo de Meta a su WABA en un clic",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-catalog-empty-dark.png",
+          "alt": "Estado vacío de la pestaña Catalog explicando que el inventario del catálogo y las señales de comercio están vinculados a una cuenta de WhatsApp Business",
+          "caption": "La puerta de la pestaña Catalog — tras conectar, Create catalog enlaza un catálogo de Meta a su WABA en un clic",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "create-recipient-list",
+      "title": "Lists — cree una lista de destinatarios",
+      "content": "<p>Las campañas no envían a números sueltos — envían a <strong>listas de destinatarios</strong>. Construya la lista una vez y reutilícela en cada envío.</p><ol><li>Abra la pestaña <strong>Lists</strong>.</li><li>Haga clic en <strong>New list</strong> (Nueva lista — arriba a la derecha de la tarjeta Recipient lists).</li><li>Escriba un <strong>Name</strong> (Nombre — obligatorio, p. ej. \"Promo primavera — leads con teléfono\") y una <strong>Description</strong> (Descripción) opcional, luego haga clic en <strong>Create</strong> (Crear).</li></ol><p>La tabla muestra el <strong>Name</strong> (Nombre), la <strong>Description</strong> (Descripción), el conteo de <strong>Members</strong> (Miembros) y la fecha de <strong>Created</strong> (Creación) de cada lista. Haga clic en el nombre de una lista (o en su botón <strong>Manage</strong> — Administrar) para abrir el panel de miembros, o en el icono rojo de papelera para eliminarla.</p>",
+      "images": [
+        {
+          "src": "images/messages/whatsapp-campaigns-lists-tab-light.png",
+          "alt": "Pestaña Lists mostrando la tabla Recipient lists con una lista de demostración y el botón New list",
+          "caption": "La pestaña Lists — toda campaña comienza con una lista de destinatarios",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-lists-tab-dark.png",
+          "alt": "Pestaña Lists mostrando la tabla Recipient lists con una lista de demostración y el botón New list",
+          "caption": "La pestaña Lists — toda campaña comienza con una lista de destinatarios",
+          "theme": "dark"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-new-list-modal-light.png",
+          "alt": "Modal New recipient list con campos de Name y Description",
+          "caption": "New list: con un nombre basta",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-new-list-modal-dark.png",
+          "alt": "Modal New recipient list con campos de Name y Description",
+          "caption": "New list: con un nombre basta",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "fill-the-list",
+      "title": "Llene la lista — desde su CRM o pegando un CSV",
+      "content": "<p>Abra una lista (haga clic en su nombre) para administrar los miembros. Dos rutas de importación viven en el encabezado del panel:</p><p><strong>Opción A — Add from CRM</strong> (Agregar desde CRM — la vía inteligente):</p><ol><li>Haga clic en <strong>Add from CRM</strong>.</li><li>Alterne entre <strong>Contacts</strong> (Contactos) y <strong>Leads</strong> con el selector superior.</li><li>Acote la audiencia con los filtros: búsqueda por <strong>Name or phone</strong> (nombre o teléfono), <strong>Tags</strong> (Etiquetas), <strong>Accounts</strong> (Cuentas), <strong>State</strong> (Estado), <strong>City</strong> (Ciudad) — y para leads, <strong>Status</strong> y <strong>Source</strong> (Origen). Haga clic en <strong>Apply</strong> (Aplicar).</li><li>Marque filas individuales y haga clic en <strong>Add selected</strong> (Agregar seleccionados), o haga clic en <strong>Add all matching</strong> (Agregar todos los coincidentes) para tomar una instantánea de <em>cada</em> registro que coincida con los filtros actuales (un destinatario por número de teléfono).</li></ol><p><strong>Opción B — Paste CSV</strong> (Pegar CSV): haga clic en <strong>Paste CSV</strong> y pegue un destinatario por línea con el formato <code>phone, first name, last name</code> (p. ej. <code>+15551234567, Jane, Doe</code>), luego haga clic en <strong>Import</strong> (Importar). Una fila de encabezado que empiece con \"phone\" se ignora automáticamente.</p><ul><li>En el selector solo se muestran registros con número de teléfono — los destinatarios sin teléfono se omiten al importar (el mensaje de éxito le dice cuántos).</li><li>Cada fila de miembro muestra su <strong>Source</strong> (lead / contact / csv) y una etiqueta <strong>opted out</strong> si ese número se dio de baja.</li><li>Seleccione miembros y haga clic en <strong>Remove</strong> (Quitar) para depurar la lista; use el cuadro <strong>Search phone</strong> (Buscar teléfono) para encontrar a alguien rápido.</li></ul><blockquote>💡 Los números dados de baja permanecen visibles en la lista pero se omiten automáticamente al momento del envío para plantillas de marketing — nunca tiene que limpiarlos a mano y cumple la normativa por defecto.</blockquote>",
+      "images": [
+        {
+          "src": "images/messages/whatsapp-campaigns-members-drawer-light.png",
+          "alt": "Panel de miembros de una lista de destinatarios mostrando teléfonos, nombres, etiquetas de origen y los botones Add from CRM y Paste CSV",
+          "caption": "El panel de miembros — Add from CRM y Paste CSV desembocan aquí",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-members-drawer-dark.png",
+          "alt": "Panel de miembros de una lista de destinatarios mostrando teléfonos, nombres, etiquetas de origen y los botones Add from CRM y Paste CSV",
+          "caption": "El panel de miembros — Add from CRM y Paste CSV desembocan aquí",
+          "theme": "dark"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-crm-picker-light.png",
+          "alt": "Modal Add recipients from CRM con selector Contacts/Leads, filtros, una tabla de registros y los botones Add all matching / Add selected",
+          "caption": "El selector de CRM — filtre por etiquetas, cuenta o ubicación, luego Add selected o Add all matching",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-crm-picker-dark.png",
+          "alt": "Modal Add recipients from CRM con selector Contacts/Leads, filtros, una tabla de registros y los botones Add all matching / Add selected",
+          "caption": "El selector de CRM — filtre por etiquetas, cuenta o ubicación, luego Add selected o Add all matching",
+          "theme": "dark"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-paste-csv-light.png",
+          "alt": "Modal Paste recipients con un área de texto grande, un destinatario por línea en formato teléfono, nombre, apellido, y un botón Import",
+          "caption": "Paste CSV: un destinatario por línea — teléfono, nombre, apellido — y luego Import",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-paste-csv-dark.png",
+          "alt": "Modal Paste recipients con un área de texto grande, un destinatario por línea en formato teléfono, nombre, apellido, y un botón Import",
+          "caption": "Paste CSV: un destinatario por línea — teléfono, nombre, apellido — y luego Import",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "build-campaign",
+      "title": "Campaigns — construya un envío masivo de plantillas",
+      "content": "<p>Aquí está la recompensa: una plantilla aprobada, miles de mensajes personalizados, entregados exactamente al ritmo que usted elija.</p><ol><li>Abra la pestaña <strong>Campaigns</strong> y haga clic en <strong>New campaign</strong> (Nueva campaña).</li><li>Complete el panel constructor:<ul><li><strong>Campaign name</strong> (Nombre de campaña) — etiqueta interna, p. ej. \"Spring promo blast\".</li><li><strong>Recipient list</strong> (Lista de destinatarios) — elija una de sus listas (el conteo de miembros aparece junto a cada nombre).</li><li><strong>Send from</strong> (Enviar desde) — el número de WhatsApp conectado y registrado que enviará.</li><li><strong>Template</strong> (Plantilla) — elija una plantilla <em>aprobada</em> de la cuenta de negocio de ese número (las plantillas cargan después de elegir el número).</li><li><strong>Send speed</strong> (Velocidad de envío) — 🐢 <strong>Trickle (300/hr)</strong>, 🚶 <strong>Steady (3k/hr)</strong>, 🏃 <strong>Fast (15k/hr)</strong>, 🚀 <strong>Rapid (60k/hr)</strong> o ⚡ <strong>Max</strong>.</li><li><strong>Schedule (optional)</strong> (Programación — opcional) — elija fecha y hora, o déjelo vacío para enviar de inmediato.</li></ul></li><li>Si la plantilla contiene variables, aparece una tarjeta <strong>Template variables</strong> (Variables de plantilla). Las plantillas de WhatsApp usan posiciones como <code>{{1}}</code> — asigne cada una a un token del CRM (<code>{first_name}</code>, <code>{last_name}</code>, <code>{full_name}</code>, <code>{phone}</code>, <code>{city}</code>, <code>{state}</code>, <code>{account_name}</code> o cualquier clave de campo personalizado) o escriba texto literal. Los tokens se rellenan por destinatario al momento del envío.</li><li>Si la plantilla tiene un encabezado de imagen, video o documento, proporcione una <strong>URL</strong> pública del archivo (el mismo para todos los destinatarios; los documentos también aceptan un nombre de archivo).</li><li>Haga clic en <strong>Build &amp; send</strong> (Construir y enviar) para lanzar (o programar) — o en <strong>Save draft</strong> (Guardar borrador) para terminar después.</li></ol><blockquote>⚠️ Empiece con una velocidad lenta en un número nuevo. Meta asigna a cada número un nivel de límite diario de mensajería que crece con el buen engagement — enviar a ⚡ Max desde el primer día arriesga caídas en la calificación de calidad. Para plantillas de categoría marketing, los destinatarios dados de baja se omiten automáticamente.</blockquote>",
+      "images": [
+        {
+          "src": "images/messages/whatsapp-campaigns-campaigns-tab-light.png",
+          "alt": "Pestaña Campaigns con la tabla de campañas y el botón New campaign",
+          "caption": "La pestaña Campaigns — todo envío comienza en New campaign",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-campaigns-tab-dark.png",
+          "alt": "Pestaña Campaigns con la tabla de campañas y el botón New campaign",
+          "caption": "La pestaña Campaigns — todo envío comienza en New campaign",
+          "theme": "dark"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-new-campaign-drawer-light.png",
+          "alt": "Panel New WhatsApp campaign con campos Campaign name, Recipient list, Send from, Template, Send speed y Schedule",
+          "caption": "El constructor de campañas: lista + número + plantilla + velocidad, y luego Build & send",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-new-campaign-drawer-dark.png",
+          "alt": "Panel New WhatsApp campaign con campos Campaign name, Recipient list, Send from, Template, Send speed y Schedule",
+          "caption": "El constructor de campañas: lista + número + plantilla + velocidad, y luego Build & send",
+          "theme": "dark"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-send-speed-light.png",
+          "alt": "Menú desplegable Send speed abierto mostrando los cinco niveles: Trickle 300 por hora, Steady 3k por hora, Fast 15k por hora, Rapid 60k por hora y Max",
+          "caption": "Los cinco niveles de velocidad de envío — empiece lento con un número nuevo y acelere a medida que crece su calificación de calidad",
+          "theme": "light"
+        },
+        {
+          "src": "images/messages/whatsapp-campaigns-send-speed-dark.png",
+          "alt": "Menú desplegable Send speed abierto mostrando los cinco niveles: Trickle 300 por hora, Steady 3k por hora, Fast 15k por hora, Rapid 60k por hora y Max",
+          "caption": "Los cinco niveles de velocidad de envío — empiece lento con un número nuevo y acelere a medida que crece su calificación de calidad",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "track-and-report",
+      "title": "Supervise, pause y lea el informe en vivo",
+      "content": "<p>Una vez lanzada, la fila de la campaña le mantiene al mando:</p><ul><li><strong>Status</strong> (Estado) — <strong>draft</strong> (borrador), <strong>scheduled</strong> (programada), <strong>sending</strong> (enviando), <strong>paused</strong> (pausada), <strong>sent</strong> (enviada) o <strong>cancelled</strong> (cancelada), con una barra de <strong>Progress</strong> (Progreso) en vivo.</li><li><strong>Send</strong> (Enviar) — lanza un borrador (construye la cola de destinatarios y comienza a enviar).</li><li><strong>Pause</strong> (Pausar) / <strong>Resume</strong> (Reanudar) — congele y continúe una campaña en envío o programada en cualquier momento.</li><li><strong>Report</strong> (Informe) — abre el panel de informe en vivo.</li><li>El icono de papelera elimina una campaña en borrador, enviada o cancelada.</li></ul><p>Dentro del panel <strong>Report</strong> obtiene:</p><ol><li>Una barra de progreso más contadores de <strong>Sent</strong> (Enviados), <strong>Delivered</strong> (Entregados), <strong>Read</strong> (Leídos), <strong>Replied</strong> (Respondidos), <strong>Failed</strong> (Fallidos), <strong>Opted out</strong> (Dados de baja) y <strong>Skipped (cooldown)</strong> (Omitidos por enfriamiento) — y en cuanto arranca el envío, porcentajes en vivo de <strong>Delivery rate</strong> (tasa de entrega), <strong>Read rate</strong> (tasa de lectura) y <strong>Reply rate</strong> (tasa de respuesta).</li><li>Una tabla por destinatario con filtro de estado (queued, sending, sent, delivered, read, failed, opted_out, skipped) y una columna de detalle con marcas de tiempo, mensajes de error o \"Must wait Xh before sending again\" para números con tope de frecuencia.</li><li>Un botón <strong>Retry failed</strong> (Reintentar fallidos) que vuelve a encolar a cada destinatario fallido en un clic.</li></ol><blockquote>💡 \"Skipped (cooldown)\" es un tope de frecuencia integrado que protege su número: un destinatario contactado hace muy poco se retiene en lugar de recibir spam. Las respuestas a su campaña llegan a la pestaña <strong>Messages</strong> como cualquier otra conversación — tenga su bot o Smart Agent listo para atenderlas, y la tasa de respuesta se convierte en ingresos.</blockquote>"
+    }
+  ],
+  "nextSteps": {
+    "title": "¿Qué sigue?",
+    "description": "Ya domina el arsenal completo de automatización de WhatsApp — formularios, bots, comercio y campañas. Complete ahora su pila de mensajería.",
+    "cards": [
+      {
+        "href": "/messages/whatsapp",
+        "title": "Mensajería de WhatsApp Business",
+        "description": "Conecte números, cree plantillas aprobadas y trabaje la bandeja de entrada compartida de WhatsApp."
+      },
+      {
+        "href": "/messages/email-marketing",
+        "title": "Email Marketing",
+        "description": "El mismo manual de listas + campañas, en el canal de correo — con seguimiento de aperturas y clics."
+      },
+      {
+        "href": "/messages/sms",
+        "title": "Mensajería SMS",
+        "description": "Mensajes de texto bidireccionales, agentes SMS e hilos de mensajes vinculados a trabajos."
+      }
+    ]
+  },
+  "support": {
+    "title": "¿Necesita ayuda?",
+    "content": "<p>¿Preguntas sobre flujos, bots, catálogos o envíos de campañas de WhatsApp? Contacte a nuestro equipo de soporte en <a href=\"mailto:support@imash.io\">support@imash.io</a> y le ayudaremos a lanzar su primera campaña.</p>"
+  },
+  "metaTitle": "Bots, Flujos y Campañas de WhatsApp | iMash Documentation",
+  "metaDescription": "Cree WhatsApp Flows (formularios nativos en el chat), bots deterministas, un catálogo de productos comprable, listas de destinatarios y campañas masivas de plantillas con personalización por destinatario en iMash.",
+  "metaKeywords": "whatsapp flows, bots whatsapp, catálogo whatsapp, campañas whatsapp, whatsapp masivo, envío de plantillas whatsapp, listas de destinatarios, comercio whatsapp, automatización whatsapp"
+}

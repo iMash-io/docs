@@ -1,56 +1,190 @@
 {
-  "title": "Importar y exportar datos",
-  "lede": "Trae contactos, leads y cuentas a iMash de forma masiva, ya sea subiendo tu propia hoja de cálculo o extrayéndolos del directorio integrado de People Explorer.",
-  "timeToComplete": "8 minutos",
+  "title": "Importar y Exportar Datos",
+  "lede": "Traslade toda su cartera de negocios a iMash en minutos. Suba un CSV de contactos, leads o cuentas, asigne las columnas una sola vez y deje que la combinación automática de duplicados mantenga su CRM limpio — y aprenda dónde extraer sus datos cuando lo necesite.",
+  "timeToComplete": "10 minutos",
   "steps": [
     {
-      "id": "csv-import",
-      "title": "Importa tu propia lista (CSV)",
-      "content": "<ol><li>Ve a la lista a la que quieres agregar datos: <strong>CRM → Contacts</strong> (Contactos), <strong>Leads</strong> o <strong>Accounts</strong> (Cuentas).</li><li>Haz clic en el botón <strong>Import</strong> (Importar) en la parte superior de la lista.</li><li>Sube tu archivo <strong>CSV</strong> y sigue las indicaciones para <strong>mapear tus columnas</strong> (nombre, correo, teléfono, etc.) a los campos correspondientes de iMash.</li><li>Revisa la vista previa y luego confirma para importar. Los nuevos registros aparecen en la lista de inmediato.</li></ol><p>Consejo: coloca un contacto por fila e incluye una fila de encabezados para que el mapeo de columnas sea fácil.</p>"
-    },
-    {
-      "id": "open-people-import",
-      "title": "Importa desde People Explorer (Marketing)",
-      "content": "<ol><li>En la navegación de la izquierda, abre <strong>Marketing</strong> y haz clic en <strong>Import Contacts / Leads / Accounts</strong> (Importar contactos / leads / cuentas) (o ve a <code>/marketing/import-people</code>).</li><li>Esta herramienta busca en un amplio directorio de personas y empresas para que puedas armar una lista específica sin una hoja de cálculo.</li><li>Avanzarás por tres pasos: <strong>Build filters</strong> (Crear filtros), <strong>Preview &amp; select</strong> (Vista previa y selección) y <strong>Map &amp; target</strong> (Mapear y destinar).</li></ol>",
+      "id": "open-the-list",
+      "title": "Abra la lista a la que desea importar",
+      "content": "<p>Cada lista del CRM — Contactos, Leads y Cuentas — tiene su propio importador de CSV integrado. Usted importa directamente en la lista donde quiere que vivan los registros.</p><ol><li>En la navegación superior, haga clic en <strong>CRM</strong>.</li><li>En la fila de sub-pestañas, elija la lista a la que desea agregar: <strong>Contacts</strong> (Contactos), <strong>Leads</strong> o <strong>Accounts</strong> (Cuentas).</li><li>Observe la barra de herramientas sobre la tabla — ahí se encuentran el importador, el buscador de duplicados y las herramientas de API.</li></ol><blockquote>💡 ¿No sabe qué lista usar? Los <strong>Leads</strong> son prospectos que aún está calificando, los <strong>Contacts</strong> son personas con las que ya hace negocios, y las <strong>Accounts</strong> son las empresas a las que pertenecen. Los pasos de importación son idénticos para las tres.</blockquote>",
       "images": [
-        { "src": "images/crm/import-people-light.png", "alt": "Importación desde People Explorer", "caption": "El asistente de importación de Marketing: crear filtros, vista previa y luego mapear e importar", "theme": "light" },
-        { "src": "images/crm/import-people-dark.png", "alt": "Importación desde People Explorer", "caption": "El asistente de importación de Marketing: crear filtros, vista previa y luego mapear e importar", "theme": "dark" }
+        {
+          "src": "images/crm/import-export-data-contacts-page-light.png",
+          "alt": "La lista de Contactos del CRM con la barra de importación sobre la tabla",
+          "caption": "CRM → Contacts — la barra sobre la tabla contiene los botones Import, Find Duplicates y API Info",
+          "theme": "light"
+        },
+        {
+          "src": "images/crm/import-export-data-contacts-page-dark.png",
+          "alt": "La lista de Contactos del CRM con la barra de importación sobre la tabla",
+          "caption": "CRM → Contacts — la barra sobre la tabla contiene los botones Import, Find Duplicates y API Info",
+          "theme": "dark"
+        }
       ]
     },
     {
-      "id": "filter-preview",
-      "title": "Crea filtros y previsualiza",
-      "content": "<ol><li>En <strong>Build filters</strong> (Crear filtros), acota el directorio por criterios como puesto de trabajo, empresa, industria o ubicación.</li><li>Avanza a <strong>Preview &amp; select</strong> (Vista previa y selección) para ver las personas que coinciden.</li><li>Marca las personas que quieres, o selecciona todas las coincidencias. Haz clic en una fila para inspeccionar el registro completo antes de importar.</li></ol>",
+      "id": "prepare-your-csv",
+      "title": "Prepare su archivo CSV",
+      "content": "<p>Un minuto de preparación en la hoja de cálculo le evita una importación desordenada. Exporte sus datos desde su sistema anterior (o Excel / Google Sheets) como archivo <strong>.csv</strong> y asegúrese de que:</p><ul><li><strong>La fila 1 sea una fila de encabezados</strong> — nombres de columna como <em>First Name</em>, <em>Email</em>, <em>Phone</em>. iMash los lee para emparejar sus columnas automáticamente.</li><li><strong>Haya un registro por fila</strong> — una persona (o una empresa) por línea.</li><li><strong>Estén presentes las columnas obligatorias:</strong><ul><li><strong>Contactos y Leads</strong>: Nombre (o Apellido) <em>más</em> un Email o un número de teléfono.</li><li><strong>Cuentas</strong>: Nombre <em>más</em> un Email o un número de teléfono.</li></ul></li><li><strong>Los valores múltiples vayan en una misma celda, separados por comas</strong> — p. ej., una columna de teléfonos puede contener <code>+15551230001, +15551230002</code> y una columna de etiquetas puede contener <code>vip, imported</code>.</li></ul><blockquote>⚠️ Solo se aceptan archivos <strong>.csv</strong> — si está en Excel o Google Sheets, use primero <strong>Archivo → Guardar como / Descargar → CSV</strong>. Las filas completamente vacías se omiten automáticamente.</blockquote>"
+    },
+    {
+      "id": "upload-your-file",
+      "title": "Suba el archivo",
+      "content": "<ol><li>En la barra de la lista, haga clic en el botón <strong>Import</strong> (Importar — el icono de flecha de subida junto a <strong>Add Contact</strong> / <strong>Add Lead</strong> / <strong>Add Account</strong>).</li><li>Se abre el asistente <strong>Import from CSV</strong> (Importar desde CSV) en su paso de carga. Haga clic dentro del área punteada (o arrastre su archivo sobre ella) donde dice <strong>Click or drag CSV file to this area to upload</strong>.</li><li>Cuando el archivo aparezca en la lista, haga clic en <strong>Next</strong> (Siguiente).</li></ol><blockquote>💡 Si ve un <strong>CSV Parsing Error</strong>, el archivo no es un CSV válido — vuelva a exportarlo desde su herramienta de hojas de cálculo e inténtelo de nuevo.</blockquote>",
       "images": [
-        { "src": "images/crm/import-export-light.png", "alt": "Vista previa y mapeo de importación", "caption": "Previsualiza las coincidencias y mapea los campos antes de importar", "theme": "light" },
-        { "src": "images/crm/import-export-dark.png", "alt": "Vista previa y mapeo de importación", "caption": "Previsualiza las coincidencias y mapea los campos antes de importar", "theme": "dark" }
+        {
+          "src": "images/crm/import-export-data-toolbar-light.png",
+          "alt": "La barra de la lista con el icono de importación junto a Add Contact",
+          "caption": "El botón Import es el icono de flecha de subida en la barra, justo a la izquierda de Add Contact",
+          "theme": "light"
+        },
+        {
+          "src": "images/crm/import-export-data-toolbar-dark.png",
+          "alt": "La barra de la lista con el icono de importación junto a Add Contact",
+          "caption": "El botón Import es el icono de flecha de subida en la barra, justo a la izquierda de Add Contact",
+          "theme": "dark"
+        },
+        {
+          "src": "images/crm/import-export-data-upload-light.png",
+          "alt": "El paso de carga de Import Contacts from CSV con un área de arrastrar y soltar",
+          "caption": "Paso 1 del asistente — suelte su CSV en el área de carga punteada",
+          "theme": "light"
+        },
+        {
+          "src": "images/crm/import-export-data-upload-dark.png",
+          "alt": "El paso de carga de Import Contacts from CSV con un área de arrastrar y soltar",
+          "caption": "Paso 1 del asistente — suelte su CSV en el área de carga punteada",
+          "theme": "dark"
+        }
       ]
     },
     {
-      "id": "map-target",
-      "title": "Mapea campos y elige el destino",
-      "content": "<ol><li>En <strong>Map &amp; target</strong> (Mapear y destinar), elige <strong>Import as</strong> (Importar como): <strong>Leads</strong>, <strong>Contacts</strong> (Contactos) o <strong>Accounts (companies)</strong> (Cuentas / empresas).</li><li>Mapea cada campo de origen a una columna estándar, o guarda datos adicionales en <strong>custom fields</strong> (campos personalizados).</li><li>Activa <strong>Also create companies as Accounts &amp; link</strong> (Crear también empresas como cuentas y vincular) para generar automáticamente cuentas de empresa y conectar a cada persona con la suya.</li><li>Haz clic para ejecutar la importación: los duplicados se combinan y un resumen muestra cuántos registros se crearon.</li></ol>"
+      "id": "map-your-columns",
+      "title": "Asigne sus columnas a los campos de iMash",
+      "content": "<p>Aquí ocurre la magia: cada columna de su archivo se empareja con un campo de iMash. iMash rellena sus mejores conjeturas a partir de los nombres de sus encabezados — usted solo revisa y ajusta.</p><ol><li>Para cada columna del CSV a la izquierda, elija el campo de iMash correspondiente en el desplegable de la derecha — <strong>First Name *</strong> (Nombre), <strong>Last Name *</strong> (Apellido), <strong>Email</strong>, <strong>Phone Numbers</strong> (Teléfonos), <strong>Lifecycle Stage</strong> (Etapa), campos de dirección, <strong>Tags</strong> (Etiquetas) y más (los Leads también tienen <strong>Source</strong> (Origen); las Cuentas tienen <strong>Name *</strong>, <strong>Website</strong> e <strong>Industry</strong>).</li><li>Elija <strong>Do not import</strong> (No importar) para cualquier columna que quiera omitir.</li><li>Elija <strong>Custom Variable (custom_vars JSONB)</strong> para conservar datos adicionales sin campo estándar — aparece una pequeña casilla <strong>Key</strong> (Clave) para nombrar la variable (déjela en blanco para generar un nombre automáticamente a partir del encabezado). Las variables personalizadas pueden usarse después por sus agentes de IA y plantillas.</li><li>Las columnas asignadas a <strong>Phone Numbers</strong> muestran dos casillas de limpieza: <strong>Trim leading digits</strong> (recortar N caracteres del inicio de cada número) y <strong>Prefix to add</strong> (prefijo a añadir, p. ej. <code>+1</code>). Una <strong>Preview</strong> (vista previa) en vivo muestra un número de ejemplo antes → después, para normalizar formatos sin tocar su hoja de cálculo.</li><li>(Solo Contactos y Leads) Use <strong>Select Account for Imported Contacts/Leads</strong> en la parte superior para vincular cada registro importado a una cuenta de empresa existente — muy útil al importar la plantilla de personal de un cliente.</li><li>Haga clic en <strong>Preview</strong> (Vista previa).</li></ol><blockquote>⚠️ Si aparece la advertencia <strong>Required Fields Missing</strong> (Faltan campos obligatorios), el botón <strong>Preview</strong> permanece deshabilitado. Contactos/Leads necesitan Nombre (o Apellido) asignado junto con Email o Teléfonos; las Cuentas necesitan Nombre más Email o Teléfonos.</blockquote>",
+      "images": [
+        {
+          "src": "images/crm/import-export-data-mapping-light.png",
+          "alt": "El paso de asignación de columnas emparejando encabezados del CSV con campos de contacto y opciones de transformación de teléfonos",
+          "caption": "Cada columna del CSV se asigna a un campo de iMash — las columnas de teléfono tienen limpieza de recorte/prefijo con vista previa en vivo",
+          "theme": "light"
+        },
+        {
+          "src": "images/crm/import-export-data-mapping-dark.png",
+          "alt": "El paso de asignación de columnas emparejando encabezados del CSV con campos de contacto y opciones de transformación de teléfonos",
+          "caption": "Cada columna del CSV se asigna a un campo de iMash — las columnas de teléfono tienen limpieza de recorte/prefijo con vista previa en vivo",
+          "theme": "dark"
+        }
+      ]
     },
     {
-      "id": "export",
-      "title": "Exporta tus datos",
-      "content": "<ul><li>Abre cualquier lista del CRM (Contactos, Leads o Cuentas) y aplica los filtros que quieres exportar.</li><li>Usa la opción de exportación de la lista para descargar los registros filtrados como respaldo o para usarlos en otra herramienta.</li><li>Los registros exportados reflejan los filtros y la búsqueda actuales, así que acota la lista primero para exportar solo lo que necesitas.</li></ul>"
+      "id": "preview-and-merge",
+      "title": "Previsualice, elija el manejo de duplicados e importe",
+      "content": "<p>Antes de que se escriba nada en su CRM, tiene una última vista de los datos exactamente como se importarán.</p><ol><li>Revise la tabla de muestra — muestra las primeras 5 filas con cada columna bajo el campo de iMash que llenará.</li><li>Decida cómo manejar los duplicados con la casilla <strong>Merge duplicate contacts</strong> (Combinar duplicados):<ul><li><strong>Marcada</strong> — si una fila entrante coincide con un registro existente, los teléfonos nuevos se añaden al registro existente y su email se completa si estaba vacío. No se crean filas duplicadas.</li><li><strong>Desmarcada</strong> — las filas duplicadas se rechazan y se reportan en la pantalla de resultados, así nada se sobrescribe silenciosamente.</li></ul></li><li>Confirme que el aviso <strong>Ready to Import</strong> (Listo para importar) muestra el número de registros que espera y haga clic en <strong>Import</strong> (Importar).</li><li>Un indicador circular de progreso muestra los registros procesándose por lotes — los archivos grandes (decenas de miles de filas) se manejan automáticamente; solo deje la ventana abierta hasta que termine.</li></ol>",
+      "images": [
+        {
+          "src": "images/crm/import-export-data-preview-light.png",
+          "alt": "El paso de vista previa con filas de muestra, la casilla de combinar duplicados y el aviso Ready to Import",
+          "caption": "El paso de vista previa — marque Merge duplicate contacts para enriquecer registros existentes en lugar de rechazarlos",
+          "theme": "light"
+        },
+        {
+          "src": "images/crm/import-export-data-preview-dark.png",
+          "alt": "El paso de vista previa con filas de muestra, la casilla de combinar duplicados y el aviso Ready to Import",
+          "caption": "El paso de vista previa — marque Merge duplicate contacts para enriquecer registros existentes en lugar de rechazarlos",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "review-results",
+      "title": "Revise los resultados de la importación",
+      "content": "<p>Al terminar la importación, el asistente muestra un marcador:</p><ul><li><strong>Total Records</strong> — cuántas filas se procesaron.</li><li><strong>Successful</strong> — registros creados (o combinados) en su CRM.</li><li><strong>Failed</strong> — filas que no se pudieron importar.</li></ul><p>Si algo falló, una tabla <strong>Error Details</strong> (Detalles de errores) lista cada fila problemática con el motivo. Las filas rechazadas como duplicadas pueden <strong>expandirse</strong> para ver el registro existente y el registro entrante lado a lado, y así decidir qué corregir.</p><ol><li>Haga clic en <strong>Close</strong> (Cerrar) — sus nuevos registros ya están activos en la lista, listos para llamar, enviar mensajes y automatizar.</li></ol>",
+      "images": [
+        {
+          "src": "images/crm/import-export-data-results-light.png",
+          "alt": "La pantalla de resultados de importación con los mosaicos Total Records, Successful y Failed",
+          "caption": "El marcador de resultados — las filas fallidas se listan con el motivo exacto",
+          "theme": "light"
+        },
+        {
+          "src": "images/crm/import-export-data-results-dark.png",
+          "alt": "La pantalla de resultados de importación con los mosaicos Total Records, Successful y Failed",
+          "caption": "El marcador de resultados — las filas fallidas se listan con el motivo exacto",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "find-duplicates",
+      "title": "Limpie duplicados en cualquier momento",
+      "content": "<p>¿Ya importó desde varias fuentes? Las listas de Contactos y Leads tienen un de-duplicador integrado.</p><ol><li>En la barra de la lista, haga clic en el botón <strong>Find Duplicates</strong> (Buscar duplicados — el icono de copia).</li><li>Elija un <strong>Duplicate scope</strong> (alcance de duplicados) — busque en todos los registros o acote la regla de coincidencia.</li><li>En <strong>Find duplicates by</strong>, haga clic en <strong>Phone Number</strong> (Teléfono) o <strong>Email Address</strong> (Email) para escanear.</li><li>Revise cada grupo de duplicados y combine o elimine los sobrantes.</li></ol><blockquote>💡 Ejecute esto después de cada importación grande — con datos limpios, sus campañas nunca llamarán dos veces a la misma persona.</blockquote>",
+      "images": [
+        {
+          "src": "images/crm/import-export-data-duplicates-light.png",
+          "alt": "El diálogo Find and Remove Duplicate Contacts con opciones de alcance y criterio de coincidencia",
+          "caption": "Find & Remove Duplicate Contacts — escanee por número de teléfono o dirección de email",
+          "theme": "light"
+        },
+        {
+          "src": "images/crm/import-export-data-duplicates-dark.png",
+          "alt": "El diálogo Find and Remove Duplicate Contacts con opciones de alcance y criterio de coincidencia",
+          "caption": "Find & Remove Duplicate Contacts — escanee por número de teléfono o dirección de email",
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "id": "people-explorer",
+      "title": "¿Aún no tiene lista? Cree una con People Explorer",
+      "content": "<p>Ni siquiera necesita una hoja de cálculo para llenar su CRM. El <strong>People Explorer</strong> (Explorador de Personas) en la sección de Marketing busca en un enorme directorio de profesionales y empresas para que construya una lista segmentada desde cero:</p><ul><li>Filtre por puesto, empresa, industria, ubicación y más.</li><li>Previsualice las coincidencias, seleccione a mano las personas que desee e inspeccione cualquier registro antes de importarlo.</li><li>Impórtelas como <strong>Leads</strong>, <strong>Contacts</strong> o <strong>Accounts</strong> — con la opción de crear automáticamente las cuentas de empresa y vincular a cada persona con la suya.</li></ul><p>Vea la guía completa en Importar Personas (People Explorer).</p>"
+    },
+    {
+      "id": "export-your-data",
+      "title": "Exporte sus datos",
+      "content": "<p>Sus datos nunca quedan atrapados. Las exportaciones más completas están donde ocurre la actividad:</p><ul><li><strong>Historial de llamadas</strong> — vaya a <strong>Call Logs</strong> (Registros de llamadas, en la sección Call Center de la barra lateral) y haga clic en <strong>Export to CSV (Max 50,000)</strong> para descargar su historial filtrado. Haga clic primero en <strong>Columns</strong> (Columnas) para elegir exactamente qué columnas aparecen en pantalla y en el CSV. En la vista de resumen, el botón se convierte en <strong>Export Summary</strong>, con las opciones <strong>Summary as CSV</strong> o <strong>Summary as PDF</strong>.</li><li><strong>Resultados de campañas</strong> — abra una campaña y use sus botones de <strong>Export</strong> para descargar los resultados de llamadas como CSV o PDF.</li><li><strong>Reportes</strong> — las páginas de reportes de Analytics ofrecen descargas CSV de sus tablas.</li><li><strong>Registros del CRM vía API</strong> — en cualquier lista de Contactos, Leads o Cuentas, haga clic en el botón <strong>API Info</strong> (el icono de enlace en la barra) para obtener ejemplos de API listos para leer sus registros de forma programática — perfecto para sincronizar con otro sistema. Vea <a data-href=\"/get-started/api-keys\">Claves de API</a> para configurar el acceso.</li></ul><blockquote>💡 Las exportaciones respetan los filtros aplicados — acote primero la lista (rango de fechas, agente, etiquetas) y el archivo contendrá solo lo que ve.</blockquote>",
+      "images": [
+        {
+          "src": "images/crm/import-export-data-calllogs-export-light.png",
+          "alt": "Los botones del encabezado de Call Logs: Columns, Export to CSV (Max 50,000) y API Info",
+          "caption": "Call Logs → Export to CSV — el botón Columns controla qué columnas llegan al archivo",
+          "theme": "light"
+        },
+        {
+          "src": "images/crm/import-export-data-calllogs-export-dark.png",
+          "alt": "Los botones del encabezado de Call Logs: Columns, Export to CSV (Max 50,000) y API Info",
+          "caption": "Call Logs → Export to CSV — el botón Columns controla qué columnas llegan al archivo",
+          "theme": "dark"
+        }
+      ]
     }
   ],
   "nextSteps": {
-    "title": "¿Qué sigue?",
-    "description": "Ahora que tus datos están dentro, ponlos a trabajar.",
+    "title": "¿Qué Sigue?",
+    "description": "Sus datos ya están dentro — ahora póngalos a trabajar. Ponga su lista importada frente a sus agentes de IA y vea llegar las llamadas, los mensajes y las reservas.",
     "cards": [
-      { "href": "/crm/contacts", "title": "Contactos", "description": "Revisa y organiza las personas importadas." },
-      { "href": "/crm/leads", "title": "Leads", "description": "Trabaja los prospectos importados a través de tu pipeline." },
-      { "href": "/campaigns/create-campaign", "title": "Crear una campaña", "description": "Llama o envía mensajes a tu lista recién importada." }
+      {
+        "href": "/campaigns/create-campaign",
+        "title": "Crear una Campaña",
+        "description": "Llame o envíe mensajes a su lista recién importada con un agente de IA."
+      },
+      {
+        "href": "/crm/contacts",
+        "title": "Contactos",
+        "description": "Revise, organice y enriquezca a las personas importadas."
+      },
+      {
+        "href": "/crm/leads",
+        "title": "Leads",
+        "description": "Haga avanzar los prospectos importados por las etapas de su pipeline."
+      }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Revisa nuestra <a data-href=\"/api-reference\">referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+    "title": "¿Necesita Ayuda?",
+    "content": "<p>Si tiene algún problema o pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Importar y exportar datos - CRM | iMash Docs",
-  "metaDescription": "Importa de forma masiva contactos, leads y cuentas a iMash mediante carga de CSV o el directorio de People Explorer. Mapea campos, crea cuentas de empresa automáticamente y exporta datos.",
-  "metaKeywords": "importar datos, exportar datos, importar CSV, importación masiva, people explorer, importar leads, importar contactos, mapeo de campos"
+  "metaTitle": "Importar y Exportar Datos - CRM | Documentación de iMash",
+  "metaDescription": "Importe contactos, leads y cuentas a iMash de forma masiva desde CSV: asignación de columnas, limpieza de teléfonos, variables personalizadas y combinación de duplicados. Además, dónde exportar registros de llamadas, resultados de campañas y datos del CRM.",
+  "metaKeywords": "importar datos, exportar datos, importación CSV, importación masiva, asignación de columnas, combinar duplicados, buscar duplicados, people explorer, importar leads, importar contactos, exportar registros de llamadas"
 }

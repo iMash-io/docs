@@ -1,51 +1,91 @@
 {
-  "title": "Crear un grupo de permisos (equipo)",
-  "lede": "Un grupo de permisos es un equipo o habilidad de agentes humanos. Crea uno, agrega miembros y luego usa sus pestañas internas para dirigir números de teléfono hacia él y controlar cómo suena. Esta guía cubre cómo crear un grupo y agregar personas.",
-  "timeToComplete": "5 minutos",
+  "title": "Crear un Grupo de Permisos (Equipo)",
+  "lede": "Los Grupos de Permisos son los equipos que impulsan su contact center humano: Ventas, Soporte, línea en español, mesa VIP. Cree un grupo, agregue a su gente, y cada número de teléfono, regla de timbrado y cola que configure después se conecta directamente a él. Esta guía lo lleva desde una pestaña de Grupos vacía hasta un equipo completamente dotado.",
+  "timeToComplete": "10 minutos",
   "steps": [
     {
       "id": "open-groups",
-      "title": "Abre la pestaña Groups (Grupos)",
-      "content": "<ol><li>Ve a <strong>Call Center &rarr; Contact Center</strong>.</li><li>Haz clic en la pestaña <strong>Groups</strong> (Grupos) (visible para los admins del Contact Center y la cuenta principal).</li><li>La columna izquierda lista tus <strong>Permission Groups</strong> (Grupos de permisos) existentes; el panel derecho muestra los miembros y ajustes del grupo seleccionado.</li></ol>",
+      "title": "Abra la pestaña Groups",
+      "content": "<p>Todo lo relativo a sus equipos humanos vive en un solo lugar:</p><ol><li>En la barra lateral izquierda, haga clic en <strong>Contact Center</strong> (Centro de Contacto, bajo la sección <strong>Call Center</strong>). También puede llegar desde la navegación superior: <strong>Contact Center</strong>.</li><li>Haga clic en la pestaña <strong>Groups</strong> (Grupos) en la parte superior de la página.</li></ol><p>La pantalla se divide en dos:</p><ul><li><strong>Groups</strong> (columna izquierda) — la lista de sus Grupos de Permisos, cada uno con su nombre, descripción y un contador de miembros.</li><li><strong>Group</strong> (panel derecho) — los miembros del grupo seleccionado y toda su configuración de call center, organizada en pestañas internas.</li></ul><blockquote>⚠️ La pestaña <strong>Groups</strong> solo es visible para la cuenta principal y para los miembros cuyo rol de Contact Center es <strong>Admin</strong>. Si no la ve, pida a un Admin que eleve su rol — consulte <em>Miembros y Roles</em>.</blockquote><blockquote>💡 Pase el cursor sobre <strong>How does this work?</strong> (¿Cómo funciona esto?) junto al título Permission Groups para un recordatorio rápido: además del enrutamiento de llamadas, los grupos también controlan la compartición de datos — una subcuenta con visibilidad de equipo ve los registros de cualquier integrante de sus grupos.</blockquote>",
       "images": [
-        { "src": "images/contact-center/cc-groups-overview-light.png", "alt": "Vista general de la pestaña Groups", "caption": "La pestaña Groups: lista de grupos a la izquierda, panel de miembros y ajustes a la derecha.", "theme": "light" },
-        { "src": "images/contact-center/cc-groups-overview-dark.png", "alt": "Vista general de la pestaña Groups", "caption": "La pestaña Groups: lista de grupos a la izquierda, panel de miembros y ajustes a la derecha.", "theme": "dark" }
+        { "src": "images/contact-center/cc-groups-overview-light.png", "alt": "Vista general de la pestaña Groups con la lista de grupos a la izquierda y el panel del grupo a la derecha", "caption": "La pestaña Groups: lista de grupos a la izquierda, panel de miembros y configuración a la derecha.", "theme": "light" },
+        { "src": "images/contact-center/cc-groups-overview-dark.png", "alt": "Vista general de la pestaña Groups con la lista de grupos a la izquierda y el panel del grupo a la derecha", "caption": "La pestaña Groups: lista de grupos a la izquierda, panel de miembros y configuración a la derecha.", "theme": "dark" }
       ]
     },
     {
       "id": "new-group",
-      "title": "Crea un nuevo grupo",
-      "content": "<ol><li>Haz clic en <strong>New Group</strong> (Nuevo grupo) en la parte superior derecha.</li><li>Ingresa un <strong>Name</strong> (Nombre) (por ejemplo, <em>Sales Team</em> / Equipo de ventas o <em>Spanish Support</em> / Soporte en español).</li><li>Opcionalmente agrega una <strong>Description</strong> (Descripción) de lo que representa el equipo.</li><li>Haz clic en <strong>Create</strong> (Crear). El nuevo grupo se selecciona automáticamente.</li></ol>"
+      "title": "Cree un grupo nuevo",
+      "content": "<ol><li>Haga clic en <strong>New Group</strong> (Nuevo Grupo) en la esquina superior derecha.</li><li>Escriba un <strong>Name</strong> (Nombre) — elija algo que su equipo reconozca al instante, como <em>Equipo de Ventas</em> o <em>Soporte en Español</em>.</li><li>Opcionalmente complete <strong>Description (optional)</strong> (Descripción, opcional) para anotar qué representa el grupo.</li><li>Haga clic en <strong>Create</strong> (Crear). El grupo aparece en la lista izquierda y queda seleccionado automáticamente, listo para recibir miembros.</li></ol><blockquote>💡 Cree un grupo por equipo o habilidad — por ejemplo, grupos separados de <em>Ventas</em> y <em>Soporte</em> — para que cada uno pueda tener después sus propios números de teléfono, estrategia de timbrado y experiencia de espera.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/groups-new-group-modal-light.png", "alt": "Modal New Group con los campos Name y Description", "caption": "El modal New Group — solo el nombre es obligatorio.", "theme": "light" },
+        { "src": "images/contact-center/groups-new-group-modal-dark.png", "alt": "Modal New Group con los campos Name y Description", "caption": "El modal New Group — solo el nombre es obligatorio.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "manage-groups",
+      "title": "Seleccione, renombre o elimine un grupo",
+      "content": "<p>La columna izquierda <strong>Groups</strong> es su panel de control para los equipos existentes:</p><ul><li><strong>Haga clic en un grupo</strong> para seleccionarlo — sus miembros y configuración se cargan en el panel derecho.</li><li><strong>Icono de lápiz</strong> — abre el modal <strong>Edit Group</strong> (Editar Grupo) para renombrar el grupo o cambiar su descripción; luego haga clic en <strong>Save</strong> (Guardar).</li><li><strong>Icono de papelera</strong> — elimina el grupo tras confirmar <strong>Delete this group?</strong> (¿Eliminar este grupo?).</li></ul><blockquote>💡 Eliminar un grupo solo desvincula a sus miembros — sus cuentas de usuario, datos y roles quedan intactos. Eso sí: los números de teléfono enrutados al grupo dejan de hacerlo sonar, así que reasígnelos primero.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/groups-list-panel-light.png", "alt": "Lista de grupos con contadores de miembros e iconos de editar y eliminar", "caption": "Cada fila de grupo muestra su número de miembros más las acciones de editar (lápiz) y eliminar (papelera).", "theme": "light" },
+        { "src": "images/contact-center/groups-list-panel-dark.png", "alt": "Lista de grupos con contadores de miembros e iconos de editar y eliminar", "caption": "Cada fila de grupo muestra su número de miembros más las acciones de editar (lápiz) y eliminar (papelera).", "theme": "dark" },
+        { "src": "images/contact-center/groups-edit-group-modal-light.png", "alt": "Modal Edit Group con los campos Name y Description ya completados", "caption": "Edit Group: renombre el equipo o actualice su descripción y haga clic en Save.", "theme": "light" },
+        { "src": "images/contact-center/groups-edit-group-modal-dark.png", "alt": "Modal Edit Group con los campos Name y Description ya completados", "caption": "Edit Group: renombre el equipo o actualice su descripción y haga clic en Save.", "theme": "dark" }
+      ]
     },
     {
       "id": "add-members",
-      "title": "Agrega miembros al grupo",
-      "content": "<ol><li>Con el grupo seleccionado, abre su pestaña <strong>Members</strong> (Miembros).</li><li>Haz clic en <strong>Add Members</strong> (Agregar miembros).</li><li>Busca usuarios por nombre o correo y elige uno o más — se pueden agregar tanto cuentas principales como subcuentas.</li><li>Haz clic en <strong>Add</strong> (Agregar). Los miembros aparecen en la tabla, cada uno etiquetado como <strong>Main</strong> (Principal) o <strong>Sub</strong> (Subcuenta).</li></ol><p>Para quitar a alguien, haz clic en el ícono de eliminar en su fila y confirma.</p>",
+      "title": "Agregue usuarios existentes como miembros",
+      "content": "<p>Ahora dote al equipo con personas que ya tienen acceso a iMash:</p><ol><li>Con el grupo seleccionado, asegúrese de estar en su pestaña <strong>Members</strong> (Miembros, la primera pestaña interna).</li><li>Haga clic en <strong>Add Members</strong> (Agregar Miembros) en la parte superior derecha del panel.</li><li>En el modal <strong>Add Members</strong>, busque usuarios por nombre o correo y elija uno o varios — se pueden agregar tanto la cuenta principal como las subcuentas.</li><li>Haga clic en <strong>Add</strong> (Agregar). Los miembros aparecen en la tabla, cada uno etiquetado como <strong>Main</strong> (Principal) o <strong>Sub</strong> (Subcuenta).</li></ol><p>Para quitar a alguien más adelante, haga clic en el icono rojo de papelera de su fila y confirme <strong>Remove from group?</strong> (¿Quitar del grupo?) — esto solo lo saca del equipo, nunca elimina su cuenta.</p><blockquote>💡 Un usuario puede pertenecer a varios grupos a la vez — perfecto para un representante bilingüe que cubre la línea en inglés y la línea en español.</blockquote>",
       "images": [
-        { "src": "images/contact-center/cc-group-members-light.png", "alt": "Pestaña de miembros del grupo", "caption": "La pestaña Members con Add Members y la lista de miembros.", "theme": "light" },
-        { "src": "images/contact-center/cc-group-members-dark.png", "alt": "Pestaña de miembros del grupo", "caption": "La pestaña Members con Add Members y la lista de miembros.", "theme": "dark" }
+        { "src": "images/contact-center/groups-add-members-modal-light.png", "alt": "Modal Add Members con un campo de búsqueda de usuarios", "caption": "Add Members: busque por nombre o correo y elija tantos usuarios como necesite.", "theme": "light" },
+        { "src": "images/contact-center/groups-add-members-modal-dark.png", "alt": "Modal Add Members con un campo de búsqueda de usuarios", "caption": "Add Members: busque por nombre o correo y elija tantos usuarios como necesite.", "theme": "dark" },
+        { "src": "images/contact-center/cc-group-members-light.png", "alt": "Pestaña Members mostrando la tabla de miembros con etiquetas Main y Sub", "caption": "La pestaña Members: cada miembro aparece con una etiqueta Main o Sub y una acción para quitarlo.", "theme": "light" },
+        { "src": "images/contact-center/cc-group-members-dark.png", "alt": "Pestaña Members mostrando la tabla de miembros con etiquetas Main y Sub", "caption": "La pestaña Members: cada miembro aparece con una etiqueta Main o Sub y una acción para quitarlo.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "create-user",
+      "title": "Cree un agente nuevo en un solo paso",
+      "content": "<p>¿Contrató a alguien que aún no tiene acceso a iMash? Sáltese la administración de usuarios — créelo directamente dentro del grupo:</p><ol><li>En la pestaña <strong>Members</strong> del grupo, haga clic en <strong>Create User</strong> (Crear Usuario, junto a Add Members).</li><li>Complete los datos del nuevo agente:<ul><li><strong>Email</strong> (Correo) — su correo de inicio de sesión.</li><li><strong>Password</strong> (Contraseña) — mínimo 8 caracteres; compártala con él de forma segura.</li><li><strong>First Name</strong> (Nombre) y <strong>Last Name</strong> (Apellido).</li><li><strong>Contact Center role</strong> (Rol de Contact Center) — <strong>Agent</strong>, <strong>Monitor / QA</strong>, <strong>Supervisor</strong> o <strong>Admin</strong> (consulte <em>Miembros y Roles</em> para saber qué puede hacer cada uno).</li></ul></li><li>Haga clic en <strong>Create User</strong>.</li></ol><p>La cuenta se crea auto-aprobada — sin confirmación por correo — y entra directamente a este grupo. Su rol de acceso a datos y su perfil de vista siguen el <strong>Role Mapping</strong> (Mapeo de Roles) del grupo para el rol de Contact Center que usted eligió, de modo que el nuevo agente llega con los permisos exactos desde el primer día.</p>",
+      "images": [
+        { "src": "images/contact-center/groups-create-user-modal-light.png", "alt": "Modal Create User con campos de correo, contraseña, nombre y rol de Contact Center", "caption": "Create User: una cuenta de agente lista para trabajar en un solo modal.", "theme": "light" },
+        { "src": "images/contact-center/groups-create-user-modal-dark.png", "alt": "Modal Create User con campos de correo, contraseña, nombre y rol de Contact Center", "caption": "Create User: una cuenta de agente lista para trabajar en un solo modal.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "online-offline",
+      "title": "Entienda Online vs. Offline (a quién le suena el teléfono)",
+      "content": "<p>Ser miembro es solo la mitad de la historia — las llamadas del grupo hacen sonar únicamente a los miembros <strong>en línea</strong>. Cada miembro controla su propia disponibilidad desde el marcador web (el icono de teléfono en la parte superior derecha de la aplicación), bajo <strong>My status</strong> (Mi estado):</p><ul><li><strong>Online</strong> (En línea) — recibe las transferencias de la IA al grupo, las llamadas entrantes a los números del grupo y a los llamantes en cola.</li><li><strong>On Break</strong> (En pausa) — fuera de la rotación temporalmente; el estado se mantiene hasta que él mismo lo cambie.</li><li><strong>Offline</strong> (Desconectado) — no recibe ninguna llamada.</li><li><strong>Busy on a Call / Busy — Wrap-up</strong> (Ocupado en llamada / Ocupado — Cierre) — se activa automáticamente mientras el miembro está en una llamada en vivo o registrando el resultado de la llamada; no se puede seleccionar manualmente y no le entran llamadas nuevas mientras dura.</li></ul><p>Si <em>nadie</em> del grupo está en línea, se activa el plan de respaldo del grupo — normalmente el agente de IA toma la llamada (se configura en la pestaña <strong>Inbound SIP Routing</strong>).</p><blockquote>💡 ¿Le preocupa que los agentes cierren el marcador y pierdan llamadas? En la pestaña <strong>Members Roles</strong> del grupo, use <strong>Keep the web dialer always open for</strong> (Mantener el marcador web siempre abierto para) para fijar el marcador abierto según el rol, y así nunca pierdan una llamada en cola.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/groups-online-status-light.png", "alt": "Selector My status del marcador web configurado en Online", "caption": "My status en el marcador web — a los miembros Online es a quienes les suena.", "theme": "light" },
+        { "src": "images/contact-center/groups-online-status-dark.png", "alt": "Selector My status del marcador web configurado en Online", "caption": "My status en el marcador web — a los miembros Online es a quienes les suena.", "theme": "dark" }
       ]
     },
     {
       "id": "next-tabs",
-      "title": "Configura las pestañas internas del grupo",
-      "content": "<p>Una vez que el grupo tiene miembros, sus pestañas internas te permiten terminar la configuración: <strong>Members Roles</strong> (Roles de miembros), <strong>Role Mapping</strong> (Asignación de roles), <strong>Inbound SIP Routing</strong> (Enrutamiento SIP entrante), <strong>Ring strategy</strong> (Estrategia de timbrado), <strong>Wait &amp; Hold experience</strong> (Experiencia de espera y retención) y <strong>Queue Settings</strong> (Ajustes de cola). Cada una tiene su propio botón de guardar — empieza con Members Roles e Inbound SIP Routing.</p>"
+      "title": "Recorra las pestañas internas del grupo",
+      "content": "<p>Con el equipo a bordo, la barra de pestañas internas del grupo es su lista de configuración. Cada pestaña tiene su propia guía detallada:</p><ul><li><strong>Members</strong> (Miembros) — la plantilla que acaba de armar (esta guía).</li><li><strong>Members Roles</strong> (Roles de Miembros) — asigne a cada miembro su rol de Contact Center (Agent, Monitor / QA, Supervisor, Admin), fije el marcador abierto por rol, arme el catálogo de <strong>Skills</strong> (Habilidades) del grupo — etiquete a los miembros con habilidades como <em>Español</em> o <em>Facturación</em> por las que los agentes pueden filtrar al transferir — y administre las <strong>Dispositions</strong> (Disposiciones) posteriores a la llamada. → <em>Miembros y Roles</em></li><li><strong>Role Mapping</strong> (Mapeo de Roles) — asocie cada rol de Contact Center a un rol de acceso a datos y un perfil de vista que se aplican automáticamente al guardar. Esta pestaña solo aparece para la cuenta principal y las subcuentas con administración de usuarios habilitada. → <em>Mapeo de Roles</em></li><li><strong>Inbound SIP Routing</strong> (Enrutamiento SIP Entrante) — apunte números de teléfono directamente a este grupo y elija el respaldo cuando nadie contesta. → <em>Enrutamiento SIP Entrante</em></li><li><strong>Ring strategy</strong> (Estrategia de timbrado) — sonar a todos a la vez, por turnos (round-robin), lineal o al de mayor inactividad, además de los tiempos de espera y el comportamiento por llamada como la respuesta automática. → <em>Estrategia de Timbrado</em></li><li><strong>Wait &amp; Hold experience</strong> (Experiencia de espera y retención) — música de espera, música de retención y anuncios periódicos que escuchan los llamantes. → <em>Espera y Retención</em></li><li><strong>Queue Settings</strong> (Configuración de Cola) — tiempo máximo de espera y qué sucede cuando la cola expira. → <em>Configuración de Cola</em></li></ul><p>Un único botón <strong>Save</strong> (Guardar) en la esquina inferior derecha guarda todas las pestañas de configuración a la vez — puede ajustar varias pestañas y guardar una sola vez. (Está oculto en <strong>Members</strong>, donde agregar y quitar miembros se aplica al instante.)</p><p>Empiece por <strong>Members Roles</strong> y luego <strong>Inbound SIP Routing</strong> — en cuanto un número apunte a su grupo, su equipo estará en vivo atendiendo llamadas. 🎉</p>",
+      "images": [
+        { "src": "images/contact-center/groups-inner-tabs-light.png", "alt": "La barra de pestañas internas del grupo: Members, Members Roles, Role Mapping, Inbound SIP Routing, Ring strategy, Wait and Hold experience, Queue Settings", "caption": "Las pestañas internas del grupo — cada una es un paso en la configuración de llamadas de su equipo.", "theme": "light" },
+        { "src": "images/contact-center/groups-inner-tabs-dark.png", "alt": "La barra de pestañas internas del grupo: Members, Members Roles, Role Mapping, Inbound SIP Routing, Ring strategy, Wait and Hold experience, Queue Settings", "caption": "Las pestañas internas del grupo — cada una es un paso en la configuración de llamadas de su equipo.", "theme": "dark" }
+      ]
     }
   ],
   "nextSteps": {
     "title": "¿Qué sigue?",
-    "description": "Asigna roles y dirige llamadas a tu nuevo grupo.",
+    "description": "Su equipo ya existe — ahora asígnele roles, un número de teléfono y un plan de timbrado.",
     "cards": [
-      { "href": "/contact-center/members-roles", "title": "Miembros y roles", "description": "Define el rol de Contact Center de cada miembro." },
-      { "href": "/contact-center/inbound-sip-routing", "title": "Enrutamiento SIP entrante", "description": "Dirige un número de teléfono a este grupo." },
-      { "href": "/contact-center/ring-strategy", "title": "Estrategia de timbrado", "description": "Elige cómo suenan los miembros." }
+      { "href": "/contact-center/members-roles", "title": "Miembros y Roles", "description": "Asigne el rol de Contact Center y el comportamiento del marcador de cada miembro." },
+      { "href": "/contact-center/role-mapping", "title": "Mapeo de Roles", "description": "Asocie los roles de Contact Center a roles de acceso a datos y perfiles de vista." },
+      { "href": "/contact-center/inbound-sip-routing", "title": "Enrutamiento SIP Entrante", "description": "Apunte un número de teléfono a este grupo." },
+      { "href": "/contact-center/ring-strategy", "title": "Estrategia de Timbrado", "description": "Elija cómo suenan los miembros — todos a la vez, por turnos y más." }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
+    "title": "¿Necesita ayuda?",
+    "content": "<p>Si tiene problemas o preguntas:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Crear un grupo de permisos | iMash Docs",
-  "metaDescription": "Crea un grupo de permisos del Contact Center en iMash, agrega miembros y abre sus pestañas internas para dirigir llamadas y controlar el timbrado de tu equipo.",
-  "metaKeywords": "grupo de permisos, equipo, grupo de habilidad, agregar miembros, contact center, nuevo grupo, agentes"
+  "metaTitle": "Crear un Grupo de Permisos | Documentación de iMash",
+  "metaDescription": "Cree un Grupo de Permisos del Contact Center en iMash: agregue miembros, cree agentes nuevos en un paso, entienda el timbrado en línea/desconectado y recorra las pestañas de enrutamiento, timbrado, espera y cola del grupo.",
+  "metaKeywords": "grupo de permisos, equipo, grupo de habilidades, agregar miembros, crear usuario, contact center, nuevo grupo, agentes, estado en línea, grupo de timbrado"
 }

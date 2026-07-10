@@ -1,56 +1,97 @@
 {
-  "title": "Add a SIP Provider",
-  "lede": "Connect your own SIP trunk or carrier so iMash can send and receive phone calls through it. Most users can skip this — iMash numbers already come with calling built in. Use this only if you bring your own carrier.",
+  "title": "Connect a SIP Provider",
+  "lede": "Bring your own carrier to iMash. Connect any SIP trunk — Telnyx, Twilio, a wholesale carrier, or your on-prem PBX — and your AI agents can answer and place calls over the numbers you already own.",
   "timeToComplete": "10 minutes",
   "steps": [
     {
       "id": "open-sip-providers",
-      "title": "Open SIP Providers",
-      "content": "<ol><li>In the left menu, go to <strong>Call Center → SIP Providers</strong>.</li><li>Click <strong>Add Provider</strong> (or the <strong>+</strong> button) to open the <strong>Create New SIP Provider</strong> panel.</li></ol><p>A SIP provider is your outside phone carrier (for example your own Telnyx, Twilio, or on-prem PBX trunk). Connecting one lets iMash route calls over it instead of buying numbers through iMash.</p>",
+      "title": "Open the SIP Providers page",
+      "content": "<p>Most users never need this page — numbers you buy inside iMash come with calling built in. Connect a SIP provider only when you want to <strong>bring your own carrier</strong> and route calls through a trunk you already control.</p><ol><li>In the left sidebar, scroll to the <strong>Call Center</strong> section and click <strong>SIP Providers</strong>. (You can also get there from the top navigation: <strong>Contact Center → SIP Providers</strong>.)</li></ol><p>The page shows every custom trunk you have connected, with these columns:</p><ul><li><strong>Label</strong> — the name you gave the trunk. Click it to open and edit the provider.</li><li><strong>Title</strong> / <strong>Type</strong> — custom SIP providers show as <strong>Custom</strong>.</li><li><strong>Status</strong> — <strong>Active</strong> means the trunk is live and usable.</li><li><strong>Owner</strong> — which team member's workspace the trunk belongs to. Use the <strong>Filter by owner</strong> dropdown above the table to narrow the list.</li><li><strong>Actions</strong> — the eye icon opens the provider, the trash icon deletes it.</li></ul><blockquote>💡 The <strong>API Info</strong> button in the top-right shows how to manage SIP providers programmatically — handy if you want to automate trunk setup later.</blockquote>",
       "images": [
-        { "src": "images/phone/sip-providers-light.png", "alt": "SIP Providers page", "caption": "Call Center → SIP Providers is where you connect an outside carrier.", "theme": "light" },
-        { "src": "images/phone/sip-providers-dark.png", "alt": "SIP Providers page", "caption": "Call Center → SIP Providers is where you connect an outside carrier.", "theme": "dark" }
+        { "src": "images/phone/sip-providers-light.png", "alt": "SIP Providers list page with one connected trunk", "caption": "Call Center → SIP Providers lists every carrier trunk you have connected.", "theme": "light" },
+        { "src": "images/phone/sip-providers-dark.png", "alt": "SIP Providers list page with one connected trunk", "caption": "Call Center → SIP Providers lists every carrier trunk you have connected.", "theme": "dark" }
       ]
     },
     {
-      "id": "whitelist-and-name",
-      "title": "Name it and whitelist iMash",
-      "content": "<ol><li>Enter a <strong>Provider Name</strong> (for example \"My Telnyx Trunk\") so you can recognize it later.</li><li>On your carrier's side, <strong>whitelist the iMash SIP signaling IP</strong> shown in the panel — <code>34.150.248.33:5060</code> — so your carrier accepts calls to and from iMash.</li></ol>",
+      "id": "open-create-drawer",
+      "title": "Start a new provider",
+      "content": "<ol><li>Click <strong>Add SIP Provider</strong> in the top-right of the page.</li></ol><p>The <strong>Create SIP Provider</strong> panel slides out. Everything you need is on this one form:</p><ul><li><strong>Provider Name</strong> — a label so you can recognize the trunk later.</li><li><strong>Have your carriers whitelist our SIP signaling IPs</strong> — the iMash address your carrier must allow.</li><li><strong>Authentication</strong> — optional username/password, if your carrier requires it.</li><li><strong>SIP gateways</strong> — where your carrier lives on the network (address, port, direction).</li></ul><p>The next steps walk through each section.</p>",
       "images": [
-        { "src": "images/phone/sip-providers-light.png", "alt": "SIP provider form", "caption": "Give the trunk a name and whitelist the iMash signaling IP on your carrier.", "theme": "light" },
-        { "src": "images/phone/sip-providers-dark.png", "alt": "SIP provider form", "caption": "Give the trunk a name and whitelist the iMash signaling IP on your carrier.", "theme": "dark" }
+        { "src": "images/phone/add-sip-provider-create-drawer-light.png", "alt": "Create SIP Provider panel", "caption": "The Create SIP Provider panel — name, whitelist IP, authentication, and gateways in one form.", "theme": "light" },
+        { "src": "images/phone/add-sip-provider-create-drawer-dark.png", "alt": "Create SIP Provider panel", "caption": "The Create SIP Provider panel — name, whitelist IP, authentication, and gateways in one form.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "name-and-whitelist",
+      "title": "Name the trunk and whitelist iMash with your carrier",
+      "content": "<ol><li>Type a <strong>Provider Name</strong> — for example <em>My Telnyx Trunk</em> or <em>Office PBX</em>. This becomes the trunk's label everywhere in iMash.</li><li>Open the panel labeled <strong>Have your carriers whitelist our SIP signaling IPs</strong> and copy the address shown: <code>34.150.248.33:5060</code>.</li><li>In your carrier's (or PBX's) admin portal, add that IP and port to the trunk's <strong>allowed / whitelisted IP list</strong> so it accepts SIP traffic from iMash and sends inbound calls to it.</li></ol><blockquote>⚠️ This whitelist step happens on <strong>your carrier's side</strong>, not in iMash. If it's skipped, calls will silently fail even though everything in iMash looks correct — it's the single most common reason a new trunk \"doesn't work\".</blockquote>",
+      "images": [
+        { "src": "images/phone/add-sip-provider-whitelist-light.png", "alt": "iMash SIP signaling IP to whitelist", "caption": "Whitelist 34.150.248.33:5060 in your carrier's portal so it trusts iMash.", "theme": "light" },
+        { "src": "images/phone/add-sip-provider-whitelist-dark.png", "alt": "iMash SIP signaling IP to whitelist", "caption": "Whitelist 34.150.248.33:5060 in your carrier's portal so it trusts iMash.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "authentication",
+      "title": "Add authentication (only if your carrier requires it)",
+      "content": "<p>Many trunks authenticate purely by IP — if yours does, skip this step. If your carrier gave you SIP credentials:</p><ol><li>Tick the <strong>Authentication</strong> checkbox to expand the section.</li><li>Enter the <strong>Auth username</strong> and <strong>Password</strong> exactly as your carrier provided them.</li><li>Tick <strong>Require Auth for Incoming</strong> if the carrier expects credentials on calls coming <em>into</em> iMash.</li><li>Tick <strong>Require Auth for Outgoing</strong> if it expects credentials on calls iMash sends <em>out</em>.</li></ol><blockquote>💡 Not sure which boxes to tick? Most credential-based trunks only need <strong>Require Auth for Outgoing</strong> — check your carrier's trunk settings page or ask their support.</blockquote>",
+      "images": [
+        { "src": "images/phone/add-sip-provider-auth-light.png", "alt": "Authentication section with username, password and direction checkboxes", "caption": "Enable Authentication and choose which direction needs credentials.", "theme": "light" },
+        { "src": "images/phone/add-sip-provider-auth-dark.png", "alt": "Authentication section with username, password and direction checkboxes", "caption": "Enable Authentication and choose which direction needs credentials.", "theme": "dark" }
       ]
     },
     {
       "id": "gateways",
-      "title": "Add your SIP gateways",
-      "content": "<p>A gateway tells iMash where your carrier lives on the network.</p><ol><li>Under <strong>SIP gateways</strong>, fill in the <strong>Network address</strong> (an IP such as <code>1.2.3.4</code>, or for outbound a domain like <code>sip.mycarrier.com</code>), the <strong>Port</strong> (usually <code>5060</code>), and the <strong>Netmask</strong>.</li><li>Pick a direction: <strong>Inbound</strong> (calls coming in) or <strong>Outbound</strong> (calls going out). You can add several inbound gateways but only <strong>one</strong> outbound gateway.</li><li>Click <strong>Add New Gateway</strong> to add more as needed.</li></ol>"
+      "title": "Configure your SIP gateways",
+      "content": "<p>A gateway tells iMash where your carrier lives on the network. You can add several <strong>Inbound</strong> gateways, but only <strong>one Outbound</strong> gateway.</p><ol><li>In the first gateway card, enter the <strong>Network address</strong>:<ul><li><strong>Inbound</strong> gateways need an IP address (for example <code>1.2.3.4</code>) — this is the address your carrier sends calls <em>from</em>.</li><li><strong>Outbound</strong> gateways accept an IP <em>or</em> a domain (for example <code>sip.mycarrier.com</code>) — this is where iMash sends your outgoing calls.</li></ul></li><li>Set the <strong>Port</strong> — <code>5060</code> is the SIP standard and almost always correct.</li><li>Set the third field:<ul><li>For <strong>Inbound</strong> gateways it's the <strong>Netmask</strong> — keep <code>32</code> for a single IP, or lower it to allow a whole range of carrier IPs.</li><li>For <strong>Outbound</strong> gateways it becomes the <strong>Protocol</strong> selector — <strong>AUTO</strong>, <strong>UDP</strong>, <strong>TCP</strong>, or <strong>TLS</strong>. Leave <strong>AUTO</strong> unless your carrier specifies one.</li></ul></li><li>Pick the direction with the <strong>Inbound</strong> / <strong>Outbound</strong> buttons on the card.</li><li>Click <strong>Add New Gateway</strong> to add more (for example one inbound + one outbound), or <strong>Delete</strong> on a card to remove it.</li></ol><blockquote>💡 For two-way calling you typically need <strong>both</strong>: an inbound gateway with your carrier's signaling IP, and an outbound gateway pointing at your carrier's SIP domain.</blockquote>",
+      "images": [
+        { "src": "images/phone/add-sip-provider-gateways-light.png", "alt": "SIP gateway card with network address, port, netmask and direction buttons", "caption": "Each gateway card holds a network address, port, netmask/protocol, and a direction.", "theme": "light" },
+        { "src": "images/phone/add-sip-provider-gateways-dark.png", "alt": "SIP gateway card with network address, port, netmask and direction buttons", "caption": "Each gateway card holds a network address, port, netmask/protocol, and a direction.", "theme": "dark" },
+        { "src": "images/phone/add-sip-provider-outbound-gateway-light.png", "alt": "Inbound gateway card with netmask next to an outbound gateway card with the AUTO protocol selector", "caption": "An inbound + outbound pair: the outbound card swaps the netmask for a protocol selector (AUTO/UDP/TCP/TLS), and once one card is Outbound the others lock to Inbound.", "theme": "light" },
+        { "src": "images/phone/add-sip-provider-outbound-gateway-dark.png", "alt": "Inbound gateway card with netmask next to an outbound gateway card with the AUTO protocol selector", "caption": "An inbound + outbound pair: the outbound card swaps the netmask for a protocol selector (AUTO/UDP/TCP/TLS), and once one card is Outbound the others lock to Inbound.", "theme": "dark" }
+      ]
     },
     {
-      "id": "authentication",
-      "title": "Add authentication (optional)",
-      "content": "<p>If your carrier requires a username and password:</p><ol><li>Open the <strong>Authentication</strong> section.</li><li>Enter the <strong>Auth username</strong> and <strong>Password</strong>.</li><li>Tick <strong>Require Auth for Incoming</strong> and/or <strong>Require Auth for Outgoing</strong> if your carrier expects credentials in that direction.</li></ol>"
+      "id": "create-and-verify",
+      "title": "Create the provider and verify it",
+      "content": "<ol><li>Review the form — the <strong>Create Provider</strong> button stays grayed out until the name is filled and every gateway has a valid address and port (and credentials are filled if Authentication is on).</li><li>Click <strong>Create Provider</strong>.</li><li>Back on the list, your trunk appears with a green <strong>Active</strong> status pill — that's your confirmation it was saved and is ready to carry numbers.</li></ol>",
+      "images": [
+        { "src": "images/phone/sip-providers-light.png", "alt": "SIP Providers list showing the new trunk with Active status", "caption": "Your new trunk appears in the list with an Active status.", "theme": "light" },
+        { "src": "images/phone/sip-providers-dark.png", "alt": "SIP Providers list showing the new trunk with Active status", "caption": "Your new trunk appears in the list with an Active status.", "theme": "dark" }
+      ]
     },
     {
-      "id": "save",
-      "title": "Create the provider",
-      "content": "<ol><li>Review your entries — the <strong>Create Provider</strong> button stays disabled until the required fields are valid.</li><li>Click <strong>Create Provider</strong>.</li><li>Your trunk now appears in the SIP Providers list. When you import a number under this provider, iMash provisions the routing automatically.</li></ol>"
+      "id": "attach-numbers",
+      "title": "Attach your phone numbers to the trunk",
+      "content": "<p>The trunk is connected — now give it numbers to carry. Calls only flow once at least one number is imported under this provider.</p><ol><li>In the left sidebar, click <strong>Phone numbers</strong> (under <strong>Call Center</strong>).</li><li>Click <strong>Import Number</strong>.</li><li>In the <strong>SIP Phone Provider</strong> dropdown, select the trunk you just created.</li><li>Give the number a <strong>Label</strong> (for example <em>Main line</em>).</li><li>Enter the <strong>Phone Number</strong> exactly as your SIP provider sends it — with or without the <code>+</code> prefix, e.g. <code>+14155551234</code>, <code>14155551234</code>, or <code>14155551234#001</code>. Untick <strong>Use country selector</strong> if you need to type a raw format.</li><li>Click <strong>Import Phone Number</strong>. iMash provisions the call routing for the number automatically.</li></ol><blockquote>⚠️ Numbers on a custom SIP provider carry <strong>voice calls</strong> through your carrier. SMS on these numbers is managed by your external provider — iMash does not send or receive texts on them.</blockquote>",
+      "images": [
+        { "src": "images/phone/add-sip-provider-import-number-light.png", "alt": "Import Phone Number modal with SIP provider dropdown", "caption": "Import Number: pick your trunk, label the number, and type it exactly as your carrier sends it.", "theme": "light" },
+        { "src": "images/phone/add-sip-provider-import-number-dark.png", "alt": "Import Phone Number modal with SIP provider dropdown", "caption": "Import Number: pick your trunk, label the number, and type it exactly as your carrier sends it.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "edit-or-delete",
+      "title": "Edit or remove a provider later",
+      "content": "<ol><li>On the <strong>SIP Providers</strong> page, click the trunk's <strong>Label</strong> (or the eye icon under <strong>Actions</strong>).</li><li>The <strong>SIP Provider Details</strong> panel opens with the same fields as creation — rename the trunk, toggle <strong>Authentication</strong>, or adjust the <strong>SIP gateways</strong>.</li><li>Click <strong>Save</strong> to apply your changes, or <strong>Delete</strong> (confirm with <strong>Yes</strong>) to remove the trunk.</li></ol><blockquote>⚠️ Before deleting a trunk, move or remove any phone numbers imported under it — numbers without a provider cannot carry calls.</blockquote><p>That's it — your own carrier is now wired into iMash, and every agent, campaign, and routing rule can use the numbers riding on it.</p>",
+      "images": [
+        { "src": "images/phone/add-sip-provider-edit-drawer-light.png", "alt": "SIP Provider Details edit panel with Save and Delete buttons", "caption": "Open a trunk anytime to adjust gateways or credentials — Save applies instantly.", "theme": "light" },
+        { "src": "images/phone/add-sip-provider-edit-drawer-dark.png", "alt": "SIP Provider Details edit panel with Save and Delete buttons", "caption": "Open a trunk anytime to adjust gateways or credentials — Save applies instantly.", "theme": "dark" }
+      ]
     }
   ],
   "nextSteps": {
     "title": "What's Next?",
-    "description": "With a trunk connected, add a number and point calls at an agent.",
+    "description": "Your carrier is connected — now put those numbers to work with an AI agent answering every call.",
     "cards": [
-      { "href": "/phone/add-phone-number", "title": "Add a Phone Number", "description": "Buy an iMash number or import one from your provider." },
-      { "href": "/phone/call-routing", "title": "Route Calls to an Agent", "description": "Send inbound calls on a number to a specific AI agent." },
-      { "href": "/agents/create-agent", "title": "Create an AI Agent", "description": "Build the agent that answers your calls." }
+      { "href": "/phone/add-phone-number", "title": "Add a Phone Number", "description": "Buy an iMash number or import more numbers from your provider." },
+      { "href": "/phone/call-routing", "title": "Route Calls to an Agent", "description": "Point inbound calls on a number at a specific AI agent." },
+      { "href": "/contact-center/inbound-sip-routing", "title": "Inbound SIP Routing", "description": "Fine-tune how inbound SIP calls are dispatched to agents and groups." }
     ]
   },
   "support": {
     "title": "Need Help?",
     "content": "<p>If you run into any issues or have questions:</p><ul><li>📧 Email us at <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Join our <a href=\"https://discord.gg/imash\" target=\"_blank\">Discord community</a></li><li>📚 Check out our <a data-href=\"/api-reference\">API Reference</a></li><li>🎥 Watch our <a data-href=\"/videos\">video tutorials</a></li></ul>"
   },
-  "metaTitle": "Add a SIP Provider - Connect Your Carrier | iMash Docs",
-  "metaDescription": "Connect your own SIP trunk or carrier to iMash. Set the provider name, whitelist the signaling IP, add inbound/outbound gateways, and authentication.",
-  "metaKeywords": "SIP provider, SIP trunk, carrier, VoIP, gateway, inbound, outbound, telephony, Telnyx, Twilio, PBX, phone integration"
+  "metaTitle": "Connect a SIP Provider - Bring Your Own Carrier | iMash Documentation",
+  "metaDescription": "Connect your own SIP trunk or carrier to iMash: whitelist the signaling IP, configure inbound and outbound gateways, add authentication, and import your numbers.",
+  "metaKeywords": "SIP provider, SIP trunk, BYOC, bring your own carrier, VoIP, gateway, inbound, outbound, authentication, import phone number, Telnyx, Twilio, PBX"
 }

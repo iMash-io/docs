@@ -1,47 +1,94 @@
 {
-  "title": "Roles de miembros",
-  "lede": "Dale a cada miembro del grupo un rol de Contact Center que controle qué puede ver y hacer. Esta guía explica los cuatro roles, cómo se decide el rol efectivo y la opción de mantener el web dialer (marcador web) siempre abierto.",
-  "timeToComplete": "5 minutos",
+  "title": "Roles de Miembros",
+  "lede": "Convierta una lista plana de compañeros en un verdadero organigrama de contact center. Asigne a cada miembro del grupo uno de los cuatro roles de Contact Center — Agent, Monitor / QA, Supervisor, Admin — y la consola se reorganiza al instante según lo que cada persona debe ver y hacer.",
+  "timeToComplete": "10 minutos",
   "steps": [
     {
       "id": "open-members-roles",
-      "title": "Abre la pestaña Members Roles (Roles de miembros)",
-      "content": "<ol><li>Ve a <strong>Call Center &rarr; Contact Center &rarr; Groups</strong> (Grupos).</li><li>Selecciona un grupo y luego abre su pestaña <strong>Members Roles</strong> (Roles de miembros).</li><li>Cada miembro aparece con un menú desplegable de <strong>Contact Center role</strong> (Rol de Contact Center).</li></ol>",
+      "title": "Abra la pestaña Members Roles",
+      "content": "<p>Los roles viven dentro de la configuración de un grupo, así que empiece por su grupo:</p><ol><li>En la barra lateral izquierda, vaya a <strong>Call Center &rarr; Contact Center</strong>.</li><li>Haga clic en la pestaña <strong>Groups</strong> (Grupos) — visible para administradores del Contact Center y la cuenta principal.</li><li>En la lista <strong>Groups</strong> de la izquierda, haga clic en el grupo cuyos miembros quiere configurar.</li><li>En el panel de la derecha, abra la pestaña <strong>Members Roles</strong> (Roles de miembros).</li></ol><p>Verá tres tarjetas apiladas en esta pestaña: <strong>Contact Center Roles</strong> (con la sección <strong>Keep the web dialer always open for</strong>), <strong>Skills</strong> y <strong>Post-call dispositions</strong>. Esta guía las recorre todas.</p><blockquote>💡 ¿No aparecen miembros? Agregue personas primero en la pestaña <strong>Members</strong> — vea la guía <em>Crear un Grupo de Permisos</em>.</blockquote>",
       "images": [
-        { "src": "images/contact-center/cc-group-members-roles-light.png", "alt": "Pestaña Members Roles", "caption": "Members Roles: elige un rol de Contact Center por miembro.", "theme": "light" },
-        { "src": "images/contact-center/cc-group-members-roles-dark.png", "alt": "Pestaña Members Roles", "caption": "Members Roles: elige un rol de Contact Center por miembro.", "theme": "dark" }
+        { "src": "images/contact-center/cc-group-members-roles-light.png", "alt": "Pestaña Members Roles dentro de la configuración de un grupo", "caption": "La pestaña Members Roles: un menú de rol de Contact Center por cada miembro.", "theme": "light" },
+        { "src": "images/contact-center/cc-group-members-roles-dark.png", "alt": "Pestaña Members Roles dentro de la configuración de un grupo", "caption": "La pestaña Members Roles: un menú de rol de Contact Center por cada miembro.", "theme": "dark" }
       ]
     },
     {
-      "id": "pick-role",
-      "title": "Comprende los cuatro roles",
-      "content": "<ul><li><strong>Agent</strong> (Agente) — un representante regular que hace y recibe llamadas y atiende clientes. Solo ve su propia cola.</li><li><strong>Monitor / QA</strong> — puede escuchar llamadas y revisar reportes y grabaciones, pero no puede gestionar agentes ni cambiar ajustes.</li><li><strong>Supervisor</strong> — gestiona agentes: escuchar, susurrar, intervenir, forzar el estado y revisar el desempeño.</li><li><strong>Admin</strong> — acceso completo al Contact Center, incluyendo los ajustes de Groups y Call Transfer.</li></ul><p>Elige un rol en el menú desplegable de cada miembro.</p>"
+      "id": "meet-the-roles",
+      "title": "Conozca los cuatro roles",
+      "content": "<p>Cada miembro recibe exactamente un rol de Contact Center por grupo. De menor a mayor privilegio:</p><ul><li><strong>Agent</strong> (Agente) — un representante normal que hace y recibe llamadas y atiende clientes. En el Contact Center solo ve su propia cola.</li><li><strong>Monitor / QA</strong> — control de calidad. Puede escuchar llamadas en silencio y revisar Reporting y grabaciones, pero no puede gestionar agentes ni cambiar configuraciones.</li><li><strong>Supervisor</strong> — gestiona el piso: todo lo de Monitor / QA, más <strong>Whisper</strong> (susurrar al agente sin que el cliente escuche), <strong>Barge</strong> (unirse a la llamada), silenciar o terminar llamadas, y forzar el estado de un agente (Ready / Not Ready / Logout).</li><li><strong>Admin</strong> — control total del Contact Center, incluidas las pestañas <strong>Groups</strong> y <strong>Call Transfer</strong> donde viven todas estas configuraciones.</li></ul><p>Las cuatro etiquetas de colores en la parte superior de la tarjeta son una leyenda rápida — pase el cursor sobre cualquiera para ver su descripción.</p>",
+      "images": [
+        { "src": "images/contact-center/members-roles-roles-card-light.png", "alt": "Tarjeta Contact Center Roles con las cuatro etiquetas de rol y los menús por miembro", "caption": "La tarjeta Contact Center Roles: leyenda de roles, un menú por miembro y las columnas mapeadas de Access role / View profile.", "theme": "light" },
+        { "src": "images/contact-center/members-roles-roles-card-dark.png", "alt": "Tarjeta Contact Center Roles con las cuatro etiquetas de rol y los menús por miembro", "caption": "La tarjeta Contact Center Roles: leyenda de roles, un menú por miembro y las columnas mapeadas de Access role / View profile.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "assign-roles",
+      "title": "Asigne un rol a cada miembro",
+      "content": "<ol><li>Ubique al miembro en la columna <strong>Contact Center role</strong>.</li><li>Abra su menú desplegable y elija <strong>Agent</strong>, <strong>Monitor / QA</strong>, <strong>Supervisor</strong> o <strong>Admin</strong> — cada opción muestra una descripción de una línea de lo que otorga.</li><li>Repita con cada miembro y luego haga clic en <strong>Save</strong> (Guardar), abajo a la derecha.</li></ol><p>Junto al menú de rol pueden aparecer dos columnas de solo lectura:</p><ul><li><strong>Access role (by role)</strong> — el rol de acceso a la plataforma que recibirá el miembro.</li><li><strong>View profile (by role)</strong> — el perfil de vista que recibirá el miembro.</li></ul><p>Estas columnas no se editan aquí — siguen automáticamente el rol de Contact Center del miembro a través de la pestaña <strong>Role Mapping</strong> y se aplican al hacer clic en <strong>Save</strong>. Un miembro con <strong>Not mapped</strong> simplemente conserva su acceso actual sin cambios.</p><blockquote>💡 Los miembros nuevos comienzan como <strong>Agent</strong> — el rol más seguro. Promueva a las personas de forma deliberada, no por accidente.</blockquote>"
     },
     {
       "id": "effective-role",
       "title": "Cómo se decide el rol efectivo",
-      "content": "<p>Una persona puede pertenecer a varios grupos. Su <strong>rol efectivo</strong> es el rol <strong>más alto</strong> entre todos sus grupos. Por ejemplo, un Agent en un grupo que es Supervisor en otro se trata como Supervisor en todas partes.</p><p>La <strong>cuenta principal del tenant siempre es Admin</strong> y no se puede degradar aquí.</p>"
+      "content": "<p>Una persona puede pertenecer a varios grupos, así que iMash resuelve un <strong>rol efectivo</strong> por persona: el rol <strong>más alto</strong> que tiene entre todos sus grupos. Alguien configurado como Agent en el grupo de Ventas pero Supervisor en el grupo de Soporte se trata como <strong>Supervisor en todas partes</strong> dentro del Contact Center.</p><p>Dos reglas para recordar:</p><ul><li>La <strong>cuenta principal del tenant siempre es Admin</strong> — no puede degradarse aquí, y su Access role / View profile nunca se remapean.</li><li>Si nunca se asignó un rol a un miembro, cuenta como <strong>Agent</strong>.</li></ul><blockquote>⚠️ Si un miembro ve más de lo que espera, revise su rol en <em>todos</em> los grupos a los que pertenece — una asignación de Supervisor olvidada en un grupo antiguo eleva su rol efectivo en todo el Contact Center.</blockquote>"
+    },
+    {
+      "id": "roles-console",
+      "title": "Vea cómo los roles transforman la consola",
+      "content": "<p>La recompensa: la página <strong>Contact Center</strong> se reconstruye según el rol efectivo de cada persona.</p><ul><li><strong>Pestañas</strong> — todos ven <strong>Live Monitor</strong>; <strong>Reporting</strong> aparece para Monitor / QA en adelante; <strong>Groups</strong> y <strong>Call Transfer</strong> aparecen solo para Admins.</li><li><strong>Live Monitor para un Agent</strong> — una vista enfocada solo de cola (<strong>On Queue</strong>) más su marcador web. Sin roster ni controles sobre compañeros.</li><li><strong>Live Monitor para Monitor / QA</strong> — la cola completa y el roster de agentes (solo lectura) más <strong>Monitor</strong> (escuchar) en llamadas en vivo.</li><li><strong>Live Monitor para Supervisor / Admin</strong> — todo lo anterior más <strong>Whisper</strong>, <strong>Barge</strong>, silenciar, terminar y los controles de forzar estado en el roster.</li></ul>",
+      "images": [
+        { "src": "images/contact-center/members-roles-admin-tabs-light.png", "alt": "Barra de pestañas del Contact Center vista por un Admin", "caption": "Un Admin ve las cuatro pestañas: Live Monitor, Reporting, Groups y Call Transfer.", "theme": "light" },
+        { "src": "images/contact-center/members-roles-admin-tabs-dark.png", "alt": "Barra de pestañas del Contact Center vista por un Admin", "caption": "Un Admin ve las cuatro pestañas: Live Monitor, Reporting, Groups y Call Transfer.", "theme": "dark" },
+        { "src": "images/contact-center/members-roles-agent-view-light.png", "alt": "Contact Center visto por un Agent: solo la vista de cola de Live Monitor y el marcador web fijado", "caption": "La misma página para un Agent: solo la cola de Live Monitor — con el marcador web fijado a la derecha.", "theme": "light" },
+        { "src": "images/contact-center/members-roles-agent-view-dark.png", "alt": "Contact Center visto por un Agent: solo la vista de cola de Live Monitor y el marcador web fijado", "caption": "La misma página para un Agent: solo la cola de Live Monitor — con el marcador web fijado a la derecha.", "theme": "dark" }
+      ]
     },
     {
       "id": "keep-dialer-open",
-      "title": "Mantén el web dialer siempre abierto",
-      "content": "<p>En <strong>Keep the web dialer always open for</strong> (Mantener el web dialer siempre abierto para), marca los roles que deberían tener el web dialer abierto y fijado automáticamente. Los miembros con un rol efectivo marcado no pueden cerrar el marcador, así que nunca pierden una llamada en cola.</p><p>Deja todas las casillas sin marcar para el comportamiento normal (el marcador se abre solo cuando hacen clic en el botón de teléfono). Esto no se aplica en teléfonos ni tablets pequeñas. Haz clic en <strong>Save</strong> (Guardar) cuando termines.</p>"
+      "title": "Mantenga el marcador web siempre abierto",
+      "content": "<p>Que ningún representante pierda una llamada en cola porque su marcador estaba cerrado. Al final de la tarjeta Contact Center Roles, bajo <strong>Keep the web dialer always open for</strong> (Mantener el marcador web siempre abierto para):</p><ol><li>Marque cada rol — <strong>Agent</strong>, <strong>Monitor / QA</strong>, <strong>Supervisor</strong>, <strong>Admin</strong> — cuyos miembros deben tener el marcador web abierto y fijado automáticamente.</li><li>Haga clic en <strong>Save</strong> (Guardar).</li></ol><p>Los miembros cuyo rol <strong>efectivo</strong> está marcado reciben el marcador abierto y <strong>no pueden cerrarlo</strong>. Deje todas las casillas sin marcar para el comportamiento normal — el marcador se abre solo cuando hacen clic en el botón de teléfono del encabezado.</p><blockquote>💡 Esto no se aplica en teléfonos ni tabletas pequeñas (pantallas de menos de 992px) — allí un marcador fijado cubriría casi toda la aplicación, así que esos miembros pueden abrirlo y cerrarlo con normalidad.</blockquote>",
+      "images": [
+        { "src": "images/contact-center/members-roles-dialer-pin-light.png", "alt": "Keep the web dialer always open for — casillas por rol", "caption": "Marque los roles que deben tener el marcador web fijado abierto.", "theme": "light" },
+        { "src": "images/contact-center/members-roles-dialer-pin-dark.png", "alt": "Keep the web dialer always open for — casillas por rol", "caption": "Marque los roles que deben tener el marcador web fijado abierto.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "skills",
+      "title": "Etiquete miembros con Skills (opcional)",
+      "content": "<p>La tarjeta <strong>Skills</strong> (Habilidades) de la misma pestaña permite a los compañeros encontrar al experto adecuado en una sola búsqueda:</p><ol><li>En <strong>Skill catalog</strong> (Catálogo de habilidades), escriba una etiqueta (p. ej. <em>Spanish</em>, <em>Billing</em>, <em>Tier 2</em>, <em>Sales</em>) y presione <strong>Enter</strong>. Agregue tantas como quiera.</li><li>Cuando el catálogo tenga al menos una habilidad, aparece la lista <strong>Assign skills to members</strong> — elija las habilidades de cada miembro desde el catálogo.</li><li>Haga clic en <strong>Save</strong> (Guardar).</li></ol><p>Los agentes podrán entonces buscar y filtrar compañeros <strong>por habilidad</strong> en el selector de Conference / Transfer del marcador web — \"transferir a alguien que hable español\" se convierte en una búsqueda de dos segundos.</p>",
+      "images": [
+        { "src": "images/contact-center/members-roles-skills-light.png", "alt": "Tarjeta Skills con el campo de catálogo de habilidades", "caption": "Escriba etiquetas de habilidades en el catálogo y luego asígnelas a los miembros.", "theme": "light" },
+        { "src": "images/contact-center/members-roles-skills-dark.png", "alt": "Tarjeta Skills con el campo de catálogo de habilidades", "caption": "Escriba etiquetas de habilidades en el catálogo y luego asígnelas a los miembros.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "dispositions",
+      "title": "Active las Post-call dispositions (opcional)",
+      "content": "<p>¿Quiere un código de cierre en cada llamada? La tarjeta <strong>Post-call dispositions</strong> (Disposiciones post-llamada) pide a los miembros etiquetar cada llamada del grupo en cuanto termina:</p><ol><li>Active el interruptor en la esquina superior derecha de la tarjeta.</li><li>En <strong>Fallback dispositions</strong> (Disposiciones de respaldo), escriba cada etiqueta (p. ej. <em>Interested</em>, <em>Not Interested</em>, <em>Callback</em>, <em>Wrong Number</em>) y presione <strong>Enter</strong>.</li><li>Haga clic en <strong>Save</strong> (Guardar).</li></ol><p>Las opciones que ve un miembro se adaptan a la llamada: las llamadas ligadas a un lead o contacto muestran las <strong>etapas del ciclo de vida</strong> de ese registro; las llamadas de campaña muestran las <strong>etapas de la campaña</strong>; el resto usa sus etiquetas de respaldo.</p>",
+      "images": [
+        { "src": "images/contact-center/members-roles-dispositions-light.png", "alt": "Tarjeta Post-call dispositions con su interruptor de encendido/apagado", "caption": "Active las disposiciones y defina las etiquetas de respaldo entre las que eligen los miembros.", "theme": "light" },
+        { "src": "images/contact-center/members-roles-dispositions-dark.png", "alt": "Tarjeta Post-call dispositions con su interruptor de encendido/apagado", "caption": "Active las disposiciones y defina las etiquetas de respaldo entre las que eligen los miembros.", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "save-and-verify",
+      "title": "Guarde y verifique",
+      "content": "<p>Un solo botón <strong>Save</strong> (Guardar), abajo a la derecha, confirma todo lo de esta pestaña — roles, el marcador fijado, habilidades y disposiciones — y aplica el Role Mapping a cada miembro según su rol de Contact Center recién guardado.</p><p>Para verificar, pida a un miembro que abra <strong>Call Center &rarr; Contact Center</strong> (o inicie sesión con un usuario de prueba): un Agent debería ver el Live Monitor solo de cola, y un Supervisor debería ver los controles del roster. Eso es todo — su contact center ahora funciona con roles, no con conocimiento tribal.</p><blockquote>⚠️ Los miembros que ya tienen la sesión iniciada pueden necesitar actualizar la página para que un cambio de rol surta efecto.</blockquote>"
     }
   ],
   "nextSteps": {
     "title": "¿Qué sigue?",
-    "description": "Asigna roles a niveles de acceso y dirige llamadas al grupo.",
+    "description": "Roles asignados — ahora conéctelos al acceso de la plataforma y póngalos a trabajar en llamadas reales.",
     "cards": [
-      { "href": "/contact-center/role-mapping", "title": "Asignación de roles", "description": "Asigna cada rol a un rol de acceso y un perfil de vista." },
-      { "href": "/contact-center/ring-strategy", "title": "Estrategia de timbrado", "description": "Elige cómo suenan los miembros en línea." },
-      { "href": "/contact-center/agent-guide", "title": "La experiencia del agente", "description": "Mira lo que hacen los agentes con estos roles." }
+      { "href": "/contact-center/role-mapping", "title": "Role Mapping", "description": "Mapee cada rol de Contact Center a un Access role y un View profile." },
+      { "href": "/contact-center/ring-strategy", "title": "Estrategia de Timbrado", "description": "Elija cómo se timbra a los miembros en línea para las llamadas entrantes." },
+      { "href": "/contact-center/agent-guide", "title": "La Experiencia del Agente", "description": "Vea exactamente qué hacen sus Agents día a día con estos roles." }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulta nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">videotutoriales</a></li></ul>"
+    "title": "¿Necesita Ayuda?",
+    "content": "<p>Si tiene algún problema o pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">Referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Roles de miembros | iMash Docs",
-  "metaDescription": "Asigna roles de Contact Center — Agent, Monitor/QA, Supervisor, Admin — a los miembros del grupo en iMash, comprende el rol efectivo y fija el web dialer abierto.",
-  "metaKeywords": "roles de contact center, agente, supervisor, monitor, admin, rol efectivo, web dialer, grupo de permisos"
+  "metaTitle": "Roles de Miembros | Documentación de iMash",
+  "metaDescription": "Asigne roles de Contact Center — Agent, Monitor/QA, Supervisor, Admin — a los miembros de un grupo en iMash, entienda el rol efectivo, fije el marcador web abierto y configure habilidades y disposiciones post-llamada.",
+  "metaKeywords": "roles de contact center, agente, supervisor, monitor, qa, admin, rol efectivo, marcador web, grupo de permisos, habilidades, disposiciones"
 }

@@ -1,52 +1,121 @@
 {
   "title": "Leads",
-  "lede": "Los leads son tus clientes potenciales: personas que han mostrado interés pero aún no se han convertido en clientes. Esta guía te muestra cómo agregarlos, filtrarlos, etiquetarlos y convertirlos.",
-  "timeToComplete": "5 minutos",
+  "lede": "Los leads son sus clientes potenciales: cada persona con la que hablan sus agentes de IA, cada envío de formulario y cada prospecto que importa llega aquí. Esta guía le lleva de la A a la Z por la pantalla de Leads: agregar, filtrar, etiquetar, seguir las etapas del ciclo de vida y convertir leads en clientes.",
+  "timeToComplete": "10 minutos",
   "steps": [
     {
       "id": "open-leads",
-      "title": "Abre la lista de Leads",
-      "content": "<ol><li>En la navegación de la izquierda, abre <strong>CRM</strong> y haz clic en <strong>Leads</strong> (o ve a <code>/crm/leads</code>).</li><li>Verás cada lead en una tabla con búsqueda, con columnas para <strong>Name</strong> (Nombre), <strong>Email</strong> (Correo), <strong>Phone</strong> (Teléfono), <strong>Stage</strong> (Etapa), <strong>Account</strong> (Cuenta) y <strong>Last Updated</strong> (Última actualización).</li><li>Haz clic en cualquier nombre o avatar para abrir el perfil completo de ese lead.</li></ol><p>Piensa en un lead como una persona que podría comprarte. Una vez que lo hace, lo conviertes en un <strong>Contact</strong> (Contacto).</p>",
+      "title": "Abra la lista de Leads",
+      "content": "<p>La lista de Leads es su centro de mando para prospectos, y se llena sola: los agentes de IA, los formularios de reserva y las importaciones crean leads aquí automáticamente.</p><ol><li>En la navegación superior, haga clic en <strong>CRM</strong> y luego en la pestaña <strong>Leads</strong> (o vaya directamente a <code>/crm/leads</code>).</li><li>Verá cada lead en una tabla con búsqueda, con columnas para <strong>Avatar</strong>, <strong>Name</strong> (Nombre), <strong>Email</strong> (Correo), <strong>Phone</strong> (Teléfono), <strong>Stage</strong> (Etapa), <strong>Account</strong> (Cuenta) y <strong>Last Updated</strong> (Última actualización).</li><li>Cada fila también tiene tres iconos de acción a la derecha: <strong>View</strong> (Ver, el ojo) abre el lead, <strong>Call</strong> (Llamar, el teléfono) marca el primer número del lead con el marcador web integrado, y <strong>Delete</strong> (Eliminar, la papelera) borra el lead tras una confirmación.</li><li>Haga clic en el nombre o el avatar de cualquier lead para abrir el panel completo de <strong>Lead Details</strong> (Detalles del lead).</li></ol><p>Piense en un lead como una persona que podría comprarle. Cuando se convierte en cliente real, usted lo convierte en un <strong>Contact</strong> (Contacto).</p>",
       "images": [
-        { "src": "images/crm/leads-light.png", "alt": "Lista de leads", "caption": "La lista de Leads con búsqueda, filtros y etiquetas de etapa", "theme": "light" },
-        { "src": "images/crm/leads-dark.png", "alt": "Lista de leads", "caption": "La lista de Leads con búsqueda, filtros y etiquetas de etapa", "theme": "dark" }
+        { "src": "images/crm/leads-light.png", "alt": "Lista de leads mostrando la tabla con etapas y números de teléfono", "caption": "La lista de Leads: búsqueda, filtros, píldoras de etapa y acciones Ver / Llamar / Eliminar por fila", "theme": "light" },
+        { "src": "images/crm/leads-dark.png", "alt": "Lista de leads mostrando la tabla con etapas y números de teléfono", "caption": "La lista de Leads: búsqueda, filtros, píldoras de etapa y acciones Ver / Llamar / Eliminar por fila", "theme": "dark" }
       ]
     },
     {
       "id": "add-lead",
-      "title": "Agrega un nuevo lead",
-      "content": "<ol><li>Haz clic en el botón <strong>Create</strong> (Crear) (New Lead / Nuevo lead) en la parte superior de la lista.</li><li>Ingresa el <strong>First Name</strong> (Nombre) y el <strong>Last Name</strong> (Apellido) (ambos obligatorios).</li><li>Agrega una o más direcciones en el campo <strong>Emails</strong> (Correos): la primera es el correo principal.</li><li>Haz clic en <strong>Add Phone Number</strong> (Agregar número de teléfono) para añadir un teléfono con una etiqueta (Mobile / Móvil, Work / Trabajo, Home / Casa, etc.).</li><li>Opcionalmente define una <strong>Stage</strong> (Etapa), vincula una <strong>Account</strong> (Cuenta, es decir la empresa) y completa la dirección.</li><li>Haz clic en <strong>Save</strong> (Guardar).</li></ol>"
+      "title": "Agregue un nuevo lead",
+      "content": "<ol><li>Haga clic en <strong>Add Lead</strong> (Agregar lead) en la parte superior derecha de la lista. Se abre el panel <strong>Create Lead</strong> (Crear lead).</li><li>Ingrese el <strong>First Name</strong> (Nombre) y el <strong>Last Name</strong> (Apellido), ambos obligatorios.</li><li>Haga clic en <strong>+ Add Email</strong> (Agregar correo) para añadir una o más direcciones; la primera se convierte en el correo principal.</li><li>Haga clic en <strong>+ Add Phone Number</strong> (Agregar número de teléfono) para añadir un teléfono con una etiqueta (<strong>Mobile</strong> / Móvil, <strong>Home</strong> / Casa, <strong>Work</strong> / Trabajo, <strong>Office</strong> / Oficina, y más). Puede agregar varios números.</li><li>Elija un <strong>Source</strong> (Origen: de dónde vino este lead) y una <strong>Stage</strong> (Etapa); los leads nuevos comienzan en <strong>New</strong> (Nuevo).</li><li>Opcionalmente vincule una <strong>Account</strong> (Cuenta, la empresa del lead) y complete los campos de dirección: <strong>Street Address</strong> (Calle), <strong>Apartment/Suite</strong> (Apartamento/Suite), <strong>City</strong> (Ciudad), <strong>State/Province</strong> (Estado/Provincia), <strong>Postal Code</strong> (Código postal), <strong>Country</strong> (País).</li><li>Haga clic en <strong>Save</strong> (Guardar).</li></ol><blockquote>💡 Rara vez tendrá que agregar leads uno por uno: el botón <strong>Import</strong> (Importar, el icono de subida junto a Add Lead) importa un CSV de forma masiva, y sus agentes de IA crean leads automáticamente durante las llamadas.</blockquote>",
+      "images": [
+        { "src": "images/crm/leads-create-light.png", "alt": "Panel Create Lead con campos de nombre, correos, teléfonos, origen, etapa, cuenta y dirección", "caption": "El panel Create Lead: solo el nombre y el apellido son obligatorios", "theme": "light" },
+        { "src": "images/crm/leads-create-dark.png", "alt": "Panel Create Lead con campos de nombre, correos, teléfonos, origen, etapa, cuenta y dirección", "caption": "El panel Create Lead: solo el nombre y el apellido son obligatorios", "theme": "dark" }
+      ]
     },
     {
       "id": "search-filter",
-      "title": "Busca, filtra y ordena",
-      "content": "<ul><li>Usa el <strong>cuadro de búsqueda</strong> y alterna el campo entre <strong>Name</strong> (Nombre), <strong>Email</strong> (Correo) o <strong>Phone</strong> (Teléfono).</li><li>Agrega filtros por <strong>Stage</strong> (Etapa), <strong>Account</strong> (Cuenta), <strong>Source</strong> (Origen), <strong>Tags</strong> (Etiquetas), <strong>Address</strong> (Dirección), <strong>City</strong> (Ciudad) u <strong>Owner</strong> (Propietario) para acotar la lista.</li><li>Haz clic en el encabezado de una columna (Name, Email, Stage, Last Updated) para ordenar por ella.</li></ul>"
+      "title": "Busque, filtre y ordene",
+      "content": "<p>Encuentre cualquier lead en segundos, incluso con miles en la lista:</p><ul><li><strong>Cuadro de búsqueda</strong> — use el desplegable a su izquierda para cambiar el campo de búsqueda entre <strong>Name</strong> (Nombre), <strong>Email</strong> (Correo) y <strong>Phone</strong> (Teléfono). La búsqueda por teléfono es tolerante: encuentra los dígitos aunque el número guardado tenga otro formato.</li><li><strong>Filter By</strong> (Filtrar por) — un selector múltiple donde puede apilar filtros: <strong>Stage</strong> (Etapa), <strong>Account</strong> (Cuenta), <strong>Source</strong> (Origen), <strong>Tags</strong> (Etiquetas), <strong>Address</strong> (Dirección), <strong>City</strong> (Ciudad) y <strong>Owner</strong> (Propietario). Al elegir un filtro aparece un control dedicado a su lado (por ejemplo un selector de etapa o un desplegable de etiquetas).</li><li><strong>Columnas adicionales</strong> — seleccionar el filtro de Source, Tags, Address o City también agrega esa columna a la tabla para ver el valor en cada fila.</li><li><strong>Ordenar</strong> — haga clic en el encabezado de una columna (<strong>Name</strong>, <strong>Email</strong>, <strong>Stage</strong>, <strong>Account</strong>, <strong>Last Updated</strong>) para ordenar; haga clic de nuevo para invertir la dirección.</li><li><strong>API Info</strong> (Información de API) — el icono de enlace en el extremo derecho de la barra abre una ventana con ejemplos de API listos para crear y leer leads de forma programática. Combínelo con su clave de <a data-href=\"/get-started/api-keys\">API Keys</a>.</li></ul>",
+      "images": [
+        { "src": "images/crm/leads-toolbar-light.png", "alt": "Barra de herramientas de Leads con selector de campo de búsqueda, cuadro Search Leads, desplegable Filter By y botones de acción", "caption": "La barra de herramientas: selector de campo, Filter By, Seleccionar todo, Importar, Add Lead, Buscar duplicados y API Info", "theme": "light" },
+        { "src": "images/crm/leads-toolbar-dark.png", "alt": "Barra de herramientas de Leads con selector de campo de búsqueda, cuadro Search Leads, desplegable Filter By y botones de acción", "caption": "La barra de herramientas: selector de campo, Filter By, Seleccionar todo, Importar, Add Lead, Buscar duplicados y API Info", "theme": "dark" }
+      ]
     },
     {
-      "id": "tag-organize",
-      "title": "Etiqueta y organiza los leads",
-      "content": "<ul><li>Abre un lead y agrega <strong>tags</strong> (etiquetas) (por ejemplo <em>hot</em> / caliente, <em>follow-up</em> / seguimiento, o el nombre de una campaña) para agrupar leads similares.</li><li>Define la <strong>Stage</strong> (Etapa) del lead para saber en qué punto de tu pipeline se encuentra.</li><li>Usa el filtro de <strong>Tags</strong> (Etiquetas) en la lista para ver al instante a todos los que tengan una etiqueta determinada.</li></ul>"
+      "id": "lead-detail",
+      "title": "Abra un lead: el panel Lead Details",
+      "content": "<p>Haga clic en cualquier lead para abrir su perfil completo en un panel lateral. Todo sobre la persona vive aquí:</p><ul><li><strong>Encabezado</strong> — el avatar (haga clic en la cámara para subir una foto), el nombre del lead, la insignia de la etapa actual y botones circulares de acción rápida para <strong>Call Lead</strong> (Llamar al lead) y <strong>Send Email</strong> (Enviar correo).</li><li>Pestaña <strong>Lead Information</strong> (Información del lead) — edite <strong>Emails</strong> (varios; el primero es el principal), <strong>Account</strong> (Cuenta), <strong>Tags</strong> (escriba una etiqueta y presione Enter), <strong>Phone Numbers</strong> (agregue con etiqueta, elimine con el icono de papelera) y <strong>Timezone</strong> (Zona horaria).</li><li><strong>Convert To Contact</strong> (Convertir a contacto) — el botón en la esquina superior derecha del panel promueve este lead a su lista de Contactos cuando se convierte en cliente.</li></ul><blockquote>💡 Configure la <strong>Timezone</strong> (Zona horaria) del lead: las ventanas de llamada de las campañas y los eventos de calendario la respetan, así nunca llamará a alguien a las 3 de la madrugada.</blockquote>",
+      "images": [
+        { "src": "images/crm/leads-detail-light.png", "alt": "Panel Lead Details mostrando encabezado, pestañas y campos de información del lead", "caption": "El panel Lead Details: encabezado con acciones rápidas, pestañas y los campos de Lead Information", "theme": "light" },
+        { "src": "images/crm/leads-detail-dark.png", "alt": "Panel Lead Details mostrando encabezado, pestañas y campos de información del lead", "caption": "El panel Lead Details: encabezado con acciones rápidas, pestañas y los campos de Lead Information", "theme": "dark" }
+      ]
     },
     {
-      "id": "bulk-convert",
-      "title": "Acciones masivas y conversión a contactos",
-      "content": "<ol><li>Marca las casillas junto a los leads (o selecciona todos los que coincidan con tus filtros).</li><li>Desde la barra de acciones masivas puedes <strong>Delete</strong> (Eliminar), <strong>Assign to an Account</strong> (Asignar a una cuenta), <strong>Change Owner</strong> (Cambiar propietario) o <strong>Convert to Contacts</strong> (Convertir a contactos).</li><li><strong>Convert to Contacts</strong> (Convertir a contactos) promueve los leads elegidos a tu lista de Contactos una vez que se convierten en clientes reales.</li><li>Usa <strong>Find Duplicates</strong> (Buscar duplicados) (por teléfono o correo) para limpiar registros repetidos.</li></ol>"
+      "id": "detail-tabs",
+      "title": "Explore el resto de las pestañas",
+      "content": "<p>La barra de pestañas del panel cubre todo el mundo del lead. Además de Lead Information encontrará:</p><ul><li><strong>Additional Information</strong> (Información adicional) — nombre y apellido, la dirección completa (<strong>Street Address</strong>, <strong>Apartment/Suite</strong>, <strong>City</strong>, <strong>State/Province</strong>, <strong>Postal Code</strong>, <strong>Country</strong>), más un interruptor <strong>Tax-Exempt</strong> (Exento de impuestos) con un campo <strong>Exemption Certificate #</strong> (N.º de certificado de exención) para clientes libres de impuestos.</li><li><strong>Files</strong> (Archivos) — adjunte documentos, fotos o contratos al lead.</li><li><strong>Calendar</strong> (Calendario) — todos los eventos de calendario vinculados a este lead, con un botón <strong>Add Event</strong> (Agregar evento) para reservar la próxima cita.</li><li><strong>Email</strong> (Correo) — una vista completa del hilo de correo: envíe correos al lead y lea las respuestas sin salir del CRM. Las insignias de la pestaña muestran los totales y los no leídos.</li><li><strong>Deals</strong> (Negocios), <strong>Invoices</strong> (Facturas), <strong>Quotes</strong> (Cotizaciones), <strong>Jobs</strong> (Trabajos) — todo lo de su pipeline ligado a este lead.</li><li><strong>Payment Methods</strong> (Métodos de pago) — tarjetas guardadas en el archivo de este lead.</li></ul>",
+      "images": [
+        { "src": "images/crm/leads-additional-light.png", "alt": "Pestaña Additional Information con nombre, campos de dirección e interruptor Tax-Exempt", "caption": "Additional Information: detalles de dirección y el interruptor Tax-Exempt", "theme": "light" },
+        { "src": "images/crm/leads-additional-dark.png", "alt": "Pestaña Additional Information con nombre, campos de dirección e interruptor Tax-Exempt", "caption": "Additional Information: detalles de dirección y el interruptor Tax-Exempt", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "call-logs",
+      "title": "Revise cada llamada en Call Logs",
+      "content": "<p>Aquí es donde la magia de la IA se hace visible: cada llamada con este lead — llamadas de agentes de IA, llamadas de campañas y llamadas que su equipo hace con el marcador web — se registra automáticamente.</p><ol><li>Abra la pestaña <strong>Call Logs</strong> (Registros de llamadas) en el panel Lead Details.</li><li>Cada fila muestra la <strong>Date</strong> (Fecha), el <strong>Type</strong> (Tipo: una píldora <strong>AI Dialer</strong> para llamadas del agente de IA, o <strong>Web Dialer</strong> para llamadas hechas por su equipo), la <strong>Previous Call Transition</strong> (Transición de la llamada: cómo esa llamada movió la etapa del ciclo de vida del lead, por ejemplo <em>New ▶ Interested</em>), el <strong>Number</strong> (Número marcado) y la <strong>Duration</strong> (Duración) de la llamada.</li><li>Haga clic en cualquier fila para abrir el registro completo de la llamada: grabación, transcripción y el resumen post-llamada de la IA.</li></ol><blockquote>💡 Se acabó el \"¿de qué hablamos?\": el historial completo de conversaciones de cada lead está a un clic de distancia.</blockquote>",
+      "images": [
+        { "src": "images/crm/leads-call-logs-light.png", "alt": "Pestaña Call Logs listando llamadas con columnas de fecha, tipo, número y duración", "caption": "Call Logs: cada llamada de IA o humana con este lead, con detalles completos al hacer clic", "theme": "light" },
+        { "src": "images/crm/leads-call-logs-dark.png", "alt": "Pestaña Call Logs listando llamadas con columnas de fecha, tipo, número y duración", "caption": "Call Logs: cada llamada de IA o humana con este lead, con detalles completos al hacer clic", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "custom-data",
+      "title": "Guarde Custom Data que sus agentes de IA pueden usar",
+      "content": "<p>La pestaña <strong>Custom Data</strong> (Datos personalizados) contiene variables personalizadas del lead: campos extra como <em>código de la puerta</em>, <em>técnico preferido</em> o <em>nivel de membresía</em> que no tienen un campo integrado.</p><ol><li>Abra la pestaña <strong>Custom Data</strong>.</li><li>Haga clic en <strong>+ Add Field</strong> (Agregar campo), escriba un <strong>Field Name</strong> (Nombre del campo) y un <strong>Value</strong> (Valor), y luego haga clic en <strong>Save</strong> (Guardar).</li><li>Edite o elimine campos en cualquier momento desde la columna <strong>Actions</strong> (Acciones).</li></ol><p>Estas variables se comparten con sus agentes de IA: un agente puede leerlas para personalizar la conversación (\"veo que el código de su puerta es 4321, se lo pasaré al técnico\") y puede escribir nuevas que aprenda durante una llamada. Aprenda más en <a data-href=\"/agents/costum-variables\">Variables personalizadas</a>.</p>",
+      "images": [
+        { "src": "images/crm/leads-custom-data-light.png", "alt": "Pestaña Custom Data con botón Add Field y campos de nombre y valor", "caption": "Custom Data: campos libres que sus agentes de IA pueden leer y actualizar", "theme": "light" },
+        { "src": "images/crm/leads-custom-data-dark.png", "alt": "Pestaña Custom Data con botón Add Field y campos de nombre y valor", "caption": "Custom Data: campos libres que sus agentes de IA pueden leer y actualizar", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "lifecycle-notes",
+      "title": "Siga el ciclo de vida y tome notas",
+      "content": "<p>Desplácese debajo de las pestañas y encontrará dos secciones más:</p><ul><li><strong>Lifecycle</strong> (Ciclo de vida) — una barra de etapas que muestra su pipeline (por ejemplo <strong>New → Contacted → Interested → Qualified → Negotiation → Won</strong>). Haga clic en una etapa para mover el lead allí; las etapas con una flecha pequeña tienen subetapas para elegir. La etapa actual queda resaltada y también colorea la insignia del encabezado. Estas etapas se personalizan en <a data-href=\"/crm/crm-settings\">Configuración del CRM</a>.</li><li><strong>Campaign Lifecycles</strong> (Ciclos de vida de campaña) — si el lead forma parte de una campaña de llamadas, aquí aparece una barra de etapas separada por campaña, actualizada automáticamente mientras la IA trabaja el lead.</li><li><strong>Notes</strong> (Notas) — escriba en <strong>Add your note</strong> (Agregue su nota) y presione Enter. Las notas llevan fecha y hora y se acumulan como un diario del lead.</li></ul><blockquote>⚠️ Mover un lead a una etapa como <strong>Won</strong> (Ganado) o <strong>Lost</strong> (Perdido) no lo convierte ni lo elimina: solo registra dónde está el lead. Use <strong>Convert To Contact</strong> cuando realmente se convierta en cliente.</blockquote>",
+      "images": [
+        { "src": "images/crm/leads-lifecycle-light.png", "alt": "Barra de ciclo de vida con etapas New, Contacted, Interested, Qualified, Negotiation y Won", "caption": "La barra Lifecycle: haga clic en una etapa para mover el lead por su pipeline", "theme": "light" },
+        { "src": "images/crm/leads-lifecycle-dark.png", "alt": "Barra de ciclo de vida con etapas New, Contacted, Interested, Qualified, Negotiation y Won", "caption": "La barra Lifecycle: haga clic en una etapa para mover el lead por su pipeline", "theme": "dark" },
+        { "src": "images/crm/leads-notes-light.png", "alt": "Sección de notas con el campo Add your note", "caption": "Notes: un diario con fecha y hora en cada lead", "theme": "light" },
+        { "src": "images/crm/leads-notes-dark.png", "alt": "Sección de notas con el campo Add your note", "caption": "Notes: un diario con fecha y hora en cada lead", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "bulk-actions",
+      "title": "Acciones masivas: convierta, reasigne o elimine muchos a la vez",
+      "content": "<ol><li>Marque la casilla en la fila de cada lead, o marque <strong>Select all N leads</strong> (Seleccionar los N leads) en la barra de herramientas para seleccionar todos los leads que coinciden con su búsqueda y filtros actuales (en todas las páginas).</li><li>Aparece un contador <strong>Selected N</strong> (N seleccionados) junto con los botones masivos:</li></ol><ul><li><strong>Convert To Contact</strong> (Convertir a contacto) — promueve los leads seleccionados a su lista de Contactos (disponible cuando las filas se eligen a mano).</li><li><strong>Change Owner</strong> (Cambiar propietario, icono de persona) — reasigna los leads seleccionados a otro miembro del equipo.</li><li><strong>Assign Account</strong> (Asignar cuenta, icono de tarjeta) — vincula los leads seleccionados a una cuenta de empresa, o borra el vínculo.</li><li><strong>Delete Selected</strong> (Eliminar seleccionados, icono rojo de papelera) — los elimina todos tras una confirmación.</li></ul><blockquote>💡 Combine filtros con <strong>Select all</strong> para jugadas maestras: filtre por Tag = <em>feria-2026</em>, seleccione todo y asigne cada uno de ellos a un compañero en dos clics.</blockquote>",
+      "images": [
+        { "src": "images/crm/leads-bulk-light.png", "alt": "Barra de herramientas con casilla Select all leads, contador de seleccionados y botones de acciones masivas", "caption": "Modo masivo: Convert To Contact, Change Owner, Assign Account y Delete Selected", "theme": "light" },
+        { "src": "images/crm/leads-bulk-dark.png", "alt": "Barra de herramientas con casilla Select all leads, contador de seleccionados y botones de acciones masivas", "caption": "Modo masivo: Convert To Contact, Change Owner, Assign Account y Delete Selected", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "find-duplicates",
+      "title": "Encuentre y elimine leads duplicados",
+      "content": "<p>Las importaciones y las llamadas entrantes pueden crear la misma persona dos veces. Límpielo en segundos:</p><ol><li>Haga clic en el botón <strong>Find Duplicates</strong> (Buscar duplicados, icono de copia) en la barra de herramientas. Se abre la ventana <strong>Find &amp; Remove Duplicate Leads</strong> (Buscar y eliminar leads duplicados).</li><li>Elija el <strong>Duplicate scope</strong> (Alcance de duplicados): entre todos los leads, o solo dentro de la misma cuenta.</li><li>Haga clic en <strong>Phone Number</strong> (Número de teléfono) o <strong>Email Address</strong> (Dirección de correo) para buscar leads que compartan ese valor.</li><li>Los grupos coincidentes aparecen debajo: elimine duplicados por grupo, o todos a la vez. <strong>El lead más antiguo de cada grupo siempre se conserva</strong>, así su registro original y su historial sobreviven.</li></ol><blockquote>⚠️ Eliminar duplicados no se puede deshacer. Revise los grupos antes de confirmar una eliminación masiva.</blockquote>",
+      "images": [
+        { "src": "images/crm/leads-duplicates-light.png", "alt": "Ventana Find and Remove Duplicate Leads con selector de alcance y botones Phone Number / Email Address", "caption": "Find & Remove Duplicate Leads: busque por teléfono o correo, conservando el registro más antiguo", "theme": "light" },
+        { "src": "images/crm/leads-duplicates-dark.png", "alt": "Ventana Find and Remove Duplicate Leads con selector de alcance y botones Phone Number / Email Address", "caption": "Find & Remove Duplicate Leads: busque por teléfono o correo, conservando el registro más antiguo", "theme": "dark" }
+      ]
+    },
+    {
+      "id": "ai-and-leads",
+      "title": "Cómo trabajan sus agentes de IA con los leads",
+      "content": "<p>Los leads no son solo una lista que usted mantiene a mano: son la memoria de su call center de IA:</p><ul><li><strong>Los agentes de IA crean leads</strong> — cuando una persona desconocida llama a su agente (o se le indica al agente que capture los datos de alguien), la guarda como un nuevo lead con nombre, teléfono y todo lo que aprendió.</li><li><strong>Los agentes de IA actualizan leads</strong> — durante una llamada el agente puede actualizar campos y variables de Custom Data, y cada llamada se escribe automáticamente en los <strong>Call Logs</strong> del lead.</li><li><strong>Las campañas trabajan sus leads</strong> — agregue leads a una lista de marcado y una campaña los llamará uno a uno, avanzando el <strong>Campaign Lifecycle</strong> de cada lead sobre la marcha. Vea <a data-href=\"/campaigns/create-campaign\">Crear una campaña</a>.</li><li><strong>Personalización</strong> — los prompts de los agentes pueden referenciar campos del lead y variables personalizadas (como el nombre del lead), para que cada conversación se sienta personal. Vea <a data-href=\"/agents/costum-variables\">Variables personalizadas</a>.</li></ul><p>Configure sus etapas una vez, deje que la IA llene y trabaje la lista, y vea cómo su pipeline avanza solo.</p>"
     }
   ],
   "nextSteps": {
     "title": "¿Qué sigue?",
-    "description": "Convierte leads en clientes y contáctalos a gran escala.",
+    "description": "Convierta leads en clientes y ponga su prospección en piloto automático.",
     "cards": [
-      { "href": "/crm/contacts", "title": "Contactos", "description": "Gestiona a las personas que se convirtieron en clientes." },
-      { "href": "/crm/accounts", "title": "Cuentas", "description": "Agrupa leads y contactos bajo su empresa." },
-      { "href": "/campaigns/create-campaign", "title": "Crear una campaña", "description": "Llama o envía mensajes a tus leads automáticamente." }
+      { "href": "/crm/contacts", "title": "Contactos", "description": "Gestione a las personas que se convirtieron en clientes." },
+      { "href": "/crm/accounts", "title": "Cuentas", "description": "Agrupe leads y contactos bajo su empresa." },
+      { "href": "/campaigns/create-campaign", "title": "Crear una campaña", "description": "Haga que la IA llame o envíe mensajes a sus leads automáticamente." },
+      { "href": "/crm/import-export-data", "title": "Importar y exportar datos", "description": "Importe leads de forma masiva desde un CSV con mapeo de campos." }
     ]
   },
   "support": {
-    "title": "¿Necesitas ayuda?",
-    "content": "<p>Si tienes algún problema o pregunta:</p><ul><li>📧 Escríbenos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únete a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Revisa nuestra <a data-href=\"/api-reference\">referencia de API</a></li><li>🎥 Mira nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
+    "title": "¿Necesita ayuda?",
+    "content": "<p>Si tiene algún problema o pregunta:</p><ul><li>📧 Escríbanos a <a href=\"mailto:support@imash.io\">support@imash.io</a></li><li>💬 Únase a nuestra <a href=\"https://discord.gg/imash\" target=\"_blank\">comunidad de Discord</a></li><li>📚 Consulte nuestra <a data-href=\"/api-reference\">referencia de API</a></li><li>🎥 Vea nuestros <a data-href=\"/videos\">tutoriales en video</a></li></ul>"
   },
-  "metaTitle": "Leads - CRM | iMash Docs",
-  "metaDescription": "Agrega, filtra, etiqueta y convierte leads en el CRM de iMash. Da seguimiento a clientes potenciales por etapa, busca por nombre, correo o teléfono, y conviértelos en contactos de forma masiva.",
-  "metaKeywords": "leads, leads CRM, clientes potenciales, etapa de lead, pipeline de leads, convertir lead en contacto, etiquetas de lead"
+  "metaTitle": "Leads - CRM | Documentación de iMash",
+  "metaDescription": "Guía completa de leads en el CRM de iMash: agregue e importe leads, busque y filtre, etapas del ciclo de vida, registros de llamadas, datos personalizados para agentes de IA, conversión masiva a contactos y limpieza de duplicados.",
+  "metaKeywords": "leads, leads CRM, gestión de leads, etapa de lead, ciclo de vida del lead, convertir lead en contacto, registros de llamadas de lead, datos personalizados de lead, captura de leads con IA, leads duplicados"
 }
