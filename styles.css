@@ -553,11 +553,13 @@ p {
   margin-bottom: 1.5rem;
 }
 
+/* API links mirror the Documentation sidebar's .nav-link look (same padding,
+   line icons, active state) so both tabs feel identical. */
 .apiref-sidebar a {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
+  gap: 0.65rem;
+  padding: 0.5rem 1.5rem;
   color: var(--text-secondary);
   text-decoration: none;
   font-size: 0.875rem;
@@ -566,13 +568,13 @@ p {
 }
 
 .apiref-sidebar a:hover {
-  background: var(--bg-tertiary);
+  background: var(--bg-secondary);
   color: var(--text);
 }
 
 .apiref-sidebar a.active {
-  background: var(--bg-sidebar-selected);
-
+  background: var(--bg-secondary);
+  color: var(--primary);
   border-left-color: var(--primary);
 }
 

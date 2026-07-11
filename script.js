@@ -1,5 +1,10 @@
-// Configuration
-const API_BASE = 'https://dashboard.imash.io/api/v2';
+// Configuration — the dashboard/API host shown in the API Reference. White-label
+// docs domains point at the brand's own dashboard (DOCS_BRAND.dashboardUrl, e.g.
+// dashboard.soph-ia.ai) so the platform host never leaks; default is iMash cloud.
+function apiOrigin() {
+  return (typeof DOCS_BRAND !== 'undefined' && DOCS_BRAND.dashboardUrl) || 'https://dashboard.imash.io';
+}
+function apiBaseUrl() { return apiOrigin() + '/api/v2'; }
 
 // ---------------------------------------------------------------------------
 // Language layer (English default + Spanish under the /es URL prefix).
@@ -1133,12 +1138,12 @@ function initApiSidebar() {
   for (const [category, items] of Object.entries(categories)) {
     if (items.length === 0) continue;
     
-    html += `<h3>${category}</h3><ul>`;
+    html += `<div class="sidebar-group-title">${category}</div><ul>`;
     items.forEach(item => {
       html += `
         <li>
-          <a href="#" data-api-resource="${item.key}" data-table-name="${item.tableName}" class="${item.key === currentApiResource ? 'active' : ''}">
-            <span class="api-icon">${item.icon}</span>
+          <a href="#" data-api-resource="${item.key}" data-table-name="${item.tableName}" class="nav-link ${item.key === currentApiResource ? 'active' : ''}">
+            ${item.icon}
             ${item.title}
           </a>
         </li>
@@ -1163,30 +1168,30 @@ function initApiSidebar() {
   });
 }
 
-// Get icon for table
+// Get icon for table — same line-icon set as the Documentation sidebar (NAV_ICONS)
 function getIconForTable(tableName) {
-  const icons = {
-    api_start_calls: '📞',
-    crm_leads: '👤',
-    crm_contacts: '📇',
-    crm_accounts: '🏢',
-    crm_phone_numbers: '📞',
-    crm_notes: '📋',
-    campaigns: '📢',
-    callLogs: '📝',
-    assistants: '🤖',
-    phoneNumbers: '☎️',
-    phoneProviders: '📡',
-    customTools: '🔧',
-    do_not_call: '🚫',  // Fixed table name
-    internalUsers: '👥',
-    calendar_events: '📅',
-    calendar_categories: '🏷️',
-    calendar_event_participants: '👥',
-    crm_settings: '⚙️'
+  const keys = {
+    api_start_calls: 'phone',
+    crm_leads: 'tag',
+    crm_contacts: 'user',
+    crm_accounts: 'briefcase',
+    crm_phone_numbers: 'hash',
+    crm_notes: 'fileText',
+    campaigns: 'radio',
+    callLogs: 'list',
+    assistants: 'cpu',
+    phoneNumbers: 'phone',
+    phoneProviders: 'server',
+    customTools: 'tool',
+    do_not_call: 'slash',
+    internalUsers: 'users',
+    calendar_events: 'clock',
+    calendar_categories: 'tag',
+    calendar_event_participants: 'users',
+    crm_settings: 'settings'
   };
-  
-  return icons[tableName] || '📄';
+  const k = keys[tableName] || 'fileText';
+  return `<svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${NAV_ICONS[k]}</svg>`;
 }
 
 // API Resource Selection
@@ -1443,7 +1448,7 @@ function updateCodeSamples() {
   const orderBy = document.getElementById('order-input')?.value || 'created_at desc';
   const bodyJson = document.getElementById('body-json')?.value || '{}';
   
-  const endpoint = `${API_BASE}/${tableName}`;
+  const endpoint = `${apiBaseUrl()}/${tableName}`;
   
   // Generate cURL
   let curl = '';
@@ -1686,7 +1691,7 @@ async function tryApiRequest() {
   const orderBy = document.getElementById('order-input')?.value || 'created_at desc';
   const bodyJson = document.getElementById('body-json')?.value || '{}';
   
-  const endpoint = `${API_BASE}/${tableName}`;
+  const endpoint = `${apiBaseUrl()}/${tableName}`;
   const responseBody = document.getElementById('response-body');
   const respStatus = document.getElementById('resp-status');
   
@@ -1898,7 +1903,7 @@ function updateMobileMenuContent() {
         menuContent += `
           <li>
             <a href="#" class="nav-link api-link" data-api-resource="${item.key}">
-              <span class="api-icon">${item.icon}</span>
+              ${item.icon}
               ${item.title}
             </a>
           </li>`;
@@ -2250,10 +2255,9 @@ function setupEventListeners() {
 
 // Update origin placeholders
 function updateOriginPlaceholders() {
-  // Always use the API base URL for the origin display
-  const apiOrigin = 'https://dashboard.imash.io';
+  // Brand-aware: white-label domains show their own dashboard host.
   document.querySelectorAll('.origin').forEach(elem => {
-    elem.textContent = apiOrigin;
+    elem.textContent = apiOrigin();
   });
 }
 
