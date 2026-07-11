@@ -712,8 +712,9 @@ function updateSidebarForTab(route) {
         sidebar.style.display = 'block';
       }
       // On mobile, sidebar is hidden by CSS - don't override
-      
-      // Load video categories dynamically
+
+      // Load video categories dynamically (invalidates the cached docs menu)
+      sidebar.dataset.menu = 'videos';
       loadVideoSidebar();
     }
     if (toc) {
@@ -735,7 +736,19 @@ function updateSidebarForTab(route) {
         }
       }
       // On mobile, sidebar is hidden by CSS - don't override
-      
+
+      // If the docs menu is already rendered (same language), do NOT rebuild it:
+      // resetting innerHTML on every navigation jumped the scroll position back
+      // to the top mid-click (so the next click landed on a different item) and
+      // re-created every element. Just refresh the active highlight instead.
+      const menuKey = 'docs:' + getLang();
+      if (sidebar.dataset.menu === menuKey) {
+        updateNavigation(route);
+        if (toc && !isMobile) toc.style.display = 'block';
+        return;
+      }
+      sidebar.dataset.menu = menuKey;
+
       sidebar.innerHTML = `
       <div class="sidebar-inner">
         <div class="sidebar-group">
@@ -911,12 +924,26 @@ function updateSidebarForTab(route) {
   }
 }
 
+// Canonical route -> the (shorter) data-href the sidebar item actually uses.
+const NAV_HREF_ALIAS = {
+  '/agents/test-your-agent': '/agents/test-agent',
+  '/phone-system/add-sip-provider': '/phone/add-sip-provider',
+  '/phone-system/add-phone-number': '/phone/add-phone-number',
+  '/phone-system/call-routing': '/phone/call-routing',
+  '/phone-system/call-logs': '/phone/call-logs',
+  '/campaigns/do-not-call-list': '/campaigns/do-not-call',
+  '/crm/import-export-data': '/crm/import-export',
+  '/analytics/analytics-dashboard': '/analytics/dashboard',
+  '/analytics/cost-management': '/analytics/costs'
+};
+
 // Navigation updates
 function updateNavigation(route) {
+  const target = NAV_HREF_ALIAS[route] || route;
   // Update sidebar active state (both desktop and mobile)
   document.querySelectorAll('.nav-link').forEach(link => {
     const href = link.getAttribute('data-href');
-    if (href === route) {
+    if (href === target) {
       link.classList.add('active');
     } else {
       link.classList.remove('active');
@@ -928,7 +955,7 @@ function updateNavigation(route) {
   if (mobileMenu) {
     mobileMenu.querySelectorAll('.nav-link').forEach(link => {
       const href = link.getAttribute('data-href');
-      if (href === route) {
+      if (href === target) {
         link.classList.add('active');
       } else {
         link.classList.remove('active');

@@ -343,6 +343,9 @@ body {
   font-size: 0.875rem;
   transition: all 0.2s;
   border-left: 2px solid transparent;
+  /* Menu anchors navigate via data-href (no href attribute), so the browser
+     doesn't give them the link cursor by default. */
+  cursor: pointer;
 }
 
 /* Line icon before each nav label — matches the app dashboard's sidebar. */
@@ -565,6 +568,7 @@ p {
   font-size: 0.875rem;
   transition: all 0.2s;
   border-left: 2px solid transparent;
+  cursor: pointer;
 }
 
 .apiref-sidebar a:hover {
