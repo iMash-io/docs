@@ -553,7 +553,10 @@ p {
 
 .apiref-sidebar ul {
   list-style: none;
-  margin-bottom: 1.5rem;
+  /* .content ul adds a 2rem text indent for article lists — this is a MENU, so
+     kill it or every item sits 32px deeper than the Documentation sidebar. */
+  padding: 0;
+  margin: 0 0 1rem 0;
 }
 
 /* API links mirror the Documentation sidebar's .nav-link look (same padding,
